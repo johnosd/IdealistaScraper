@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Extratores</title>
+  <!-- CSS: pode ser inline; CSP só bloqueia scripts inline -->
+  <style>
+    /* Layout básico */
+    body { font-family: system-ui, Arial, sans-serif; margin: 0; min-width: 300px; }
+    button { width: 100%; padding: 10px; margin: 6px 0; cursor: pointer; }
+
+    /* Abas */
+    .tabs { display: flex; border-bottom: 1px solid #e5e7eb; background: #f9fafb; }
+    .tab-btn { flex: 1; padding: 10px; border: none; background: transparent; cursor: pointer; font-weight: 600; }
+    .tab-btn.active { color: #fff; background: #2563eb; }
+
+    /* Painéis */
+    .panel { display: none; padding: 12px; }
+    .panel.active { display: block; }
+  </style>
+</head>
+<body>
+  <!-- Abas -->
+  <div class="tabs" role="tablist" aria-label="Navegação de abas">
+    <button class="tab-btn active" data-tab="links" id="tab-links" role="tab" aria-selected="true" aria-controls="panel-links">
+      Links
+    </button>
+    <button class="tab-btn" data-tab="itens" id="tab-itens" role="tab" aria-selected="false" aria-controls="panel-itens">
+      Itens
+    </button>
+  </div>
+
+  <!-- Aba 1: Links -->
+  <section id="panel-links" class="panel active" role="tabpanel" aria-labelledby="tab-links">
+    <button id="extract" aria-label="Extrair links em JSON">Extrair Links (JSON)</button>
+  </section>
+
+  <!-- Aba 2: Itens -->
+  <section id="panel-itens" class="panel" role="tabpanel" aria-labelledby="tab-itens">
+    <div id="proxyStatus" style="font-size:12px;margin:4px 0;">
+      Proxy: <strong id="proxyState">desativado</strong>
+    </div>
+    <div id="proxyIpBox" style="font-size:12px;color:#444;"></div>
+    <button id="testProxyIp">Testar IP (via proxy)</button>
+    <button id="extractItems" aria-label="Extrair itens em JSON com paginação">Extrair Itens (JSON)</button>
+    <button id="stopExtract" aria-label="Parar e baixar JSON parcial">Parar e baixar JSON</button>
+  </section>
+
+  <!-- Scripts externos (sem inline, para respeitar CSP) -->
+  <script src="popup-ui.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

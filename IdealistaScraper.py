@@ -20,6 +20,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from fake_headers import Headers, browsers
 import platform
 
+from selenium import webdriver
+
 urlBase ='https://www.idealista.pt'
 urlLogin = 'https://www.idealista.pt/login'
 
@@ -166,8 +168,7 @@ class SeleniumDriver(object):
 
 
 
-        ##################################3
-        self.driver_path = driver_path
+        ##################################
         self.cookies_file_path = cookies_file_path
         self.cookies_websites = cookies_websites
         chrome_options = webdriver.ChromeOptions()
@@ -192,10 +193,7 @@ class SeleniumDriver(object):
         #    'driver': 'OFF', 'server': 'OFF', 'browser': 'OFF'}
         #---------------------
 
-        self.driver = webdriver.Chrome(
-            executable_path = driver_path,
-            options=chrome_options
-        )
+        self.driver = webdriver.Chrome(ChromeDriverManager(options=chrome_options).install())
         try:
             # load cookies for given websites
             cookies = pickle.load(open(self.cookies_file_path, "rb"))
