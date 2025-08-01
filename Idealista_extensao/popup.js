@@ -136,14 +136,20 @@ if (itemsBtn) itemsBtn.addEventListener("click", async () => {
     return;
   }
 
-  // 2) Dispara o crawler
+  // 2) Aguarda carregamento e dispara o crawler
   try {
+    // garante que o content script já foi injetado
+    await waitForTabComplete(tab.id);
     const res = await chrome.tabs.sendMessage(tab.id, { cmd: 'START_CRAWL' });
     if (!res?.ok) throw new Error(res?.error || 'Sem resposta OK do content.js');
   } catch (e) {
-    console.warn('Sem receptor; recarregando a aba…', e);
-    await chrome.tabs.reload(tab.id);
-    await waitForTabComplete(tab.id);
+    console.warn('Falha ao iniciar a extração:', e);
+    try {
+      await chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['content.js'] });
+      await sleep(500);
+    } catch (ee) {
+      console.warn('Falha ao injetar content.js:', ee);
+    }
     const res2 = await chrome.tabs.sendMessage(tab.id, { cmd: 'START_CRAWL' });
     if (!res2?.ok) {
       alert('Não consegui iniciar a extração. Recarregue a página do Idealista.');
