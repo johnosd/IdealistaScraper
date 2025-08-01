@@ -42,6 +42,8 @@
       Proxy: <strong id="proxyState">desativado</strong>
     </div>
     <div id="proxyIpBox" style="font-size:12px;color:#444;"></div>
+    <label for="extraDomains" style="font-size:12px;display:block;margin-top:4px;">Domínios adicionais (um por linha)</label>
+    <textarea id="extraDomains" rows="2" style="width:100%;"></textarea>
     <button id="testProxyIp">Testar IP (via proxy)</button>
     <button id="extractItems" aria-label="Extrair itens em JSON com paginação">Extrair Itens (JSON)</button>
     <button id="stopExtract" aria-label="Parar e baixar JSON parcial">Parar e baixar JSON</button>
@@ -49,6 +51,7 @@
 
   <!-- Scripts externos (sem inline, para respeitar CSP) -->
   <script src="popup-ui.js"></script>
+  <script src="linkExtractor.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>
