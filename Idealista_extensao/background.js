@@ -9,16 +9,17 @@ function updateBadge() {
   if (on) chrome.action.setBadgeBackgroundColor({ color: "#2563eb" });
 }
 
-// --- Monte aqui os domínios que DEVEM usar o proxy ---
-const PROXY_DOMAINS = [
+// --- Domínios base que DEVEM usar o proxy (podem ser expandidos em tempo de execução) ---
+const PROXY_DOMAINS_BASE = [
   "idealista.pt",
   "*.idealista.pt",
   "api.ipify.org" // para o botão/checagem de IP
 ];
+let currentProxyDomains = [...PROXY_DOMAINS_BASE];
 
 // Gera o PAC para rotear apenas os domínios acima via PROXY; o resto DIRECT
-function buildSelectivePacScript(host, port) {
-  const pacChecks = PROXY_DOMAINS.map(d =>
+function buildSelectivePacScript(host, port, domains = currentProxyDomains) {
+  const pacChecks = domains.map(d =>
     `dnsDomainIs(host, "${d.replace(/^\*\./, "")}") || shExpMatch(host, "${d}")`
   ).join(" || ");
 
@@ -32,13 +33,15 @@ function buildSelectivePacScript(host, port) {
   `;
 }
 
-async function enableProxy({ host, port, username, password }) {
+async function enableProxy({ host, port, username, password, extraDomains = [] }) {
   console.log("[proxy] enableProxy:", { host, port, hasUser: !!username, hasPass: !!password });
   if (!host || !port) throw new Error("Host/port do proxy não informados.");
 
   currentProxy = { host, port, username, password };
 
-  const pacScript = buildSelectivePacScript(host, port);
+  currentProxyDomains = [...PROXY_DOMAINS_BASE, ...extraDomains.filter(Boolean)];
+
+  const pacScript = buildSelectivePacScript(host, port, currentProxyDomains);
 
   // Aplica PAC
   try {
@@ -55,7 +58,8 @@ async function enableProxy({ host, port, username, password }) {
 
   // Listener de autenticação (MV3: requer webRequest + webRequestAuthProvider)
   try {
-    try { chrome.webRequest.onAuthRequired.removeListener(onAuthRequiredHandler); } catch {}
+    try { chrome.webRequest.onAuthRequired.removeListener(onAuthRequiredHandler); }
+    catch (e) { console.warn('[proxy] Falha ao remover onAuthRequired:', e); }
     chrome.webRequest.onAuthRequired.addListener(
       onAuthRequiredHandler,
       { urls: ["<all_urls>"] },
@@ -65,7 +69,8 @@ async function enableProxy({ host, port, username, password }) {
   } catch (e) {
     console.error("[proxy] Erro ao instalar onAuthRequired:", e);
     currentProxy = null;
-    try { await chrome.proxy.settings.clear({ scope: "regular" }); } catch {}
+    try { await chrome.proxy.settings.clear({ scope: "regular" }); }
+    catch (ee) { console.warn('[proxy] Falha ao limpar PAC após erro:', ee); }
     throw e;
   }
 
@@ -80,6 +85,7 @@ async function enableProxy({ host, port, username, password }) {
 async function disableProxy() {
   console.log("[proxy] disableProxy chamado.");
   currentProxy = null;
+  currentProxyDomains = [...PROXY_DOMAINS_BASE];
 
   try {
     await chrome.proxy.settings.clear({ scope: "regular" });
@@ -88,7 +94,8 @@ async function disableProxy() {
     console.error("[proxy] Erro ao limpar PAC:", e);
   }
 
-  try { chrome.webRequest.onAuthRequired.removeListener(onAuthRequiredHandler); } catch {}
+  try { chrome.webRequest.onAuthRequired.removeListener(onAuthRequiredHandler); }
+  catch (e) { console.warn('[proxy] Falha ao remover onAuthRequired:', e); }
   updateBadge();
 }
 
@@ -108,8 +115,8 @@ function onAuthRequiredHandler(details) {
 // --- Mensageria (popup.js / outros) ---
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg?.cmd === "ENABLE_PROXY") {
-    const { host, port, username, password } = msg;
-    enableProxy({ host, port, username, password })
+    const { host, port, username, password, extraDomains } = msg;
+    enableProxy({ host, port, username, password, extraDomains })
       .then(() => sendResponse({ ok: true }))
       .catch(err => {
         console.error("[proxy] ENABLE_PROXY falhou:", err);
@@ -126,7 +133,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   }
 
   if (msg?.cmd === "PROXY_STATUS") {
-    sendResponse({ enabled: !!currentProxy, config: currentProxy || null });
+    sendResponse({ enabled: !!currentProxy, config: currentProxy || null, domains: currentProxyDomains });
     return;
   }
 });

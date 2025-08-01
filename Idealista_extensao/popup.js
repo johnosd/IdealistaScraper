@@ -2,6 +2,12 @@
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 const randDelay = () => 3000 + Math.floor(Math.random() * 7000);
 
+const extraDomainsInput = document.getElementById('extraDomains');
+function getExtraDomains() {
+  if (!extraDomainsInput) return [];
+  return extraDomainsInput.value.split(/\n+/).map(d => d.trim()).filter(Boolean);
+}
+
 function waitForTabComplete(tabId, timeoutMs = 30000) {
   return new Promise((resolve, reject) => {
     let done = false;
@@ -36,14 +42,17 @@ function waitForTabComplete(tabId, timeoutMs = 30000) {
 }
 
 // ============== Extrair Links (JSON) ==============
-document.getElementById("extract").addEventListener("click", async () => {
+const extractBtn = document.getElementById("extract");
+if (extractBtn) extractBtn.addEventListener("click", async () => {
+  extractBtn.disabled = true;
+  const prev = extractBtn.textContent;
+  extractBtn.textContent = "Extraindo...";
   try {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     const targetUrl = "https://www.idealista.pt/";
     await chrome.tabs.update(tab.id, { url: targetUrl });
     await waitForTabComplete(tab.id);
     await sleep(randDelay());
-
     await chrome.scripting.executeScript({
       target: { tabId: tab.id },
       func: extrairLinksESalvarJSONNaPagina
@@ -51,84 +60,19 @@ document.getElementById("extract").addEventListener("click", async () => {
   } catch (err) {
     console.error('Erro em Extrair Links:', err);
     alert('Erro ao extrair links. Veja o console para detalhes.');
+  } finally {
+    extractBtn.disabled = false;
+    extractBtn.textContent = prev;
   }
 });
 
 // roda na página
 function extrairLinksESalvarJSONNaPagina() {
-  const container = document.querySelector('nav.locations-list');
-  if (!container) {
-    alert('Elemento <nav class="locations-list"> não encontrado na página inicial.');
+  if (typeof extractLinks !== 'function') {
+    alert('Função extractLinks não disponível.');
     return;
   }
-
-  const base = location.origin;
-  const seen = new Set();
-  const rows = [];
-  const norm = (t) => (t || '').replace(/\s+/g, ' ').trim();
-  const abs = (href) => { try { return new URL(href, base).href; } catch { return null; } };
-
-  container.querySelectorAll('ul.locations-list__links').forEach((col) => {
-    const regionA = col.querySelector('a > h3.region-title')?.parentElement;
-    const regiao = norm(regionA?.textContent);
-
-    col.querySelectorAll(':scope > li').forEach((li) => {
-      const subA = li.querySelector(':scope > a.subregion');
-      const contagemEl = li.querySelector(':scope > p');
-      const contagem = norm(contagemEl?.textContent);
-      const subregiao = norm(subA?.textContent);
-
-      if (subA) {
-        const url = abs(subA.getAttribute('href'));
-        if (url && !seen.has(url)) {
-          seen.add(url);
-          rows.push({
-            "Região": regiao || null,
-            "Sub-região": subregiao || null,
-            "Município": null,
-            "Tipo": "Sub-região",
-            "Texto": subregiao || null,
-            "URL": url,
-            "Contagem": contagem || null
-          });
-        }
-      }
-
-      li.querySelectorAll(':scope ul.locations-list__municipalities > li > a').forEach((munA) => {
-        const municipio = norm(munA.textContent);
-        const url = abs(munA.getAttribute('href'));
-        if (url && !seen.has(url)) {
-          seen.add(url);
-          rows.push({
-            "Região": regiao || null,
-            "Sub-região": subregiao || null,
-            "Município": municipio || null,
-            "Tipo": "Município",
-            "Texto": municipio || null,
-            "URL": url,
-            "Contagem": null
-          });
-        }
-      });
-    });
-
-    if (regionA) {
-      const url = abs(regionA.getAttribute('href'));
-      if (url && !seen.has(url)) {
-        seen.add(url);
-        rows.push({
-          "Região": regiao || null,
-          "Sub-região": null,
-          "Município": null,
-          "Tipo": "Região",
-          "Texto": regiao || null,
-          "URL": url,
-          "Contagem": null
-        });
-      }
-    }
-  });
-
+  const rows = extractLinks(document);
   if (!rows.length) {
     alert('Nenhum link encontrado em <nav.locations-list>.');
     return;
@@ -148,7 +92,11 @@ function extrairLinksESalvarJSONNaPagina() {
 }
 
 // ============== Extrair Itens (proxy + paginação) ==============
-document.getElementById("extractItems").addEventListener("click", async () => {
+const itemsBtn = document.getElementById("extractItems");
+if (itemsBtn) itemsBtn.addEventListener("click", async () => {
+  itemsBtn.disabled = true;
+  const prevText = itemsBtn.textContent;
+  itemsBtn.textContent = "Extraindo...";
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
   if (!/^https:\/\/(?:www\.)?idealista\.pt\//.test(tab?.url || "")) {
@@ -163,18 +111,30 @@ document.getElementById("extractItems").addEventListener("click", async () => {
   const PROXY_PASS = "PC_5djX4v5F9aXvIl5gn";
 
   // 1) Ativa proxy
-const en = await chrome.runtime.sendMessage({
-  cmd: "ENABLE_PROXY",
-  host: PROXY_HOST,
-  port: PROXY_PORT,
-  username: PROXY_USER,
-  password: PROXY_PASS
-});
-if (!en?.ok) {
-  console.warn("ENABLE_PROXY falhou:", en?.error);
-  alert("Falha ao habilitar o proxy: " + (en?.error || "erro desconhecido"));
-  return;
-}
+  let en;
+  try {
+    en = await chrome.runtime.sendMessage({
+      cmd: "ENABLE_PROXY",
+      host: PROXY_HOST,
+      port: PROXY_PORT,
+      username: PROXY_USER,
+      password: PROXY_PASS,
+      extraDomains: getExtraDomains()
+    });
+  } catch (err) {
+    console.error('Erro ao enviar ENABLE_PROXY:', err);
+    alert('Falha ao habilitar o proxy: ' + err);
+    itemsBtn.disabled = false;
+    itemsBtn.textContent = prevText;
+    return;
+  }
+  if (!en?.ok) {
+    console.warn("ENABLE_PROXY falhou:", en?.error);
+    alert("Falha ao habilitar o proxy: " + (en?.error || "erro desconhecido"));
+    itemsBtn.disabled = false;
+    itemsBtn.textContent = prevText;
+    return;
+  }
 
   // 2) Dispara o crawler
   try {
@@ -188,6 +148,10 @@ if (!en?.ok) {
     if (!res2?.ok) {
       alert('Não consegui iniciar a extração. Recarregue a página do Idealista.');
     }
+  } finally {
+    itemsBtn.disabled = false;
+    itemsBtn.textContent = prevText;
+    setTimeout(refreshProxyStatus, 500);
   }
 });
 
@@ -198,12 +162,16 @@ if (stopBtn) {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     try {
       await chrome.tabs.sendMessage(tab.id, { cmd: 'STOP_AND_DOWNLOAD' });
-    } catch (_) {}
+    } catch (e) {
+      console.warn('Falha ao enviar STOP_AND_DOWNLOAD:', e);
+    }
 
     // Desativa proxy
     try {
       await chrome.runtime.sendMessage({ cmd: "DISABLE_PROXY" });
-    } catch (_) {}
+    } catch (e) {
+      console.warn('Falha ao desativar proxy:', e);
+    }
   });
 }
 
@@ -217,7 +185,9 @@ async function refreshProxyStatus() {
     const st = await chrome.runtime.sendMessage({ cmd: "PROXY_STATUS" });
     const el = document.getElementById("proxyState");
     if (el) el.textContent = st?.enabled ? "ativado" : "desativado";
-  } catch {}
+  } catch (e) {
+    console.warn('Falha ao obter status do proxy:', e);
+  }
 }
 
 // --- Botão: Testar IP (requisição passa pelo proxy quando ativado) ---
@@ -244,8 +214,6 @@ if (testBtn) {
   });
 }
 
-// Atualiza status ao clicar em iniciar/parar (opcional)
-const itemsBtn = document.getElementById("extractItems");
-if (itemsBtn) itemsBtn.addEventListener("click", () => setTimeout(refreshProxyStatus, 500));
+// Atualiza status ao parar
 const stopBtn2 = document.getElementById("stopExtract");
 if (stopBtn2) stopBtn2.addEventListener("click", () => setTimeout(refreshProxyStatus, 500));
