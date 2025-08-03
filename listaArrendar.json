@@ -5,8 +5,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "São Miguel (Ilha dos Açores)",
-    "URL": "https://www.idealista.pt/comprar-casas/sao-miguel-ilha-dos-acores/concelhos-freguesias",
-    "Contagem": "808"
+    "URL": "https://www.idealista.pt/arrendar-casas/sao-miguel-ilha-dos-acores/concelhos-freguesias",
+    "Contagem": "29"
   },
   {
     "Região": "Açores",
@@ -14,7 +14,7 @@
     "Município": "Ponta Delgada",
     "Tipo": "Município",
     "Texto": "Ponta Delgada",
-    "URL": "https://www.idealista.pt/comprar-casas/ponta-delgada/",
+    "URL": "https://www.idealista.pt/arrendar-casas/ponta-delgada/",
     "Contagem": null
   },
   {
@@ -23,8 +23,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Terceira (Ilha dos Açores)",
-    "URL": "https://www.idealista.pt/comprar-casas/terceira-ilha-dos-acores/concelhos-freguesias",
-    "Contagem": "400"
+    "URL": "https://www.idealista.pt/arrendar-casas/terceira-ilha-dos-acores/concelhos-freguesias",
+    "Contagem": "9"
   },
   {
     "Região": "Açores",
@@ -32,7 +32,7 @@
     "Município": null,
     "Tipo": "Região",
     "Texto": "Açores",
-    "URL": "https://www.idealista.pt/geo/comprar-casas/acores/",
+    "URL": "https://www.idealista.pt/geo/arrendar-casas/acores/",
     "Contagem": null
   },
   {
@@ -41,8 +41,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Beja",
-    "URL": "https://www.idealista.pt/comprar-casas/beja-distrito/concelhos-freguesias",
-    "Contagem": "1.790"
+    "URL": "https://www.idealista.pt/arrendar-casas/beja-distrito/concelhos-freguesias",
+    "Contagem": "73"
   },
   {
     "Região": "Alentejo",
@@ -50,7 +50,7 @@
     "Município": "Vila Nova de Milfontes",
     "Tipo": "Município",
     "Texto": "Vila Nova de Milfontes",
-    "URL": "https://www.idealista.pt/comprar-casas/odemira/vila-nova-de-milfontes/",
+    "URL": "https://www.idealista.pt/arrendar-casas/odemira/vila-nova-de-milfontes/",
     "Contagem": null
   },
   {
@@ -59,8 +59,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Évora",
-    "URL": "https://www.idealista.pt/comprar-casas/evora-distrito/concelhos-freguesias",
-    "Contagem": "1.709"
+    "URL": "https://www.idealista.pt/arrendar-casas/evora-distrito/concelhos-freguesias",
+    "Contagem": "109"
   },
   {
     "Região": "Alentejo",
@@ -68,8 +68,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Portalegre",
-    "URL": "https://www.idealista.pt/comprar-casas/portalegre-distrito/concelhos-freguesias",
-    "Contagem": "1.475"
+    "URL": "https://www.idealista.pt/arrendar-casas/portalegre-distrito/concelhos-freguesias",
+    "Contagem": "38"
   },
   {
     "Região": "Alentejo",
@@ -77,8 +77,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Santarém",
-    "URL": "https://www.idealista.pt/comprar-casas/santarem-distrito/concelhos-freguesias",
-    "Contagem": "4.395"
+    "URL": "https://www.idealista.pt/arrendar-casas/santarem-distrito/concelhos-freguesias",
+    "Contagem": "214"
   },
   {
     "Região": "Alentejo",
@@ -86,7 +86,7 @@
     "Município": "Torres Novas",
     "Tipo": "Município",
     "Texto": "Torres Novas",
-    "URL": "https://www.idealista.pt/comprar-casas/torres-novas/",
+    "URL": "https://www.idealista.pt/arrendar-casas/torres-novas/",
     "Contagem": null
   },
   {
@@ -95,7 +95,7 @@
     "Município": null,
     "Tipo": "Região",
     "Texto": "Alentejo",
-    "URL": "https://www.idealista.pt/geo/comprar-casas/alentejo/",
+    "URL": "https://www.idealista.pt/geo/arrendar-casas/alentejo/",
     "Contagem": null
   },
   {
@@ -104,8 +104,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Faro",
-    "URL": "https://www.idealista.pt/comprar-casas/faro-distrito/concelhos-freguesias",
-    "Contagem": "20.048"
+    "URL": "https://www.idealista.pt/arrendar-casas/faro-distrito/concelhos-freguesias",
+    "Contagem": "1.584"
   },
   {
     "Região": "Algarve",
@@ -113,7 +113,7 @@
     "Município": "Albufeira",
     "Tipo": "Município",
     "Texto": "Albufeira",
-    "URL": "https://www.idealista.pt/comprar-casas/albufeira/",
+    "URL": "https://www.idealista.pt/arrendar-casas/albufeira/",
     "Contagem": null
   },
   {
@@ -122,7 +122,7 @@
     "Município": "Alvor",
     "Tipo": "Município",
     "Texto": "Alvor",
-    "URL": "https://www.idealista.pt/comprar-casas/portimao/alvor/",
+    "URL": "https://www.idealista.pt/arrendar-casas/portimao/alvor/",
     "Contagem": null
   },
   {
@@ -131,7 +131,7 @@
     "Município": "Conceição e Cabanas de Tavira",
     "Tipo": "Município",
     "Texto": "Conceição e Cabanas de Tavira",
-    "URL": "https://www.idealista.pt/comprar-casas/tavira/conceicao-e-cabanas-de-tavira/",
+    "URL": "https://www.idealista.pt/arrendar-casas/tavira/conceicao-e-cabanas-de-tavira/",
     "Contagem": null
   },
   {
@@ -140,7 +140,7 @@
     "Município": "Faro",
     "Tipo": "Município",
     "Texto": "Faro",
-    "URL": "https://www.idealista.pt/comprar-casas/faro/",
+    "URL": "https://www.idealista.pt/arrendar-casas/faro/",
     "Contagem": null
   },
   {
@@ -149,7 +149,7 @@
     "Município": "Lagos",
     "Tipo": "Município",
     "Texto": "Lagos",
-    "URL": "https://www.idealista.pt/comprar-casas/lagos/",
+    "URL": "https://www.idealista.pt/arrendar-casas/lagos/",
     "Contagem": null
   },
   {
@@ -158,7 +158,7 @@
     "Município": "Monte Gordo",
     "Tipo": "Município",
     "Texto": "Monte Gordo",
-    "URL": "https://www.idealista.pt/comprar-casas/vila-real-de-santo-antonio/monte-gordo/",
+    "URL": "https://www.idealista.pt/arrendar-casas/vila-real-de-santo-antonio/monte-gordo/",
     "Contagem": null
   },
   {
@@ -167,7 +167,7 @@
     "Município": "Portimão",
     "Tipo": "Município",
     "Texto": "Portimão",
-    "URL": "https://www.idealista.pt/comprar-casas/portimao/",
+    "URL": "https://www.idealista.pt/arrendar-casas/portimao/",
     "Contagem": null
   },
   {
@@ -176,7 +176,7 @@
     "Município": "Quarteira",
     "Tipo": "Município",
     "Texto": "Quarteira",
-    "URL": "https://www.idealista.pt/comprar-casas/loule/quarteira/",
+    "URL": "https://www.idealista.pt/arrendar-casas/loule/quarteira/",
     "Contagem": null
   },
   {
@@ -185,7 +185,7 @@
     "Município": "Sagres",
     "Tipo": "Município",
     "Texto": "Sagres",
-    "URL": "https://www.idealista.pt/comprar-casas/vila-do-bispo/sagres/",
+    "URL": "https://www.idealista.pt/arrendar-casas/vila-do-bispo/sagres/",
     "Contagem": null
   },
   {
@@ -194,7 +194,7 @@
     "Município": "Tavira",
     "Tipo": "Município",
     "Texto": "Tavira",
-    "URL": "https://www.idealista.pt/comprar-casas/tavira/",
+    "URL": "https://www.idealista.pt/arrendar-casas/tavira/",
     "Contagem": null
   },
   {
@@ -203,7 +203,7 @@
     "Município": null,
     "Tipo": "Região",
     "Texto": "Algarve",
-    "URL": "https://www.idealista.pt/comprar-casas/faro-distrito/",
+    "URL": "https://www.idealista.pt/arrendar-casas/faro-distrito/",
     "Contagem": null
   },
   {
@@ -212,8 +212,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Lisboa",
-    "URL": "https://www.idealista.pt/comprar-casas/lisboa-distrito/concelhos-freguesias",
-    "Contagem": "27.796"
+    "URL": "https://www.idealista.pt/arrendar-casas/lisboa-distrito/concelhos-freguesias",
+    "Contagem": "8.835"
   },
   {
     "Região": "Área Metropolitana de Lisboa",
@@ -221,7 +221,7 @@
     "Município": "Cascais",
     "Tipo": "Município",
     "Texto": "Cascais",
-    "URL": "https://www.idealista.pt/comprar-casas/cascais/",
+    "URL": "https://www.idealista.pt/arrendar-casas/cascais/",
     "Contagem": null
   },
   {
@@ -230,7 +230,7 @@
     "Município": "Ericeira",
     "Tipo": "Município",
     "Texto": "Ericeira",
-    "URL": "https://www.idealista.pt/comprar-casas/mafra/ericeira/",
+    "URL": "https://www.idealista.pt/arrendar-casas/mafra/ericeira/",
     "Contagem": null
   },
   {
@@ -239,7 +239,7 @@
     "Município": "Lisboa",
     "Tipo": "Município",
     "Texto": "Lisboa",
-    "URL": "https://www.idealista.pt/comprar-casas/lisboa/",
+    "URL": "https://www.idealista.pt/arrendar-casas/lisboa/",
     "Contagem": null
   },
   {
@@ -248,7 +248,7 @@
     "Município": "Odivelas",
     "Tipo": "Município",
     "Texto": "Odivelas",
-    "URL": "https://www.idealista.pt/comprar-casas/odivelas/",
+    "URL": "https://www.idealista.pt/arrendar-casas/odivelas/",
     "Contagem": null
   },
   {
@@ -257,7 +257,7 @@
     "Município": "Oeiras",
     "Tipo": "Município",
     "Texto": "Oeiras",
-    "URL": "https://www.idealista.pt/comprar-casas/oeiras/",
+    "URL": "https://www.idealista.pt/arrendar-casas/oeiras/",
     "Contagem": null
   },
   {
@@ -266,7 +266,7 @@
     "Município": "Torres Vedras",
     "Tipo": "Município",
     "Texto": "Torres Vedras",
-    "URL": "https://www.idealista.pt/comprar-casas/torres-vedras/",
+    "URL": "https://www.idealista.pt/arrendar-casas/torres-vedras/",
     "Contagem": null
   },
   {
@@ -275,8 +275,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Setúbal",
-    "URL": "https://www.idealista.pt/comprar-casas/setubal-distrito/concelhos-freguesias",
-    "Contagem": "13.976"
+    "URL": "https://www.idealista.pt/arrendar-casas/setubal-distrito/concelhos-freguesias",
+    "Contagem": "1.020"
   },
   {
     "Região": "Área Metropolitana de Lisboa",
@@ -284,7 +284,7 @@
     "Município": "Almada",
     "Tipo": "Município",
     "Texto": "Almada",
-    "URL": "https://www.idealista.pt/comprar-casas/almada/",
+    "URL": "https://www.idealista.pt/arrendar-casas/almada/",
     "Contagem": null
   },
   {
@@ -293,7 +293,7 @@
     "Município": "Barreiro",
     "Tipo": "Município",
     "Texto": "Barreiro",
-    "URL": "https://www.idealista.pt/comprar-casas/barreiro/",
+    "URL": "https://www.idealista.pt/arrendar-casas/barreiro/",
     "Contagem": null
   },
   {
@@ -302,7 +302,7 @@
     "Município": "Costa de Caparica",
     "Tipo": "Município",
     "Texto": "Costa de Caparica",
-    "URL": "https://www.idealista.pt/comprar-casas/almada/costa-de-caparica/",
+    "URL": "https://www.idealista.pt/arrendar-casas/almada/costa-de-caparica/",
     "Contagem": null
   },
   {
@@ -311,7 +311,7 @@
     "Município": "Montijo",
     "Tipo": "Município",
     "Texto": "Montijo",
-    "URL": "https://www.idealista.pt/comprar-casas/montijo/",
+    "URL": "https://www.idealista.pt/arrendar-casas/montijo/",
     "Contagem": null
   },
   {
@@ -320,7 +320,7 @@
     "Município": "Sesimbra",
     "Tipo": "Município",
     "Texto": "Sesimbra",
-    "URL": "https://www.idealista.pt/comprar-casas/sesimbra/",
+    "URL": "https://www.idealista.pt/arrendar-casas/sesimbra/",
     "Contagem": null
   },
   {
@@ -329,7 +329,7 @@
     "Município": null,
     "Tipo": "Região",
     "Texto": "Área Metropolitana de Lisboa",
-    "URL": "https://www.idealista.pt/geo/comprar-casas/area-metropolitana-de-lisboa/",
+    "URL": "https://www.idealista.pt/geo/arrendar-casas/area-metropolitana-de-lisboa/",
     "Contagem": null
   },
   {
@@ -338,8 +338,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Aveiro",
-    "URL": "https://www.idealista.pt/comprar-casas/aveiro-distrito/concelhos-freguesias",
-    "Contagem": "6.402"
+    "URL": "https://www.idealista.pt/arrendar-casas/aveiro-distrito/concelhos-freguesias",
+    "Contagem": "433"
   },
   {
     "Região": "Centro",
@@ -347,7 +347,7 @@
     "Município": "Aveiro",
     "Tipo": "Município",
     "Texto": "Aveiro",
-    "URL": "https://www.idealista.pt/comprar-casas/aveiro/",
+    "URL": "https://www.idealista.pt/arrendar-casas/aveiro/",
     "Contagem": null
   },
   {
@@ -356,7 +356,7 @@
     "Município": "Espinho",
     "Tipo": "Município",
     "Texto": "Espinho",
-    "URL": "https://www.idealista.pt/comprar-casas/espinho/",
+    "URL": "https://www.idealista.pt/arrendar-casas/espinho/",
     "Contagem": null
   },
   {
@@ -365,7 +365,7 @@
     "Município": "Santa Maria da Feira",
     "Tipo": "Município",
     "Texto": "Santa Maria da Feira",
-    "URL": "https://www.idealista.pt/comprar-casas/santa-maria-da-feira/",
+    "URL": "https://www.idealista.pt/arrendar-casas/santa-maria-da-feira/",
     "Contagem": null
   },
   {
@@ -374,8 +374,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Castelo Branco",
-    "URL": "https://www.idealista.pt/comprar-casas/castelo-branco-distrito/concelhos-freguesias",
-    "Contagem": "2.980"
+    "URL": "https://www.idealista.pt/arrendar-casas/castelo-branco-distrito/concelhos-freguesias",
+    "Contagem": "140"
   },
   {
     "Região": "Centro",
@@ -383,7 +383,7 @@
     "Município": "Castelo Branco",
     "Tipo": "Município",
     "Texto": "Castelo Branco",
-    "URL": "https://www.idealista.pt/comprar-casas/castelo-branco/",
+    "URL": "https://www.idealista.pt/arrendar-casas/castelo-branco/",
     "Contagem": null
   },
   {
@@ -392,8 +392,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Coimbra",
-    "URL": "https://www.idealista.pt/comprar-casas/coimbra-distrito/concelhos-freguesias",
-    "Contagem": "4.388"
+    "URL": "https://www.idealista.pt/arrendar-casas/coimbra-distrito/concelhos-freguesias",
+    "Contagem": "479"
   },
   {
     "Região": "Centro",
@@ -401,7 +401,7 @@
     "Município": "Coimbra",
     "Tipo": "Município",
     "Texto": "Coimbra",
-    "URL": "https://www.idealista.pt/comprar-casas/coimbra/",
+    "URL": "https://www.idealista.pt/arrendar-casas/coimbra/",
     "Contagem": null
   },
   {
@@ -410,7 +410,7 @@
     "Município": "Figueira da Foz",
     "Tipo": "Município",
     "Texto": "Figueira da Foz",
-    "URL": "https://www.idealista.pt/comprar-casas/figueira-da-foz/",
+    "URL": "https://www.idealista.pt/arrendar-casas/figueira-da-foz/",
     "Contagem": null
   },
   {
@@ -419,8 +419,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Guarda",
-    "URL": "https://www.idealista.pt/comprar-casas/guarda-distrito/concelhos-freguesias",
-    "Contagem": "1.310"
+    "URL": "https://www.idealista.pt/arrendar-casas/guarda-distrito/concelhos-freguesias",
+    "Contagem": "38"
   },
   {
     "Região": "Centro",
@@ -428,7 +428,7 @@
     "Município": "Guarda",
     "Tipo": "Município",
     "Texto": "Guarda",
-    "URL": "https://www.idealista.pt/comprar-casas/guarda/",
+    "URL": "https://www.idealista.pt/arrendar-casas/guarda/",
     "Contagem": null
   },
   {
@@ -437,8 +437,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Leiria",
-    "URL": "https://www.idealista.pt/comprar-casas/leiria-distrito/concelhos-freguesias",
-    "Contagem": "6.193"
+    "URL": "https://www.idealista.pt/arrendar-casas/leiria-distrito/concelhos-freguesias",
+    "Contagem": "479"
   },
   {
     "Região": "Centro",
@@ -446,7 +446,7 @@
     "Município": "Caldas da Rainha",
     "Tipo": "Município",
     "Texto": "Caldas da Rainha",
-    "URL": "https://www.idealista.pt/comprar-casas/caldas-da-rainha/",
+    "URL": "https://www.idealista.pt/arrendar-casas/caldas-da-rainha/",
     "Contagem": null
   },
   {
@@ -455,7 +455,7 @@
     "Município": "Leiria",
     "Tipo": "Município",
     "Texto": "Leiria",
-    "URL": "https://www.idealista.pt/comprar-casas/leiria/",
+    "URL": "https://www.idealista.pt/arrendar-casas/leiria/",
     "Contagem": null
   },
   {
@@ -464,7 +464,7 @@
     "Município": "Marinha Grande",
     "Tipo": "Município",
     "Texto": "Marinha Grande",
-    "URL": "https://www.idealista.pt/comprar-casas/marinha-grande/",
+    "URL": "https://www.idealista.pt/arrendar-casas/marinha-grande/",
     "Contagem": null
   },
   {
@@ -473,7 +473,7 @@
     "Município": "Nazaré",
     "Tipo": "Município",
     "Texto": "Nazaré",
-    "URL": "https://www.idealista.pt/comprar-casas/nazare/",
+    "URL": "https://www.idealista.pt/arrendar-casas/nazare/",
     "Contagem": null
   },
   {
@@ -482,7 +482,7 @@
     "Município": "Peniche",
     "Tipo": "Município",
     "Texto": "Peniche",
-    "URL": "https://www.idealista.pt/comprar-casas/peniche/",
+    "URL": "https://www.idealista.pt/arrendar-casas/peniche/",
     "Contagem": null
   },
   {
@@ -491,7 +491,7 @@
     "Município": "Pombal",
     "Tipo": "Município",
     "Texto": "Pombal",
-    "URL": "https://www.idealista.pt/comprar-casas/pombal/",
+    "URL": "https://www.idealista.pt/arrendar-casas/pombal/",
     "Contagem": null
   },
   {
@@ -500,7 +500,7 @@
     "Município": "São Martinho do Porto",
     "Tipo": "Município",
     "Texto": "São Martinho do Porto",
-    "URL": "https://www.idealista.pt/comprar-casas/alcobaca/sao-martinho-do-porto/",
+    "URL": "https://www.idealista.pt/arrendar-casas/alcobaca/sao-martinho-do-porto/",
     "Contagem": null
   },
   {
@@ -509,8 +509,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Viseu",
-    "URL": "https://www.idealista.pt/comprar-casas/viseu-distrito/concelhos-freguesias",
-    "Contagem": "3.240"
+    "URL": "https://www.idealista.pt/arrendar-casas/viseu-distrito/concelhos-freguesias",
+    "Contagem": "169"
   },
   {
     "Região": "Centro",
@@ -518,7 +518,7 @@
     "Município": "Viseu",
     "Tipo": "Município",
     "Texto": "Viseu",
-    "URL": "https://www.idealista.pt/comprar-casas/viseu/",
+    "URL": "https://www.idealista.pt/arrendar-casas/viseu/",
     "Contagem": null
   },
   {
@@ -527,7 +527,7 @@
     "Município": null,
     "Tipo": "Região",
     "Texto": "Centro",
-    "URL": "https://www.idealista.pt/geo/comprar-casas/centro/",
+    "URL": "https://www.idealista.pt/geo/arrendar-casas/centro/",
     "Contagem": null
   },
   {
@@ -536,8 +536,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Madeira (Ilha)",
-    "URL": "https://www.idealista.pt/comprar-casas/madeira-ilha/concelhos-freguesias",
-    "Contagem": "4.096"
+    "URL": "https://www.idealista.pt/arrendar-casas/madeira-ilha/concelhos-freguesias",
+    "Contagem": "156"
   },
   {
     "Região": "Madeira",
@@ -545,7 +545,7 @@
     "Município": "Funchal",
     "Tipo": "Município",
     "Texto": "Funchal",
-    "URL": "https://www.idealista.pt/comprar-casas/funchal/",
+    "URL": "https://www.idealista.pt/arrendar-casas/funchal/",
     "Contagem": null
   },
   {
@@ -554,8 +554,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Porto Santo (Ilha)",
-    "URL": "https://www.idealista.pt/comprar-casas/porto-santo-ilha/concelhos-freguesias",
-    "Contagem": "66"
+    "URL": "https://www.idealista.pt/arrendar-casas/porto-santo-ilha/",
+    "Contagem": "3"
   },
   {
     "Região": "Madeira",
@@ -563,7 +563,7 @@
     "Município": null,
     "Tipo": "Região",
     "Texto": "Madeira",
-    "URL": "https://www.idealista.pt/geo/comprar-casas/madeira/",
+    "URL": "https://www.idealista.pt/geo/arrendar-casas/madeira/",
     "Contagem": null
   },
   {
@@ -572,8 +572,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Braga",
-    "URL": "https://www.idealista.pt/comprar-casas/braga-distrito/concelhos-freguesias",
-    "Contagem": "7.609"
+    "URL": "https://www.idealista.pt/arrendar-casas/braga-distrito/concelhos-freguesias",
+    "Contagem": "630"
   },
   {
     "Região": "Norte",
@@ -581,7 +581,7 @@
     "Município": "Barcelos",
     "Tipo": "Município",
     "Texto": "Barcelos",
-    "URL": "https://www.idealista.pt/comprar-casas/barcelos/",
+    "URL": "https://www.idealista.pt/arrendar-casas/barcelos/",
     "Contagem": null
   },
   {
@@ -590,7 +590,7 @@
     "Município": "Braga",
     "Tipo": "Município",
     "Texto": "Braga",
-    "URL": "https://www.idealista.pt/comprar-casas/braga/",
+    "URL": "https://www.idealista.pt/arrendar-casas/braga/",
     "Contagem": null
   },
   {
@@ -599,8 +599,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Bragança",
-    "URL": "https://www.idealista.pt/comprar-casas/braganca-distrito/concelhos-freguesias",
-    "Contagem": "1.006"
+    "URL": "https://www.idealista.pt/arrendar-casas/braganca-distrito/concelhos-freguesias",
+    "Contagem": "35"
   },
   {
     "Região": "Norte",
@@ -608,7 +608,7 @@
     "Município": "Bragança",
     "Tipo": "Município",
     "Texto": "Bragança",
-    "URL": "https://www.idealista.pt/comprar-casas/braganca/",
+    "URL": "https://www.idealista.pt/arrendar-casas/braganca/",
     "Contagem": null
   },
   {
@@ -617,8 +617,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Porto",
-    "URL": "https://www.idealista.pt/comprar-casas/porto-distrito/concelhos-freguesias",
-    "Contagem": "26.598"
+    "URL": "https://www.idealista.pt/arrendar-casas/porto-distrito/concelhos-freguesias",
+    "Contagem": "4.647"
   },
   {
     "Região": "Norte",
@@ -626,7 +626,7 @@
     "Município": "Maia",
     "Tipo": "Município",
     "Texto": "Maia",
-    "URL": "https://www.idealista.pt/comprar-casas/maia/",
+    "URL": "https://www.idealista.pt/arrendar-casas/maia/",
     "Contagem": null
   },
   {
@@ -635,7 +635,7 @@
     "Município": "Matosinhos",
     "Tipo": "Município",
     "Texto": "Matosinhos",
-    "URL": "https://www.idealista.pt/comprar-casas/matosinhos/",
+    "URL": "https://www.idealista.pt/arrendar-casas/matosinhos/",
     "Contagem": null
   },
   {
@@ -644,7 +644,7 @@
     "Município": "Penafiel",
     "Tipo": "Município",
     "Texto": "Penafiel",
-    "URL": "https://www.idealista.pt/comprar-casas/penafiel/",
+    "URL": "https://www.idealista.pt/arrendar-casas/penafiel/",
     "Contagem": null
   },
   {
@@ -653,7 +653,7 @@
     "Município": "Porto",
     "Tipo": "Município",
     "Texto": "Porto",
-    "URL": "https://www.idealista.pt/comprar-casas/porto/",
+    "URL": "https://www.idealista.pt/arrendar-casas/porto/",
     "Contagem": null
   },
   {
@@ -662,7 +662,7 @@
     "Município": "Póvoa de Varzim",
     "Tipo": "Município",
     "Texto": "Póvoa de Varzim",
-    "URL": "https://www.idealista.pt/comprar-casas/povoa-de-varzim/",
+    "URL": "https://www.idealista.pt/arrendar-casas/povoa-de-varzim/",
     "Contagem": null
   },
   {
@@ -671,7 +671,7 @@
     "Município": "Santo Tirso",
     "Tipo": "Município",
     "Texto": "Santo Tirso",
-    "URL": "https://www.idealista.pt/comprar-casas/santo-tirso/",
+    "URL": "https://www.idealista.pt/arrendar-casas/santo-tirso/",
     "Contagem": null
   },
   {
@@ -680,7 +680,7 @@
     "Município": "Valongo",
     "Tipo": "Município",
     "Texto": "Valongo",
-    "URL": "https://www.idealista.pt/comprar-casas/valongo/",
+    "URL": "https://www.idealista.pt/arrendar-casas/valongo/",
     "Contagem": null
   },
   {
@@ -689,7 +689,7 @@
     "Município": "Vila Nova de Gaia",
     "Tipo": "Município",
     "Texto": "Vila Nova de Gaia",
-    "URL": "https://www.idealista.pt/comprar-casas/vila-nova-de-gaia/",
+    "URL": "https://www.idealista.pt/arrendar-casas/vila-nova-de-gaia/",
     "Contagem": null
   },
   {
@@ -698,7 +698,7 @@
     "Município": "Vila do Conde",
     "Tipo": "Município",
     "Texto": "Vila do Conde",
-    "URL": "https://www.idealista.pt/comprar-casas/vila-do-conde/",
+    "URL": "https://www.idealista.pt/arrendar-casas/vila-do-conde/",
     "Contagem": null
   },
   {
@@ -707,8 +707,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Viana do Castelo",
-    "URL": "https://www.idealista.pt/comprar-casas/viana-do-castelo-distrito/concelhos-freguesias",
-    "Contagem": "3.778"
+    "URL": "https://www.idealista.pt/arrendar-casas/viana-do-castelo-distrito/concelhos-freguesias",
+    "Contagem": "205"
   },
   {
     "Região": "Norte",
@@ -716,7 +716,7 @@
     "Município": "Ponte de Lima",
     "Tipo": "Município",
     "Texto": "Ponte de Lima",
-    "URL": "https://www.idealista.pt/comprar-casas/ponte-de-lima/",
+    "URL": "https://www.idealista.pt/arrendar-casas/ponte-de-lima/",
     "Contagem": null
   },
   {
@@ -725,7 +725,7 @@
     "Município": "Viana do Castelo",
     "Tipo": "Município",
     "Texto": "Viana do Castelo",
-    "URL": "https://www.idealista.pt/comprar-casas/viana-do-castelo/",
+    "URL": "https://www.idealista.pt/arrendar-casas/viana-do-castelo/",
     "Contagem": null
   },
   {
@@ -734,8 +734,8 @@
     "Município": null,
     "Tipo": "Sub-região",
     "Texto": "Vila Real",
-    "URL": "https://www.idealista.pt/comprar-casas/vila-real-distrito/concelhos-freguesias",
-    "Contagem": "1.505"
+    "URL": "https://www.idealista.pt/arrendar-casas/vila-real-distrito/concelhos-freguesias",
+    "Contagem": "68"
   },
   {
     "Região": "Norte",
@@ -743,7 +743,7 @@
     "Município": "Vila Real",
     "Tipo": "Município",
     "Texto": "Vila Real",
-    "URL": "https://www.idealista.pt/comprar-casas/vila-real/",
+    "URL": "https://www.idealista.pt/arrendar-casas/vila-real/",
     "Contagem": null
   },
   {
@@ -752,7 +752,7 @@
     "Município": null,
     "Tipo": "Região",
     "Texto": "Norte",
-    "URL": "https://www.idealista.pt/geo/comprar-casas/norte/",
+    "URL": "https://www.idealista.pt/geo/arrendar-casas/norte/",
     "Contagem": null
   }
 ]

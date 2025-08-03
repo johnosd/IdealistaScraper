@@ -101,7 +101,7 @@ if (extractBtn) extractBtn.addEventListener("click", async () => {
   try {
     await ensureProxyPrompt();
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-    const targetUrl = "https://www.idealista.pt/";
+    const targetUrl = "https://www.idealista.pt/arrendar-casas/#municipality-search";
     await chrome.tabs.update(tab.id, { url: targetUrl });
     await waitForTabComplete(tab.id);
     await sleep(randDelay());
