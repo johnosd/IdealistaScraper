@@ -117,7 +117,8 @@ if (extractBtn) extractBtn.addEventListener("click", async () => {
     console.log('[ExtrairLinks] Proxy ' + (proxySt?.enabled ? 'ativado' : 'desativado'));
 
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-    const targetUrl = "https://www.idealista.pt/";
+
+    const targetUrl = "https://www.idealista.pt/arrendar-casas/#municipality-search"";
     console.log('[ExtrairLinks] Navegando para', targetUrl);
     await chrome.tabs.update(tab.id, { url: targetUrl });
     console.log('[ExtrairLinks] Aguardando carregamento da página...');
