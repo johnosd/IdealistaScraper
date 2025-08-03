@@ -1,0 +1,758 @@
+[
+  {
+    "Região": "Açores",
+    "Sub-região": "São Miguel (Ilha dos Açores)",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "São Miguel (Ilha dos Açores)",
+    "URL": "https://www.idealista.pt/comprar-casas/sao-miguel-ilha-dos-acores/concelhos-freguesias",
+    "Contagem": "808"
+  },
+  {
+    "Região": "Açores",
+    "Sub-região": "São Miguel (Ilha dos Açores)",
+    "Município": "Ponta Delgada",
+    "Tipo": "Município",
+    "Texto": "Ponta Delgada",
+    "URL": "https://www.idealista.pt/comprar-casas/ponta-delgada/",
+    "Contagem": null
+  },
+  {
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Terceira (Ilha dos Açores)",
+    "URL": "https://www.idealista.pt/comprar-casas/terceira-ilha-dos-acores/concelhos-freguesias",
+    "Contagem": "400"
+  },
+  {
+    "Região": "Açores",
+    "Sub-região": null,
+    "Município": null,
+    "Tipo": "Região",
+    "Texto": "Açores",
+    "URL": "https://www.idealista.pt/geo/comprar-casas/acores/",
+    "Contagem": null
+  },
+  {
+    "Região": "Alentejo",
+    "Sub-região": "Beja",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Beja",
+    "URL": "https://www.idealista.pt/comprar-casas/beja-distrito/concelhos-freguesias",
+    "Contagem": "1.790"
+  },
+  {
+    "Região": "Alentejo",
+    "Sub-região": "Beja",
+    "Município": "Vila Nova de Milfontes",
+    "Tipo": "Município",
+    "Texto": "Vila Nova de Milfontes",
+    "URL": "https://www.idealista.pt/comprar-casas/odemira/vila-nova-de-milfontes/",
+    "Contagem": null
+  },
+  {
+    "Região": "Alentejo",
+    "Sub-região": "Évora",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Évora",
+    "URL": "https://www.idealista.pt/comprar-casas/evora-distrito/concelhos-freguesias",
+    "Contagem": "1.709"
+  },
+  {
+    "Região": "Alentejo",
+    "Sub-região": "Portalegre",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Portalegre",
+    "URL": "https://www.idealista.pt/comprar-casas/portalegre-distrito/concelhos-freguesias",
+    "Contagem": "1.475"
+  },
+  {
+    "Região": "Alentejo",
+    "Sub-região": "Santarém",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Santarém",
+    "URL": "https://www.idealista.pt/comprar-casas/santarem-distrito/concelhos-freguesias",
+    "Contagem": "4.395"
+  },
+  {
+    "Região": "Alentejo",
+    "Sub-região": "Santarém",
+    "Município": "Torres Novas",
+    "Tipo": "Município",
+    "Texto": "Torres Novas",
+    "URL": "https://www.idealista.pt/comprar-casas/torres-novas/",
+    "Contagem": null
+  },
+  {
+    "Região": "Alentejo",
+    "Sub-região": null,
+    "Município": null,
+    "Tipo": "Região",
+    "Texto": "Alentejo",
+    "URL": "https://www.idealista.pt/geo/comprar-casas/alentejo/",
+    "Contagem": null
+  },
+  {
+    "Região": "Algarve",
+    "Sub-região": "Faro",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Faro",
+    "URL": "https://www.idealista.pt/comprar-casas/faro-distrito/concelhos-freguesias",
+    "Contagem": "20.048"
+  },
+  {
+    "Região": "Algarve",
+    "Sub-região": "Faro",
+    "Município": "Albufeira",
+    "Tipo": "Município",
+    "Texto": "Albufeira",
+    "URL": "https://www.idealista.pt/comprar-casas/albufeira/",
+    "Contagem": null
+  },
+  {
+    "Região": "Algarve",
+    "Sub-região": "Faro",
+    "Município": "Alvor",
+    "Tipo": "Município",
+    "Texto": "Alvor",
+    "URL": "https://www.idealista.pt/comprar-casas/portimao/alvor/",
+    "Contagem": null
+  },
+  {
+    "Região": "Algarve",
+    "Sub-região": "Faro",
+    "Município": "Conceição e Cabanas de Tavira",
+    "Tipo": "Município",
+    "Texto": "Conceição e Cabanas de Tavira",
+    "URL": "https://www.idealista.pt/comprar-casas/tavira/conceicao-e-cabanas-de-tavira/",
+    "Contagem": null
+  },
+  {
+    "Região": "Algarve",
+    "Sub-região": "Faro",
+    "Município": "Faro",
+    "Tipo": "Município",
+    "Texto": "Faro",
+    "URL": "https://www.idealista.pt/comprar-casas/faro/",
+    "Contagem": null
+  },
+  {
+    "Região": "Algarve",
+    "Sub-região": "Faro",
+    "Município": "Lagos",
+    "Tipo": "Município",
+    "Texto": "Lagos",
+    "URL": "https://www.idealista.pt/comprar-casas/lagos/",
+    "Contagem": null
+  },
+  {
+    "Região": "Algarve",
+    "Sub-região": "Faro",
+    "Município": "Monte Gordo",
+    "Tipo": "Município",
+    "Texto": "Monte Gordo",
+    "URL": "https://www.idealista.pt/comprar-casas/vila-real-de-santo-antonio/monte-gordo/",
+    "Contagem": null
+  },
+  {
+    "Região": "Algarve",
+    "Sub-região": "Faro",
+    "Município": "Portimão",
+    "Tipo": "Município",
+    "Texto": "Portimão",
+    "URL": "https://www.idealista.pt/comprar-casas/portimao/",
+    "Contagem": null
+  },
+  {
+    "Região": "Algarve",
+    "Sub-região": "Faro",
+    "Município": "Quarteira",
+    "Tipo": "Município",
+    "Texto": "Quarteira",
+    "URL": "https://www.idealista.pt/comprar-casas/loule/quarteira/",
+    "Contagem": null
+  },
+  {
+    "Região": "Algarve",
+    "Sub-região": "Faro",
+    "Município": "Sagres",
+    "Tipo": "Município",
+    "Texto": "Sagres",
+    "URL": "https://www.idealista.pt/comprar-casas/vila-do-bispo/sagres/",
+    "Contagem": null
+  },
+  {
+    "Região": "Algarve",
+    "Sub-região": "Faro",
+    "Município": "Tavira",
+    "Tipo": "Município",
+    "Texto": "Tavira",
+    "URL": "https://www.idealista.pt/comprar-casas/tavira/",
+    "Contagem": null
+  },
+  {
+    "Região": "Algarve",
+    "Sub-região": null,
+    "Município": null,
+    "Tipo": "Região",
+    "Texto": "Algarve",
+    "URL": "https://www.idealista.pt/comprar-casas/faro-distrito/",
+    "Contagem": null
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Lisboa",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Lisboa",
+    "URL": "https://www.idealista.pt/comprar-casas/lisboa-distrito/concelhos-freguesias",
+    "Contagem": "27.796"
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Lisboa",
+    "Município": "Cascais",
+    "Tipo": "Município",
+    "Texto": "Cascais",
+    "URL": "https://www.idealista.pt/comprar-casas/cascais/",
+    "Contagem": null
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Lisboa",
+    "Município": "Ericeira",
+    "Tipo": "Município",
+    "Texto": "Ericeira",
+    "URL": "https://www.idealista.pt/comprar-casas/mafra/ericeira/",
+    "Contagem": null
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Lisboa",
+    "Município": "Lisboa",
+    "Tipo": "Município",
+    "Texto": "Lisboa",
+    "URL": "https://www.idealista.pt/comprar-casas/lisboa/",
+    "Contagem": null
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Lisboa",
+    "Município": "Odivelas",
+    "Tipo": "Município",
+    "Texto": "Odivelas",
+    "URL": "https://www.idealista.pt/comprar-casas/odivelas/",
+    "Contagem": null
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Lisboa",
+    "Município": "Oeiras",
+    "Tipo": "Município",
+    "Texto": "Oeiras",
+    "URL": "https://www.idealista.pt/comprar-casas/oeiras/",
+    "Contagem": null
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Lisboa",
+    "Município": "Torres Vedras",
+    "Tipo": "Município",
+    "Texto": "Torres Vedras",
+    "URL": "https://www.idealista.pt/comprar-casas/torres-vedras/",
+    "Contagem": null
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Setúbal",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Setúbal",
+    "URL": "https://www.idealista.pt/comprar-casas/setubal-distrito/concelhos-freguesias",
+    "Contagem": "13.976"
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Setúbal",
+    "Município": "Almada",
+    "Tipo": "Município",
+    "Texto": "Almada",
+    "URL": "https://www.idealista.pt/comprar-casas/almada/",
+    "Contagem": null
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Setúbal",
+    "Município": "Barreiro",
+    "Tipo": "Município",
+    "Texto": "Barreiro",
+    "URL": "https://www.idealista.pt/comprar-casas/barreiro/",
+    "Contagem": null
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Setúbal",
+    "Município": "Costa de Caparica",
+    "Tipo": "Município",
+    "Texto": "Costa de Caparica",
+    "URL": "https://www.idealista.pt/comprar-casas/almada/costa-de-caparica/",
+    "Contagem": null
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Setúbal",
+    "Município": "Montijo",
+    "Tipo": "Município",
+    "Texto": "Montijo",
+    "URL": "https://www.idealista.pt/comprar-casas/montijo/",
+    "Contagem": null
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": "Setúbal",
+    "Município": "Sesimbra",
+    "Tipo": "Município",
+    "Texto": "Sesimbra",
+    "URL": "https://www.idealista.pt/comprar-casas/sesimbra/",
+    "Contagem": null
+  },
+  {
+    "Região": "Área Metropolitana de Lisboa",
+    "Sub-região": null,
+    "Município": null,
+    "Tipo": "Região",
+    "Texto": "Área Metropolitana de Lisboa",
+    "URL": "https://www.idealista.pt/geo/comprar-casas/area-metropolitana-de-lisboa/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Aveiro",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Aveiro",
+    "URL": "https://www.idealista.pt/comprar-casas/aveiro-distrito/concelhos-freguesias",
+    "Contagem": "6.402"
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Aveiro",
+    "Município": "Aveiro",
+    "Tipo": "Município",
+    "Texto": "Aveiro",
+    "URL": "https://www.idealista.pt/comprar-casas/aveiro/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Aveiro",
+    "Município": "Espinho",
+    "Tipo": "Município",
+    "Texto": "Espinho",
+    "URL": "https://www.idealista.pt/comprar-casas/espinho/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Aveiro",
+    "Município": "Santa Maria da Feira",
+    "Tipo": "Município",
+    "Texto": "Santa Maria da Feira",
+    "URL": "https://www.idealista.pt/comprar-casas/santa-maria-da-feira/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Castelo Branco",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Castelo Branco",
+    "URL": "https://www.idealista.pt/comprar-casas/castelo-branco-distrito/concelhos-freguesias",
+    "Contagem": "2.980"
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Castelo Branco",
+    "Município": "Castelo Branco",
+    "Tipo": "Município",
+    "Texto": "Castelo Branco",
+    "URL": "https://www.idealista.pt/comprar-casas/castelo-branco/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Coimbra",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Coimbra",
+    "URL": "https://www.idealista.pt/comprar-casas/coimbra-distrito/concelhos-freguesias",
+    "Contagem": "4.388"
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Coimbra",
+    "Município": "Coimbra",
+    "Tipo": "Município",
+    "Texto": "Coimbra",
+    "URL": "https://www.idealista.pt/comprar-casas/coimbra/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Coimbra",
+    "Município": "Figueira da Foz",
+    "Tipo": "Município",
+    "Texto": "Figueira da Foz",
+    "URL": "https://www.idealista.pt/comprar-casas/figueira-da-foz/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Guarda",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Guarda",
+    "URL": "https://www.idealista.pt/comprar-casas/guarda-distrito/concelhos-freguesias",
+    "Contagem": "1.310"
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Guarda",
+    "Município": "Guarda",
+    "Tipo": "Município",
+    "Texto": "Guarda",
+    "URL": "https://www.idealista.pt/comprar-casas/guarda/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Leiria",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Leiria",
+    "URL": "https://www.idealista.pt/comprar-casas/leiria-distrito/concelhos-freguesias",
+    "Contagem": "6.193"
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Leiria",
+    "Município": "Caldas da Rainha",
+    "Tipo": "Município",
+    "Texto": "Caldas da Rainha",
+    "URL": "https://www.idealista.pt/comprar-casas/caldas-da-rainha/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Leiria",
+    "Município": "Leiria",
+    "Tipo": "Município",
+    "Texto": "Leiria",
+    "URL": "https://www.idealista.pt/comprar-casas/leiria/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Leiria",
+    "Município": "Marinha Grande",
+    "Tipo": "Município",
+    "Texto": "Marinha Grande",
+    "URL": "https://www.idealista.pt/comprar-casas/marinha-grande/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Leiria",
+    "Município": "Nazaré",
+    "Tipo": "Município",
+    "Texto": "Nazaré",
+    "URL": "https://www.idealista.pt/comprar-casas/nazare/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Leiria",
+    "Município": "Peniche",
+    "Tipo": "Município",
+    "Texto": "Peniche",
+    "URL": "https://www.idealista.pt/comprar-casas/peniche/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Leiria",
+    "Município": "Pombal",
+    "Tipo": "Município",
+    "Texto": "Pombal",
+    "URL": "https://www.idealista.pt/comprar-casas/pombal/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Leiria",
+    "Município": "São Martinho do Porto",
+    "Tipo": "Município",
+    "Texto": "São Martinho do Porto",
+    "URL": "https://www.idealista.pt/comprar-casas/alcobaca/sao-martinho-do-porto/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Viseu",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Viseu",
+    "URL": "https://www.idealista.pt/comprar-casas/viseu-distrito/concelhos-freguesias",
+    "Contagem": "3.240"
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": "Viseu",
+    "Município": "Viseu",
+    "Tipo": "Município",
+    "Texto": "Viseu",
+    "URL": "https://www.idealista.pt/comprar-casas/viseu/",
+    "Contagem": null
+  },
+  {
+    "Região": "Centro",
+    "Sub-região": null,
+    "Município": null,
+    "Tipo": "Região",
+    "Texto": "Centro",
+    "URL": "https://www.idealista.pt/geo/comprar-casas/centro/",
+    "Contagem": null
+  },
+  {
+    "Região": "Madeira",
+    "Sub-região": "Madeira (Ilha)",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Madeira (Ilha)",
+    "URL": "https://www.idealista.pt/comprar-casas/madeira-ilha/concelhos-freguesias",
+    "Contagem": "4.096"
+  },
+  {
+    "Região": "Madeira",
+    "Sub-região": "Madeira (Ilha)",
+    "Município": "Funchal",
+    "Tipo": "Município",
+    "Texto": "Funchal",
+    "URL": "https://www.idealista.pt/comprar-casas/funchal/",
+    "Contagem": null
+  },
+  {
+    "Região": "Madeira",
+    "Sub-região": "Porto Santo (Ilha)",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Porto Santo (Ilha)",
+    "URL": "https://www.idealista.pt/comprar-casas/porto-santo-ilha/concelhos-freguesias",
+    "Contagem": "66"
+  },
+  {
+    "Região": "Madeira",
+    "Sub-região": null,
+    "Município": null,
+    "Tipo": "Região",
+    "Texto": "Madeira",
+    "URL": "https://www.idealista.pt/geo/comprar-casas/madeira/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Braga",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Braga",
+    "URL": "https://www.idealista.pt/comprar-casas/braga-distrito/concelhos-freguesias",
+    "Contagem": "7.609"
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Braga",
+    "Município": "Barcelos",
+    "Tipo": "Município",
+    "Texto": "Barcelos",
+    "URL": "https://www.idealista.pt/comprar-casas/barcelos/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Braga",
+    "Município": "Braga",
+    "Tipo": "Município",
+    "Texto": "Braga",
+    "URL": "https://www.idealista.pt/comprar-casas/braga/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Bragança",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Bragança",
+    "URL": "https://www.idealista.pt/comprar-casas/braganca-distrito/concelhos-freguesias",
+    "Contagem": "1.006"
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Bragança",
+    "Município": "Bragança",
+    "Tipo": "Município",
+    "Texto": "Bragança",
+    "URL": "https://www.idealista.pt/comprar-casas/braganca/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Porto",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Porto",
+    "URL": "https://www.idealista.pt/comprar-casas/porto-distrito/concelhos-freguesias",
+    "Contagem": "26.598"
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Porto",
+    "Município": "Maia",
+    "Tipo": "Município",
+    "Texto": "Maia",
+    "URL": "https://www.idealista.pt/comprar-casas/maia/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Porto",
+    "Município": "Matosinhos",
+    "Tipo": "Município",
+    "Texto": "Matosinhos",
+    "URL": "https://www.idealista.pt/comprar-casas/matosinhos/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Porto",
+    "Município": "Penafiel",
+    "Tipo": "Município",
+    "Texto": "Penafiel",
+    "URL": "https://www.idealista.pt/comprar-casas/penafiel/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Porto",
+    "Município": "Porto",
+    "Tipo": "Município",
+    "Texto": "Porto",
+    "URL": "https://www.idealista.pt/comprar-casas/porto/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Porto",
+    "Município": "Póvoa de Varzim",
+    "Tipo": "Município",
+    "Texto": "Póvoa de Varzim",
+    "URL": "https://www.idealista.pt/comprar-casas/povoa-de-varzim/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Porto",
+    "Município": "Santo Tirso",
+    "Tipo": "Município",
+    "Texto": "Santo Tirso",
+    "URL": "https://www.idealista.pt/comprar-casas/santo-tirso/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Porto",
+    "Município": "Valongo",
+    "Tipo": "Município",
+    "Texto": "Valongo",
+    "URL": "https://www.idealista.pt/comprar-casas/valongo/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Porto",
+    "Município": "Vila Nova de Gaia",
+    "Tipo": "Município",
+    "Texto": "Vila Nova de Gaia",
+    "URL": "https://www.idealista.pt/comprar-casas/vila-nova-de-gaia/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Porto",
+    "Município": "Vila do Conde",
+    "Tipo": "Município",
+    "Texto": "Vila do Conde",
+    "URL": "https://www.idealista.pt/comprar-casas/vila-do-conde/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Viana do Castelo",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Viana do Castelo",
+    "URL": "https://www.idealista.pt/comprar-casas/viana-do-castelo-distrito/concelhos-freguesias",
+    "Contagem": "3.778"
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Viana do Castelo",
+    "Município": "Ponte de Lima",
+    "Tipo": "Município",
+    "Texto": "Ponte de Lima",
+    "URL": "https://www.idealista.pt/comprar-casas/ponte-de-lima/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Viana do Castelo",
+    "Município": "Viana do Castelo",
+    "Tipo": "Município",
+    "Texto": "Viana do Castelo",
+    "URL": "https://www.idealista.pt/comprar-casas/viana-do-castelo/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Vila Real",
+    "Município": null,
+    "Tipo": "Sub-região",
+    "Texto": "Vila Real",
+    "URL": "https://www.idealista.pt/comprar-casas/vila-real-distrito/concelhos-freguesias",
+    "Contagem": "1.505"
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": "Vila Real",
+    "Município": "Vila Real",
+    "Tipo": "Município",
+    "Texto": "Vila Real",
+    "URL": "https://www.idealista.pt/comprar-casas/vila-real/",
+    "Contagem": null
+  },
+  {
+    "Região": "Norte",
+    "Sub-região": null,
+    "Município": null,
+    "Tipo": "Região",
+    "Texto": "Norte",
+    "URL": "https://www.idealista.pt/geo/comprar-casas/norte/",
+    "Contagem": null
+  }
+]
