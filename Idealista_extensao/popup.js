@@ -118,7 +118,7 @@ if (extractBtn) extractBtn.addEventListener("click", async () => {
 
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-    const targetUrl = "https://www.idealista.pt/arrendar-casas/#municipality-search"";
+    const targetUrl = "https://www.idealista.pt/arrendar-casas/#municipality-search";
     console.log('[ExtrairLinks] Navegando para', targetUrl);
     await chrome.tabs.update(tab.id, { url: targetUrl });
     console.log('[ExtrairLinks] Aguardando carregamento da página...');
