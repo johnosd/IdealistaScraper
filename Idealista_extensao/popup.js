@@ -8,6 +8,57 @@ function getExtraDomains() {
   return extraDomainsInput.value.split(/\n+/).map(d => d.trim()).filter(Boolean);
 }
 
+// Configuração do proxy (desativado por padrão)
+const PROXY_CONFIG = {
+  host: "proxy-us.proxy-cheap.com",
+  port: 5959,
+  username: "pcOoqLBiLs-res-any",
+  password: "PC_5djX4v5F9aXvIl5gn",
+};
+
+async function enableProxy() {
+  try {
+    const res = await chrome.runtime.sendMessage({
+      cmd: "ENABLE_PROXY",
+      host: PROXY_CONFIG.host,
+      port: PROXY_CONFIG.port,
+      username: PROXY_CONFIG.username,
+      password: PROXY_CONFIG.password,
+      extraDomains: getExtraDomains(),
+    });
+    return res?.ok;
+  } catch (e) {
+    console.error('Erro ao habilitar proxy:', e);
+    alert('Falha ao habilitar o proxy: ' + e);
+    return false;
+  }
+}
+
+async function disableProxy() {
+  try {
+    const res = await chrome.runtime.sendMessage({ cmd: "DISABLE_PROXY" });
+    return res?.ok;
+  } catch (e) {
+    console.warn('Erro ao desativar proxy:', e);
+    alert('Falha ao desativar o proxy: ' + e);
+    return false;
+  }
+}
+
+async function ensureProxyPrompt() {
+  try {
+    const st = await chrome.runtime.sendMessage({ cmd: "PROXY_STATUS" });
+    if (!st?.enabled) {
+      if (confirm('Proxy desativado. Deseja ativá-lo?')) {
+        await enableProxy();
+        await refreshProxyStatus();
+      }
+    }
+  } catch (e) {
+    console.warn('Falha ao verificar status do proxy:', e);
+  }
+}
+
 function waitForTabComplete(tabId, timeoutMs = 30000) {
   return new Promise((resolve, reject) => {
     let done = false;
@@ -48,6 +99,7 @@ if (extractBtn) extractBtn.addEventListener("click", async () => {
   const prev = extractBtn.textContent;
   extractBtn.textContent = "Extraindo...";
   try {
+    await ensureProxyPrompt();
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     const targetUrl = "https://www.idealista.pt/";
     await chrome.tabs.update(tab.id, { url: targetUrl });
@@ -104,39 +156,9 @@ if (itemsBtn) itemsBtn.addEventListener("click", async () => {
     return;
   }
 
-  // >>>> SUBSTITUA pelos dados REAIS do seu proxy:
-  const PROXY_HOST = "proxy-us.proxy-cheap.com";      // ex: gw.resnet.example.com
-  const PROXY_PORT = 5959;             // ex: 12345
-  const PROXY_USER = "pcOoqLBiLs-res-any";
-  const PROXY_PASS = "PC_5djX4v5F9aXvIl5gn";
+  await ensureProxyPrompt();
 
-  // 1) Ativa proxy
-  let en;
-  try {
-    en = await chrome.runtime.sendMessage({
-      cmd: "ENABLE_PROXY",
-      host: PROXY_HOST,
-      port: PROXY_PORT,
-      username: PROXY_USER,
-      password: PROXY_PASS,
-      extraDomains: getExtraDomains()
-    });
-  } catch (err) {
-    console.error('Erro ao enviar ENABLE_PROXY:', err);
-    alert('Falha ao habilitar o proxy: ' + err);
-    itemsBtn.disabled = false;
-    itemsBtn.textContent = prevText;
-    return;
-  }
-  if (!en?.ok) {
-    console.warn("ENABLE_PROXY falhou:", en?.error);
-    alert("Falha ao habilitar o proxy: " + (en?.error || "erro desconhecido"));
-    itemsBtn.disabled = false;
-    itemsBtn.textContent = prevText;
-    return;
-  }
-
-  // 2) Aguarda carregamento e dispara o crawler
+  // Aguarda carregamento e dispara o crawler
   try {
     // garante que o content script já foi injetado
     await waitForTabComplete(tab.id);
@@ -161,7 +183,7 @@ if (itemsBtn) itemsBtn.addEventListener("click", async () => {
   }
 });
 
-// Botão: Parar e baixar JSON parcial + desabilitar proxy
+// Botão: Parar e baixar JSON parcial
 const stopBtn = document.getElementById("stopExtract");
 if (stopBtn) {
   stopBtn.addEventListener("click", async () => {
@@ -172,12 +194,6 @@ if (stopBtn) {
       console.warn('Falha ao enviar STOP_AND_DOWNLOAD:', e);
     }
 
-    // Desativa proxy
-    try {
-      await chrome.runtime.sendMessage({ cmd: "DISABLE_PROXY" });
-    } catch (e) {
-      console.warn('Falha ao desativar proxy:', e);
-    }
   });
 }
 
@@ -191,9 +207,25 @@ async function refreshProxyStatus() {
     const st = await chrome.runtime.sendMessage({ cmd: "PROXY_STATUS" });
     const el = document.getElementById("proxyState");
     if (el) el.textContent = st?.enabled ? "ativado" : "desativado";
+    const tBtn = document.getElementById('toggleProxy');
+    if (tBtn) tBtn.textContent = st?.enabled ? 'Desativar Proxy' : 'Ativar Proxy';
   } catch (e) {
     console.warn('Falha ao obter status do proxy:', e);
   }
+}
+
+// Botão de ativar/desativar proxy
+const toggleBtn = document.getElementById('toggleProxy');
+if (toggleBtn) {
+  toggleBtn.addEventListener('click', async () => {
+    const st = await chrome.runtime.sendMessage({ cmd: 'PROXY_STATUS' });
+    if (st?.enabled) {
+      await disableProxy();
+    } else {
+      await enableProxy();
+    }
+    await refreshProxyStatus();
+  });
 }
 
 // --- Botão: Testar IP (requisição passa pelo proxy quando ativado) ---
