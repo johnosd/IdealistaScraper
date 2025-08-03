@@ -37,25 +37,30 @@
   <!-- Aba 1: Links -->
   <section id="panel-links" class="panel active" role="tabpanel" aria-labelledby="tab-links">
     <button id="extract" aria-label="Extrair links em JSON">Extrair Links (JSON)</button>
+    <div id="linksLog" style="font-size:12px;color:#2563eb;margin-top:8px;min-height:32px;"></div>
   </section>
 
   <!-- Aba 2: Itens -->
   <section id="panel-itens" class="panel" role="tabpanel" aria-labelledby="tab-itens">
+    <input type="url" id="itemUrlBox" placeholder="Cole o link da página do Idealista" style="width:100%;margin-bottom:6px;" />
     <button id="extractItems" aria-label="Extrair itens em JSON com paginação">Extrair Itens (JSON)</button>
+    <div id="itensLog" style="font-size:12px;color:#2563eb;margin-top:8px;min-height:32px;"></div>
     <button id="stopExtract" aria-label="Parar e baixar JSON parcial">Parar e baixar JSON</button>
   </section>
 
   <!-- Aba 3: Proxy -->
   <section id="panel-proxy" class="panel" role="tabpanel" aria-labelledby="tab-proxy">
-    <div id="proxyStatus" style="font-size:12px;margin:4px 0;">
-      Proxy: <strong id="proxyState">desativado</strong>
-    </div>
-    <button id="toggleProxy">Ativar Proxy</button>
-    <div id="proxyIpBox" style="font-size:12px;color:#444;"></div>
-    <label for="extraDomains" style="font-size:12px;display:block;margin-top:4px;">Domínios adicionais (um por linha)</label>
-    <textarea id="extraDomains" rows="2" style="width:100%;"></textarea>
-    <button id="testProxyIp">Testar IP (via proxy)</button>
-  </section>
+  <div id="proxyStatus" style="font-size:12px;margin:4px 0;">
+    Status: <strong id="proxyState">desconectado</strong>
+  </div>
+  <div style="display:flex; gap:8px; margin-bottom:8px;">
+    <button id="proxyConnect" style="flex:1;">Connect</button>
+    <button id="proxyDisconnect" style="flex:1;">Disconnect</button>
+  </div>
+  <div style="font-size:12px; margin-bottom:6px;">
+    IP atual: <span id="proxyIpBox" style="color:#2563eb;">-</span>
+  </div>
+</section>
 
   <!-- Scripts externos (sem inline, para respeitar CSP) -->
   <script src="popup-ui.js"></script>

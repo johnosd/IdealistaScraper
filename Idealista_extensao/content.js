@@ -1,15 +1,28 @@
 // ===================== content.js (com log de IP e crawler paginado) =====================
 
-// ---------- Utils básicos ----------
-const randDelay = () => 3000 + Math.floor(Math.random() * 7000); // 3–10s
-const sleep = (ms) => new Promise(r => setTimeout(r, ms));
-const limparTexto = (t) => (t || '').replace(/\s+/g,' ').trim();
-const toAbs = (href) => href ? new URL(href, location.origin).href : null;
-const parseIntSafe = (s) => {
-  if (!s) return null;
-  const n = parseInt(String(s).replace(/[^\d]/g,''), 10);
-  return Number.isFinite(n) ? n : null;
-};
+// ---------- Utils básicos (escopo seguro) ----------
+(function() {
+  if (typeof window.randDelay !== 'function') {
+    window.randDelay = function() { return 3000 + Math.floor(Math.random() * 7000); };
+  }
+  if (typeof window.sleep !== 'function') {
+    window.sleep = function(ms) { return new Promise(r => setTimeout(r, ms)); };
+  }
+  if (typeof window.limparTexto !== 'function') {
+    window.limparTexto = function(t) { return (t || '').replace(/\s+/g,' ').trim(); };
+  }
+  if (typeof window.toAbs !== 'function') {
+    window.toAbs = function(href) { return href ? new URL(href, location.origin).href : null; };
+  }
+})();
+// Use window.randDelay, window.sleep, window.limparTexto, window.toAbs no restante do script.
+if (typeof window.parseIntSafe !== 'function') {
+  window.parseIntSafe = function(s) {
+    if (!s) return null;
+    const n = parseInt(String(s).replace(/[^\d]/g,''), 10);
+    return isNaN(n) ? null : n;
+  };
+}
 
 function baixarJSON(obj, nomeBase) {
   const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json;charset=utf-8' });
@@ -24,7 +37,9 @@ function baixarJSON(obj, nomeBase) {
 }
 
 // ---------- LOG do IP público (via proxy) ----------
-let __lastProxyIp = null;
+if (typeof window.__lastProxyIp === 'undefined') {
+  window.__lastProxyIp = null;
+}
 
 async function getPublicIp() {
   try {
@@ -64,14 +79,20 @@ async function logProxyIp(label = "") {
 
 
 // ---------- Extrator de itens + paginação ----------
-let stopRequested = false;
+if (typeof window.stopRequested === 'undefined') {
+  window.stopRequested = false;
+}
 
 function extrairDaRaiz(rootDoc) {
   const lista = rootDoc.querySelector('section.items-container.items-list');
-  if (!lista) return { itens: [], nextUrl: null };
+  if (!lista) {
+    console.warn('[extrairDaRaiz] Não encontrou section.items-container.items-list');
+    return { itens: [], nextUrl: null };
+  }
 
   const artigos = Array.from(lista.querySelectorAll('article.item'))
     .filter(a => !a.classList.contains('adv'));
+  console.log(`[extrairDaRaiz] Encontrou ${artigos.length} artigos em section.items-container.items-list`);
 
   const itens = artigos.map(art => {
     const aTitulo = art.querySelector('.item-info-container a.item-link');
@@ -201,8 +222,9 @@ async function runCrawlFetchNext() {
   }
 
   if (todos.length > 0) {
-    baixarJSON(todos, `itens_paginas`);
+    chrome.runtime.sendMessage({ cmd: 'DOWNLOAD_JSON', data: todos });
     alert(`JSON gerado com ${todos.length} itens de ${pagina} página(s).`);
+    console.log('[Crawler] JSON enviado para popup/background para download:', todos.length);
   } else {
     alert('Nenhum item encontrado.');
   }
@@ -213,6 +235,7 @@ async function runCrawlFetchNext() {
 // ---------- Mensagens do popup ----------
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg?.cmd === 'START_CRAWL') {
+    console.log('[content.js] Recebido comando START_CRAWL');
     (async () => {
       try {
         await runCrawlFetchNext();

@@ -94,48 +94,81 @@ function waitForTabComplete(tabId, timeoutMs = 30000) {
 
 // Obtém o IP público visto pela aba (usando content.js)
 async function getTabPublicIp(tabId) {
-  try {
-    const res = await chrome.tabs.sendMessage(tabId, { cmd: 'TEST_IP' });
-    if (res?.ok) return res.ip || null;
-    console.warn('[ExtrairLinks] Falha ao obter IP: ' + (res?.error || 'sem resposta'));
-  } catch (e) {
-    console.warn('[ExtrairLinks] Erro ao obter IP da aba:', e);
-  }
-  return null;
+  // Timeout de 5 segundos para evitar travamento
+  return await Promise.race([
+    (async () => {
+      try {
+        const res = await chrome.tabs.sendMessage(tabId, { cmd: 'TEST_IP' });
+        if (res?.ok) return res.ip || null;
+        console.warn('[ExtrairLinks] Falha ao obter IP: ' + (res?.error || 'sem resposta'));
+      } catch (e) {
+        console.warn('[ExtrairLinks] Erro ao obter IP da aba:', e);
+      }
+      return null;
+    })(),
+    new Promise(resolve => setTimeout(() => resolve(null), 5000))
+  ]);
 }
 
 // ============== Extrair Links (JSON) ==============
 const extractBtn = document.getElementById("extract");
+const linksLog = document.getElementById("linksLog");
+function logLinks(msg) {
+  if (linksLog) linksLog.textContent = msg;
+}
 if (extractBtn) extractBtn.addEventListener("click", async () => {
   extractBtn.disabled = true;
   const prev = extractBtn.textContent;
   extractBtn.textContent = "Extraindo...";
   try {
-    console.log('[ExtrairLinks] Iniciando extração de links...');
+    logLinks('Iniciando extração de links...');
     await ensureProxyPrompt();
     const proxySt = await chrome.runtime.sendMessage({ cmd: 'PROXY_STATUS' });
-    console.log('[ExtrairLinks] Proxy ' + (proxySt?.enabled ? 'ativado' : 'desativado'));
+    logLinks('Proxy ' + (proxySt?.enabled ? 'ativado' : 'desativado'));
 
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
     const targetUrl = "https://www.idealista.pt/arrendar-casas/#municipality-search";
-    console.log('[ExtrairLinks] Navegando para', targetUrl);
-    await chrome.tabs.update(tab.id, { url: targetUrl });
-    console.log('[ExtrairLinks] Aguardando carregamento da página...');
-    await waitForTabComplete(tab.id);
-    console.log('[ExtrairLinks] Página carregada. Obtendo IP público...');
-    const ip = await getTabPublicIp(tab.id);
-    if (ip) console.log('[ExtrairLinks] IP público (aba):', ip);
+    if (tab.url !== targetUrl) {
+      logLinks('Navegando para: ' + targetUrl);
+      await chrome.tabs.update(tab.id, { url: targetUrl });
+      logLinks('Aguardando carregamento da página...');
+      try {
+        await waitForTabComplete(tab.id);
+      } catch (e) {
+        logLinks('Timeout aguardando carregamento. Recarregue manualmente a página e tente novamente.');
+        throw e;
+      }
+    } else {
+      logLinks('Aba já está na página de busca.');
+    }
 
-    const delay = randDelay();
-    console.log(`[ExtrairLinks] Aguardando ${Math.round(delay/1000)}s antes da extração...`);
-    await sleep(delay);
-    console.log('[ExtrairLinks] Executando script de extração...');
+    // Obter IP da aba antes da extração
+    const ip = await getTabPublicIp(tab.id);
+    const proxySt2 = await chrome.runtime.sendMessage({ cmd: 'PROXY_STATUS' });
+    if (ip) {
+      if (proxySt2?.enabled) {
+        logLinks('IP do proxy usado: ' + ip);
+      } else {
+        logLinks('IP público usado: ' + ip);
+      }
+    } else {
+      logLinks('Não foi possível obter o IP da aba.');
+    }
+
+    logLinks('Página pronta. Injetando extrator...');
+    // Garante que linkExtractor.js está carregado
     await chrome.scripting.executeScript({
       target: { tabId: tab.id },
-      func: extrairLinksESalvarJSONNaPagina
+      files: ['linkExtractor.js']
     });
-    console.log('[ExtrairLinks] Extração de links concluída.');
+    // Agora executa a função de extração
+    await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      func: extrairLinksESalvarJSONNaPagina,
+      args: [ip]
+    });
+    logLinks('Extração de links concluída e arquivo salvo!');
   } catch (err) {
     console.error('Erro em Extrair Links:', err);
     alert('Erro ao extrair links. Veja o console para detalhes.');
@@ -146,8 +179,8 @@ if (extractBtn) extractBtn.addEventListener("click", async () => {
 });
 
 // roda na página
-function extrairLinksESalvarJSONNaPagina() {
-  console.log('[ExtrairLinks|Página] Iniciando coleta de links...');
+function extrairLinksESalvarJSONNaPagina(ip) {
+  console.log('[ExtrairLinks|Página] Iniciando coleta de links... IP usado:', ip);
   if (typeof extractLinks !== 'function') {
     console.warn('[ExtrairLinks|Página] Função extractLinks não disponível.');
     alert('Função extractLinks não disponível.');
@@ -174,42 +207,62 @@ function extrairLinksESalvarJSONNaPagina() {
   alert(`JSON gerado com ${rows.length} registros.`);
 }
 
-// ============== Extrair Itens (proxy + paginação) ==============
-const itemsBtn = document.getElementById("extractItems");
-if (itemsBtn) itemsBtn.addEventListener("click", async () => {
-  itemsBtn.disabled = true;
-  const prevText = itemsBtn.textContent;
-  itemsBtn.textContent = "Extraindo...";
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+// ============== Download JSON enviado pelo content script ==============
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+  if (msg?.cmd === 'DOWNLOAD_JSON' && Array.isArray(msg.data)) {
+    const blob = new Blob([JSON.stringify(msg.data, null, 2)], { type: 'application/json;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'itens_paginas_' + new Date().toISOString().slice(0,19).replace(/[:T]/g,'-') + '.json';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  }
+});
 
-  if (!/^https:\/\/(?:www\.)?idealista\.pt\//.test(tab?.url || "")) {
-    alert('Abra uma página de resultados no idealista.pt e depois clique em "Extrair Itens".');
+// ============== Extrair Itens (proxy + paginação) ==============
+const extractItemsBtn = document.getElementById("extractItems");
+const itemUrlBox = document.getElementById("itemUrlBox");
+const itensLog = document.getElementById("itensLog");
+function logItens(msg) {
+  if (itensLog) itensLog.textContent = msg;
+}
+if (extractItemsBtn) extractItemsBtn.addEventListener("click", async () => {
+  const url = itemUrlBox ? itemUrlBox.value.trim() : '';
+  if (!url) {
+    alert("Por favor, cole o link da página do Idealista no campo acima antes de extrair.");
     return;
   }
-
-  await ensureProxyPrompt();
-
-  // Aguarda carregamento e dispara o crawler
+  extractItemsBtn.disabled = true;
+  const prev = extractItemsBtn.textContent;
+  extractItemsBtn.textContent = "Extraindo...";
   try {
-    // garante que o content script já foi injetado
-    await waitForTabComplete(tab.id);
-    const res = await chrome.tabs.sendMessage(tab.id, { cmd: 'START_CRAWL' });
-    if (!res?.ok) throw new Error(res?.error || 'Sem resposta OK do content.js');
-  } catch (e) {
-    console.warn('Falha ao iniciar a extração:', e);
-    try {
-      await chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['content.js'] });
-      await sleep(500);
-    } catch (ee) {
-      console.warn('Falha ao injetar content.js:', ee);
+    logItens('Iniciando extração de itens...');
+    await ensureProxyPrompt();
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    if (tab.url !== url) {
+      logItens('Navegando para: ' + url);
+      await chrome.tabs.update(tab.id, { url });
+      logItens('Aguardando carregamento da página...');
+      await waitForTabComplete(tab.id);
+    } else {
+      logItens('Aba já está na página desejada.');
     }
-    const res2 = await chrome.tabs.sendMessage(tab.id, { cmd: 'START_CRAWL' });
-    if (!res2?.ok) {
-      alert('Não consegui iniciar a extração. Recarregue a página do Idealista.');
-    }
+    logItens('Injetando script de extração...');
+    await chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ["content.js"] });
+    logItens('Iniciando extração dos itens...');
+    await chrome.tabs.sendMessage(tab.id, { cmd: "EXTRACT_ITEMS" });
+    logItens('Itens extraídos e salvos!');
+    alert("Itens extraídos e salvos!");
+  } catch (err) {
+    console.error("Erro em Extrair Itens:", err);
+    logItens('Erro ao extrair itens: ' + String(err));
+    alert("Erro ao extrair itens. Veja o console para detalhes.");
   } finally {
-    itemsBtn.disabled = false;
-    itemsBtn.textContent = prevText;
+    extractItemsBtn.disabled = false;
+    extractItemsBtn.textContent = prev;
     setTimeout(refreshProxyStatus, 500);
   }
 });
@@ -245,48 +298,63 @@ async function refreshProxyStatus() {
   }
 }
 
-// Botão de ativar/desativar proxy
-const toggleBtn = document.getElementById('toggleProxy');
-if (toggleBtn) {
-  toggleBtn.addEventListener('click', async () => {
-    const st = await chrome.runtime.sendMessage({ cmd: 'PROXY_STATUS' });
-    if (st?.enabled) {
-      await disableProxy();
-    } else {
-      await enableProxy();
-    }
-    await refreshProxyStatus();
-  });
-}
+// --- Proxy: Connect/Disconnect ---
+const proxyConnectBtn = document.getElementById('proxyConnect');
+const proxyDisconnectBtn = document.getElementById('proxyDisconnect');
+const proxyStateEl = document.getElementById('proxyState');
+const proxyIpBox = document.getElementById('proxyIpBox');
 
-// --- Botão: Testar IP (requisição passa pelo proxy quando ativado) ---
-const testBtn = document.getElementById("testProxyIp");
-if (testBtn) {
-  testBtn.addEventListener("click", async () => {
-  const box = document.getElementById("proxyIpBox");
-  if (box) box.textContent = "Testando IP público (na aba)...";
+async function updateProxyIp() {
+  if (!proxyIpBox) return;
+  proxyIpBox.textContent = '...';
   try {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-    if (!/^https:\/\/(?:www\.)?idealista\.pt\//.test(tab?.url || "")) {
-      box.textContent = "Abra uma página do idealista.pt para testar.";
+    if (!tab || !tab.id) {
+      proxyIpBox.textContent = '-';
       return;
     }
-    const proxySt = await chrome.runtime.sendMessage({ cmd: 'PROXY_STATUS' });
-    if (proxySt?.enabled) {
-      // Proxy está ativo, obter IP do proxy
-      const ip = await getPublicIp();
-      box.textContent = "IP do proxy: " + (ip || "desconhecido");
-    } else {
-      // Proxy não está ativo, obter IP público
-      const ip = await getPublicIp();
-      box.textContent = "IP público: " + (ip || "desconhecido");
-    }
-  } catch (e) {
-    if (box) box.textContent = "Erro ao testar IP: " + String(e);
+    // Garante content.js injetado
+    try { await chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['content.js'] }); } catch {}
+    const ip = await getTabPublicIp(tab.id);
+    proxyIpBox.textContent = ip || '-';
+  } catch {
+    proxyIpBox.textContent = '-';
   }
-});
 }
 
-// Atualiza status ao parar
+async function refreshProxyStatus() {
+  try {
+    const st = await chrome.runtime.sendMessage({ cmd: "PROXY_STATUS" });
+    if (proxyStateEl) proxyStateEl.textContent = st?.enabled ? "conectado" : "desconectado";
+    if (proxyConnectBtn) proxyConnectBtn.disabled = !!st?.enabled;
+    if (proxyDisconnectBtn) proxyDisconnectBtn.disabled = !st?.enabled;
+    await updateProxyIp();
+  } catch (e) {
+    if (proxyStateEl) proxyStateEl.textContent = "erro";
+    if (proxyConnectBtn) proxyConnectBtn.disabled = false;
+    if (proxyDisconnectBtn) proxyDisconnectBtn.disabled = false;
+    if (proxyIpBox) proxyIpBox.textContent = '-';
+  }
+}
+
+if (proxyConnectBtn) proxyConnectBtn.addEventListener('click', async () => {
+  proxyConnectBtn.disabled = true;
+  await enableProxy();
+  await refreshProxyStatus();
+});
+if (proxyDisconnectBtn) proxyDisconnectBtn.addEventListener('click', async () => {
+  proxyDisconnectBtn.disabled = true;
+  await disableProxy();
+  await refreshProxyStatus();
+});
+
+document.addEventListener("DOMContentLoaded", refreshProxyStatus);
+
+// --- Botão: Testar IP (atualiza IP na interface) ---
+const testBtn = document.getElementById("testProxyIp");
+if (testBtn) {
+  testBtn.addEventListener("click", updateProxyIp);
+}
+
 const stopBtn2 = document.getElementById("stopExtract");
 if (stopBtn2) stopBtn2.addEventListener("click", () => setTimeout(refreshProxyStatus, 500));
