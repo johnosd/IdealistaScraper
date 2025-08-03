@@ -41,12 +41,13 @@
     <div id="proxyStatus" style="font-size:12px;margin:4px 0;">
       Proxy: <strong id="proxyState">desativado</strong>
     </div>
-    <div id="proxyIpBox" style="font-size:12px;color:#444;"></div>
+    <button id="enableProxy">Habilitar Proxy</button>
+    <button id="disableProxy">Desabilitar Proxy</button>
     <label for="extraDomains" style="font-size:12px;display:block;margin-top:4px;">Domínios adicionais (um por linha)</label>
     <textarea id="extraDomains" rows="2" style="width:100%;"></textarea>
-    <button id="testProxyIp">Testar IP (via proxy)</button>
-    <button id="extractItems" aria-label="Extrair itens em JSON com paginação">Extrair Itens (JSON)</button>
-    <button id="stopExtract" aria-label="Parar e baixar JSON parcial">Parar e baixar JSON</button>
+    <button id="extractItems">Extraia Itens</button>
+    <button id="stopExtract">Parar e Baixar JSON</button>
+    <div id="proxyIpBox" style="font-size:12px;margin:4px 0;"></div>
   </section>
 
   <!-- Scripts externos (sem inline, para respeitar CSP) -->
