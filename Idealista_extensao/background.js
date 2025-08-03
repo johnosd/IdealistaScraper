@@ -137,3 +137,6 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     return;
   }
 });
+
+// Limpeza automática: desativa o proxy assim que o service worker inicializa
+disableProxy().catch(e => console.error("[proxy] Erro ao desativar proxy na inicialização:", e));
