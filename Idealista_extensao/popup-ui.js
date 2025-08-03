@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const panels = {
     links: document.getElementById('panel-links'),
     itens: document.getElementById('panel-itens'),
+    proxy: document.getElementById('panel-proxy'),
   };
 
   function activate(tabKey) {
@@ -19,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // clique nas abas
   tabs.forEach(btn => {
     btn.addEventListener('click', () => {
-      const key = btn.dataset.tab; // "links" ou "itens"
+      const key = btn.dataset.tab; // "links", "itens" ou "proxy"
       activate(key);
     });
   });
