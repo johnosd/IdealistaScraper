@@ -1,70 +1,36 @@
 // ===================== content.js (com log de IP e crawler paginado) =====================
 
-// ---------- Utils básicos (escopo seguro) ----------
-(function() {
-  if (typeof window.randDelay !== 'function') {
-    window.randDelay = function() { return 3000 + Math.floor(Math.random() * 7000); };
-  }
-  if (typeof window.sleep !== 'function') {
-    window.sleep = function(ms) { return new Promise(r => setTimeout(r, ms)); };
-  }
-  if (typeof window.limparTexto !== 'function') {
-    window.limparTexto = function(t) { return (t || '').replace(/\s+/g,' ').trim(); };
-  }
-  if (typeof window.toAbs !== 'function') {
-    window.toAbs = function(href) { return href ? new URL(href, location.origin).href : null; };
-  }
-})();
-// Use window.randDelay, window.sleep, window.limparTexto, window.toAbs no restante do script.
-if (typeof window.parseIntSafe !== 'function') {
-  window.parseIntSafe = function(s) {
-    if (!s) return null;
-    const n = parseInt(String(s).replace(/[^\d]/g,''), 10);
-    return isNaN(n) ? null : n;
-  };
-}
+// ---------- Utils básicos ----------
+const randDelay = () => 3000 + Math.floor(Math.random() * 7000); // 3–10s
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+const limparTexto = (t) => (t || '').replace(/\s+/g,' ').trim();
+const toAbs = (href) => href ? new URL(href, location.origin).href : null;
+const parseIntSafe = (s) => {
+  if (!s) return null;
+  const n = parseInt(String(s).replace(/[^\d]/g,''), 10);
+  return Number.isFinite(n) ? n : null;
+};
 
 function baixarJSON(obj, nomeBase) {
-  try {
-    console.log('[baixarJSON] Iniciando download do JSON...', obj, nomeBase);
-    const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${nomeBase}_${new Date().toISOString().slice(0,19).replace(/[:T]/g,'-')}.json`;
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    URL.revokeObjectURL(url);
-    console.log('[baixarJSON] Download disparado com sucesso.');
-  } catch (e) {
-    console.error('[baixarJSON] Erro ao tentar baixar JSON:', e);
-    alert('Erro ao tentar baixar o arquivo JSON: ' + e);
-  }
+  const blob = new Blob([JSON.stringify(obj, null, 2)], { type: 'application/json;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${nomeBase}_${new Date().toISOString().slice(0,19).replace(/[:T]/g,'-')}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
 }
 
 // ---------- LOG do IP público (via proxy) ----------
-if (typeof window.__lastProxyIp === 'undefined') {
-  window.__lastProxyIp = null;
-}
+let __lastProxyIp = null;
 
 async function getPublicIp() {
-  try {
-    const proxySt = await chrome.runtime.sendMessage({ cmd: 'PROXY_STATUS' });
-    if (proxySt?.enabled) {
-      // Proxy está ativo, retornar IP do proxy
-      const ip = await fetch('https://api.ipify.org?format=json', { cache: 'no-store', credentials: 'omit' });
-      const j = await ip.json();
-      return j?.ip || null;
-    } else {
-      // Proxy não está ativo, retornar IP público
-      const ip = await fetch('https://api.ipify.org?format=json', { cache: 'no-store', credentials: 'omit' });
-      const j = await ip.json();
-      return j?.ip || null;
-    }
-  } catch (e) {
-    console.warn(`[ProxyIP] Falha ao obter IP público: ${e}`);
-  }
+  // evita cache para refletir possíveis rotações do proxy
+  const r = await fetch('https://api.ipify.org?format=json', { cache: 'no-store', credentials: 'omit' });
+  const j = await r.json();
+  return j?.ip || null;
 }
 
 async function logProxyIp(label = "") {
@@ -86,20 +52,14 @@ async function logProxyIp(label = "") {
 
 
 // ---------- Extrator de itens + paginação ----------
-if (typeof window.stopRequested === 'undefined') {
-  window.stopRequested = false;
-}
+let stopRequested = false;
 
 function extrairDaRaiz(rootDoc) {
   const lista = rootDoc.querySelector('section.items-container.items-list');
-  if (!lista) {
-    console.warn('[extrairDaRaiz] Não encontrou section.items-container.items-list');
-    return { itens: [], nextUrl: null };
-  }
+  if (!lista) return { itens: [], nextUrl: null };
 
   const artigos = Array.from(lista.querySelectorAll('article.item'))
     .filter(a => !a.classList.contains('adv'));
-  console.log(`[extrairDaRaiz] Encontrou ${artigos.length} artigos em section.items-container.items-list`);
 
   const itens = artigos.map(art => {
     const aTitulo = art.querySelector('.item-info-container a.item-link');
@@ -229,9 +189,8 @@ async function runCrawlFetchNext() {
   }
 
   if (todos.length > 0) {
-    baixarJSON(todos, 'itens_paginas');
+    baixarJSON(todos, `itens_paginas`);
     alert(`JSON gerado com ${todos.length} itens de ${pagina} página(s).`);
-    console.log('[Crawler] JSON baixado diretamente pelo content script:', todos.length);
   } else {
     alert('Nenhum item encontrado.');
   }
@@ -242,7 +201,6 @@ async function runCrawlFetchNext() {
 // ---------- Mensagens do popup ----------
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg?.cmd === 'START_CRAWL') {
-    console.log('[content.js] Recebido comando START_CRAWL');
     (async () => {
       try {
         await runCrawlFetchNext();
