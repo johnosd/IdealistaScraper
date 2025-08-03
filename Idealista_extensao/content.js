@@ -27,10 +27,22 @@ function baixarJSON(obj, nomeBase) {
 let __lastProxyIp = null;
 
 async function getPublicIp() {
-  // evita cache para refletir possíveis rotações do proxy
-  const r = await fetch('https://api.ipify.org?format=json', { cache: 'no-store', credentials: 'omit' });
-  const j = await r.json();
-  return j?.ip || null;
+  try {
+    const proxySt = await chrome.runtime.sendMessage({ cmd: 'PROXY_STATUS' });
+    if (proxySt?.enabled) {
+      // Proxy está ativo, retornar IP do proxy
+      const ip = await fetch('https://api.ipify.org?format=json', { cache: 'no-store', credentials: 'omit' });
+      const j = await ip.json();
+      return j?.ip || null;
+    } else {
+      // Proxy não está ativo, retornar IP público
+      const ip = await fetch('https://api.ipify.org?format=json', { cache: 'no-store', credentials: 'omit' });
+      const j = await ip.json();
+      return j?.ip || null;
+    }
+  } catch (e) {
+    console.warn(`[ProxyIP] Falha ao obter IP público: ${e}`);
+  }
 }
 
 async function logProxyIp(label = "") {

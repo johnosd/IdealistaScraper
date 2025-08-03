@@ -263,24 +263,28 @@ if (toggleBtn) {
 const testBtn = document.getElementById("testProxyIp");
 if (testBtn) {
   testBtn.addEventListener("click", async () => {
-    const box = document.getElementById("proxyIpBox");
-    if (box) box.textContent = "Testando IP público (na aba)...";
-    try {
-      const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-      if (!/^https:\/\/(?:www\.)?idealista\.pt\//.test(tab?.url || "")) {
-        box.textContent = "Abra uma página do idealista.pt para testar.";
-        return;
-      }
-      const res = await chrome.tabs.sendMessage(tab.id, { cmd: 'TEST_IP' });
-      if (res?.ok) {
-        box.textContent = "IP público detectado (aba): " + (res.ip || "desconhecido");
-      } else {
-        box.textContent = "Falha ao testar IP: " + (res?.error || "sem resposta");
-      }
-    } catch (e) {
-      if (box) box.textContent = "Erro ao testar IP: " + String(e);
+  const box = document.getElementById("proxyIpBox");
+  if (box) box.textContent = "Testando IP público (na aba)...";
+  try {
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    if (!/^https:\/\/(?:www\.)?idealista\.pt\//.test(tab?.url || "")) {
+      box.textContent = "Abra uma página do idealista.pt para testar.";
+      return;
     }
-  });
+    const proxySt = await chrome.runtime.sendMessage({ cmd: 'PROXY_STATUS' });
+    if (proxySt?.enabled) {
+      // Proxy está ativo, obter IP do proxy
+      const ip = await getPublicIp();
+      box.textContent = "IP do proxy: " + (ip || "desconhecido");
+    } else {
+      // Proxy não está ativo, obter IP público
+      const ip = await getPublicIp();
+      box.textContent = "IP público: " + (ip || "desconhecido");
+    }
+  } catch (e) {
+    if (box) box.textContent = "Erro ao testar IP: " + String(e);
+  }
+});
 }
 
 // Atualiza status ao parar
