@@ -92,6 +92,18 @@ function waitForTabComplete(tabId, timeoutMs = 30000) {
   });
 }
 
+// Obtém o IP público visto pela aba (usando content.js)
+async function getTabPublicIp(tabId) {
+  try {
+    const res = await chrome.tabs.sendMessage(tabId, { cmd: 'TEST_IP' });
+    if (res?.ok) return res.ip || null;
+    console.warn('[ExtrairLinks] Falha ao obter IP: ' + (res?.error || 'sem resposta'));
+  } catch (e) {
+    console.warn('[ExtrairLinks] Erro ao obter IP da aba:', e);
+  }
+  return null;
+}
+
 // ============== Extrair Links (JSON) ==============
 const extractBtn = document.getElementById("extract");
 if (extractBtn) extractBtn.addEventListener("click", async () => {
@@ -99,16 +111,30 @@ if (extractBtn) extractBtn.addEventListener("click", async () => {
   const prev = extractBtn.textContent;
   extractBtn.textContent = "Extraindo...";
   try {
+    console.log('[ExtrairLinks] Iniciando extração de links...');
     await ensureProxyPrompt();
+    const proxySt = await chrome.runtime.sendMessage({ cmd: 'PROXY_STATUS' });
+    console.log('[ExtrairLinks] Proxy ' + (proxySt?.enabled ? 'ativado' : 'desativado'));
+
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     const targetUrl = "https://www.idealista.pt/";
+    console.log('[ExtrairLinks] Navegando para', targetUrl);
     await chrome.tabs.update(tab.id, { url: targetUrl });
+    console.log('[ExtrairLinks] Aguardando carregamento da página...');
     await waitForTabComplete(tab.id);
-    await sleep(randDelay());
+    console.log('[ExtrairLinks] Página carregada. Obtendo IP público...');
+    const ip = await getTabPublicIp(tab.id);
+    if (ip) console.log('[ExtrairLinks] IP público (aba):', ip);
+
+    const delay = randDelay();
+    console.log(`[ExtrairLinks] Aguardando ${Math.round(delay/1000)}s antes da extração...`);
+    await sleep(delay);
+    console.log('[ExtrairLinks] Executando script de extração...');
     await chrome.scripting.executeScript({
       target: { tabId: tab.id },
       func: extrairLinksESalvarJSONNaPagina
     });
+    console.log('[ExtrairLinks] Extração de links concluída.');
   } catch (err) {
     console.error('Erro em Extrair Links:', err);
     alert('Erro ao extrair links. Veja o console para detalhes.');
@@ -120,11 +146,14 @@ if (extractBtn) extractBtn.addEventListener("click", async () => {
 
 // roda na página
 function extrairLinksESalvarJSONNaPagina() {
+  console.log('[ExtrairLinks|Página] Iniciando coleta de links...');
   if (typeof extractLinks !== 'function') {
+    console.warn('[ExtrairLinks|Página] Função extractLinks não disponível.');
     alert('Função extractLinks não disponível.');
     return;
   }
   const rows = extractLinks(document);
+  console.log('[ExtrairLinks|Página] Links encontrados:', rows.length);
   if (!rows.length) {
     alert('Nenhum link encontrado em <nav.locations-list>.');
     return;
@@ -140,6 +169,7 @@ function extrairLinksESalvarJSONNaPagina() {
   a.remove();
   URL.revokeObjectURL(url);
 
+  console.log('[ExtrairLinks|Página] JSON gerado com', rows.length, 'registros.');
   alert(`JSON gerado com ${rows.length} registros.`);
 }
 
