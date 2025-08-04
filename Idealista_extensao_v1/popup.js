@@ -28,6 +28,44 @@ async function waitForElementInPage(tabId, selector, timeoutMs = 30000) {
   });
 }
 
+function waitForTabComplete(tabId, timeoutMs = 30000) {
+  return new Promise((resolve, reject) => {
+    let done = false;
+    const timer = setTimeout(() => {
+      if (!done) {
+        chrome.tabs.onUpdated.removeListener(onUpdated);
+        reject(new Error('Timeout aguardando carregamento da aba.'));
+      }
+    }, timeoutMs);
+
+    const onUpdated = (updatedTabId, info) => {
+      if (updatedTabId === tabId && info.status === 'complete') {
+        done = true;
+        clearTimeout(timer);
+        chrome.tabs.onUpdated.removeListener(onUpdated);
+        resolve();
+      }
+    };
+
+    chrome.tabs.onUpdated.addListener(onUpdated);
+    // Checa se já está carregada
+    chrome.tabs.get(tabId, (t) => {
+      if (chrome.runtime.lastError) {
+        clearTimeout(timer);
+        chrome.tabs.onUpdated.removeListener(onUpdated);
+        return reject(chrome.runtime.lastError);
+      }
+      if (t.status === 'complete') {
+        done = true;
+        clearTimeout(timer);
+        chrome.tabs.onUpdated.removeListener(onUpdated);
+        resolve();
+      }
+    });
+  });
+}
+
+
 // ============== Botão: Extrair Links (JSON) ==============
 const extractBtn = document.getElementById("extract");
 if (extractBtn) extractBtn.addEventListener("click", async () => {
