@@ -201,8 +201,19 @@
       <div class="status">
         Proxy: <span class="badge" id="proxyState">desativado</span>
       </div>
-      <button id="enableProxy">Habilitar Proxy</button>
-      <button id="disableProxy">Desabilitar Proxy</button>
+      <div class="proxy-config" style="margin-bottom:14px;">
+        <label for="proxyHost">Host:</label>
+        <input type="text" id="proxyHost" name="proxyHost" placeholder="proxy.exemplo.com" style="width:100%;margin-bottom:6px;" autocomplete="off">
+        <label for="proxyPort">Porta:</label>
+        <input type="number" id="proxyPort" name="proxyPort" placeholder="12345" style="width:100%;margin-bottom:6px;" autocomplete="off">
+        <label for="proxyUser">Usuário:</label>
+        <input type="text" id="proxyUser" name="proxyUser" placeholder="usuario" style="width:100%;margin-bottom:6px;" autocomplete="off">
+        <label for="proxyPass">Senha:</label>
+        <input type="password" id="proxyPass" name="proxyPass" placeholder="senha" style="width:100%;margin-bottom:6px;" autocomplete="off">
+      </div>
+      <button id="saveProxyConfig">Salvar proxy</button>
+      <button id="testProxyBtn" style="margin-top:10px;">Testar proxy</button>
+      <div id="proxyTestResult" style="margin-top:8px;color:#2563eb;font-weight:500;"></div>
     </section>
   </div>
   <!-- Scripts externos (sem inline, para respeitar CSP) -->
