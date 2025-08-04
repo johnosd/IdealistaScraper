@@ -4,24 +4,169 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Extratores</title>
-  <!-- CSS: pode ser inline; CSP só bloqueia scripts inline -->
+  <meta name="theme-color" content="#2563eb">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Layout básico */
-    body { font-family: system-ui, Arial, sans-serif; margin: 0; min-width: 300px; }
-    button { width: 100%; padding: 10px; margin: 6px 0; cursor: pointer; }
-
-    /* Abas */
-    .tabs { display: flex; border-bottom: 1px solid #e5e7eb; background: #f9fafb; }
-    .tab-btn { flex: 1; padding: 10px; border: none; background: transparent; cursor: pointer; font-weight: 600; }
-    .tab-btn.active { color: #fff; background: #2563eb; }
-
-    /* Painéis */
-    .panel { display: none; padding: 12px; }
-    .panel.active { display: block; }
+    body {
+      font-family: 'Inter', system-ui, Arial, sans-serif;
+      margin: 0;
+      min-width: 340px;
+      background: #f6f8fa;
+      color: #222;
+    }
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 16px 20px 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #2563eb;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .icon-proxy {
+      width: 28px;
+      height: 28px;
+      background: url('https://cdn.jsdelivr.net/gh/lipis/flag-icons/flags/4x3/br.svg') no-repeat center/cover;
+      border-radius: 6px;
+      border: 1.5px solid #e5e7eb;
+    }
+    .tabs {
+      display: flex;
+      border-bottom: 1.5px solid #e5e7eb;
+      background: #f9fafb;
+      padding: 0 10px;
+      margin-bottom: 0;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 12px 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #2563eb;
+      border-bottom: 2.5px solid transparent;
+      transition: all 0.18s;
+    }
+    .tab-btn.active {
+      color: #fff;
+      background: #2563eb;
+      border-radius: 9px 9px 0 0;
+      border-bottom: 2.5px solid #2563eb;
+      box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+    }
+    .main-panel {
+      padding: 20px 18px 12px 18px;
+    }
+    .panel {
+      display: none;
+      padding: 0;
+    }
+    .panel.active {
+      display: block;
+      animation: fadeIn 0.25s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(37,99,235,0.06);
+      padding: 18px 16px;
+      margin-bottom: 18px;
+      border: 1.5px solid #e5e7eb;
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      font-size: 0.98rem;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-block;
+      min-width: 60px;
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.92em;
+      font-weight: 600;
+      background: #f1f5ff;
+      color: #2563eb;
+      border: 1px solid #2563eb33;
+      text-align: center;
+    }
+    .badge.on {
+      background: #2563eb;
+      color: #fff;
+      border: 1px solid #2563eb;
+    }
+    textarea {
+      width: 100%;
+      border-radius: 7px;
+      border: 1.2px solid #e5e7eb;
+      padding: 8px;
+      font-size: 1em;
+      margin-bottom: 8px;
+      background: #f9fafb;
+      resize: vertical;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin: 7px 0;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1em;
+      border-radius: 7px;
+      border: none;
+      background: #2563eb;
+      color: #fff;
+      transition: background 0.15s;
+      box-shadow: 0 1px 3px rgba(37,99,235,0.07);
+    }
+    button:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    label {
+      font-size: 0.97em;
+      margin: 7px 0 3px 0;
+      color: #374151;
+      font-weight: 500;
+      display: block;
+    }
+    #proxyIpBox {
+      font-size: 0.97em;
+      margin: 7px 0 0 0;
+      color: #374151;
+      min-height: 18px;
+    }
+    @media (max-width: 400px) {
+      .main-panel { padding: 10px 2px; }
+      .card { padding: 10px 4px; }
+      .tabs { padding: 0; }
+    }
   </style>
 </head>
 <body>
-  <!-- Abas -->
+  <header>
+    <span class="icon-proxy"></span>
+    <a href="https://www.idealista.pt/" class="brand" target="_blank">Idealista Extrator</a>
+  </header>
   <div class="tabs" role="tablist" aria-label="Navegação de abas">
     <button class="tab-btn active" data-tab="links" id="tab-links" role="tab" aria-selected="true" aria-controls="panel-links">
       Links
@@ -29,27 +174,37 @@
     <button class="tab-btn" data-tab="itens" id="tab-itens" role="tab" aria-selected="false" aria-controls="panel-itens">
       Itens
     </button>
+    <button class="tab-btn" data-tab="proxy" id="tab-proxy" role="tab" aria-selected="false" aria-controls="panel-proxy">
+      Proxy
+    </button>
   </div>
+  <div class="main-panel">
+    <!-- Aba 1: Links -->
+    <section id="panel-links" class="panel active card" role="tabpanel" aria-labelledby="tab-links">
+      <button id="extract" aria-label="Extrair links em JSON">Extrair Links (JSON)</button>
+    </section>
+    <!-- Aba 2: Itens -->
+    <section id="panel-itens" class="panel card" role="tabpanel" aria-labelledby="tab-itens">
 
-  <!-- Aba 1: Links -->
-  <section id="panel-links" class="panel active" role="tabpanel" aria-labelledby="tab-links">
-    <button id="extract" aria-label="Extrair links em JSON">Extrair Links (JSON)</button>
-  </section>
-
-  <!-- Aba 2: Itens -->
-  <section id="panel-itens" class="panel" role="tabpanel" aria-labelledby="tab-itens">
-    <div id="proxyStatus" style="font-size:12px;margin:4px 0;">
-      Proxy: <strong id="proxyState">desativado</strong>
-    </div>
-    <button id="enableProxy">Habilitar Proxy</button>
-    <button id="disableProxy">Desabilitar Proxy</button>
-    <label for="extraDomains" style="font-size:12px;display:block;margin-top:4px;">Domínios adicionais (um por linha)</label>
-    <textarea id="extraDomains" rows="2" style="width:100%;"></textarea>
-    <button id="extractItems">Extraia Itens</button>
-    <button id="stopExtract">Parar e Baixar JSON</button>
-    <div id="proxyIpBox" style="font-size:12px;margin:4px 0;"></div>
-  </section>
-
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+  <input type="checkbox" id="toggleProxy" style="width:18px;height:18px;cursor:pointer;">
+  <label for="toggleProxy" style="margin:0;cursor:pointer;font-size:1em;font-weight:500;color:#2563eb;">Usar proxy</label>
+</div>
+<button id="extractItems">Extraia Itens</button>
+      <input type="text" id="extractItemsUrl" placeholder="Cole aqui a URL da página de resultados (opcional)" style="width:100%;margin:6px 0 0 0;padding:10px;font-size:1em;border-radius:7px;border:1.2px solid #e5e7eb;background:#f9fafb;">
+      <button id="stopExtract">Parar e Baixar JSON</button>
+      <ul id="extractItemsLog" style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:7px;padding:8px 10px;margin:8px 0 0 0;max-height:110px;overflow:auto;font-size:0.97em;color:#1e293b;list-style:none;display:block;"></ul>
+      <div id="proxyIpBox"></div>
+    </section>
+    <!-- Aba 3: Proxy -->
+    <section id="panel-proxy" class="panel card" role="tabpanel" aria-labelledby="tab-proxy">
+      <div class="status">
+        Proxy: <span class="badge" id="proxyState">desativado</span>
+      </div>
+      <button id="enableProxy">Habilitar Proxy</button>
+      <button id="disableProxy">Desabilitar Proxy</button>
+    </section>
+  </div>
   <!-- Scripts externos (sem inline, para respeitar CSP) -->
   <script src="popup-ui.js"></script>
   <script src="linkExtractor.js"></script>

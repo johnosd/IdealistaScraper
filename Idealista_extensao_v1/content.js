@@ -130,9 +130,22 @@ function extrairDaRaiz(rootDoc) {
   return { itens, nextUrl };
 }
 
+function logCrawler(msg) {
+  console.log('[Crawler]', msg);
+  try {
+    chrome.runtime.sendMessage({ type: 'CRAWLER_LOG', message: msg });
+  } catch {}
+}
+
 async function runCrawlFetchNext() {
+  // Verifica se deve usar proxy (definido pelo popup)
+  let usarProxy = false;
+  try {
+    usarProxy = window.localStorage.getItem('usarProxy') === 'true';
+  } catch {}
+
   stopRequested = false;
-  console.log('[Crawler] Iniciando na página:', location.href);
+  logCrawler('Iniciando na página: ' + location.href);
 
   // Loga IP no início
   await logProxyIp('início');
@@ -147,7 +160,14 @@ async function runCrawlFetchNext() {
     if (!vistos.has(key)) { vistos.add(key); todos.push(it); }
   }
 
-  let pagina = 1;
+  function extrairNumeroPagina(url) {
+  const match = url.match(/\/pagina-(\d+)/);
+  if (match) return parseInt(match[1], 10);
+  // Se não houver /pagina-X, considere como página 1
+  return 1;
+}
+let pagina = extrairNumeroPagina(location.href);
+  let proxyReconnectCount = 0;
   while (nextUrl && !stopRequested) {
     pagina += 1;
 
@@ -155,11 +175,11 @@ async function runCrawlFetchNext() {
     await logProxyIp(`antes de buscar página ${pagina}`);
 
     const espera = randDelay();
-    console.log(`[Crawler] Aguardando ${Math.round(espera/1000)}s antes da página ${pagina}…`);
+    logCrawler(`Aguardando ${Math.round(espera/1000)}s antes da página ${pagina}…`);
     await sleep(espera);
     if (stopRequested) break;
 
-    console.log('[Crawler] Buscando:', nextUrl);
+    logCrawler('Buscando:', nextUrl);
     let resp;
     try {
       resp = await fetch(nextUrl, { credentials: 'same-origin' });
@@ -181,11 +201,33 @@ async function runCrawlFetchNext() {
       if (!vistos.has(key)) { vistos.add(key); todos.push(it); }
     }
 
-    console.log(`[Crawler] Página ${pagina} coletada. Total até agora: ${todos.length}`);
+    logCrawler(`Página ${pagina} coletada. Total até agora: ${todos.length}`);
     nextUrl = res.nextUrl || null;
 
     // (opcional) logar IP depois de cada página (para notar rotações)
     await logProxyIp(`após coletar página ${pagina}`);
+
+    // Reconecta proxy a cada 10 páginas
+    proxyReconnectCount++;
+    if (usarProxy && proxyReconnectCount >= 10) {
+      logCrawler('Reconectando proxy após 10 páginas...');
+      try {
+        await chrome.runtime.sendMessage({ cmd: 'DISABLE_PROXY' });
+        await new Promise(r => setTimeout(r, 1000));
+        await chrome.runtime.sendMessage({
+          cmd: 'ENABLE_PROXY',
+          host: 'proxy-us.proxy-cheap.com',
+          port: 5959,
+          username: 'pcOoqLBiLs-res-any',
+          password: 'PC_5djX4v5F9aXvIl5gn',
+          extraDomains: []
+        });
+        logCrawler('Proxy reconectado com sucesso!');
+      } catch (e) {
+        logCrawler('Erro ao reconectar proxy: ' + String(e));
+      }
+      proxyReconnectCount = 0;
+    }
   }
 
   if (todos.length > 0) {
@@ -195,7 +237,7 @@ async function runCrawlFetchNext() {
     alert('Nenhum item encontrado.');
   }
 
-  console.log('[Crawler] Concluído. Total:', todos.length);
+  logCrawler(`Concluído. Total: ${todos.length}`);
 }
 
 // ---------- Mensagens do popup ----------
