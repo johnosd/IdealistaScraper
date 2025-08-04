@@ -16,7 +16,7 @@ function baixarJSON(obj, nomeBase) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `${nomeBase}_${new Date().toISOString().slice(0,19).replace(/[:T]/g,'-')}.json`;
+  a.download = `${nomeBase}.json`;
   document.body.appendChild(a);
   a.click();
   a.remove();
@@ -50,6 +50,20 @@ async function logProxyIp(label = "") {
   }
 }
 
+// ---------- Função utilitária para pegar config do proxy ----------
+function getProxyConfig() {
+  return new Promise((resolve) => {
+    chrome.storage.local.get(['proxyHost', 'proxyPort', 'proxyUser', 'proxyPass', 'usarProxy'], (items) => {
+      resolve({
+        host: items.proxyHost || '',
+        port: parseInt(items.proxyPort || '0', 10),
+        username: items.proxyUser || '',
+        password: items.proxyPass || '',
+        usarProxy: items.usarProxy === 'true'
+      });
+    });
+  });
+}
 
 // ---------- Extrator de itens + paginação ----------
 let stopRequested = false;
@@ -138,12 +152,10 @@ function logCrawler(msg) {
 }
 
 async function runCrawlFetchNext() {
-  // Verifica se deve usar proxy (definido pelo popup)
-  let usarProxy = false;
-  try {
-    usarProxy = window.localStorage.getItem('usarProxy') === 'true';
-  } catch {}
-
+  // Agora usa chrome.storage.local para pegar config
+  const proxyConfig = await getProxyConfig();
+  let usarProxy = proxyConfig.usarProxy;
+  let stopRequestedLocal = false;
   stopRequested = false;
   logCrawler('Iniciando na página: ' + location.href);
 
@@ -161,13 +173,14 @@ async function runCrawlFetchNext() {
   }
 
   function extrairNumeroPagina(url) {
-  const match = url.match(/\/pagina-(\d+)/);
-  if (match) return parseInt(match[1], 10);
-  // Se não houver /pagina-X, considere como página 1
-  return 1;
-}
-let pagina = extrairNumeroPagina(location.href);
+    const match = url.match(/\/pagina-(\d+)/);
+    if (match) return parseInt(match[1], 10);
+    // Se não houver /pagina-X, considere como página 1
+    return 1;
+  }
+  let pagina = extrairNumeroPagina(location.href);
   let proxyReconnectCount = 0;
+
   while (nextUrl && !stopRequested) {
     pagina += 1;
 
@@ -207,19 +220,21 @@ let pagina = extrairNumeroPagina(location.href);
     // (opcional) logar IP depois de cada página (para notar rotações)
     await logProxyIp(`após coletar página ${pagina}`);
 
-    // Reconecta proxy a cada 10 páginas
+    // Reconecta proxy a cada 10 páginas usando config dinâmica
     proxyReconnectCount++;
     if (usarProxy && proxyReconnectCount >= 10) {
       logCrawler('Reconectando proxy após 10 páginas...');
       try {
         await chrome.runtime.sendMessage({ cmd: 'DISABLE_PROXY' });
         await new Promise(r => setTimeout(r, 1000));
+        // Sempre pega os dados atuais do chrome.storage.local!
+        const { host, port, username, password } = await getProxyConfig();
         await chrome.runtime.sendMessage({
           cmd: 'ENABLE_PROXY',
-          host: 'proxy-us.proxy-cheap.com',
-          port: 5959,
-          username: 'pcOoqLBiLs-res-any',
-          password: 'PC_5djX4v5F9aXvIl5gn',
+          host,
+          port,
+          username,
+          password,
           extraDomains: []
         });
         logCrawler('Proxy reconectado com sucesso!');
@@ -230,9 +245,21 @@ let pagina = extrairNumeroPagina(location.href);
     }
   }
 
+  // Nome do arquivo personalizado
+  let slug = location.href
+    .replace(/^https?:\/\/[^\/]+\/geo\//, '')     // tira até o /geo/
+    .replace(/[?#].*$/, '')                       // remove params/fragmentos
+    .replace(/\/$/, '')                           // remove barra final, se houver
+    .replace(/\//g, '-');                         // troca todas as barras restantes por hífen
+  if (!slug) slug = 'resultado';
+  const paginas = pagina || 1;
+  const d = new Date();
+  const dataStr = `${d.getFullYear()}${String(d.getMonth()+1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}${String(d.getHours()).padStart(2, '0')}${String(d.getMinutes()).padStart(2, '0')}`;
+  const nomeArquivo = `${slug}-Paginas${paginas}-${dataStr}`;
+
   if (todos.length > 0) {
-    baixarJSON(todos, `itens_paginas`);
-    alert(`JSON gerado com ${todos.length} itens de ${pagina} página(s).`);
+    baixarJSON(todos, nomeArquivo);
+    alert(`JSON gerado com ${todos.length} itens de ${pagina} página(s).\nArquivo: ${nomeArquivo}.json`);
   } else {
     alert('Nenhum item encontrado.');
   }

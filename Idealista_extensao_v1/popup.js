@@ -300,18 +300,23 @@ function initProxyPanel() {
   const saveBtn = document.getElementById('saveProxyConfig');
   const testBtn = document.getElementById('testProxyBtn');
 
-  // preencher campos
-  hostInput.value = localStorage.getItem('proxyHost') || '';
-  portInput.value = localStorage.getItem('proxyPort') || '';
-  userInput.value = localStorage.getItem('proxyUser') || '';
-  passInput.value = localStorage.getItem('proxyPass') || '';
+  // Carregar campos do chrome.storage.local
+  chrome.storage.local.get(['proxyHost', 'proxyPort', 'proxyUser', 'proxyPass'], function(items) {
+    hostInput.value = items.proxyHost || '';
+    portInput.value = items.proxyPort || '';
+    userInput.value = items.proxyUser || '';
+    passInput.value = items.proxyPass || '';
+  });
 
   saveBtn.onclick = () => {
-    localStorage.setItem('proxyHost', hostInput.value.trim());
-    localStorage.setItem('proxyPort', portInput.value.trim());
-    localStorage.setItem('proxyUser', userInput.value.trim());
-    localStorage.setItem('proxyPass', passInput.value.trim());
-    alert("Proxy salvo.");
+    chrome.storage.local.set({
+      proxyHost: hostInput.value.trim(),
+      proxyPort: portInput.value.trim(),
+      proxyUser: userInput.value.trim(),
+      proxyPass: passInput.value.trim()
+    }, function() {
+      alert("Proxy salvo.");
+    });
   };
 
   testBtn.onclick = async () => {
@@ -350,11 +355,12 @@ async function refreshProxyStatus() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initProxyPanel();
-  refreshProxyStatus();
   if (toggleProxy) {
-    toggleProxy.checked = localStorage.getItem('usarProxy') === 'true';
+    chrome.storage.local.get(['usarProxy'], (items) => {
+      toggleProxy.checked = items.usarProxy === 'true';
+    });
     toggleProxy.addEventListener('change', () => {
-      localStorage.setItem('usarProxy', toggleProxy.checked ? 'true' : 'false');
+      chrome.storage.local.set({ usarProxy: toggleProxy.checked ? 'true' : 'false' });
     });
   }
 });
