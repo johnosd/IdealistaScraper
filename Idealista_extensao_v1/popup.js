@@ -190,6 +190,19 @@ if (itemsBtn) itemsBtn.addEventListener("click", async () => {
     await waitForTabComplete(finalTabId);
     const res = await chrome.tabs.sendMessage(finalTabId, { cmd: 'START_CRAWL' });
     if (!res?.ok) throw new Error(res?.error || 'Sem resposta OK do content.js');
+
+    // Desativa proxy automaticamente após extração bem-sucedida
+    try {
+      await chrome.runtime.sendMessage({ cmd: "DISABLE_PROXY" });
+    } catch (e) {
+      console.warn('Falha ao desativar proxy após extração:', e);
+    }
+    // Desmarca o checkbox e atualiza localStorage
+    if (toggleProxy) {
+      toggleProxy.checked = false;
+      window.localStorage.setItem('usarProxy', 'false');
+    }
+    setTimeout(refreshProxyStatus, 500);
   } catch (e) {
     console.warn('Falha ao iniciar a extração:', e);
     try {
