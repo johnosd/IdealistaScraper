@@ -17,6 +17,7 @@ function baixarJSON(obj, nomeBase) {
   const a = document.createElement('a');
   a.href = url;
   a.download = `${nomeBase}.json`;
+  a.download = `${nomeBase}.json`;
   document.body.appendChild(a);
   a.click();
   a.remove();
@@ -27,7 +28,6 @@ function baixarJSON(obj, nomeBase) {
 let __lastProxyIp = null;
 
 async function getPublicIp() {
-  // evita cache para refletir possíveis rotações do proxy
   const r = await fetch('https://api.ipify.org?format=json', { cache: 'no-store', credentials: 'omit' });
   const j = await r.json();
   return j?.ip || null;
@@ -67,6 +67,10 @@ function getProxyConfig() {
 
 // ---------- Extrator de itens + paginação ----------
 let stopRequested = false;
+let _itensCrawled = [];
+let _ultimaPagina = 1;
+let _urlCrawl = '';
+let _dataCrawl = '';
 
 function extrairDaRaiz(rootDoc) {
   const lista = rootDoc.querySelector('section.items-container.items-list');
@@ -114,13 +118,11 @@ function extrairDaRaiz(rootDoc) {
     const pisoResumo = limparTexto(detalhesEls.find(d => /(andar|Rés do chão|piso)/i.test(d.textContent))?.textContent) || null;
 
     return {
-      // Campos pedidos
       Titulo: titulo || null,
       Link: linkAbs || null,
       Preco: preco || null,
       "detalhe do item": detalheDoItem || null,
       "Descricao do item": descricaoDoItem || null,
-      // Extras úteis
       id, tags,
       agenciaNome: agenciaNome || null,
       agenciaLink: agenciaLink || null,
@@ -131,7 +133,7 @@ function extrairDaRaiz(rootDoc) {
     };
   });
 
-  // Próxima página priorizando o elemento solicitado
+  // Próxima página
   let nextUrl = null;
   const nextByIcon = rootDoc.querySelector('a.icon-arrow-right-after[href]');
   if (nextByIcon) {
@@ -158,10 +160,7 @@ async function runCrawlFetchNext() {
   let stopRequestedLocal = false;
   stopRequested = false;
   logCrawler('Iniciando na página: ' + location.href);
-
-  // Loga IP no início
   await logProxyIp('início');
-
   const vistos = new Set();
   const todos = [];
 
@@ -183,15 +182,13 @@ async function runCrawlFetchNext() {
 
   while (nextUrl && !stopRequested) {
     pagina += 1;
+    _ultimaPagina = pagina;
 
-    // (opcional) logar IP antes de cada request
     await logProxyIp(`antes de buscar página ${pagina}`);
-
     const espera = randDelay();
     logCrawler(`Aguardando ${Math.round(espera/1000)}s antes da página ${pagina}…`);
     await sleep(espera);
     if (stopRequested) break;
-
     logCrawler('Buscando:', nextUrl);
     let resp;
     try {
@@ -204,20 +201,15 @@ async function runCrawlFetchNext() {
       console.warn('[Crawler] Falha ao buscar:', nextUrl, resp.status);
       break;
     }
-
     const html = await resp.text();
     const doc = new DOMParser().parseFromString(html, 'text/html');
-
     const res = extrairDaRaiz(doc);
     for (const it of res.itens) {
       const key = it.id || it.Link || JSON.stringify(it);
       if (!vistos.has(key)) { vistos.add(key); todos.push(it); }
     }
-
     logCrawler(`Página ${pagina} coletada. Total até agora: ${todos.length}`);
     nextUrl = res.nextUrl || null;
-
-    // (opcional) logar IP depois de cada página (para notar rotações)
     await logProxyIp(`após coletar página ${pagina}`);
 
     // Reconecta proxy a cada 10 páginas usando config dinâmica
@@ -264,7 +256,7 @@ async function runCrawlFetchNext() {
     alert('Nenhum item encontrado.');
   }
 
-  logCrawler(`Concluído. Total: ${todos.length}`);
+  logCrawler(`Concluído. Total: ${_itensCrawled.length}`);
 }
 
 // ---------- Mensagens do popup ----------
@@ -279,16 +271,21 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         sendResponse({ ok: false, error: String(e) });
       }
     })();
-    return true; // async
+    return true;
   }
 
   if (msg?.cmd === 'STOP_AND_DOWNLOAD') {
     stopRequested = true;
-    sendResponse({ ok: true, stopping: true });
+    sendResponse({
+      ok: true,
+      dados: _itensCrawled,
+      totalPaginas: _ultimaPagina,
+      url: _urlCrawl,
+      dataString: _dataCrawl
+    });
     return true;
   }
 
-  // Teste de IP público a partir do contexto da aba (para mostrar no popup)
   if (msg?.cmd === 'TEST_IP') {
     (async () => {
       try {

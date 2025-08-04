@@ -65,7 +65,6 @@ function waitForTabComplete(tabId, timeoutMs = 30000) {
   });
 }
 
-
 // ============== Botão: Extrair Links (JSON) ==============
 const extractBtn = document.getElementById("extract");
 if (extractBtn) extractBtn.addEventListener("click", async () => {
@@ -82,28 +81,22 @@ if (extractBtn) extractBtn.addEventListener("click", async () => {
     await chrome.scripting.executeScript({
       target: { tabId: tab.id },
       func: () => {
-        // ----------- Função extractLinks embutida aqui -----------
         function extractLinks(doc = document) {
           const container = doc.querySelector('nav.locations-list');
           if (!container) return [];
-        
           const base = location.origin;
           const seen = new Set();
           const rows = [];
-        
           const norm = (t) => (t || '').replace(/\s+/g, ' ').trim();
           const abs = (href) => { try { return new URL(href, base).href; } catch { return null; } };
-        
           container.querySelectorAll('ul.locations-list__links').forEach((col) => {
             const regionA = col.querySelector('a > h3.region-title')?.parentElement;
             const regiao = norm(regionA?.textContent);
-        
             col.querySelectorAll(':scope > li').forEach((li) => {
               const subA = li.querySelector(':scope > a.subregion');
               const contagemEl = li.querySelector(':scope > p');
               const contagem = norm(contagemEl?.textContent);
               const subregiao = norm(subA?.textContent);
-        
               if (subA) {
                 const url = abs(subA.getAttribute('href'));
                 if (url && !seen.has(url)) {
@@ -119,7 +112,6 @@ if (extractBtn) extractBtn.addEventListener("click", async () => {
                   });
                 }
               }
-        
               li.querySelectorAll(':scope ul.locations-list__municipalities > li > a').forEach((munA) => {
                 const municipio = norm(munA.textContent);
                 const url = abs(munA.getAttribute('href'));
@@ -137,7 +129,6 @@ if (extractBtn) extractBtn.addEventListener("click", async () => {
                 }
               });
             });
-        
             if (regionA) {
               const url = abs(regionA.getAttribute('href'));
               if (url && !seen.has(url)) {
@@ -154,11 +145,8 @@ if (extractBtn) extractBtn.addEventListener("click", async () => {
               }
             }
           });
-        
           return rows;
         }
-        // --------------------------------------------------------
-
         const rows = extractLinks(document);
         if (!rows.length) {
           alert('Nenhum link encontrado em <nav.locations-list>.');
@@ -284,7 +272,29 @@ const stopBtn = document.getElementById("stopExtract");
 if (stopBtn) stopBtn.addEventListener("click", async () => {
   const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   try {
-    await chrome.tabs.sendMessage(tab.id, { cmd: 'STOP_AND_DOWNLOAD' });
+    // Espera resposta do content script com { ok, dados, totalPaginas, url, dataString }
+    const resposta = await chrome.tabs.sendMessage(tab.id, { cmd: 'STOP_AND_DOWNLOAD' });
+    if (resposta?.ok) {
+      const url = resposta.url || '';
+      let slug = url.replace(/^https?:\/\/[^\/]+\/geo\//, '').replace(/[/?#].*$/, '').replace(/\//g, '-');
+      if (!slug) slug = 'resultado';
+      const paginas = resposta.totalPaginas || 1;
+      const dataStr = resposta.dataString || (() => {
+        const d = new Date();
+        return `${d.getFullYear()}${String(d.getMonth()+1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}${String(d.getHours()).padStart(2, '0')}${String(d.getMinutes()).padStart(2, '0')}`;
+      })();
+      const nomeArquivo = `${slug}-Paginas${paginas}-${dataStr}.json`;
+      const blob = new Blob([JSON.stringify(resposta.dados, null, 2)], { type: 'application/json;charset=utf-8' });
+      const urlBlob = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = urlBlob;
+      a.download = nomeArquivo;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(urlBlob);
+      alert(`JSON gerado com ${paginas} páginas extraídas.`);
+    }
     await chrome.runtime.sendMessage({ cmd: "DISABLE_PROXY" });
   } catch (e) {
     console.warn("Erro ao parar ou desativar proxy:", e);
