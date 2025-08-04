@@ -16,7 +16,7 @@ function baixarJSON(obj, nomeBase) {
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = `${nomeBase}_${new Date().toISOString().slice(0,19).replace(/[:T]/g,'-')}.json`;
+  a.download = `${nomeBase}.json`;
   document.body.appendChild(a);
   a.click();
   a.remove();
@@ -27,7 +27,6 @@ function baixarJSON(obj, nomeBase) {
 let __lastProxyIp = null;
 
 async function getPublicIp() {
-  // evita cache para refletir possíveis rotações do proxy
   const r = await fetch('https://api.ipify.org?format=json', { cache: 'no-store', credentials: 'omit' });
   const j = await r.json();
   return j?.ip || null;
@@ -50,9 +49,12 @@ async function logProxyIp(label = "") {
   }
 }
 
-
 // ---------- Extrator de itens + paginação ----------
 let stopRequested = false;
+let _itensCrawled = [];
+let _ultimaPagina = 1;
+let _urlCrawl = '';
+let _dataCrawl = '';
 
 function extrairDaRaiz(rootDoc) {
   const lista = rootDoc.querySelector('section.items-container.items-list');
@@ -100,13 +102,11 @@ function extrairDaRaiz(rootDoc) {
     const pisoResumo = limparTexto(detalhesEls.find(d => /(andar|Rés do chão|piso)/i.test(d.textContent))?.textContent) || null;
 
     return {
-      // Campos pedidos
       Titulo: titulo || null,
       Link: linkAbs || null,
       Preco: preco || null,
       "detalhe do item": detalheDoItem || null,
       "Descricao do item": descricaoDoItem || null,
-      // Extras úteis
       id, tags,
       agenciaNome: agenciaNome || null,
       agenciaLink: agenciaLink || null,
@@ -117,7 +117,7 @@ function extrairDaRaiz(rootDoc) {
     };
   });
 
-  // Próxima página priorizando o elemento solicitado
+  // Próxima página
   let nextUrl = null;
   const nextByIcon = rootDoc.querySelector('a.icon-arrow-right-after[href]');
   if (nextByIcon) {
@@ -138,7 +138,14 @@ function logCrawler(msg) {
 }
 
 async function runCrawlFetchNext() {
-  // Verifica se deve usar proxy (definido pelo popup)
+  _itensCrawled = [];
+  _ultimaPagina = 1;
+  _urlCrawl = location.href;
+  _dataCrawl = (() => {
+    const d = new Date();
+    return `${d.getFullYear()}${String(d.getMonth()+1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}${String(d.getHours()).padStart(2, '0')}${String(d.getMinutes()).padStart(2, '0')}`;
+  })();
+
   let usarProxy = false;
   try {
     usarProxy = window.localStorage.getItem('usarProxy') === 'true';
@@ -146,10 +153,7 @@ async function runCrawlFetchNext() {
 
   stopRequested = false;
   logCrawler('Iniciando na página: ' + location.href);
-
-  // Loga IP no início
   await logProxyIp('início');
-
   const vistos = new Set();
   const todos = [];
 
@@ -161,24 +165,23 @@ async function runCrawlFetchNext() {
   }
 
   function extrairNumeroPagina(url) {
-  const match = url.match(/\/pagina-(\d+)/);
-  if (match) return parseInt(match[1], 10);
-  // Se não houver /pagina-X, considere como página 1
-  return 1;
-}
-let pagina = extrairNumeroPagina(location.href);
+    const match = url.match(/\/pagina-(\d+)/);
+    if (match) return parseInt(match[1], 10);
+    return 1;
+  }
+  let pagina = extrairNumeroPagina(location.href);
+  _ultimaPagina = pagina;
+
   let proxyReconnectCount = 0;
   while (nextUrl && !stopRequested) {
     pagina += 1;
+    _ultimaPagina = pagina;
 
-    // (opcional) logar IP antes de cada request
     await logProxyIp(`antes de buscar página ${pagina}`);
-
     const espera = randDelay();
     logCrawler(`Aguardando ${Math.round(espera/1000)}s antes da página ${pagina}…`);
     await sleep(espera);
     if (stopRequested) break;
-
     logCrawler('Buscando:', nextUrl);
     let resp;
     try {
@@ -191,23 +194,16 @@ let pagina = extrairNumeroPagina(location.href);
       console.warn('[Crawler] Falha ao buscar:', nextUrl, resp.status);
       break;
     }
-
     const html = await resp.text();
     const doc = new DOMParser().parseFromString(html, 'text/html');
-
     const res = extrairDaRaiz(doc);
     for (const it of res.itens) {
       const key = it.id || it.Link || JSON.stringify(it);
       if (!vistos.has(key)) { vistos.add(key); todos.push(it); }
     }
-
     logCrawler(`Página ${pagina} coletada. Total até agora: ${todos.length}`);
     nextUrl = res.nextUrl || null;
-
-    // (opcional) logar IP depois de cada página (para notar rotações)
     await logProxyIp(`após coletar página ${pagina}`);
-
-    // Reconecta proxy a cada 10 páginas
     proxyReconnectCount++;
     if (usarProxy && proxyReconnectCount >= 10) {
       logCrawler('Reconectando proxy após 10 páginas...');
@@ -230,14 +226,32 @@ let pagina = extrairNumeroPagina(location.href);
     }
   }
 
-  if (todos.length > 0) {
-    baixarJSON(todos, `itens_paginas`);
-    alert(`JSON gerado com ${todos.length} itens de ${pagina} página(s).`);
+  // Salva progresso global para o STOP
+  _itensCrawled = todos.slice();
+  _ultimaPagina = pagina;
+  _urlCrawl = location.href;
+
+  if (_itensCrawled.length > 0) {
+    // Monta slug a partir da URL
+    let slug = _urlCrawl
+      .replace(/^https?:\/\/[^\/]+\/geo\//, '')     // tira até o /geo/
+      .replace(/[?#].*$/, '')                       // remove params/fragmentos
+      .replace(/\/$/, '')                           // remove barra final, se houver
+      .replace(/\//g, '-');                         // troca todas as barras restantes por hífen
+    if (!slug) slug = 'resultado';
+    const paginas = _ultimaPagina || 1;
+    const dataStr = _dataCrawl || (() => {
+      const d = new Date();
+      return `${d.getFullYear()}${String(d.getMonth()+1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}${String(d.getHours()).padStart(2, '0')}${String(d.getMinutes()).padStart(2, '0')}`;
+    })();
+    const nomeArquivo = `${slug}-Paginas${paginas}-${dataStr}`;
+    baixarJSON(_itensCrawled, nomeArquivo);
+    alert(`JSON gerado com ${_itensCrawled.length} itens de ${_ultimaPagina} página(s).\nArquivo: ${nomeArquivo}.json`);
   } else {
     alert('Nenhum item encontrado.');
   }
 
-  logCrawler(`Concluído. Total: ${todos.length}`);
+  logCrawler(`Concluído. Total: ${_itensCrawled.length}`);
 }
 
 // ---------- Mensagens do popup ----------
@@ -252,16 +266,21 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
         sendResponse({ ok: false, error: String(e) });
       }
     })();
-    return true; // async
+    return true;
   }
 
   if (msg?.cmd === 'STOP_AND_DOWNLOAD') {
     stopRequested = true;
-    sendResponse({ ok: true, stopping: true });
+    sendResponse({
+      ok: true,
+      dados: _itensCrawled,
+      totalPaginas: _ultimaPagina,
+      url: _urlCrawl,
+      dataString: _dataCrawl
+    });
     return true;
   }
 
-  // Teste de IP público a partir do contexto da aba (para mostrar no popup)
   if (msg?.cmd === 'TEST_IP') {
     (async () => {
       try {
