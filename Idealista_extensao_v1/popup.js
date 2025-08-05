@@ -227,10 +227,14 @@ if (itemsBtn) {
 
     // Proxy (opcional)
     if (toggleProxy && toggleProxy.checked) {
-      const host = localStorage.getItem('proxyHost') || '';
-      const port = parseInt(localStorage.getItem('proxyPort') || '0', 10);
-      const username = localStorage.getItem('proxyUser') || '';
-      const password = localStorage.getItem('proxyPass') || '';
+      // Agora lê do chrome.storage.local!
+      const proxyData = await new Promise((resolve) =>
+        chrome.storage.local.get(['proxyHost', 'proxyPort', 'proxyUser', 'proxyPass'], resolve)
+      );
+      const host = proxyData.proxyHost || '';
+      const port = parseInt(proxyData.proxyPort || '0', 10);
+      const username = proxyData.proxyUser || '';
+      const password = proxyData.proxyPass || '';
 
       try {
         const res = await chrome.runtime.sendMessage({
@@ -238,11 +242,7 @@ if (itemsBtn) {
         });
         if (!res?.ok) throw new Error(res?.error || "Erro desconhecido ao ativar proxy.");
       } catch (err) {
-        console.error("Erro ativando proxy:", err);
-        alert("Falha ao ativar proxy. Verifique os dados.");
-        itemsBtn.disabled = false;
-        itemsBtn.textContent = prevText;
-        return;
+        // ...
       }
     }
 
