@@ -153,12 +153,14 @@ function logCrawler(msg) {
   } catch {}
 }
 
-async function runCrawlFetchNext() {
+async function runCrawlFetchNext(opts = {}) {
   // Agora usa chrome.storage.local para pegar config
   const proxyConfig = await getProxyConfig();
   let usarProxy = proxyConfig.usarProxy;
   let stopRequestedLocal = false;
   stopRequested = false;
+  _itensCrawled = [];
+  _urlCrawl = location.href;
   logCrawler('Iniciando na página: ' + location.href);
   await logProxyIp('início');
   const vistos = new Set();
@@ -178,6 +180,7 @@ async function runCrawlFetchNext() {
     return 1;
   }
   let pagina = extrairNumeroPagina(location.href);
+  _ultimaPagina = pagina;
   let proxyReconnectCount = 0;
 
   while (nextUrl && !stopRequested) {
@@ -248,12 +251,16 @@ async function runCrawlFetchNext() {
   const d = new Date();
   const dataStr = `${d.getFullYear()}${String(d.getMonth()+1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}${String(d.getHours()).padStart(2, '0')}${String(d.getMinutes()).padStart(2, '0')}`;
   const nomeArquivo = `${slug}-Paginas${paginas}-${dataStr}`;
+  _dataCrawl = dataStr;
+  _itensCrawled = todos;
 
-  if (todos.length > 0) {
-    baixarJSON(todos, nomeArquivo);
-    alert(`JSON gerado com ${todos.length} itens de ${pagina} página(s).\nArquivo: ${nomeArquivo}.json`);
-  } else {
-    alert('Nenhum item encontrado.');
+  if (!opts.silent) {
+    if (todos.length > 0) {
+      baixarJSON(todos, nomeArquivo);
+      alert(`JSON gerado com ${todos.length} itens de ${pagina} página(s).\nArquivo: ${nomeArquivo}.json`);
+    } else {
+      alert('Nenhum item encontrado.');
+    }
   }
 
   logCrawler(`Concluído. Total: ${_itensCrawled.length}`);
@@ -264,7 +271,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg?.cmd === 'START_CRAWL') {
     (async () => {
       try {
-        await runCrawlFetchNext();
+        await runCrawlFetchNext({ silent: msg.silent });
         sendResponse({ ok: true, started: true });
       } catch (e) {
         console.error(e);
