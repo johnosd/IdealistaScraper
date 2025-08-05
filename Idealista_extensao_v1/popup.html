@@ -174,6 +174,9 @@
     <button class="tab-btn" data-tab="itens" id="tab-itens" role="tab" aria-selected="false" aria-controls="panel-itens">
       Itens
     </button>
+    <button class="tab-btn" data-tab="lote" id="tab-lote" role="tab" aria-selected="false" aria-controls="panel-lote">
+      Lote
+    </button>
     <button class="tab-btn" data-tab="proxy" id="tab-proxy" role="tab" aria-selected="false" aria-controls="panel-proxy">
       Proxy
     </button>
@@ -195,6 +198,27 @@
       <button id="stopExtract">Parar e Baixar JSON</button>
       <ul id="extractItemsLog" style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:7px;padding:8px 10px;margin:8px 0 0 0;max-height:110px;overflow:auto;font-size:0.97em;color:#1e293b;list-style:none;display:block;"></ul>
       <div id="proxyIpBox"></div>
+    </section>
+    <!-- Aba 3: Lote -->
+    <section id="panel-lote" class="panel card" role="tabpanel" aria-labelledby="tab-lote">
+      <label for="loteUrls">Cole a lista de URLs do Idealista.pt (JSON ou uma por linha):</label>
+      <textarea id="loteUrls" rows="5" placeholder='Exemplo JSON: [{ "nome": "Ajuda", "link": "/arrendar-casas/lisboa/lisboa/ajuda/", "quantidade": 115 }]\nOu apenas URLs linha a linha.'></textarea>
+      <button id="loteAutoLoad" style="width:100%;margin-bottom:8px;">Carregar lista automaticamente</button>
+      <div style="display:flex;gap:8px;margin-bottom:8px;">
+        <button id="loteStart">Iniciar Lote</button>
+        <button id="lotePause">Pausar</button>
+        <button id="loteStopExport">Parar e Exportar</button>
+        <button id="loteClear" style="background:#e53e3e;">Limpar lista</button>
+      </div>
+      <ul id="loteStatusList" style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:7px;padding:8px 10px;margin:8px 0 0 0;max-height:110px;overflow:auto;font-size:0.97em;color:#1e293b;list-style:none;display:block;"></ul>
+      <div id="loteLog" style="margin-top:10px;font-size:0.96em;color:#374151;"></div>
+      <div style="margin-top:10px;font-size:0.94em;color:#64748b;">
+        <b>Como usar:</b><br>
+        - Cole URLs ou JSON de bairros/cidades do Idealista.pt.<br>
+        - Clique <b>Iniciar Lote</b> para processar todos automaticamente.<br>
+        - O progresso será salvo e pode ser retomado.<br>
+        - Use <b>Pausar</b> ou <b>Parar e Exportar</b> a qualquer momento.<br>
+      </div>
     </section>
     <!-- Aba 3: Proxy -->
     <section id="panel-proxy" class="panel card" role="tabpanel" aria-labelledby="tab-proxy">

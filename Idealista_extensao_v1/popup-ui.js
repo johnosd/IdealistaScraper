@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const panels = {
     links: document.getElementById('panel-links'),
     itens: document.getElementById('panel-itens'),
+    lote: document.getElementById('panel-lote'),
     proxy: document.getElementById('panel-proxy'),
   };
 
