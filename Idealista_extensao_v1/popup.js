@@ -577,14 +577,14 @@ document.addEventListener("DOMContentLoaded", () => {
           loteLog.textContent = 'Extraindo itens da página...';
           // --- Inicia extração paginada (START_CRAWL) igual ao modo individual ---
           try {
-            let crawlRes = await chrome.tabs.sendMessage(tab.id, { cmd: 'START_CRAWL' });
+            let crawlRes = await chrome.tabs.sendMessage(tab.id, { cmd: 'START_CRAWL', silent: true });
             if (!crawlRes?.ok) throw new Error(crawlRes?.error || 'Erro ao iniciar crawler');
           } catch (err) {
             // Tenta reinjetar content.js e tentar de novo
             try {
               await chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['content.js'] });
               await new Promise(res => setTimeout(res, 500));
-              let crawlRes2 = await chrome.tabs.sendMessage(tab.id, { cmd: 'START_CRAWL' });
+              let crawlRes2 = await chrome.tabs.sendMessage(tab.id, { cmd: 'START_CRAWL', silent: true });
               if (!crawlRes2?.ok) throw new Error(crawlRes2?.error || 'Erro ao injetar script');
             } catch (e) {
               loteLog.textContent = 'Não consegui iniciar a extração. Recarregue a página do Idealista.';
