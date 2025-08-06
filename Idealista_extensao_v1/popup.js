@@ -715,7 +715,9 @@ document.addEventListener("DOMContentLoaded", () => {
             itens.forEach(li => {
               const linkElem = li.querySelector('a');
               const spanElem = li.querySelector('.breadcrumb-navigation-sidenote');
-              const quantidade = spanElem ? parseInt(spanElem.innerText.trim(), 10) : NaN;
+              const quantidade = spanElem
+                ? parseInt(spanElem.innerText.replace(/\./g, '').trim(), 10)
+                : NaN;
               if (linkElem && !isNaN(quantidade)) {
                 resultado.push({
                   nome: linkElem.innerText.trim(),
