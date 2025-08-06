@@ -708,11 +708,13 @@ document.addEventListener("DOMContentLoaded", () => {
           target: { tabId: tab.id },
           func: () => {
             // --- Código de extração fornecido pelo usuário ---
-            const itens = document.querySelectorAll('.breadcrumb-dropdown-element');
+            const itens = document.querySelectorAll(
+              '.breadcrumb-dropdown-element.highlighted ul.breadcrumb-dropdown-subitem-list > li'
+            );
             const resultado = [];
-            itens.forEach(item => {
-              const linkElem = item.querySelector('a');
-              const spanElem = item.querySelector('.breadcrumb-navigation-sidenote');
+            itens.forEach(li => {
+              const linkElem = li.querySelector('a');
+              const spanElem = li.querySelector('.breadcrumb-navigation-sidenote');
               const quantidade = spanElem ? parseInt(spanElem.innerText.trim(), 10) : NaN;
               if (linkElem && !isNaN(quantidade)) {
                 resultado.push({
