@@ -1,0 +1,40 @@
+[
+  {
+    "Titulo": "Casa de aldeia em Sobral de Monte Agraço",
+    "Link": "https://www.idealista.pt/imovel/34306042/",
+    "Preco": "900€/mês",
+    "detalhe do item": "T2 | 240 m² área bruta",
+    "Descricao do item": "Moradia T 2+1 Totalmente remodelada, composta por varandas um pequeno Logradouro e muita facilidade de estacionamento. e também possui de Uma Garagem para 2 carros. Situada na Granja, Zona Oeste a 3 minutos do Sobral de Monte Agraço a 10 minutos de Torres Vedras e a 25 minutos de Lisboa. Usufrui de transportes públicos",
+    "id": "34306042",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 240,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Apartamento T3 na Rua Encosta do Sol, 5 n, Sobral de Monte Agraço",
+    "Link": "https://www.idealista.pt/imovel/34302311/",
+    "Preco": "1.300€/mês",
+    "detalhe do item": "T3 | 130 m² área bruta | 2º andar com elevador",
+    "Descricao do item": "Para mais informações contacte.",
+    "id": "34302311",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 130,
+    "pisoResumo": "2º andar com elevador"
+  }
+]

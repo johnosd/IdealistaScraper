@@ -1,0 +1,62 @@
+[
+  {
+    "Titulo": "Moradia independente em Arruda dos Vinhos",
+    "Link": "https://www.idealista.pt/imovel/34228085/",
+    "Preco": "6.000€/mês",
+    "detalhe do item": "T6 | 310 m² área bruta",
+    "Descricao do item": "Viva com elegância no coração da natureza. Esta moradia térrea de arquitetura moderna, com 310 m² de área bruta privativa, está inserida num lote de 9.500 m², oferecendo uma fusão perfeita entre conforto, privacidade e um estilo de vida sofisticado no campo. Com vistas deslumbrantes sobre a serra e o vale, esta propri",
+    "id": "34228085",
+    "tags": [
+      "De luxo",
+      "Moradia térrea"
+    ],
+    "agenciaNome": "Sotheby's Realty Lisboa Oriental",
+    "agenciaLink": "https://www.idealista.pt/pro/sothebys-lisboa-oriental/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T6",
+    "areaBrutaM2": 310,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia independente na Rua 5 de Outubro, 11, Santiago dos Velhos, Arruda dos Vinhos",
+    "Link": "https://www.idealista.pt/imovel/34365159/",
+    "Preco": "800€/mês",
+    "detalhe do item": "T1 | 80 m² área bruta",
+    "Descricao do item": null,
+    "id": "34365159",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 80,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia em banda, Cm1117, 10, Arruda dos Vinhos",
+    "Link": "https://www.idealista.pt/imovel/34045980/",
+    "Preco": "900€/mês",
+    "detalhe do item": "T2 | 70 m² área bruta",
+    "Descricao do item": null,
+    "id": "34045980",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 70,
+    "pisoResumo": null
+  }
+]
