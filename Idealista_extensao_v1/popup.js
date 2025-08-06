@@ -437,13 +437,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Limpar lista ---
   if (loteClearBtn && loteUrlsTextarea) {
     loteClearBtn.addEventListener('click', async () => {
-      loteUrlsTextarea.value = '';
-      loteLog.textContent = 'Lista apagada da tela e do armazenamento.';
-      await clearLoteListFromStorage();
-      // Limpa status detalhado
-      loteStatusArr = [];
-      await chrome.storage.local.set({ loteStatusArr: [] });
-      renderLoteStatusList();
+      if (confirm("Tem certeza que deseja descartar o lote atual? Isso não poderá ser desfeito.")) {
+        await clearLoteData();
+      }
     });
   }
 
@@ -495,9 +491,30 @@ document.addEventListener("DOMContentLoaded", () => {
   // Carregar status ao abrir
   loadLoteStatusFromStorage();
 
+  async function clearLoteData() {
+    if (loteUrlsTextarea) {
+      loteUrlsTextarea.value = '';
+    }
+    loteStatusArr = [];
+    renderLoteStatusList();
+    loteIsRunning = false;
+    loteIsPaused = false;
+    window.loteResultados = [];
+    await chrome.storage.local.remove(['loteLista', 'loteStatusArr', 'loteProcessamento']);
+    if (loteStartBtn) loteStartBtn.disabled = false;
+    if (lotePauseBtn) lotePauseBtn.disabled = true;
+    if (loteLog) loteLog.textContent = 'Lote descartado.';
+  }
+
   if (loteStartBtn && loteUrlsTextarea) {
     loteStartBtn.addEventListener('click', async () => {
       if (loteIsRunning) return;
+      const listaOriginal = loteUrlsTextarea.value;
+      if (loteStatusArr.length > 0 || (window.loteResultados && window.loteResultados.length)) {
+        await clearLoteData();
+        loteUrlsTextarea.value = listaOriginal;
+        await saveLoteListToStorage(listaOriginal);
+      }
       loteIsRunning = true;
       loteIsPaused = false;
       loteLog.textContent = 'Processando lote...';
