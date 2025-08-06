@@ -682,12 +682,12 @@ document.addEventListener("DOMContentLoaded", () => {
             itens.forEach(item => {
               const linkElem = item.querySelector('a');
               const spanElem = item.querySelector('.breadcrumb-navigation-sidenote');
-              if (linkElem && spanElem) {
-                resultado.push({
-                  nome: linkElem.innerText.trim(),
-                  link: linkElem.getAttribute('href'),
-                  quantidade: parseInt(spanElem.innerText.replace(/\D/g, ''), 10)
-                });
+              if(linkElem && spanElem){
+                  resultado.push({
+                      nome: linkElem.innerText.trim(),
+                      link: linkElem.getAttribute('href'),
+                      quantidade: spanElem.innerText.trim()
+                  });
               }
             });
             return resultado;
@@ -696,7 +696,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!Array.isArray(result) || result.length === 0) {
           loteLog.textContent = 'Nenhum bairro/cidade encontrado na página ativa.';
         } else {
-          result.sort((a, b) => b.quantidade - a.quantidade);
           loteUrlsTextarea.value = JSON.stringify(result, null, 2);
           loteLog.textContent = `Lista carregada automaticamente: ${result.length} itens.`;
         }
