@@ -1,0 +1,42 @@
+[
+  {
+    "Titulo": "Moradia em banda na Rua de Mousinho de Albuquerque, 30, Valença - Cristelo Covo - Arão, Valença",
+    "Link": "https://www.idealista.pt/imovel/33089142/",
+    "Preco": "900€/mês",
+    "detalhe do item": "T2 | 100 m² área bruta",
+    "Descricao do item": "Apartamento no interior da fortaleza de Valença, num primeiro andar em moradia totalmente independente; Apartamento recuperado e equipado. Despesas não incluídas.",
+    "id": "33089142",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 100,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Apartamento T3 na Avenida de São Teotónio, 1, Valença - Cristelo Covo - Arão, Valença",
+    "Link": "https://www.idealista.pt/imovel/33678069/",
+    "Preco": "190€/mês",
+    "detalhe do item": "T3 | 136 m² área bruta | 6º andar com elevador",
+    "Descricao do item": "Alugo 1 quarto para rapaz com casa de banho privada.",
+    "id": "33678069",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 136,
+    "pisoResumo": "6º andar com elevador"
+  }
+]

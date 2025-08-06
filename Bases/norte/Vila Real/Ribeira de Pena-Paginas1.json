@@ -1,0 +1,63 @@
+[
+  {
+    "Titulo": "Apartamento T2 na Estrada do Lamarão, s/n, Salvador, Ribeira de Pena",
+    "Link": "https://www.idealista.pt/imovel/33639391/",
+    "Preco": "450€/mês",
+    "detalhe do item": "T2 | 80 m² área bruta | 1º andar sem elevador",
+    "Descricao do item": "casa com 2 quartos com sala/cozinha, mobilado, aquecimento a lenha. a casa está inserida em plena montanha, daí necessitar de carro para se deslocar para o trabalho. tem quintal se quiser cultivar tambem tem transporte escolar gratuito para as crianças se deslocar para as escolas. a casa está situada perto de Ribeira d",
+    "id": "33639391",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 80,
+    "pisoResumo": "1º andar sem elevador"
+  },
+  {
+    "Titulo": "Quinta na Estrada N312, s/n, Salvador, Ribeira de Pena",
+    "Link": "https://www.idealista.pt/imovel/28478563/",
+    "Preco": "1.250€/mês",
+    "detalhe do item": "T1 | 120 m² área bruta",
+    "Descricao do item": "Maravilhosa casa rústica junto à barragem de Daivões - Tâmega, concelho de Ribeira de Pena.",
+    "id": "28478563",
+    "tags": [
+      "Quinta"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 120,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Apartamento T2 na Rua da Capela, 5, Salvador, Ribeira de Pena",
+    "Link": "https://www.idealista.pt/imovel/33605625/",
+    "Preco": "450€/mês",
+    "detalhe do item": "T2 | 60 m² área bruta | Rés do chão sem elevador",
+    "Descricao do item": "Apartamento em moradia de dois pisos, com mobília. Quartos com cama de casal e roupeiros. Cozinha com Máquina de lavar loiça e roupa. Casa disponível a partir de início de Outubro.",
+    "id": "33605625",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 60,
+    "pisoResumo": "Rés do chão sem elevador"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "Titulo": "Apartamento T1 na Rua da Bandeira, 59, Monção",
+    "Link": "https://www.idealista.pt/imovel/34355472/",
+    "Preco": "750€/mês",
+    "detalhe do item": "T1 | 62 m² área bruta | 1º andar sem elevador",
+    "Descricao do item": "Descubra Monção a partir do coração da vila! O nosso T1 de férias está pronto para receber até 3 hóspedes com todo o conforto: 1 quarto com cama de casal Sofá-cama + ar condicionado Wi‑Fi incluído Pequeno terraço privado Localização central: a dois passos do Castelo, Museu do Alvarinho, Praça Deu-la-Deu, bal",
+    "id": "34355472",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 62,
+    "pisoResumo": "1º andar sem elevador"
+  },
+  {
+    "Titulo": "Apartamento T3 na Rua Mariana de Lencastre, 50, Cortes, Monção",
+    "Link": "https://www.idealista.pt/imovel/33704069/",
+    "Preco": "1.000€/mês",
+    "detalhe do item": "T3 | 150 m² área bruta | 1º andar sem elevador",
+    "Descricao do item": "Alugo para os meses de verão, julho e agosto. A 5 minutos a pé do centro da Vila.",
+    "id": "33704069",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 150,
+    "pisoResumo": "1º andar sem elevador"
+  }
+]

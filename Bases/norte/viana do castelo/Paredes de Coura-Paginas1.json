@@ -1,0 +1,84 @@
+[
+  {
+    "Titulo": "Casa de aldeia no Caminho do Penedo Lajão, 353, Infesta, Paredes de Coura",
+    "Link": "https://www.idealista.pt/imovel/34311606/",
+    "Preco": "700€/mês",
+    "detalhe do item": "T1 | 70 m² área bruta",
+    "Descricao do item": "A casa possui todas as comodidades necessárias ao dia a dia. Totalmente mobilada e equipada dispõe de salamandra a lenha e ar condicionado. possui televisão de ecrã plano. Enquadrando - se discretamente na paisagem é de realçar a beleza dos espaços verdes que a envolvem. No valor da renda estão incluídos: eletricidade",
+    "id": "34311606",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 70,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Casa de aldeia na Estrada de Infesta, 1325, Infesta, Paredes de Coura",
+    "Link": "https://www.idealista.pt/imovel/34297853/",
+    "Preco": "700€/mês",
+    "detalhe do item": "T1 | 50 m² área bruta",
+    "Descricao do item": "Casa de madeira inspirada nos antigos espigueiros existentes a região das Asturias em Espanha. tem todas as comodidades necessárias no dia a dia. ar-condicionado, bomba de calor para aquecimento de águas, placa de fogão, máquina de café Nespresso. Tem muito espaço para guardar o carro dentro da propriedade. televisão d",
+    "id": "34297853",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 50,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia em banda na Rua Frei Antonio de Jesus, 49, Paredes de Coura",
+    "Link": "https://www.idealista.pt/imovel/33977883/",
+    "Preco": "800€/mês",
+    "detalhe do item": "T2 | 110 m² área bruta",
+    "Descricao do item": null,
+    "id": "33977883",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 110,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia independente, via pública, 112, Cunha, Paredes de Coura",
+    "Link": "https://www.idealista.pt/imovel/34306073/",
+    "Preco": "650€/mês",
+    "detalhe do item": "T3 | 100 m² área bruta",
+    "Descricao do item": "Casa muito bem situada para aluguer de férias ou permanente.",
+    "id": "34306073",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 100,
+    "pisoResumo": null
+  }
+]

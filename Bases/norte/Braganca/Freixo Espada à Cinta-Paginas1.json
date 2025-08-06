@@ -1,0 +1,42 @@
+[
+  {
+    "Titulo": "Moradia independente na Rua Nova, 21, Lagoaça, Freixo Espada à Cinta",
+    "Link": "https://www.idealista.pt/imovel/34381535/",
+    "Preco": "700€/mês",
+    "detalhe do item": "T5 | 149 m² área bruta",
+    "Descricao do item": "Moradia unifamiliar com área envolvente exterior (árvores de fruto) para remodelação total. 7 divisões, 2 pisos Na vila de Lagoaca, Freixo de Espada a Cinta. Potencial para projecto turístico. Área total de terreno: 149,0000m2 Área bruta de construção: 298,0000m2 Valor de renda sujeito a negociação e dependente de p",
+    "id": "34381535",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": "1.000 €",
+    "descontoPercentual": "30%",
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T5",
+    "areaBrutaM2": 149,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Casa de aldeia na Rua das Flores, 5, Freixo de Espada à Cinta, Freixo Espada à Cinta",
+    "Link": "https://www.idealista.pt/imovel/32578777/",
+    "Preco": "300€/mês",
+    "detalhe do item": "T2 | 67 m² área bruta",
+    "Descricao do item": "arrenda-se temporariamente 1 de Setembro de 2025 - 31 de Julho de 2026 | casa T3 - boa localização (centro da vila) - 2 quartos com wc privativo - sala e cozinha - mobilada com equipamentos domésticos Despesas gerais não incluídas.",
+    "id": "32578777",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 67,
+    "pisoResumo": null
+  }
+]

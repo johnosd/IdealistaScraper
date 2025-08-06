@@ -1,0 +1,40 @@
+[
+  {
+    "Titulo": "Moradia independente na Rua da Malhada, 39, Brunhoso, Mogadouro",
+    "Link": "https://www.idealista.pt/imovel/34115822/",
+    "Preco": "380€/mês",
+    "detalhe do item": "T3 | 155 m² área bruta",
+    "Descricao do item": "Contato apenas PELO CHAT Casa com 3/4 no 1 andar e cozinha, sala de jantar, casa de banho na parte de baixo, água quente torneiras, lareira, varanda no 1 andar, nascente, ventilada, linda vista para Aldeia de Brunhoso a 3 km de Mogadouro, região norte de Portugal 150 km de Porto-Portugal, chame apenas pelo CHAT..",
+    "id": "34115822",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 155,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Apartamento T2 na Rua Arquitecto Vaz Martins, 20, Mogadouro",
+    "Link": "https://www.idealista.pt/imovel/32030410/",
+    "Preco": "500€/mês",
+    "detalhe do item": "T2 | 130 m² área bruta | 1º andar sem elevador",
+    "Descricao do item": "Apartamento T2 situado numa rua de moradias, zona calma com boa vizinhança. Perto de serviços, centro de saúde, escolas, parque infantil e central de autocarros. Apartamento totalmente mobilado, limpo e cómodo. Disponível a partir de Maio 2025.",
+    "id": "32030410",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 130,
+    "pisoResumo": "1º andar sem elevador"
+  }
+]

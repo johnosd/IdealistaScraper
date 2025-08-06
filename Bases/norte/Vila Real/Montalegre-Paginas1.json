@@ -1,0 +1,40 @@
+[
+  {
+    "Titulo": "Andar de moradia, Do Ferreiro, 3, Venda Nova e Pondras, Montalegre",
+    "Link": "https://www.idealista.pt/imovel/33950272/",
+    "Preco": "1.550€/mês",
+    "detalhe do item": "T2 | 115 m² área bruta",
+    "Descricao do item": "Casa recentemente restaurada. Equipada com roupas de cama e toalhas. Todos os electrodomésticos e loiças de cozinha: TV e Internet incluindo -Máquina de lavar a Loiça -Máquina de lavar e secar Roupa -Frigorífico Combinado -Forno -Fogão com placa indução -panelas e acessórios de cozinha -Microondas -Torradeira -varinha",
+    "id": "33950272",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 115,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia geminada na Estrada Municipal, 17, Meixedo e Padornelos, Montalegre",
+    "Link": "https://www.idealista.pt/imovel/34308041/",
+    "Preco": "450€/mês",
+    "detalhe do item": "T3 | 130 m² área bruta",
+    "Descricao do item": "Aluga-se casa com 2 pisos independentes. 1ºandar com 3 quartos, WC, sala, cozinha e despensa. Jardim na frente da casa. Padronelos fica a 6KM de Montalegre e 41 Km de Chaves. Aldeia calma, ótima para caminhadas ( a 5 minutos da Serra do Larouco).",
+    "id": "34308041",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": "600 €",
+    "descontoPercentual": "25%",
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 130,
+    "pisoResumo": null
+  }
+]
