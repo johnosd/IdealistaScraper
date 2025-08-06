@@ -418,6 +418,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  async function moveFirstLoteItemToEnd() {
+    let lista = loteUrlsTextarea.value.trim();
+    if (!lista) return;
+    try {
+      let arr = JSON.parse(lista);
+      if (Array.isArray(arr) && arr.length > 0) {
+        const first = arr.shift();
+        arr.push(first);
+        loteUrlsTextarea.value = JSON.stringify(arr, null, 2);
+        await saveLoteListToStorage(arr);
+        loteLog.textContent = `Item movido para o final. Próximo item: ${arr[0]?.nome || arr[0]?.link || arr[0] || ''}`;
+      }
+    } catch (e) {
+      // fallback: linha a linha
+      let linhas = lista.split('\n').map(l => l.trim()).filter(Boolean);
+      if (linhas.length > 0) {
+        const first = linhas.shift();
+        linhas.push(first);
+        loteUrlsTextarea.value = linhas.join('\n');
+        await saveLoteListToStorage(linhas.join('\n'));
+        loteLog.textContent = `Item movido para o final. Próximo item: ${linhas[0] || ''}`;
+      }
+    }
+  }
+
   // --- Carregar lista do storage ao abrir ---
   (async () => {
     const listaSalva = await getLoteListFromStorage();
@@ -644,13 +669,19 @@ document.addEventListener("DOMContentLoaded", () => {
           loteLog.textContent = 'Erro: ' + (err.message || err);
           loteStatusArr[idx].status = 'Erro';
         }
+        if (loteStatusArr[idx].status === 'Sucesso') {
+          await removeFirstLoteItem();
+          idx++;
+        } else {
+          await moveFirstLoteItemToEnd();
+          const firstStatus = loteStatusArr.shift();
+          loteStatusArr.push(firstStatus);
+        }
         await saveLoteStatusToStorage();
         renderLoteStatusList();
-        await removeFirstLoteItem();
         // Delay aleatório entre 1.5 e 4 segundos
         const delayMs = Math.floor(Math.random() * (4000 - 1500 + 1)) + 1500;
         await new Promise(res => setTimeout(res, delayMs));
-        idx++;
       }
       loteIsRunning = false;
       loteStartBtn.disabled = false;
