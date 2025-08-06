@@ -677,19 +677,21 @@ document.addEventListener("DOMContentLoaded", () => {
           target: { tabId: tab.id },
           func: () => {
             // --- Código de extração fornecido pelo usuário ---
-            const itens = document.querySelectorAll('.breadcrumb-dropdown-subitem-element-list, .breadcrumb-dropdown-element');
+            const itens = document.querySelectorAll('.breadcrumb-dropdown-element');
             const resultado = [];
             itens.forEach(item => {
               const linkElem = item.querySelector('a');
               const spanElem = item.querySelector('.breadcrumb-navigation-sidenote');
-              if(linkElem && spanElem){
-                  resultado.push({
-                      nome: linkElem.innerText.trim(),
-                      link: linkElem.getAttribute('href'),
-                      quantidade: spanElem.innerText.trim()
-                  });
+              const quantidade = spanElem ? parseInt(spanElem.innerText.trim(), 10) : NaN;
+              if (linkElem && !isNaN(quantidade)) {
+                resultado.push({
+                  nome: linkElem.innerText.trim(),
+                  link: linkElem.getAttribute('href'),
+                  quantidade
+                });
               }
             });
+            resultado.sort((a, b) => b.quantidade - a.quantidade);
             return resultado;
           },
         });
