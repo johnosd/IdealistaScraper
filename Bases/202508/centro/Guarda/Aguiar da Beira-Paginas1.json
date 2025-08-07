@@ -1,0 +1,40 @@
+[
+  {
+    "Titulo": "Moradia geminada em Coruche, Aguiar da Beira",
+    "Link": "https://www.idealista.pt/imovel/34302562/",
+    "Preco": "600€/mês",
+    "detalhe do item": "T3 | 178 m² área bruta",
+    "Descricao do item": "Moradia T3 para arrendamento em Coruche, Aguiar da Beira. A 2 minutos da sede do seu concelho, Aguiar da Beira. A 69 km do seu distrito, Guarda. A Moradia é composta por uma cozinha, sala, três quartos, sendo um deles suíte, duas instalações sanitárias, uma marquise e espaço exterior para estacionamento. Cozinha atu",
+    "id": "34302562",
+    "tags": [],
+    "agenciaNome": "REAB",
+    "agenciaLink": "https://www.idealista.pt/pro/reab-imobiliaria/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 178,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia geminada em Coruche, Aguiar da Beira",
+    "Link": "https://www.idealista.pt/imovel/34314719/",
+    "Preco": "500€/mês",
+    "detalhe do item": "T2 | 120 m² área bruta",
+    "Descricao do item": "Moradia T2 para arrendamento em Coruche, Aguiar da Beira. A 2 minutos da sede do seu concelho, Aguiar da Beira. A 69 km do seu distrito, Guarda. A Moradia é composta por uma cozinha, sala, dois quartos, duas instalações sanitárias, uma marquise, varanda, garagem e um terraço. Aquecimento central a gasóleo. Dispõe",
+    "id": "34314719",
+    "tags": [],
+    "agenciaNome": "REAB",
+    "agenciaLink": "https://www.idealista.pt/pro/reab-imobiliaria/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 120,
+    "pisoResumo": null
+  }
+]

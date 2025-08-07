@@ -1,0 +1,40 @@
+[
+  {
+    "Titulo": "Apartamento T1, Cm1558-1, 470, São Pedro do Sul - Várzea - Baiões, São Pedro do Sul",
+    "Link": "https://www.idealista.pt/imovel/31391091/",
+    "Preco": "575€/mês",
+    "detalhe do item": "T1 | 70 m² área bruta | 1º andar sem elevador",
+    "Descricao do item": "Entrada imediata. Mobilado, com uma excelente localização nas margens do rio Vouga. Cozinha mobilada e equipada. Máquina de lavar roupa. Sala de jantar e de estar com varanda vista rio. Quarto com roupeiro embutido duas janelas com vista rio. Casa de banho. Dispensa e lavandaria. Lugar de garagem coberta á porta. Boa",
+    "id": "31391091",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 70,
+    "pisoResumo": "1º andar sem elevador"
+  },
+  {
+    "Titulo": "Apartamento T1 em Figueiredo de Alva, São Pedro do Sul",
+    "Link": "https://www.idealista.pt/imovel/34255439/",
+    "Preco": "400€/mês",
+    "detalhe do item": "T1 | 25 m² área bruta | sem elevador",
+    "Descricao do item": "Andar moradia T1 para arrendar, totalmente remodelada, localizada em Figueiredo de Alva, a apenas 10 minutos de São Pedro do Sul! Características do imóvel: Cozinha equipada – Inclui forno e placa, exaustor e cilindro elétrico. Caixilharia nova – Garantindo melhor isolamento térmico e acústico. Excelente exposição sol",
+    "id": "34255439",
+    "tags": [],
+    "agenciaNome": "Domi Imobiliária",
+    "agenciaLink": "https://www.idealista.pt/pro/domi-imobiliaria/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 25,
+    "pisoResumo": null
+  }
+]

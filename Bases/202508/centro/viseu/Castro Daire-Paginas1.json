@@ -1,0 +1,82 @@
+[
+  {
+    "Titulo": "Andar de moradia na Travessa do Souto, Mões, Castro Daire",
+    "Link": "https://www.idealista.pt/imovel/34255956/",
+    "Preco": "1.000€/mês",
+    "detalhe do item": "T2 | 75 m² área bruta",
+    "Descricao do item": "RESERVAS E PEDIDOS DE INFORMAÇÃO Para obter informações detalhadas e reservar online, clique abaixo do mapa em “Link Adicional”. TERMOS E CONDIÇÕES DE ALOJAMENTO: - Data de Disponibilidade: 04/09/2025 - Duração Mínima de Aluguer: 27 dias - Número Máximo de Hóspedes: 4 - Todas as Despesas Incluídas: Não, para mais info",
+    "id": "34255956",
+    "tags": [],
+    "agenciaNome": "Uniplaces",
+    "agenciaLink": "https://www.idealista.pt/pro/uniplaces/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 75,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia independente, Sobrado, 1221, Parada de Ester - Ester, Castro Daire",
+    "Link": "https://www.idealista.pt/imovel/33982653/",
+    "Preco": "450€/mês",
+    "detalhe do item": "T2 | 48 m² área bruta | 01 ago",
+    "Descricao do item": "Apresenta-se à sua atenção uma casa com 48 m², localizada na aldeia de Sobrado (região de Viseu). Dispõe de dois quartos separados, uma sala e uma cave, adequada para arrumação. O estado da casa não é ideal e serão necessários alguns investimentos financeiros para uma estadia confortável e plena. A aldeia é bastante re",
+    "id": "33982653",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 48,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Apartamento T4, Av. Bombeiros Voluntários, 51, Castro Daire",
+    "Link": "https://www.idealista.pt/imovel/33766284/",
+    "Preco": "750€/mês",
+    "detalhe do item": "T4 | 120 m² área bruta | 3º andar sem elevador",
+    "Descricao do item": "O apartamento estará disponível em agosto, está a ser totalmente remodelado e é no primeiro piso. Situado no centro de Castro Daire, junto à farmácia Misericórdia, com acesso pela zona do parque de estacionamento da camara municipal. Tem duas casas de banho e cozinha equipada com electrodomésticos novos. Tem 4 quartos,",
+    "id": "33766284",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T4",
+    "areaBrutaM2": 120,
+    "pisoResumo": "3º andar sem elevador"
+  },
+  {
+    "Titulo": "Apartamento T0, Av. dos Bombeiros Voluntários, 51, Castro Daire",
+    "Link": "https://www.idealista.pt/imovel/33791344/",
+    "Preco": "1.000€/mês",
+    "detalhe do item": "T0 | 30 m² área bruta | 3º andar sem elevador",
+    "Descricao do item": null,
+    "id": "33791344",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T0",
+    "areaBrutaM2": 30,
+    "pisoResumo": "3º andar sem elevador"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Titulo": "Moradia independente na Rua Abel dos Santos Rito, s/n, Vila Ruiva, Fornos de Algodres",
+    "Link": "https://www.idealista.pt/imovel/33570188/",
+    "Preco": "2.500€/mês",
+    "detalhe do item": "T3 | 200 m² área bruta",
+    "Descricao do item": "Encantadora casa de quinta totalmente mobilada disponível para aluguer temporário. Perfeita para quem procura uma estadia tranquila no campo. 3 Quartos, 2 Casas de Banho, 2 Salas. A casa está totalmente equipada e decorada. Tem ar condicionado e janelas de vidro duplo. A zona exterior inclui um patio equipado com m",
+    "id": "33570188",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 200,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Apartamento T2, Zona Sul, 3, Fornos de Algodres",
+    "Link": "https://www.idealista.pt/imovel/33133704/",
+    "Preco": "450€/mês",
+    "detalhe do item": "T2 | 90 m² área bruta | 1º andar sem elevador",
+    "Descricao do item": "A cozinha não tem frigorífico nem máquina de lavar.",
+    "id": "33133704",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 90,
+    "pisoResumo": "1º andar sem elevador"
+  }
+]

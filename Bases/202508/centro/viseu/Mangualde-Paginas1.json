@@ -1,0 +1,40 @@
+[
+  {
+    "Titulo": "Casa de aldeia na Rua da Laginha, 25, Mesquitela, Mangualde",
+    "Link": "https://www.idealista.pt/imovel/33588644/",
+    "Preco": "650€/mês",
+    "detalhe do item": "T2 | 100 m² área bruta",
+    "Descricao do item": "Moradia em Pedra reconstruida com Ar condicionado em todas as divisões em ótimo estado com 2 quartos, 1 WC, e churrasqueira no exterior. Preferência de arrendamento de Setembro a Junho inclusive. Ideal para professores ou oficiais de justiça.",
+    "id": "33588644",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 100,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Apartamento T2 na Rua do Centro, 2, Mangualde",
+    "Link": "https://www.idealista.pt/imovel/34093622/",
+    "Preco": "700€/mês",
+    "detalhe do item": "T2 | 150 m² área bruta | 2º andar sem elevador",
+    "Descricao do item": "Disponível a partir de 15 de setembro. Arrenda se andar de moradia T2 com entrada independente em Mangualde, totalmente remodelado e pronto a habitar. Inclui maquina de lavar roupa, fogão, forno, exaustor, placa e um ar condicionado portátil. Não tem custo de fornecimento de água pois conta com poço de agua. Tem espaço",
+    "id": "34093622",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 150,
+    "pisoResumo": "2º andar sem elevador"
+  }
+]

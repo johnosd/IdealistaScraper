@@ -1,0 +1,21 @@
+[
+  {
+    "Titulo": "Apartamento T2 na Rua Capricho, Castanheira de Pêra",
+    "Link": "https://www.idealista.pt/imovel/34358621/",
+    "Preco": "475€/mês",
+    "detalhe do item": "T2 | 78 m² área bruta | 2º andar sem elevador",
+    "Descricao do item": "Apartamento T2 com uma área bruta de construção de 78m2 com vista para a Vila de Castanheira de Pera e Praia das Rocas, localizado na Rua do Capricho a 5 minutos a pé do centro da vila. Trata-se de um 2º andar de um edifício de 3 pisos sem elevador com área comum de 884 m2. É composto por uma sala de estar, uma cozinha",
+    "id": "34358621",
+    "tags": [],
+    "agenciaNome": "RE/MAX Entre Castelos",
+    "agenciaLink": "https://www.idealista.pt/pro/remaxentrecastelos/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 78,
+    "pisoResumo": "2º andar sem elevador"
+  }
+]

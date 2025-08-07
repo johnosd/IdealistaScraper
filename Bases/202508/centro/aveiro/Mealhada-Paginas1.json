@@ -1,0 +1,40 @@
+[
+  {
+    "Titulo": "Moradia em banda na Rua Doutor Henrique Navega, 3, Mealhada - Ventosa do Bairro - Antes, Mealhada",
+    "Link": "https://www.idealista.pt/imovel/34372932/",
+    "Preco": "800€/mês",
+    "detalhe do item": "T2 | 67 m² área bruta",
+    "Descricao do item": "Identificação do imóvel: ZMPT579144 Disponível a partir de 1 de Setembro de 2025 Moradia T2, recuperada para arrendamento em Antes - Mealhada. Esta moradia recuperada, de r/ch e 1º andar, é composta por cozinha e sala no mesmo espaço, um quarto e um pequeno pátio, ideal para guardar o seu carro. No 1º andar, um segund",
+    "id": "34372932",
+    "tags": [],
+    "agenciaNome": "ZOME Coimbra",
+    "agenciaLink": "https://www.idealista.pt/pro/zomegrupoviva/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 67,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Apartamento T3 na Rua República, 70, Pampilhosa, Mealhada",
+    "Link": "https://www.idealista.pt/imovel/32906567/",
+    "Preco": "650€/mês",
+    "detalhe do item": "T3 | 90 m² área bruta | 1º andar sem elevador",
+    "Descricao do item": "T2+1 Espaçoso no Centro da Pampilhosa Disponível em agosto de 2025 Com uma localização central, está a poucos minutos de restaurantes, lojas e transporte público. Em fase de remodelação, contará com: - Cozinha equipada com exaustor, placa, forno. - Casa de banho com base de duche e termoacumulador. - Sala grande co",
+    "id": "32906567",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": "700 €",
+    "descontoPercentual": "7%",
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 90,
+    "pisoResumo": "1º andar sem elevador"
+  }
+]

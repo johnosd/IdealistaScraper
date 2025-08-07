@@ -1,0 +1,40 @@
+[
+  {
+    "Titulo": "Apartamento T3 na Rua do Casal Jardim, 28, Poiares (Santo André), Vila Nova de Poiares",
+    "Link": "https://www.idealista.pt/imovel/34399945/",
+    "Preco": "800€/mês",
+    "detalhe do item": "T3 | 154 m² área bruta | 1º andar sem elevador | 04 ago",
+    "Descricao do item": "Apartamento T3 para arrendar em Vila Nova de Poiares Composto por 3 quartos (1 em suite) Sala Cozinha Despensa WC completo Garagem individual Localização privilegiada próximo de todos os serviços e com excelentes áreas.",
+    "id": "34399945",
+    "tags": [],
+    "agenciaNome": "Century21 Realty Art M&J",
+    "agenciaLink": "https://www.idealista.pt/pro/century21realtyartmj/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 154,
+    "pisoResumo": "1º andar sem elevador"
+  },
+  {
+    "Titulo": "Apartamento T1 na Rua Ângelo Lima, 12, Poiares (Santo André), Vila Nova de Poiares",
+    "Link": "https://www.idealista.pt/imovel/34396996/",
+    "Preco": "600€/mês",
+    "detalhe do item": "T1 | 55 m² área bruta | Rés do chão sem elevador | 31 jul",
+    "Descricao do item": "Nota: Não pretendo ser contactado por imobiliárias* Apartamento localizado em Vila Nova de Poiares ( Sto. André), Inserido em prédio mas com ligação direta à zona exterior. Apartamento equipado com moveis de cozinha, placa e forno, cozinha e sala em openspace, estores elétricos, armários embutidos para arrumação. (Dis",
+    "id": "34396996",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 55,
+    "pisoResumo": "Rés do chão sem elevador"
+  }
+]

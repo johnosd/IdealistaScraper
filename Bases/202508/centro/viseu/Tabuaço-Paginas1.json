@@ -1,0 +1,45 @@
+[
+  {
+    "Titulo": "Quinta na Rua da Igreja, Arcos, Tabuaço",
+    "Link": "https://www.idealista.pt/imovel/34335595/",
+    "Preco": "3.500€/mês",
+    "detalhe do item": "T1 | 120 m² área bruta",
+    "Descricao do item": "Quinta para Venda em Arcos Arcos, aldeia do concelho de Tabuaço, possui um rico património histórico e cultural, incluindo a Igreja Matriz e o quinhentista Pelourinho de Arcos, bem como no que respeita em termos arqueológicos, destacando o Lagar da Serra e a Pedra das Cruzes. Localizada numa zona montanhosa, com vist",
+    "id": "34335595",
+    "tags": [
+      "De luxo",
+      "Quinta"
+    ],
+    "agenciaNome": "RE/MAX Acção II",
+    "agenciaLink": "https://www.idealista.pt/pro/remax-accao-ii/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 120,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Casa de aldeia na Rua lopes, 5, Tabuaço",
+    "Link": "https://www.idealista.pt/imovel/33825443/",
+    "Preco": "400€/mês",
+    "detalhe do item": "T3 | 80 m² área bruta",
+    "Descricao do item": "Casa antiga de montanha para férias, com 3 quartos cama de casal quartos pequenos. com churasqueiras, terraço muita zona de lazer. também dá para trabalhadores por pequenas temporadas ou mesmo só aluguer de quarto valor a combinar.",
+    "id": "33825443",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": "500 €",
+    "descontoPercentual": "20%",
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 80,
+    "pisoResumo": null
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "Titulo": "Apartamento T2 na Rua Combatentes da Grande Guerra, 66, Soure",
+    "Link": "https://www.idealista.pt/imovel/34337350/",
+    "Preco": "600€/mês",
+    "detalhe do item": "T2 | 126 m² área bruta | 3º andar sem elevador | 05 ago",
+    "Descricao do item": "Aluga-se bonito T2 apartamento situado numa das zonas mais privilegiadas da bela vila de Soure. Localizado junto ao rio e ao parque, com todos os serviços essenciais a poucos passos de distância – cafés, supermercado, farmácia, transportes e muito mais. O apartamento dispõe de uma varanda espaçosa com vista deslumbran",
+    "id": "34337350",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 126,
+    "pisoResumo": "3º andar sem elevador"
+  },
+  {
+    "Titulo": "Apartamento T3 na Rua Adro, 27, Granja do Ulmeiro, Soure",
+    "Link": "https://www.idealista.pt/imovel/32959853/",
+    "Preco": "900€/mês",
+    "detalhe do item": "T3 | 160 m² área bruta | 1º andar sem elevador",
+    "Descricao do item": "Disponível desde 8 de Setembro Apartamento muito bem localizado 3 min da estação da granja do ulmeiro, pastelaria e padaria, mini mercado, farmácia, churrasqueira, lavandaria, correios, bombeiros, escola e centro de saúde. 1- sala ampla mobilada com sofá cama 1-cozinha totalmente equipada 2- casas de banho completa",
+    "id": "32959853",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 160,
+    "pisoResumo": "1º andar sem elevador"
+  }
+]
