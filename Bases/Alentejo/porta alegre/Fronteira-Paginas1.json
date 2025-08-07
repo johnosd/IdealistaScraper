@@ -1,0 +1,23 @@
+[
+  {
+    "Titulo": "Moradia independente em Fronteira",
+    "Link": "https://www.idealista.pt/imovel/34343827/",
+    "Preco": "500€/mês",
+    "detalhe do item": "T3 | 180 m² área bruta",
+    "Descricao do item": "Aluga se para períodos de um ano a pessoas deslocadas em trabalho. Bem localizada Boas condições, valor a combinar.",
+    "id": "34343827",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 180,
+    "pisoResumo": null
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Titulo": "Herdade no Largo do Rato, 2, Rosário, Almodôvar",
+    "Link": "https://www.idealista.pt/imovel/33831965/",
+    "Preco": "1.500€/mês",
+    "detalhe do item": "T4 | 190 m² área bruta",
+    "Descricao do item": "Para Arrendar: Casa + Armazém para Arrumação A-dos-Neves, Rosário, Almodôvar Casa: - 4 quartos - 4 casas de banho - Pátio - Mobilada Armazém: - 50 m2.",
+    "id": "33831965",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T4",
+    "areaBrutaM2": 190,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Casa de aldeia na Estrada M506, s/n, Santa Cruz, Almodôvar",
+    "Link": "https://www.idealista.pt/imovel/34358262/",
+    "Preco": "450€/mês",
+    "detalhe do item": "T2 | 69 m² área bruta",
+    "Descricao do item": "Atenção: . A casa estará disponível para arrendamento em outobro por um máximo de um ano. O aluguel inclui água e internet. A eletricidade é de responsabilidade do inquilino.",
+    "id": "34358262",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 69,
+    "pisoResumo": null
+  }
+]

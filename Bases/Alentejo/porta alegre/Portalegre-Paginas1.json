@@ -1,0 +1,40 @@
+[
+  {
+    "Titulo": "Apartamento T3 na Rua Padre Diogo Pereira Sotto Mayor, 16, Sé e São Lourenço, Portalegre",
+    "Link": "https://www.idealista.pt/imovel/34403196/",
+    "Preco": "550€/mês",
+    "detalhe do item": "T3 | 90 m² área bruta | Rés do chão sem elevador | 03 ago",
+    "Descricao do item": "Atenção só respondo a quem me disser qual o local de trabalho, e o que fazem.",
+    "id": "34403196",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 90,
+    "pisoResumo": "Rés do chão sem elevador"
+  },
+  {
+    "Titulo": "Apartamento T3 na Rua Doutor Feliciano Falcão, 6, Sé e São Lourenço, Portalegre",
+    "Link": "https://www.idealista.pt/imovel/34185318/",
+    "Preco": "950€/mês",
+    "detalhe do item": "T3 | 117 m² área bruta | 2º andar com elevador",
+    "Descricao do item": "Apartamento parcialmente mobilado. Cozinha com esquentador, placa e forno. É necessário fiador.",
+    "id": "34185318",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 117,
+    "pisoResumo": "2º andar com elevador"
+  }
+]

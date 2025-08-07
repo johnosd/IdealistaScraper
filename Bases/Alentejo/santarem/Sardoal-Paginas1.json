@@ -1,0 +1,44 @@
+[
+  {
+    "Titulo": "Apartamento T1 na Praça da República, 1, Sardoal",
+    "Link": "https://www.idealista.pt/imovel/33872524/",
+    "Preco": "420€/mês",
+    "detalhe do item": "T1 | 40 m² área bruta | Rés do chão sem elevador",
+    "Descricao do item": "Apartamento T1 para Arrendar em Sardoal! Localizaçäo: Centro do Sardoal. Descriçäo: - Tipo: T1 com entrada independente - Mobília: Totalmente mobilado - Equipamentos: Equipado com electrodomésticos, máquina de lavar roupa, microondas e televisäo. - Internet: Wi-Fi incluído. Características: - Localizaçäo privilegia",
+    "id": "33872524",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 40,
+    "pisoResumo": "Rés do chão sem elevador"
+  },
+  {
+    "Titulo": "Casa de aldeia na Rua das Casas Crespas, 14, Sardoal",
+    "Link": "https://www.idealista.pt/imovel/32997759/",
+    "Preco": "500€/mês",
+    "detalhe do item": "T1 | 60 m² área bruta",
+    "Descricao do item": "DISPONÍVEL ATÉ 31 OUTUBRO 1. DESCRIÇÃO Habitação mobilada para arrendamento TEMPORÁRIO. É parte independente de uma moradia unifamiliar, com capacidade para 2 pessoas, constituída por: (a) Quarto mobilado (inc. têxteis) de 15 m2, com casa de banho de 4 m2 ligada ao quarto (suite); (b) Alpendre coberto de 21 m2 ligado",
+    "id": "32997759",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 60,
+    "pisoResumo": null
+  }
+]

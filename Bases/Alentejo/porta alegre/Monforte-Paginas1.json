@@ -1,0 +1,44 @@
+[
+  {
+    "Titulo": "Moradia independente em Monforte",
+    "Link": "https://www.idealista.pt/imovel/32945651/",
+    "Preco": "7.500€/mês",
+    "detalhe do item": "T5 | 958 m² área bruta",
+    "Descricao do item": "Bem-vindo a esta magnífica casa de dois pisos e 5 suítes que combina elegância, conforto e funcionalidade em cada detalhe. Localizada a 1h30 de Lisboa, esta propriedade é um verdadeiro paraíso que oferece uma vida luxuosa e tranquila no coração da natureza. Características Principais: * 5 Suítes: Cada quarto é uma suí",
+    "id": "32945651",
+    "tags": [
+      "De luxo"
+    ],
+    "agenciaNome": "Caetana Properties",
+    "agenciaLink": "https://www.idealista.pt/pro/caetana-properties/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T5",
+    "areaBrutaM2": 958,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia independente em Monforte",
+    "Link": "https://www.idealista.pt/imovel/33011745/",
+    "Preco": "7.500€/mês",
+    "detalhe do item": "T5 | 957 m² área bruta",
+    "Descricao do item": "Esta encantadora e isolada quinta histórica situa-se a uma curta distância de carro de Estremoz. Conhecida como uma das cidades brancas da região do Alentejo, com as suas casas brancas espalhadas pela colina fortificada, e apenas a 1,5 horas de carro do aeroporto de Lisboa e 30 minutes de Espanha! Disponível para arr",
+    "id": "33011745",
+    "tags": [
+      "De luxo"
+    ],
+    "agenciaNome": "CadenzaLux",
+    "agenciaLink": "https://www.idealista.pt/pro/cadenzalux/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T5",
+    "areaBrutaM2": 957,
+    "pisoResumo": null
+  }
+]

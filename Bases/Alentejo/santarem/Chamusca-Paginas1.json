@@ -1,0 +1,45 @@
+[
+  {
+    "Titulo": "Herdade, Herdade de Martingil, 2140, Chouto, Chamusca",
+    "Link": "https://www.idealista.pt/imovel/34273270/",
+    "Preco": "2.100€/mês",
+    "detalhe do item": "T3 | 279 m² área bruta",
+    "Descricao do item": "Uma casa com áreas grandes e cheia de luz, com vista para o campo e piscina. A casa está disponível a partir de 1 de Outubro até 31 de Maio. Tem um grande hall, sala com salamandra e sala de jantar. A casa possui 3 quartos separados, 1 deles é suite, tem 3 casas de banho no total. A cozinha está totalmente equipada, po",
+    "id": "34273270",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 279,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Quinta na Rua Doutor João J. Isidro dos Reis, 7, Chamusca",
+    "Link": "https://www.idealista.pt/imovel/33258968/",
+    "Preco": "1.100€/mês",
+    "detalhe do item": "T2 | 80 m² área bruta",
+    "Descricao do item": "Casa rústica tipicamente ribatejana composta por sala, com 20 m2, com cozinha equipada e salamandra; uma suite (com casa de banho) e um quarto com casa de banho independente. O valor inclui despesas de electricidade e TV/Internet.",
+    "id": "33258968",
+    "tags": [
+      "Arrendamento temporário",
+      "Quinta"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 80,
+    "pisoResumo": null
+  }
+]

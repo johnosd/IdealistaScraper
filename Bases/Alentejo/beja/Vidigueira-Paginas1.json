@@ -1,0 +1,23 @@
+[
+  {
+    "Titulo": "Apartamento T2 na Rua de Santa Luzia, 15, Pedrógão, Vidigueira",
+    "Link": "https://www.idealista.pt/imovel/33879678/",
+    "Preco": "800€/mês",
+    "detalhe do item": "T2 | 100 m² área bruta | 1º andar sem elevador | 03 ago",
+    "Descricao do item": "Apartamento ideal para empresas com trabalho temporário na Região. O apartamento tem 4 camas individuais. Ar condicionado e todo equipado e com painel solar. O apartamento está disponível a partir de outubro de 25. Dispõe de net com fibra As despesas de net e luz são pagas á parte. Está incluída roupa de cama e Limpeza",
+    "id": "33879678",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 100,
+    "pisoResumo": "1º andar sem elevador"
+  }
+]

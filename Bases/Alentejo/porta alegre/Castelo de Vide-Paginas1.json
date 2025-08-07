@@ -1,0 +1,40 @@
+[
+  {
+    "Titulo": "Apartamento T2 na Rua das Espinhosas, Santa Maria da Devesa, Castelo de Vide",
+    "Link": "https://www.idealista.pt/imovel/34281234/",
+    "Preco": "550€/mês",
+    "detalhe do item": "T2 | 60 m² área bruta | 1º andar sem elevador",
+    "Descricao do item": "Aluga-se apartamento Totalmente remodelado em Castelo de Vide, próximo da Fonte da Vila. O apartamento tem 2 Quartos, WC e uma sala com cozinha americana. O apartamento foi remodelado de forma a proporcionar uma ótima qualidade de vida, foram usados bons isolamentos térmicos para garantir que no inverno não é muito fr",
+    "id": "34281234",
+    "tags": [],
+    "agenciaNome": "Genestate",
+    "agenciaLink": "https://www.idealista.pt/pro/genestate/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 60,
+    "pisoResumo": "1º andar sem elevador"
+  },
+  {
+    "Titulo": "Moradia geminada na Rua do Mercado, 3, Santa Maria da Devesa, Castelo de Vide",
+    "Link": "https://www.idealista.pt/imovel/34314309/",
+    "Preco": "700€/mês",
+    "detalhe do item": "T1 | 60 m² área bruta",
+    "Descricao do item": "Casa em espaço aberto no centro histórico de Castelo de Vide. Tem 2 pisos de cerca de 23 metros quadrados cada, mais um mezanino e uma cave: - Casa de banho, WC e cama de casal estão no rés-do-chão, onde fica a entrada. A cama de casal tem um colchão novo e firme. - A cozinha tem máquina de lavar roupa, forno elétrico,",
+    "id": "34314309",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 60,
+    "pisoResumo": null
+  }
+]

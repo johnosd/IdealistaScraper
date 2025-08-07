@@ -1,0 +1,40 @@
+[
+  {
+    "Titulo": "Moradia em banda na Rua das Eiras, 12, Panoias e Conceição, Ourique",
+    "Link": "https://www.idealista.pt/imovel/34389824/",
+    "Preco": "750€/mês",
+    "detalhe do item": "T2 | 140 m² área bruta",
+    "Descricao do item": "Moradia em Panóias, toda reconstruida, com 2 quartos com roupeiros grandes, WC completo, cozinha com forno e placa, bancada em granito, alumínio com vidros duplos, lareira em granito com recuperador de calor, pátio com WC e garagem.",
+    "id": "34389824",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 140,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Monte alentejano, Lugar Ourique, s/n, Ourique",
+    "Link": "https://www.idealista.pt/imovel/32563488/",
+    "Preco": "350€/mês",
+    "detalhe do item": "T2 | 90 m² área bruta",
+    "Descricao do item": "alugo casa rústica em bom estado com terreno perto de Santana da serra, estrada com terra batida, só para quem tem transporte próprio pois não tem transporte público na zona.",
+    "id": "32563488",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 90,
+    "pisoResumo": null
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "Titulo": "Apartamento T2 na Rua 31 de Janeiro, 5 a, Aljustrel e Rio de Moinhos, Aljustrel",
+    "Link": "https://www.idealista.pt/imovel/34377453/",
+    "Preco": "1.100€/mês",
+    "detalhe do item": "T2 | 120 m² área bruta | Rés do chão sem elevador",
+    "Descricao do item": "Casa de R/c bastante espaçosa e toda equipada e mobiliada, junto aos bombeiros de Aljustrel. Tem um lougradouro e uma zona exterior junto à cozinha com acesso direto à rua. Tem 2 portas de entrada/ acesso à rua. Dispõe de garagem. Despesas pagas à parte. Disponível a partir de Setembro.",
+    "id": "34377453",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 120,
+    "pisoResumo": "Rés do chão sem elevador"
+  },
+  {
+    "Titulo": "Apartamento T1 na Rua dos Algares de Baixo, 524, Aljustrel e Rio de Moinhos, Aljustrel",
+    "Link": "https://www.idealista.pt/imovel/34397675/",
+    "Preco": "850€/mês",
+    "detalhe do item": "T1 | 50 m² área bruta | Rés do chão sem elevador | 31 jul",
+    "Descricao do item": null,
+    "id": "34397675",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 50,
+    "pisoResumo": "Rés do chão sem elevador"
+  },
+  {
+    "Titulo": "Casa de aldeia no Bairro Val doca, 898, Aljustrel e Rio de Moinhos, Aljustrel",
+    "Link": "https://www.idealista.pt/imovel/33436628/",
+    "Preco": "950€/mês",
+    "detalhe do item": "T1 | 50 m² área bruta",
+    "Descricao do item": "Aluga-se casa em Aljustrel, casa equipada com Lareira (Pellets), totalmente mobilada. TV LCD 55’’ Serviço de Lavandaria Facilidade Estacionamento Capacidade máxima 2 pessoas. Limpeza semanal Contrato exclusivamente com empresas.",
+    "id": "33436628",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 50,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia em banda na Rua Luis de Camões, 92, Aljustrel e Rio de Moinhos, Aljustrel",
+    "Link": "https://www.idealista.pt/imovel/32851782/",
+    "Preco": "1.400€/mês",
+    "detalhe do item": "T4 | 100 m² área bruta",
+    "Descricao do item": null,
+    "id": "32851782",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T4",
+    "areaBrutaM2": 100,
+    "pisoResumo": null
+  }
+]

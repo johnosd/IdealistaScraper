@@ -1,0 +1,61 @@
+[
+  {
+    "Titulo": "Apartamento T5, Quinta de Santo António, 24 LoteN, Marinhais, Salvaterra de Magos",
+    "Link": "https://www.idealista.pt/imovel/34409048/",
+    "Preco": "1.500€/mês",
+    "detalhe do item": "T5 | 180 m² área bruta | 1º andar sem elevador | 05 ago",
+    "Descricao do item": "Apartamento t5 para arrendamento.",
+    "id": "34409048",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T5",
+    "areaBrutaM2": 180,
+    "pisoResumo": "1º andar sem elevador"
+  },
+  {
+    "Titulo": "Moradia independente na Rua da Moagem, 125, Salvaterra de Magos e Foros de Salvaterra, Salvaterra de Magos",
+    "Link": "https://www.idealista.pt/imovel/33098211/",
+    "Preco": "2.200€/mês",
+    "detalhe do item": "T3 | 170 m² área bruta",
+    "Descricao do item": "Uma quinta com cerca de 3000m2, com uma vivenda de 120m2, uma piscina e um anexo exterior de 50m2. Quinta totalmente privada e exclusiva (não haverão outros hóspedes na propriedade). A vivenda dispõe de uma sala grande, cozinha e 3 quartos. Além disso, existe um salão exterior para almoços, assim como um barbecue par",
+    "id": "33098211",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 170,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia geminada, Est. Nacional 114-3, 2120-194, 1277, Salvaterra de Magos e Foros de Salvaterra, Salvaterra de Magos",
+    "Link": "https://www.idealista.pt/imovel/34217617/",
+    "Preco": "600€/mês",
+    "detalhe do item": "T1 | 40 m² área bruta",
+    "Descricao do item": "Moradia Geminada T1 nos Foros de Salvaterra de Magos. Moradia Geminada T1, composta por 1 cozinha, 1 quarto, 1 sala, 1 Wc e 1 Pátio Exterior, disponível no início Junho (data a confirmar por se encontrar em obras). Paragem de autocarro em frente à moradia com acesso direto a Lisboa. Arrendamento sem contrato. Períod",
+    "id": "34217617",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T1",
+    "areaBrutaM2": 40,
+    "pisoResumo": null
+  }
+]

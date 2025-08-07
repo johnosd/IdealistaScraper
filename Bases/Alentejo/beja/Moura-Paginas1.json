@@ -1,0 +1,61 @@
+[
+  {
+    "Titulo": "Casa de aldeia na Rua da Parreira, 23, Safara e Santo Aleixo da Restauração, Moura",
+    "Link": "https://www.idealista.pt/imovel/33631447/",
+    "Preco": "450€/mês",
+    "detalhe do item": "T3 | 686 m² área bruta",
+    "Descricao do item": "esta casa esta situada em safara a 23 km de moura e a 22 km de espanha oferecendo por isso varias vantagens geograficas. fica 30 km do alqueva oferecendo paissagens deslumbrantes e muita agua e praias fluviais. a casa em si foi toda pintada e arrumada tendo um grande quintal para criacao de animais ou para agricultura",
+    "id": "33631447",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 686,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia independente, Segunda Rua de Mouraria, 32, Moura e Santo Amador, Moura",
+    "Link": "https://www.idealista.pt/imovel/32082720/",
+    "Preco": "600€/mês",
+    "detalhe do item": "T4 | 80 m² área bruta",
+    "Descricao do item": "Uma casa na zona nobre da cidade de Moura, está mais vocacionada pra empresas. Está livre e dezembro.",
+    "id": "32082720",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T4",
+    "areaBrutaM2": 80,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia independente na Estrada da Barca, s/n, Moura e Santo Amador, Moura",
+    "Link": "https://www.idealista.pt/imovel/30783361/",
+    "Preco": "600€/mês",
+    "detalhe do item": "T3 | 120 m² área bruta",
+    "Descricao do item": "É uma habitação em painéis isolantes de sanduíche com 3 quartos, cozinha e casa de banho, a 1 km de Moura com terreno é ótima vista, este tipo de habitação está vocacionada para pessoal de trabalho.",
+    "id": "30783361",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 120,
+    "pisoResumo": null
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Titulo": "Herdade, Monte do Viçoso, s/n, Matriz (Borba), Borba",
+    "Link": "https://www.idealista.pt/imovel/34070452/",
+    "Preco": "1.500€/mês",
+    "detalhe do item": "T4 | 200 m² área bruta",
+    "Descricao do item": "***Possibilidade de arrendamento por períodos inferiores a um mês*** Monte tipicamente alentejano, a cerca de 1 km da cidade de Borba. Dispõe de piscina e zonas verdes, rodeadas pelas vinhas vizinhas que transmitem um ambiente calmo e repousante. A casa dispões de quatro quartos e quatro casas de banho, sendo que nos",
+    "id": "34070452",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T4",
+    "areaBrutaM2": 200,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia geminada na Rua Fernando Namora, 1, Matriz (Borba), Borba",
+    "Link": "https://www.idealista.pt/imovel/32555401/",
+    "Preco": "1.050€/mês",
+    "detalhe do item": "T3 | 220 m² área bruta",
+    "Descricao do item": null,
+    "id": "32555401",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T3",
+    "areaBrutaM2": 220,
+    "pisoResumo": null
+  }
+]

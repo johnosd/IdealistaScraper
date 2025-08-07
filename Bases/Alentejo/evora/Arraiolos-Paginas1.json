@@ -1,0 +1,62 @@
+[
+  {
+    "Titulo": "Quinta na Travessa Bento Gonçalves, Arraiolos",
+    "Link": "https://www.idealista.pt/imovel/34245224/",
+    "Preco": "4.900€/mês",
+    "detalhe do item": "T7 | 12.750 m² área bruta",
+    "Descricao do item": "Arrendamento Quinta Típica Alentejana com Licença de Turismo Rural, Arraiolos, a 20 minutos de Évora. Descubra esta propriedade única no coração do Alentejo, com cerca de 12.000 m² de terreno, ideal para quem procura tranquilidade, contacto com a natureza e um espaço com história e carácter. A apenas 100 km de Lisboa",
+    "id": "34245224",
+    "tags": [
+      "De luxo",
+      "Quinta"
+    ],
+    "agenciaNome": "Century 21 Colombo",
+    "agenciaLink": "https://www.idealista.pt/pro/century-21-colombo/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T7",
+    "areaBrutaM2": 12750,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia independente na Estrada Sem Nome, Igrejinha, Arraiolos",
+    "Link": "https://www.idealista.pt/imovel/34342917/",
+    "Preco": "2.000€/mês",
+    "detalhe do item": "T7 | 232 m² área bruta",
+    "Descricao do item": "ARRENDA-SE! ESTE ARRENDAMENTO SÓ É POSSIVEL EM CONJUNTO COM O ID Casa dos Parentes na Igrejinha - Évora Tradição, História e Encanto no Coração do Alentejo Apresentamos esta propriedade única, localizada na pacata aldeia de Igrejinha, no concelho de Arraiolos. Este prédio em propriedade total, com 2 pisos e 5 divisõe",
+    "id": "34342917",
+    "tags": [],
+    "agenciaNome": "RE/MAX Vantagem Central",
+    "agenciaLink": "https://www.idealista.pt/pro/remax-vantagem-central/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T7",
+    "areaBrutaM2": 232,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia independente na Estrada Sem Nome, Igrejinha, Arraiolos",
+    "Link": "https://www.idealista.pt/imovel/34342958/",
+    "Preco": "2.000€/mês",
+    "detalhe do item": "T4 | 232 m² área bruta",
+    "Descricao do item": "ARRENDA-SE! ESTE ARRENDAMENTO SÓ É POSSIVEL EM CONJUNTO COM O ID Casa dos Parentes na Igrejinha - Évora Tradição, História e Encanto no Coração do Alentejo Apresentamos esta propriedade única, localizada na pacata aldeia de Igrejinha, no concelho de Arraiolos. Este prédio em propriedade total, com 2 pisos e 5 divis",
+    "id": "34342958",
+    "tags": [],
+    "agenciaNome": "RE/MAX Vantagem Central",
+    "agenciaLink": "https://www.idealista.pt/pro/remax-vantagem-central/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T4",
+    "areaBrutaM2": 232,
+    "pisoResumo": null
+  }
+]

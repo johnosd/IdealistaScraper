@@ -1,0 +1,61 @@
+[
+  {
+    "Titulo": "Moradia independente em Ferreira do Zêzere",
+    "Link": "https://www.idealista.pt/imovel/32888230/",
+    "Preco": "1.900€/mês",
+    "detalhe do item": "T5 | 250 m² área bruta",
+    "Descricao do item": "Após 3 meses a renda é de 2.500 € Possibilidade de arrendamento com carro e barco - 3.500 € Moradia T5 totalmente mobilada em Ferreira do Zêzere. Cais na agua à porta de casa Bicicletas Reboque de carga Nascente de água que atravessa o terreno Lago com cascata Contrato mínimo de 1 ano e 3 meses caução Cozinha totalme",
+    "id": "32888230",
+    "tags": [],
+    "agenciaNome": "Imobiliária Carmo",
+    "agenciaLink": "https://www.idealista.pt/pro/imobiliaria-carmo/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T5",
+    "areaBrutaM2": 250,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia independente na Rua Brigadeiro Lino Valente, 96, Ferreira do Zêzere",
+    "Link": "https://www.idealista.pt/imovel/32678694/",
+    "Preco": "900€/mês",
+    "detalhe do item": "T5 | 160 m² área bruta",
+    "Descricao do item": "Imóvel térreo 160 m2 5 quartos 2 wc 1 cozinha totalmente equipada (electrodomésticos novos marca teka) 1 sala estar Termoacumulador Estores térmicos Janelas com vidro duplo. Intermarche a 200 metros Bombas combustível a 200 metros Farmacia a 170 metros Centro da vila a 1 km Central camionagem a 1,5 km A 20 min de",
+    "id": "32678694",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T5",
+    "areaBrutaM2": 160,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Andar de moradia na Rua Rainha Santa Isabel, 43, Dornes, Ferreira do Zêzere",
+    "Link": "https://www.idealista.pt/imovel/34031957/",
+    "Preco": "670€/mês",
+    "detalhe do item": "T2 | 70 m² área bruta",
+    "Descricao do item": "Moradia com quartos vista rio e com casas de banho privativas (tipo suite), e outra casa de banho social.",
+    "id": "34031957",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": null,
+    "tipologia": "T2",
+    "areaBrutaM2": 70,
+    "pisoResumo": null
+  }
+]
