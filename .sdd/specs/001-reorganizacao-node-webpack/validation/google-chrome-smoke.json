@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-13",
+  "buildMode": "production",
+  "browserProduct": "Chrome/157.0.8103.78",
+  "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+  "engine": "Installed Google Chrome",
+  "mode": "headless temporary isolated persistent profile",
+  "loading": "CDP Extensions.loadUnpacked via debugging pipe",
+  "extensionId": "ibjmbjcbdihajmdmibakeienopnagjpl",
+  "manifestVersion": 3,
+  "workers": [
+    "chrome-extension://ibjmbjcbdihajmdmibakeienopnagjpl/dist/background.bundle.js"
+  ],
+  "tabs": [
+    {
+      "label": "Links",
+      "visible": true
+    },
+    {
+      "label": "Itens",
+      "visible": true
+    },
+    {
+      "label": "Lote",
+      "visible": true
+    },
+    {
+      "label": "Proxy",
+      "visible": true
+    }
+  ],
+  "contentScriptOnLocalFixture": {
+    "ok": true,
+    "items": 0
+  },
+  "proxyEnabled": false,
+  "storageKeys": [],
+  "pageErrors": [],
+  "externalRequestsFulfilledLocally": [
+    "fonts.googleapis.com",
+    "cdn.jsdelivr.net",
+    "www.idealista.pt"
+  ],
+  "realSiteRequests": 0,
+  "collectionOrProxyActivated": false,
+  "screenshot": "popup-google-chrome.png",
+  "profile": "C:\\Users\\johns\\AppData\\Local\\Temp\\idealista-google-chrome-2k2OuV"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "idealista-extrator",
+  "version": "1.5.0",
+  "private": true,
+  "description": "Extensão Chrome MV3 para extrair links e anúncios do Idealista.pt.",
+  "engines": {
+    "node": ">=22.16.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "build:prod": "webpack --mode production",
+    "dev": "webpack --watch",
+    "test": "npm run build && node --test",
+    "test:e2e:install": "playwright install chromium",
+    "test:e2e": "npm run build && node tests/e2e/localidades.smoke.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.0",
+    "webpack": "5.112.2",
+    "webpack-cli": "7.3.1"
+  }
+}

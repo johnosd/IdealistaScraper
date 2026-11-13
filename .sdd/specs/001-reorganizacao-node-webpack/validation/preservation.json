@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-13",
+  "legacyFiles": [
+    {
+      "path": "IdealistaScraper.py",
+      "status": "absent at final check; external deletion preserved"
+    },
+    {
+      "path": "TrataArquivos.ipynb",
+      "status": "absent at final check; external deletion preserved"
+    },
+    {
+      "path": "Idealista_extensao.zip",
+      "status": "absent at final check; external deletion preserved"
+    },
+    {
+      "path": "listaArrendar.json",
+      "status": "absent at final check; external deletion preserved"
+    }
+  ],
+  "sevenSourceEntries": "identical except intended bundle paths",
+  "BasesAndDataGitStatusUnchanged": true,
+  "backlogPendingItems": 8,
+  "externalLegacyChangesPreserved": true
+}

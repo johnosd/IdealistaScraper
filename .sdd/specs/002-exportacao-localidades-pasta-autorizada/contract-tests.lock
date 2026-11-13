@@ -1,0 +1,17 @@
+{
+  "feature": "002-exportacao-localidades-pasta-autorizada",
+  "lockedAt": "2026-11-13 18:26",
+  "total": 5,
+  "files": [
+    {
+      "path": "tests/contracts/002-exportacao-localidades-pasta-autorizada.test.cjs",
+      "sha256": "c6ea1414e953b5f848e202676079db1bfc3388375cba4aa2eb5979190957f0eb",
+      "tests": 5
+    },
+    {
+      "path": "tests/fixtures/localidades-filesystem.cjs",
+      "sha256": "d8e1bce237f482f92ea00241097f5321d73c8c2aa14812c327dff110994b0010",
+      "tests": 0
+    }
+  ]
+}

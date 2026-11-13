@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exportar localidades — Idealista</title>
+  <style>
+    body { font: 16px/1.6 system-ui, sans-serif; color: #202830; background: #f4f6f8; margin: 0; }
+    main { max-width: 760px; margin: 48px auto; padding: 32px; background: white; border-radius: 12px; }
+    h1 { line-height: 1.2; } button { padding: 10px 16px; font: inherit; cursor: pointer; margin: 4px; }
+    button:disabled { cursor: default; opacity: .55; } #destination { overflow-wrap: anywhere; }
+    #status { padding: 16px; background: #edf2f5; border-radius: 6px; white-space: pre-wrap; }
+    :focus-visible { outline: 3px solid #1768ac; outline-offset: 3px; }
+  </style>
+</head>
+<body><main>
+  <h1>Exportar localidades</h1>
+  <p>Selecione a pasta <strong>.data/localidades</strong> do projeto. O Chrome informa
+    o nome da pasta, sem validar seu caminho absoluto.</p>
+  <p id="destination">Destino: carregando…</p>
+  <div>
+    <button id="choose" disabled>Escolher / trocar pasta</button>
+    <button id="reauthorize" disabled>Reautorizar pasta</button>
+  </div>
+  <div>
+    <button id="extract-save" disabled>Extrair e salvar</button>
+    <button id="save" disabled>Salvar JSON coletado</button>
+  </div>
+  <p id="status" role="status" aria-live="polite" aria-atomic="true">Carregando destino…</p>
+  <p>O arquivo existente será substituído somente após confirmação. Mantenha esta
+    página aberta até concluir; você pode mudar de aba. Nenhum download de reserva será feito.</p>
+</main><script src="dist/localidades.bundle.js"></script></body>
+</html>
