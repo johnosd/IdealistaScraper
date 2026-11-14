@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Extração em lote — Idealista</title>
+  <style>
+    body{font:16px system-ui,sans-serif;background:#f4f6f9;color:#172238;margin:0;padding:28px}
+    main{max-width:900px;margin:auto;background:white;border:1px solid #d8dfe9;border-radius:12px;padding:26px}
+    h1{margin-top:0} p{line-height:1.5} textarea{box-sizing:border-box;width:100%;font:14px monospace;padding:12px;border:1px solid #adb9c9;border-radius:6px}
+    button{font:inherit;border:1px solid #adb9c9;border-radius:6px;background:#edf2fa;padding:9px 15px;cursor:pointer}
+    button:disabled{opacity:.5;cursor:default}button:focus-visible,textarea:focus-visible{outline:3px solid #2563eb;outline-offset:2px}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}.primary{background:#2563eb;color:white;border-color:#2563eb}
+    #loteLog{padding:12px;background:#edf2fa;white-space:pre-wrap;overflow-wrap:anywhere}
+    #loteLog[data-state="error"],#loteLog[data-state="permission-required"]{background:#fff0de}
+    #loteStatusList{padding:0;list-style:none}#loteStatusList li{padding:8px;border-bottom:1px solid #d8dfe9;overflow-wrap:anywhere}
+    .hint{color:#52637b;font-size:14px}#destination{overflow-wrap:anywhere}
+  </style>
+</head>
+<body><main>
+  <h1>Extração em lote</h1>
+  <p>Salve os JSONs na pasta <strong>.data/municipios</strong>, organizada pelo mês de início do lote.
+  Arquivos com o mesmo nome serão substituídos sem confirmação.</p>
+  <div class="actions">
+    <button id="loteClaim">Ativar esta tela</button>
+    <button id="choose">Escolher ou trocar pasta</button>
+    <button id="reauthorize">Autorizar novamente</button>
+  </div>
+  <p id="destination">Nenhuma pasta selecionada.</p>
+  <label for="loteUrls">Lista de localidades (JSON ou uma URL por linha)</label>
+  <textarea id="loteUrls" rows="9" spellcheck="false" placeholder='[{"Texto":"Alvor","URL":"https://www.idealista.pt/arrendar-casas/portimao/alvor/"}]'></textarea>
+  <div class="actions"><button id="loteAutoLoad">Carregar lista da página de origem</button><button id="loteClear">Limpar lista</button></div>
+  <label><input type="checkbox" id="loteProxy"> Usar configuração de proxy já salva</label>
+  <div class="actions">
+    <button id="loteStart" class="primary">Iniciar lote</button><button id="lotePause">Pausar após este item</button>
+    <button id="loteSave">Tentar salvar novamente</button>
+    <button id="loteStopExport" disabled title="Exportação parcial indisponível nesta versão">Parar e exportar (indisponível)</button>
+  </div>
+  <p class="hint">Mantenha esta página aberta. Pode trocar de aba; fechar esta página perde resultados ainda não salvos.
+  Pausar aguarda a conclusão do item atual. Uma falha interrompe o avanço e mantém o item na fila.</p>
+  <p id="loteLog" role="status" aria-live="polite" data-state="loading">Carregando…</p>
+  <ul id="loteStatusList" aria-label="Status dos itens"></ul>
+</main><script src="dist/lote.bundle.js"></script></body>
+</html>

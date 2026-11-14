@@ -1,0 +1,1228 @@
+- generic [ref=f52e1]:
+  - link "Saltar para o conteúdo principal" [ref=f52e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f52e4]:
+    - generic [ref=f52e5]:
+      - generic [ref=f52e6]:
+        - link [ref=f52e7] [cursor=pointer]:
+          - /url: https://www.idealista.pt/
+          - img "Idealista logo" [ref=f52e9]
+        - generic [ref=f52e11]:
+          - button "Proprietários" [ref=f52e14] [cursor=pointer]
+          - button "Procuras casa" [ref=f52e18] [cursor=pointer]
+          - button "Crédito habitação" [ref=f52e22] [cursor=pointer]
+      - generic [ref=f52e24]:
+        - link "Publica o teu anúncio" [ref=f52e25] [cursor=pointer]:
+          - /url: https://www.idealista.pt/info/novo-anuncio
+        - combobox "Português" [ref=f52e28] [cursor=pointer]
+        - link "Aceder" [ref=f52e32] [cursor=pointer]:
+          - /url: https://www.idealista.pt/login
+  - generic [ref=f52e38]:
+    - navigation "Navegação por localização" [ref=f52e40]:
+      - list [ref=f52e41]:
+        - listitem [ref=f52e42]:
+          - link "idealista" [ref=f52e43] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f52e44]:
+          - text: 
+          - link "Faro distrito" [ref=f52e45] [cursor=pointer]:
+            - /url: /arrendar-casas/faro-distrito/
+          - generic [ref=f52e46]: "2.387"
+        - listitem [ref=f52e47]:
+          - text: 
+          - link "Portimão" [ref=f52e48] [cursor=pointer]:
+            - /url: /arrendar-casas/portimao/
+          - generic [ref=f52e49]: "354"
+        - listitem [ref=f52e50]:
+          - text: 
+          - button "Alvor " [ref=f52e51] [cursor=pointer]
+          - text: 
+          - generic [ref=f52e52]: "50"
+    - region [ref=f52e54]:
+      - heading "50 casas e apartamentos para arrendar em Alvor, Faro" [level=1] [ref=f52e55]
+      - button " Modificar zonas" [ref=f52e57] [cursor=pointer]:
+        - text: 
+        - generic [ref=f52e58]: Modificar zonas
+    - generic [ref=f52e61]:
+      - tablist:
+        - tab [ref=f52e62]:
+          - link "Comprar" [ref=f52e63] [cursor=pointer]:
+            - /url: /comprar-casas/portimao/alvor/
+        - tab "Arrendar" [selected] [ref=f52e64]
+        - tab [ref=f52e66]:
+          - link "Para férias" [ref=f52e67] [cursor=pointer]:
+            - /url: /arrendar-para_ferias/portimao/alvor/
+    - generic:   
+    - complementary [ref=f52e68]:
+      - generic [ref=f52e71]:
+        - heading "Novos anúncios no teu email" [level=2] [ref=f52e72]
+        - button "Guardar pesquisa" [ref=f52e73] [cursor=pointer]
+      - generic [ref=f52e77]:
+        - generic [ref=f52e78]:
+          - img "Mapa" [ref=f52e79]
+          - link "車 Ver no mapa" [ref=f52e80] [cursor=pointer]:
+            - /url: /arrendar-casas/portimao/alvor/mapa-google
+        - generic [ref=f52e81]:
+          - generic [ref=f52e82]:
+            - heading "Tipo de imóvel" [level=3] [ref=f52e83]
+            - button "Casas e apartamentos" [ref=f52e84] [cursor=pointer]:
+              - option [ref=f52e86]: Nova construção
+              - option [ref=f52e87]: Casas e apartamentos
+              - option [ref=f52e88]: Quartos
+              - option [ref=f52e89]: Para férias
+              - option [ref=f52e90]: Escritórios
+              - option [ref=f52e91]: Espaços comerciais ou armazéns
+              - option [ref=f52e92]: Trespasses
+              - option [ref=f52e93]: Garagens
+              - option [ref=f52e94]: Terrenos
+              - option [ref=f52e95]: Arrecadações
+              - option [ref=f52e96]: Prédios
+          - generic [ref=f52e97]:
+            - heading "Preço" [level=3] [ref=f52e98]
+            - button "Min" [ref=f52e101] [cursor=pointer]:
+              - option [ref=f52e103]: Min
+              - option [ref=f52e104]: "500"
+              - option [ref=f52e105]: "550"
+              - option [ref=f52e106]: "600"
+              - option [ref=f52e107]: "650"
+              - option [ref=f52e108]: "700"
+              - option [ref=f52e109]: "750"
+              - option [ref=f52e110]: "800"
+              - option [ref=f52e111]: "850"
+              - option [ref=f52e112]: "900"
+              - option [ref=f52e113]: "950"
+              - option [ref=f52e114]: "1.000"
+              - option [ref=f52e115]: "1.100"
+              - option [ref=f52e116]: "1.200"
+              - option [ref=f52e117]: "1.300"
+              - option [ref=f52e118]: "1.400"
+              - option [ref=f52e119]: "1.500"
+              - option [ref=f52e120]: "1.600"
+              - option [ref=f52e121]: "1.700"
+              - option [ref=f52e122]: "1.800"
+              - option [ref=f52e123]: "1.900"
+              - option [ref=f52e124]: "2.000"
+              - option [ref=f52e125]: "2.100"
+              - option [ref=f52e126]: "2.400"
+              - option [ref=f52e127]: "2.700"
+              - option [ref=f52e128]: "3.000"
+              - option [ref=f52e129]: "4.000"
+              - option [ref=f52e130]: Sem limite
+            - button "Max" [ref=f52e133] [cursor=pointer]:
+              - option [ref=f52e135]: Max
+              - option [ref=f52e136]: "500"
+              - option [ref=f52e137]: "550"
+              - option [ref=f52e138]: "600"
+              - option [ref=f52e139]: "650"
+              - option [ref=f52e140]: "700"
+              - option [ref=f52e141]: "750"
+              - option [ref=f52e142]: "800"
+              - option [ref=f52e143]: "850"
+              - option [ref=f52e144]: "900"
+              - option [ref=f52e145]: "950"
+              - option [ref=f52e146]: "1.000"
+              - option [ref=f52e147]: "1.100"
+              - option [ref=f52e148]: "1.200"
+              - option [ref=f52e149]: "1.300"
+              - option [ref=f52e150]: "1.400"
+              - option [ref=f52e151]: "1.500"
+              - option [ref=f52e152]: "1.600"
+              - option [ref=f52e153]: "1.700"
+              - option [ref=f52e154]: "1.800"
+              - option [ref=f52e155]: "1.900"
+              - option [ref=f52e156]: "2.000"
+              - option [ref=f52e157]: "2.100"
+              - option [ref=f52e158]: "2.400"
+              - option [ref=f52e159]: "2.700"
+              - option [ref=f52e160]: "3.000"
+              - option [ref=f52e161]: "4.000"
+              - option [ref=f52e162]: Sem limite
+          - generic [ref=f52e163]:
+            - heading "Tipo de arrendamento" [level=3] [ref=f52e164]
+            - list [ref=f52e165]:
+              - listitem [ref=f52e166]:
+                - generic [ref=f52e167]:
+                  - checkbox "Arrendamento de longa duração" [ref=f52e168]
+                  - link [aria-hidden] [ref=f52e171] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-arrendamento-longa-duracao/
+                    - text: Arrendamento de longa duração
+              - listitem [ref=f52e172]:
+                - generic [ref=f52e173]:
+                  - checkbox "Arrendamento temporário" [ref=f52e174]
+                  - link [aria-hidden] [ref=f52e177] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-arrendamento-temporario/
+                    - text: Arrendamento temporário
+          - generic [ref=f52e178]:
+            - heading "Tamanho" [level=3] [ref=f52e179]
+            - button "Min" [ref=f52e182] [cursor=pointer]:
+              - option [ref=f52e184]: Min
+              - option [ref=f52e185]: 40 m²
+              - option [ref=f52e186]: 60 m²
+              - option [ref=f52e187]: 80 m²
+              - option [ref=f52e188]: 100 m²
+              - option [ref=f52e189]: 120 m²
+              - option [ref=f52e190]: 140 m²
+              - option [ref=f52e191]: 160 m²
+              - option [ref=f52e192]: 180 m²
+              - option [ref=f52e193]: 200 m²
+              - option [ref=f52e194]: 300 m²
+              - option [ref=f52e195]: 400 m²
+              - option [ref=f52e196]: Sem limite
+            - button "Max" [ref=f52e199] [cursor=pointer]:
+              - option [ref=f52e201]: Max
+              - option [ref=f52e202]: 40 m²
+              - option [ref=f52e203]: 60 m²
+              - option [ref=f52e204]: 80 m²
+              - option [ref=f52e205]: 100 m²
+              - option [ref=f52e206]: 120 m²
+              - option [ref=f52e207]: 140 m²
+              - option [ref=f52e208]: 160 m²
+              - option [ref=f52e209]: 180 m²
+              - option [ref=f52e210]: 200 m²
+              - option [ref=f52e211]: 300 m²
+              - option [ref=f52e212]: 400 m²
+              - option [ref=f52e213]: Sem limite
+          - generic [ref=f52e214]:
+            - heading "Tipo de casa" [level=3] [ref=f52e215]
+            - list [ref=f52e216]:
+              - listitem [ref=f52e217]:
+                - tree [ref=f52e218]:
+                  - generic [ref=f52e219]:
+                    - generic [ref=f52e220]:
+                      - checkbox "Apartamentos, penthouses e duplex" [ref=f52e221]
+                      - generic [ref=f52e223] [cursor=pointer]:
+                        - link [aria-hidden]:
+                          - /url: /arrendar-casas/portimao/alvor/com-apartamentos/
+                          - text: Apartamentos, penthouses e duplex
+                    - button " Ver outros filtros" [ref=f52e224] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f52e225]: Ver outros filtros
+              - listitem [ref=f52e226]:
+                - tree [ref=f52e227]:
+                  - generic [ref=f52e228]:
+                    - generic [ref=f52e229]:
+                      - checkbox "Casas e moradias" [ref=f52e230]
+                      - generic [ref=f52e232] [cursor=pointer]:
+                        - link [aria-hidden]:
+                          - /url: /arrendar-casas/portimao/alvor/com-moradias/
+                          - text: Casas e moradias
+                    - button " Ver outros filtros" [ref=f52e233] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f52e234]: Ver outros filtros
+          - generic [ref=f52e235]:
+            - heading "Equipamento" [level=3] [ref=f52e236]
+            - list [ref=f52e237]:
+              - listitem [ref=f52e238]:
+                - button "Indiferente" [ref=f52e240] [cursor=pointer]:
+                  - option [ref=f52e242]: Indiferente
+                  - option [ref=f52e243]: Só cozinha equipada
+                  - option [ref=f52e244]: Mobilado
+          - generic [ref=f52e245]:
+            - heading "Quartos" [level=3] [ref=f52e246]
+            - list [ref=f52e247]:
+              - listitem [ref=f52e248]:
+                - generic [ref=f52e249]:
+                  - checkbox "T0" [ref=f52e250]
+                  - link [aria-hidden] [ref=f52e253] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-t0/
+                    - text: T0
+              - listitem [ref=f52e254]:
+                - generic [ref=f52e255]:
+                  - checkbox "T1" [ref=f52e256]
+                  - link [aria-hidden] [ref=f52e259] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-t1/
+                    - text: T1
+              - listitem [ref=f52e260]:
+                - generic [ref=f52e261]:
+                  - checkbox "T2" [ref=f52e262]
+                  - link [aria-hidden] [ref=f52e265] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-t2/
+                    - text: T2
+              - listitem [ref=f52e266]:
+                - generic [ref=f52e267]:
+                  - checkbox "T3" [ref=f52e268]
+                  - link [aria-hidden] [ref=f52e271] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-t3/
+                    - text: T3
+              - listitem [ref=f52e272]:
+                - generic [ref=f52e273]:
+                  - checkbox "T4 ou +" [ref=f52e274]
+                  - link [aria-hidden] [ref=f52e277] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-t4-t5/
+                    - text: T4 ou +
+          - generic [ref=f52e278]:
+            - heading "Casas de banho" [level=3] [ref=f52e279]
+            - list [ref=f52e280]:
+              - listitem [ref=f52e281]:
+                - generic [ref=f52e282]:
+                  - checkbox "1" [ref=f52e283]
+                  - link [aria-hidden] [ref=f52e286] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-banho-1/
+                    - text: "1"
+              - listitem [ref=f52e287]:
+                - generic [ref=f52e288]:
+                  - checkbox "2" [ref=f52e289]
+                  - link [aria-hidden] [ref=f52e292] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-banho-2/
+                    - text: "2"
+              - listitem [ref=f52e293]:
+                - generic [ref=f52e294]:
+                  - checkbox "3 casas de banho ou mais" [ref=f52e295]
+                  - link [aria-hidden] [ref=f52e298] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-banho-3/
+                    - text: 3 casas de banho ou mais
+          - generic [ref=f52e299]:
+            - heading "Estado" [level=3] [ref=f52e300]
+            - list [ref=f52e301]:
+              - listitem [ref=f52e302]:
+                - generic [ref=f52e303]:
+                  - checkbox "Nova construção" [ref=f52e304]
+                  - generic [ref=f52e305] [cursor=pointer]: Nova construção
+              - listitem [ref=f52e307]:
+                - generic [ref=f52e308]:
+                  - checkbox "Bom estado" [ref=f52e309]
+                  - link [aria-hidden] [ref=f52e312] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-bom-estado/
+                    - text: Bom estado
+              - listitem [ref=f52e313]:
+                - generic [ref=f52e314]:
+                  - checkbox "Para recuperar" [ref=f52e315]
+                  - generic [ref=f52e316] [cursor=pointer]: Para recuperar
+          - generic [ref=f52e318]:
+            - heading "Mais filtros" [level=3] [ref=f52e319]
+            - list [ref=f52e320]:
+              - listitem [ref=f52e321]:
+                - generic [ref=f52e322]:
+                  - checkbox "Ar condicionado" [ref=f52e323]
+                  - link [aria-hidden] [ref=f52e326] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-arcondicionado/
+                    - text: Ar condicionado
+              - listitem [ref=f52e327]:
+                - generic [ref=f52e328]:
+                  - checkbox "Armários embutidos" [ref=f52e329]
+                  - link [aria-hidden] [ref=f52e332] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-roupeiros-embutidos/
+                    - text: Armários embutidos
+              - listitem [ref=f52e333]:
+                - generic [ref=f52e334]:
+                  - checkbox "Elevador" [ref=f52e335]
+                  - link [aria-hidden] [ref=f52e338] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-elevador/
+                    - text: Elevador
+              - listitem [ref=f52e339]:
+                - tree [ref=f52e340]:
+                  - generic [ref=f52e341]:
+                    - generic [ref=f52e342]:
+                      - checkbox "Varanda e terraço" [ref=f52e343]
+                      - generic [ref=f52e345] [cursor=pointer]:
+                        - link [aria-hidden]:
+                          - /url: /arrendar-casas/portimao/alvor/com-terraco-e-varanda/
+                          - text: Varanda e terraço
+                    - button " Ver outros filtros" [ref=f52e346] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f52e347]: Ver outros filtros
+              - listitem [ref=f52e348]:
+                - generic [ref=f52e349]:
+                  - checkbox "Lugar de garagem" [ref=f52e350]
+                  - link [aria-hidden] [ref=f52e353] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-garagem/
+                    - text: Lugar de garagem
+              - listitem [ref=f52e354]:
+                - generic [ref=f52e355]:
+                  - checkbox "Jardim" [ref=f52e356]
+                  - link [aria-hidden] [ref=f52e359] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-jardim/
+                    - text: Jardim
+              - listitem [ref=f52e360]:
+                - generic [ref=f52e361]:
+                  - checkbox "Piscina" [ref=f52e362]
+                  - link [aria-hidden] [ref=f52e365] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-piscina/
+                    - text: Piscina
+              - listitem [ref=f52e366]:
+                - generic [ref=f52e367]:
+                  - checkbox "Arrecadação" [ref=f52e368]
+                  - link [aria-hidden] [ref=f52e371] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-arrecadacao/
+                    - text: Arrecadação
+              - listitem [ref=f52e372]:
+                - generic [ref=f52e373]:
+                  - checkbox "Casa adaptada" [ref=f52e374]
+                  - link [aria-hidden] [ref=f52e377] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-adaptados/
+                    - text: Casa adaptada
+              - listitem [ref=f52e378]:
+                - generic [ref=f52e379]:
+                  - checkbox "Vista mar" [ref=f52e380]
+                  - link [aria-hidden] [ref=f52e383] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-vista-mar/
+                    - text: Vista mar
+          - generic [ref=f52e384]:
+            - heading "Andar" [level=3] [ref=f52e385]
+            - list [ref=f52e386]:
+              - listitem [ref=f52e387]:
+                - generic [ref=f52e388]:
+                  - checkbox "Último andar" [ref=f52e389]
+                  - link [aria-hidden] [ref=f52e392] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-ultimo-andar/
+                    - text: Último andar
+              - listitem [ref=f52e393]:
+                - generic [ref=f52e394]:
+                  - checkbox "Andares intermédios" [ref=f52e395]
+                  - link [aria-hidden] [ref=f52e398] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-andares-intermedios/
+                    - text: Andares intermédios
+              - listitem [ref=f52e399]:
+                - generic [ref=f52e400]:
+                  - checkbox "Rés do chão" [ref=f52e401]
+                  - link [aria-hidden] [ref=f52e404] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-res-do-chao/
+                    - text: Rés do chão
+          - generic [ref=f52e405]:
+            - heading [level=3] [ref=f52e406]:
+              - text: Eficiência energética
+              - button "Mais informação sobre certificado energético" [ref=f52e407] [cursor=pointer]: 亂 
+            - list [ref=f52e408]:
+              - listitem [ref=f52e409]:
+                - generic [ref=f52e410]:
+                  - checkbox "Alta" [ref=f52e411]
+                  - link [aria-hidden] [ref=f52e414] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-eficiencia-energetica-alta/
+                    - text: Alta
+              - listitem [ref=f52e415]:
+                - generic [ref=f52e416]:
+                  - checkbox "Média" [ref=f52e417]
+                  - link [aria-hidden] [ref=f52e420] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-eficiencia-energetica-media/
+                    - text: Média
+              - listitem [ref=f52e421]:
+                - generic [ref=f52e422]:
+                  - checkbox "Baixa" [ref=f52e423]
+                  - link [aria-hidden] [ref=f52e426] [cursor=pointer]:
+                    - /url: /arrendar-casas/portimao/alvor/com-eficiencia-energetica-baixa/
+                    - text: Baixa
+          - generic [ref=f52e427]:
+            - heading "Multimédia" [level=3] [ref=f52e428]
+            - list [ref=f52e429]:
+              - listitem [ref=f52e430]:
+                - generic [ref=f52e431]:
+                  - checkbox "Com planta" [ref=f52e432]
+                  - generic [ref=f52e433] [cursor=pointer]: Com planta
+              - listitem [ref=f52e435]:
+                - generic [ref=f52e436]:
+                  - checkbox "Com visita virtual" [ref=f52e437]
+                  - generic [ref=f52e438] [cursor=pointer]: Com visita virtual
+          - generic [ref=f52e440]:
+            - heading "Tipo de anunciante" [level=3] [ref=f52e441]
+            - list [ref=f52e442]:
+              - listitem [ref=f52e443]:
+                - generic [ref=f52e444]:
+                  - checkbox "De bancos" [ref=f52e445]
+                  - generic [ref=f52e446] [cursor=pointer]: De bancos
+          - group "Publicado no idealista" [ref=f52e448]:
+            - list [ref=f52e450]:
+              - listitem [ref=f52e451]:
+                - generic [ref=f52e452]:
+                  - radio "Indiferente" [checked] [ref=f52e453]
+                  - generic [ref=f52e454] [cursor=pointer]: Indiferente
+              - listitem [ref=f52e456]:
+                - generic [ref=f52e457]:
+                  - radio "Nas últimas 24 horas" [ref=f52e458]
+                  - generic [ref=f52e459] [cursor=pointer]: Nas últimas 24 horas
+              - listitem [ref=f52e461]:
+                - generic [ref=f52e462]:
+                  - radio "Na última semana" [ref=f52e463]
+                  - generic [ref=f52e464] [cursor=pointer]: Na última semana
+              - listitem [ref=f52e466]:
+                - generic [ref=f52e467]:
+                  - radio "No último mês" [ref=f52e468]
+                  - generic [ref=f52e469] [cursor=pointer]: No último mês
+        - text: 
+    - group [ref=f52e471]:
+      - generic [ref=f52e472]: "Ordenar:"
+      - list [ref=f52e473]:
+        - listitem [ref=f52e474]:
+          - generic [ref=f52e475] [cursor=pointer]: Por relevância
+        - listitem [ref=f52e476]:
+          - link "Baratos" [ref=f52e477] [cursor=pointer]:
+            - /url: /arrendar-casas/portimao/alvor/?ordem=precos-asc
+        - listitem [ref=f52e478]:
+          - link "Mais recentes" [ref=f52e479] [cursor=pointer]:
+            - /url: /arrendar-casas/portimao/alvor/?ordem=atualizado-desc
+        - listitem [ref=f52e480]:
+          - generic [ref=f52e481] [cursor=pointer]: Mais
+    - main [ref=f52e483]:
+      - generic [ref=f52e484]:
+        - article [ref=f52e485]:
+          - generic [ref=f52e486]:
+            - generic [ref=f52e488]:
+              - button "Abrir mapa" [ref=f52e490] [cursor=pointer]: 
+              - generic [ref=f52e491]:
+                - generic [ref=f52e492]: 1/
+                - generic [ref=f52e493]: "5"
+            - region [ref=f52e496]:
+              - generic [ref=f52e497]:
+                - button "Previous Slide" [ref=f52e498] [cursor=pointer]: 
+                - button "Next Slide" [ref=f52e499] [cursor=pointer]: 
+                - list [ref=f52e500]:
+                  - listitem [ref=f52e501]:
+                    - img "Piscina" [ref=f52e502]:
+                      - figure [ref=f52e503]:
+                        - img "Piscina" [ref=f52e505]
+                    - img "Sala de estar" [ref=f52e506]:
+                      - figure [ref=f52e507]:
+                        - img "Sala de estar" [ref=f52e509]
+                    - img "Mapa da zona" [ref=f52e510]:
+                      - img "Mapa de localização do imóvel" [ref=f52e514]
+            - text: 
+          - generic [ref=f52e515]:
+            - heading "Apartamento T0 em Amoreira Mar, 32, Marachique - Amoreira - Delgadas, Alvor" [level=2] [ref=f52e516] [cursor=pointer]
+            - generic [ref=f52e517]: 700€/mês
+            - generic [ref=f52e519]: T0 43 m² área bruta 3º andar com elevador 10 nov
+            - paragraph [ref=f52e521]: Luminoso estúdio mobilado e totalmente equipado, ideal para uma ou duas pessoas. Dispõe de uma agradável varanda privativa com vista para o mar. O espaço conta com uma prática kitchenette (equipada com frigorífico, micro-ondas e máquina de lavar roupa) e casa de banho completa. Inserido num edifício tranquilo que ofere
+            - generic [ref=f52e522]: Vista mar
+            - generic [ref=f52e524]:
+              - button "Contactar" [ref=f52e525] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e526] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e527]: Ver telefone
+              - button "" [ref=f52e528] [cursor=pointer]
+              - button "" [ref=f52e529] [cursor=pointer]
+        - article [ref=f52e530]:
+          - generic [ref=f52e531]:
+            - generic [ref=f52e533]:
+              - button "Abrir mapa" [ref=f52e535] [cursor=pointer]: 
+              - generic [ref=f52e536]:
+                - generic [ref=f52e537]: 1/
+                - generic [ref=f52e538]: "12"
+            - region [ref=f52e541]:
+              - generic [ref=f52e542]:
+                - button "Previous Slide" [ref=f52e543] [cursor=pointer]: 
+                - button "Next Slide" [ref=f52e544] [cursor=pointer]: 
+                - list [ref=f52e545]:
+                  - listitem [ref=f52e546]:
+                    - img "Fachada" [ref=f52e547]:
+                      - figure [ref=f52e548]:
+                        - img "Fachada" [ref=f52e550]
+                    - img "Sala de estar" [ref=f52e551]:
+                      - figure [ref=f52e552]:
+                        - img "Sala de estar" [ref=f52e554]
+                    - img "Mapa da zona" [ref=f52e555]:
+                      - generic [ref=f52e557]:
+                        - generic [ref=f52e558]:
+                          - generic [ref=f52e559]: 亂
+                          - generic [ref=f52e560]: Localização aproximada.
+                        - img "Mapa de localização do imóvel" [ref=f52e562]
+            - text: 
+          - generic [ref=f52e563]:
+            - heading "Casa ou moradia no Centro, Alvor" [level=2] [ref=f52e564] [cursor=pointer]
+            - generic [ref=f52e565]: 2.500€/mês
+            - generic [ref=f52e567]: T2 100 m² área bruta lote de 450 m²
+            - paragraph [ref=f52e569]: "ARRENDAMENTO ANUAL Oportunidade Única: Casa Térrea T2 em Quinta com Piscina Apresentamos esta excelente moradia de tipologia T2, situada numa pequena quinta com 2 casas, ideal para quem procura qualidade de vida, segurança e proximidade com a natureza. A propriedade destaca-se pela excelente exposição solar e acabament"
+            - generic [ref=f52e570]: Moradia térrea
+            - generic [ref=f52e572]:
+              - button "Contactar" [ref=f52e573] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e574] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e575]: Ver telefone
+              - button "" [ref=f52e576] [cursor=pointer]
+              - button "" [ref=f52e577] [cursor=pointer]
+        - article [ref=f52e578]:
+          - generic [ref=f52e579]:
+            - generic [ref=f52e581]:
+              - button "Abrir mapa" [ref=f52e583] [cursor=pointer]: 
+              - generic [ref=f52e584]:
+                - generic [ref=f52e585]: 1/
+                - generic [ref=f52e586]: "37"
+            - region [ref=f52e589]:
+              - generic [ref=f52e590]:
+                - button "Previous Slide" [ref=f52e591] [cursor=pointer]: 
+                - button "Next Slide" [ref=f52e592] [cursor=pointer]: 
+                - list [ref=f52e593]:
+                  - listitem [ref=f52e594]:
+                    - img "Piscina" [ref=f52e595]:
+                      - figure [ref=f52e596]:
+                        - img "Piscina" [ref=f52e598]
+                    - img "Fachada" [ref=f52e599]:
+                      - figure [ref=f52e600]:
+                        - img "Fachada" [ref=f52e602]
+                    - img "Mapa da zona" [ref=f52e603]:
+                      - img "Mapa de localização do imóvel" [ref=f52e607]
+            - text: 
+          - generic [ref=f52e608]:
+            - heading "Moradia em banda na Rua Praia dos Três Irmãos, 31 n, Torralta - Prainha, Alvor" [level=2] [ref=f52e609] [cursor=pointer]
+            - generic [ref=f52e610]: 1.800€/mês
+            - generic [ref=f52e612]: T2 100 m² área bruta
+            - paragraph [ref=f52e614]: Esta confortável casa localiza-se no Aldeamento da Prainha, um condomínio privado numa das zonas mais bonitas do Algarve, a apenas 200 metros da praia. Dispõe de 3 piscinas, campos de ténis, padel e ginásio, ideais para relaxar ou praticar desporto. A 10 minutos de Portimão, combina tranquilidade com proximidade a serv
+            - generic [ref=f52e615]: Arrendamento temporário
+            - generic [ref=f52e617]:
+              - button "Contactar" [ref=f52e618] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e619] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e620]: Ver telefone
+              - button "" [ref=f52e621] [cursor=pointer]
+              - button "" [ref=f52e622] [cursor=pointer]
+        - article "Espaço publicitário"
+        - article [ref=f52e623]:
+          - generic [ref=f52e624]:
+            - generic [ref=f52e626]:
+              - button "Abrir mapa" [ref=f52e628] [cursor=pointer]: 
+              - generic [ref=f52e629]:
+                - generic [ref=f52e630]: 1/
+                - generic [ref=f52e631]: "36"
+            - region [ref=f52e634]:
+              - generic [ref=f52e635]:
+                - button "Previous Slide" [ref=f52e636] [cursor=pointer]: 
+                - button "Next Slide" [ref=f52e637] [cursor=pointer]: 
+                - list [ref=f52e638]:
+                  - listitem [ref=f52e639]:
+                    - img "Fachada" [ref=f52e640]:
+                      - figure [ref=f52e641]:
+                        - img "Fachada" [ref=f52e643]
+                    - img "Alpendre" [ref=f52e644]:
+                      - figure [ref=f52e645]:
+                        - img "Alpendre" [ref=f52e647]
+                    - img "Mapa da zona" [ref=f52e648]:
+                      - img "Mapa de localização do imóvel" [ref=f52e652]
+            - text: 
+          - generic [ref=f52e653]:
+            - heading "Moradia geminada na Avenida da Europa, 186, Alagoas - Pedregais, Alvor" [level=2] [ref=f52e654] [cursor=pointer]
+            - generic [ref=f52e655]: 2.500€/mês
+            - generic [ref=f52e657]: T3 208 m² área bruta
+            - paragraph [ref=f52e659]: Vivenda completamente renovada, enquadrada no prestigiado aldeamento da Bemposta, e equipado com lareira, ar condicionado (em todos os quartos), bomba de calor com painel solar, vidros duplos de alta qualidade, cozinha nova a estrear, integrada com lareira nova na sala de estar e possibilidade de garagem (com cerca de
+            - generic [ref=f52e660]:
+              - button "Contactar" [ref=f52e661] [cursor=pointer]
+              - button "" [ref=f52e662] [cursor=pointer]
+              - button "" [ref=f52e663] [cursor=pointer]
+        - article [ref=f52e664]:
+          - generic [ref=f52e665]:
+            - generic [ref=f52e667]:
+              - button "Abrir mapa" [ref=f52e669] [cursor=pointer]: 
+              - generic [ref=f52e670]:
+                - generic [ref=f52e671]: 1/
+                - generic [ref=f52e672]: "20"
+            - generic [ref=f52e678] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e680]
+            - text: 
+          - generic [ref=f52e682]:
+            - heading "Penthouse em Urbanização Marachique, 13 lote h 3º andar porta h Alvor, Marachique - Amoreira - Delgadas, Alvor" [level=2] [ref=f52e683] [cursor=pointer]
+            - generic [ref=f52e684]: 2.000€/mês
+            - generic [ref=f52e686]: T3 280 m² área bruta 3º andar com elevador
+            - paragraph [ref=f52e688]: 3. ª andar, amplo e confortável, com vista mar, situado a 400 metros da praia. O apartamento dispõe de 3 grandes quartos (6 camas), 2 WC, uma sala muito espaçosa, com lareira e amplas janelas. Cozinha totalmente equipada. Dispõe de Wi-fi e ar condicionado. O terraço virado para o mar convida a relaxar, a tomar uma bebi
+            - generic [ref=f52e689]:
+              - generic [ref=f52e690]: Arrendamento temporário
+              - generic [ref=f52e691]: Vista mar
+            - generic [ref=f52e692]:
+              - button "Contactar" [ref=f52e693] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e694] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e695]: Ver telefone
+              - button "" [ref=f52e696] [cursor=pointer]
+              - button "" [ref=f52e697] [cursor=pointer]
+        - article [ref=f52e698]:
+          - generic [ref=f52e699]:
+            - generic [ref=f52e701]:
+              - button "Abrir mapa" [ref=f52e703] [cursor=pointer]: 
+              - generic [ref=f52e704]:
+                - generic [ref=f52e705]: 1/
+                - generic [ref=f52e706]: "18"
+            - generic [ref=f52e712] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e714]
+            - text: 
+          - generic [ref=f52e716]:
+            - heading "Apartamento T0 na Rua do Barinel I, Torralta - Prainha, Alvor" [level=2] [ref=f52e717] [cursor=pointer]
+            - generic [ref=f52e718]: 900€/mês
+            - generic [ref=f52e720]: T0 55 m² área bruta 6º andar com elevador
+            - paragraph [ref=f52e722]: Apartamento T0, a 100 metros da praia de Alvor. Sala/quarto com duas camas individuais e sofá-cama. Ar condicionado e televisão com Wi-Fi. Cozinha equipada. Aluguer temporário semanal ou quinzenal, do mês de março ao mês de outubro, com valores sob consulta.
+            - generic [ref=f52e723]: Arrendamento temporário
+            - generic [ref=f52e725]:
+              - button "Contactar" [ref=f52e726] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e727] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e728]: Ver telefone
+              - button "" [ref=f52e729] [cursor=pointer]
+              - button "" [ref=f52e730] [cursor=pointer]
+        - article [ref=f52e731]:
+          - generic [ref=f52e732]:
+            - generic [ref=f52e734]:
+              - button "Abrir mapa" [ref=f52e736] [cursor=pointer]: 
+              - generic [ref=f52e737]:
+                - generic [ref=f52e738]: 1/
+                - generic [ref=f52e739]: "32"
+            - generic [ref=f52e745] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e747]
+            - text: 
+          - generic [ref=f52e749]:
+            - heading "Apartamento T2 na Rua Manuel Soares de Campos, 13, Marachique - Amoreira - Delgadas, Alvor" [level=2] [ref=f52e750] [cursor=pointer]
+            - generic [ref=f52e751]: 1.200€/mês
+            - generic [ref=f52e753]: T2 120 m² área bruta 1º andar com elevador
+            - paragraph [ref=f52e755]: Parqueamento gratuito na zona. Eletricidade, internet och vatten por conta do inquilino! Se o inquilino pagar 1200! 1400 com tudo incluído! Alugo apenas 01/10/2027até 30/05/2027.
+            - generic [ref=f52e756]: Arrendamento temporário
+            - generic [ref=f52e758]:
+              - button "Contactar" [ref=f52e759] [cursor=pointer]
+              - button "" [ref=f52e760] [cursor=pointer]
+              - button "" [ref=f52e761] [cursor=pointer]
+        - article [ref=f52e762]:
+          - generic [ref=f52e763]:
+            - generic [ref=f52e765]:
+              - button "Abrir mapa" [ref=f52e767] [cursor=pointer]: 
+              - generic [ref=f52e768]:
+                - generic [ref=f52e769]: 1/
+                - generic [ref=f52e770]: "21"
+            - generic [ref=f52e776] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e778]
+            - text: 
+          - generic [ref=f52e780]:
+            - heading "Apartamento T2 no Beco da Amoreira, 8, Marachique - Amoreira - Delgadas, Alvor" [level=2] [ref=f52e781] [cursor=pointer]
+            - generic [ref=f52e782]: 900€/mês
+            - generic [ref=f52e784]: Garagem incluída T2 85 m² área bruta Rés do chão sem elevador
+            - paragraph [ref=f52e786]: "Datas disponíveis: - 05 de Junho de 2027 a 11 de Setembro de 2027 Renovado apartamento no Condomínio DELFIMAR ALVOR, arrendado mobilado e equipado, ideal para casal sem filhos, ou com dois filhos até 14 anos. Com lugar de garagem, acesso a piscina e zonas verdes."
+            - generic [ref=f52e787]: Arrendamento temporário
+            - generic [ref=f52e789]:
+              - button "Contactar" [ref=f52e790] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e791] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e792]: Ver telefone
+              - button "" [ref=f52e793] [cursor=pointer]
+              - button "" [ref=f52e794] [cursor=pointer]
+        - article [ref=f52e795]:
+          - generic [ref=f52e796]:
+            - generic [ref=f52e798]:
+              - button "Abrir mapa" [ref=f52e800] [cursor=pointer]: 
+              - generic [ref=f52e801]:
+                - generic [ref=f52e802]: 1/
+                - generic [ref=f52e803]: "8"
+            - generic [ref=f52e809] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e811]
+            - text: 
+          - generic [ref=f52e813]:
+            - heading "Apartamento T1 na Rua de Marachique, 5, Marachique - Amoreira - Delgadas, Alvor" [level=2] [ref=f52e814] [cursor=pointer]
+            - generic [ref=f52e815]: 900€/mês
+            - generic [ref=f52e817]: Garagem incluída T1 60 m² área bruta 2º andar com elevador
+            - paragraph [ref=f52e819]: ARRENDAMENTO DE INVERNO – T0+1 NA VILA MARACHIQUE, ALVOR Disponível para arrendamento de inverno de 1 de outubro de 2026 a 31 de maio de 2027. Apartamento T0+1 confortável e totalmente equipado, situado na Vila Marachique, em Alvor, ideal para um casal que procura desfrutar do Algarve durante os meses de inverno. O
+            - generic [ref=f52e820]: Arrendamento temporário
+            - generic [ref=f52e822]:
+              - button "Contactar" [ref=f52e823] [cursor=pointer]
+              - button "" [ref=f52e824] [cursor=pointer]
+              - button "" [ref=f52e825] [cursor=pointer]
+        - article [ref=f52e826]:
+          - generic [ref=f52e827]:
+            - generic [ref=f52e829]:
+              - button "Abrir mapa" [ref=f52e831] [cursor=pointer]: 
+              - generic [ref=f52e832]:
+                - generic [ref=f52e833]: 1/
+                - generic [ref=f52e834]: "25"
+            - generic [ref=f52e840] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e842]
+            - text: 
+          - generic [ref=f52e844]:
+            - heading "Apartamento T3 na Rua Poeta António Aleixo, 9, Centro, Alvor" [level=2] [ref=f52e845] [cursor=pointer]
+            - generic [ref=f52e846]: 1.350€/mês
+            - generic [ref=f52e848]: T3 150 m² área bruta 1º andar sem elevador
+            - generic [ref=f52e850]: Arrendamento temporário
+            - generic [ref=f52e852]:
+              - button "Contactar" [ref=f52e853] [cursor=pointer]
+              - button "" [ref=f52e854] [cursor=pointer]
+              - button "" [ref=f52e855] [cursor=pointer]
+        - article [ref=f52e856]:
+          - generic [ref=f52e857]:
+            - generic [ref=f52e859]:
+              - button "Abrir mapa" [ref=f52e861] [cursor=pointer]: 
+              - generic [ref=f52e862]:
+                - generic [ref=f52e863]: 1/
+                - generic [ref=f52e864]: "24"
+            - generic [ref=f52e870] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e872]
+            - text: 
+          - generic [ref=f52e874]:
+            - heading "Apartamento T1 na Rua Manuel Soares de Campos, 3 nr, Marachique - Amoreira - Delgadas, Alvor" [level=2] [ref=f52e875] [cursor=pointer]
+            - generic [ref=f52e876]: 950€/mês
+            - generic [ref=f52e878]: T1 50 m² área bruta 1º andar sem elevador
+            - generic [ref=f52e880]:
+              - button "Contactar" [ref=f52e881] [cursor=pointer]
+              - button "" [ref=f52e882] [cursor=pointer]
+              - button "" [ref=f52e883] [cursor=pointer]
+        - article [ref=f52e884]:
+          - generic [ref=f52e885]:
+            - generic [ref=f52e887]:
+              - button "Abrir mapa" [ref=f52e889] [cursor=pointer]: 
+              - generic [ref=f52e890]:
+                - generic [ref=f52e891]: 1/
+                - generic [ref=f52e892]: "16"
+            - generic [ref=f52e898] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e900]
+            - text: 
+          - generic [ref=f52e902]:
+            - link [ref=f52e904] [cursor=pointer]:
+              - /url: /pro/habita-international-algarve/
+              - img "Habita Algarve" [ref=f52e905]
+            - heading "Apartamento T1 em Ladeira de Nora - Vale da Zorra, Alvor" [level=2] [ref=f52e906] [cursor=pointer]
+            - generic [ref=f52e907]: 850€/mês
+            - generic [ref=f52e909]: T1 62 m² área bruta sem elevador
+            - paragraph [ref=f52e911]: Arrendamento anual de apartamento de tipologia T1, mobilado e localizado no rés do chão de um edifício de 2 andares a 2 km da vila de Alvor e de suas praias. Máxima ocupação de 2 pessoas. Despesas de electricidade, água, tv/internet não incluídas. Animais de estimação não aceites.
+            - generic [ref=f52e912]:
+              - button "Contactar" [ref=f52e913] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e914] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e915]: Ver telefone
+              - button "" [ref=f52e916] [cursor=pointer]
+              - button "" [ref=f52e917] [cursor=pointer]
+        - article [ref=f52e918]:
+          - generic [ref=f52e919]:
+            - generic [ref=f52e921]:
+              - button "Abrir mapa" [ref=f52e923] [cursor=pointer]: 
+              - generic [ref=f52e924]:
+                - generic [ref=f52e925]: 1/
+                - generic [ref=f52e926]: "12"
+            - generic [ref=f52e932] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e934]
+            - text: 
+          - generic [ref=f52e936]:
+            - heading "Apartamento T2 na Praceta Amoreira Mar, 32, Marachique - Amoreira - Delgadas, Alvor" [level=2] [ref=f52e937] [cursor=pointer]
+            - generic [ref=f52e938]:
+              - generic [ref=f52e939]: 750€/mês
+              - generic [ref=f52e940]: 800 € 6%
+            - generic [ref=f52e941]: Garagem incluída T2 98 m² área bruta 4º andar com elevador
+            - paragraph [ref=f52e943]: "T2, Temporário, disponível a partir 1 de Novembro de 2026 Arrendamento mensal em Regime de Alojamento Local. Máximo ate 28 de maio 2027. Alugo a profissionais deslocados, temporário. Máximo 2 pessoas adultos, sem animais e crianças. Despesas (eletricidade e água) a cargo do inclino. Condições: 1 renda + caução. Docume"
+            - generic [ref=f52e944]: Arrendamento temporário
+            - generic [ref=f52e946]:
+              - button "Contactar" [ref=f52e947] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e948] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e949]: Ver telefone
+              - button "" [ref=f52e950] [cursor=pointer]
+              - button "" [ref=f52e951] [cursor=pointer]
+        - article [ref=f52e952]:
+          - generic [ref=f52e953]:
+            - generic [ref=f52e955]:
+              - button "Abrir mapa" [ref=f52e957] [cursor=pointer]: 
+              - generic [ref=f52e958]:
+                - generic [ref=f52e959]: 1/
+                - generic [ref=f52e960]: "10"
+            - generic [ref=f52e966] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e968]
+            - text: 
+          - generic [ref=f52e970]:
+            - heading "Moradia independente na Rua Das Sesmarias s/n, Sesmarias - Telheiro - Penina, Alvor" [level=2] [ref=f52e971] [cursor=pointer]
+            - generic [ref=f52e972]: 1.600€/mês
+            - generic [ref=f52e974]: Garagem incluída T3 120 m² área bruta lote de 480 m²
+            - paragraph [ref=f52e976]: "**Disponíveis de Outubro 2026 ao mês de Junho 2027** Possibilidade de aluguer ao ano a combinar. Duas Moradias remodeladas com excelente localização em área calma com supermercados, cafés, comércio. 1. Moradia com 2 quartos, 2 casa de banhos -€1600 2. Moradia com 3 quartos, 2 casa de banhos -€1700 Area exterior com jar"
+            - generic [ref=f52e977]:
+              - button "Contactar" [ref=f52e978] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e979] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e980]: Ver telefone
+              - button "" [ref=f52e981] [cursor=pointer]
+              - button "" [ref=f52e982] [cursor=pointer]
+        - article [ref=f52e983]:
+          - generic [ref=f52e984]:
+            - generic [ref=f52e986]:
+              - button "Abrir mapa" [ref=f52e988] [cursor=pointer]: 
+              - generic [ref=f52e989]:
+                - generic [ref=f52e990]: 1/
+                - generic [ref=f52e991]: "10"
+            - generic [ref=f52e997] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e999]
+            - text: 
+          - generic [ref=f52e1001]:
+            - heading "Apartamento T2 no Rossio de São Pedro, 3, Centro, Alvor" [level=2] [ref=f52e1002] [cursor=pointer]
+            - generic [ref=f52e1003]: 1.100€/mês
+            - generic [ref=f52e1005]: Garagem incluída T2 57 m² área bruta 2º andar com elevador
+            - generic [ref=f52e1007]: Arrendamento temporário
+            - generic [ref=f52e1009]:
+              - button "Contactar" [ref=f52e1010] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e1011] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e1012]: Ver telefone
+              - button "" [ref=f52e1013] [cursor=pointer]
+              - button "" [ref=f52e1014] [cursor=pointer]
+        - article [ref=f52e1015]:
+          - generic [ref=f52e1016]:
+            - generic [ref=f52e1018]:
+              - button "Abrir mapa" [ref=f52e1020] [cursor=pointer]: 
+              - generic [ref=f52e1021]:
+                - generic [ref=f52e1022]: 1/
+                - generic [ref=f52e1023]: "12"
+            - generic [ref=f52e1029] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e1031]
+            - text: 
+          - generic [ref=f52e1033]:
+            - heading "Apartamento T1 na Estrada Adega Torralta s/n, Centro, Alvor" [level=2] [ref=f52e1034] [cursor=pointer]
+            - generic [ref=f52e1035]: 950€/mês
+            - generic [ref=f52e1037]: Garagem incluída T1 69 m² área bruta 1º andar sem elevador
+            - generic [ref=f52e1039]:
+              - button "Contactar" [ref=f52e1040] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e1041] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e1042]: Ver telefone
+              - button "" [ref=f52e1043] [cursor=pointer]
+              - button "" [ref=f52e1044] [cursor=pointer]
+        - article [ref=f52e1045]:
+          - generic [ref=f52e1046]:
+            - generic [ref=f52e1048]:
+              - button "Abrir mapa" [ref=f52e1050] [cursor=pointer]: 
+              - generic [ref=f52e1051]:
+                - generic [ref=f52e1052]: 1/
+                - generic [ref=f52e1053]: "12"
+            - generic [ref=f52e1059] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e1061]
+            - text: 
+          - generic [ref=f52e1063]:
+            - heading "Apartamento T1 na Rua do Lazareto s/n, Centro, Alvor" [level=2] [ref=f52e1064] [cursor=pointer]
+            - generic [ref=f52e1065]: 1.500€/mês
+            - generic [ref=f52e1067]: T1 65 m² área bruta Rés do chão com elevador
+            - paragraph [ref=f52e1069]: O apartamento está disponível para arrendamento de longa e média duração a partir de Outubro de 2026. O apartamento está localizado no rés-do-chão. Edifício novo (construído em 2020) totalmente equipado. Piscina aberta todo o ano. O supermercado Pingo Doce fica a 80 metros. O aluguer não inclui água e electricidade. Es
+            - generic [ref=f52e1070]:
+              - button "Contactar" [ref=f52e1071] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e1072] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e1073]: Ver telefone
+              - button "" [ref=f52e1074] [cursor=pointer]
+              - button "" [ref=f52e1075] [cursor=pointer]
+        - article [ref=f52e1076]:
+          - generic [ref=f52e1077]:
+            - generic [ref=f52e1079]:
+              - button "Abrir mapa" [ref=f52e1081] [cursor=pointer]: 
+              - generic [ref=f52e1082]:
+                - generic [ref=f52e1083]: 1/
+                - generic [ref=f52e1084]: "9"
+            - generic [ref=f52e1090] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e1092]
+            - text: 
+          - generic [ref=f52e1094]:
+            - heading "Andar de moradia na Rua Capitão Barroso, 31, Montes de Alvor, Alvor" [level=2] [ref=f52e1095] [cursor=pointer]
+            - generic [ref=f52e1096]: 650€/mês
+            - generic [ref=f52e1098]: Garagem incluída T1 30 m² área bruta
+            - paragraph [ref=f52e1100]: pode ser alugado por um ano e mais. Nos meses, junho, julho e agosto 900€ por mês, todos os outros meses 650€ mês Estúdio duplo com wc frigorífico e microondas privado no piso superior. No piso inferior da casa tem cozinha totalmente equipada, sala de estar, ginásio e lavandaria que é partilhado pelos estúdios, estac
+            - generic [ref=f52e1101]:
+              - button "Contactar" [ref=f52e1102] [cursor=pointer]
+              - button "" [ref=f52e1103] [cursor=pointer]
+              - button "" [ref=f52e1104] [cursor=pointer]
+        - article "Espaço publicitário"
+        - article [ref=f52e1105]:
+          - generic [ref=f52e1106]:
+            - generic [ref=f52e1108]:
+              - generic [ref=f52e1109]:
+                - button "Abrir vídeo" [ref=f52e1110] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f52e1111] [cursor=pointer]: 
+              - generic [ref=f52e1112]:
+                - generic [ref=f52e1113]: 1/
+                - generic [ref=f52e1114]: "6"
+            - generic [ref=f52e1120] [cursor=pointer]:
+              - text: 
+              - img "Primeira foto do imóvel" [ref=f52e1122]
+            - text:  
+          - generic [ref=f52e1124]:
+            - heading "Apartamento T2 na Rua Ferreira Castro, 2, Marachique - Amoreira - Delgadas, Alvor" [level=2] [ref=f52e1125] [cursor=pointer]
+            - generic [ref=f52e1126]: 900€/mês
+            - generic [ref=f52e1128]: T2 80 m² área bruta 1º andar sem elevador
+            - paragraph [ref=f52e1130]: Looking for short term to rent the apartment during the low season Great location and complete makeover. Ao enviar mensagem por favor indique o vencimento mensal líquido do agregado familiar e se estão efetivos Este seria um aluguer de 6 meses até final de Maio.
+            - generic [ref=f52e1131]: Arrendamento temporário
+            - generic [ref=f52e1133]:
+              - button "Contactar" [ref=f52e1134] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e1135] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e1136]: Ver telefone
+              - button "" [ref=f52e1137] [cursor=pointer]
+              - button "" [ref=f52e1138] [cursor=pointer]
+        - article [ref=f52e1139]:
+          - generic [ref=f52e1140]:
+            - generic [ref=f52e1142]:
+              - button "Abrir mapa" [ref=f52e1144] [cursor=pointer]: 
+              - generic [ref=f52e1145]:
+                - generic [ref=f52e1146]: 1/
+                - generic [ref=f52e1147]: "17"
+            - generic [ref=f52e1153] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f52e1155]
+            - text: 
+          - generic [ref=f52e1157]:
+            - heading "Apartamento T0 na Rua Manuel Soares de Campos s/n, Marachique - Amoreira - Delgadas, Alvor" [level=2] [ref=f52e1158] [cursor=pointer]
+            - generic [ref=f52e1159]: 990€/mês
+            - generic [ref=f52e1161]: T0 50 m² área bruta 1º andar sem elevador
+            - generic [ref=f52e1163]: Arrendamento temporário
+            - generic [ref=f52e1165]:
+              - button "Contactar" [ref=f52e1166] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f52e1167] [cursor=pointer]:
+                - text: 
+                - generic [ref=f52e1168]: Ver telefone
+              - button "" [ref=f52e1169] [cursor=pointer]
+              - button "" [ref=f52e1170] [cursor=pointer]
+        - generic [ref=f52e1171]:
+          - paragraph [ref=f52e1172]: Preço médio nesta zona 14,73 eur/m²
+          - link [ref=f52e1173] [cursor=pointer]:
+            - /url: /apoioutilizador/artigos/como-ordenamos-os-resultados/
+            - generic [ref=f52e1174]: Como ordenamos os resultados
+            - text: 
+        - list [ref=f52e1176]:
+          - listitem [ref=f52e1177]:
+            - link " Anterior" [ref=f52e1178] [cursor=pointer]:
+              - /url: /arrendar-casas/portimao/alvor/
+          - listitem [ref=f52e1179]:
+            - link "1" [ref=f52e1180] [cursor=pointer]:
+              - /url: /arrendar-casas/portimao/alvor/
+          - listitem [ref=f52e1181]:
+            - generic [ref=f52e1182]: "2"
+      - generic [ref=f52e1183]:
+        - generic [ref=f52e1184]: 
+        - heading "Queres procurar com a ajuda de um especialista?" [level=3] [ref=f52e1185]
+        - link "Imobiliárias em Alvor" [ref=f52e1186] [cursor=pointer]:
+          - /url: /agencias-imobiliarias/portimao/alvor/imobiliarias-arrendamento
+      - generic [ref=f52e1187]:
+        - heading "Também poderiam interessar-te em Alvor" [level=3] [ref=f52e1188]
+        - generic [ref=f52e1189]:
+          - group "Distritos" [ref=f52e1190]:
+            - checkbox [aria-hidden] [ref=f52e1192]
+            - heading "Distritos" [level=4] [ref=f52e1193]: Distritos  
+            - list [ref=f52e1194]:
+              - listitem [ref=f52e1195]:
+                - link "Marachique - Amoreira - Delgadas" [ref=f52e1196] [cursor=pointer]:
+                  - /url: /arrendar-casas/alvor/marachique-amoreira-delgadas/
+                - generic [ref=f52e1197]: "21"
+              - listitem [ref=f52e1198]:
+                - link "Centro" [ref=f52e1199] [cursor=pointer]:
+                  - /url: /arrendar-casas/alvor/centro/
+                - generic [ref=f52e1200]: "11"
+              - listitem [ref=f52e1201]:
+                - link "Torralta - Prainha" [ref=f52e1202] [cursor=pointer]:
+                  - /url: /arrendar-casas/alvor/torralta-prainha/
+                - generic [ref=f52e1203]: "5"
+            - text: 
+          - group "Praias" [ref=f52e1204]:
+            - checkbox [aria-hidden] [ref=f52e1206]
+            - heading "Praias" [level=4] [ref=f52e1207]: Praias  
+            - list [ref=f52e1208]:
+              - listitem [ref=f52e1209]:
+                - link "Praia do Alvor Poente" [ref=f52e1210] [cursor=pointer]:
+                  - /url: /geo/arrendar-casas/praia-do-alvor-poente/
+                - generic [ref=f52e1211]: "8"
+            - text: 
+          - group "Bairros residenciais" [ref=f52e1212]:
+            - checkbox [aria-hidden] [ref=f52e1214]
+            - heading "Bairros residenciais" [level=4] [ref=f52e1215]: Bairros residenciais  
+            - list [ref=f52e1216]:
+              - listitem [ref=f52e1217]:
+                - link "Urbanização Quinta Amoreira" [ref=f52e1218] [cursor=pointer]:
+                  - /url: /geo/arrendar-casas/urbanizacao-quinta-amoreira/
+                - generic [ref=f52e1219]: "5"
+            - text: 
+  - generic [ref=f52e1220]:
+    - heading "Serviços do idealista" [level=2] [ref=f52e1221]
+    - generic [ref=f52e1222]:
+      - navigation "Estás à procura de casa?" [ref=f52e1223]:
+        - heading "Estás à procura de casa?" [level=3] [ref=f52e1224]
+        - list [ref=f52e1225]:
+          - listitem [ref=f52e1226]:
+            - link "Motor de pesquisa principal" [ref=f52e1227] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f52e1228]:
+            - link "Pesquisa mais rapidamente com a nossa app" [ref=f52e1229] [cursor=pointer]:
+              - /url: /aplicacoes
+          - listitem [ref=f52e1230]:
+            - link "Apartamentos de bancos" [ref=f52e1231] [cursor=pointer]:
+              - /url: /imoveis-da-banca
+          - listitem [ref=f52e1232]:
+            - link "Casas à venda em Portugal" [ref=f52e1233] [cursor=pointer]:
+              - /url: /properties-for-sale-in-portugal
+          - listitem [ref=f52e1234]:
+            - link "Arrendamento de casas em Portugal" [ref=f52e1235] [cursor=pointer]:
+              - /url: /long-term-rentals-in-portugal
+          - listitem [ref=f52e1236]:
+            - link "Casas e apartamentos em arrendamento" [ref=f52e1237] [cursor=pointer]:
+              - /url: /apartamentos-para-arrendar
+          - listitem [ref=f52e1238]:
+            - link "Apartamentos partilhados" [ref=f52e1239] [cursor=pointer]:
+              - /url: /apartamentos-para-dividir
+          - listitem [ref=f52e1240]:
+            - link "Oportunidades de investimento" [ref=f52e1241] [cursor=pointer]:
+              - /url: https://www.idealista.pt/investimento-imobiliario/#/
+          - listitem [ref=f52e1242]:
+            - link "Rentalia, arrendamento para férias" [ref=f52e1243] [cursor=pointer]:
+              - /url: https://pt.rentalia.com/
+          - listitem [ref=f52e1244]:
+            - link "Relatórios de preços" [ref=f52e1245] [cursor=pointer]:
+              - /url: https://www.idealista.pt/media/relatorios-preco-habitacao/
+          - listitem [ref=f52e1246]:
+            - link "idealista maps" [ref=f52e1247] [cursor=pointer]:
+              - /url: https://www.idealista.pt/maps/
+          - listitem [ref=f52e1248]:
+            - link "Apartamentos e casas de luxo à venda em Portugal" [ref=f52e1249] [cursor=pointer]:
+              - /url: /luxury-homes-portugal
+          - listitem [ref=f52e1250]:
+            - link "Apartamentos e casas de luxo para arrendar em Portugal" [ref=f52e1251] [cursor=pointer]:
+              - /url: /luxury-rentals-portugal
+      - navigation "Tens um imóvel?" [ref=f52e1252]:
+        - heading "Tens um imóvel?" [level=3] [ref=f52e1253]
+        - list [ref=f52e1254]:
+          - listitem [ref=f52e1255]:
+            - link "Publica o teu anúncio grátis" [ref=f52e1256] [cursor=pointer]:
+              - /url: /info/novo-anuncio
+          - listitem [ref=f52e1257]:
+            - link "Área do proprietário" [ref=f52e1258] [cursor=pointer]:
+              - /url: /proprietarios/
+          - listitem [ref=f52e1259]:
+            - link "Melhorar as fotos do teu anúncio" [ref=f52e1260] [cursor=pointer]:
+              - /url: /info/truques-fazer-fotos-e-videos
+          - listitem [ref=f52e1261]:
+            - link "Solicitar certificado energético" [ref=f52e1262] [cursor=pointer]:
+              - /url: /certificadoenergetico/
+          - listitem [ref=f52e1263]:
+            - link "Avalia grátis qualquer imóvel" [ref=f52e1264] [cursor=pointer]:
+              - /url: /avaliacao-de-imoveis/
+          - listitem [ref=f52e1265]:
+            - link "Procurar agências para vender facilmente a tua casa" [ref=f52e1266] [cursor=pointer]:
+              - /url: /escolher-agencia-imobiliaria/
+          - listitem [ref=f52e1267]:
+            - link "Guia sobre como vender a tua casa" [ref=f52e1268] [cursor=pointer]:
+              - /url: /quero-vender-a-minha-casa/
+          - listitem [ref=f52e1269]:
+            - link "Garantir 12 mensalidades com um seguro de incumprimento" [ref=f52e1270] [cursor=pointer]:
+              - /url: https://www.idealista.pt/seguros/incumprimento-rendas/
+          - listitem [ref=f52e1271]:
+            - link "Queres fazer obras em casa?" [ref=f52e1272] [cursor=pointer]:
+              - /url: https://www.idealista.pt/obras-em-casa/
+      - navigation "És profissional imobiliário?" [ref=f52e1273]:
+        - heading "És profissional imobiliário?" [level=3] [ref=f52e1274]
+        - list [ref=f52e1275]:
+          - listitem [ref=f52e1276]:
+            - link "Publica os teus imóveis profissionais" [ref=f52e1277] [cursor=pointer]:
+              - /url: /novo-profissional
+          - listitem [ref=f52e1278]:
+            - link "Já és cliente? Entra na tua conta" [ref=f52e1279] [cursor=pointer]:
+              - /url: /login
+          - listitem [ref=f52e1280]:
+            - link "Cursos imobiliários" [ref=f52e1281] [cursor=pointer]:
+              - /url: https://www.idealista.pt/cursos/
+          - listitem [ref=f52e1282]:
+            - link "Publicidade no idealista" [ref=f52e1283] [cursor=pointer]:
+              - /url: /info/publicidade
+          - listitem [ref=f52e1284]:
+            - 'link "idealista/tools: Software de gestão para imobiliárias" [ref=f52e1285] [cursor=pointer]':
+              - /url: https://www.idealista.pt/tools/
+          - listitem [ref=f52e1286]:
+            - link "Outros softwares recomendados" [ref=f52e1287] [cursor=pointer]:
+              - /url: /tools/software-recomendado-para-imobiliarias
+          - listitem [ref=f52e1288]:
+            - 'link "idealista/data: tecnologia para a análise imobiliária" [ref=f52e1289] [cursor=pointer]':
+              - /url: https://www.idealista.pt/data/
+          - listitem [ref=f52e1290]:
+            - 'link "Avaibook: software para gerir os teus arrendamentos turísticos" [ref=f52e1291] [cursor=pointer]':
+              - /url: https://www.avaibook.com/pt-pt/
+          - listitem [ref=f52e1292]:
+            - link "HCPro - Software de Gestão Imobiliária" [ref=f52e1293] [cursor=pointer]:
+              - /url: https://www.hcpro.pt/
+  - contentinfo [ref=f52e1294]:
+    - generic [ref=f52e1295]:
+      - heading " idealista" [level=2] [ref=f52e1296]:
+        - text: 
+        - generic [ref=f52e1297]: idealista
+      - generic [ref=f52e1299] [cursor=pointer]:
+        - text: 
+        - generic [ref=f52e1301]: Português
+      - generic [ref=f52e1302]:
+        - navigation [ref=f52e1303]:
+          - heading "Sobre o idealista" [level=3] [ref=f52e1304]
+          - list [ref=f52e1305]:
+            - listitem [ref=f52e1306]:
+              - link "Sobre nós" [ref=f52e1307] [cursor=pointer]:
+                - /url: /media/sobre-nos/
+            - listitem [ref=f52e1308]:
+              - link "Media" [ref=f52e1309] [cursor=pointer]:
+                - /url: /media/
+            - listitem [ref=f52e1310]:
+              - link "Trabalha connosco" [ref=f52e1311] [cursor=pointer]:
+                - /url: /info/trabalha-connosco
+            - listitem [ref=f52e1312]:
+              - link "idealista/créditohabitação" [ref=f52e1313] [cursor=pointer]:
+                - /url: https://www.idealista.pt/credito-habitacao
+            - listitem [ref=f52e1314]:
+              - link "idealista/data" [ref=f52e1315] [cursor=pointer]:
+                - /url: /data/
+            - listitem [ref=f52e1316]:
+              - link "idealista/news" [ref=f52e1317] [cursor=pointer]:
+                - /url: /news/
+            - listitem [ref=f52e1318]:
+              - link "idealista/seguros" [ref=f52e1319] [cursor=pointer]:
+                - /url: /seguros/
+        - navigation [ref=f52e1320]:
+          - heading "Ajuda" [level=3] [ref=f52e1321]
+          - list [ref=f52e1322]:
+            - listitem [ref=f52e1323]:
+              - link "Perguntas frequentes (FAQs)" [ref=f52e1324] [cursor=pointer]:
+                - /url: /apoioutilizador/
+            - listitem [ref=f52e1325]:
+              - link "Segurança online" [ref=f52e1326] [cursor=pointer]:
+                - /url: /apoioutilizador/categorias/seguranca-online/
+            - listitem [ref=f52e1327]:
+              - link "Contacta com o idealista" [ref=f52e1328] [cursor=pointer]:
+                - /url: /info/contacta-connosco
+            - listitem [ref=f52e1329]:
+              - link "Privacidade" [ref=f52e1330] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/politica-de-privacidade/
+            - listitem [ref=f52e1331]:
+              - link "Política de cookies" [ref=f52e1332] [cursor=pointer]:
+                - /url: /info/cookie-policy
+            - listitem [ref=f52e1333]:
+              - link "Condições gerais" [ref=f52e1334] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/aviso-legal-e-condicoes-gerais/
+        - navigation [ref=f52e1335]:
+          - heading "Outros países" [level=3] [ref=f52e1336]
+          - list [ref=f52e1337]:
+            - listitem [ref=f52e1338]:
+              - link "idealista Espanha" [ref=f52e1339] [cursor=pointer]:
+                - /url: https://www.idealista.com/pt/
+            - listitem [ref=f52e1340]:
+              - link "idealista Itália" [ref=f52e1341] [cursor=pointer]:
+                - /url: https://www.idealista.it/pt/
+            - listitem [ref=f52e1342]:
+              - link "idealista França" [ref=f52e1343] [cursor=pointer]:
+                - /url: https://www.idealista.fr/pt/
+              - generic [ref=f52e1344]: Beta
+      - generic [ref=f52e1345]:
+        - generic [ref=f52e1346]:
+          - heading "Por telemóvel ou Tablet" [level=3] [ref=f52e1347]
+          - navigation [ref=f52e1348]:
+            - link "App Store" [ref=f52e1349] [cursor=pointer]:
+              - /url: https://apps.apple.com/pt/app/idealista.com/id465958311
+            - link "Google Play" [ref=f52e1350] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.idealista.android&hl=pt
+            - link "HUAWEI AppGallery" [ref=f52e1351] [cursor=pointer]:
+              - /url: https://appgallery.huawei.com/app/C101196223?channelId=idealista&id=ea9d78a5dfc54b8e8a7f1c5e8f1f083e&s=FC3DCED1261C2C2C5624748A104DEB37D2EB945F72175B74A6FDB07C7B7169F0&detailType=0&v=
+          - navigation [ref=f52e1352]:
+            - link "" [ref=f52e1353] [cursor=pointer]:
+              - /url: https://www.facebook.com/idealista.pt/
+            - link "" [ref=f52e1354] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/idealistapt
+            - link "" [ref=f52e1355] [cursor=pointer]:
+              - /url: https://instagram.com/idealistapt/
+        - strong [ref=f52e1356]: idealista
+        - text: Copyright © 2000-2026
+  - generic:         

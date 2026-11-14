@@ -71,6 +71,8 @@ let _itensCrawled = [];
 let _ultimaPagina = 1;
 let _urlCrawl = '';
 let _dataCrawl = '';
+let _crawlComplete = false;
+let _crawlError = null;
 
 function extrairDaRaiz(rootDoc) {
   const lista = rootDoc.querySelector('section.items-container.items-list');
@@ -99,15 +101,20 @@ function extrairDaRaiz(rootDoc) {
     const precoOriginal = limparTexto(art.querySelector('.pricedown_price')?.textContent) || null;
     const descontoPercentual = limparTexto(art.querySelector('.pricedown_icon')?.textContent) || null;
 
-    const estacionamento = limparTexto(art.querySelector('.price-row .item-parking')?.textContent) || null;
+    const estacionamento = limparTexto(art.querySelector('.price-row .item-parking')?.textContent)
+      || limparTexto(detalhesEls.find(d => /garagem|estacionamento/i.test(d.textContent))?.textContent) || null;
     const tempoDestaque = limparTexto(art.querySelector('.item-detail-char .txt-highlight-red')?.textContent) || null;
 
-    let imagens = null;
-    const picsOld = art.querySelector('.item-multimedia-pictures--old');
-    if (picsOld) {
-      const spans = picsOld.querySelectorAll('span');
-      if (spans?.length >= 2) imagens = parseIntSafe(spans[1]?.textContent);
+    function photoTotal(counter) {
+      if (!counter) return null;
+      const spans = counter.querySelectorAll('span');
+      const text = limparTexto(spans.length >= 2 ? spans[spans.length - 1].textContent : counter.textContent.split('/')[1]);
+      if (!/^\d+(?:[., ]\d{3})*$/.test(text)) return null;
+      const count = Number(text.replace(/[., ]/g, ''));
+      return Number.isSafeInteger(count) && count > 0 ? count : null;
     }
+    const imagens = photoTotal(art.querySelector('.item-multimedia-pictures__counter'))
+      ?? photoTotal(art.querySelector('.item-multimedia-pictures--old'));
 
     const tipologia = (detalhesEls.find(d => /T\d+/i.test(d.textContent))?.textContent.match(/T\d+/i) || [null])[0];
     const areaBrutaM2 = (() => {
@@ -160,6 +167,8 @@ async function runCrawlFetchNext(opts = {}) {
   let stopRequestedLocal = false;
   stopRequested = false;
   _itensCrawled = [];
+  _crawlComplete = false;
+  _crawlError = null;
   _urlCrawl = location.href;
   logCrawler('Iniciando na página: ' + location.href);
   await logProxyIp('início');
@@ -168,6 +177,7 @@ async function runCrawlFetchNext(opts = {}) {
 
   // Página atual
   let { itens, nextUrl } = extrairDaRaiz(document);
+  if (opts.requireComplete && !document.querySelector('section.items-container.items-list')) throw new Error('Página inicial sem listagem');
   for (const it of itens) {
     const key = it.id || it.Link || JSON.stringify(it);
     if (!vistos.has(key)) { vistos.add(key); todos.push(it); }
@@ -185,7 +195,6 @@ async function runCrawlFetchNext(opts = {}) {
 
   while (nextUrl && !stopRequested) {
     pagina += 1;
-    _ultimaPagina = pagina;
 
     await logProxyIp(`antes de buscar página ${pagina}`);
     const espera = randDelay();
@@ -197,21 +206,26 @@ async function runCrawlFetchNext(opts = {}) {
     try {
       resp = await fetch(nextUrl, { credentials: 'same-origin' });
     } catch (e) {
+      if (opts.requireComplete) throw new Error('Falha de rede na paginação; resultado parcial não será salvo');
       console.error('[Crawler] Erro ao buscar página:', e);
       break;
     }
     if (!resp.ok) {
+      if (opts.requireComplete) throw new Error(`Falha HTTP ${resp.status} na paginação; resultado parcial não será salvo`);
       console.warn('[Crawler] Falha ao buscar:', nextUrl, resp.status);
       break;
     }
     const html = await resp.text();
     const doc = new DOMParser().parseFromString(html, 'text/html');
+    if (opts.requireComplete && !doc.querySelector('section.items-container.items-list')) throw new Error('Paginação retornou página sem listagem; resultado parcial não será salvo');
     const res = extrairDaRaiz(doc);
+    if (opts.requireComplete && !res.itens.length) throw new Error('Página seguinte vazia; resultado parcial não será salvo');
     for (const it of res.itens) {
       const key = it.id || it.Link || JSON.stringify(it);
       if (!vistos.has(key)) { vistos.add(key); todos.push(it); }
     }
     logCrawler(`Página ${pagina} coletada. Total até agora: ${todos.length}`);
+    _ultimaPagina = pagina;
     nextUrl = res.nextUrl || null;
     await logProxyIp(`após coletar página ${pagina}`);
 
@@ -240,6 +254,8 @@ async function runCrawlFetchNext(opts = {}) {
     }
   }
 
+  if (opts.requireComplete && (stopRequested || nextUrl)) throw new Error('Coleta interrompida; resultado parcial não será salvo');
+  _crawlComplete = !stopRequested && !nextUrl;
   // Nome do arquivo personalizado
   let slug = location.href
     .replace(/^https?:\/\/[^\/]+\/geo\//, '')     // tira até o /geo/
@@ -271,9 +287,10 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg?.cmd === 'START_CRAWL') {
     (async () => {
       try {
-        await runCrawlFetchNext({ silent: msg.silent });
+        await runCrawlFetchNext({ silent: msg.silent, requireComplete: msg.requireComplete });
         sendResponse({ ok: true, started: true });
       } catch (e) {
+        _crawlError = String(e);
         console.error(e);
         sendResponse({ ok: false, error: String(e) });
       }
@@ -284,7 +301,9 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
   if (msg?.cmd === 'STOP_AND_DOWNLOAD') {
     stopRequested = true;
     sendResponse({
-      ok: true,
+      ok: !_crawlError,
+      complete: _crawlComplete,
+      error: _crawlError,
       dados: _itensCrawled,
       totalPaginas: _ultimaPagina,
       url: _urlCrawl,

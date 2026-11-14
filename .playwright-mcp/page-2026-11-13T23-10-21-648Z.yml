@@ -1,0 +1,22 @@
+- generic [ref=f58e1]:
+  - main [ref=f58e2]:
+    - generic [ref=f58e3]:
+      - generic [ref=f58e4]:
+        - img "Icon for www.idealista.pt" [ref=f58e5]
+        - heading "www.idealista.pt" [level=1] [ref=f58e6]
+      - heading "Performing security verification" [level=2] [ref=f58e7]
+      - paragraph [ref=f58e8]: This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.
+  - contentinfo [ref=f58e15]:
+    - generic [ref=f58e17]:
+      - generic [ref=f58e19]:
+        - text: "Ray ID:"
+        - code [ref=f58e20]: a5a173075b602c08
+      - generic [ref=f58e21]:
+        - generic [ref=f58e22]:
+          - text: Performance and Security by
+          - link "Cloudflare, opens in a new tab" [ref=f58e23] [cursor=pointer]:
+            - /url: https://www.cloudflare.com?utm_source=challenge&utm_campaign=m
+            - text: Cloudflare
+        - link "Privacy, opens in a new tab" [ref=f58e25] [cursor=pointer]:
+          - /url: https://www.cloudflare.com/privacypolicy/
+          - text: Privacy

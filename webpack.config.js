@@ -10,6 +10,7 @@ module.exports = (env, argv) => ({
     'popup-ui': './src/popup-ui.js',
     linkExtractor: './src/linkExtractor.js',
     localidades: './src/localidades.js',
+    lote: './src/lote.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

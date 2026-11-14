@@ -1,0 +1,394 @@
+- generic [ref=f4e1]:
+  - link "Saltar para o conteúdo principal" [ref=f4e2] [cursor=pointer]:
+    - /url: "#wrapper"
+  - banner [ref=f4e4]:
+    - generic [ref=f4e5]:
+      - generic [ref=f4e6]:
+        - link [ref=f4e7] [cursor=pointer]:
+          - /url: https://www.idealista.pt/
+          - img "Idealista logo" [ref=f4e9]
+        - generic [ref=f4e11]:
+          - button "Proprietários" [ref=f4e14] [cursor=pointer]
+          - button "Procuras casa" [ref=f4e18] [cursor=pointer]
+          - button "Crédito habitação" [ref=f4e22] [cursor=pointer]
+      - generic [ref=f4e24]:
+        - link "Publica o teu anúncio" [ref=f4e25] [cursor=pointer]:
+          - /url: https://www.idealista.pt/info/novo-anuncio
+        - combobox "Português" [ref=f4e28] [cursor=pointer]
+        - link "Aceder" [ref=f4e32] [cursor=pointer]:
+          - /url: https://www.idealista.pt/login
+  - navigation "Navegação por localização" [ref=f4e36]:
+    - list [ref=f4e37]:
+      - listitem [ref=f4e38]:
+        - link "idealista" [ref=f4e39] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=f4e40]:
+        - text: 
+        - button "São Miguel (Ilha dos Açores) distrito " [ref=f4e41] [cursor=pointer]
+        - text: 
+        - generic [ref=f4e42]: "72"
+  - generic [ref=f4e46]:
+    - generic [ref=f4e47]:
+      - heading "Anúncios de casas e apartamentos para arrendar em São Miguel (Ilha dos Açores) distrito" [level=1] [ref=f4e48]
+      - link "Ver 72 casas e apartamentos em São Miguel (Ilha dos Açores)" [ref=f4e49] [cursor=pointer]:
+        - /url: /arrendar-casas/sao-miguel-ilha-dos-acores/
+    - generic [ref=f4e50]:
+      - generic [ref=f4e51]:
+        - heading "Procurar por mapa" [level=2] [ref=f4e52]
+        - link "Procurar por mapa" [ref=f4e53] [cursor=pointer]:
+          - /url: /arrendar-casas/sao-miguel-ilha-dos-acores/mapa
+      - generic [ref=f4e54]:
+        - heading "Imobiliárias em São Miguel (Ilha dos Açores) distrito" [level=2] [ref=f4e55]
+        - link "Imobiliárias em São Miguel (Ilha dos Açores) distrito" [ref=f4e56] [cursor=pointer]:
+          - /url: /agencias-imobiliarias/sao-miguel-ilha-dos-acores/imobiliarias-arrendamento
+    - generic [ref=f4e57]:
+      - list [ref=f4e58]:
+        - listitem [ref=f4e59]:
+          - strong [ref=f4e60]: C
+          - list [ref=f4e61]:
+            - listitem [ref=f4e62]:
+              - generic [ref=f4e63]: "5"
+              - link "Candelária" [ref=f4e64] [cursor=pointer]:
+                - /url: /arrendar-casas/ponta-delgada/candelaria/
+        - listitem [ref=f4e65]:
+          - strong [ref=f4e66]: F
+          - list [ref=f4e67]:
+            - listitem [ref=f4e68]:
+              - generic [ref=f4e69]: "1"
+              - link "Fajã de Baixo" [ref=f4e70] [cursor=pointer]:
+                - /url: /arrendar-casas/ponta-delgada/faja-de-baixo/
+            - listitem [ref=f4e71]:
+              - generic [ref=f4e72]: "3"
+              - link "Furnas" [ref=f4e73] [cursor=pointer]:
+                - /url: /arrendar-casas/povoacao/furnas/
+        - listitem [ref=f4e74]:
+          - strong [ref=f4e75]: G
+          - list [ref=f4e76]:
+            - listitem [ref=f4e77]:
+              - generic [ref=f4e78]: "1"
+              - link "Ginetes" [ref=f4e79] [cursor=pointer]:
+                - /url: /arrendar-casas/ponta-delgada/ginetes/
+        - listitem [ref=f4e80]:
+          - strong [ref=f4e81]: M
+          - list [ref=f4e82]:
+            - listitem [ref=f4e83]:
+              - generic [ref=f4e84]: "1"
+              - link "Mosteiros" [ref=f4e85] [cursor=pointer]:
+                - /url: /arrendar-casas/ponta-delgada/mosteiros/
+        - listitem [ref=f4e86]:
+          - strong [ref=f4e87]: "N"
+          - list [ref=f4e88]:
+            - listitem [ref=f4e89]:
+              - generic [ref=f4e90]: "1"
+              - link "Nordeste" [ref=f4e91] [cursor=pointer]:
+                - /url: /arrendar-casas/nordeste/nordeste/
+            - listitem [ref=f4e92]:
+              - generic [ref=f4e93]: "5"
+              - link "Nossa Senhora do Rosário" [ref=f4e94] [cursor=pointer]:
+                - /url: /arrendar-casas/lagoa-sao-miguel/nossa-senhora-do-rosario/
+            - listitem [ref=f4e95]:
+              - generic [ref=f4e96]: "1"
+              - link "Nossa Senhora dos Remédios" [ref=f4e97] [cursor=pointer]:
+                - /url: /arrendar-casas/povoacao/nossa-senhora-dos-remedios/
+        - listitem [ref=f4e98]:
+          - strong [ref=f4e99]: P
+          - list [ref=f4e100]:
+            - listitem [ref=f4e101]:
+              - generic [ref=f4e102]: "2"
+              - link "Ponta Delgada (Santa Clara)" [ref=f4e103] [cursor=pointer]:
+                - /url: /arrendar-casas/ponta-delgada/ponta-delgada-santa-clara/
+            - listitem [ref=f4e104]:
+              - generic [ref=f4e105]: "12"
+              - link "Ponta Delgada (São Sebastião)" [ref=f4e106] [cursor=pointer]:
+                - /url: /arrendar-casas/ponta-delgada/ponta-delgada-sao-sebastiao/
+        - listitem [ref=f4e107]:
+          - strong [ref=f4e108]: R
+          - list [ref=f4e109]:
+            - listitem [ref=f4e110]:
+              - generic [ref=f4e111]: "1"
+              - link "Rabo de Peixe" [ref=f4e112] [cursor=pointer]:
+                - /url: /arrendar-casas/ribeira-grande/rabo-de-peixe/
+            - listitem [ref=f4e113]:
+              - generic [ref=f4e114]: "2"
+              - link "Relva" [ref=f4e115] [cursor=pointer]:
+                - /url: /arrendar-casas/ponta-delgada/relva/
+            - listitem [ref=f4e116]:
+              - generic [ref=f4e117]: "1"
+              - link "Ribeira Grande (Matriz)" [ref=f4e118] [cursor=pointer]:
+                - /url: /arrendar-casas/ribeira-grande/ribeira-grande-matriz/
+            - listitem [ref=f4e119]:
+              - generic [ref=f4e120]: "2"
+              - link "Ribeira Seca" [ref=f4e121] [cursor=pointer]:
+                - /url: /arrendar-casas/ribeira-grande/ribeira-seca/
+            - listitem [ref=f4e122]:
+              - generic [ref=f4e123]: "7"
+              - link "Rosto de Cão (São Roque)" [ref=f4e124] [cursor=pointer]:
+                - /url: /arrendar-casas/ponta-delgada/rosto-de-cao-sao-roque/
+        - listitem [ref=f4e125]:
+          - strong [ref=f4e126]: S
+          - list [ref=f4e127]:
+            - listitem [ref=f4e128]:
+              - generic [ref=f4e129]: "1"
+              - link "Santana" [ref=f4e130] [cursor=pointer]:
+                - /url: /arrendar-casas/nordeste/santana/
+            - listitem [ref=f4e131]:
+              - generic [ref=f4e132]: "1"
+              - link "Santo António" [ref=f4e133] [cursor=pointer]:
+                - /url: /arrendar-casas/ponta-delgada/santo-antonio/
+            - listitem [ref=f4e134]:
+              - generic [ref=f4e135]: "8"
+              - link "São José" [ref=f4e136] [cursor=pointer]:
+                - /url: /arrendar-casas/ponta-delgada/sao-jose/
+            - listitem [ref=f4e137]:
+              - generic [ref=f4e138]: "13"
+              - link "São Pedro" [ref=f4e139] [cursor=pointer]:
+                - /url: /arrendar-casas/ponta-delgada/sao-pedro/
+            - listitem [ref=f4e140]:
+              - generic [ref=f4e141]: "4"
+              - link "São Vicente Ferreira" [ref=f4e142] [cursor=pointer]:
+                - /url: /arrendar-casas/ponta-delgada/sao-vicente-ferreira/
+      - generic [ref=f4e143]:
+        - heading "Zonas de interesse" [level=2] [ref=f4e144]
+        - list [ref=f4e145]:
+          - listitem [ref=f4e146]:
+            - link "Açores" [ref=f4e147] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/acores/
+          - listitem [ref=f4e148]:
+            - link "Aeroporto" [ref=f4e149] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/aeroporto-5/
+          - listitem [ref=f4e150]:
+            - link "Campo de Golfe da Batalha" [ref=f4e151] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/campo-de-golfe-da-batalha/
+          - listitem [ref=f4e152]:
+            - link "Centro Histórico de Ponta Delgada" [ref=f4e153] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/centro-historico-de-ponta-delgada/
+          - listitem [ref=f4e154]:
+            - link "Cidade de Lagoa" [ref=f4e155] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/cidade-de-lagoa/
+          - listitem [ref=f4e156]:
+            - link "Cidade de Ponta Delgada" [ref=f4e157] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/cidade-de-ponta-delgada/
+          - listitem [ref=f4e158]:
+            - link "Cidade de Ribeira Grande" [ref=f4e159] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/cidade-de-ribeira-grande/
+          - listitem [ref=f4e160]:
+            - link "Hospital de Ponta Delgada" [ref=f4e161] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/hospital-de-ponta-delgada/
+          - listitem [ref=f4e162]:
+            - link "Marina" [ref=f4e163] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/marina-17/
+          - listitem [ref=f4e164]:
+            - link "Paim" [ref=f4e165] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/paim-1/
+          - listitem [ref=f4e166]:
+            - link "Poços de São Vicente Ferreira" [ref=f4e167] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/pocos-de-sao-vicente-ferreira/
+          - listitem [ref=f4e168]:
+            - link "Praia das Milícias" [ref=f4e169] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/praia-das-milicias/
+          - listitem [ref=f4e170]:
+            - link "Praia de Santa Bárbara" [ref=f4e171] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/praia-de-santa-barbara/
+          - listitem [ref=f4e172]:
+            - link "Praia de Santana" [ref=f4e173] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/praia-de-santana/
+          - listitem [ref=f4e174]:
+            - link "Praia do Monte Verde" [ref=f4e175] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/praia-do-monte-verde/
+          - listitem [ref=f4e176]:
+            - link "Praia do Pópulo" [ref=f4e177] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/praia-do-populo/
+          - listitem [ref=f4e178]:
+            - link "Solmar Avenida Center" [ref=f4e179] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/solmar-avenida-center/
+  - generic [ref=f4e180]:
+    - heading "Serviços do idealista" [level=2] [ref=f4e181]
+    - generic [ref=f4e182]:
+      - navigation "Estás à procura de casa?" [ref=f4e183]:
+        - heading "Estás à procura de casa?" [level=3] [ref=f4e184]
+        - list [ref=f4e185]:
+          - listitem [ref=f4e186]:
+            - link "Motor de pesquisa principal" [ref=f4e187] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f4e188]:
+            - link "Pesquisa mais rapidamente com a nossa app" [ref=f4e189] [cursor=pointer]:
+              - /url: /aplicacoes
+          - listitem [ref=f4e190]:
+            - link "Apartamentos de bancos" [ref=f4e191] [cursor=pointer]:
+              - /url: /imoveis-da-banca
+          - listitem [ref=f4e192]:
+            - link "Casas à venda em Portugal" [ref=f4e193] [cursor=pointer]:
+              - /url: /properties-for-sale-in-portugal
+          - listitem [ref=f4e194]:
+            - link "Arrendamento de casas em Portugal" [ref=f4e195] [cursor=pointer]:
+              - /url: /long-term-rentals-in-portugal
+          - listitem [ref=f4e196]:
+            - link "Casas e apartamentos em arrendamento" [ref=f4e197] [cursor=pointer]:
+              - /url: /apartamentos-para-arrendar
+          - listitem [ref=f4e198]:
+            - link "Apartamentos partilhados" [ref=f4e199] [cursor=pointer]:
+              - /url: /apartamentos-para-dividir
+          - listitem [ref=f4e200]:
+            - link "Oportunidades de investimento" [ref=f4e201] [cursor=pointer]:
+              - /url: https://www.idealista.pt/investimento-imobiliario/#/
+          - listitem [ref=f4e202]:
+            - link "Rentalia, arrendamento para férias" [ref=f4e203] [cursor=pointer]:
+              - /url: https://pt.rentalia.com/
+          - listitem [ref=f4e204]:
+            - link "Relatórios de preços" [ref=f4e205] [cursor=pointer]:
+              - /url: https://www.idealista.pt/media/relatorios-preco-habitacao/
+          - listitem [ref=f4e206]:
+            - link "idealista maps" [ref=f4e207] [cursor=pointer]:
+              - /url: https://www.idealista.pt/maps/
+          - listitem [ref=f4e208]:
+            - link "Apartamentos e casas de luxo à venda em Portugal" [ref=f4e209] [cursor=pointer]:
+              - /url: /luxury-homes-portugal
+          - listitem [ref=f4e210]:
+            - link "Apartamentos e casas de luxo para arrendar em Portugal" [ref=f4e211] [cursor=pointer]:
+              - /url: /luxury-rentals-portugal
+      - navigation "Tens um imóvel?" [ref=f4e212]:
+        - heading "Tens um imóvel?" [level=3] [ref=f4e213]
+        - list [ref=f4e214]:
+          - listitem [ref=f4e215]:
+            - link "Publica o teu anúncio grátis" [ref=f4e216] [cursor=pointer]:
+              - /url: /info/novo-anuncio
+          - listitem [ref=f4e217]:
+            - link "Área do proprietário" [ref=f4e218] [cursor=pointer]:
+              - /url: /proprietarios/
+          - listitem [ref=f4e219]:
+            - link "Melhorar as fotos do teu anúncio" [ref=f4e220] [cursor=pointer]:
+              - /url: /info/truques-fazer-fotos-e-videos
+          - listitem [ref=f4e221]:
+            - link "Solicitar certificado energético" [ref=f4e222] [cursor=pointer]:
+              - /url: /certificadoenergetico/
+          - listitem [ref=f4e223]:
+            - link "Avalia grátis qualquer imóvel" [ref=f4e224] [cursor=pointer]:
+              - /url: /avaliacao-de-imoveis/
+          - listitem [ref=f4e225]:
+            - link "Procurar agências para vender facilmente a tua casa" [ref=f4e226] [cursor=pointer]:
+              - /url: /escolher-agencia-imobiliaria/
+          - listitem [ref=f4e227]:
+            - link "Guia sobre como vender a tua casa" [ref=f4e228] [cursor=pointer]:
+              - /url: /quero-vender-a-minha-casa/
+          - listitem [ref=f4e229]:
+            - link "Garantir 12 mensalidades com um seguro de incumprimento" [ref=f4e230] [cursor=pointer]:
+              - /url: https://www.idealista.pt/seguros/incumprimento-rendas/
+          - listitem [ref=f4e231]:
+            - link "Queres fazer obras em casa?" [ref=f4e232] [cursor=pointer]:
+              - /url: https://www.idealista.pt/obras-em-casa/
+      - navigation "És profissional imobiliário?" [ref=f4e233]:
+        - heading "És profissional imobiliário?" [level=3] [ref=f4e234]
+        - list [ref=f4e235]:
+          - listitem [ref=f4e236]:
+            - link "Publica os teus imóveis profissionais" [ref=f4e237] [cursor=pointer]:
+              - /url: /novo-profissional
+          - listitem [ref=f4e238]:
+            - link "Já és cliente? Entra na tua conta" [ref=f4e239] [cursor=pointer]:
+              - /url: /login
+          - listitem [ref=f4e240]:
+            - link "Cursos imobiliários" [ref=f4e241] [cursor=pointer]:
+              - /url: https://www.idealista.pt/cursos/
+          - listitem [ref=f4e242]:
+            - link "Publicidade no idealista" [ref=f4e243] [cursor=pointer]:
+              - /url: /info/publicidade
+          - listitem [ref=f4e244]:
+            - 'link "idealista/tools: Software de gestão para imobiliárias" [ref=f4e245] [cursor=pointer]':
+              - /url: https://www.idealista.pt/tools/
+          - listitem [ref=f4e246]:
+            - link "Outros softwares recomendados" [ref=f4e247] [cursor=pointer]:
+              - /url: /tools/software-recomendado-para-imobiliarias
+          - listitem [ref=f4e248]:
+            - 'link "idealista/data: tecnologia para a análise imobiliária" [ref=f4e249] [cursor=pointer]':
+              - /url: https://www.idealista.pt/data/
+          - listitem [ref=f4e250]:
+            - 'link "Avaibook: software para gerir os teus arrendamentos turísticos" [ref=f4e251] [cursor=pointer]':
+              - /url: https://www.avaibook.com/pt-pt/
+          - listitem [ref=f4e252]:
+            - link "HCPro - Software de Gestão Imobiliária" [ref=f4e253] [cursor=pointer]:
+              - /url: https://www.hcpro.pt/
+  - contentinfo [ref=f4e254]:
+    - generic [ref=f4e255]:
+      - heading " idealista" [level=2] [ref=f4e256]:
+        - text: 
+        - generic [ref=f4e257]: idealista
+      - generic [ref=f4e259] [cursor=pointer]:
+        - text: 
+        - generic [ref=f4e261]: Português
+      - generic [ref=f4e262]:
+        - navigation [ref=f4e263]:
+          - heading "Sobre o idealista" [level=3] [ref=f4e264]
+          - list [ref=f4e265]:
+            - listitem [ref=f4e266]:
+              - link "Sobre nós" [ref=f4e267] [cursor=pointer]:
+                - /url: /media/sobre-nos/
+            - listitem [ref=f4e268]:
+              - link "Media" [ref=f4e269] [cursor=pointer]:
+                - /url: /media/
+            - listitem [ref=f4e270]:
+              - link "Trabalha connosco" [ref=f4e271] [cursor=pointer]:
+                - /url: /info/trabalha-connosco
+            - listitem [ref=f4e272]:
+              - link "idealista/créditohabitação" [ref=f4e273] [cursor=pointer]:
+                - /url: https://www.idealista.pt/credito-habitacao
+            - listitem [ref=f4e274]:
+              - link "idealista/data" [ref=f4e275] [cursor=pointer]:
+                - /url: /data/
+            - listitem [ref=f4e276]:
+              - link "idealista/news" [ref=f4e277] [cursor=pointer]:
+                - /url: /news/
+            - listitem [ref=f4e278]:
+              - link "idealista/seguros" [ref=f4e279] [cursor=pointer]:
+                - /url: /seguros/
+        - navigation [ref=f4e280]:
+          - heading "Ajuda" [level=3] [ref=f4e281]
+          - list [ref=f4e282]:
+            - listitem [ref=f4e283]:
+              - link "Perguntas frequentes (FAQs)" [ref=f4e284] [cursor=pointer]:
+                - /url: /apoioutilizador/
+            - listitem [ref=f4e285]:
+              - link "Segurança online" [ref=f4e286] [cursor=pointer]:
+                - /url: /apoioutilizador/categorias/seguranca-online/
+            - listitem [ref=f4e287]:
+              - link "Contacta com o idealista" [ref=f4e288] [cursor=pointer]:
+                - /url: /info/contacta-connosco
+            - listitem [ref=f4e289]:
+              - link "Privacidade" [ref=f4e290] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/politica-de-privacidade/
+            - listitem [ref=f4e291]:
+              - link "Política de cookies" [ref=f4e292] [cursor=pointer]:
+                - /url: /info/cookie-policy
+            - listitem [ref=f4e293]:
+              - link "Condições gerais" [ref=f4e294] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/aviso-legal-e-condicoes-gerais/
+        - navigation [ref=f4e295]:
+          - heading "Outros países" [level=3] [ref=f4e296]
+          - list [ref=f4e297]:
+            - listitem [ref=f4e298]:
+              - link "idealista Espanha" [ref=f4e299] [cursor=pointer]:
+                - /url: https://www.idealista.com/pt/
+            - listitem [ref=f4e300]:
+              - link "idealista Itália" [ref=f4e301] [cursor=pointer]:
+                - /url: https://www.idealista.it/pt/
+            - listitem [ref=f4e302]:
+              - link "idealista França" [ref=f4e303] [cursor=pointer]:
+                - /url: https://www.idealista.fr/pt/
+              - generic [ref=f4e304]: Beta
+      - generic [ref=f4e305]:
+        - generic [ref=f4e306]:
+          - heading "Por telemóvel ou Tablet" [level=3] [ref=f4e307]
+          - navigation [ref=f4e308]:
+            - link "App Store" [ref=f4e309] [cursor=pointer]:
+              - /url: https://apps.apple.com/pt/app/idealista.com/id465958311
+            - link "Google Play" [ref=f4e310] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.idealista.android&hl=pt
+            - link "HUAWEI AppGallery" [ref=f4e311] [cursor=pointer]:
+              - /url: https://appgallery.huawei.com/app/C101196223?channelId=idealista&id=ea9d78a5dfc54b8e8a7f1c5e8f1f083e&s=FC3DCED1261C2C2C5624748A104DEB37D2EB945F72175B74A6FDB07C7B7169F0&detailType=0&v=
+          - navigation [ref=f4e312]:
+            - link "" [ref=f4e313] [cursor=pointer]:
+              - /url: https://www.facebook.com/idealista.pt/
+            - link "" [ref=f4e314] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/idealistapt
+            - link "" [ref=f4e315] [cursor=pointer]:
+              - /url: https://instagram.com/idealistapt/
+        - strong [ref=f4e316]: idealista
+        - text: Copyright © 2000-2026

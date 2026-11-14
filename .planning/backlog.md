@@ -15,15 +15,15 @@ tem prioridade antes de atuar nestes ajustes. Evidências e limites em
 - [Bug] **Proxy ativado após a navegação e falhas ignoradas:** a primeira navegação pode ocorrer antes da ativação; erro de ativação pode deixar a coleta prosseguir sem o proxy solicitado.
 - [Bug] **Estado do proxy perdido ao reiniciar o service worker:** configuração aplicada pode divergir de `PROXY_STATUS`, e o listener de autenticação não é reconstruído. Simulação com APIs mockadas confirmou divergência de status.
 - [Bug] **Botão do lote sem implementação:** `loteStopExport` aparece como "Parar e Exportar", mas não possui handler.
-- [Bug] **Coleta incompleta tratada como sucesso:** erros de rede/HTTP interrompem a paginação sem distinguir resultado parcial de completo; o lote pode remover a URL da fila como concluída.
+- [Bug] **Coleta incompleta tratada como sucesso:** erros de rede/HTTP interrompem a paginação sem distinguir resultado parcial de completo; o lote podia remover a URL da fila como concluída. A feature003 impede gravação/consumo parcial no Lote com modo estrito; o fluxo Itens legado não foi redesenhado.
 - [Bug] **Repetição ilimitada de entradas com erro:** o lote move falhas ao fim da fila sem limite de tentativas ou encerramento por falha persistente.
-- [Melhoria] **Pacote ZIP divergente do código-fonte:** `Idealista_extensao.zip` difere da pasta em quatro arquivos. Definir uma geração reproduzível do pacote a partir da versão validada.
+
 ## Features
 
 | Slug | Título | Status | Progresso | Última Atualização |
 | --- | --- | --- | --- | --- |
 | 001-reorganizacao-node-webpack | Reorganização com Node/npm e Webpack | Implementada | 16/16 tasks | 2026-11-13 |
-| 002-exportacao-localidades-pasta-autorizada | Exportação mensal de localidades em pasta autorizada | Convergida | 20/20 tasks | 2026-11-13 |
+| 003-exportacao-lote-municipios | Exportação mensal do lote em pasta de municípios | Convergida | 33/33 tasks | 2026-11-13 |
 
 ## Melhorias Ad-hoc
 
@@ -34,3 +34,4 @@ tem prioridade antes de atuar nestes ajustes. Evidências e limites em
 
 | Slug | Título | Fase Atual | Veredito/Status | Próximo Passo | Última Atualização |
 | --- | --- | --- | --- | --- | --- |
+| extracao-lote-abre-pagina-chrome-extension-falha | Lote não reconhece URL do JSON de localidades | Test | verified | Concluído | 2026-11-13 |

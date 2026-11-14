@@ -1,0 +1,17 @@
+{
+  "feature": "003-exportacao-lote-municipios",
+  "lockedAt": "2026-11-13 20:17",
+  "total": 5,
+  "files": [
+    {
+      "path": "tests/contracts/003-exportacao-lote-municipios.test.cjs",
+      "sha256": "e8f0784a29abe674af2a166edb47277518659d94673263e1b15e24003899e78f",
+      "tests": 5
+    },
+    {
+      "path": "tests/fixtures/localidades-filesystem.cjs",
+      "sha256": "d8e1bce237f482f92ea00241097f5321d73c8c2aa14812c327dff110994b0010",
+      "tests": 0
+    }
+  ]
+}

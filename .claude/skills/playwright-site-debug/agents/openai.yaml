@@ -1,0 +1,4 @@
+interface:
+  display_name: "Playwright: páginas e logs"
+  short_description: "Inspecione páginas, console e requisições de rede"
+  default_prompt: "Use $playwright-site-debug para inspecionar esta página ou reproduzir o problema, correlacionando DOM, console e rede."

@@ -12,7 +12,8 @@
     "dev": "webpack --watch",
     "test": "npm run build && node --test",
     "test:e2e:install": "playwright install chromium",
-    "test:e2e": "npm run build && node tests/e2e/localidades.smoke.cjs"
+    "test:e2e": "npm run build && node tests/e2e/localidades.smoke.cjs",
+    "test:e2e:lote": "npm run build && node tests/e2e/lote.smoke.cjs"
   },
   "devDependencies": {
     "playwright": "1.65.0",
