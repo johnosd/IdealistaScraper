@@ -1,0 +1,23 @@
+{
+  "realNetwork": true,
+  "browser": "157.0.8103.78",
+  "saved": "saved",
+  "beforeApply": {
+    "enabled": false,
+    "verified": true,
+    "stillDirect": true
+  },
+  "explicitApply": {
+    "ok": true,
+    "enabled": true,
+    "verified": true,
+    "ipChanged": true
+  },
+  "unexpectedRequests": 0,
+  "directRestored": {
+    "enabled": false,
+    "matchesSaved": true,
+    "verified": true,
+    "sameDirectIP": true
+  }
+}

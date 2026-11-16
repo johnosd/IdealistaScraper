@@ -28,7 +28,7 @@ function html(id, next = false) {
       if (url === index) return route.fulfill({ contentType: 'text/html', body: `<a href="${listing}">Ver 2 casas e apartamentos em Alvor</a>` });
       if (url.includes('/delayed/')) return route.fulfill({ contentType: 'text/html', body: `<h1>Carregando</h1><script>setTimeout(() => document.body.insertAdjacentHTML('beforeend', '<a href="${listing}">Ver 17 casas e apartamentos na Terceira</a>'), 150)</script>` });
       if (url.endsWith('/pagina-2') && brokenNext === 'empty') return route.fulfill({ contentType: 'text/html', body: '<section class="items-container items-list"></section>' });
-      if (url.endsWith('/pagina-2') && brokenNext) return brokenNext === 'network' ? route.abort() : route.fulfill({ status: brokenNext === 'html' ? 200 : 503, contentType: 'text/html', body: '<h1>Erro</h1>' });
+      if (url.endsWith('/pagina-2') && brokenNext) return brokenNext === 'network' ? route.abort() : route.fulfill({ status: brokenNext === 'html' ? 200 : 418, contentType: 'text/html', body: '<h1>Erro</h1>' });
       return route.fulfill({ contentType: 'text/html; charset=utf-8', body: html(url.endsWith('/pagina-2') ? '2' : '1', url === listing) });
     });
     await context.addInitScript(() => {
@@ -60,15 +60,11 @@ function html(id, next = false) {
       chrome.tabs.create = async options => { state.created++; const tab = await create({ ...options, url: 'about:blank' }); await window.__attachFixture(tab.id, options.url); return tab; };
       const send = chrome.tabs.sendMessage;
       chrome.tabs.sendMessage = async (tabId, message) => {
-        if (message.cmd === 'START_CRAWL') {
+        if (message.cmd === 'COLLECT_PAGE') {
           state.collections++;
-          await chrome.scripting.executeScript({ target: { tabId }, func: () => {
-            const timer = window.setTimeout;
-            window.setTimeout = (fn, delay, ...args) => timer(fn, delay >= 3000 && delay <= 10000 ? 0 : delay, ...args);
-          } });
         }
         const result = await send(tabId, message);
-        if (message.cmd === 'STOP_AND_DOWNLOAD' && state.denyOnSave) { state.permission = 'denied'; state.denyOnSave = false; }
+        if (message.cmd === 'COLLECT_PAGE' && result?.ok && !result.nextUrl && state.denyOnSave) { state.permission = 'denied'; state.denyOnSave = false; }
         return result;
       };
       const set = chrome.storage.local.set.bind(chrome.storage.local);
@@ -97,6 +93,7 @@ function html(id, next = false) {
     }, sourceTabId);
     const opened = context.waitForEvent('page'); await popup.locator('#openLote').click();
     const page = await opened; await page.waitForURL(base + 'lote.html*'); await popup.close();
+    await page.evaluate(async()=>{const p=(await chrome.runtime.sendMessage({cmd:'COLETA_GET_POLICY'})).result;await chrome.runtime.sendMessage({cmd:'COLETA_SET_POLICY',payload:{limits:{...p.limits,minIntervalMs:1000},ipEnabled:false}});});
     let confirmations = 0;
     page.on('dialog', async dialog => { if (dialog.type() === 'confirm') confirmations++; await dialog.accept(); });
     async function state(expected, target = page) {
@@ -104,7 +101,8 @@ function html(id, next = false) {
       catch (error) { console.error('Estado:', await target.locator('#loteLog').textContent(), 'Erros:', errors); throw error; }
     }
     async function claim() { if (await page.locator('#loteClaim').isVisible()) { await page.locator('#loteClaim').click(); await page.waitForFunction(() => !document.getElementById('loteUrls').disabled); } }
-    async function run(rows, expected = 'complete') { await claim(); await page.locator('#loteUrls').fill(JSON.stringify(rows)); await page.locator('#loteStart').click(); await state(expected); }
+    async function run(rows, expected = 'complete') { await claim();
+      await page.evaluate(async()=>{const all=(await chrome.runtime.sendMessage({cmd:'COLETA_LIST'})).result;for(const row of all.filter(s=>s.state==='saved')){const r=await chrome.runtime.sendMessage({cmd:'COLETA_DISCARD',payload:{id:row.id,epoch:row.epoch}});if(!r.ok)throw Error('Explicit cleanup failed');}}); await page.locator('#loteUrls').fill(JSON.stringify(rows)); await page.locator('#loteStart').click(); await state(expected); }
     async function read(name) { return page.evaluate(async name => {
       const root = await navigator.storage.getDirectory(); const dir = await root.getDirectoryHandle('municipios'); const month = await dir.getDirectoryHandle('202611'); return (await (await month.getFileHandle(name)).getFile()).text();
     }, name); }
@@ -195,18 +193,18 @@ function html(id, next = false) {
     await run([{ nome: 'Lagos', link: direct }]); assert.equal(JSON.parse(await read('Lagos-Paginas1.json')).length, 1);
     assert.equal(await read('Alvor-Paginas2.json'), original); assert.equal(confirmations, 0);
     cases.push('overwrite menor sem cauda/diálogo e outros arquivos intactos');
-    for (const failure of ['http', 'network', 'html', 'empty']) {
-      brokenNext = failure; await run([{ nome: 'Alvor', link: listing }], 'error');
+    for (const failure of ['http', 'html', 'empty', 'network']) {
+      brokenNext = failure; await run([{ nome: 'Alvor', link: listing }], failure==='network'?'waiting':'paused');
       assert.equal(await read('Alvor-Paginas2.json'), original); assert.match(await page.locator('#loteUrls').inputValue(), /Alvor/);
-      assert.equal(await page.locator('#loteSave').isDisabled(), true); await page.locator('#loteClear').click(); await state('ready');
+      assert.equal(await page.locator('#loteSave').isDisabled(), true); if(failure==='network'){await page.locator('#collection-cancel').click();await page.waitForFunction(()=>!document.querySelector('#loteClear').disabled);} await page.locator('#loteClear').click(); await state('ready');
     }
-    brokenNext = false; cases.push('HTTP/rede/HTML inesperado impedem gravação parcial');
+    brokenNext = false;await page.waitForTimeout(31000);cases.push('HTTP/rede/HTML inesperado impedem gravação parcial; cooldown de rede sobrevive ao descarte');
     await page.evaluate(() => { window.__e2e.hold = true; window.__e2e.closing = false; });
     await page.locator('#loteUrls').fill(JSON.stringify([{ nome: 'Alvor', link: listing }, { URL: direct, Texto: 'Lagos', extra: 'preservar' }]));
     await page.locator('#loteStart').click(); await page.waitForFunction(() => window.__e2e.closing);
     await page.locator('#lotePause').click();
     await page.evaluate(() => { window.__e2e.hold = false; window.__e2e.now = new Date(2026, 11, 1).getTime(); window.__e2e.release(); });
-    await state('paused'); assert.equal(JSON.parse(await page.locator('#loteUrls').inputValue())[0].extra, 'preservar');
+    await state('paused'); assert.equal(JSON.parse(await page.locator('#loteUrls').inputValue())[0].extra, 'preservar');await page.waitForTimeout(1100);
     await page.locator('#loteStart').click(); await state('complete');
     assert.equal(JSON.parse(await read('Lagos-Paginas1.json')).length, 1);
     cases.push('pausar/continuar mantém mês e campos originais da fila');
@@ -226,32 +224,24 @@ function html(id, next = false) {
     await page.evaluate(() => { window.__e2e.hold = false; });
     await run([{ nome: 'Tardio', link: origin + '/arrendar-casas/delayed/concelhos-freguesias' }]);
     cases.push('DOM tardio aguardado antes de resolver CTA');
-    blockedEntry = true;
-    await run([{ nome: 'Diagnostico', link: index }], 'error');
-    assert.match(await page.locator('#loteLog').textContent(), /verificação ou bloqueio/);
-    const retained = context.pages().find(candidate => candidate.url() === index);
-    assert.ok(retained && !retained.isClosed());
-    const createdBeforeRetry = await page.evaluate(() => window.__e2e.created);
-    blockedEntry = false; await retained.reload(); // Colaborador de acesso normalizado pelo teste; sem contornar site real.
-    await page.locator('#loteStart').click(); await state('complete');
-    assert.equal(await page.evaluate(() => window.__e2e.created), createdBeforeRetry);
-    assert.ok(retained.isClosed());
-    assert.equal(downloads.length, 0);
-    cases.push('403 diagnosticado, aba mantida e retry explícito reutiliza apenas essa aba');
     // Fluxo Itens conserva seu download, mas usa as mesmas correções de campos.
-    const itemPage = await context.newPage(); await itemPage.goto(direct);
     const itemsPopup = await context.newPage(); await itemsPopup.goto(base + 'popup.html');
-    itemsPopup.on('dialog', d => d.accept());
-    await itemsPopup.evaluate(async url => {
-      const [target] = await chrome.tabs.query({ url }); const query = chrome.tabs.query;
-      chrome.tabs.query = options => options.active ? Promise.resolve([{ id: target.id }]) : query(options);
-    }, direct);
     await itemsPopup.locator('#tab-itens').click(); await itemsPopup.locator('#extractItemsUrl').fill(direct);
-    const downloaded = itemPage.waitForEvent('download'); await itemsPopup.locator('#extractItems').click();
+    const launched=context.waitForEvent('page');await itemsPopup.locator('#extractItems').click();const itemPage=await launched;await itemPage.waitForURL(base+'itens.html');
+    const downloaded=itemPage.waitForEvent('download');await itemPage.locator('#items-start').click();
     const download = await downloaded; const rows = JSON.parse(await fs.readFile(await download.path(), 'utf8'));
     assert.equal(rows[0].imagens, 9); assert.equal(rows[0].estacionamento, 'Garagem incluída'); assert.equal(Object.keys(rows[0]).length, 17);
     assert.equal(downloads.length, 1); assert.deepEqual(errors, []);
     cases.push('Itens mantém download e campos corrigidos; Lote corrige DOM e HTML parseado');
+    blockedEntry=true;await run([{nome:'Diagnostico',link:index}],'blocked');
+    assert.match(await page.locator('#collection-status').textContent(),/verificação|acesso/i);
+    const retained=context.pages().find(p=>p.url()===index);assert.ok(retained&&!retained.isClosed());
+    const createdBeforeRetry=await page.evaluate(()=>window.__e2e.created);
+    blockedEntry=false;await retained.reload();await page.locator('#collection-resume').click();
+    await page.waitForFunction(()=>/Próxima elegibilidade/.test(document.querySelector('#collection-status').textContent));
+    assert.equal(await page.evaluate(()=>window.__e2e.created),createdBeforeRetry);
+    assert.notEqual(await page.locator('#loteLog').getAttribute('data-state'),'complete');
+    cases.push('403 mantém diagnóstico e exige espera persistente mesmo após acesso normalizado');
     console.log(JSON.stringify({ result: 'PASS', proof: 'MV3/real-crawler/OPFS/simulated-picker', browser: context.browser().version(), cases, loteDownloads: 0, itensDownloads: 1, errors }, null, 2));
-  } finally { if (context) await context.close(); await fs.rm(profile, { recursive: true, force: true }); }
+  } finally { if (context) await context.close();assert.ok(path.resolve(profile).startsWith(path.resolve(os.tmpdir())+path.sep+'idealista-003-e2e-'));await fs.rm(profile, { recursive: true, force: true }); }
 })().catch(error => { console.error(error); process.exitCode = 1; });

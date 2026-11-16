@@ -1,0 +1,89 @@
+[
+  {
+    "Titulo": "Moradia independente em En1-1a, 183, São Vicente Ferreira",
+    "Link": "https://www.idealista.pt/imovel/35337298/",
+    "Preco": "1.900€/mês",
+    "detalhe do item": "T2 | 100 m² área bruta",
+    "Descricao do item": "Moradia Nova de Design Junto ao Mar, em Fenais da Luz Acorde todos os dias com uma vista deslumbrante e desafogada sobre o oceano Atlântico, nesta excecional moradia nova em Fenais da Luz, na costa norte da ilha de São Miguel. Implantada num amplo terreno privado junto ao mar, esta moradia independente, com dois quar",
+    "id": "35337298",
+    "tags": [
+      "Arrendamento temporário",
+      "Vista mar"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": "2.000 €",
+    "descontoPercentual": "5%",
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 23,
+    "tipologia": "T2",
+    "areaBrutaM2": 100,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Apartamento T1 em Canada do Terreiro, 2, São Vicente Ferreira",
+    "Link": "https://www.idealista.pt/imovel/35278257/",
+    "Preco": "1.500€/mês",
+    "detalhe do item": "T1 | 63 m² área bruta | 1º andar com elevador",
+    "Descricao do item": "T1 = Apartamento T1 adequado para 2 adultos e 1 criança ate 11 anos com 53m² + 10m² de varanda. - 1 quarto com 2 camas individuais de solteiro 0,90 x 2,00 - que podemos juntar e colocar um topper e ficar como uma cama de casal - fazendo uma confortável cama casal de 1,80 x 2,00). - 1 sala de estar com cozinha toda equi",
+    "id": "35278257",
+    "tags": [
+      "Arrendamento temporário",
+      "Vista mar"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 13,
+    "tipologia": "T1",
+    "areaBrutaM2": 63,
+    "pisoResumo": "1º andar com elevador"
+  },
+  {
+    "Titulo": "Apartamento T2 em Canada do Terreiro, 2, São Vicente Ferreira",
+    "Link": "https://www.idealista.pt/imovel/35278312/",
+    "Preco": "2.300€/mês",
+    "detalhe do item": "T2 | 80 m² área bruta | 1º andar com elevador",
+    "Descricao do item": "T2 = Apartamento T2 adequado para 4 adultos e 1 criança ate 11.99 anos com 70m² + 1 varanda 10m². - 1 quarto com 2 camas individuais de solteiro 0,90 x 2,00 - que podemos juntar e colocar um topper e ficar como uma cama de casal - fazendo uma confortável cama casal de 1,80 x 2,00). - 1 quarto com 1 cama casal 1,60 x 2,",
+    "id": "35278312",
+    "tags": [
+      "Arrendamento temporário",
+      "Vista mar"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 15,
+    "tipologia": "T2",
+    "areaBrutaM2": 80,
+    "pisoResumo": "1º andar com elevador"
+  },
+  {
+    "Titulo": "Apartamento T1 na Rua do Botelho, 10, São Vicente Ferreira",
+    "Link": "https://www.idealista.pt/imovel/35202776/",
+    "Preco": "700€/mês",
+    "detalhe do item": "T1 | 50 m² área bruta | Rés do chão sem elevador",
+    "Descricao do item": "Preferência para Professor(a) perto da escola das Capelas e dos Poços. Aceitamos uma pessoa no máximo 2 sem animais de estimação. Disponível a partir do dia 15 Novembro.",
+    "id": "35202776",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 3,
+    "tipologia": "T1",
+    "areaBrutaM2": 50,
+    "pisoResumo": "Rés do chão sem elevador"
+  }
+]

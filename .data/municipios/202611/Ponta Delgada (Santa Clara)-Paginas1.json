@@ -1,0 +1,42 @@
+[
+  {
+    "Titulo": "Apartamento T3 na Rua do Paim, 2, Ponta Delgada (Santa Clara)",
+    "Link": "https://www.idealista.pt/imovel/35406661/",
+    "Preco": "1.200€/mês",
+    "detalhe do item": "Garagem incluída | T3 | 150 m² área bruta | 2º andar com elevador",
+    "Descricao do item": "Apartamento T3 com garagem e arrecadação incluídos no valor. Contrato de arrendamento é um mês de caução. Apartamento em excelente localização em ponta delgada.",
+    "id": "35406661",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": 15,
+    "tipologia": "T3",
+    "areaBrutaM2": 150,
+    "pisoResumo": "2º andar com elevador"
+  },
+  {
+    "Titulo": "Apartamento T2 na Rua Rodrigo Rodrigues, 2 C, Ponta Delgada (Santa Clara)",
+    "Link": "https://www.idealista.pt/imovel/32165518/",
+    "Preco": "800€/mês",
+    "detalhe do item": "T2 | 150 m² área bruta | 2º andar sem elevador",
+    "Descricao do item": "Arrendamento de um ano, para profissionais deslocados. Centro de Ponta Delgada. Primeiro andar com terraço. Máximo duas pessoas.",
+    "id": "32165518",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 1,
+    "tipologia": "T2",
+    "areaBrutaM2": 150,
+    "pisoResumo": "2º andar sem elevador"
+  }
+]

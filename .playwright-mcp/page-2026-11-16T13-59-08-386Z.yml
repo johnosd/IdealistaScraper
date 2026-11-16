@@ -1,0 +1,1610 @@
+- generic [active] [ref=f47e1]:
+  - link "Saltar para o conteúdo principal" [ref=f47e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f47e4]:
+    - generic [ref=f47e5]:
+      - generic [ref=f47e6]:
+        - link [ref=f47e7] [cursor=pointer]:
+          - /url: https://www.idealista.pt/
+          - img "Idealista logo" [ref=f47e9]
+        - generic [ref=f47e11]:
+          - button "Proprietários" [ref=f47e14] [cursor=pointer]
+          - button "Procuras casa" [ref=f47e18] [cursor=pointer]
+          - button "Crédito habitação" [ref=f47e22] [cursor=pointer]
+      - generic [ref=f47e24]:
+        - link "Publica o teu anúncio" [ref=f47e25] [cursor=pointer]:
+          - /url: https://www.idealista.pt/info/novo-anuncio
+        - combobox "Português" [ref=f47e28] [cursor=pointer]
+        - link "Aceder" [ref=f47e32] [cursor=pointer]:
+          - /url: https://www.idealista.pt/login
+  - generic [ref=f47e38]:
+    - navigation "Navegação por localização" [ref=f47e40]:
+      - list [ref=f47e41]:
+        - listitem [ref=f47e42]:
+          - link "idealista" [ref=f47e43] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f47e44]:
+          - text: 
+          - button "Lisboa distrito " [ref=f47e45] [cursor=pointer]
+          - text: 
+          - generic [ref=f47e46]: "9.655"
+    - region [ref=f47e48]:
+      - heading "9.655 casas e apartamentos para arrendar em Lisboa distrito" [level=1] [ref=f47e49]
+      - button " Modificar zonas" [ref=f47e51] [cursor=pointer]:
+        - text: 
+        - generic [ref=f47e52]: Modificar zonas
+    - generic [ref=f47e55]:
+      - tablist:
+        - tab [ref=f47e56]:
+          - link "Comprar" [ref=f47e57] [cursor=pointer]:
+            - /url: /comprar-casas/lisboa-distrito/
+        - tab "Arrendar" [selected] [ref=f47e58]
+        - tab [ref=f47e60]:
+          - link "Para férias" [ref=f47e61] [cursor=pointer]:
+            - /url: /arrendar-para_ferias/lisboa-distrito/
+    - generic:   
+    - complementary [ref=f47e62]:
+      - generic [ref=f47e65]:
+        - heading "Novos anúncios no teu email" [level=2] [ref=f47e66]
+        - button "Guardar pesquisa" [ref=f47e67] [cursor=pointer]
+      - generic [ref=f47e71]:
+        - generic [ref=f47e72]:
+          - img "Mapa" [ref=f47e73]
+          - link "車 Ver no mapa" [ref=f47e74] [cursor=pointer]:
+            - /url: /arrendar-casas/lisboa-distrito/mapa-google
+        - generic [ref=f47e75]:
+          - generic [ref=f47e76]:
+            - heading "Tipo de imóvel" [level=3] [ref=f47e77]
+            - button "Casas e apartamentos" [ref=f47e78] [cursor=pointer]:
+              - option [ref=f47e80]: Nova construção
+              - option [ref=f47e81]: Casas e apartamentos
+              - option [ref=f47e82]: Quartos
+              - option [ref=f47e83]: Para férias
+              - option [ref=f47e84]: Escritórios
+              - option [ref=f47e85]: Espaços comerciais ou armazéns
+              - option [ref=f47e86]: Trespasses
+              - option [ref=f47e87]: Garagens
+              - option [ref=f47e88]: Terrenos
+              - option [ref=f47e89]: Arrecadações
+              - option [ref=f47e90]: Prédios
+          - generic [ref=f47e91]:
+            - heading "Preço" [level=3] [ref=f47e92]
+            - button "Min" [ref=f47e95] [cursor=pointer]:
+              - option [ref=f47e97]: Min
+              - option [ref=f47e98]: "500"
+              - option [ref=f47e99]: "550"
+              - option [ref=f47e100]: "600"
+              - option [ref=f47e101]: "650"
+              - option [ref=f47e102]: "700"
+              - option [ref=f47e103]: "750"
+              - option [ref=f47e104]: "800"
+              - option [ref=f47e105]: "850"
+              - option [ref=f47e106]: "900"
+              - option [ref=f47e107]: "950"
+              - option [ref=f47e108]: "1.000"
+              - option [ref=f47e109]: "1.100"
+              - option [ref=f47e110]: "1.200"
+              - option [ref=f47e111]: "1.300"
+              - option [ref=f47e112]: "1.400"
+              - option [ref=f47e113]: "1.500"
+              - option [ref=f47e114]: "1.600"
+              - option [ref=f47e115]: "1.700"
+              - option [ref=f47e116]: "1.800"
+              - option [ref=f47e117]: "1.900"
+              - option [ref=f47e118]: "2.000"
+              - option [ref=f47e119]: "2.100"
+              - option [ref=f47e120]: "2.400"
+              - option [ref=f47e121]: "2.700"
+              - option [ref=f47e122]: "3.000"
+              - option [ref=f47e123]: "4.000"
+              - option [ref=f47e124]: Sem limite
+            - button "Max" [ref=f47e127] [cursor=pointer]:
+              - option [ref=f47e129]: Max
+              - option [ref=f47e130]: "500"
+              - option [ref=f47e131]: "550"
+              - option [ref=f47e132]: "600"
+              - option [ref=f47e133]: "650"
+              - option [ref=f47e134]: "700"
+              - option [ref=f47e135]: "750"
+              - option [ref=f47e136]: "800"
+              - option [ref=f47e137]: "850"
+              - option [ref=f47e138]: "900"
+              - option [ref=f47e139]: "950"
+              - option [ref=f47e140]: "1.000"
+              - option [ref=f47e141]: "1.100"
+              - option [ref=f47e142]: "1.200"
+              - option [ref=f47e143]: "1.300"
+              - option [ref=f47e144]: "1.400"
+              - option [ref=f47e145]: "1.500"
+              - option [ref=f47e146]: "1.600"
+              - option [ref=f47e147]: "1.700"
+              - option [ref=f47e148]: "1.800"
+              - option [ref=f47e149]: "1.900"
+              - option [ref=f47e150]: "2.000"
+              - option [ref=f47e151]: "2.100"
+              - option [ref=f47e152]: "2.400"
+              - option [ref=f47e153]: "2.700"
+              - option [ref=f47e154]: "3.000"
+              - option [ref=f47e155]: "4.000"
+              - option [ref=f47e156]: Sem limite
+          - generic [ref=f47e157]:
+            - heading "Tipo de arrendamento" [level=3] [ref=f47e158]
+            - list [ref=f47e159]:
+              - listitem [ref=f47e160]:
+                - generic [ref=f47e161]:
+                  - checkbox "Arrendamento de longa duração" [ref=f47e162]
+                  - link [aria-hidden] [ref=f47e165] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-arrendamento-longa-duracao/
+                    - text: Arrendamento de longa duração
+              - listitem [ref=f47e166]:
+                - generic [ref=f47e167]:
+                  - checkbox "Arrendamento temporário" [ref=f47e168]
+                  - link [aria-hidden] [ref=f47e171] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-arrendamento-temporario/
+                    - text: Arrendamento temporário
+          - generic [ref=f47e172]:
+            - heading "Tamanho" [level=3] [ref=f47e173]
+            - button "Min" [ref=f47e176] [cursor=pointer]:
+              - option [ref=f47e178]: Min
+              - option [ref=f47e179]: 40 m²
+              - option [ref=f47e180]: 60 m²
+              - option [ref=f47e181]: 80 m²
+              - option [ref=f47e182]: 100 m²
+              - option [ref=f47e183]: 120 m²
+              - option [ref=f47e184]: 140 m²
+              - option [ref=f47e185]: 160 m²
+              - option [ref=f47e186]: 180 m²
+              - option [ref=f47e187]: 200 m²
+              - option [ref=f47e188]: 300 m²
+              - option [ref=f47e189]: 400 m²
+              - option [ref=f47e190]: Sem limite
+            - button "Max" [ref=f47e193] [cursor=pointer]:
+              - option [ref=f47e195]: Max
+              - option [ref=f47e196]: 40 m²
+              - option [ref=f47e197]: 60 m²
+              - option [ref=f47e198]: 80 m²
+              - option [ref=f47e199]: 100 m²
+              - option [ref=f47e200]: 120 m²
+              - option [ref=f47e201]: 140 m²
+              - option [ref=f47e202]: 160 m²
+              - option [ref=f47e203]: 180 m²
+              - option [ref=f47e204]: 200 m²
+              - option [ref=f47e205]: 300 m²
+              - option [ref=f47e206]: 400 m²
+              - option [ref=f47e207]: Sem limite
+          - generic [ref=f47e208]:
+            - heading "Tipo de casa" [level=3] [ref=f47e209]
+            - list [ref=f47e210]:
+              - listitem [ref=f47e211]:
+                - tree [ref=f47e212]:
+                  - generic [ref=f47e213]:
+                    - generic [ref=f47e214]:
+                      - checkbox "Apartamentos, penthouses e duplex" [ref=f47e215]
+                      - generic [ref=f47e217] [cursor=pointer]:
+                        - link [aria-hidden]:
+                          - /url: /arrendar-casas/lisboa-distrito/com-apartamentos/
+                          - text: Apartamentos, penthouses e duplex
+                    - button " Ver outros filtros" [ref=f47e218] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f47e219]: Ver outros filtros
+              - listitem [ref=f47e220]:
+                - tree [ref=f47e221]:
+                  - generic [ref=f47e222]:
+                    - generic [ref=f47e223]:
+                      - checkbox "Casas e moradias" [ref=f47e224]
+                      - generic [ref=f47e226] [cursor=pointer]:
+                        - link [aria-hidden]:
+                          - /url: /arrendar-casas/lisboa-distrito/com-moradias/
+                          - text: Casas e moradias
+                    - button " Ver outros filtros" [ref=f47e227] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f47e228]: Ver outros filtros
+          - generic [ref=f47e229]:
+            - heading "Outras denominações" [level=3] [ref=f47e230]
+            - generic [ref=f47e231]:
+              - generic [ref=f47e232]: Villas, moradias térreas...
+              - generic [ref=f47e233]:
+                - button "Ver mais Outras denominações" [ref=f47e234] [cursor=pointer]:
+                  - text: Ver mais
+                  - generic [ref=f47e235]: 
+                - text: 
+          - generic [ref=f47e236]:
+            - heading "Equipamento" [level=3] [ref=f47e237]
+            - list [ref=f47e238]:
+              - listitem [ref=f47e239]:
+                - button "Indiferente" [ref=f47e241] [cursor=pointer]:
+                  - option [ref=f47e243]: Indiferente
+                  - option [ref=f47e244]: Só cozinha equipada
+                  - option [ref=f47e245]: Mobilado
+          - generic [ref=f47e246]:
+            - heading "Quartos" [level=3] [ref=f47e247]
+            - list [ref=f47e248]:
+              - listitem [ref=f47e249]:
+                - generic [ref=f47e250]:
+                  - checkbox "T0" [ref=f47e251]
+                  - link [aria-hidden] [ref=f47e254] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-t0/
+                    - text: T0
+              - listitem [ref=f47e255]:
+                - generic [ref=f47e256]:
+                  - checkbox "T1" [ref=f47e257]
+                  - link [aria-hidden] [ref=f47e260] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-t1/
+                    - text: T1
+              - listitem [ref=f47e261]:
+                - generic [ref=f47e262]:
+                  - checkbox "T2" [ref=f47e263]
+                  - link [aria-hidden] [ref=f47e266] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-t2/
+                    - text: T2
+              - listitem [ref=f47e267]:
+                - generic [ref=f47e268]:
+                  - checkbox "T3" [ref=f47e269]
+                  - link [aria-hidden] [ref=f47e272] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-t3/
+                    - text: T3
+              - listitem [ref=f47e273]:
+                - generic [ref=f47e274]:
+                  - checkbox "T4 ou +" [ref=f47e275]
+                  - link [aria-hidden] [ref=f47e278] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-t4-t5/
+                    - text: T4 ou +
+          - generic [ref=f47e279]:
+            - heading "Casas de banho" [level=3] [ref=f47e280]
+            - list [ref=f47e281]:
+              - listitem [ref=f47e282]:
+                - generic [ref=f47e283]:
+                  - checkbox "1" [ref=f47e284]
+                  - link [aria-hidden] [ref=f47e287] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-banho-1/
+                    - text: "1"
+              - listitem [ref=f47e288]:
+                - generic [ref=f47e289]:
+                  - checkbox "2" [ref=f47e290]
+                  - link [aria-hidden] [ref=f47e293] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-banho-2/
+                    - text: "2"
+              - listitem [ref=f47e294]:
+                - generic [ref=f47e295]:
+                  - checkbox "3 casas de banho ou mais" [ref=f47e296]
+                  - link [aria-hidden] [ref=f47e299] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-banho-3/
+                    - text: 3 casas de banho ou mais
+          - generic [ref=f47e300]:
+            - heading "Estado" [level=3] [ref=f47e301]
+            - list [ref=f47e302]:
+              - listitem [ref=f47e303]:
+                - generic [ref=f47e304]:
+                  - checkbox "Nova construção" [ref=f47e305]
+                  - link [aria-hidden] [ref=f47e308] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-novo/
+                    - text: Nova construção
+              - listitem [ref=f47e309]:
+                - generic [ref=f47e310]:
+                  - checkbox "Bom estado" [ref=f47e311]
+                  - link [aria-hidden] [ref=f47e314] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-bom-estado/
+                    - text: Bom estado
+              - listitem [ref=f47e315]:
+                - generic [ref=f47e316]:
+                  - checkbox "Para recuperar" [ref=f47e317]
+                  - link [aria-hidden] [ref=f47e320] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-para-reformar/
+                    - text: Para recuperar
+          - generic [ref=f47e321]:
+            - heading "Mais filtros" [level=3] [ref=f47e322]
+            - list [ref=f47e323]:
+              - listitem [ref=f47e324]:
+                - generic [ref=f47e325]:
+                  - checkbox "Ar condicionado" [ref=f47e326]
+                  - link [aria-hidden] [ref=f47e329] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-arcondicionado/
+                    - text: Ar condicionado
+              - listitem [ref=f47e330]:
+                - generic [ref=f47e331]:
+                  - checkbox "Armários embutidos" [ref=f47e332]
+                  - link [aria-hidden] [ref=f47e335] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-roupeiros-embutidos/
+                    - text: Armários embutidos
+              - listitem [ref=f47e336]:
+                - generic [ref=f47e337]:
+                  - checkbox "Elevador" [ref=f47e338]
+                  - link [aria-hidden] [ref=f47e341] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-elevador/
+                    - text: Elevador
+              - listitem [ref=f47e342]:
+                - tree [ref=f47e343]:
+                  - generic [ref=f47e344]:
+                    - generic [ref=f47e345]:
+                      - checkbox "Varanda e terraço" [ref=f47e346]
+                      - generic [ref=f47e348] [cursor=pointer]:
+                        - link [aria-hidden]:
+                          - /url: /arrendar-casas/lisboa-distrito/com-terraco-e-varanda/
+                          - text: Varanda e terraço
+                    - button " Ver outros filtros" [ref=f47e349] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f47e350]: Ver outros filtros
+              - listitem [ref=f47e351]:
+                - generic [ref=f47e352]:
+                  - checkbox "Lugar de garagem" [ref=f47e353]
+                  - link [aria-hidden] [ref=f47e356] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-garagem/
+                    - text: Lugar de garagem
+              - listitem [ref=f47e357]:
+                - generic [ref=f47e358]:
+                  - checkbox "Jardim" [ref=f47e359]
+                  - link [aria-hidden] [ref=f47e362] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-jardim/
+                    - text: Jardim
+              - listitem [ref=f47e363]:
+                - generic [ref=f47e364]:
+                  - checkbox "Piscina" [ref=f47e365]
+                  - link [aria-hidden] [ref=f47e368] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-piscina/
+                    - text: Piscina
+              - listitem [ref=f47e369]:
+                - generic [ref=f47e370]:
+                  - checkbox "Arrecadação" [ref=f47e371]
+                  - link [aria-hidden] [ref=f47e374] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-arrecadacao/
+                    - text: Arrecadação
+              - listitem [ref=f47e375]:
+                - generic [ref=f47e376]:
+                  - checkbox "Casa adaptada" [ref=f47e377]
+                  - link [aria-hidden] [ref=f47e380] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-adaptados/
+                    - text: Casa adaptada
+              - listitem [ref=f47e381]:
+                - generic [ref=f47e382]:
+                  - checkbox "Casa de luxo" [ref=f47e383]
+                  - link [aria-hidden] [ref=f47e386] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-luxo/
+                    - text: Casa de luxo
+              - listitem [ref=f47e387]:
+                - generic [ref=f47e388]:
+                  - checkbox "Vista mar" [ref=f47e389]
+                  - link [aria-hidden] [ref=f47e392] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-vista-mar/
+                    - text: Vista mar
+          - generic [ref=f47e393]:
+            - heading "Andar" [level=3] [ref=f47e394]
+            - list [ref=f47e395]:
+              - listitem [ref=f47e396]:
+                - generic [ref=f47e397]:
+                  - checkbox "Último andar" [ref=f47e398]
+                  - link [aria-hidden] [ref=f47e401] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-ultimo-andar/
+                    - text: Último andar
+              - listitem [ref=f47e402]:
+                - generic [ref=f47e403]:
+                  - checkbox "Andares intermédios" [ref=f47e404]
+                  - link [aria-hidden] [ref=f47e407] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-andares-intermedios/
+                    - text: Andares intermédios
+              - listitem [ref=f47e408]:
+                - generic [ref=f47e409]:
+                  - checkbox "Rés do chão" [ref=f47e410]
+                  - link [aria-hidden] [ref=f47e413] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-res-do-chao/
+                    - text: Rés do chão
+          - generic [ref=f47e414]:
+            - heading [level=3] [ref=f47e415]:
+              - text: Eficiência energética
+              - button "Mais informação sobre certificado energético" [ref=f47e416] [cursor=pointer]: 亂 
+            - list [ref=f47e417]:
+              - listitem [ref=f47e418]:
+                - generic [ref=f47e419]:
+                  - checkbox "Alta" [ref=f47e420]
+                  - link [aria-hidden] [ref=f47e423] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-eficiencia-energetica-alta/
+                    - text: Alta
+              - listitem [ref=f47e424]:
+                - generic [ref=f47e425]:
+                  - checkbox "Média" [ref=f47e426]
+                  - link [aria-hidden] [ref=f47e429] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-eficiencia-energetica-media/
+                    - text: Média
+              - listitem [ref=f47e430]:
+                - generic [ref=f47e431]:
+                  - checkbox "Baixa" [ref=f47e432]
+                  - link [aria-hidden] [ref=f47e435] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-eficiencia-energetica-baixa/
+                    - text: Baixa
+          - generic [ref=f47e436]:
+            - heading "Multimédia" [level=3] [ref=f47e437]
+            - list [ref=f47e438]:
+              - listitem [ref=f47e439]:
+                - generic [ref=f47e440]:
+                  - checkbox "Com planta" [ref=f47e441]
+                  - generic [ref=f47e442] [cursor=pointer]: Com planta
+              - listitem [ref=f47e444]:
+                - generic [ref=f47e445]:
+                  - checkbox "Com visita virtual" [ref=f47e446]
+                  - generic [ref=f47e447] [cursor=pointer]: Com visita virtual
+          - generic [ref=f47e449]:
+            - heading "Tipo de anunciante" [level=3] [ref=f47e450]
+            - list [ref=f47e451]:
+              - listitem [ref=f47e452]:
+                - generic [ref=f47e453]:
+                  - checkbox "De bancos" [ref=f47e454]
+                  - link [aria-hidden] [ref=f47e457] [cursor=pointer]:
+                    - /url: /arrendar-casas/lisboa-distrito/com-da-banca/
+                    - text: De bancos
+          - group "Publicado no idealista" [ref=f47e458]:
+            - list [ref=f47e460]:
+              - listitem [ref=f47e461]:
+                - generic [ref=f47e462]:
+                  - radio "Indiferente" [checked] [ref=f47e463]
+                  - generic [ref=f47e464] [cursor=pointer]: Indiferente
+              - listitem [ref=f47e466]:
+                - generic [ref=f47e467]:
+                  - radio "Nas últimas 24 horas" [ref=f47e468]
+                  - generic [ref=f47e469] [cursor=pointer]: Nas últimas 24 horas
+              - listitem [ref=f47e471]:
+                - generic [ref=f47e472]:
+                  - radio "Na última semana" [ref=f47e473]
+                  - generic [ref=f47e474] [cursor=pointer]: Na última semana
+              - listitem [ref=f47e476]:
+                - generic [ref=f47e477]:
+                  - radio "No último mês" [ref=f47e478]
+                  - generic [ref=f47e479] [cursor=pointer]: No último mês
+        - text: 
+    - group [ref=f47e481]:
+      - generic [ref=f47e482]: "Ordenar:"
+      - list [ref=f47e483]:
+        - listitem [ref=f47e484]:
+          - generic [ref=f47e485] [cursor=pointer]: Por relevância
+        - listitem [ref=f47e486]:
+          - link "Baratos" [ref=f47e487] [cursor=pointer]:
+            - /url: /arrendar-casas/lisboa-distrito/?ordem=precos-asc
+        - listitem [ref=f47e488]:
+          - link "Mais recentes" [ref=f47e489] [cursor=pointer]:
+            - /url: /arrendar-casas/lisboa-distrito/?ordem=atualizado-desc
+        - listitem [ref=f47e490]:
+          - generic [ref=f47e491] [cursor=pointer]: Mais
+    - main [ref=f47e493]:
+      - generic [ref=f47e494]:
+        - article [ref=f47e495]:
+          - generic [ref=f47e496]:
+            - generic [ref=f47e498]:
+              - generic [ref=f47e499]:
+                - button "Abrir planta" [ref=f47e500] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f47e501] [cursor=pointer]: 
+              - generic [ref=f47e502]:
+                - generic [ref=f47e503]: 1/
+                - generic [ref=f47e504]: "10"
+            - region [ref=f47e507]:
+              - generic [ref=f47e508]:
+                - button "Previous Slide" [ref=f47e509] [cursor=pointer]: 
+                - button "Next Slide" [ref=f47e510] [cursor=pointer]: 
+                - list [ref=f47e511]:
+                  - listitem [ref=f47e512]:
+                    - img "Divisão" [ref=f47e513]:
+                      - figure [ref=f47e514]:
+                        - img "Divisão" [ref=f47e516]
+                    - img "Cozinha" [ref=f47e517]:
+                      - figure [ref=f47e518]:
+                        - img "Cozinha" [ref=f47e520]
+                    - img "Mapa da zona" [ref=f47e521]:
+                      - generic [ref=f47e523]:
+                        - generic [ref=f47e524]:
+                          - generic [ref=f47e525]: 亂
+                          - generic [ref=f47e526]: Localização aproximada.
+                        - img "Mapa de localização do imóvel" [ref=f47e528]
+            - text:  
+          - generic [ref=f47e529]:
+            - heading "Apartamento T2 na Rua de Cascais, Centro, Alcabideche" [level=2] [ref=f47e530] [cursor=pointer]
+            - generic [ref=f47e531]: 1.200€/mês
+            - generic [ref=f47e533]: T2 70 m² área bruta Rés do chão sem elevador 53 minutos
+            - paragraph [ref=f47e535]: Moradia em Condomínio no centro de Alcabideche ( T1+1 ) este imóvel localiza-se em Páteo privado. Este imóvel foi recuperado com os acabamentos dos anos 50/60', mantem a traça antiga. Além do espaço reservado conta com uma zona comum de outras pequenas moradias em fase de recuperação. A vivencia no local pretende-se
+            - generic [ref=f47e536]:
+              - button "Contactar" [ref=f47e537] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e538] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e539]: Ver telefone
+              - button "" [ref=f47e540] [cursor=pointer]
+              - button "" [ref=f47e541] [cursor=pointer]
+        - article [ref=f47e542]:
+          - generic [ref=f47e543]:
+            - generic [ref=f47e545]:
+              - button "Abrir mapa" [ref=f47e547] [cursor=pointer]: 
+              - generic [ref=f47e548]:
+                - generic [ref=f47e549]: 1/
+                - generic [ref=f47e550]: "23"
+            - region [ref=f47e553]:
+              - generic [ref=f47e554]:
+                - button "Previous Slide" [ref=f47e555] [cursor=pointer]: 
+                - button "Next Slide" [ref=f47e556] [cursor=pointer]: 
+                - list [ref=f47e557]:
+                  - listitem [ref=f47e558]:
+                    - img "Sala de estar" [ref=f47e559]:
+                      - figure [ref=f47e560]:
+                        - img "Sala de estar" [ref=f47e562]
+                    - img "Sala de estar" [ref=f47e563]:
+                      - figure [ref=f47e564]:
+                        - img "Sala de estar" [ref=f47e566]
+                    - img "Mapa da zona" [ref=f47e567]:
+                      - generic [ref=f47e569]:
+                        - generic [ref=f47e570]:
+                          - generic [ref=f47e571]: 亂
+                          - generic [ref=f47e572]: Localização aproximada.
+                        - img "Mapa de localização do imóvel" [ref=f47e574]
+            - text: 
+          - generic [ref=f47e575]:
+            - heading "Apartamento T2 no Bairro de Alvalade, Alvalade" [level=2] [ref=f47e576] [cursor=pointer]
+            - generic [ref=f47e577]:
+              - generic [ref=f47e578]: 1.450€/mês
+              - generic [ref=f47e579]: 1.550 € 6%
+            - generic [ref=f47e580]: T2 85 m² área bruta 2º andar sem elevador
+            - paragraph [ref=f47e582]: T2 de 80 m², totalmente renovado, mobilado e equipado, situado na Avenida de Roma, no coração de Alvalade. POR FAVOR, LEIA O ANÚNCIO ATÉ AO FIM ANTES DE CONTACTAR. Só respondemos a candidaturas com o PERFIL COMPLETO no Idealista, incluindo o número de pessoas do agregado familiar e os rendimentos reais do grupo. DE
+            - generic [ref=f47e583]:
+              - button "Contactar" [ref=f47e584] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e585] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e586]: Ver telefone
+              - button "" [ref=f47e587] [cursor=pointer]
+              - button "" [ref=f47e588] [cursor=pointer]
+        - article [ref=f47e589]:
+          - generic [ref=f47e590]:
+            - generic [ref=f47e592]:
+              - button "Abrir mapa" [ref=f47e594] [cursor=pointer]: 
+              - generic [ref=f47e595]:
+                - generic [ref=f47e596]: 1/
+                - generic [ref=f47e597]: "11"
+            - region [ref=f47e600]:
+              - generic [ref=f47e601]:
+                - button "Previous Slide" [ref=f47e602] [cursor=pointer]: 
+                - button "Next Slide" [ref=f47e603] [cursor=pointer]: 
+                - list [ref=f47e604]:
+                  - listitem [ref=f47e605]:
+                    - img "Sala de estar" [ref=f47e606]:
+                      - figure [ref=f47e607]:
+                        - img "Sala de estar" [ref=f47e609]
+                    - img "Foto" [ref=f47e610]:
+                      - figure [ref=f47e611]:
+                        - img "Foto" [ref=f47e613]
+                    - img "Mapa da zona" [ref=f47e614]:
+                      - generic [ref=f47e616]:
+                        - generic [ref=f47e617]:
+                          - generic [ref=f47e618]: 亂
+                          - generic [ref=f47e619]: Localização aproximada.
+                        - img "Mapa de localização do imóvel" [ref=f47e621]
+            - text: 
+          - generic [ref=f47e622]:
+            - heading "Apartamento T1 na Rua Alfredo Roque Gameiro, Entrecampos, Avenidas Novas" [level=2] [ref=f47e623] [cursor=pointer]
+            - generic [ref=f47e624]: 990€/mês
+            - generic [ref=f47e626]: T1 60 m² área bruta Rés do chão sem elevador 54 minutos
+            - paragraph [ref=f47e628]: T1 espaçoso junto à Praça de Espanha / Hospital de Santa Maria Apartamento no rés do chão de um prédio de placa, com muita luz e bem situado, com transportes à porta e estacionamento exclusivo para residentes. A casa está totalmente mobilada e equipada, pronta a habitar. Não aceito agências. SÓ PARTICULARES.
+            - generic [ref=f47e629]:
+              - button "Contactar" [ref=f47e630] [cursor=pointer]
+              - button "" [ref=f47e631] [cursor=pointer]
+              - button "" [ref=f47e632] [cursor=pointer]
+        - article "Espaço publicitário"
+        - article [ref=f47e633]:
+          - generic [ref=f47e634]:
+            - generic [ref=f47e636]:
+              - button "Abrir mapa" [ref=f47e638] [cursor=pointer]: 
+              - generic [ref=f47e639]:
+                - generic [ref=f47e640]: 1/
+                - generic [ref=f47e641]: "16"
+            - region [ref=f47e644]:
+              - generic [ref=f47e645]:
+                - button "Previous Slide" [ref=f47e646] [cursor=pointer]: 
+                - button "Next Slide" [ref=f47e647] [cursor=pointer]: 
+                - list [ref=f47e648]:
+                  - listitem [ref=f47e649]:
+                    - img "Fachada" [ref=f47e650]:
+                      - figure [ref=f47e651]:
+                        - img "Fachada" [ref=f47e653]
+                    - img "Cozinha" [ref=f47e654]:
+                      - figure [ref=f47e655]:
+                        - img "Cozinha" [ref=f47e657]
+                    - img "Mapa da zona" [ref=f47e658]:
+                      - generic [ref=f47e660]:
+                        - generic [ref=f47e661]:
+                          - generic [ref=f47e662]: 亂
+                          - generic [ref=f47e663]: Localização aproximada.
+                        - img "Mapa de localização do imóvel" [ref=f47e665]
+            - text: 
+          - generic [ref=f47e666]:
+            - heading "Apartamento T2 no Beato" [level=2] [ref=f47e667] [cursor=pointer]
+            - generic [ref=f47e668]: 1.500€/mês
+            - generic [ref=f47e670]: T2 78 m² área bruta 8º andar com elevador
+            - paragraph [ref=f47e672]: T2 luminoso com vista rio, garagem e arrecadação — Lisboa Disponível para arrendamento imediato. Apartamento T2 muito luminoso, com vista desafogada sobre o rio em todas as janelas e na varanda. Orientação Nascente/Sul/Poente, garantindo excelente luz natural ao longo do dia. Inserido em edifício moderno de 2005, co
+            - generic [ref=f47e673]:
+              - button "Contactar" [ref=f47e674] [cursor=pointer]
+              - button "" [ref=f47e675] [cursor=pointer]
+              - button "" [ref=f47e676] [cursor=pointer]
+        - article [ref=f47e677]:
+          - generic [ref=f47e678]:
+            - generic [ref=f47e680]:
+              - generic [ref=f47e681]:
+                - button "Abrir planta" [ref=f47e682] [cursor=pointer]: 
+                - button "Abrir vídeo" [ref=f47e683] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f47e684] [cursor=pointer]: 
+              - generic [ref=f47e685]:
+                - generic [ref=f47e686]: 1/
+                - generic [ref=f47e687]: "49"
+            - generic [ref=f47e693] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e695]
+            - text:   
+          - generic [ref=f47e697]:
+            - link [ref=f47e699] [cursor=pointer]:
+              - /url: /pro/ariamedimob/
+              - img "Aria Real Estate" [ref=f47e700]
+            - heading "Apartamento T5 na Alameda Dom Afonso Henriques, Bairro dos Actores, Areeiro" [level=2] [ref=f47e701] [cursor=pointer]
+            - generic [ref=f47e702]: 4.550€/mês
+            - generic [ref=f47e704]: T5 240 m² área bruta 5º andar com elevador 1 hora
+            - paragraph [ref=f47e706]: APARTAMENTO PRIME - ELEGANTE E MAJESTOSO T5, com 7 assoalhadas, em local nobre no centro de Lisboa. Localizado no coração de Lisboa, local histórico, frente a um belo jardim de 5000m2, coroado pela a majestosa e monumental fonte Luminosa, criado em homenagem ao primeiro Rei de Portugal. Um bairro dinâmico e cosmopol
+            - generic [ref=f47e707]: De luxo
+            - generic [ref=f47e709]:
+              - button "Contactar" [ref=f47e710] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e711] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e712]: Ver telefone
+              - button "" [ref=f47e713] [cursor=pointer]
+              - button "" [ref=f47e714] [cursor=pointer]
+        - article [ref=f47e715]:
+          - generic [ref=f47e716]:
+            - generic [ref=f47e718]:
+              - button "Abrir mapa" [ref=f47e720] [cursor=pointer]: 
+              - generic [ref=f47e721]:
+                - generic [ref=f47e722]: 1/
+                - generic [ref=f47e723]: "12"
+            - generic [ref=f47e729] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e731]
+            - text: 
+          - generic [ref=f47e733]:
+            - heading "Penthouse no Saldanha - Picoas, Arroios" [level=2] [ref=f47e734] [cursor=pointer]
+            - generic [ref=f47e735]: 2.950€/mês
+            - generic [ref=f47e737]: T6 300 m² área bruta Rés do chão sem elevador
+            - paragraph [ref=f47e739]: "**Apartamento T6 no Centro de Lisboa (Saldanha) + 2 Arrecadações** Disponível a partir de 1 de janeiro para arrendamento de longa duração, com possibilidade de entrada antecipada, ainda antes do Natal. Apartamento espaçoso e cheio de personalidade, com pé-direito alto e divisões amplas, inserido num edifício tradicio"
+            - generic [ref=f47e740]: Arrendamento temporário
+            - generic [ref=f47e742]:
+              - button "Contactar" [ref=f47e743] [cursor=pointer]
+              - button "" [ref=f47e744] [cursor=pointer]
+              - button "" [ref=f47e745] [cursor=pointer]
+        - article [ref=f47e746]:
+          - generic [ref=f47e747]:
+            - generic [ref=f47e749]:
+              - generic [ref=f47e750]:
+                - button "Abrir planta" [ref=f47e751] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f47e752] [cursor=pointer]: 
+              - generic [ref=f47e753]:
+                - generic [ref=f47e754]: 1/
+                - generic [ref=f47e755]: "32"
+            - generic [ref=f47e761] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e763]
+            - text:  
+          - generic [ref=f47e765]:
+            - link [ref=f47e767] [cursor=pointer]:
+              - /url: /pro/ithlux-int/
+              - img "ITHLUX- New Real Estate Concept" [ref=f47e768]
+            - heading "Apartamento T3 nas Laranjeiras, São Domingos de Benfica" [level=2] [ref=f47e769] [cursor=pointer]
+            - generic [ref=f47e770]: 2.000€/mês
+            - generic [ref=f47e772]: Garagem incluída T3 156 m² área bruta 1º andar com elevador 1 hora
+            - paragraph [ref=f47e774]: Num dos quarteirões mais discretos e procurados de Lisboa, entre as Laranjeiras e o Parque Florestal de Monsanto, apresentamos este apartamento T3 para arrendamento, instalado num prédio clássico de traça senhorial com 17 pisos. Com uma área total de 156 m² distribuídos por 4 divisões assoalhadas, o imóvel oferece sal
+            - generic [ref=f47e775]:
+              - button "Contactar" [ref=f47e776] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e777] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e778]: Ver telefone
+              - button "" [ref=f47e779] [cursor=pointer]
+              - button "" [ref=f47e780] [cursor=pointer]
+        - article [ref=f47e781]:
+          - generic [ref=f47e782]:
+            - generic [ref=f47e784]:
+              - button "Abrir mapa" [ref=f47e786] [cursor=pointer]: 
+              - generic [ref=f47e787]:
+                - generic [ref=f47e788]: 1/
+                - generic [ref=f47e789]: "15"
+            - generic [ref=f47e795] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e797]
+            - text: 
+          - generic [ref=f47e799]:
+            - heading "Apartamento T1 na Rua Nova do Desterro, 16, Anjos, Arroios" [level=2] [ref=f47e800] [cursor=pointer]
+            - generic [ref=f47e801]: 1.250€/mês
+            - generic [ref=f47e803]: T1 45 m² área bruta 3º andar sem elevador
+            - paragraph [ref=f47e805]: T1 Luminoso e equipado, com CONTAS inclusas, a 5 Minutos do Jardim Mártires da Pátria e Largo do Intendente - Rua Nova do Desterro Apartamento T1 renovado com 45 m², inserido num edifício de traça antiga datado de 1920, em pleno centro de Lisboa, a poucos passos do Jardim Mártires da Pátria e do Largo do Intendente (M
+            - generic [ref=f47e806]:
+              - button "Contactar" [ref=f47e807] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e808] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e809]: Ver telefone
+              - button "" [ref=f47e810] [cursor=pointer]
+              - button "" [ref=f47e811] [cursor=pointer]
+        - article [ref=f47e812]:
+          - generic [ref=f47e813]:
+            - generic [ref=f47e815]:
+              - button "Abrir mapa" [ref=f47e817] [cursor=pointer]: 
+              - generic [ref=f47e818]:
+                - generic [ref=f47e819]: 1/
+                - generic [ref=f47e820]: "5"
+            - generic [ref=f47e826] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e828]
+            - text: 
+          - generic [ref=f47e830]:
+            - heading "Apartamento T1 na Rua do Poço dos Negros, 193, Cais do Sodré - Santos, Misericórdia" [level=2] [ref=f47e831] [cursor=pointer]
+            - generic [ref=f47e832]: 1.000€/mês
+            - generic [ref=f47e834]: T1 40 m² área bruta 3º andar sem elevador 1 hora
+            - paragraph [ref=f47e836]: Este apartamento é perfeito para pessoas que gostam de se divertir e procuram um bairro encantador, cheio de estilo e personalidade. Além disso, nunca mais se vai atrasar, uma vez que a estação de metro do Cais do Sodré fica apenas a 12 minutos de distância.
+            - generic [ref=f47e837]:
+              - button "Contactar" [ref=f47e838] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e839] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e840]: Ver telefone
+              - button "" [ref=f47e841] [cursor=pointer]
+              - button "" [ref=f47e842] [cursor=pointer]
+        - article [ref=f47e843]:
+          - generic [ref=f47e844]:
+            - generic [ref=f47e846]:
+              - button "Abrir mapa" [ref=f47e848] [cursor=pointer]: 
+              - generic [ref=f47e849]:
+                - generic [ref=f47e850]: 1/
+                - generic [ref=f47e851]: "14"
+            - generic [ref=f47e857] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e859]
+            - text: 
+          - generic [ref=f47e861]:
+            - heading "Apartamento T4 na Avenida António Enes, 37, Centro de Queluz, Queluz" [level=2] [ref=f47e862] [cursor=pointer]
+            - generic [ref=f47e863]: 1.600€/mês
+            - generic [ref=f47e865]: T4 151 m² área bruta Sub cave sem elevador
+            - paragraph [ref=f47e867]: O apartamento está todo remodelado e mobilado. - Cozinha equipada com frigorifico combinado, máquina de lavar roupa, forno, micro-ondas, placa de indução, tábua de passar a ferro, ferro de engomar - Sala de Estar com TV LED - 2Wcs - 4 Quartos ( 3 Quarto cama casal; 1 Quarto cama solteiro) Loiça de cozinhar, loiça de
+            - generic [ref=f47e868]:
+              - button "Contactar" [ref=f47e869] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e870] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e871]: Ver telefone
+              - button "" [ref=f47e872] [cursor=pointer]
+              - button "" [ref=f47e873] [cursor=pointer]
+        - article [ref=f47e874]:
+          - generic [ref=f47e875]:
+            - generic [ref=f47e877]:
+              - generic [ref=f47e878]:
+                - button "Abrir vídeo" [ref=f47e879] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f47e880] [cursor=pointer]: 
+              - generic [ref=f47e881]:
+                - generic [ref=f47e882]: 1/
+                - generic [ref=f47e883]: "28"
+            - generic [ref=f47e889] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e891]
+            - text:  
+          - generic [ref=f47e893]:
+            - link [ref=f47e895] [cursor=pointer]:
+              - /url: /pro/live-in-lisbon/
+              - img "Live in Lisbon" [ref=f47e896]
+            - heading "Apartamento T1 na Rua Jau, Alto de Santo Amaro, Alcântara" [level=2] [ref=f47e897] [cursor=pointer]
+            - generic [ref=f47e898]: 1.150€/mês
+            - generic [ref=f47e900]: T1 45 m² área bruta 3º andar com elevador 1 hora
+            - paragraph [ref=f47e902]: Acordar com a Ponte 25 de Abril à janela do quarto e levar o pequeno-almoço para a varanda da sala, com as árvores à frente. É assim este T1 num 3. º andar com elevador, no Alto de Santo Amaro, em Alcântara. São 40 m² com orientação sul e nascente, e a varanda apanha o sol da tarde. O QUE VAI ENCONTRAR - Cozinha tota
+            - generic [ref=f47e903]:
+              - button "Contactar" [ref=f47e904] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e905] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e906]: Ver telefone
+              - button "" [ref=f47e907] [cursor=pointer]
+              - button "" [ref=f47e908] [cursor=pointer]
+        - article [ref=f47e909]:
+          - generic [ref=f47e910]:
+            - generic [ref=f47e912]:
+              - button "Abrir mapa" [ref=f47e914] [cursor=pointer]: 
+              - generic [ref=f47e915]:
+                - generic [ref=f47e916]: 1/
+                - generic [ref=f47e917]: "9"
+            - generic [ref=f47e923] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e925]
+            - text: 
+          - generic [ref=f47e927]:
+            - heading "Herdade na Rua da Sede, 15, Aveiras de Baixo" [level=2] [ref=f47e928] [cursor=pointer]
+            - generic [ref=f47e929]: 1.300€/mês
+            - generic [ref=f47e931]: Garagem incluída T3 2.500 m² área bruta lote de 1.400 m²
+            - paragraph [ref=f47e933]: ARRENDA-SE! Temporariamente! 17 OUTUBRO até 30 MAIO. Podem ver a moradia na minha página Moradia privada com piscina situadas em Azambuja, disponível para alugar entre as datas -17 Outubro ate 30 Maio. Contas INCLUÍDAS, menos a garrafa do gaz. Depois são casas para férias! Podem ver a moradia na minha página no FACEB
+            - generic [ref=f47e934]: Arrendamento temporário
+            - generic [ref=f47e936]:
+              - button "Contactar" [ref=f47e937] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e938] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e939]: Ver telefone
+              - button "" [ref=f47e940] [cursor=pointer]
+              - button "" [ref=f47e941] [cursor=pointer]
+        - article [ref=f47e942]:
+          - generic [ref=f47e943]:
+            - generic [ref=f47e945]:
+              - generic [ref=f47e946]:
+                - button "Abrir planta" [ref=f47e947] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f47e948] [cursor=pointer]: 
+              - generic [ref=f47e949]:
+                - generic [ref=f47e950]: 1/
+                - generic [ref=f47e951]: "27"
+            - generic [ref=f47e957] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e959]
+            - text:  
+          - generic [ref=f47e961]:
+            - link [ref=f47e963] [cursor=pointer]:
+              - /url: /pro/kwexclusive/
+              - img "KW Exclusive" [ref=f47e964]
+            - heading "Apartamento T3 na Rua José Lins do Rego, Bairro de Alvalade, Alvalade" [level=2] [ref=f47e965] [cursor=pointer]
+            - generic [ref=f47e966]: 1.650€/mês
+            - generic [ref=f47e968]: Garagem incluída T3 117 m² área bruta sem elevador 1 hora
+            - paragraph [ref=f47e970]: Apartamento T3 no coração de Alvalade com 92m2 ABP + 25 m2 de varandas e uma luminosidade incrível. Ideal para famílias que privilegiem morar no coração do bairro de Alvalade, perto dos jardins do Campo Grande, Universidades, boa rede de transportes púbicos e num prédio familiar em que me mantém a tradição de boa e co
+            - generic [ref=f47e971]:
+              - button "Contactar" [ref=f47e972] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e973] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e974]: Ver telefone
+              - button "" [ref=f47e975] [cursor=pointer]
+              - button "" [ref=f47e976] [cursor=pointer]
+        - article [ref=f47e977]:
+          - generic [ref=f47e978]:
+            - generic [ref=f47e980]:
+              - button "Abrir mapa" [ref=f47e982] [cursor=pointer]: 
+              - generic [ref=f47e983]:
+                - generic [ref=f47e984]: 1/
+                - generic [ref=f47e985]: "31"
+            - generic [ref=f47e991] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e993]
+            - text: 
+          - generic [ref=f47e995]:
+            - link [ref=f47e997] [cursor=pointer]:
+              - /url: /pro/househack-realestate/
+              - img "House Hack" [ref=f47e998]
+            - heading "Apartamento T2 na Rua Ribeira dos Bogueiros, Parque de Palmela - Ribeira das Vinhas, Cascais e Estoril" [level=2] [ref=f47e999] [cursor=pointer]
+            - generic [ref=f47e1000]: 2.250€/mês
+            - generic [ref=f47e1002]: Garagem incluída T2 163 m² área bruta 1º andar com elevador
+            - paragraph [ref=f47e1004]: T2 com amplas varandas e garagem | Cascais, a 15 minutos a pé do mar Apartamento T2 com 104,5 m² de área bruta privativa, amplas varandas, ar condicionado, garagem e arrecadação, localizado numa zona residencial tranquila de Cascais, a apenas 15 minutos a pé do mar e a poucos minutos do centro da vila. A localização
+            - generic [ref=f47e1005]:
+              - button "Contactar" [ref=f47e1006] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1007] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1008]: Ver telefone
+              - button "" [ref=f47e1009] [cursor=pointer]
+              - button "" [ref=f47e1010] [cursor=pointer]
+        - article [ref=f47e1011]:
+          - generic [ref=f47e1012]:
+            - generic [ref=f47e1014]:
+              - button "Abrir mapa" [ref=f47e1016] [cursor=pointer]: 
+              - generic [ref=f47e1017]:
+                - generic [ref=f47e1018]: 1/
+                - generic [ref=f47e1019]: "21"
+            - generic [ref=f47e1025] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1027]
+            - text: 
+          - generic [ref=f47e1029]:
+            - link [ref=f47e1031] [cursor=pointer]:
+              - /url: /pro/kw-area/
+              - img "KW AREA" [ref=f47e1032]
+            - heading "Duplex no Beco do Surra, Alfama, Santa Maria Maior" [level=2] [ref=f47e1033] [cursor=pointer]
+            - generic [ref=f47e1034]: 1.950€/mês
+            - generic [ref=f47e1036]: T2 83 m² área bruta sem elevador 1 hora
+            - paragraph [ref=f47e1038]: Em pleno coração de Alfama, este T2 duplex com vista rio é a oportunidade ideal para quem procura viver no bairro mais autêntico de Lisboa, com todo o conforto e pronto a habitar. Distribuído por dois pisos, o apartamento tem uma organização funcional que separa as zonas social e privada. Tem dois quartos e duas casas
+            - generic [ref=f47e1039]:
+              - button "Contactar" [ref=f47e1040] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1041] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1042]: Ver telefone
+              - button "" [ref=f47e1043] [cursor=pointer]
+              - button "" [ref=f47e1044] [cursor=pointer]
+        - article [ref=f47e1045]:
+          - generic [ref=f47e1046]:
+            - generic [ref=f47e1048]:
+              - button "Abrir mapa" [ref=f47e1050] [cursor=pointer]: 
+              - generic [ref=f47e1051]:
+                - generic [ref=f47e1052]: 1/
+                - generic [ref=f47e1053]: "9"
+            - generic [ref=f47e1059] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1061]
+            - text: 
+          - generic [ref=f47e1063]:
+            - heading "Apartamento T2 na Rua António Luís Inácio, 55, Bairro dos Actores - Barão Sabrosa, Penha de França" [level=2] [ref=f47e1064] [cursor=pointer]
+            - generic [ref=f47e1065]:
+              - generic [ref=f47e1066]: 1.300€/mês
+              - generic [ref=f47e1067]: 1.400 € 7%
+            - generic [ref=f47e1068]: T2 65 m² área bruta Rés do chão sem elevador 3 horas
+            - paragraph [ref=f47e1070]: Arrenda-se apartamento mobilado com dois quartos, individuais, com 12m2 cada, com uma casa de banho, cozinha e sala. A cozinha dispõe de arrumação, frigorífico, placa e microondas. Casa completamente renovada com bastante iluminação natural. Localiza-se perto das Olaias, com metro e meios de transporte acessíveis.
+            - generic [ref=f47e1071]:
+              - button "Contactar" [ref=f47e1072] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1073] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1074]: Ver telefone
+              - button "" [ref=f47e1075] [cursor=pointer]
+              - button "" [ref=f47e1076] [cursor=pointer]
+        - article [ref=f47e1077]:
+          - generic [ref=f47e1078]:
+            - generic [ref=f47e1080]:
+              - generic [ref=f47e1081]:
+                - button "Abrir vídeo" [ref=f47e1082] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f47e1083] [cursor=pointer]: 
+              - generic [ref=f47e1084]:
+                - generic [ref=f47e1085]: 1/
+                - generic [ref=f47e1086]: "34"
+            - generic [ref=f47e1092] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1094]
+            - text:  
+          - generic [ref=f47e1096]:
+            - heading "Apartamento T1 na Rua Bernardo Lima, 50, Av. da Liberdade - Marquês de Pombal, Santo António" [level=2] [ref=f47e1097] [cursor=pointer]
+            - generic [ref=f47e1098]: 2.100€/mês
+            - generic [ref=f47e1100]: Garagem incluída T1 64 m² área bruta 4º andar com elevador 1 hora
+            - paragraph [ref=f47e1102]: "** Disponível a partir de 05 Jan 2027 ** Apartamento T1 para alugar entre Marquês Pombal e Saldanha Apartamento T1, novo, com estacionamento e 2 elevadores. Localizado em Bernardo Lima, Coração de Jesus, em Lisboa. O apartamento é composto por um quarto, cozinha totalmente equipada, sala e casa de banho. Ótima exposi"
+            - generic [ref=f47e1103]:
+              - button "Contactar" [ref=f47e1104] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1105] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1106]: Ver telefone
+              - button "" [ref=f47e1107] [cursor=pointer]
+              - button "" [ref=f47e1108] [cursor=pointer]
+        - article [ref=f47e1109]:
+          - generic [ref=f47e1110]:
+            - generic [ref=f47e1112]:
+              - button "Abrir mapa" [ref=f47e1114] [cursor=pointer]: 
+              - generic [ref=f47e1115]:
+                - generic [ref=f47e1116]: 1/
+                - generic [ref=f47e1117]: "30"
+            - generic [ref=f47e1123] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1125]
+            - text: 
+          - generic [ref=f47e1127]:
+            - heading "Apartamento T0 na Rua José Estêvão, 19 a, Estefânia, Arroios" [level=2] [ref=f47e1128] [cursor=pointer]
+            - generic [ref=f47e1129]: 1.250€/mês
+            - generic [ref=f47e1131]:
+              - generic [ref=f47e1132]: Garagem opc. 150 €/mês
+              - text: T0 55 m² área bruta 1º andar sem elevador
+            - paragraph [ref=f47e1134]: 5 APARTMENTS AVAILABLE IN THE SAME UNIT FROM DEZEMBER 2026 (SHORT TERM, MAXIMUM ONE YEAR) SÓ UM APARTAMENTO DISPONÍVEL PARA NOVEMBRO Unidade com 5 apartamentos T1 localizados num pátio muito tranquilo na área da Estefânia. Os apartamentos variam de tamanho desde os 50m2 até os 65m2. Os apartamentos estão mobilados, têm
+            - generic [ref=f47e1135]: Arrendamento temporário
+            - generic [ref=f47e1137]:
+              - button "Contactar" [ref=f47e1138] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1139] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1140]: Ver telefone
+              - button "" [ref=f47e1141] [cursor=pointer]
+              - button "" [ref=f47e1142] [cursor=pointer]
+        - article "Espaço publicitário"
+        - article [ref=f47e1143]:
+          - generic [ref=f47e1144]:
+            - generic [ref=f47e1146]:
+              - button "Abrir mapa" [ref=f47e1148] [cursor=pointer]: 
+              - generic [ref=f47e1149]:
+                - generic [ref=f47e1150]: 1/
+                - generic [ref=f47e1151]: "21"
+            - generic [ref=f47e1157] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1159]
+            - text: 
+          - generic [ref=f47e1161]:
+            - link [ref=f47e1163] [cursor=pointer]:
+              - /url: /pro/jorgemoura/
+              - img "JM Imobiliária" [ref=f47e1164]
+            - heading "Andar de moradia na Rua Poço, Galiza, Cascais e Estoril" [level=2] [ref=f47e1165] [cursor=pointer]
+            - generic [ref=f47e1166]: 2.000€/mês
+            - generic [ref=f47e1168]: T3 100 m² área bruta 1º andar 1 hora
+            - paragraph [ref=f47e1170]: Ref. MOD2648 Excelente andar de moradia T3, situado numa zona residencial muito tranquila do Estoril, numa rua com pouco trânsito, ideal para quem procura qualidade de vida, conforto e sossego, sem abdicar da proximidade dos principais acessos e serviços. O imóvel encontra-se inserido numa moradia de apenas 2 pisos e
+            - generic [ref=f47e1171]:
+              - button "Contactar" [ref=f47e1172] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1173] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1174]: Ver telefone
+              - button "" [ref=f47e1175] [cursor=pointer]
+              - button "" [ref=f47e1176] [cursor=pointer]
+        - article [ref=f47e1177]:
+          - generic [ref=f47e1178]:
+            - generic [ref=f47e1180]:
+              - button "Abrir mapa" [ref=f47e1182] [cursor=pointer]: 
+              - generic [ref=f47e1183]:
+                - generic [ref=f47e1184]: 1/
+                - generic [ref=f47e1185]: "11"
+            - generic [ref=f47e1191] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1193]
+            - text: 
+          - generic [ref=f47e1195]:
+            - heading "Apartamento T3 no Beco da Achada, 1, Mouraria - Castelo, Santa Maria Maior" [level=2] [ref=f47e1196] [cursor=pointer]
+            - generic [ref=f47e1197]: 1.200€/mês
+            - generic [ref=f47e1199]: T3 50 m² área bruta 2º andar sem elevador 3 horas
+            - paragraph [ref=f47e1201]: Apartamento acolhedor com vista sobre a cidade, totalmente renovada mantendo a traça original. Composto por 3 quartos, sala, cozinha e wc. Boa iluminação natural. O prédio situasse no coração de cidade, numa zona calma, com bons acessos de transportes e de estacionamento, estando a 5 mim a pé do centro da baixa de
+            - generic [ref=f47e1202]:
+              - button "Contactar" [ref=f47e1203] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1204] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1205]: Ver telefone
+              - button "" [ref=f47e1206] [cursor=pointer]
+              - button "" [ref=f47e1207] [cursor=pointer]
+        - article [ref=f47e1208]:
+          - generic [ref=f47e1209]:
+            - generic [ref=f47e1211]:
+              - button "Abrir mapa" [ref=f47e1213] [cursor=pointer]: 
+              - generic [ref=f47e1214]:
+                - generic [ref=f47e1215]: 1/
+                - generic [ref=f47e1216]: "51"
+            - generic [ref=f47e1222] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1224]
+            - text: 
+          - generic [ref=f47e1226]:
+            - link [ref=f47e1228] [cursor=pointer]:
+              - /url: /pro/arrendaquipt/
+              - img "Arrendaqui.pt" [ref=f47e1229]
+            - heading "Apartamento T2 na Rua Cidade de Estremoz, Pontinha e Famões" [level=2] [ref=f47e1230] [cursor=pointer]
+            - generic [ref=f47e1231]: 1.400€/mês
+            - generic [ref=f47e1233]: T2 90 m² área bruta 1º andar sem elevador 1 hora
+            - paragraph [ref=f47e1235]: Magnífico T2 totalmente equipado em Odivelas | Pronto a Habitar com Conforto de Luxo Descrição do Imóvel Apresentamos este magnífico apartamento T2 com 90 m², situado no 1. º andar de um edifício em Famões (Odivelas) – mais precisamente na Rua Cidade de Estremoz –, recentemente renovado e preparado para proporcionar o
+            - generic [ref=f47e1236]:
+              - button "Contactar" [ref=f47e1237] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1238] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1239]: Ver telefone
+              - button "" [ref=f47e1240] [cursor=pointer]
+              - button "" [ref=f47e1241] [cursor=pointer]
+        - article [ref=f47e1242]:
+          - generic [ref=f47e1243]:
+            - generic [ref=f47e1245]:
+              - generic [ref=f47e1246]:
+                - button "Abrir planta" [ref=f47e1247] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f47e1248] [cursor=pointer]: 
+              - generic [ref=f47e1249]:
+                - generic [ref=f47e1250]: 1/
+                - generic [ref=f47e1251]: "19"
+            - generic [ref=f47e1257] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1259]
+            - text:  
+          - generic [ref=f47e1261]:
+            - link [ref=f47e1263] [cursor=pointer]:
+              - /url: /pro/grupo-eleven/
+              - img "GRUPO ELEVEN" [ref=f47e1264]
+            - heading "Apartamento T2 na Praceta de Portugal, Quinta de São Gonçalo, Carcavelos e Parede" [level=2] [ref=f47e1265] [cursor=pointer]
+            - generic [ref=f47e1266]: 1.900€/mês
+            - generic [ref=f47e1268]: Garagem incluída T2 90 m² área bruta 3º andar com elevador
+            - paragraph [ref=f47e1270]: "Apartamento T2, num 3ºandar Quinta de São Gonçalo | Carcavelos Prédio com elevador e 1 lugar de estacionamento. A localização privilegiada, juntos New School of Business and Economics, à NATO, à St Julian’s School e praia. Zona servida de comercio e serviços, escolas e transportes. Acabamentos e equipamentos: Aque"
+            - generic [ref=f47e1271]:
+              - button "Contactar" [ref=f47e1272] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1273] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1274]: Ver telefone
+              - button "" [ref=f47e1275] [cursor=pointer]
+              - button "" [ref=f47e1276] [cursor=pointer]
+        - article [ref=f47e1277]:
+          - generic [ref=f47e1278]:
+            - generic [ref=f47e1280]:
+              - button "Abrir mapa" [ref=f47e1282] [cursor=pointer]: 
+              - generic [ref=f47e1283]:
+                - generic [ref=f47e1284]: 1/
+                - generic [ref=f47e1285]: "21"
+            - generic [ref=f47e1291] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1293]
+            - text: 
+          - generic [ref=f47e1295]:
+            - link [ref=f47e1297] [cursor=pointer]:
+              - /url: /pro/jorgemoura/
+              - img "JM Imobiliária" [ref=f47e1298]
+            - heading "Apartamento T0 no Centro, São Domingos de Rana" [level=2] [ref=f47e1299] [cursor=pointer]
+            - generic [ref=f47e1300]: 950€/mês
+            - generic [ref=f47e1302]: T0 63 m² área bruta sem elevador 1 hora
+            - paragraph [ref=f47e1304]: apt2218 Estúdio semi-mobilado e Remodelado com Terraço Privado em Tires Descubra este encantador estúdio open space, totalmente remodelado e pronto a habitar, localizado em Tires, numa zona tranquila e com excelentes acessos. Com uma disposição moderna e funcional, este imóvel oferece uma área social ampla com cerca
+            - generic [ref=f47e1305]:
+              - button "Contactar" [ref=f47e1306] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1307] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1308]: Ver telefone
+              - button "" [ref=f47e1309] [cursor=pointer]
+              - button "" [ref=f47e1310] [cursor=pointer]
+        - article [ref=f47e1311]:
+          - generic [ref=f47e1312]:
+            - generic [ref=f47e1314]:
+              - generic [ref=f47e1315]:
+                - button "Abrir planta" [ref=f47e1316] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f47e1317] [cursor=pointer]: 
+              - generic [ref=f47e1318]:
+                - generic [ref=f47e1319]: 1/
+                - generic [ref=f47e1320]: "12"
+            - generic [ref=f47e1326] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1328]
+            - text:  
+          - generic [ref=f47e1330]:
+            - link [ref=f47e1332] [cursor=pointer]:
+              - /url: /pro/grupo-eleven/
+              - img "GRUPO ELEVEN" [ref=f47e1333]
+            - heading "Apartamento T2 na Rua de Dona Estefânia, Estefânia, Arroios" [level=2] [ref=f47e1334] [cursor=pointer]
+            - generic [ref=f47e1335]: 2.350€/mês
+            - generic [ref=f47e1337]: T2 90 m² área bruta 1º andar com elevador
+            - paragraph [ref=f47e1339]: Apartamento T2, num 1º andar, na Estefânia | Arroios. Inserido em prédio com elevador, conta ainda com um terraço com cerca de 17m2. Situado numa das zonas mais centrais e bem servidas de Lisboa, a rua tem um ambiente residencial e tranquilo, está a poucos minutos a pé das Avenidas Novas, da Avenida da República e da
+            - generic [ref=f47e1340]:
+              - button "Contactar" [ref=f47e1341] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1342] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1343]: Ver telefone
+              - button "" [ref=f47e1344] [cursor=pointer]
+              - button "" [ref=f47e1345] [cursor=pointer]
+        - article [ref=f47e1346]:
+          - generic [ref=f47e1347]:
+            - generic [ref=f47e1349]:
+              - button "Abrir mapa" [ref=f47e1351] [cursor=pointer]: 
+              - generic [ref=f47e1352]:
+                - generic [ref=f47e1353]: 1/
+                - generic [ref=f47e1354]: "20"
+            - generic [ref=f47e1360] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1362]
+            - text: 
+          - generic [ref=f47e1364]:
+            - link [ref=f47e1366] [cursor=pointer]:
+              - /url: /pro/jorgemoura/
+              - img "JM Imobiliária" [ref=f47e1367]
+            - heading "Apartamento T4 no Centro de Cascais, Cascais e Estoril" [level=2] [ref=f47e1368] [cursor=pointer]
+            - generic [ref=f47e1369]: 4.800€/mês
+            - generic [ref=f47e1371]: Garagem incluída T4 250 m² área bruta 1º andar com elevador 1 hora
+            - paragraph [ref=f47e1373]: apt2679 Apartamento T3 no Monte Estoril, com jardim privativo, piscina e excelente exposição solar, localizado numa zona residencial tranquila e prestigiada, a poucos minutos da praia, da estação de comboios e de todo o comércio e serviços. Situado no 1. º piso, este magnífico apartamento destaca-se pelas suas áreas g
+            - generic [ref=f47e1374]: De luxo
+            - generic [ref=f47e1376]:
+              - button "Contactar" [ref=f47e1377] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1378] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1379]: Ver telefone
+              - button "" [ref=f47e1380] [cursor=pointer]
+              - button "" [ref=f47e1381] [cursor=pointer]
+        - article [ref=f47e1382]:
+          - generic [ref=f47e1383]:
+            - generic [ref=f47e1385]:
+              - generic [ref=f47e1386]:
+                - button "Abrir planta" [ref=f47e1387] [cursor=pointer]: 
+                - button "Abrir vídeo" [ref=f47e1388] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f47e1389] [cursor=pointer]: 
+              - generic [ref=f47e1390]:
+                - generic [ref=f47e1391]: 1/
+                - generic [ref=f47e1392]: "16"
+            - generic [ref=f47e1398] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1400]
+            - text:   
+          - generic [ref=f47e1402]:
+            - heading "Apartamento T2 na Rua das Janelas Verdes, Santos-o-Velho - Madragoa, Estrela" [level=2] [ref=f47e1403] [cursor=pointer]
+            - generic [ref=f47e1404]: 2.600€/mês
+            - generic [ref=f47e1406]: Garagem incluída T2 117 m² área bruta 2º andar com elevador
+            - paragraph [ref=f47e1408]: APARTAMENTO T2 CHEIO DE LUZ, NO CORAÇÃO DE SANTOS Descubra este apartamento T2, cuidadosamente concebido e repleto de luz natural, no coração de Santos, a poucos passos do Tejo. DESCRIÇÃO Inserido num edifício contemporâneo de 2007, este apartamento T2 beneficia de um acesso seguro através de uma entrada com porta d
+            - generic [ref=f47e1409]:
+              - button "Contactar" [ref=f47e1410] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1411] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1412]: Ver telefone
+              - button "" [ref=f47e1413] [cursor=pointer]
+              - button "" [ref=f47e1414] [cursor=pointer]
+        - article [ref=f47e1415]:
+          - generic [ref=f47e1416]:
+            - generic [ref=f47e1418]:
+              - button "Abrir mapa" [ref=f47e1420] [cursor=pointer]: 
+              - generic [ref=f47e1421]:
+                - generic [ref=f47e1422]: 1/
+                - generic [ref=f47e1423]: "12"
+            - generic [ref=f47e1429] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1431]
+            - text: 
+          - generic [ref=f47e1433]:
+            - link [ref=f47e1435] [cursor=pointer]:
+              - /url: /pro/jorgemoura/
+              - img "JM Imobiliária" [ref=f47e1436]
+            - heading "Apartamento T2 no Centro de Cascais, Cascais e Estoril" [level=2] [ref=f47e1437] [cursor=pointer]
+            - generic [ref=f47e1438]: 1.790€/mês
+            - generic [ref=f47e1440]: Garagem incluída T2 86 m² área bruta com elevador 1 hora
+            - paragraph [ref=f47e1442]: "Ref. : APT2317 T2 com vista mar, varandas, estacionamento e excelente exposição solar Cascais Apartamento T2 situado numa zona residencial tranquila e com excelentes acessibilidades, rodeada de zonas verdes e com todo o tipo de comércio e serviços nas proximidades. Com exposição solar a Sul, o imóvel destaca-se pela"
+            - generic [ref=f47e1443]: Vista mar
+            - generic [ref=f47e1445]:
+              - button "Contactar" [ref=f47e1446] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1447] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1448]: Ver telefone
+              - button "" [ref=f47e1449] [cursor=pointer]
+              - button "" [ref=f47e1450] [cursor=pointer]
+        - article [ref=f47e1451]:
+          - generic [ref=f47e1452]:
+            - generic [ref=f47e1454]:
+              - generic [ref=f47e1455]:
+                - button "Abrir planta" [ref=f47e1456] [cursor=pointer]: 
+                - button "Abrir vídeo" [ref=f47e1457] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f47e1458] [cursor=pointer]: 
+              - generic [ref=f47e1459]:
+                - generic [ref=f47e1460]: 1/
+                - generic [ref=f47e1461]: "39"
+            - generic [ref=f47e1467] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1469]
+            - text:   
+          - generic [ref=f47e1471]:
+            - link [ref=f47e1473] [cursor=pointer]:
+              - /url: /pro/smluxury/
+              - img "SMLUXURY" [ref=f47e1474]
+            - heading "Duplex na Avenida Dom Carlos I, Cais do Sodré - Santos, Misericórdia" [level=2] [ref=f47e1475] [cursor=pointer]
+            - generic [ref=f47e1476]: 4.900€/mês
+            - generic [ref=f47e1478]: T2 151 m² área bruta 8º andar com elevador
+            - paragraph [ref=f47e1480]: Penthouse T2 Duplex com Maravilhoso Terraço com Vista Rio Apresentamos um sofisticado Apartamento T2 a estrear, totalmente mobilado e equipado, com um maravilhoso terraço no coração de Santos – Cais do Sodré, uma das zonas mais dinâmicas e procuradas de Lisboa. Este imóvel destaca-se pelo seu design contemporâneo, ac
+            - generic [ref=f47e1481]: De luxo
+            - generic [ref=f47e1483]:
+              - button "Contactar" [ref=f47e1484] [cursor=pointer]
+              - button "" [ref=f47e1485] [cursor=pointer]
+              - button "" [ref=f47e1486] [cursor=pointer]
+        - article [ref=f47e1487]:
+          - generic [ref=f47e1488]:
+            - generic [ref=f47e1490]:
+              - button "Abrir mapa" [ref=f47e1492] [cursor=pointer]: 
+              - generic [ref=f47e1493]:
+                - generic [ref=f47e1494]: 1/
+                - generic [ref=f47e1495]: "22"
+            - generic [ref=f47e1501] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1503]
+            - text: 
+          - generic [ref=f47e1505]:
+            - link [ref=f47e1507] [cursor=pointer]:
+              - /url: /pro/jorgemoura/
+              - img "JM Imobiliária" [ref=f47e1508]
+            - heading "Duplex na Avenida Sabóia, Monte Estoril, Cascais e Estoril" [level=2] [ref=f47e1509] [cursor=pointer]
+            - generic [ref=f47e1510]: 5.000€/mês
+            - generic [ref=f47e1512]: Garagem incluída T3 320 m² área bruta 1º andar sem elevador 1 hora
+            - paragraph [ref=f47e1514]: apt2711 Histórico | 160 m² | Garagem | A 5 minutos da Praia Viva no coração do Monte Estoril, numa das zonas mais exclusivas da Linha de Cascais. Este elegante apartamento T3, inserido num charmoso chalé histórico, oferece uma combinação perfeita entre o encanto da arquitetura clássica, áreas generosas e uma localizaç
+            - generic [ref=f47e1515]: De luxo
+            - generic [ref=f47e1517]:
+              - button "Contactar" [ref=f47e1518] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1519] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1520]: Ver telefone
+              - button "" [ref=f47e1521] [cursor=pointer]
+              - button "" [ref=f47e1522] [cursor=pointer]
+        - article [ref=f47e1523]:
+          - generic [ref=f47e1524]:
+            - generic [ref=f47e1526]:
+              - generic [ref=f47e1527]:
+                - button "Abrir planta" [ref=f47e1528] [cursor=pointer]: 
+                - button "Abrir visita virtual" [ref=f47e1529] [cursor=pointer]: 
+                - button "Abrir vídeo" [ref=f47e1530] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f47e1531] [cursor=pointer]: 
+              - generic [ref=f47e1532]:
+                - generic [ref=f47e1533]: 1/
+                - generic [ref=f47e1534]: "25"
+            - generic [ref=f47e1540] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f47e1542]
+            - text:    
+          - generic [ref=f47e1544]:
+            - link [ref=f47e1546] [cursor=pointer]:
+              - /url: /pro/ukio/
+              - img "Ukio Lisboa" [ref=f47e1547]
+            - heading "Apartamento T3 na Avenida 5 de Outubro, Gulbenkian - Praça Espanha, Avenidas Novas" [level=2] [ref=f47e1548] [cursor=pointer]
+            - generic [ref=f47e1549]: 2.950€/mês
+            - generic [ref=f47e1551]: Garagem incluída T3 111 m² área bruta 5º andar com elevador
+            - paragraph [ref=f47e1553]: Apartamento mobilado disponível para arrendamento temporário nas Avenidas Novas, Lisboa, com 111 m² e estacionamento. Pronto a habitar, oferece uma solução confortável e funcional para profissionais ou expatriados. Dispõe de três quartos duplos com camas queen-size e estações de trabalho dedicadas, duas casas de banho
+            - generic [ref=f47e1554]: Arrendamento temporário
+            - generic [ref=f47e1556]:
+              - button "Contactar" [ref=f47e1557] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f47e1558] [cursor=pointer]:
+                - text: 
+                - generic [ref=f47e1559]: Ver telefone
+              - button "" [ref=f47e1560] [cursor=pointer]
+              - button "" [ref=f47e1561] [cursor=pointer]
+        - generic [ref=f47e1562]:
+          - paragraph [ref=f47e1563]: Preço médio nesta zona 23,45 eur/m²
+          - link [ref=f47e1564] [cursor=pointer]:
+            - /url: /apoioutilizador/artigos/como-ordenamos-os-resultados/
+            - generic [ref=f47e1565]: Como ordenamos os resultados
+            - text: 
+        - list [ref=f47e1567]:
+          - listitem [ref=f47e1568]:
+            - link " Anterior" [ref=f47e1569] [cursor=pointer]:
+              - /url: /arrendar-casas/lisboa-distrito/pagina-99
+          - listitem [ref=f47e1570]:
+            - link "1" [ref=f47e1571] [cursor=pointer]:
+              - /url: /arrendar-casas/lisboa-distrito/
+          - listitem [ref=f47e1572]: ...
+          - listitem [ref=f47e1573]:
+            - link "55" [ref=f47e1574] [cursor=pointer]:
+              - /url: /arrendar-casas/lisboa-distrito/pagina-55
+          - listitem [ref=f47e1575]:
+            - link "56" [ref=f47e1576] [cursor=pointer]:
+              - /url: /arrendar-casas/lisboa-distrito/pagina-56
+          - listitem [ref=f47e1577]:
+            - link "57" [ref=f47e1578] [cursor=pointer]:
+              - /url: /arrendar-casas/lisboa-distrito/pagina-57
+          - listitem [ref=f47e1579]:
+            - link "58" [ref=f47e1580] [cursor=pointer]:
+              - /url: /arrendar-casas/lisboa-distrito/pagina-58
+          - listitem [ref=f47e1581]:
+            - link "59" [ref=f47e1582] [cursor=pointer]:
+              - /url: /arrendar-casas/lisboa-distrito/pagina-59
+          - listitem [ref=f47e1583]:
+            - link "60" [ref=f47e1584] [cursor=pointer]:
+              - /url: /arrendar-casas/lisboa-distrito/pagina-60
+          - listitem [ref=f47e1585]:
+            - link "Seguinte " [ref=f47e1586] [cursor=pointer]:
+              - /url: /arrendar-casas/lisboa-distrito/pagina-101
+      - generic [ref=f47e1587]:
+        - generic [ref=f47e1588]: 
+        - heading "Queres procurar com a ajuda de um especialista?" [level=3] [ref=f47e1589]
+        - link "Imobiliárias em Lisboa" [ref=f47e1590] [cursor=pointer]:
+          - /url: /agencias-imobiliarias/lisboa-distrito/imobiliarias-arrendamento
+      - generic [ref=f47e1591]:
+        - heading "Também poderiam interessar-te em Lisboa" [level=3] [ref=f47e1592]
+        - generic [ref=f47e1593]:
+          - group "Municípios" [ref=f47e1594]:
+            - checkbox [aria-hidden] [ref=f47e1596]
+            - heading "Municípios" [level=4] [ref=f47e1597]: Municípios  
+            - radio [aria-hidden] [ref=f47e1598]
+            - radio [checked] [aria-hidden] [ref=f47e1599]
+            - list [ref=f47e1600]:
+              - listitem [ref=f47e1601]:
+                - link "Cascais e Estoril" [ref=f47e1602] [cursor=pointer]:
+                  - /url: /arrendar-casas/cascais/cascais-e-estoril/
+                - generic [ref=f47e1603]: "1.056"
+              - listitem [ref=f47e1604]:
+                - link "Santo António" [ref=f47e1605] [cursor=pointer]:
+                  - /url: /arrendar-casas/lisboa/santo-antonio/
+                - generic [ref=f47e1606]: "539"
+              - listitem [ref=f47e1607]:
+                - link "Arroios" [ref=f47e1608] [cursor=pointer]:
+                  - /url: /arrendar-casas/lisboa/arroios/
+                - generic [ref=f47e1609]: "530"
+            - button "Ver mais" [ref=f47e1610] [cursor=pointer]
+            - text:  
+          - group "Praias" [ref=f47e1611]:
+            - checkbox [aria-hidden] [ref=f47e1613]
+            - heading "Praias" [level=4] [ref=f47e1614]: Praias  
+            - radio [aria-hidden] [ref=f47e1615]
+            - radio [checked] [aria-hidden] [ref=f47e1616]
+            - list [ref=f47e1617]:
+              - listitem [ref=f47e1618]:
+                - link "Praia em Cascais e Estoril" [ref=f47e1619] [cursor=pointer]:
+                  - /url: /geo/arrendar-casas/praia-em-cascais-e-estoril/
+                - generic [ref=f47e1620]: "496"
+              - listitem [ref=f47e1621]:
+                - link "Praia em Estoril" [ref=f47e1622] [cursor=pointer]:
+                  - /url: /geo/arrendar-casas/praia-em-estoril/
+                - generic [ref=f47e1623]: "292"
+              - listitem [ref=f47e1624]:
+                - link "Piscina Oceânica Alberto Romano" [ref=f47e1625] [cursor=pointer]:
+                  - /url: /geo/arrendar-casas/piscina-oceanica-alberto-romano/
+                - generic [ref=f47e1626]: "248"
+            - button "Ver mais" [ref=f47e1627] [cursor=pointer]
+            - text:  
+          - group "Costas" [ref=f47e1628]:
+            - checkbox [aria-hidden] [ref=f47e1630]
+            - heading "Costas" [level=4] [ref=f47e1631]: Costas  
+            - list [ref=f47e1632]:
+              - listitem [ref=f47e1633]:
+                - link "Costa de Lisboa" [ref=f47e1634] [cursor=pointer]:
+                  - /url: /geo/arrendar-casas/costa-de-lisboa/
+                - generic [ref=f47e1635]: "9.600"
+              - listitem [ref=f47e1636]:
+                - link "Costa de Prata" [ref=f47e1637] [cursor=pointer]:
+                  - /url: /geo/arrendar-casas/costa-de-prata/
+                - generic [ref=f47e1638]: "2.793"
+            - text: 
+  - generic [ref=f47e1639]:
+    - heading "Serviços do idealista" [level=2] [ref=f47e1640]
+    - generic [ref=f47e1641]:
+      - navigation "Estás à procura de casa?" [ref=f47e1642]:
+        - heading "Estás à procura de casa?" [level=3] [ref=f47e1643]
+        - list [ref=f47e1644]:
+          - listitem [ref=f47e1645]:
+            - link "Motor de pesquisa principal" [ref=f47e1646] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f47e1647]:
+            - link "Pesquisa mais rapidamente com a nossa app" [ref=f47e1648] [cursor=pointer]:
+              - /url: /aplicacoes
+          - listitem [ref=f47e1649]:
+            - link "Apartamentos de bancos" [ref=f47e1650] [cursor=pointer]:
+              - /url: /imoveis-da-banca
+          - listitem [ref=f47e1651]:
+            - link "Casas à venda em Portugal" [ref=f47e1652] [cursor=pointer]:
+              - /url: /properties-for-sale-in-portugal
+          - listitem [ref=f47e1653]:
+            - link "Arrendamento de casas em Portugal" [ref=f47e1654] [cursor=pointer]:
+              - /url: /long-term-rentals-in-portugal
+          - listitem [ref=f47e1655]:
+            - link "Casas e apartamentos em arrendamento" [ref=f47e1656] [cursor=pointer]:
+              - /url: /apartamentos-para-arrendar
+          - listitem [ref=f47e1657]:
+            - link "Apartamentos partilhados" [ref=f47e1658] [cursor=pointer]:
+              - /url: /apartamentos-para-dividir
+          - listitem [ref=f47e1659]:
+            - link "Oportunidades de investimento" [ref=f47e1660] [cursor=pointer]:
+              - /url: https://www.idealista.pt/investimento-imobiliario/#/
+          - listitem [ref=f47e1661]:
+            - link "Rentalia, arrendamento para férias" [ref=f47e1662] [cursor=pointer]:
+              - /url: https://pt.rentalia.com/
+          - listitem [ref=f47e1663]:
+            - link "Relatórios de preços" [ref=f47e1664] [cursor=pointer]:
+              - /url: https://www.idealista.pt/media/relatorios-preco-habitacao/
+          - listitem [ref=f47e1665]:
+            - link "idealista maps" [ref=f47e1666] [cursor=pointer]:
+              - /url: https://www.idealista.pt/maps/
+          - listitem [ref=f47e1667]:
+            - link "Apartamentos e casas de luxo à venda em Portugal" [ref=f47e1668] [cursor=pointer]:
+              - /url: /luxury-homes-portugal
+          - listitem [ref=f47e1669]:
+            - link "Apartamentos e casas de luxo para arrendar em Portugal" [ref=f47e1670] [cursor=pointer]:
+              - /url: /luxury-rentals-portugal
+      - navigation "Tens um imóvel?" [ref=f47e1671]:
+        - heading "Tens um imóvel?" [level=3] [ref=f47e1672]
+        - list [ref=f47e1673]:
+          - listitem [ref=f47e1674]:
+            - link "Publica o teu anúncio grátis" [ref=f47e1675] [cursor=pointer]:
+              - /url: /info/novo-anuncio
+          - listitem [ref=f47e1676]:
+            - link "Área do proprietário" [ref=f47e1677] [cursor=pointer]:
+              - /url: /proprietarios/
+          - listitem [ref=f47e1678]:
+            - link "Melhorar as fotos do teu anúncio" [ref=f47e1679] [cursor=pointer]:
+              - /url: /info/truques-fazer-fotos-e-videos
+          - listitem [ref=f47e1680]:
+            - link "Solicitar certificado energético" [ref=f47e1681] [cursor=pointer]:
+              - /url: /certificadoenergetico/
+          - listitem [ref=f47e1682]:
+            - link "Avalia grátis qualquer imóvel" [ref=f47e1683] [cursor=pointer]:
+              - /url: /avaliacao-de-imoveis/
+          - listitem [ref=f47e1684]:
+            - link "Procurar agências para vender facilmente a tua casa" [ref=f47e1685] [cursor=pointer]:
+              - /url: /escolher-agencia-imobiliaria/
+          - listitem [ref=f47e1686]:
+            - link "Guia sobre como vender a tua casa" [ref=f47e1687] [cursor=pointer]:
+              - /url: /quero-vender-a-minha-casa/
+          - listitem [ref=f47e1688]:
+            - link "Garantir 12 mensalidades com um seguro de incumprimento" [ref=f47e1689] [cursor=pointer]:
+              - /url: https://www.idealista.pt/seguros/incumprimento-rendas/
+          - listitem [ref=f47e1690]:
+            - link "Queres fazer obras em casa?" [ref=f47e1691] [cursor=pointer]:
+              - /url: https://www.idealista.pt/obras-em-casa/
+      - navigation "És profissional imobiliário?" [ref=f47e1692]:
+        - heading "És profissional imobiliário?" [level=3] [ref=f47e1693]
+        - list [ref=f47e1694]:
+          - listitem [ref=f47e1695]:
+            - link "Publica os teus imóveis profissionais" [ref=f47e1696] [cursor=pointer]:
+              - /url: /novo-profissional
+          - listitem [ref=f47e1697]:
+            - link "Já és cliente? Entra na tua conta" [ref=f47e1698] [cursor=pointer]:
+              - /url: /login
+          - listitem [ref=f47e1699]:
+            - link "Cursos imobiliários" [ref=f47e1700] [cursor=pointer]:
+              - /url: https://www.idealista.pt/cursos/
+          - listitem [ref=f47e1701]:
+            - link "Publicidade no idealista" [ref=f47e1702] [cursor=pointer]:
+              - /url: /info/publicidade
+          - listitem [ref=f47e1703]:
+            - 'link "idealista/tools: Software de gestão para imobiliárias" [ref=f47e1704] [cursor=pointer]':
+              - /url: https://www.idealista.pt/tools/
+          - listitem [ref=f47e1705]:
+            - link "Outros softwares recomendados" [ref=f47e1706] [cursor=pointer]:
+              - /url: /tools/software-recomendado-para-imobiliarias
+          - listitem [ref=f47e1707]:
+            - 'link "idealista/data: tecnologia para a análise imobiliária" [ref=f47e1708] [cursor=pointer]':
+              - /url: https://www.idealista.pt/data/
+          - listitem [ref=f47e1709]:
+            - 'link "Avaibook: software para gerir os teus arrendamentos turísticos" [ref=f47e1710] [cursor=pointer]':
+              - /url: https://www.avaibook.com/pt-pt/
+          - listitem [ref=f47e1711]:
+            - link "HCPro - Software de Gestão Imobiliária" [ref=f47e1712] [cursor=pointer]:
+              - /url: https://www.hcpro.pt/
+  - contentinfo [ref=f47e1713]:
+    - generic [ref=f47e1714]:
+      - heading " idealista" [level=2] [ref=f47e1715]:
+        - text: 
+        - generic [ref=f47e1716]: idealista
+      - generic [ref=f47e1718] [cursor=pointer]:
+        - text: 
+        - generic [ref=f47e1720]: Português
+      - generic [ref=f47e1721]:
+        - navigation [ref=f47e1722]:
+          - heading "Sobre o idealista" [level=3] [ref=f47e1723]
+          - list [ref=f47e1724]:
+            - listitem [ref=f47e1725]:
+              - link "Sobre nós" [ref=f47e1726] [cursor=pointer]:
+                - /url: /media/sobre-nos/
+            - listitem [ref=f47e1727]:
+              - link "Media" [ref=f47e1728] [cursor=pointer]:
+                - /url: /media/
+            - listitem [ref=f47e1729]:
+              - link "Trabalha connosco" [ref=f47e1730] [cursor=pointer]:
+                - /url: /info/trabalha-connosco
+            - listitem [ref=f47e1731]:
+              - link "idealista/créditohabitação" [ref=f47e1732] [cursor=pointer]:
+                - /url: https://www.idealista.pt/credito-habitacao
+            - listitem [ref=f47e1733]:
+              - link "idealista/data" [ref=f47e1734] [cursor=pointer]:
+                - /url: /data/
+            - listitem [ref=f47e1735]:
+              - link "idealista/news" [ref=f47e1736] [cursor=pointer]:
+                - /url: /news/
+            - listitem [ref=f47e1737]:
+              - link "idealista/seguros" [ref=f47e1738] [cursor=pointer]:
+                - /url: /seguros/
+        - navigation [ref=f47e1739]:
+          - heading "Ajuda" [level=3] [ref=f47e1740]
+          - list [ref=f47e1741]:
+            - listitem [ref=f47e1742]:
+              - link "Perguntas frequentes (FAQs)" [ref=f47e1743] [cursor=pointer]:
+                - /url: /apoioutilizador/
+            - listitem [ref=f47e1744]:
+              - link "Segurança online" [ref=f47e1745] [cursor=pointer]:
+                - /url: /apoioutilizador/categorias/seguranca-online/
+            - listitem [ref=f47e1746]:
+              - link "Contacta com o idealista" [ref=f47e1747] [cursor=pointer]:
+                - /url: /info/contacta-connosco
+            - listitem [ref=f47e1748]:
+              - link "Privacidade" [ref=f47e1749] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/politica-de-privacidade/
+            - listitem [ref=f47e1750]:
+              - link "Política de cookies" [ref=f47e1751] [cursor=pointer]:
+                - /url: /info/cookie-policy
+            - listitem [ref=f47e1752]:
+              - link "Condições gerais" [ref=f47e1753] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/aviso-legal-e-condicoes-gerais/
+        - navigation [ref=f47e1754]:
+          - heading "Outros países" [level=3] [ref=f47e1755]
+          - list [ref=f47e1756]:
+            - listitem [ref=f47e1757]:
+              - link "idealista Espanha" [ref=f47e1758] [cursor=pointer]:
+                - /url: https://www.idealista.com/pt/
+            - listitem [ref=f47e1759]:
+              - link "idealista Itália" [ref=f47e1760] [cursor=pointer]:
+                - /url: https://www.idealista.it/pt/
+            - listitem [ref=f47e1761]:
+              - link "idealista França" [ref=f47e1762] [cursor=pointer]:
+                - /url: https://www.idealista.fr/pt/
+              - generic [ref=f47e1763]: Beta
+      - generic [ref=f47e1764]:
+        - generic [ref=f47e1765]:
+          - heading "Por telemóvel ou Tablet" [level=3] [ref=f47e1766]
+          - navigation [ref=f47e1767]:
+            - link "App Store" [ref=f47e1768] [cursor=pointer]:
+              - /url: https://apps.apple.com/pt/app/idealista.com/id465958311
+            - link "Google Play" [ref=f47e1769] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.idealista.android&hl=pt
+            - link "HUAWEI AppGallery" [ref=f47e1770] [cursor=pointer]:
+              - /url: https://appgallery.huawei.com/app/C101196223?channelId=idealista&id=ea9d78a5dfc54b8e8a7f1c5e8f1f083e&s=FC3DCED1261C2C2C5624748A104DEB37D2EB945F72175B74A6FDB07C7B7169F0&detailType=0&v=
+          - navigation [ref=f47e1771]:
+            - link "" [ref=f47e1772] [cursor=pointer]:
+              - /url: https://www.facebook.com/idealista.pt/
+            - link "" [ref=f47e1773] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/idealistapt
+            - link "" [ref=f47e1774] [cursor=pointer]:
+              - /url: https://instagram.com/idealistapt/
+        - strong [ref=f47e1775]: idealista
+        - text: Copyright © 2000-2026
+  - generic:         

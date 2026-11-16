@@ -178,24 +178,24 @@
       Lote
     </button>
     <button class="tab-btn" data-tab="proxy" id="tab-proxy" role="tab" aria-selected="false" aria-controls="panel-proxy">
-      Proxy
+      Configurações
     </button>
   </div>
   <div class="main-panel">
     <!-- Aba 1: Links -->
     <section id="panel-links" class="panel active card" role="tabpanel" aria-labelledby="tab-links">
-      <button id="extract" aria-label="Extrair links em JSON">Extrair Links (JSON)</button>
+      <button id="extract">Coletar links de localidades</button>
+      <p id="links-feedback" role="status" aria-live="polite"></p>
+      <a href="sidepanel.html">Acompanhar coleta de links</a>
+      <button id="export-links">Exportar localidades em JSON</button>
     </section>
     <!-- Aba 2: Itens -->
     <section id="panel-itens" class="panel card" role="tabpanel" aria-labelledby="tab-itens">
 
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-  <input type="checkbox" id="toggleProxy" style="width:18px;height:18px;cursor:pointer;">
-  <label for="toggleProxy" style="margin:0;cursor:pointer;font-size:1em;font-weight:500;color:#2563eb;">Usar proxy</label>
-</div>
+      <p>A conexão e os limites são definidos em <a href="configuracoes.html">Configurações</a>.</p>
 <button id="extractItems">Extraia Itens</button>
       <input type="text" id="extractItemsUrl" placeholder="Cole aqui a URL da página de resultados (opcional)" style="width:100%;margin:6px 0 0 0;padding:10px;font-size:1em;border-radius:7px;border:1.2px solid #e5e7eb;background:#f9fafb;">
-      <button id="stopExtract">Parar e Baixar JSON</button>
+      <p>Pause, retome e confirme o download pela página de Itens.</p>
       <ul id="extractItemsLog" style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:7px;padding:8px 10px;margin:8px 0 0 0;max-height:110px;overflow:auto;font-size:0.97em;color:#1e293b;list-style:none;display:block;"></ul>
       <div id="proxyIpBox"></div>
     </section>
@@ -206,19 +206,8 @@
     </section>
     <!-- Aba 3: Proxy -->
     <section id="panel-proxy" class="panel card" role="tabpanel" aria-labelledby="tab-proxy">
-      <div class="proxy-config" style="margin-bottom:14px;">
-        <label for="proxyHost">Host:</label>
-        <input type="text" id="proxyHost" name="proxyHost" placeholder="proxy.exemplo.com" style="width:100%;margin-bottom:6px;" autocomplete="off">
-        <label for="proxyPort">Porta:</label>
-        <input type="number" id="proxyPort" name="proxyPort" placeholder="12345" style="width:100%;margin-bottom:6px;" autocomplete="off">
-        <label for="proxyUser">Usuário:</label>
-        <input type="text" id="proxyUser" name="proxyUser" placeholder="usuario" style="width:100%;margin-bottom:6px;" autocomplete="off">
-        <label for="proxyPass">Senha:</label>
-        <input type="password" id="proxyPass" name="proxyPass" placeholder="senha" style="width:100%;margin-bottom:6px;" autocomplete="off">
-      </div>
-      <button id="saveProxyConfig">Salvar proxy</button>
-      <button id="testProxyBtn" style="margin-top:10px;">Testar proxy</button>
-      <div id="proxyTestResult" style="margin-top:8px;color:#2563eb;font-weight:500;"></div>
+      <p>Pastas, conexão, limites e diagnóstico de IP ficam em uma tela dedicada.</p>
+      <a href="configuracoes.html">Abrir Configurações</a>
     </section>
   </div>
   <!-- Scripts externos (sem inline, para respeitar CSP) -->

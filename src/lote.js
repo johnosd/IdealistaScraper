@@ -1,14 +1,25 @@
 const { parseBatchInput, validateBatchURL } = require('./lote-input');
-const { createBatchSession } = require('./lote-session');
 const { writeMunicipality } = require('./lote-export');
-const { createBatchCollector } = require('./lote-collector');
+const { mountCollectionUI } = require('./coleta-ui');
+const { reconcileDirectory } = require('./coleta-runner');
+const { getMunicipalityDestination } = require('./lote-export');
 const { loadDirectory, saveDirectory } = require('./lote-directory-store');
+const {readSourceLocalities}=require('./coleta-discovery');
+document.getElementById('autonomousStart')?.addEventListener('click',async event=>{
+  event.target.disabled=true;
+  try{
+    const tabId=Number(new URL(location.href).searchParams.get('sourceTabId'));
+    const response=await chrome.runtime.sendMessage({cmd:'AUTONOMA_START',payload:{commandId:crypto.randomUUID(),source:{tabId}}});
+    if(!response?.ok)throw new Error('Não foi possível iniciar. Confira a página e a pasta.');
+    const r=response.result;status(r.status,r.status==='accepted'?'Coleta autônoma iniciada. Acompanhe pelo painel da extensão.':r.status==='busy'?'Outra coleta está ativa.':'Configure ou autorize a pasta de anúncios antes de iniciar.');
+  }catch(error){status('error',error.message);}finally{event.target.disabled=false;}
+});
 
 const el = id => document.getElementById(id);
 let directory = null, permission = 'prompt', session = null, running = false, paused = false;
 let owned = false, releaseOwner = null, ownerRequest = null, configuring = false, initialized = false;
 let statuses = [], rawQueue = [], draftWrite = Promise.resolve();
-const collect = createBatchCollector(chrome, { useProxy: () => el('loteProxy').checked });
+let panel, completedSessionId=null;
 
 function status(state, text) { el('loteLog').dataset.state = state; el('loteLog').textContent = text; render(); }
 function render() {
@@ -39,7 +50,7 @@ async function acquireOwner() {
       if (!lock) { resolve(false); return; }
       owned = true;
       await new Promise(release => { releaseOwner = release; resolve(true); });
-      owned = false; releaseOwner = null;
+      owned = false; releaseOwner = null;panel?.refresh().catch(()=>{});
     }).catch(reject).finally(() => { ownerRequest = null; });
   });
 }
@@ -48,6 +59,12 @@ async function restoreQueue() {
   el('loteUrls').value = typeof saved.loteLista === 'string' ? saved.loteLista : saved.loteLista ? JSON.stringify(saved.loteLista, null, 2) : '';
   statuses = Array.isArray(saved.loteStatusArr) ? saved.loteStatusArr : [];
   el('loteProxy').checked = saved.usarProxy === 'true';
+  const restartParams=new URL(location.href).searchParams;
+  if(owned&&restartParams.has('restartRun')&&restartParams.has('restartItem')){
+    const r=await chrome.runtime.sendMessage({cmd:'AUTONOMA_READ_ITEM',payload:{id:restartParams.get('restartRun'),itemId:restartParams.get('restartItem')}});
+    if(!r?.ok||!r.result)throw Error('Não foi possível preparar esta localidade. O progresso anterior foi preservado.');
+    el('loteUrls').value=JSON.stringify([{nome:r.result.nome,link:r.result.url}],null,2);statuses=[];
+  }
 }
 function originalItems(text) {
   try { return JSON.parse(text); } catch { return text.split(/\r?\n/).map(s => s.trim()).filter(Boolean); }
@@ -56,7 +73,7 @@ function originalItems(text) {
 el('loteClaim').addEventListener('click', async () => {
   try {
     if (!await acquireOwner()) return status('busy', 'Outra tela controla o lote. Volte à tela aberta ou feche-a para ativar esta.');
-    await restoreQueue(); status('ready', 'Tela ativada. A fila foi atualizada.');
+    await restoreQueue();await panel.refresh();status('ready', 'Tela ativada. A fila foi atualizada.');
   } catch (error) { status('error', error.message); }
 });
 el('choose').addEventListener('click', async () => {
@@ -96,76 +113,58 @@ el('loteClear').addEventListener('click', async () => {
   if (!confirm('Descartar a fila e os resultados ainda não salvos desta tela?')) return;
   try {
     await draftWrite;
+    if(panel.id){await panel.stop('DISCARD');panel.reset();}
     await chrome.storage.local.remove(['loteLista', 'loteStatusArr', 'loteProcessamento']);
     session = null; statuses = []; rawQueue = []; el('loteUrls').value = ''; status('ready', 'Lista limpa. Arquivos existentes foram preservados.');
   } catch { status('error', 'Falha ao limpar. Dados mantidos nesta tela.'); }
 });
-el('lotePause').addEventListener('click', () => { paused = true; status('pausing', 'Pausa solicitada; aguardando este item.'); });
+el('lotePause').addEventListener('click', () => panel.stop().catch(error=>status('error',error.message)));
 
-async function run() {
-  if (running || configuring) return;
-  // Validar antes de adquirir controle ou modificar storage/status.
-  let items;
-  if (!session) {
-    try { items = parseBatchInput(el('loteUrls').value); }
-    catch (error) { status('error', `Lista inválida. ${error.message}`); return; }
+function fixedDate(view) { const ym=view.exportContext.yearMonth;return new Date(Number(ym.slice(0,4)),Number(ym.slice(4))-1,1); }
+panel=mountCollectionUI({mode:'lote',showSettings:false,canMutate:()=>owned,
+  destination:view=>getMunicipalityDestination({startedAt:fixedDate(view),nome:view.items[view.itemIndex].nome,totalPages:view.checkpoint.confirmedPages}).relativePath,
+  save:async view=>{
+    if(!owned)throw new Error('Ative esta tela para adquirir o controle da fila.');
+    const target=directory,item=view.items[view.itemIndex];
+    const result=await writeMunicipality({directory:target,records:view.checkpoint.records,startedAt:fixedDate(view),nome:item.nome,totalPages:view.checkpoint.confirmedPages,locks:navigator.locks});
+    if(result.status==='permission-required')permission='prompt';
+    return {...result,directoryName:target?.name};
+  },
+  reconcile:(view,intent)=>reconcileDirectory(directory,intent),
+  async onSaved(view,result){
+    if(!owned)throw new Error('Ative esta tela para adquirir o controle da fila.');
+    let queue;try{queue=originalItems(el('loteUrls').value);}catch{queue=[];}
+    const remaining=view.items.slice(view.itemIndex+1);
+    try{const parsed=parseBatchInput(JSON.stringify(queue));queue=parsed[0]?.url===view.items[view.itemIndex].url?queue.slice(1):remaining;}catch{queue=remaining;}
+    statuses=view.items.map((item,i)=>({nome:item.nome,link:item.url,status:i<=view.itemIndex?'Sucesso':'Pendente',...(i===view.itemIndex?{savedAt:result.directoryName?`${result.directoryName}/${result.relativePath}`:result.relativePath,total:view.checkpoint.recordCount}:{})}));
+    await chrome.storage.local.set({loteLista:queue,loteStatusArr:statuses,loteProcessamento:remaining.length>0});
+    completedSessionId=view.id;
+    rawQueue=queue;el('loteUrls').value=queue.length?JSON.stringify(queue,null,2):'';render();
+  },
+  onState(view,extra){
+    if(!panel)return;
+    running=panel.running;
+    session=view&&(view.pendingProjection||!['saved','discarded','cancelled'].includes(view.state))?{getState:()=>({pending:view.state==='awaiting-save'||view.pendingProjection?{}:null})}:null;
+    if(view?.pendingProjection)status('pending','Arquivo confirmado; atualização da fila pendente. Use Salvar para concluir sem recoletar.');
+    else if(view?.state==='saved'){status('complete','Lote concluído. Todos os arquivos foram confirmados.');if(completedSessionId===view.id){completedSessionId=null;releaseOwner?.();}}
+    else if(view?.state==='awaiting-save')status('permission-required','Resultado completo preservado. Salve ou confira a gravação anterior.');
+    else if(view)status(view.state,`Item ${Math.min(view.itemIndex+1,view.items.length)} de ${view.items.length}. Páginas confirmadas: ${view.checkpoint.confirmedPages}. Consulte o controle de coleta abaixo.`);
+    render();
   }
-  running = true; render();
-  try {
-    if (!await acquireOwner()) return status('busy', 'Outra tela controla o lote. Volte à tela aberta.');
-    if (!directory || await directory.queryPermission({ mode: 'readwrite' }) !== 'granted') {
-      permission = 'prompt'; return status('permission-required', 'Autorize a pasta antes de iniciar ou continuar.');
-    }
+});
+async function run(){
+  if(!owned||running||configuring)return;
+  try{
+    if(!directory||await directory.queryPermission({mode:'readwrite'})!=='granted'){permission='prompt';status('permission-required','Autorize a pasta antes de continuar.');return;}
     await draftWrite;
-    if (!session) {
-      rawQueue = originalItems(el('loteUrls').value);
-      statuses = items.map(item => ({ nome: item.nome, link: item.url, status: 'Pendente' }));
-      const startedAt = new Date();
-      await chrome.storage.local.set({ loteLista: rawQueue, loteStatusArr: statuses, loteProcessamento: true });
-      session = createBatchSession({ items, startedAt, collect,
-        save: async pending => {
-          const target = directory;
-          const result = await writeMunicipality({ directory: target, records: pending.records, startedAt: pending.startedAt, nome: pending.item.nome, totalPages: pending.totalPages, locks: navigator.locks });
-          return { ...result, directoryName: target.name };
-        },
-        commit: async ({ remaining }) => {
-          const nextQueue = rawQueue.slice(1);
-          const index = statuses.length - rawQueue.length;
-          const nextStatuses = statuses.map((row, i) => i === index ? { ...row, status: 'Sucesso' } : row);
-          await chrome.storage.local.set({ loteLista: nextQueue, loteStatusArr: nextStatuses, loteProcessamento: remaining.length > 0 });
-          rawQueue = nextQueue; statuses = nextStatuses;
-          el('loteUrls').value = nextQueue.length ? JSON.stringify(nextQueue, null, 2) : '';
-        },
-      });
+    if(panel.id&&session){
+      if(session.getState().pending)await panel.save(true);else await panel.resume(panel.id);
+    }else{
+      const items=parseBatchInput(el('loteUrls').value);rawQueue=originalItems(el('loteUrls').value);
+      await panel.start(items,el('loteProxy').checked);
     }
-    running = true; paused = false; render();
-    while (session.getState().remaining.length) {
-      const current = session.getState();
-      const index = statuses.length - current.remaining.length;
-      statuses[index].status = current.pending ? 'Salvando' : 'Processando';
-      status('running', `${current.pending ? 'Salvando' : 'Coletando'}: ${current.remaining[0].nome}`);
-      const result = await session.advance();
-      if (result?.status !== 'saved') {
-        statuses[index].status = 'Aguardando gravação';
-        if (result?.status === 'permission-required') permission = 'prompt';
-        status(result?.status || 'error', 'Resultado não salvo. A fila e os dados coletados foram mantidos. Autorize/troque a pasta e tente salvar novamente.');
-        return;
-      }
-      statuses[index].savedAt = `${result.directoryName}/${result.relativePath}`;
-      statuses[index].total = result.total;
-      status('saved', `Salvo: ${result.directoryName}/${result.relativePath} — ${result.total} anúncio(s).`);
-      if (paused && session.getState().remaining.length) { status('paused', 'Lote pausado. Continuar mantém o mês inicial.'); return; }
-    }
-    session = null;
-    status('complete', 'Lote concluído. Todos os arquivos foram salvos.');
-    // Liberar a propriedade da fila; nova ação pode reivindicar a tela.
-    releaseOwner?.();
-    owned = false;
-  } catch (error) {
-    const current = session?.getState();
-    if (current?.remaining.length) statuses[statuses.length - current.remaining.length].status = current.pending ? 'Aguardando gravação' : 'Erro de coleta';
-    status('error', `${error.message}\nItem mantido na fila. ${current?.pending ? 'Use Tentar salvar novamente.' : 'Use Continuar lote para tentar este item novamente.'}`);
-  } finally { running = false; render(); }
+    await panel.refreshSessions();
+  }catch(error){status('error',error.message);}finally{running=false;render();}
 }
 el('loteStart').addEventListener('click', run);
 el('loteSave').addEventListener('click', run);
@@ -176,13 +175,8 @@ el('loteAutoLoad').addEventListener('click', async () => {
     const sourceTabId = Number(new URL(location.href).searchParams.get('sourceTabId'));
     if (!Number.isInteger(sourceTabId) || sourceTabId <= 0) throw new Error('Abra esta tela pelo popup na página de localidades.');
     const source = await chrome.tabs.get(sourceTabId); validateBatchURL(source.url);
-    const [{ result }] = await chrome.scripting.executeScript({ target: { tabId: sourceTabId }, func: () => {
-      return [...document.querySelectorAll('.breadcrumb-dropdown-element.highlighted ul.breadcrumb-dropdown-subitem-list > li')].flatMap(item => {
-        const anchor = item.querySelector('a'), count = item.querySelector('.breadcrumb-navigation-sidenote');
-        const quantidade = parseInt(count?.textContent.replace(/[^\d]/g, '') || '', 10);
-        return anchor && Number.isFinite(quantidade) ? [{ nome: anchor.textContent.trim(), link: anchor.href, quantidade }] : [];
-      }).sort((a, b) => b.quantidade - a.quantidade);
-    } });
+    const found = (await readSourceLocalities(chrome, sourceTabId))?.result?.items;
+    const result=found?.map(item=>({nome:item.nome,link:item.url,quantidade:item.quantidade})).sort((a,b)=>(b.quantidade??-1)-(a.quantidade??-1));
     if (!result?.length) throw new Error('Nenhuma localidade encontrada na página de origem.');
     await chrome.storage.local.set({ loteLista: result });
     el('loteUrls').value = JSON.stringify(result, null, 2); status('ready', `${result.length} localidades carregadas.`);
@@ -198,5 +192,5 @@ window.addEventListener('beforeunload', event => {
     if (directory) permission = await directory.queryPermission({ mode: 'readwrite' });
     status(owned ? (directory ? (permission === 'granted' ? 'ready' : 'permission-required') : 'needs-directory') : 'busy', owned ? 'Pronto. Selecione uma pasta e cole a lista.' : 'Outra tela controla a fila. Esta tela está somente para leitura.');
   } catch (error) { status('error', error.message); }
-  finally { initialized = true; render(); }
+  finally { initialized = true;render();await panel.refresh().catch(()=>{}); }
 })();

@@ -9,7 +9,7 @@ before(async () => {
   await page.route('https://**/*', route => route.fulfill({ contentType: 'text/html', body: '<html></html>' }));
   await page.goto('https://www.idealista.pt/test-fixture');
   const source = fs.readFileSync(path.resolve(__dirname, '../../src/content.js'), 'utf8');
-  await page.addScriptTag({ content: source.slice(0, source.indexOf('function logCrawler')) });
+  await page.addScriptTag({ content: source.slice(0, source.indexOf('const { installCollectionExecutor }')) });
 });
 after(async () => { await browser?.close(); });
 function card(counter = '', oldParking = '', details = 'Garagem incluída') {

@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "proof": "installed Chrome headed + CDP Extensions.triggerAction + runtime SIDE_PANEL context + onOpened/onClosed; OPFS only for writes",
+  "version": "157.0.8103.78",
+  "events": [
+    {
+      "type": "opened",
+      "path": "/sidepanel.html",
+      "windowId": 1726441131
+    },
+    {
+      "type": "closed",
+      "path": "/sidepanel.html",
+      "windowId": 1726441131
+    },
+    {
+      "type": "opened",
+      "path": "/sidepanel.html",
+      "windowId": 1726441131
+    }
+  ],
+  "cases": [
+    "action opens real panel",
+    "native close removes panel context",
+    "collection continues with closed native panel",
+    "source preserved",
+    "action reopens panel"
+  ],
+  "saved": 3,
+  "requests": 4,
+  "pageErrors": 0
+}

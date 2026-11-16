@@ -12,7 +12,7 @@ const { getMonthlyDestination } = require('../../src/localidades-export.js');
   let context;
   const errors = [], downloads = [], cases = [];
   const fixture = await fs.readFile(path.join(__dirname, '../fixtures/localidades-list.html'), 'utf8');
-  let small = false;
+  let small = false, broken=false;
   try {
     console.log('E2E: launching isolated browser');
     context = await chromium.launchPersistentContext(profile, {
@@ -21,7 +21,7 @@ const { getMonthlyDestination } = require('../../src/localidades-export.js');
       args: ['--enable-unsafe-extension-debugging', '--host-resolver-rules=MAP www.idealista.pt ~NOTFOUND, MAP api.ipify.org ~NOTFOUND'],
     });
     await context.route('https://**/*', route => route.request().url().startsWith('https://www.idealista.pt/arrendar-casas/')
-      ? route.fulfill({ contentType: 'text/html; charset=utf-8', body: small ? fixture.replace(/<li><a href="\/geo\/sao-joao\/">São João<\/a><\/li>/, '') : fixture })
+      ? route.fulfill({status:broken?418:200, contentType: 'text/html; charset=utf-8', body: broken?'<h1>Erro de coleta</h1>':small ? fixture.replace(/<li><a href="\/geo\/sao-joao\/">São João<\/a><\/li>/, '') : fixture })
       : route.abort());
     await context.addInitScript(() => {
       if (location.protocol !== 'chrome-extension:') return;
@@ -101,10 +101,11 @@ const { getMonthlyDestination } = require('../../src/localidades-export.js');
     for (let i = 0; i < await buttons.count(); i++) await buttons.nth(i).click();
     await popup.locator('#tab-links').click();
     const pagePromise = context.waitForEvent('page');
-    await popup.locator('#extract').click();
+    await popup.locator('#export-links').click();
     console.log('E2E: opening export page');
     const page = await pagePromise;
     await page.waitForURL(base + 'localidades.html');
+    await page.evaluate(async()=>{const p=(await chrome.runtime.sendMessage({cmd:'COLETA_GET_POLICY'})).result;await chrome.runtime.sendMessage({cmd:'COLETA_SET_POLICY',payload:{limits:{...p.limits,minIntervalMs:1000},ipEnabled:false}});});
     await popup.close();
     let confirm = false, confirmations = 0;
     page.on('dialog', async dialog => {
@@ -184,14 +185,8 @@ const { getMonthlyDestination } = require('../../src/localidades-export.js');
     cases.push('cancelar troca e falha de persistência mantêm destino anterior no banco');
 
     // Erro de coleta: colaborador Chrome rejeita, writer real continua intocado.
-    await page.evaluate(() => {
-      const execute = chrome.scripting.executeScript;
-      chrome.scripting.executeScript = async () => {
-        chrome.scripting.executeScript = execute;
-        throw new Error('Falha de coleta de teste');
-      };
-    });
-    await click('extract-save'); await state('error');
+    broken=true;
+    await click('extract-save'); await state('paused');broken=false;
     assert.equal(await read(), shorter);
     cases.push('erro de coleta preserva arquivo');
 
@@ -210,6 +205,7 @@ const { getMonthlyDestination } = require('../../src/localidades-export.js');
     console.log(JSON.stringify({ result: 'PASS', proof: 'simulated-picker/OPFS', browser: context.browser().version(), cases, downloads, errors }, null, 2));
   } finally {
     if (context) await context.close();
+    assert.ok(path.resolve(profile).startsWith(path.resolve(os.tmpdir())+path.sep+'idealista-002-e2e-'));
     await fs.rm(profile, { recursive: true, force: true });
   }
 })().catch(error => { console.error(error); process.exitCode = 1; });

@@ -22,7 +22,13 @@ test('manifesto e popup resolvem todas as entradas locais geradas', () => {
   assert.equal(config.manifest_version, 3);
   const entries = [config.background.service_worker,
     ...config.content_scripts.flatMap(script => script.js)];
-  const html = localFile(config.action.default_popup);
+  const panel = config.side_panel?.default_path;
+  if (panel) {
+    assert.equal(config.action.default_popup, undefined, 'Action lateral deve abrir sem popup');
+    assert.ok(config.permissions.includes('sidePanel'), 'Painel exige sua permissão');
+    assert.ok(Number(config.minimum_chrome_version) >= 141, 'Fechamento do painel exige Chrome141');
+  }
+  const html = localFile(panel || config.action.default_popup) + localFile('popup.html');
   const scripts = [...html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["']/gi)]
     .map(match => match[1]);
   assert.ok(scripts.length > 0, 'Popup deve carregar scripts');
@@ -33,7 +39,7 @@ test('manifesto e popup resolvem todas as entradas locais geradas', () => {
   }
   assert.deepEqual([...config.permissions].sort(), [
     'activeTab', 'tabs', 'scripting', 'proxy', 'webRequest',
-    'webRequestAuthProvider', 'storage'
+    'webRequestAuthProvider', 'storage', ...(panel ? ['sidePanel'] : [])
   ].sort(), 'Reorganizacao deve preservar as permissoes');
   assert.deepEqual(config.host_permissions, [
     'https://*.idealista.pt/*', 'https://api.ipify.org/*'
@@ -41,7 +47,7 @@ test('manifesto e popup resolvem todas as entradas locais geradas', () => {
 });
 
 // FR-004/005/008, Constitution III/V: executa entradas sem globais de outro contexto.
-test('bundles de background conteudo e popup inicializam em contextos isolados', () => {
+test('bundles de background conteudo e popup inicializam em contextos isolados', async () => {
   const config = manifest();
   function environment() {
     const messages = [];
@@ -54,7 +60,13 @@ test('bundles de background conteudo e popup inicializam em contextos isolados',
         getElementById() { return null; },
         addEventListener(event, callback) { domEvents.push({ event, callback }); }
       },
-      chrome: { runtime: { onMessage: { addListener(fn) { messages.push(fn); } } } }
+      chrome: {
+        runtime: { onMessage: { addListener(fn) { messages.push(fn); } } },
+        storage: { local: { get: async () => ({}) } },
+        proxy: { settings: { get: async () => ({ value: { mode: 'system' }, levelOfControl: 'controllable_by_this_extension' }) } },
+        action: { setBadgeText() {}, setBadgeBackgroundColor() {} },
+        webRequest: { onAuthRequired: { addListener() {} } }
+      }
     });
     return { scope, messages, domEvents };
   }
@@ -64,10 +76,11 @@ test('bundles de background conteudo e popup inicializam em contextos isolados',
   const background = environment();
   run(background, config.background.service_worker);
   assert.ok(background.messages.length > 0, 'Background deve registrar mensageria');
-  let status;
-  for (const listener of background.messages) {
-    listener({ cmd: 'PROXY_STATUS' }, {}, response => { status = response; });
-  }
+  const status = await new Promise(resolve => {
+    for (const listener of background.messages) {
+      assert.equal(listener({ cmd: 'PROXY_STATUS' }, {}, resolve), true, 'Resposta deve manter canal assíncrono aberto');
+    }
+  });
   assert.equal(status?.enabled, false);
   assert.equal(status?.config, null);
 
@@ -82,10 +95,17 @@ test('bundles de background conteudo e popup inicializam em contextos isolados',
   assert.equal(result.dados.length, 0);
 
   const popup = environment();
-  const html = localFile(config.action.default_popup);
+  const html = localFile(config.action.default_popup || 'popup.html');
   for (const match of html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["']/gi)) {
     run(popup, match[1]);
   }
   assert.ok(popup.domEvents.some(item => item.event === 'DOMContentLoaded'));
   assert.ok(popup.messages.length > 0, 'Popup deve registrar recepcao de logs');
+  if (config.side_panel?.default_path) {
+    const panel = environment();
+    const html = localFile(config.side_panel.default_path);
+    const scripts = [...html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["']/gi)];
+    assert.ok(scripts.length > 0, 'Painel deve carregar scripts locais');
+    for (const match of scripts) run(panel, match[1]);
+  }
 });

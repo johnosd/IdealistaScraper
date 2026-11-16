@@ -1,0 +1,7 @@
+{
+  "realNetwork": true,
+  "test": "plain Chrome navigation outside collection engine",
+  "proxyApplied": true,
+  "httpStatus": 403,
+  "navigationError": false
+}

@@ -19,9 +19,15 @@ function waitForComplete(api, tabId, timeoutMs) {
 }
 
 function createBatchCollector(api, { timeoutMs = 30000, useProxy = () => false } = {}) {
-  let held = null;
+  let held = null, proxyPrepared=false;
   return async item => {
     const url = validateBatchURL(item.url);
+    if (useProxy()&&!proxyPrepared) {
+      const data = await api.storage.local.get(['proxyHost', 'proxyPort', 'proxyUser', 'proxyPass']);
+      const enabled = await api.runtime.sendMessage({ cmd: 'ENABLE_PROXY', host: data.proxyHost || '', port: parseInt(data.proxyPort || '0', 10), username: data.proxyUser || '', password: data.proxyPass || '', extraDomains: [] });
+      if (!enabled?.ok) throw new Error(enabled?.error || 'Não foi possível ativar o proxy solicitado.');
+      proxyPrepared=true;
+    }
     let tab, keep = false;
     if (held?.source === url) {
       try {
@@ -35,11 +41,6 @@ function createBatchCollector(api, { timeoutMs = 30000, useProxy = () => false }
       const wait = id => waitForComplete(api, id, timeoutMs);
       await wait(tab.id);
       await resolveBatchListing({ tabId: tab.id, api, waitForComplete: wait });
-      if (useProxy()) {
-        const data = await api.storage.local.get(['proxyHost', 'proxyPort', 'proxyUser', 'proxyPass']);
-        // Preservar configuração e momento de ativação do fluxo anterior.
-        await api.runtime.sendMessage({ cmd: 'ENABLE_PROXY', host: data.proxyHost || '', port: parseInt(data.proxyPort || '0', 10), username: data.proxyUser || '', password: data.proxyPass || '', extraDomains: [] });
-      }
       let response;
       try { response = await api.tabs.sendMessage(tab.id, { cmd: 'START_CRAWL', silent: true, requireComplete: true }); }
       catch (error) {

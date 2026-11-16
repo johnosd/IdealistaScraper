@@ -1,0 +1,8 @@
+const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs');
+const {createSettingsDraft,LABELS}=require('../../src/configuracoes');
+const {DEFAULT_POLICY}=require('../../src/coleta-policy');
+const initial=()=>({limits:structuredClone(DEFAULT_POLICY),useProxy:false,ipEnabled:false,proxy:{host:'proxy.invalid',port:'8080',user:'user',password:''}});
+test('draft não modifica valores confirmados e mantém edições ao cancelar saída',()=>{const original=initial(),draft=createSettingsDraft(original),edited=draft.values;edited.limits.minIntervalMs=12000;edited.proxy.password='new-private';draft.edit(edited);assert.equal(draft.dirty,true);assert.equal(original.limits.minIntervalMs,10000);assert.equal(draft.values.proxy.password,'new-private');assert.equal(draft.dirty,true);draft.reset(initial());assert.equal(draft.dirty,false);assert.equal(draft.values.proxy.password,'');});
+test('todos os limites têm labels explícitos e unidades coerentes com o backend',()=>{assert.deepEqual(Object.keys(LABELS).sort(),Object.keys(DEFAULT_POLICY).sort());for(const k of Object.keys(DEFAULT_POLICY).filter(k=>k.endsWith('Ms')))assert.match(LABELS[k],/segundos/);});
+test('formulário possui confirmação acessível e senha não é pré-preenchida',()=>{const html=fs.readFileSync(require.resolve('../../configuracoes.html'),'utf8');assert.match(html,/<dialog[^>]+aria-labelledby="leave-title"/);assert.match(html,/value="cancel" autofocus/);assert.match(html,/id="settings-status" role="status" aria-live="polite"/);assert.match(html,/id="password" type="password"/);assert.doesNotMatch(html,/<input[^>]+id="password"[^>]+value=/);assert.match(html,/Pastas/);assert.match(html,/Conexão/);assert.match(html,/Ajustes avançados/);});
+

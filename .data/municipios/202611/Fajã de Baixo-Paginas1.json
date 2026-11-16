@@ -1,0 +1,23 @@
+[
+  {
+    "Titulo": "Apartamento T0 na Rua Doutor Antonio Camara, 39, Fajã de Baixo",
+    "Link": "https://www.idealista.pt/imovel/34629674/",
+    "Preco": "580€/mês",
+    "detalhe do item": "T0 | 82 m² área bruta | Rés do chão sem elevador",
+    "Descricao do item": null,
+    "id": "34629674",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 5,
+    "tipologia": "T0",
+    "areaBrutaM2": 82,
+    "pisoResumo": "Rés do chão sem elevador"
+  }
+]

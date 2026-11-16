@@ -1,0 +1,15 @@
+// Browser's own meta-refresh models the reported transition; the app must not reload/retry.
+const {openBrowser,poll}=require('../fixtures/coleta-browser.cjs'),fs=require('node:fs/promises'),path=require('node:path'),os=require('node:os'),assert=require('node:assert/strict');
+(async()=>{const profile=await fs.mkdtemp(path.join(os.tmpdir(),'idealista005-navigation-transition-'));let b,requests=0;const variant=process.argv.includes('--persistent')?'persistent':process.argv.includes('--rate-limit')?'rate-limit':'transition';try{
+ const html=await fs.readFile(path.join(__dirname,'../fixtures/idealista-locations-2026-11-15.html'),'utf8');
+ b=await openBrowser(profile,route=>{requests++;return route.fulfill({status:requests===1?(variant==='rate-limit'?429:403):200,headers:variant==='rate-limit'&&requests===1?{'Retry-After':'120'}:{},contentType:'text/html',body:requests===1?'<!doctype html><title>'+(variant==='rate-limit'?'Retry later':'Just a moment...')+'</title>'+(variant==='persistent'?'':'<meta http-equiv="refresh" content="0.4;url=/arrendar-casas/">')+'<h1>Verificação temporária</h1>':'<!doctype html><title>Localidades</title>'+html});});
+ const p=await b.context.newPage();await p.goto(b.base+'sidepanel.html');await p.getByRole('tab',{name:'Links',exact:true}).click();await p.locator('#tool-links-open').click();
+ const read=()=>p.evaluate(async()=>(await chrome.runtime.sendMessage({cmd:'AUTONOMA_LINKS_READ'})).result);
+ const view=await poll(read,v=>variant==='transition'?v.state==='collected':v.reason===(variant==='rate-limit'?'rate_limit':'access_blocked'));
+ const audit=await p.evaluate(id=>new Promise((resolve,reject)=>{const open=indexedDB.open('idealista-coleta-v1',1);open.onerror=()=>reject(open.error);open.onsuccess=()=>{const db=open.result,tx=db.transaction('records','readonly'),get=tx.objectStore('records').get('session:'+id);get.onsuccess=()=>resolve(get.result);get.onerror=()=>reject(get.error);tx.oncomplete=()=>db.close();};}),view.id);
+ assert.equal(audit.counters.requested,1);
+ if(variant==='transition'){assert.equal(view.total,84);assert.equal(requests,2,'Only the initial navigation and the site-owned transition are allowed');await p.waitForFunction(()=>document.querySelectorAll('#links-results>li').length===84);assert.equal(audit.reason,null);}
+ else{assert.equal(view.total,0);assert.equal(audit.reason,variant==='rate-limit'?'rate_limit':'access_blocked');assert.ok(view.until>Date.now());if(variant==='persistent')assert.equal(requests,1);}
+ assert.deepEqual(b.errors,[]);
+ console.log(JSON.stringify({pass:true,variant,proof:'real extension and controlled site-owned responses; public navigation DOM',requests,controlledAttempts:audit.counters.requested,records:view.total,reason:view.reason}));
+ }finally{await b?.context.close();const resolved=path.resolve(profile);assert.ok(resolved.startsWith(path.resolve(os.tmpdir())+path.sep+'idealista005-navigation-transition-'));await fs.rm(resolved,{recursive:true,force:true,maxRetries:5,retryDelay:300});}})().catch(e=>{console.error(e);process.exitCode=1;});

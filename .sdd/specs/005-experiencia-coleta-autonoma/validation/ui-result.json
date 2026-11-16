@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "proof": "extension-page DOM (not native sidePanel)",
+  "cases": [
+    "first use",
+    "invalid/focus",
+    "saved preferences",
+    "native gesture simulated picker",
+    "dirty/stay/discard",
+    "308 discovered items",
+    "filter/accent",
+    "stable focus/details",
+    "reading context restored",
+    "320px",
+    "CSS zoom 200%",
+    "reduced motion"
+  ],
+  "requests": 2,
+  "pageErrors": 0,
+  "downloads": 0
+}

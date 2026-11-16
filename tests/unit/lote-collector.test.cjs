@@ -22,6 +22,29 @@ function setup({ fail, index = false, missing = false } = {}) {
   } } };
   return { api, calls, listeners };
 }
+
+test('proxy confirmado antes da primeira navegação do lote', async () => {
+  const f = setup({ index: true });
+  f.api.storage = { local: { get: async () => ({ proxyHost: 'proxy.invalid', proxyPort: '8080' }) } };
+  f.api.runtime = { sendMessage: async () => { f.calls.push(['proxy']); return { ok: true }; } };
+  await createBatchCollector(f.api, { useProxy: () => true })({ url: 'https://www.idealista.pt/index/' });
+  assert.equal(f.calls[0][0], 'proxy');
+});
+test('adapter legado estável não reaplica proxy a cada município',async()=>{
+ const f=setup();f.api.storage={local:{get:async()=>({proxyHost:'proxy.invalid',proxyPort:'8080'})}};
+ f.api.runtime={sendMessage:async()=>{f.calls.push(['proxy']);return {ok:true};}};
+ const collect=createBatchCollector(f.api,{useProxy:()=>true});for(let i=0;i<100;i++)await collect({url:`https://www.idealista.pt/item-${i}/`});
+ assert.equal(f.calls.filter(c=>c[0]==='proxy').length,1);
+});
+test('falha de proxy bloqueia navegação e coleta do lote', async () => {
+  for (const response of [undefined, { ok: false, error: 'proxy failed' }, new Error('message failed')]) {
+    const f = setup();
+    f.api.storage = { local: { get: async () => ({}) } };
+    f.api.runtime = { sendMessage: async () => { if (response instanceof Error) throw response; return response; } };
+    await assert.rejects(createBatchCollector(f.api, { useProxy: () => true })({ url: 'https://www.idealista.pt/' }));
+    assert.equal(f.calls.length, 0);
+  }
+});
 test('URL/Texto normalizados, CTA antes do crawl e cleanup apenas da aba própria', async () => {
   const f = setup({ index: true });
   const result = await createBatchCollector(f.api)({ url: 'https://www.idealista.pt/index/', nome: 'São Miguel' });

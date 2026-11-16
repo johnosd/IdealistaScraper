@@ -1,0 +1,38 @@
+{
+  "realNetwork": true,
+  "browser": "157.0.8103.78",
+  "singlePage": true,
+  "maxAttempts": 1,
+  "proxyConfigured": true,
+  "proxyApplied": true,
+  "proxyMatchesSaved": true,
+  "auth": {
+    "proxyChallenges": 1,
+    "challengerMatches": true
+  },
+  "diagnostics": {
+    "requested": 1,
+    "confirmed": 0,
+    "events": [
+      {
+        "code": "started",
+        "status": null,
+        "reason": null
+      },
+      {
+        "code": "request",
+        "status": null,
+        "reason": null
+      },
+      {
+        "code": "proxy-error",
+        "status": 407,
+        "reason": null
+      }
+    ]
+  },
+  "state": "paused",
+  "reason": "proxy_error",
+  "localityCount": 0,
+  "success": false
+}

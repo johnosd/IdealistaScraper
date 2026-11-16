@@ -1,6 +1,7 @@
 const { getMonthlyDestination, exportLocalities } = require('./localidades-export.js');
 const { loadDirectory, saveDirectory } = require('./localidades-directory-store.js');
-const { collectLocalities } = require('./localidades-collector.js');
+const { mountCollectionUI } = require('./coleta-ui');
+const { reconcileDirectory } = require('./coleta-runner');
 
 const choose = document.getElementById('choose');
 const reauthorize = document.getElementById('reauthorize');
@@ -86,26 +87,27 @@ async function writeSnapshot() {
   if (result.status === 'permission-required') permission = 'prompt';
   if (result.status === 'saved') snapshot = null;
   report(messages[result.status], result.status);
+  return result;
 }
-extract.addEventListener('click', async () => {
-  if (busy) return;
-  busy = true;
-  // Uma nova coleta só substitui os registros pendentes depois de terminar.
-  const startedAt = new Date();
-  report('Coletando localidades em uma aba própria…', 'collecting');
-  try {
-    const records = await collectLocalities();
-    snapshot = { startedAt, records };
-    await writeSnapshot();
-  } catch (error) { failure(error); }
-  finally { busy = false; render(); }
+let panel;
+function fixedDate(view){const ym=view.exportContext.yearMonth;return new Date(Number(ym.slice(0,4)),Number(ym.slice(4))-1,1);}
+panel=mountCollectionUI({mode:'links',showSettings:false,
+  destination:view=>getMonthlyDestination(fixedDate(view)).relativePath,
+  async save(view){snapshot={startedAt:fixedDate(view),records:view.checkpoint.records};return writeSnapshot();},
+  reconcile:(view,intent)=>reconcileDirectory(directory,intent),
+  onState(view,extra){if(!panel)return;busy=panel.running;snapshot=view?.state==='awaiting-save'?{startedAt:fixedDate(view),records:[{}]}:null;
+    if(view?.state==='awaiting-save'&&['cancelled','permission-required','busy','empty','error'].includes(extra.status)){render();return;}
+    if(view?.state==='saved')report('Links salvos.','saved');
+    else if(view)report(view.state==='awaiting-save'?'Links coletados e preservados. Salve ou confira a gravação anterior.':'Consulte o controle de coleta abaixo.',view.state);
+    render();
+  }
 });
-save.addEventListener('click', async () => {
-  if (busy || !snapshot) return;
-  busy = true; render();
-  try { await writeSnapshot(); } catch (error) { failure(error); }
-  finally { busy = false; render(); }
+extract.addEventListener('click',async()=>{
+  if(busy)return;busy=true;render();
+  try{await panel.start([{nome:'Localidades',url:'https://www.idealista.pt/arrendar-casas/#municipality-search'}],false);await panel.refreshSessions();}
+  catch(error){failure(error);}finally{busy=false;render();}
 });
+save.addEventListener('click',async()=>{if(busy||!panel.id)return;busy=true;render();try{await panel.save(true);}catch(error){failure(error);}finally{busy=false;render();}});
 window.addEventListener('beforeunload', event => {
   if (busy || snapshot?.records.length) { event.preventDefault(); event.returnValue = ''; }
 });
@@ -118,4 +120,5 @@ window.addEventListener('beforeunload', event => {
     report(directory ? (permission === 'granted' ? 'Pasta recuperada. Pronta para exportar.' : 'Reautorize ou troque a pasta para continuar.') : 'Escolha a pasta .data/localidades para começar.', directory ? (permission === 'granted' ? 'ready' : 'needs-permission') : 'needs-directory');
   } catch (error) { failure(error); }
   finally { busy = false; render(); }
+  const selected=new URL(location.href).searchParams.get('session');if(selected)await panel.adopt(selected).catch(()=>report('Resultado indisponível. Volte à aba Links para conferir.','error'));
 })();

@@ -1,0 +1,20 @@
+- generic [active] [ref=f1e1]:
+  - main [ref=f1e2]:
+    - generic [ref=f1e3]:
+      - heading "www.idealista.pt" [level=1] [ref=f1e5]
+      - heading "Performing security verification" [level=2] [ref=f1e6]
+      - paragraph [ref=f1e7]: This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.
+  - contentinfo [ref=f1e14]:
+    - generic [ref=f1e16]:
+      - generic [ref=f1e18]:
+        - text: "Ray ID:"
+        - code [ref=f1e19]: a5b6fe433beee7d5
+      - generic [ref=f1e20]:
+        - generic [ref=f1e21]:
+          - text: Performance and Security by
+          - link "Cloudflare, opens in a new tab" [ref=f1e22] [cursor=pointer]:
+            - /url: https://www.cloudflare.com?utm_source=challenge&utm_campaign=m
+            - text: Cloudflare
+        - link "Privacy, opens in a new tab" [ref=f1e24] [cursor=pointer]:
+          - /url: https://www.cloudflare.com/privacypolicy/
+          - text: Privacy

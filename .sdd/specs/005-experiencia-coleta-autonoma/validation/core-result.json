@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "cases": [
+    "one click",
+    "observer closed",
+    "source preserved",
+    "worker stopped during queue",
+    "local404 followed by next item",
+    "new runner resumes only page2",
+    "quota after collection",
+    "save-only without HTTP",
+    "browser restart no automatic requests"
+  ],
+  "pageerrors": 0,
+  "calls": 13
+}

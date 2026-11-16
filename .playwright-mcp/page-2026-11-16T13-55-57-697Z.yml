@@ -1,0 +1,889 @@
+- generic [active] [ref=f19e1]:
+  - link "Saltar para o conteúdo principal" [ref=f19e2] [cursor=pointer]:
+    - /url: "#wrapper"
+  - banner [ref=f19e4]:
+    - generic [ref=f19e5]:
+      - generic [ref=f19e6]:
+        - link [ref=f19e7] [cursor=pointer]:
+          - /url: https://www.idealista.pt/
+          - img "Idealista logo" [ref=f19e9]
+        - generic [ref=f19e11]:
+          - button "Proprietários" [ref=f19e14] [cursor=pointer]
+          - button "Procuras casa" [ref=f19e18] [cursor=pointer]
+          - button "Crédito habitação" [ref=f19e22] [cursor=pointer]
+      - generic [ref=f19e24]:
+        - link "Publica o teu anúncio" [ref=f19e25] [cursor=pointer]:
+          - /url: https://www.idealista.pt/info/novo-anuncio
+        - combobox "Português" [ref=f19e28] [cursor=pointer]
+        - link "Aceder" [ref=f19e32] [cursor=pointer]:
+          - /url: https://www.idealista.pt/login
+  - navigation "Navegação por localização" [ref=f19e36]:
+    - list [ref=f19e37]:
+      - listitem [ref=f19e38]:
+        - link "idealista" [ref=f19e39] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=f19e40]:
+        - text: 
+        - button "Braga distrito " [ref=f19e41] [cursor=pointer]
+        - text: 
+        - generic [ref=f19e42]: "868"
+  - generic [ref=f19e46]:
+    - generic [ref=f19e47]:
+      - heading "Anúncios de casas e apartamentos para arrendar em Braga distrito" [level=1] [ref=f19e48]
+      - link "Ver 868 casas e apartamentos em Braga" [ref=f19e49] [cursor=pointer]:
+        - /url: /arrendar-casas/braga-distrito/
+    - generic [ref=f19e50]:
+      - generic [ref=f19e51]:
+        - heading "Procurar por mapa" [level=2] [ref=f19e52]
+        - link "Procurar por mapa" [ref=f19e53] [cursor=pointer]:
+          - /url: /arrendar-casas/braga-distrito/mapa
+      - generic [ref=f19e54]:
+        - heading "Imobiliárias em Braga distrito" [level=2] [ref=f19e55]
+        - link "Imobiliárias em Braga distrito" [ref=f19e56] [cursor=pointer]:
+          - /url: /agencias-imobiliarias/braga-distrito/imobiliarias-arrendamento
+    - generic [ref=f19e57]:
+      - list [ref=f19e58]:
+        - listitem [ref=f19e59]:
+          - strong [ref=f19e60]: A
+          - list [ref=f19e61]:
+            - listitem [ref=f19e62]:
+              - generic [ref=f19e63]: "3"
+              - link "Abade de Neiva" [ref=f19e64] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/abade-de-neiva/
+            - listitem [ref=f19e65]:
+              - generic [ref=f19e66]: "1"
+              - link "Aboim da Nóbrega e Gondomar" [ref=f19e67] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-verde/aboim-da-nobrega-e-gondomar/
+            - listitem [ref=f19e68]:
+              - generic [ref=f19e69]: "1"
+              - link "Adães" [ref=f19e70] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/adaes/
+            - listitem [ref=f19e71]:
+              - generic [ref=f19e72]: "2"
+              - link "Adaúfe" [ref=f19e73] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/adaufe/
+            - listitem [ref=f19e74]:
+              - generic [ref=f19e75]: "2"
+              - link "Aldão" [ref=f19e76] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/aldao/
+            - listitem [ref=f19e77]:
+              - generic [ref=f19e78]: "1"
+              - link "Alvite e Passos" [ref=f19e79] [cursor=pointer]:
+                - /url: /arrendar-casas/cabeceiras-de-basto/alvite-e-passos/
+            - listitem [ref=f19e80]:
+              - generic [ref=f19e81]: "2"
+              - link "Amares e Figueiredo" [ref=f19e82] [cursor=pointer]:
+                - /url: /arrendar-casas/amares/amares-e-figueiredo/
+            - listitem [ref=f19e83]:
+              - generic [ref=f19e84]: "1"
+              - link "Anjos e Vilar do Chão" [ref=f19e85] [cursor=pointer]:
+                - /url: /arrendar-casas/vieira-do-minho/anjos-e-vilar-do-chao/
+            - listitem [ref=f19e86]:
+              - generic [ref=f19e87]: "2"
+              - link "Antas" [ref=f19e88] [cursor=pointer]:
+                - /url: /arrendar-casas/esposende/antas/
+            - listitem [ref=f19e89]:
+              - generic [ref=f19e90]: "5"
+              - link "Antas e Abade de Vermoim" [ref=f19e91] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/antas-e-abade-de-vermoim/
+            - listitem [ref=f19e92]:
+              - generic [ref=f19e93]: "19"
+              - link "Apúlia" [ref=f19e94] [cursor=pointer]:
+                - /url: /arrendar-casas/esposende/apulia/
+            - listitem [ref=f19e95]:
+              - generic [ref=f19e96]: "2"
+              - link "Arco de Baúlhe e Vila Nune" [ref=f19e97] [cursor=pointer]:
+                - /url: /arrendar-casas/cabeceiras-de-basto/arco-de-baulhe-e-vila-nune/
+            - listitem [ref=f19e98]:
+              - generic [ref=f19e99]: "8"
+              - link "Arcozelo" [ref=f19e100] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/arcozelo/
+            - listitem [ref=f19e101]:
+              - generic [ref=f19e102]: "1"
+              - link "Arnoia" [ref=f19e103] [cursor=pointer]:
+                - /url: /arrendar-casas/celorico-de-basto/arnoia/
+            - listitem [ref=f19e104]:
+              - generic [ref=f19e105]: "1"
+              - link "Arnoso e Sezures" [ref=f19e106] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/arnoso-e-sezures/
+            - listitem [ref=f19e107]:
+              - generic [ref=f19e108]: "1"
+              - link "Arões (São Romão)" [ref=f19e109] [cursor=pointer]:
+                - /url: /arrendar-casas/fafe/aroes-sao-romao/
+            - listitem [ref=f19e110]:
+              - generic [ref=f19e111]: "1"
+              - link "Arosa e Castelões" [ref=f19e112] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/arosa-e-casteloes/
+            - listitem [ref=f19e113]:
+              - generic [ref=f19e114]: "30"
+              - link "Azurém" [ref=f19e115] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/azurem/
+        - listitem [ref=f19e116]:
+          - strong [ref=f19e117]: B
+          - list [ref=f19e118]:
+            - listitem [ref=f19e119]:
+              - generic [ref=f19e120]: "1"
+              - link "Barcelinhos" [ref=f19e121] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/barcelinhos/
+            - listitem [ref=f19e122]:
+              - generic [ref=f19e123]: "8"
+              - link "Barcelos" [ref=f19e124] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/barcelos/
+            - listitem [ref=f19e125]:
+              - generic [ref=f19e126]: "1"
+              - link "Barqueiros" [ref=f19e127] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/barqueiros/
+            - listitem [ref=f19e128]:
+              - generic [ref=f19e129]: "1"
+              - link "Barreiros" [ref=f19e130] [cursor=pointer]:
+                - /url: /arrendar-casas/amares/barreiros/
+            - listitem [ref=f19e131]:
+              - generic [ref=f19e132]: "2"
+              - link "Belinho" [ref=f19e133] [cursor=pointer]:
+                - /url: /arrendar-casas/esposende/belinho/
+            - listitem [ref=f19e134]:
+              - generic [ref=f19e135]: "1"
+              - link "Bouro (Santa Marta)" [ref=f19e136] [cursor=pointer]:
+                - /url: /arrendar-casas/amares/bouro-santa-marta/
+            - listitem [ref=f19e137]:
+              - generic [ref=f19e138]: "1"
+              - link "Briteiros Santo Estêvão e Donim" [ref=f19e139] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/briteiros-santo-estevao-e-donim/
+            - listitem [ref=f19e140]:
+              - generic [ref=f19e141]: "2"
+              - link "Britelo - Gémeos - Ourilhe" [ref=f19e142] [cursor=pointer]:
+                - /url: /arrendar-casas/celorico-de-basto/britelo-gemeos-ourilhe/
+            - listitem [ref=f19e143]:
+              - generic [ref=f19e144]: "1"
+              - link "Brufe" [ref=f19e145] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/brufe/
+        - listitem [ref=f19e146]:
+          - strong [ref=f19e147]: C
+          - list [ref=f19e148]:
+            - listitem [ref=f19e149]:
+              - generic [ref=f19e150]: "1"
+              - link "Caires" [ref=f19e151] [cursor=pointer]:
+                - /url: /arrendar-casas/amares/caires/
+            - listitem [ref=f19e152]:
+              - generic [ref=f19e153]: "4"
+              - link "Caldas de Vizela" [ref=f19e154] [cursor=pointer]:
+                - /url: /arrendar-casas/vizela/caldas-de-vizela/
+            - listitem [ref=f19e155]:
+              - generic [ref=f19e156]: "5"
+              - link "Caldelas" [ref=f19e157] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/caldelas/
+            - listitem [ref=f19e158]:
+              - generic [ref=f19e159]: "3"
+              - link "Candoso São Tiago e Mascotelos" [ref=f19e160] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/candoso-sao-tiago-e-mascotelos/
+            - listitem [ref=f19e161]:
+              - generic [ref=f19e162]: "1"
+              - link "Caniçada e Soengas" [ref=f19e163] [cursor=pointer]:
+                - /url: /arrendar-casas/vieira-do-minho/canicada-e-soengas/
+            - listitem [ref=f19e164]:
+              - generic [ref=f19e165]: "1"
+              - link "Carrazedo" [ref=f19e166] [cursor=pointer]:
+                - /url: /arrendar-casas/amares/carrazedo/
+            - listitem [ref=f19e167]:
+              - generic [ref=f19e168]: "1"
+              - link "Carreiras" [ref=f19e169] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-verde/carreiras/
+            - listitem [ref=f19e170]:
+              - generic [ref=f19e171]: "3"
+              - link "Celeirós - Aveleda - Vimieiro" [ref=f19e172] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/celeiros-aveleda-vimieiro/
+            - listitem [ref=f19e173]:
+              - generic [ref=f19e174]: "3"
+              - link "Costa" [ref=f19e175] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/costa/
+            - listitem [ref=f19e176]:
+              - generic [ref=f19e177]: "1"
+              - link "Coucieiro" [ref=f19e178] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-verde/coucieiro/
+            - listitem [ref=f19e179]:
+              - generic [ref=f19e180]: "2"
+              - link "Covide (São Mamede)" [ref=f19e181] [cursor=pointer]:
+                - /url: /arrendar-casas/terras-de-bouro/covide-sao-mamede/
+            - listitem [ref=f19e182]:
+              - generic [ref=f19e183]: "16"
+              - link "Creixomil" [ref=f19e184] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/creixomil/
+        - listitem [ref=f19e185]:
+          - strong [ref=f19e186]: D
+          - list [ref=f19e187]:
+            - listitem [ref=f19e188]:
+              - generic [ref=f19e189]: "1"
+              - link "Delães" [ref=f19e190] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/delaes/
+        - listitem [ref=f19e191]:
+          - strong [ref=f19e192]: E
+          - list [ref=f19e193]:
+            - listitem [ref=f19e194]:
+              - generic [ref=f19e195]: "1"
+              - link "Escudeiros e Penso (Santo Estêvão e São Vicente)" [ref=f19e196] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/escudeiros-e-penso-santo-estevao-e-sao-vicente/
+            - listitem [ref=f19e197]:
+              - generic [ref=f19e198]: "1"
+              - link "Esporões" [ref=f19e199] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/esporoes/
+            - listitem [ref=f19e200]:
+              - generic [ref=f19e201]: "13"
+              - link "Esposende" [ref=f19e202] [cursor=pointer]:
+                - /url: /arrendar-casas/esposende/esposende/
+            - listitem [ref=f19e203]:
+              - generic [ref=f19e204]: "3"
+              - link "Esqueiros - Nevogilde - Travassós" [ref=f19e205] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-verde/esqueiros-nevogilde-travassos/
+            - listitem [ref=f19e206]:
+              - generic [ref=f19e207]: "3"
+              - link "Este (São Pedro e São Mamede)" [ref=f19e208] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/este-sao-pedro-e-sao-mamede/
+        - listitem [ref=f19e209]:
+          - strong [ref=f19e210]: F
+          - list [ref=f19e211]:
+            - listitem [ref=f19e212]:
+              - generic [ref=f19e213]: "3"
+              - link "Fafe" [ref=f19e214] [cursor=pointer]:
+                - /url: /arrendar-casas/fafe/fafe/
+            - listitem [ref=f19e215]:
+              - generic [ref=f19e216]: "1"
+              - link "Faia" [ref=f19e217] [cursor=pointer]:
+                - /url: /arrendar-casas/cabeceiras-de-basto/faia/
+            - listitem [ref=f19e218]:
+              - generic [ref=f19e219]: "19"
+              - link "Fão" [ref=f19e220] [cursor=pointer]:
+                - /url: /arrendar-casas/esposende/fao/
+            - listitem [ref=f19e221]:
+              - generic [ref=f19e222]: "4"
+              - link "Fermentões" [ref=f19e223] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/fermentoes/
+            - listitem [ref=f19e224]:
+              - generic [ref=f19e225]: "1"
+              - link "Ferreiros" [ref=f19e226] [cursor=pointer]:
+                - /url: /arrendar-casas/povoa-de-lanhoso/ferreiros/
+            - listitem [ref=f19e227]:
+              - generic [ref=f19e228]: "5"
+              - link "Ferreiros - Prozelo - Besteiros" [ref=f19e229] [cursor=pointer]:
+                - /url: /arrendar-casas/amares/ferreiros-prozelo-besteiros/
+            - listitem [ref=f19e230]:
+              - generic [ref=f19e231]: "5"
+              - link "Ferreiros e Gondizalves" [ref=f19e232] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/ferreiros-e-gondizalves/
+            - listitem [ref=f19e233]:
+              - generic [ref=f19e234]: "3"
+              - link "Forjães" [ref=f19e235] [cursor=pointer]:
+                - /url: /arrendar-casas/esposende/forjaes/
+        - listitem [ref=f19e236]:
+          - strong [ref=f19e237]: G
+          - list [ref=f19e238]:
+            - listitem [ref=f19e239]:
+              - generic [ref=f19e240]: "1"
+              - link "Gamil e Midões" [ref=f19e241] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/gamil-e-midoes/
+            - listitem [ref=f19e242]:
+              - generic [ref=f19e243]: "4"
+              - link "Gandra" [ref=f19e244] [cursor=pointer]:
+                - /url: /arrendar-casas/esposende/gandra/
+            - listitem [ref=f19e245]:
+              - generic [ref=f19e246]: "1"
+              - link "Gavião" [ref=f19e247] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/gaviao/
+            - listitem [ref=f19e248]:
+              - generic [ref=f19e249]: "6"
+              - link "Gemeses" [ref=f19e250] [cursor=pointer]:
+                - /url: /arrendar-casas/esposende/gemeses/
+            - listitem [ref=f19e251]:
+              - generic [ref=f19e252]: "1"
+              - link "Gondoriz" [ref=f19e253] [cursor=pointer]:
+                - /url: /arrendar-casas/terras-de-bouro/gondoriz/
+            - listitem [ref=f19e254]:
+              - generic [ref=f19e255]: "35"
+              - link "Gualtar" [ref=f19e256] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/gualtar/
+            - listitem [ref=f19e257]:
+              - generic [ref=f19e258]: "1"
+              - link "Guilhofrei" [ref=f19e259] [cursor=pointer]:
+                - /url: /arrendar-casas/vieira-do-minho/guilhofrei/
+        - listitem [ref=f19e260]:
+          - strong [ref=f19e261]: I
+          - list [ref=f19e262]:
+            - listitem [ref=f19e263]:
+              - generic [ref=f19e264]: "2"
+              - link "Infantas" [ref=f19e265] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/infantas/
+        - listitem [ref=f19e266]:
+          - strong [ref=f19e267]: J
+          - list [ref=f19e268]:
+            - listitem [ref=f19e269]:
+              - generic [ref=f19e270]: "3"
+              - link "Joane" [ref=f19e271] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/joane/
+        - listitem [ref=f19e272]:
+          - strong [ref=f19e273]: L
+          - list [ref=f19e274]:
+            - listitem [ref=f19e275]:
+              - generic [ref=f19e276]: "2"
+              - link "Lago" [ref=f19e277] [cursor=pointer]:
+                - /url: /arrendar-casas/amares/lago/
+            - listitem [ref=f19e278]:
+              - generic [ref=f19e279]: "1"
+              - link "Lemenhe - Mouquim - Jesufrei" [ref=f19e280] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/lemenhe-mouquim-jesufrei/
+            - listitem [ref=f19e281]:
+              - generic [ref=f19e282]: "4"
+              - link "Lomar e Arcos" [ref=f19e283] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/lomar-e-arcos/
+            - listitem [ref=f19e284]:
+              - generic [ref=f19e285]: "3"
+              - link "Louredo" [ref=f19e286] [cursor=pointer]:
+                - /url: /arrendar-casas/vieira-do-minho/louredo/
+            - listitem [ref=f19e287]:
+              - generic [ref=f19e288]: "1"
+              - link "Louro" [ref=f19e289] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/louro/
+        - listitem [ref=f19e290]:
+          - strong [ref=f19e291]: M
+          - list [ref=f19e292]:
+            - listitem [ref=f19e293]:
+              - generic [ref=f19e294]: "1"
+              - link "Macieira de Rates" [ref=f19e295] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/macieira-de-rates/
+            - listitem [ref=f19e296]:
+              - generic [ref=f19e297]: "19"
+              - link "Marinhas" [ref=f19e298] [cursor=pointer]:
+                - /url: /arrendar-casas/esposende/marinhas/
+            - listitem [ref=f19e299]:
+              - generic [ref=f19e300]: "60"
+              - link "Maximinos - Sé - Cividade" [ref=f19e301] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/maximinos-se-cividade/
+            - listitem [ref=f19e302]:
+              - generic [ref=f19e303]: "5"
+              - link "Merelim (São Pedro) e Frossos" [ref=f19e304] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/merelim-sao-pedro-e-frossos/
+            - listitem [ref=f19e305]:
+              - generic [ref=f19e306]: "1"
+              - link "Mesão Frio" [ref=f19e307] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/mesao-frio/
+            - listitem [ref=f19e308]:
+              - generic [ref=f19e309]: "1"
+              - link "Mire de Tibães" [ref=f19e310] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/mire-de-tibaes/
+            - listitem [ref=f19e311]:
+              - generic [ref=f19e312]: "2"
+              - link "Moreira do Castelo" [ref=f19e313] [cursor=pointer]:
+                - /url: /arrendar-casas/celorico-de-basto/moreira-do-castelo/
+            - listitem [ref=f19e314]:
+              - generic [ref=f19e315]: "1"
+              - link "Mosteiro" [ref=f19e316] [cursor=pointer]:
+                - /url: /arrendar-casas/vieira-do-minho/mosteiro/
+        - listitem [ref=f19e317]:
+          - strong [ref=f19e318]: "N"
+          - list [ref=f19e319]:
+            - listitem [ref=f19e320]:
+              - generic [ref=f19e321]: "20"
+              - link "Nogueira - Fraião - Lamaçães" [ref=f19e322] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/nogueira-fraiao-lamacaes/
+            - listitem [ref=f19e323]:
+              - generic [ref=f19e324]: "16"
+              - link "Nogueiró e Tenões" [ref=f19e325] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/nogueiro-e-tenoes/
+            - listitem [ref=f19e326]:
+              - generic [ref=f19e327]: "3"
+              - link "Nossa Senhora do Amparo" [ref=f19e328] [cursor=pointer]:
+                - /url: /arrendar-casas/povoa-de-lanhoso/nossa-senhora-do-amparo/
+        - listitem [ref=f19e329]:
+          - strong [ref=f19e330]: O
+          - list [ref=f19e331]:
+            - listitem [ref=f19e332]:
+              - generic [ref=f19e333]: "36"
+              - link "Oliveira - São Paio - São Sebastião" [ref=f19e334] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/oliveira-sao-paio-sao-sebastiao/
+        - listitem [ref=f19e335]:
+          - strong [ref=f19e336]: P
+          - list [ref=f19e337]:
+            - listitem [ref=f19e338]:
+              - generic [ref=f19e339]: "3"
+              - link "Palmeira" [ref=f19e340] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/palmeira/
+            - listitem [ref=f19e341]:
+              - generic [ref=f19e342]: "1"
+              - link "Pedraça" [ref=f19e343] [cursor=pointer]:
+                - /url: /arrendar-casas/cabeceiras-de-basto/pedraca/
+            - listitem [ref=f19e344]:
+              - generic [ref=f19e345]: "2"
+              - link "Polvoreira" [ref=f19e346] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/polvoreira/
+            - listitem [ref=f19e347]:
+              - generic [ref=f19e348]: "1"
+              - link "Pousa" [ref=f19e349] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/pousa/
+            - listitem [ref=f19e350]:
+              - generic [ref=f19e351]: "2"
+              - link "Pousada de Saramagos" [ref=f19e352] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/pousada-de-saramagos/
+        - listitem [ref=f19e353]:
+          - strong [ref=f19e354]: R
+          - list [ref=f19e355]:
+            - listitem [ref=f19e356]:
+              - generic [ref=f19e357]: "15"
+              - link "Real - Dume - Semelhe" [ref=f19e358] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/real-dume-semelhe/
+            - listitem [ref=f19e359]:
+              - generic [ref=f19e360]: "2"
+              - link "Refojos de Basto" [ref=f19e361] [cursor=pointer]:
+                - /url: /arrendar-casas/cabeceiras-de-basto/refojos-de-basto/
+            - listitem [ref=f19e362]:
+              - generic [ref=f19e363]: "1"
+              - link "Rendufe" [ref=f19e364] [cursor=pointer]:
+                - /url: /arrendar-casas/amares/rendufe/
+            - listitem [ref=f19e365]:
+              - generic [ref=f19e366]: "1"
+              - link "Riba de Ave" [ref=f19e367] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/riba-de-ave/
+            - listitem [ref=f19e368]:
+              - generic [ref=f19e369]: "2"
+              - link "Ribas" [ref=f19e370] [cursor=pointer]:
+                - /url: /arrendar-casas/celorico-de-basto/ribas/
+            - listitem [ref=f19e371]:
+              - generic [ref=f19e372]: "3"
+              - link "Ribeira do Neiva" [ref=f19e373] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-verde/ribeira-do-neiva/
+            - listitem [ref=f19e374]:
+              - generic [ref=f19e375]: "3"
+              - link "Ribeirão" [ref=f19e376] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/ribeirao/
+            - listitem [ref=f19e377]:
+              - generic [ref=f19e378]: "1"
+              - link "Rio Caldo" [ref=f19e379] [cursor=pointer]:
+                - /url: /arrendar-casas/terras-de-bouro/rio-caldo/
+            - listitem [ref=f19e380]:
+              - generic [ref=f19e381]: "1"
+              - link "Rio Covo (Santa Eugénia)" [ref=f19e382] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/rio-covo-santa-eugenia/
+            - listitem [ref=f19e383]:
+              - generic [ref=f19e384]: "1"
+              - link "Rio Douro" [ref=f19e385] [cursor=pointer]:
+                - /url: /arrendar-casas/cabeceiras-de-basto/rio-douro/
+            - listitem [ref=f19e386]:
+              - generic [ref=f19e387]: "1"
+              - link "Ronfe" [ref=f19e388] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/ronfe/
+        - listitem [ref=f19e389]:
+          - strong [ref=f19e390]: S
+          - list [ref=f19e391]:
+            - listitem [ref=f19e392]:
+              - generic [ref=f19e393]: "1"
+              - link "Santa Eulália" [ref=f19e394] [cursor=pointer]:
+                - /url: /arrendar-casas/vizela/santa-eulalia/
+            - listitem [ref=f19e395]:
+              - generic [ref=f19e396]: "2"
+              - link "Santa Lucrécia de Algeriz e Navarra" [ref=f19e397] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/santa-lucrecia-de-algeriz-e-navarra/
+            - listitem [ref=f19e398]:
+              - generic [ref=f19e399]: "1"
+              - link "São Cristóvão (Selho)" [ref=f19e400] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/sao-cristovao-selho/
+            - listitem [ref=f19e401]:
+              - generic [ref=f19e402]: "1"
+              - link "São Gens" [ref=f19e403] [cursor=pointer]:
+                - /url: /arrendar-casas/fafe/sao-gens/
+            - listitem [ref=f19e404]:
+              - generic [ref=f19e405]: "2"
+              - link "São Jorge (Selho)" [ref=f19e406] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/sao-jorge-selho/
+            - listitem [ref=f19e407]:
+              - generic [ref=f19e408]: "77"
+              - link "São José de São Lázaro e São João do Souto" [ref=f19e409] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/sao-jose-de-sao-lazaro-e-sao-joao-do-souto/
+            - listitem [ref=f19e410]:
+              - generic [ref=f19e411]: "1"
+              - link "São Martinho (Candoso)" [ref=f19e412] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/sao-martinho-candoso/
+            - listitem [ref=f19e413]:
+              - generic [ref=f19e414]: "1"
+              - link "São Martinho Vale" [ref=f19e415] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/sao-martinho-vale/
+            - listitem [ref=f19e416]:
+              - generic [ref=f19e417]: "2"
+              - link "São Torcato" [ref=f19e418] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/sao-torcato/
+            - listitem [ref=f19e419]:
+              - generic [ref=f19e420]: "81"
+              - link "São Vicente" [ref=f19e421] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/sao-vicente/
+            - listitem [ref=f19e422]:
+              - generic [ref=f19e423]: "139"
+              - link "São Victor" [ref=f19e424] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/sao-victor/
+            - listitem [ref=f19e425]:
+              - generic [ref=f19e426]: "1"
+              - link "Sequeade e Bastuço" [ref=f19e427] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/sequeade-e-bastuco/
+            - listitem [ref=f19e428]:
+              - generic [ref=f19e429]: "1"
+              - link "Serzedelo" [ref=f19e430] [cursor=pointer]:
+                - /url: /arrendar-casas/povoa-de-lanhoso/serzedelo/
+            - listitem [ref=f19e431]:
+              - generic [ref=f19e432]: "1"
+              - link "Silveiros" [ref=f19e433] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/silveiros/
+        - listitem [ref=f19e434]:
+          - strong [ref=f19e435]: T
+          - list [ref=f19e436]:
+            - listitem [ref=f19e437]:
+              - generic [ref=f19e438]: "2"
+              - link "Tabuadelo" [ref=f19e439] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/tabuadelo/
+            - listitem [ref=f19e440]:
+              - generic [ref=f19e441]: "1"
+              - link "Tadim" [ref=f19e442] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/tadim/
+            - listitem [ref=f19e443]:
+              - generic [ref=f19e444]: "3"
+              - link "Taíde" [ref=f19e445] [cursor=pointer]:
+                - /url: /arrendar-casas/povoa-de-lanhoso/taide/
+            - listitem [ref=f19e446]:
+              - generic [ref=f19e447]: "1"
+              - link "Tebosa" [ref=f19e448] [cursor=pointer]:
+                - /url: /arrendar-casas/braga/tebosa/
+        - listitem [ref=f19e449]:
+          - strong [ref=f19e450]: U
+          - list [ref=f19e451]:
+            - listitem [ref=f19e452]:
+              - generic [ref=f19e453]: "2"
+              - link "Ucha" [ref=f19e454] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/ucha/
+            - listitem [ref=f19e455]:
+              - generic [ref=f19e456]: "12"
+              - link "Urgezes" [ref=f19e457] [cursor=pointer]:
+                - /url: /arrendar-casas/guimaraes/urgezes/
+        - listitem [ref=f19e458]:
+          - strong [ref=f19e459]: V
+          - list [ref=f19e460]:
+            - listitem [ref=f19e461]:
+              - generic [ref=f19e462]: "1"
+              - link "Valdreu" [ref=f19e463] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-verde/valdreu/
+            - listitem [ref=f19e464]:
+              - generic [ref=f19e465]: "1"
+              - link "Vale (São Cosme) - Telhado - Portela" [ref=f19e466] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/vale-sao-cosme-telhado-portela/
+            - listitem [ref=f19e467]:
+              - generic [ref=f19e468]: "4"
+              - link "Vale de Bouro" [ref=f19e469] [cursor=pointer]:
+                - /url: /arrendar-casas/celorico-de-basto/vale-de-bouro/
+            - listitem [ref=f19e470]:
+              - generic [ref=f19e471]: "2"
+              - link "Várzea" [ref=f19e472] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/varzea/
+            - listitem [ref=f19e473]:
+              - generic [ref=f19e474]: "3"
+              - link "Veade - Gagos - Molares" [ref=f19e475] [cursor=pointer]:
+                - /url: /arrendar-casas/celorico-de-basto/veade-gagos-molares/
+            - listitem [ref=f19e476]:
+              - generic [ref=f19e477]: "1"
+              - link "Ventosa e Cova" [ref=f19e478] [cursor=pointer]:
+                - /url: /arrendar-casas/vieira-do-minho/ventosa-e-cova/
+            - listitem [ref=f19e479]:
+              - generic [ref=f19e480]: "1"
+              - link "Vermoim" [ref=f19e481] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/vermoim/
+            - listitem [ref=f19e482]:
+              - generic [ref=f19e483]: "1"
+              - link "Viatodos - Grimancelos - Minhotães - Monte de Fralães" [ref=f19e484] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/viatodos-grimancelos-minhotaes-monte-de-fralaes/
+            - listitem [ref=f19e485]:
+              - generic [ref=f19e486]: "3"
+              - link "Vieira do Minho" [ref=f19e487] [cursor=pointer]:
+                - /url: /arrendar-casas/vieira-do-minho/vieira-do-minho/
+            - listitem [ref=f19e488]:
+              - generic [ref=f19e489]: "4"
+              - link "Vila Boa" [ref=f19e490] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/vila-boa/
+            - listitem [ref=f19e491]:
+              - generic [ref=f19e492]: "1"
+              - link "Vila Cova e Feitos" [ref=f19e493] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/vila-cova-e-feitos/
+            - listitem [ref=f19e494]:
+              - generic [ref=f19e495]: "1"
+              - link "Vila de Prado" [ref=f19e496] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-verde/vila-de-prado/
+            - listitem [ref=f19e497]:
+              - generic [ref=f19e498]: "25"
+              - link "Vila Nova de Famalicão e Calendário" [ref=f19e499] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-nova-de-famalicao/vila-nova-de-famalicao-e-calendario/
+            - listitem [ref=f19e500]:
+              - generic [ref=f19e501]: "1"
+              - link "Vila Seca" [ref=f19e502] [cursor=pointer]:
+                - /url: /arrendar-casas/barcelos/vila-seca/
+            - listitem [ref=f19e503]:
+              - generic [ref=f19e504]: "8"
+              - link "Vila Verde e Barbudo" [ref=f19e505] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-verde/vila-verde-e-barbudo/
+            - listitem [ref=f19e506]:
+              - generic [ref=f19e507]: "1"
+              - link "Vilar da Veiga" [ref=f19e508] [cursor=pointer]:
+                - /url: /arrendar-casas/terras-de-bouro/vilar-da-veiga/
+            - listitem [ref=f19e509]:
+              - generic [ref=f19e510]: "1"
+              - link "Vilela" [ref=f19e511] [cursor=pointer]:
+                - /url: /arrendar-casas/povoa-de-lanhoso/vilela/
+            - listitem [ref=f19e512]:
+              - generic [ref=f19e513]: "1"
+              - link "Vilela - Seramil - Paredes Secas" [ref=f19e514] [cursor=pointer]:
+                - /url: /arrendar-casas/amares/vilela-seramil-paredes-secas/
+            - listitem [ref=f19e515]:
+              - generic [ref=f19e516]: "1"
+              - link "Vizela (Santo Adrião)" [ref=f19e517] [cursor=pointer]:
+                - /url: /arrendar-casas/vizela/vizela-santo-adriao/
+      - generic [ref=f19e518]:
+        - heading "Zonas de interesse" [level=2] [ref=f19e519]
+        - list [ref=f19e520]:
+          - listitem [ref=f19e521]:
+            - link "Areal de Baixo" [ref=f19e522] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/areal-de-baixo/
+          - listitem [ref=f19e523]:
+            - link "Areal de Cima" [ref=f19e524] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/areal-de-cima/
+          - listitem [ref=f19e525]:
+            - link "Armada" [ref=f19e526] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/armada/
+          - listitem [ref=f19e527]:
+            - link "Bairro das Andorinhas" [ref=f19e528] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/bairro-das-andorinhas-1/
+          - listitem [ref=f19e529]:
+            - link "Bairro Novo" [ref=f19e530] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/bairro-novo-23/
+          - listitem [ref=f19e531]:
+            - link "Belinhos" [ref=f19e532] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/belinhos/
+          - listitem [ref=f19e533]:
+            - link "Cones" [ref=f19e534] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/cones/
+          - listitem [ref=f19e535]:
+            - link "Costa Verde" [ref=f19e536] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/costa-verde/
+          - listitem [ref=f19e537]:
+            - link "Cruzeiro" [ref=f19e538] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/cruzeiro-9/
+          - listitem [ref=f19e539]:
+            - link "Estrada" [ref=f19e540] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/estrada-8/
+          - listitem [ref=f19e541]:
+            - link "Estrada Velha" [ref=f19e542] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/estrada-velha/
+          - listitem [ref=f19e543]:
+            - link "Granja" [ref=f19e544] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/granja-15/
+          - listitem [ref=f19e545]:
+            - link "Misericórdia" [ref=f19e546] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/miseric-rdia/
+          - listitem [ref=f19e547]:
+            - link "Norte" [ref=f19e548] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/norte/
+          - listitem [ref=f19e549]:
+            - link "Ventosa" [ref=f19e550] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/ventosa-2/
+      - generic [ref=f19e551]:
+        - heading "Próximo de Braga" [level=2] [ref=f19e552]
+        - list [ref=f19e553]:
+          - listitem [ref=f19e554]:
+            - link "Viana do Castelo" [ref=f19e555] [cursor=pointer]:
+              - /url: /arrendar-casas/viana-do-castelo-distrito/concelhos-freguesias
+          - listitem [ref=f19e556]:
+            - link "Vila Real" [ref=f19e557] [cursor=pointer]:
+              - /url: /arrendar-casas/vila-real-distrito/concelhos-freguesias
+          - listitem [ref=f19e558]:
+            - link "Porto" [ref=f19e559] [cursor=pointer]:
+              - /url: /arrendar-casas/porto-distrito/concelhos-freguesias
+  - generic [ref=f19e560]:
+    - heading "Serviços do idealista" [level=2] [ref=f19e561]
+    - generic [ref=f19e562]:
+      - navigation "Estás à procura de casa?" [ref=f19e563]:
+        - heading "Estás à procura de casa?" [level=3] [ref=f19e564]
+        - list [ref=f19e565]:
+          - listitem [ref=f19e566]:
+            - link "Motor de pesquisa principal" [ref=f19e567] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f19e568]:
+            - link "Pesquisa mais rapidamente com a nossa app" [ref=f19e569] [cursor=pointer]:
+              - /url: /aplicacoes
+          - listitem [ref=f19e570]:
+            - link "Apartamentos de bancos" [ref=f19e571] [cursor=pointer]:
+              - /url: /imoveis-da-banca
+          - listitem [ref=f19e572]:
+            - link "Casas à venda em Portugal" [ref=f19e573] [cursor=pointer]:
+              - /url: /properties-for-sale-in-portugal
+          - listitem [ref=f19e574]:
+            - link "Arrendamento de casas em Portugal" [ref=f19e575] [cursor=pointer]:
+              - /url: /long-term-rentals-in-portugal
+          - listitem [ref=f19e576]:
+            - link "Casas e apartamentos em arrendamento" [ref=f19e577] [cursor=pointer]:
+              - /url: /apartamentos-para-arrendar
+          - listitem [ref=f19e578]:
+            - link "Apartamentos partilhados" [ref=f19e579] [cursor=pointer]:
+              - /url: /apartamentos-para-dividir
+          - listitem [ref=f19e580]:
+            - link "Oportunidades de investimento" [ref=f19e581] [cursor=pointer]:
+              - /url: https://www.idealista.pt/investimento-imobiliario/#/
+          - listitem [ref=f19e582]:
+            - link "Rentalia, arrendamento para férias" [ref=f19e583] [cursor=pointer]:
+              - /url: https://pt.rentalia.com/
+          - listitem [ref=f19e584]:
+            - link "Relatórios de preços" [ref=f19e585] [cursor=pointer]:
+              - /url: https://www.idealista.pt/media/relatorios-preco-habitacao/
+          - listitem [ref=f19e586]:
+            - link "idealista maps" [ref=f19e587] [cursor=pointer]:
+              - /url: https://www.idealista.pt/maps/
+          - listitem [ref=f19e588]:
+            - link "Apartamentos e casas de luxo à venda em Portugal" [ref=f19e589] [cursor=pointer]:
+              - /url: /luxury-homes-portugal
+          - listitem [ref=f19e590]:
+            - link "Apartamentos e casas de luxo para arrendar em Portugal" [ref=f19e591] [cursor=pointer]:
+              - /url: /luxury-rentals-portugal
+      - navigation "Tens um imóvel?" [ref=f19e592]:
+        - heading "Tens um imóvel?" [level=3] [ref=f19e593]
+        - list [ref=f19e594]:
+          - listitem [ref=f19e595]:
+            - link "Publica o teu anúncio grátis" [ref=f19e596] [cursor=pointer]:
+              - /url: /info/novo-anuncio
+          - listitem [ref=f19e597]:
+            - link "Área do proprietário" [ref=f19e598] [cursor=pointer]:
+              - /url: /proprietarios/
+          - listitem [ref=f19e599]:
+            - link "Melhorar as fotos do teu anúncio" [ref=f19e600] [cursor=pointer]:
+              - /url: /info/truques-fazer-fotos-e-videos
+          - listitem [ref=f19e601]:
+            - link "Solicitar certificado energético" [ref=f19e602] [cursor=pointer]:
+              - /url: /certificadoenergetico/
+          - listitem [ref=f19e603]:
+            - link "Avalia grátis qualquer imóvel" [ref=f19e604] [cursor=pointer]:
+              - /url: /avaliacao-de-imoveis/
+          - listitem [ref=f19e605]:
+            - link "Procurar agências para vender facilmente a tua casa" [ref=f19e606] [cursor=pointer]:
+              - /url: /escolher-agencia-imobiliaria/
+          - listitem [ref=f19e607]:
+            - link "Guia sobre como vender a tua casa" [ref=f19e608] [cursor=pointer]:
+              - /url: /quero-vender-a-minha-casa/
+          - listitem [ref=f19e609]:
+            - link "Garantir 12 mensalidades com um seguro de incumprimento" [ref=f19e610] [cursor=pointer]:
+              - /url: https://www.idealista.pt/seguros/incumprimento-rendas/
+          - listitem [ref=f19e611]:
+            - link "Queres fazer obras em casa?" [ref=f19e612] [cursor=pointer]:
+              - /url: https://www.idealista.pt/obras-em-casa/
+      - navigation "És profissional imobiliário?" [ref=f19e613]:
+        - heading "És profissional imobiliário?" [level=3] [ref=f19e614]
+        - list [ref=f19e615]:
+          - listitem [ref=f19e616]:
+            - link "Publica os teus imóveis profissionais" [ref=f19e617] [cursor=pointer]:
+              - /url: /novo-profissional
+          - listitem [ref=f19e618]:
+            - link "Já és cliente? Entra na tua conta" [ref=f19e619] [cursor=pointer]:
+              - /url: /login
+          - listitem [ref=f19e620]:
+            - link "Cursos imobiliários" [ref=f19e621] [cursor=pointer]:
+              - /url: https://www.idealista.pt/cursos/
+          - listitem [ref=f19e622]:
+            - link "Publicidade no idealista" [ref=f19e623] [cursor=pointer]:
+              - /url: /info/publicidade
+          - listitem [ref=f19e624]:
+            - 'link "idealista/tools: Software de gestão para imobiliárias" [ref=f19e625] [cursor=pointer]':
+              - /url: https://www.idealista.pt/tools/
+          - listitem [ref=f19e626]:
+            - link "Outros softwares recomendados" [ref=f19e627] [cursor=pointer]:
+              - /url: /tools/software-recomendado-para-imobiliarias
+          - listitem [ref=f19e628]:
+            - 'link "idealista/data: tecnologia para a análise imobiliária" [ref=f19e629] [cursor=pointer]':
+              - /url: https://www.idealista.pt/data/
+          - listitem [ref=f19e630]:
+            - 'link "Avaibook: software para gerir os teus arrendamentos turísticos" [ref=f19e631] [cursor=pointer]':
+              - /url: https://www.avaibook.com/pt-pt/
+          - listitem [ref=f19e632]:
+            - link "HCPro - Software de Gestão Imobiliária" [ref=f19e633] [cursor=pointer]:
+              - /url: https://www.hcpro.pt/
+  - contentinfo [ref=f19e634]:
+    - generic [ref=f19e635]:
+      - heading " idealista" [level=2] [ref=f19e636]:
+        - text: 
+        - generic [ref=f19e637]: idealista
+      - generic [ref=f19e639] [cursor=pointer]:
+        - text: 
+        - generic [ref=f19e641]: Português
+      - generic [ref=f19e642]:
+        - navigation [ref=f19e643]:
+          - heading "Sobre o idealista" [level=3] [ref=f19e644]
+          - list [ref=f19e645]:
+            - listitem [ref=f19e646]:
+              - link "Sobre nós" [ref=f19e647] [cursor=pointer]:
+                - /url: /media/sobre-nos/
+            - listitem [ref=f19e648]:
+              - link "Media" [ref=f19e649] [cursor=pointer]:
+                - /url: /media/
+            - listitem [ref=f19e650]:
+              - link "Trabalha connosco" [ref=f19e651] [cursor=pointer]:
+                - /url: /info/trabalha-connosco
+            - listitem [ref=f19e652]:
+              - link "idealista/créditohabitação" [ref=f19e653] [cursor=pointer]:
+                - /url: https://www.idealista.pt/credito-habitacao
+            - listitem [ref=f19e654]:
+              - link "idealista/data" [ref=f19e655] [cursor=pointer]:
+                - /url: /data/
+            - listitem [ref=f19e656]:
+              - link "idealista/news" [ref=f19e657] [cursor=pointer]:
+                - /url: /news/
+            - listitem [ref=f19e658]:
+              - link "idealista/seguros" [ref=f19e659] [cursor=pointer]:
+                - /url: /seguros/
+        - navigation [ref=f19e660]:
+          - heading "Ajuda" [level=3] [ref=f19e661]
+          - list [ref=f19e662]:
+            - listitem [ref=f19e663]:
+              - link "Perguntas frequentes (FAQs)" [ref=f19e664] [cursor=pointer]:
+                - /url: /apoioutilizador/
+            - listitem [ref=f19e665]:
+              - link "Segurança online" [ref=f19e666] [cursor=pointer]:
+                - /url: /apoioutilizador/categorias/seguranca-online/
+            - listitem [ref=f19e667]:
+              - link "Contacta com o idealista" [ref=f19e668] [cursor=pointer]:
+                - /url: /info/contacta-connosco
+            - listitem [ref=f19e669]:
+              - link "Privacidade" [ref=f19e670] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/politica-de-privacidade/
+            - listitem [ref=f19e671]:
+              - link "Política de cookies" [ref=f19e672] [cursor=pointer]:
+                - /url: /info/cookie-policy
+            - listitem [ref=f19e673]:
+              - link "Condições gerais" [ref=f19e674] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/aviso-legal-e-condicoes-gerais/
+        - navigation [ref=f19e675]:
+          - heading "Outros países" [level=3] [ref=f19e676]
+          - list [ref=f19e677]:
+            - listitem [ref=f19e678]:
+              - link "idealista Espanha" [ref=f19e679] [cursor=pointer]:
+                - /url: https://www.idealista.com/pt/
+            - listitem [ref=f19e680]:
+              - link "idealista Itália" [ref=f19e681] [cursor=pointer]:
+                - /url: https://www.idealista.it/pt/
+            - listitem [ref=f19e682]:
+              - link "idealista França" [ref=f19e683] [cursor=pointer]:
+                - /url: https://www.idealista.fr/pt/
+              - generic [ref=f19e684]: Beta
+      - generic [ref=f19e685]:
+        - generic [ref=f19e686]:
+          - heading "Por telemóvel ou Tablet" [level=3] [ref=f19e687]
+          - navigation [ref=f19e688]:
+            - link "App Store" [ref=f19e689] [cursor=pointer]:
+              - /url: https://apps.apple.com/pt/app/idealista.com/id465958311
+            - link "Google Play" [ref=f19e690] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.idealista.android&hl=pt
+            - link "HUAWEI AppGallery" [ref=f19e691] [cursor=pointer]:
+              - /url: https://appgallery.huawei.com/app/C101196223?channelId=idealista&id=ea9d78a5dfc54b8e8a7f1c5e8f1f083e&s=FC3DCED1261C2C2C5624748A104DEB37D2EB945F72175B74A6FDB07C7B7169F0&detailType=0&v=
+          - navigation [ref=f19e692]:
+            - link "" [ref=f19e693] [cursor=pointer]:
+              - /url: https://www.facebook.com/idealista.pt/
+            - link "" [ref=f19e694] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/idealistapt
+            - link "" [ref=f19e695] [cursor=pointer]:
+              - /url: https://instagram.com/idealistapt/
+        - strong [ref=f19e696]: idealista
+        - text: Copyright © 2000-2026

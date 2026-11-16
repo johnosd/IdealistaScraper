@@ -1,46 +1,19 @@
-// ============== Utils ==============
-const sleep = (ms) => new Promise(r => setTimeout(r, ms));
-function waitForTabComplete(tabId, timeoutMs = 30000) {
-  return new Promise((resolve, reject) => {
-    let done = false;
-    const timer = setTimeout(() => {
-      if (!done) {
-        chrome.tabs.onUpdated.removeListener(onUpdated);
-        reject(new Error('Timeout aguardando carregamento da aba.'));
-      }
-    }, timeoutMs);
-
-    const onUpdated = (updatedTabId, info) => {
-      if (updatedTabId === tabId && info.status === 'complete') {
-        done = true;
-        clearTimeout(timer);
-        chrome.tabs.onUpdated.removeListener(onUpdated);
-        resolve();
-      }
-    };
-
-    chrome.tabs.onUpdated.addListener(onUpdated);
-    // Checa se já está carregada
-    chrome.tabs.get(tabId, (t) => {
-      if (chrome.runtime.lastError) {
-        clearTimeout(timer);
-        chrome.tabs.onUpdated.removeListener(onUpdated);
-        return reject(chrome.runtime.lastError);
-      }
-      if (t.status === 'complete') {
-        done = true;
-        clearTimeout(timer);
-        chrome.tabs.onUpdated.removeListener(onUpdated);
-        resolve();
-      }
-    });
-  });
-}
-
-// ============== Botão: Extrair Links (JSON) ==============
+// Both Links entry points launch capture; export is a separate explicit action.
 const extractBtn = document.getElementById('extract');
 if (extractBtn) extractBtn.addEventListener('click', async () => {
   extractBtn.disabled = true;
+  const feedback=document.getElementById('links-feedback');
+  if(feedback)feedback.textContent='Preparando coleta…';
+  try{
+    const response=await chrome.runtime.sendMessage({cmd:'AUTONOMA_LINKS_START'});
+    if(!response?.ok)throw Error('Coletor indisponível');
+    if(feedback)feedback.textContent=response.result.status==='busy'?'Outra coleta está ativa. Aguarde ou pause antes de iniciar.':response.result.status==='attention'?'Há uma coleta pendente. Confira o motivo e retome pela aba Links.':'Coleta iniciada. O Idealista será aberto; acompanhe pela aba Links do painel.';
+  }catch{if(feedback)feedback.textContent='Não foi possível iniciar. Confira a aba Links do painel.';}
+  finally{extractBtn.disabled=false;}
+});
+const exportLinksBtn=document.getElementById('export-links');
+if(exportLinksBtn)exportLinksBtn.addEventListener('click',async()=>{
+  exportLinksBtn.disabled=true;
   try {
     const url = chrome.runtime.getURL('localidades.html');
     const tabs = await chrome.tabs.query({ url });
@@ -51,7 +24,7 @@ if (extractBtn) extractBtn.addEventListener('click', async () => {
     else await chrome.tabs.create({ url, active: true });
   } catch (error) {
     alert('Não foi possível abrir a exportação de localidades.\n' + error.message);
-  } finally { extractBtn.disabled = false; }
+  } finally { exportLinksBtn.disabled = false; }
 });
 // ============== Extrair Itens (com proxy) ==============
 const itemsBtn = document.getElementById("extractItems");
@@ -74,109 +47,16 @@ chrome.runtime.onMessage.addListener((msg) => {
   if (msg?.type === 'CRAWLER_LOG') appendExtractLog(msg.message);
 });
 
-if (itemsBtn) {
-  itemsBtn.addEventListener("click", async () => {
-    clearExtractLog();
-    itemsBtn.disabled = true;
-    const prevText = itemsBtn.textContent;
-    itemsBtn.textContent = "Extraindo...";
-
-    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-    const urlInput = document.getElementById("extractItemsUrl");
-    const customUrl = urlInput?.value?.trim();
-
-    if (!customUrl) {
-      alert('Preencha a URL da página de resultados do idealista.pt');
-      itemsBtn.disabled = false;
-      itemsBtn.textContent = prevText;
-      return;
-    }
-
-    await chrome.tabs.update(tab.id, { url: customUrl });
-    await waitForTabComplete(tab.id);
-
-    const updatedTab = await chrome.tabs.get(tab.id);
-    if (!/^https:\/\/(?:www\.)?idealista\.pt\//.test(updatedTab?.url || "")) {
-      alert('Você deve estar numa página do idealista.pt para extrair os itens.');
-      itemsBtn.disabled = false;
-      itemsBtn.textContent = prevText;
-      return;
-    }
-
-    // Proxy (opcional)
-    if (toggleProxy && toggleProxy.checked) {
-      // Agora lê do chrome.storage.local!
-      const proxyData = await new Promise((resolve) =>
-        chrome.storage.local.get(['proxyHost', 'proxyPort', 'proxyUser', 'proxyPass'], resolve)
-      );
-      const host = proxyData.proxyHost || '';
-      const port = parseInt(proxyData.proxyPort || '0', 10);
-      const username = proxyData.proxyUser || '';
-      const password = proxyData.proxyPass || '';
-
-      try {
-        const res = await chrome.runtime.sendMessage({
-          cmd: "ENABLE_PROXY", host, port, username, password, extraDomains: []
-        });
-        if (!res?.ok) throw new Error(res?.error || "Erro desconhecido ao ativar proxy.");
-      } catch (err) {
-        // ...
-      }
-    }
-
-    try {
-      const res = await chrome.tabs.sendMessage(tab.id, { cmd: 'START_CRAWL' });
-      if (!res?.ok) throw new Error(res?.error || 'Erro ao iniciar crawler');
-    } catch (err) {
-      console.warn("Falha ao iniciar extração:", err);
-      try {
-        await chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['dist/content.bundle.js'] });
-        await sleep(500);
-        const res2 = await chrome.tabs.sendMessage(tab.id, { cmd: 'START_CRAWL' });
-        if (!res2?.ok) throw new Error(res2?.error || 'Erro ao injetar script');
-      } catch (e) {
-        alert("Não consegui iniciar a extração. Recarregue a página do Idealista.");
-      }
-    } finally {
-      itemsBtn.disabled = false;
-      itemsBtn.textContent = prevText;
-      setTimeout(refreshProxyStatus, 500);
-    }
-  });
-}
-
-// ============== Botão: Parar e baixar JSON parcial ==============
-const stopBtn = document.getElementById("stopExtract");
-if (stopBtn) stopBtn.addEventListener("click", async () => {
-  const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+if (itemsBtn) itemsBtn.addEventListener('click', async () => {
+  itemsBtn.disabled = true;
   try {
-    // Espera resposta do content script com { ok, dados, totalPaginas, url, dataString }
-    const resposta = await chrome.tabs.sendMessage(tab.id, { cmd: 'STOP_AND_DOWNLOAD' });
-    if (resposta?.ok) {
-      const url = resposta.url || '';
-      let slug = url.replace(/^https?:\/\/[^\/]+\/geo\//, '').replace(/[/?#].*$/, '').replace(/\//g, '-');
-      if (!slug) slug = 'resultado';
-      const paginas = resposta.totalPaginas || 1;
-      const dataStr = resposta.dataString || (() => {
-        const d = new Date();
-        return `${d.getFullYear()}${String(d.getMonth()+1).padStart(2, '0')}${String(d.getDate()).padStart(2, '0')}${String(d.getHours()).padStart(2, '0')}${String(d.getMinutes()).padStart(2, '0')}`;
-      })();
-      const nomeArquivo = `${slug}-Paginas${paginas}-${dataStr}.json`;
-      const blob = new Blob([JSON.stringify(resposta.dados, null, 2)], { type: 'application/json;charset=utf-8' });
-      const urlBlob = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = urlBlob;
-      a.download = nomeArquivo;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(urlBlob);
-      alert(`JSON gerado com ${paginas} páginas extraídas.`);
-    }
-    await chrome.runtime.sendMessage({ cmd: "DISABLE_PROXY" });
-  } catch (e) {
-    console.warn("Erro ao parar ou desativar proxy:", e);
-  }
+    const customUrl = document.getElementById('extractItemsUrl')?.value?.trim();
+    if (customUrl && !/^https:\/\/(?:www\.)?idealista\.pt\//.test(customUrl)) throw new Error('Informe uma página HTTPS do Idealista.');
+    if (customUrl) await chrome.storage.local.set({collectionItemsURL:customUrl});
+    const base=chrome.runtime.getURL('itens.html'),tabs=await chrome.tabs.query({url:base+'*'});
+    if(tabs.length) await chrome.tabs.update(tabs[0].id,{active:true});
+    else await chrome.tabs.create({url:base,active:true});
+  }catch(error){alert(error.message);}finally{itemsBtn.disabled=false;}
 });
 
 // ============== Proxy: painel e status ==============
@@ -187,46 +67,44 @@ function initProxyPanel() {
   const passInput = document.getElementById('proxyPass');
   const saveBtn = document.getElementById('saveProxyConfig');
   const testBtn = document.getElementById('testProxyBtn');
+  const disableBtn=document.getElementById('disableProxy');
+  if(!hostInput||!saveBtn||!testBtn)return;
+  if(disableBtn)disableBtn.onclick=async()=>{
+    disableBtn.disabled=true;const label=document.getElementById('proxyTestResult');
+    try{const result=await chrome.runtime.sendMessage({cmd:'DISABLE_PROXY'});label.textContent=result?.ok?'Proxy desativado.':result?.error||'Não foi possível desativar o proxy.';await refreshProxyStatus();}
+    catch{label.textContent='Não foi possível desativar o proxy.';}finally{disableBtn.disabled=false;}
+  };
 
   // Carregar campos do chrome.storage.local
   chrome.storage.local.get(['proxyHost', 'proxyPort', 'proxyUser', 'proxyPass'], function(items) {
     hostInput.value = items.proxyHost || '';
     portInput.value = items.proxyPort || '';
     userInput.value = items.proxyUser || '';
-    passInput.value = items.proxyPass || '';
+    passInput.value = '';
   });
 
-  saveBtn.onclick = () => {
-    chrome.storage.local.set({
+  saveBtn.onclick = async () => {
+    const result=await chrome.runtime.sendMessage({cmd:'SAVE_PROXY_CONFIG',config:{
       proxyHost: hostInput.value.trim(),
       proxyPort: portInput.value.trim(),
       proxyUser: userInput.value.trim(),
       proxyPass: passInput.value.trim()
-    }, function() {
-      alert("Proxy salvo.");
-    });
+    }});
+    alert(result?.ok?'Proxy salvo.':result?.error||'Não foi possível salvar o proxy.');
   };
 
   testBtn.onclick = async () => {
     const resultLabel = document.getElementById('proxyTestResult');
-    resultLabel.textContent = 'Testando proxy...';
+    resultLabel.textContent = 'Verificando IP com a configuração ativa...';testBtn.disabled=true;
 
     try {
-      await chrome.runtime.sendMessage({
-        cmd: "ENABLE_PROXY",
-        host: hostInput.value.trim(),
-        port: parseInt(portInput.value.trim(), 10),
-        username: userInput.value.trim(),
-        password: passInput.value.trim(),
-        extraDomains: []
-      });
-      const resp = await fetch('https://api.ipify.org?format=json', { cache: 'no-store' });
-      const data = await resp.json();
-      resultLabel.textContent = data?.ip ? `IP público: ${data.ip}` : 'Proxy ativado, mas IP não detectado.';
+      const response=await chrome.runtime.sendMessage({cmd:'COLETA_TEST_IP',payload:{}});
+      if(!response?.ok)throw new Error('Sondagem indisponível.');
+      resultLabel.textContent=response.result?.ip?`IP observado: ${response.result.ip}`:'IP não verificado. A configuração do proxy foi preservada.';
     } catch (err) {
-      resultLabel.textContent = 'Erro ao testar proxy: ' + err;
+      resultLabel.textContent = 'IP não verificado. A configuração do proxy foi preservada.';
     } finally {
-      await chrome.runtime.sendMessage({ cmd: "DISABLE_PROXY" });
+      testBtn.disabled=false;
     }
   };
 }
@@ -243,6 +121,7 @@ async function refreshProxyStatus() {
 
 document.addEventListener('DOMContentLoaded', () => {
   initProxyPanel();
+  refreshProxyStatus();
   if (toggleProxy) {
     chrome.storage.local.get(['usarProxy'], items => { toggleProxy.checked = items.usarProxy === 'true'; });
     toggleProxy.addEventListener('change', () => chrome.storage.local.set({ usarProxy: toggleProxy.checked ? 'true' : 'false' }));

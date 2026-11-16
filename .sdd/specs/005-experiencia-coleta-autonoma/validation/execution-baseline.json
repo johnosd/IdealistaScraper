@@ -1,0 +1,730 @@
+[
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\backlog.md",
+    "sha256": "D52122F62B25B4B0AEB50393A99ACA73E72DC74B47F28B7DA7DB7FD6F083E61A"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\memory\\constitution.md",
+    "sha256": "3FD1FB6E98996141C577E26CF9E0E0E091A7442386E0893B23FF73CA4F30994D"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\memory\\exportacao-lote-municipios.md",
+    "sha256": "7C7744A7F97158504C8AB53E90FD76527AC06DF42C805C671BB6867F0F31CB1E"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\memory\\lote-input-navigation-fix.md",
+    "sha256": "728A3A0679907BDF524022CA4236644C95CA5795E9071BCB8C7FB548634E7157"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\memory\\playwright-site-debug.md",
+    "sha256": "E13D36573B7657DD0C7B69D0307C3829B871C3B7F1DB70877892FA9BB39ED4BA"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\memory\\repository-overview.md",
+    "sha256": "95165EBCD2AFECFCEB5740E347EFA21532611C6A8B41A2F30486BFB38544FA42"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\README.md",
+    "sha256": "0BD13E957B8E81E821ABCF13C9AE093148E2D08124C8B83E6060E49EA6917F34"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\scripts\\powershell\\check-contract-tests.ps1",
+    "sha256": "BF8855C95A84990884EA7B723511D7D51095947C1C2A2393F3F50AF707ECCDA9"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\scripts\\powershell\\check-prerequisites.ps1",
+    "sha256": "2567862B2F7213899A05C1530F27ED2A577DD76E70F0621DDC0E641DD46D440D"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\scripts\\powershell\\common.ps1",
+    "sha256": "BD2886B1D75A31548494C082C29146EA11A33DD0B731032866072E16333AB6B1"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\scripts\\powershell\\new-adr.ps1",
+    "sha256": "7986654C2238027BD0A268F35ED5A25DE728191006BF5A7AAEA5782DD77C87F7"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\scripts\\powershell\\new-feature.ps1",
+    "sha256": "0467C79DB906799A37925F74367351784ADF0BAD7F1E2B9F70F3FFACE0CFC4C9"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\scripts\\powershell\\resolve-assessment.ps1",
+    "sha256": "AC90772FD4BACFCB7D19B9D143AFB28BA84E486D0A90834988AD0666D72D84CD"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\scripts\\powershell\\resolve-bug.ps1",
+    "sha256": "C8E8DBF1FF0B78E623CBE2B16AF39468EF6CEC52E3C54DE488D4FB091A15FB65"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\scripts\\powershell\\update-bug-status.ps1",
+    "sha256": "329D257E6143C2704AFAFA670A4C49CA85EBB9A6316BD5ECCF8A068C741DF187"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\scripts\\powershell\\update-feature-status.ps1",
+    "sha256": "99F7E5101261E50424203175A5458B44C5E63FE315A93D88E2670386679A3C8B"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\templates\\adr-template.md",
+    "sha256": "C581315F1FFE748982600806171F736AFDFB521AD6CBBAD19126DEE1BF13D4FC"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\templates\\assessment-decision-template.md",
+    "sha256": "871954B459FA2AE482AE2FC2959781A280630CCDB300FECBECA7420E6B8CA2F7"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\templates\\assessment-explora-template.md",
+    "sha256": "B7B9A49E54C08B81B9E33E0CAD4D787C0E62710D666F42D1E7FD70E0CC24147D"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\templates\\assessment-problem-template.md",
+    "sha256": "1B4F7F12F007A7CFC41ABD9364CA2771336A36230B56C3F766D780955B7ED7CF"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\templates\\bug-assessment-template.md",
+    "sha256": "CA3B4D128A2FF82E8D175099E28DE8EEA13834C750F21519F3F231B280536266"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\templates\\bug-fix-template.md",
+    "sha256": "7AEC823A007F877ADA37673EA1457F16823135DD8E20191365AE775D6E670550"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\templates\\bug-test-template.md",
+    "sha256": "7290D380D69BBA94662B11A8C91803FB9D748406AA963631002305C98C78901E"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\templates\\constitution-template.md",
+    "sha256": "819B2428C352FA23587EA3B9CD8A8F54AAA979B57A7D6BBB6168DC16EAFBA543"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\templates\\plan-template.md",
+    "sha256": "A258FBC53536831E66826E23413FAF1F9354921F779075D8E36749800E08ADD1"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\templates\\spec-template.md",
+    "sha256": "2914411CD080D3E044C0A4198C2CE09008D2D0AE42D755494F590992A0A3C774"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.planning\\templates\\tasks-template.md",
+    "sha256": "69CC10BF5B89C33C05AD3750B0DD8003347210481BEAF22649C8E1E46F5272A8"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\extracao-lote-abre-pagina-chrome-extension-falha\\assessment-amendment.md",
+    "sha256": "DEFED2C73F77F570CC7ADF41D433791AE0DCADA22192090F9582F7F054D6DF14"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\extracao-lote-abre-pagina-chrome-extension-falha\\assessment.md",
+    "sha256": "06131810C5B856874289A035B271EA97DB0AE022479A8FB6CDD61922D2769F34"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\extracao-lote-abre-pagina-chrome-extension-falha\\fix.md",
+    "sha256": "2CAA1789E48DD38BA230CE30E965D495DF2DB0EB9A9E02629AB383B55081572E"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\extracao-lote-abre-pagina-chrome-extension-falha\\site-review.md",
+    "sha256": "41E9F3E16D45122A7406C04D21524DEB3D089A673BEF5B0BE1EB92946FD09725"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\extracao-lote-abre-pagina-chrome-extension-falha\\test.md",
+    "sha256": "CFBCD566A87CD91236245206DF6D5CBA6B8D7BCD15C9440ACE4A3458735B322E"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\proxy-seguro-antes-navegacao-reinicio\\assessment.md",
+    "sha256": "FF06289DC41B9F00E4A72F7D233C341412AFDFEAD0AFDCF17725A312010D61A8"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\proxy-seguro-antes-navegacao-reinicio\\build-production.log",
+    "sha256": "CDCFAB957390380E1CEDAF12F1A64204505A9034F954547CB479EEF6DC4837C1"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\proxy-seguro-antes-navegacao-reinicio\\fix.md",
+    "sha256": "4DBB2E013E1997AEF3B2476E79429DC4C749436A8FDBFDE594613DAD2223A390"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\proxy-seguro-antes-navegacao-reinicio\\history\\fix-attempt-1.md",
+    "sha256": "1FA1E9F6ACCC348B60DAA0BDC954052DB5DF69FA01D49DDF5BA68D8D417D43BC"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\proxy-seguro-antes-navegacao-reinicio\\history\\test-attempt-1.md",
+    "sha256": "D2A0145994B93A3D690D100BA100AC6F495196916D3D692B1979A6B133E006E6"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\proxy-seguro-antes-navegacao-reinicio\\history\\test-production-attempt-1.log",
+    "sha256": "669AAD3B391437B78793EC49876D921AB968997370270DD0AD5BF5B508896868"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\proxy-seguro-antes-navegacao-reinicio\\test-development.log",
+    "sha256": "1E716FEB9D5BD781CC52A9001989358688115006AEF29A529974258E7C0A8CA3"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\proxy-seguro-antes-navegacao-reinicio\\test-production.log",
+    "sha256": "31ECDC5543FE2BA83CF0FB3B3ABE0846022E78220ABAA2887E84E2E9DB065E8F"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\bugs\\proxy-seguro-antes-navegacao-reinicio\\test.md",
+    "sha256": "1A2B55B6A29132000E0B059643FCD1C633A297538B23F06DA690B565E6CED078"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\001-reorganizacao-node-webpack\\constitution-proposal.md",
+    "sha256": "34B630F2E8B2F9CA287239367B4D8412209E4C1FA318DF39DB1158574AC9A70C"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\001-reorganizacao-node-webpack\\contract-tests.lock",
+    "sha256": "7489D01CF28CAF2F0ECBF8EEC72B630185B072505E2CF38BCF4C409B343C477F"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\001-reorganizacao-node-webpack\\handoff.md",
+    "sha256": "6D794676418AA36CBC374C52FD4D3B7D8E5C503F87560FCFDC6626CBC86B5E3A"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\001-reorganizacao-node-webpack\\plan.md",
+    "sha256": "434F539B5F7A5ED2A90CD41060DDEAFD536A29E4A8D04030CC120D02AF42209D"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\001-reorganizacao-node-webpack\\preservation-baseline.json",
+    "sha256": "2C00173A6549D7B72961CE2575945993F443BC9ABB27B9F545316DEFB8F693A9"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\001-reorganizacao-node-webpack\\quickstart.md",
+    "sha256": "C48E84330203E021CA1B4E473868F6C8D80E172B8AFAB0FD9E0AE79B10150D5C"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\001-reorganizacao-node-webpack\\spec.md",
+    "sha256": "F40A640166FFEF576A54740D7B747F7E69BFF16A3D93C543F4932A394B88F74B"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\001-reorganizacao-node-webpack\\tasks.md",
+    "sha256": "0BF242DD651C5A1B4015CA70B917319853B2AF3FF252ADF8A50368151B521F5F"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\002-exportacao-localidades-pasta-autorizada\\contract-tests.lock",
+    "sha256": "8339B02C2AB69D4B35CF94A105616C11683D3CBDAE286C92FC19F626A44F9F7D"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\002-exportacao-localidades-pasta-autorizada\\contracts\\localidades-export.md",
+    "sha256": "1AFEED19F7C19977CE75061A2689CFB38063ECA84DA1E21024625F9AC77EBA48"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\002-exportacao-localidades-pasta-autorizada\\data-model.md",
+    "sha256": "A3FAEC556167638CC068673854BAAA4A21CB878BBE8BB7409AC2335989A36BB7"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\002-exportacao-localidades-pasta-autorizada\\handoff.md",
+    "sha256": "7A69C5E6AA45CD129CE28698CB2B3226EC67E193A23C3568B28BE4C303100D0D"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\002-exportacao-localidades-pasta-autorizada\\logic\\escrita-mensal.md",
+    "sha256": "A293B5E670B774266591D90CADAA7CFF18C57162329B521790EF583E1C659084"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\002-exportacao-localidades-pasta-autorizada\\plan.md",
+    "sha256": "3FBCD20D11699A64C5E375E09E65661FF3722C5646E6F2D1AD9A6387C0D455CD"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\002-exportacao-localidades-pasta-autorizada\\quickstart.md",
+    "sha256": "3DD028FC6F2FF38B033F7C3E871F195758697D4B24B6DC9695E3117AA791555D"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\002-exportacao-localidades-pasta-autorizada\\research.md",
+    "sha256": "68E2233E84372206B3A0C5EA6FBFD1B75C2D1151957D84708394142710FD83C9"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\002-exportacao-localidades-pasta-autorizada\\spec.md",
+    "sha256": "1C361826A826836FFCC6BBD26F411BFCA7834FD89C5133BF44B934BCD2B5BF37"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\002-exportacao-localidades-pasta-autorizada\\tasks.md",
+    "sha256": "11D1AE7988ABE6DBDCF6DF04E5A8DD395E6A5142DB4403D7B7C5F1A024E127FE"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\003-exportacao-lote-municipios\\contract-tests.lock",
+    "sha256": "491AE3D889174660443EC762A243DF7B2E2B81BD9485CCAE6E5CEADD2E4389CB"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\003-exportacao-lote-municipios\\contracts\\lote.md",
+    "sha256": "F8B7AD7AE3D676F381922452A76496602B80B145F0AD981AD8B379B58BBCF30F"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\003-exportacao-lote-municipios\\data-model.md",
+    "sha256": "C90F569E1A35D13AC73B2A7B26AA4040D00C10E5D1DA71AE70347B2BAB76CE35"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\003-exportacao-lote-municipios\\handoff.md",
+    "sha256": "21D38D4E60B023FDF64C273383749BD88CE150AFD9E04B72B1419899D1A60D37"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\003-exportacao-lote-municipios\\listing-audit.md",
+    "sha256": "1156E8C3B25A4D59DC33943FFD835435E497D99F6F46AD6ED7BCBFE02AF355FA"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\003-exportacao-lote-municipios\\logic\\lote.md",
+    "sha256": "A04A116DF58C3053991376A80278BE2976CFDCA4120A28F4598B3548B41B6C7D"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\003-exportacao-lote-municipios\\plan.md",
+    "sha256": "E0C69C027A94DA45EE92A1962ED30BA06D1A9147BEAC818BCB67E4B48F7BCAD4"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\003-exportacao-lote-municipios\\quickstart.md",
+    "sha256": "E4AB52F3BFE53FABF55FA7DC59F3E534E350BD4B5FD571E41D5A4B01D8A3BA42"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\003-exportacao-lote-municipios\\spec.md",
+    "sha256": "3BDE9B313E606A421E55DE51AB78B5BFC1B9A71E35DBED59D1EA95067FFF89EC"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\003-exportacao-lote-municipios\\tasks.md",
+    "sha256": "BE55F23D91890ABAED84E73FB2851B4B5D570489996E4C9748FF3A2540E652BE"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\004-coleta-resiliente\\contract-tests.lock",
+    "sha256": "E74180CC25A543D2777749EF8124C79D7CBE0D8321CB8F1859EF51C15CEAFBD8"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\004-coleta-resiliente\\contracts\\coleta-runtime.md",
+    "sha256": "4AB2C7DF60AE1AE2BFB645B679ED0446CA4B2EBBB1B458CE88893BCA59224C6E"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\004-coleta-resiliente\\data-model.md",
+    "sha256": "74D6AF683DE277F1671E7BD0B87CA41EE74518D87F20C7A721B88E5296E86E02"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\004-coleta-resiliente\\handoff.md",
+    "sha256": "0DA81795B17D316D6BCD9CC7C6CDA1727B81CF8C4E67CE35E093B53E4F26EB5C"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\004-coleta-resiliente\\logic\\coordenacao-e-ritmo.md",
+    "sha256": "ACC63865485025DBF4850D816963BF143BE1073764E572B3347A775CC12F8A96"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\004-coleta-resiliente\\logic\\respostas-proxy-e-gravacao.md",
+    "sha256": "9D746BBEFC47DFC4500C05D2E1137D937FD7B7A067934C4FCE3362E9F3C5AE97"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\004-coleta-resiliente\\plan.md",
+    "sha256": "4D43C2D210E690935AACDA4D836CA4D4608CE9843B4DA7A019DC6AE260954DEA"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\004-coleta-resiliente\\quickstart.md",
+    "sha256": "F63963458F9D2266A9906613CA4176880BA3DC90A40FB1CFFA129E9B1EAEE555"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\004-coleta-resiliente\\research.md",
+    "sha256": "02AEE8A55E547DCFF37360CEE0DE5373660A45F5DAE5C5435922C34F9842CD70"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\004-coleta-resiliente\\spec.md",
+    "sha256": "E105A11A8F981683E80860B9B5D58110C982688E161B7E0593DA70659604D1E5"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\004-coleta-resiliente\\tasks.md",
+    "sha256": "C73B38AFCEE659A733E065C46B1061AA3A76B5F98FC1F7B3C097158BCDCBD484"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\005-experiencia-coleta-autonoma\\contract-tests.lock",
+    "sha256": "EB169C9CF67197787203B361401F4DC7B0092BA4B2A83AB5FB2534970E3F8E7E"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\005-experiencia-coleta-autonoma\\contracts\\autonoma.md",
+    "sha256": "CD36291489A8B205F7648A5B9AB8ABFD860700DA090C79E1E39DFFAFF5501922"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\005-experiencia-coleta-autonoma\\data-model.md",
+    "sha256": "467B264F9041B5359D4185ECCF0B54BD04D28C63D28D252DC824C936F7D75CBB"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\005-experiencia-coleta-autonoma\\handoff.md",
+    "sha256": "B8277480B965B577101093D68C96FC66E864F799E05A936DFED7373D3D2E8DC3"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\005-experiencia-coleta-autonoma\\logic\\execucao-e-recuperacao.md",
+    "sha256": "D8DC34421D0424DA335A2E3EB976CB2CD978FACA64B41EB5EBE08B8E1B3BE779"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\005-experiencia-coleta-autonoma\\logic\\interface-e-configuracoes.md",
+    "sha256": "EF651996197FFA34492946EDED90E5298568B46AF5EEC006FA6F33895D3BABD8"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\005-experiencia-coleta-autonoma\\plan.md",
+    "sha256": "840B289A2CD9502D32F2CB018D6B6A535D499C34C39592BF5285FE2812A099C3"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\005-experiencia-coleta-autonoma\\quickstart.md",
+    "sha256": "5A889EFC83BDF96B777D09B769A9F7994DB32B65A192760FDB5EC487F4D0FFEF"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\005-experiencia-coleta-autonoma\\research.md",
+    "sha256": "0B4B2F3C201E4E1BA3BC90D894C962EECC9EE006A54EB5CFDBB7ECFB7F78682E"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\005-experiencia-coleta-autonoma\\spec.md",
+    "sha256": "FA57F2F4AA4A5C89FDF704D1EA150C514707E213BBBEB487B55616BD64C1DC75"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.sdd\\specs\\005-experiencia-coleta-autonoma\\tasks.md",
+    "sha256": "69514EA4E3992F0BF1D5F57AF24BE67F1DBFCBCF8BC2397BA47D2805D86AA798"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\itens.html",
+    "sha256": "711F64F1C90A1F9BE040B79EE66623E0C2F9F172330B6E3E55E385CC522671B3"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\localidades.html",
+    "sha256": "6693EC5E79171F1C24CAAAA622D65824CB34786BC0C915DD131F1474EEA2A243"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\lote.html",
+    "sha256": "6E8DE90A74EB09DB2423EE653A8032E2467ABABEC4C72A40CF351AD8326A58C1"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\manifest.json",
+    "sha256": "65008BE96EE6237B45953CDC43B887230D0C3D481113412076E20474053D8991"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\package-lock.json",
+    "sha256": "25FE199AC1BE5E1102EBC91A9C9226717669E9A7678BA1F3DA7FB1F111679748"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\package.json",
+    "sha256": "E2B0C1E8DBA11B70DE244D940CAF18860917695F4E515F21C8C7F8B945D053D7"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\popup.html",
+    "sha256": "ABA270DEF3622CB28DC5569E0466B2AA83191E10F6DD3EAE45BE9F50264F351D"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\README.md",
+    "sha256": "CDBC74BE4C0FD0502B47A3D6A2B10B51DB09285E2CB9DDA2478F92241E4E532B"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\background.js",
+    "sha256": "4BB5E6D3877025BB1D8792B09F6B172511860C53BCE03978E83BE77ACCF26E81"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-autonoma.js",
+    "sha256": "34C36C051FA3D98B53A961057E94A3B5DDB1C6294DC509D8F6F4BBDD7CFC0BD7"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-background.js",
+    "sha256": "C5569B1E956AD52AF8058725E3957205E4DE64AAB2A1B098A0E807245974F0A8"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-classification.js",
+    "sha256": "6E355FBF346E26E864A26C8A8A10A99AFEC007A07AA1DD35B78A9A5C02547E9A"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-coordinator.js",
+    "sha256": "C80821590E1422A2820F598AC841673B64C194318042B33B015F2A447E75E1A8"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-digest.js",
+    "sha256": "A74060765496130C5454D3700BE58FB70CABB62CAAB869FEC0EEED830548DE3C"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-download.js",
+    "sha256": "8328B016F1C9B6A878FB492ABAB8E5EAEB91C7C79D5F59A4BEBBFB0468435740"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-ip.js",
+    "sha256": "57D4A7B337B4E1A952077CD3F67E58090D045ACE0EF855B407E1E5942A15F55F"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-page.js",
+    "sha256": "506B7A511FF821ACC36A7AFEC844611C5CF633D94CEE896F1405794A8331F79A"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-policy.js",
+    "sha256": "34DC6BB79164CC5B1E0F7A9A9D745DE8F051AF6EC4DA49FB3F23946BBAD3BDA3"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-protocol.js",
+    "sha256": "05B2F72B4005791D2B1BFA2B1774867AC182AFBF7A1361BE845990E6ECF0AC70"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-proxy.js",
+    "sha256": "4471AADF08414F3A4A80F3B824868A62DEE4AE9AD9E292FD0031AC8449618754"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-runner.js",
+    "sha256": "F8C5E6A5180DA3F88A7A72A2F7D2FA93E41ECA60EF9E0ED05F9851EE030093D7"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-save-failure.js",
+    "sha256": "2A406BDD2233F2BA5B68FB1D284578B8D86428CD8EA080F86AD86F23849A5B92"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-settings.js",
+    "sha256": "CC3AE5CC1C6B6A87866C26AC8D13B4156D532659969A1ED616C7B2340EFE7260"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-store.js",
+    "sha256": "2A6ED648BD294B2ACF603C882F76EF9ACBCFC9E28189BCBD420905E028789B0D"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-ui.js",
+    "sha256": "6FA238D15A1C006B0767E4A3D3708865BD1413375FDB81D931DCEB54F159D267"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\coleta-view-model.js",
+    "sha256": "FC21E1C16A076734029B960EDCC223CDECA08B46F21D55A6B5C80129DB1C6731"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\content.js",
+    "sha256": "9BC6A30E6D1804B67A1B6F3163EEA04E471C1EDDD0F5D7161E600361BB4F6DA1"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\itens.js",
+    "sha256": "B614E3BC3822BDA15E4909E2D4F2E894BB9E650FD9D7CE8DE98DB6DF4C7AF127"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\linkExtractor.js",
+    "sha256": "230FB947F29618600ED12029F59262B7F8F2CD2E42514CE24207EDCC08D4C143"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\localidades-collector.js",
+    "sha256": "B7731FE78DAD0A2F7008F1AF05258F0656466A0465DD09D7229F27623BE981D2"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\localidades-directory-store.js",
+    "sha256": "37E4B6640183037736AC132A6A146AC698CF1DA83755A21E29C4D101B32D2874"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\localidades-export.js",
+    "sha256": "0CAEA3AD16F34CA9E88452C32E46D91F798DE6B388857FD492E673BC5EC33F61"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\localidades.js",
+    "sha256": "6BB621E6EB40B3E1464074755343B2814D6CBFB601F5C94A0FAE24E8F3EE8BE5"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\lote-collector.js",
+    "sha256": "FC0734DA8E6E65C219CB51BF96CC91F49FEBA1420395CDAC57C0F95E3FBF1383"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\lote-directory-store.js",
+    "sha256": "64285DC5D87DC618301CE2C0F164787E43F35BFEA104CC3C601930A3436B95FF"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\lote-export.js",
+    "sha256": "71112214187D4B8313DA69488742F38374B094307F3A95E1F1C6E04444E0FBE2"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\lote-input.js",
+    "sha256": "8B01D2D8B26A051A9CB587EE0C101F2B5DADB00ED9EDFD321B1C65244EEFB43E"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\lote-navigation.js",
+    "sha256": "8227B0D190D3958D8D6C69407E49D28D7CC50109D3FD43382A5F28510FBB44E4"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\lote-session.js",
+    "sha256": "A8B63216908D408E9C3910FABB3CC0D80BB3E51D2F971B653FB4E3FD99EB1463"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\lote.js",
+    "sha256": "F4C74773AA785B74376D06DECAA939C5951E8588474A2D15B53E0744003EFDF9"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\popup-ui.js",
+    "sha256": "F6E8A3491533EF9FED14999FCADE148E13666CFE2746E66D7CA2D42E6DA6F786"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\src\\popup.js",
+    "sha256": "B6D13D8D2D35445C53C2228A5713B30003E5DAE577A76242DAF0E6F134A0178C"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\contracts\\001-reorganizacao-node-webpack.test.cjs",
+    "sha256": "D912703A56980F275C1DD8CDCFDC90EF9FCEEC6D74AB4F36D1628B8826ACDDD9"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\contracts\\002-exportacao-localidades-pasta-autorizada.test.cjs",
+    "sha256": "C6EA1414E953B5F848E202676079DB1BFC3388375CBA4AA2EB5979190957F0EB"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\contracts\\003-exportacao-lote-municipios.test.cjs",
+    "sha256": "E8F0784A29ABE674AF2A166EDB47277518659D94673263E1B15E24003899E78F"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\contracts\\004-coleta-resiliente.test.cjs",
+    "sha256": "5EDB3B4941184787F48F8967F4F44009B7AA32848CF5F0E4592F4BB79F7C7BFC"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\contracts\\005-experiencia-coleta-autonoma.test.cjs",
+    "sha256": "D7380AB83B2A0CC65068F4D85EEF366B6A31AF1CFA43FF505DC4F5B6DC4713EB"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\e2e\\coleta-store.smoke.cjs",
+    "sha256": "DD62970096BC8938E77427F22C11FC03A9F2D4A78979B0A8AA97BAC4FA06B25E"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\e2e\\coleta.native.cjs",
+    "sha256": "90CC68439F3943A14EA6788B0A954084319C2C59D24A01F828A43A9E74AA6E7D"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\e2e\\coleta.smoke.cjs",
+    "sha256": "388DF98C6491045E6C0C2DDE7C8F72197801ED405B63B474616BB5DE8EAF7E91"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\e2e\\localidades.smoke.cjs",
+    "sha256": "476B0E799FFF0E34957F09060D5C3189CAEF91A637BF3A2022BC04104E2CCC87"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\e2e\\lote.smoke.cjs",
+    "sha256": "4E51C0063715CE1BD32889932964784CDF20A43A5D0EA2965BB6B5611798F943"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\e2e\\proxy.smoke.cjs",
+    "sha256": "5C7B0161F7802A17493D7D68A2ED2089948F4C04A9DB0F839A5E43DBD9344274"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\fixtures\\autonoma.cjs",
+    "sha256": "EDA6BFCF568219721762D1DFB5385B9010A6F1AEC52F76F9A9BEE676E81FD019"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\fixtures\\coleta-browser.cjs",
+    "sha256": "D2EA472D8F26D06987422BE26C4D4390D5D6934ADB30EA97A8F44298AEEFBD1F"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\fixtures\\coleta-runtime.cjs",
+    "sha256": "7FB3D79F2717DD68D9E6F403BB1F2B7EBB18461E571DADC50890B0244DB1F7B1"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\fixtures\\coleta-scenario.cjs",
+    "sha256": "CB1B64EFC9200046D28CD7C837A3D2AD8B04A71AF1770434E6C213EE89D2F8DD"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\fixtures\\coleta-store.cjs",
+    "sha256": "1195D51AF3790DB3150654C80DFF5A0E01BCCA7935369B6F74616BC65B82DFD1"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\fixtures\\localidades-filesystem.cjs",
+    "sha256": "D8E1BCE237F482F92EA00241097F5321D73C8C2AA14812C327DFF110994B0010"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\fixtures\\localidades-list.html",
+    "sha256": "9DEEF2530E01E719BEA087B63FAA9C4886703E48194F08D7F562B3D0F47EDA83"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-cancel.test.cjs",
+    "sha256": "1CF8BD3F92D7E2C5B83AEB5A7C90BE20E0B9E956F4A354659C539BAB24CEEF4F"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-checkpoint.test.cjs",
+    "sha256": "A8AEE7E57A39C2AFD9D858B1B5DBDEF680981A87E7436CAC4FB4C3E15F62CB52"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-classification.test.cjs",
+    "sha256": "35D4539E91AE821B07A5CE2993F882CD544FFAB8F82E36DC8F74BBAFE6923C42"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-convergence.test.cjs",
+    "sha256": "E65A9ED669F5709FF8DF07225C633B14A22E7E762137800F9215038D5D7B1D99"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-cycles.test.cjs",
+    "sha256": "13545DE50E54ABCE6F899AD36DB7F9334CA1C6856900C03BF7F886907570DA44"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-diagnostics.test.cjs",
+    "sha256": "51065E48F3A581CC40D3AF4A499107D1F83AA54A0BDB70256302186D335EAE8D"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-ip.test.cjs",
+    "sha256": "FE51FEB021A2697DAF4279132A6CD34229FBF16323603A50EDD3C7DBADADC59C"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-ownership.test.cjs",
+    "sha256": "78773CCC3B88FA8AF5FF436D92B2E28BD4CE1ECA5DDAA0A939E489032ABB9C14"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-page.test.cjs",
+    "sha256": "0F22F1997777DAF738AE6DE1120FFCADA2EC8894FF5D811D38286AE33CD23476"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-policy.test.cjs",
+    "sha256": "55A66DD731018293D2B7175D87AE7EABD20AE5CAACE57B7124B9D109AA23007B"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-protocol.test.cjs",
+    "sha256": "221E35B95D47393C9A4D9085F2D734D22248F3DDFA69B774EAA35DEF8801D92C"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-proxy.test.cjs",
+    "sha256": "2A938302455F062A18789A05B27CF76A2BEB00EE7CD0A942F378D039CABD66F0"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-rate.test.cjs",
+    "sha256": "3FF9472D212E98BE3FE556B1AF0749DBCB6B84F8092B0589138EF6843F73DDD5"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-retry.test.cjs",
+    "sha256": "183DB5DAED1AA648B1C1D21E1A76F3C2C02A6C249A2DEB51FF1DC1AEC6C61BB7"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-runtime.test.cjs",
+    "sha256": "367DE8B05F75BEB9388867C8AE4E679ED0BD01CE52A4A4CDADD9612E6BEBF8F6"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-save.test.cjs",
+    "sha256": "BCA9054C5B190A1B22FCE07E963754D1155B8879FE6407DD063B3399A176E118"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-store.test.cjs",
+    "sha256": "E4204ECB6B3EDAE11B56AE7E3E8D6B01169698595E576B3FC7E45D4E608C3FE1"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\coleta-ui.test.cjs",
+    "sha256": "455D76B5F7C7249478B3ECD8D10CE3939B3D4DB3E63829C42C6EBAF00DA7CD60"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\listing-fields.test.cjs",
+    "sha256": "F1094BCFCDD058FF97A7F23389233A15CF43139996CB4E430ACD0587B919072E"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\localidades-collector.test.cjs",
+    "sha256": "0A261C34FC8B0B33DF8C77A2513997B366E4F6705E6B49D3A547BA864BCD2E33"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\localidades-export.test.cjs",
+    "sha256": "B4B313E59E194C3F4478E1F10431345653B7492D668959F3A52E5D0D5FA1C5A1"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\lote-collector.test.cjs",
+    "sha256": "E6310F288E1311BAEE004724D846F8CB007A22D70E96B8B7459F27E7622740C2"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\lote-export.test.cjs",
+    "sha256": "F64D19DF1921040B73F7533F384714F8FABEC01C246C74DB2EC4DED0A3B420AF"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\lote-input.test.cjs",
+    "sha256": "A8BBDF0123F007A797D6EA3DE16D71FC94D36A04BB27B06403F0C2306ECAD070"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\lote-navigation.test.cjs",
+    "sha256": "3B5B7216F84641FAA32B62E8191B297B87F25E1F812657EB580312C459B66D0C"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\lote-popup.test.cjs",
+    "sha256": "2C044A2E31D00D724AA92ED18BC62677CC7C76E6103A3614A025B3D6CFCC0038"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\lote-session.test.cjs",
+    "sha256": "E78CD31D699C1B6910D0AC479CC69DD02C08AB0DA50C786E000120103F28957F"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\proxy-background.test.cjs",
+    "sha256": "6A17985D60665C63F4D995482946B67A651B295D89632A01E48EC2A3E76E93B7"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\proxy-content.test.cjs",
+    "sha256": "D4675FF0EC39F545465C0C384012079DCCD2C084DC5228E87DB69B527E11C188"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\tests\\unit\\proxy-popup.test.cjs",
+    "sha256": "5C831FD95C29C1D7452413F87D7132CFBF1837CD6F20E479CBC60FC7DB484A2C"
+  },
+  {
+    "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\webpack.config.js",
+    "sha256": "54A13B1B6843DB3E2A1CEDAD7F1BDCAC84BD101741021B4B250B6FBA8359A388"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "proof": "real extension/runner; local routes and OPFS",
+  "cases": [
+    "Links/Itens/Lote tabs",
+    "keyboard navigation",
+    "live current municipality",
+    "page and ad counts visible",
+    "queue in first screen",
+    "switch tabs while collecting",
+    "form draft retained across tabs",
+    "locate current clears filter",
+    "settings return restores tab",
+    "same run finishes with three saved items",
+    "320px and CSS zoom200%"
+  ],
+  "requests": 5,
+  "pageErrors": 0
+}

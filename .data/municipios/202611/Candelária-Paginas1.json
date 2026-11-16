@@ -1,0 +1,107 @@
+[
+  {
+    "Titulo": "Apartamento T2 na Rua dos Cabrais, 1, Candelária",
+    "Link": "https://www.idealista.pt/imovel/33744295/",
+    "Preco": "850€/mês",
+    "detalhe do item": "T2 | 75 m² área bruta | Rés do chão sem elevador",
+    "Descricao do item": "Aluguer de longa duração, aproximadamente de novembro a abril. O alojamento fica a 17 km de Ponta Delgada, numa pequena aldeia. Encontrará um supermercado mesmo na localidade (a 5 minutos a pé), bem como um bar/cervejaria. A costa variada fica muito perto: a pé, são apenas algumas centenas de metros até à beira das f",
+    "id": "33744295",
+    "tags": [
+      "Arrendamento temporário",
+      "Vista mar"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 17,
+    "tipologia": "T2",
+    "areaBrutaM2": 75,
+    "pisoResumo": "Rés do chão sem elevador"
+  },
+  {
+    "Titulo": "Moradia independente na Rua Dos Cabrais, 1, Candelária",
+    "Link": "https://www.idealista.pt/imovel/32170905/",
+    "Preco": "950€/mês",
+    "detalhe do item": "T2 | 80 m² área bruta",
+    "Descricao do item": "Disponivel Novembro - Abril Bungalow Hortensie é um bangalô espaçoso de três quartos com \"jardim envolvente\", vista para o mar e muita privacidade. Ampla sala com cama galeria e fogão a lenha. 1 quarto com cama de casal, 1 quarto com 2 camas de solteiro, cozinha com fogão a gás e lava-louças, banheiro com chuveiro e va",
+    "id": "32170905",
+    "tags": [
+      "Arrendamento temporário",
+      "Vista mar"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 8,
+    "tipologia": "T2",
+    "areaBrutaM2": 80,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia independente na Rua dos Cabrais, 1, Candelária",
+    "Link": "https://www.idealista.pt/imovel/35274268/",
+    "Preco": "880€/mês",
+    "detalhe do item": "T2 | 755 m² área bruta | lote de 700 m²",
+    "Descricao do item": "O bungalow de madeira situa-se num pequeno e encantador complexo turístico com um grande jardim e piscina (de junho a outubro, partilhada com outros hóspedes). Vista para o mar, jardim paradisíaco e muito mais. A sala de estar dispõe de um sofá-cama com Smart TV (sem televisão por cabo) e uma mesa de jantar. Há também",
+    "id": "35274268",
+    "tags": [
+      "Vista mar"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 16,
+    "tipologia": "T2",
+    "areaBrutaM2": 755,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia independente na Rua dos Cabrais, 56, Candelária",
+    "Link": "https://www.idealista.pt/imovel/35274325/",
+    "Preco": "680€/mês",
+    "detalhe do item": "T0 | 30 m² área bruta | lote de 500 m²",
+    "Descricao do item": "A Tiny House Rose é um estúdio com quarto em plano aberto, mesa de jantar e cozinha equipada. Dispõe de uma casa de banho com WC e duche. Água, eletricidade, gás e Internet incluídos. O estacionamento fica na rua. No pátio das traseiras há um jardim para uso comum. Existe uma máquina de lavar roupa comum para todos o",
+    "id": "35274325",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 12,
+    "tipologia": "T0",
+    "areaBrutaM2": 30,
+    "pisoResumo": null
+  },
+  {
+    "Titulo": "Moradia independente na Rua dos Cabrais, 1, Candelária",
+    "Link": "https://www.idealista.pt/imovel/34522128/",
+    "Preco": "700€/mês",
+    "detalhe do item": "T1 | 54 m² área bruta",
+    "Descricao do item": "O estúdio junto à piscina (não enchida no inverno) dispõe de uma grande cozinha com fogão a gás e micro-ondas, frigorífico com congelador. Sala de estar com sofá e quarto aberto para a sala de estar com 2 camas individuais. Tem também uma casa de banho separada com duche e WC. Área de estar junto à piscina e zona de ch",
+    "id": "34522128",
+    "tags": [
+      "Arrendamento temporário"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 4,
+    "tipologia": "T1",
+    "areaBrutaM2": 54,
+    "pisoResumo": null
+  }
+]

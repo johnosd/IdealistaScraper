@@ -1,0 +1,13 @@
+{
+  "manifest.json": true,
+  "package.json": true,
+  "package-lock.json": true,
+  "src/localidades-directory-store.js": true,
+  "src/localidades-export.js": true,
+  "src/lote-directory-store.js": true,
+  "src/lote-export.js": true,
+  "src/lote-session.js": true,
+  "src/lote-input.js": true,
+  "src/lote-navigation.js": true,
+  "src/linkExtractor.js": true
+}

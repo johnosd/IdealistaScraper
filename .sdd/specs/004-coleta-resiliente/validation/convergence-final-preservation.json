@@ -1,0 +1,17 @@
+{
+  "tasks_sha256": "c73b38afcee659a733e065c46b1061aa3a76b5f98fc1f7b3c097158bcdcbd484",
+  "readme_sha256": "cdbc74be4c0fd0502b47a3d6a2b10b51db09285e2cb9dda2478f92241e4e532b",
+  "protected_files": 88,
+  "unchanged": true,
+  "risk_markers_updated": [
+    "R-001",
+    "R-002",
+    "R-003",
+    "R-004",
+    "R-005",
+    "R-006",
+    "R-007",
+    "R-012"
+  ],
+  "spec_before_without_status_sha256": "696ffe5fea13b5c2a46d9e4e13f3740f7dc81f62be5eedf96783080422074aea"
+}
