@@ -52,4 +52,52 @@ function buildBatchQueue(records) {
   return { entries: [...byListing.values()], rejected };
 }
 
-module.exports = { deriveListingURL, buildBatchQueue };
+// 006 D16/FR-029/030: fila de cobertura sem duplicar listagens, a partir dos registros da coleta de links
+// (página nacional + concelhos das páginas de distritos grandes). Unidade = sub-região (distrito/ilha);
+// distritos com contagem > limit são substituídos pelos seus concelhos; sem concelhos lidos, o distrito entra inteiro.
+function planCoverageQueue(records, { limit = 1800 } = {}) {
+  if (!Array.isArray(records)) throw new TypeError('Lista de localidades inválida');
+  const valid = records.filter(r => r && typeof r === 'object');
+  const rejected = records.filter(r => !r || typeof r !== 'object').map(record => ({ record, reason: 'invalid_record' }));
+  const subregions = valid.filter(r => r.Tipo === 'Sub-região');
+  const subregionNames = new Set(subregions.map(r => text(r['Sub-região'])).filter(Boolean));
+  const regionsWithChildren = new Set(subregions.map(r => text(r['Região'])).filter(Boolean));
+  const regionOf = new Map(subregions.map(r => [text(r['Sub-região']), text(r['Região'])]));
+  const big = new Set(subregions.filter(r => (quantity(r.Contagem) ?? 0) > limit).map(r => text(r['Sub-região'])));
+  // Concelhos lidos das páginas dos distritos grandes: Tipo Município cujo Sub-região é um distrito grande e cuja URL é …/concelhos-freguesias.
+  const concelhos = valid.filter(r => r.Tipo === 'Município' && big.has(text(r['Sub-região'])) && /\/concelhos-freguesias\/?$/.test(String(r.URL || '')));
+  const expanded = new Set(concelhos.map(r => text(r['Sub-região'])));
+  const chosen = [];
+  for (const r of valid) {
+    const sub = text(r['Sub-região']);
+    if (r.Tipo === 'Região') { if (!regionsWithChildren.has(text(r['Região']))) chosen.push({ record: r, path: [text(r['Região'])] }); continue; }
+    if (r.Tipo === 'Sub-região') {
+      if (!expanded.has(sub)) { chosen.push({ record: r, path: [text(r['Região']), sub], limited: big.has(sub) }); continue; }
+      // Distrito grande: seus concelhos entram no lugar dele, preservando a ordem da página.
+      for (const k of concelhos.filter(k => text(k['Sub-região']) === sub)) {
+        const regiao = text(k['Região']) || regionOf.get(sub) || null;
+        chosen.push({ record: { ...k, 'Região': regiao }, path: [regiao, sub, text(k.Texto)] });
+      }
+      continue;
+    }
+    if (r.Tipo === 'Município') {
+      if (concelhos.includes(r)) continue; // já inseridos no lugar do distrito
+      if (!sub || !subregionNames.has(sub)) chosen.push({ record: r, path: [text(r['Região']), sub, text(r.Texto)] }); // sem distrito pai: entra
+      continue;
+    }
+    // Freguesias e outros níveis já estão contidos em distritos/concelhos.
+  }
+  const { entries, rejected: invalid } = buildBatchQueue(chosen.map(c => c.record));
+  const pathOf = new Map(chosen.map(c => { try { return [deriveListingURL(c.record.URL), c]; } catch { return [null, c]; } }));
+  for (const entry of entries) {
+    const c = pathOf.get(entry.url);
+    entry.path = (c?.path || [entry.nome]).filter(Boolean).join(' › ');
+    if (c?.limited) entry.expectedLimited = true;
+  }
+  // R-020: freguesias lidas nas páginas de distrito, por sub-região, como lista de validação (não viram entradas).
+  const freguesias = [...new Map(valid.filter(r => r.Tipo === 'Freguesia' && text(r.Texto) && text(r['Sub-região']))
+    .map(r => [text(r['Sub-região']) + '|' + text(r.Texto), [text(r.Texto), text(r['Sub-região'])]])).values()];
+  return { entries, rejected: [...rejected, ...invalid], freguesias, summary: { freguesias: freguesias.length, subregions: entries.filter(e => e.tipo === 'Sub-região').length, concelhos: concelhos.length, expandedDistricts: [...expanded], unexpandedBig: [...big].filter(d => !expanded.has(d)) } };
+}
+
+module.exports = { deriveListingURL, buildBatchQueue, planCoverageQueue };

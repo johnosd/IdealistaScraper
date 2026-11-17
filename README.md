@@ -5,10 +5,15 @@ Idealista.pt, percorrer páginas e exportar JSON. No Chrome desktop **141 ou
 superior**, a action abre o painel lateral com as abas **Links**, **Itens** e
 **Lote**, ao lado do site. **Configurações** fica sempre visível no cabeçalho.
 
-Escolha a pasta de anúncios em **Configurações**. Na aba **Lote**, com uma página do Idealista que
-lista localidades, clique em **Iniciar coleta**: o app descobre somente os
-links geográficos diretamente listados nessa página e coleta os anúncios de
-toda a fila. Exportar a lista de localidades continua sendo uma ação separada
+Escolha a pasta de anúncios em **Configurações** (configuração inicial). Depois:
+
+1. **Links → Coletar links de localidades** abre a página nacional
+   `…/arrendar-casas/#municipality-search` e a página de concelhos/freguesias de cada distrito.
+2. Links e **Lote** mostram a mesma fila final, sem repetir listagens (ex.: `Alentejo › Beja`).
+3. **Lote → Iniciar coleta** percorre cada localidade página a página até a última, uma de cada vez.
+
+Detalhes em [Fluxo Links → Lote](#fluxo-links--lote-006). Sem fila preparada, **Iniciar coleta** usa a página do
+Idealista aberta, como antes. Exportar a lista de localidades continua sendo uma ação separada
 em **Outras ferramentas**, junto da importação de lote e da coleta individual.
 
 O painel mostra origem, estado, páginas confirmadas, anúncios coletados e
@@ -38,10 +43,10 @@ MCP Playwright abriu a página com HTTP200 e o extrator do projeto capturou os
 o clique no painel instalado e o diagnóstico anterior do proxy (407/403)
 continuam pendentes. Veja [evidências e limites do teste real](.sdd/specs/005-experiencia-coleta-autonoma/validation/links-mcp-live.md).
 
-Se uma verificação inicial dá lugar à página normal durante o carregamento,
-a coleta observa essa transição por até10segundos e usa o documento final.
-Bloqueios persistentes e esperas do servidor continuam pausando a coleta;
-o app não recarrega a página para insistir. [Correção e testes da transição](.sdd/specs/005-experiencia-coleta-autonoma/validation/links-transition-fix.md).
+Se uma verificação inicial ("Just a moment…"/"Um momento…", `cf-mitigated: challenge`) dá lugar à página
+normal durante o carregamento, a coleta observa essa transição por até 12 segundos (10 s para outros 403)
+e usa o documento final. O leitor não se vincula ao documento da verificação. Bloqueios persistentes
+seguem para a espera e reverificação automáticas (abaixo); o app não recarrega a página para insistir. [Correção e testes da transição](.sdd/specs/005-experiencia-coleta-autonoma/validation/links-transition-fix.md).
 
 Falhas comprovadamente locais (404/410 sem sinal de bloqueio geral) permitem
 seguir as outras localidades. Use **Retomar coleta** no item ou **Retomar
@@ -72,9 +77,11 @@ uma página enviada sem confirmação pode exigir nova tentativa contabilizada.
 Contextos incompatíveis ou com mais de sete dias precisam de conferência;
 resultados completos preservados ainda podem ser salvos.
 
-429 exige espera e retomada manual. 403 ou desafio exige pelo menos 30 minutos,
-conferência do acesso e retomada manual. A extensão não resolve CAPTCHA nem
-troca IP para insistir. Erros transitórios têm até três tentativas totais,
+No Lote e nos Links (006), 403/desafio e 429 pausam a fila, mostram o motivo e o horário da próxima
+verificação, esperam o prazo (30 minutos no bloqueio) e **reverificam sozinhos**. O limite efetivo é de
+2 verificações, porque o limite de 3 tentativas por página chega antes. Persistindo, a coleta para como
+"bloqueio persistente", com o progresso preservado e a retomada manual disponível. Nos modos legados, 429
+e 403 continuam exigindo retomada manual. A extensão não resolve CAPTCHA nem troca IP para insistir. Erros transitórios têm até três tentativas totais,
 com espera inicial de 30 e 60 segundos. Só uma sessão coleta por domínio.
 
 O proxy solicitado é confirmado antes da navegação e permanece estável durante
@@ -119,6 +126,28 @@ A experiência autônoma005 está **Em Execução**: provas de lógica, UI e pai
 real são separadas dos gates ainda pendentes de pasta externa/reautorização e
 leitor de tela. Consulte o [roteiro005](.sdd/specs/005-experiencia-coleta-autonoma/quickstart.md)
 e suas [tarefas](.sdd/specs/005-experiencia-coleta-autonoma/tasks.md).
+
+## Fluxo Links → Lote (006)
+
+- **Links** abre a página nacional (84 links: regiões, distritos/ilhas e municípios destacados) e depois a página
+  `…/<distrito>/concelhos-freguesias` de cada distrito, com o mesmo ritmo e na mesma aba visível.
+- **Fila de cobertura, sem repetir listagens**: a unidade é o distrito/ilha (ex.: `…/beja-distrito/`, que já inclui
+  Vila Nova de Milfontes). Regiões e municípios destacados ficam de fora por já estarem contidos. Distritos acima de
+  **1.800 anúncios** (limite de paginação do site: 60 páginas) entram pelos concelhos (ex.: `… › Lisboa › Sintra`).
+  As freguesias lidas não viram entradas; servem para validar o campo `Freguesia`.
+- **Coleta visível**: uma aba do Idealista abre em foco uma vez e navega página a página (sem fetch em segundo plano).
+  Nenhuma tela de configuração ou exportação abre sozinha; sem pasta autorizada, o painel orienta a configurar.
+  A aba técnica `runner.html` fica inativa enquanto a coleta roda.
+- **Uma localidade por vez**: cada uma vai até a última página e é gravada antes da próxima. A listagem cortada pelo
+  site aparece como **limitada** (total declarado × obtido), nunca como completa. O resumo mostra anúncios únicos e
+  repetidos entre localidades; cada arquivo mantém a listagem completa da sua entrada.
+- **Arquivos**: os campos existentes não mudam; ao final de cada anúncio entram `Região`, `Sub-região`, `Município` e
+  `Freguesia`. `Freguesia` é preenchida só quando o final do título coincide com uma freguesia do distrito da entrada.
+- **Limites**: o ritmo (10 s entre páginas, 60 por hora) é mantido. Ao esgotar o orçamento por execução ou a duração,
+  a fila abre um novo ciclo automaticamente; a fila inteira pode levar horas.
+- Evidências: [inspeção do site real](.sdd/specs/006-revisao-links-lote-extracao/validation/site-inspection.md),
+  [validação com a extensão instalada](.sdd/specs/006-revisao-links-lote-extracao/validation/real-validation.md) e
+  [roteiro](.sdd/specs/006-revisao-links-lote-extracao/quickstart.md).
 
 ## Desenvolvimento
 

@@ -4,7 +4,7 @@ const fs=require('node:fs/promises'),os=require('node:os'),path=require('node:pa
 (async()=>{
  const profile=await fs.mkdtemp(path.join(os.tmpdir(),'idealista005-inherited-block-'));let b,requests=0;
  try{
-  const navigationHTML=await fs.readFile(path.join(__dirname,'../fixtures/idealista-locations-2026-11-15.html'),'utf8');
+  const navigationHTML=(await fs.readFile(path.join(__dirname,'../fixtures/idealista-locations-2026-11-15.html'),'utf8')).replace(/<p>[\d.]+<\/p>/g,'<p>0</p>')/* 006 D16/R-020: contagem 0 = sem visita às páginas de distrito aqui; a expansão é coberta por links-district.smoke */;
   b=await openBrowser(profile,route=>{requests++;return route.fulfill({status:requests===1?403:200,contentType:'text/html',body:requests===1?'<h1>Access denied</h1>':'<!doctype html><html><head><title>Localidades</title></head><body>'+navigationHTML+'</body></html>'});});
   const batch=await b.page('lote.html');await configure(batch);await batch.locator('#choose').click();await batch.locator('#loteUrls').fill(JSON.stringify([{nome:'Blocked',link:'https://www.idealista.pt/arrendar-casas/blocked-fixture/'}]));await batch.locator('#loteStart').click();await waitState(batch,'blocked');assert.equal(requests,1);
   const p=await b.context.newPage();await p.goto(b.base+'sidepanel.html');await p.getByRole('tab',{name:'Links',exact:true}).click();await p.locator('#tool-links-open').click();
@@ -25,8 +25,8 @@ const fs=require('node:fs/promises'),os=require('node:os'),path=require('node:pa
   await p.evaluate(()=>new Promise((resolve,reject)=>{const open=indexedDB.open('idealista-coleta-v1',1);open.onerror=()=>reject(open.error);open.onsuccess=()=>{const db=open.result,tx=db.transaction('records','readwrite'),store=tx.objectStore('records'),get=store.get('domain:idealista.pt');get.onsuccess=()=>{const domain=get.result,elapsed=1800001;domain.blockedUntil-=elapsed;domain.highWaterClock-=elapsed;domain.lastStarted-=elapsed;domain.events=domain.events.map(t=>t-elapsed);store.put(domain,'domain:idealista.pt');};tx.oncomplete=()=>{db.close();resolve();};tx.onabort=()=>{db.close();reject(tx.error);};};}));
   await p.locator('#tool-links-open').click();await p.locator('#confirm-dialog').waitFor({state:'visible'});await p.locator('#confirm-ok').click();
   const collected=await poll(read,v=>v.state==='collected');assert.equal(collected.total,84);assert.equal(collected.records.length,84);assert.equal(requests,2);
-  await p.waitForFunction(()=>document.querySelector('#links-status').textContent.includes('84 localidades coletadas'));
-  assert.equal(await p.locator('#links-results li').count(),84);assert.equal(await p.locator('#links-save').isVisible(),true);
+  await p.waitForFunction(()=>document.querySelector('#links-status').textContent.includes('22 localidades prontas para o Lote'));
+  assert.equal(await p.locator('#links-results li').count(),22);assert.equal(await p.locator('#links-save').isVisible(),true);
   const prior=await batch.evaluate(async()=>(await chrome.runtime.sendMessage({cmd:'COLETA_LIST'})).result);assert.equal(prior.find(s=>s.id===blocking[0].id).state,'blocked');
   assert.equal(b.context.pages().some(page=>['/localidades.html','/configuracoes.html'].includes(new URL(page.url()).pathname)),false);assert.deepEqual(b.errors,[]);
   console.log(JSON.stringify({pass:true,proof:'real extension, controlled HTTP403/200 and captured real DOM; elapsed deadline seeded only in temporary profile',requests,records:collected.total,cases:['Lote block inherited by Links','recovery visible without Links session','mandatory wait enforced','cancel preserves block','confirmation before deadline refused','eligible confirmation collects 84 links','old session preserved','no export or settings page']}));

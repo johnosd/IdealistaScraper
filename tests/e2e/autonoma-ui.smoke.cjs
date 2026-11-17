@@ -11,7 +11,8 @@ const breadcrumb='<div class="breadcrumb-dropdown-element highlighted"><ul class
  b=await openBrowser(profile,r=>{const u=r.request().url();if(!u.startsWith(origin))return r.abort();calls.push(u);return r.fulfill({status:200,contentType:'text/html; charset=utf-8',body:u===url?breadcrumb:listing});});
  const p=await b.context.newPage();await p.goto(b.base+'sidepanel.html');
  await p.locator('#primary-action').filter({hasText:'Configurar pasta'}).waitFor();
- await p.locator('#primary-action').click();await p.locator('#settings-save').waitFor();await p.waitForFunction(()=>document.querySelector('#minIntervalMs')?.value==='10');
+ // 006: 'Configurar pasta' escolhe a pasta no próprio painel; Configurações abre pelo link do cabeçalho.
+ await p.locator('#settings-link').click();await p.locator('#settings-save').waitFor();await p.waitForFunction(()=>document.querySelector('#minIntervalMs')?.value==='10');
  assert.equal(await p.locator('#proxy-fields').isVisible(),false);
  await p.locator('#minIntervalMs').fill('0');await p.locator('#settings-save').click();await p.waitForFunction(()=>document.querySelector('#minIntervalMs').getAttribute('aria-invalid')==='true');
  assert.equal(await p.locator('#minIntervalMs').evaluate(e=>e===document.activeElement),true);
@@ -23,11 +24,14 @@ const breadcrumb='<div class="breadcrumb-dropdown-element highlighted"><ul class
  await p.getByRole('button',{name:'Permanecer',exact:true}).click();assert.equal(await p.locator('#minIntervalMs').inputValue(),'13');
  await p.locator('#back').click();await p.getByRole('button',{name:'Descartar edições',exact:true}).click();await p.locator('#collection-app').waitFor();
  await p.locator('#settings-link').click();await p.waitForFunction(()=>document.querySelector('#minIntervalMs')?.value==='12');
- await p.locator('#minIntervalMs').fill('1');await p.locator('#maxPagesPerRun').fill('1');await p.locator('#settings-save').click();await p.waitForFunction(()=>document.querySelector('#settings-status').textContent.includes('Configurações salvas'));
+ // 006 D13: orçamento por execução não pausa mais a fila (novo ciclo). A pausa vem do usuário durante o intervalo.
+ await p.locator('#minIntervalMs').fill('120');await p.locator('#settings-save').click();await p.waitForFunction(()=>document.querySelector('#settings-status').textContent.includes('Configurações salvas'));
  const sourceTab=await p.evaluate(async url=>{const tab=await chrome.tabs.create({url:'about:blank',active:false});await chrome.tabs.update(tab.id,{url});return tab.id;},url);
  await poll(()=>p.evaluate(id=>chrome.tabs.get(id),sourceTab),t=>t.status==='complete');
  await p.goto(b.base+'sidepanel.html?sourceTabId='+sourceTab);await p.waitForFunction(()=>document.querySelector('#primary-action').textContent==='Iniciar coleta'&&!document.querySelector('#primary-action').disabled);
  await p.locator('#primary-action').click();await p.waitForFunction(()=>document.querySelectorAll('#localities>li').length===308,{timeout:20000});
+ await poll(async()=>calls.filter(u=>u!==url).length,n=>n===1);
+ await p.waitForFunction(()=>document.querySelector('#primary-action').textContent==='Pausar coleta'&&!document.querySelector('#primary-action').disabled,null,{timeout:20000});await p.locator('#primary-action').click();
  try{await p.waitForFunction(()=>document.querySelector('#run-state').textContent==='Coleta pausada',null,{timeout:20000});}catch(error){console.error({state:await p.locator('#run-state').textContent(),feedback:await p.locator('#feedback').textContent(),reason:await p.locator('#run-reason').textContent(),calls,errors:b.errors});throw error;}
  assert.equal(calls.filter(u=>u!==url).length,1);
  await p.locator('#search').fill('sao bras');await p.waitForFunction(()=>document.querySelector('#list-total').textContent==='1 de 308');

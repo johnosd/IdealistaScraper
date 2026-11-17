@@ -72,6 +72,13 @@ loop:
   janela continuam valendo entre ciclos (o ritmo é a garantia de segurança; o orçamento por execução vira ciclo).
 - `runQueue`: `renew` → `waitUntil(until da elegibilidade)` → `renewCycle` → `resume(selection:'remaining')`.
 
+## Interação com `maxAttempts` (descoberta na execução)
+
+O limite de tentativas por página da 004 (`maxAttempts`, padrão 3) conta cada reverificação da mesma URL. O
+limite efetivo de verificações é `min(maxRechecks, maxAttempts − 1)`. Se a parada vier como
+`attempts_exhausted` logo após uma reverificação/espera contada sem página confirmada, o `runQueue` a apresenta
+como `access_blocked_persistent` (ou `rate_limit_persistent`). Com os padrões, isso dá 1 tentativa e 2 verificações.
+
 ## Interação com `window_budget`
 
 `drive` hoje chama `finishPause(s,'window_budget')` e sai. Com `runQueue`, isso vira espera automática

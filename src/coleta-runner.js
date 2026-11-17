@@ -16,6 +16,15 @@ async function runPage({ reserve, collect, commit, signal }) {
   return commit(result);
 }
 const { createCollectionClient } = require('./coleta-protocol');
+function waitForNavigationTo(api,tabId,url,timeout){
+  return new Promise((resolve,reject)=>{
+    let settled=false;const timer=setTimeout(()=>done(new Error('Timeout de navegação')),timeout);
+    function done(error){if(settled)return;settled=true;clearTimeout(timer);api.tabs.onUpdated.removeListener(update);error?reject(error):resolve();}
+    function check(tab){if(tab.url===url&&tab.status==='complete'&&!tab.pendingUrl)done();}
+    function update(id){if(id===tabId)api.tabs.get(tabId).then(check,done);}
+    api.tabs.onUpdated.addListener(update);api.tabs.get(tabId).then(check,done);
+  });
+}
 function waitForNavigation(api,tabId,url,timeout,signal){
   return new Promise((resolve,reject)=>{
     let settled=false;const timer=setTimeout(()=>done(new Error('Timeout de navegação')),timeout);
@@ -35,7 +44,9 @@ async function sendPageMessage(api,tabId,message){
   catch(error){if(!/receiving end does not exist|could not establish connection/i.test(error.message))throw error;await api.scripting.executeScript({target:{tabId},files:['dist/content.bundle.js']});return api.tabs.sendMessage(tabId,message);}
 }
 async function readNavigatedPage(api,tabId,command,signal){
-  const client=createCollectionClient(api),deadline=Date.now()+Math.min(10000,command.timeoutMs||30000);
+  // 006 (validação real): desafio transitório do site ("Just a moment…"/"Um momento…", cf-mitigated) leva alguns
+  // segundos para liberar (cerca de 5 s no Chrome real); só nesse caso a observação passiva vai até 12 s. Outros 403 mantêm 10 s.
+  const client=createCollectionClient(api),start=Date.now(),limit=command.timeoutMs||30000;let deadline=start+Math.min(10000,limit);
   let facts;
   // Observe the page's own transition only. Never navigate, fetch or solve a challenge here.
   do{
@@ -47,6 +58,7 @@ async function readNavigatedPage(api,tabId,command,signal){
       const http=await client('READ_HTTP',command);
       const sameDocument=!response?.documentId||!http.documentId||response.documentId===http.documentId;
       facts=response?.ok&&sameDocument?{...response,...http,status:response.status??http.status??null}:{...http,finalUrl:http.finalUrl||command.url,records:[],functionalError:!http.status};
+      if(response?.transientChallenge||http?.mitigated==='challenge')deadline=Math.max(deadline,start+Math.min(12000,limit));
       if(http.status===429)return {...facts,status:429,retryAfter:http.retryAfter};
       if(response?.ok&&sameDocument&&facts.status!==403&&!facts.challenge&&facts.mitigated!=='challenge')return facts;
     }catch(error){
@@ -59,9 +71,25 @@ async function readNavigatedPage(api,tabId,command,signal){
   }while(Date.now()<deadline);
   return facts;
 }
-function createPageTransport(api=chrome){
-  const client=createCollectionClient(api);let tab=null,itemId=null,identity=null;
-  const removed=id=>{if(tab?.id===id)tab=null;};api.tabs.onRemoved.addListener(removed);
+function createPageTransport(api=chrome,{foreground=false}={}){
+  const client=createCollectionClient(api);let tab=null,itemId=null,identity=null,registeredEpoch=null,userClosed=false;
+  const removed=id=>{if(tab?.id===id){tab=null;if(foreground)userClosed=true;}};api.tabs.onRemoved.addListener(removed);
+  if(foreground){
+    // 006 D5: uma aba Idealista visível por execução, em foco só ao criar; toda página por navegação real.
+    const waitBlank=id=>waitForNavigationTo(api,id,'about:blank',10000);
+    const prepare=async input=>{
+      if(userClosed){const error=new Error('Aba de coleta fechada');error.code='COLLECTION_TAB_CLOSED';throw error;}
+      if(!tab){
+        tab=await api.tabs.create({url:'about:blank',active:true});await api.tabs.update(tab.id,{autoDiscardable:false});
+        await client('REGISTER',{id:input.id,epoch:input.epoch,tabId:tab.id});registeredEpoch=input.epoch;
+      }else if(registeredEpoch!==input.epoch){
+        await api.tabs.update(tab.id,{url:'about:blank'});await waitBlank(tab.id);
+        await client('REGISTER',{id:input.id,epoch:input.epoch,tabId:tab.id});registeredEpoch=input.epoch;
+      }
+      itemId=input.itemId;identity=input;return {kind:'navigation'};
+    };
+    return {prepare,execute:command=>execute(command),close,dispose:async options=>{await close(options);api.tabs.onRemoved.removeListener(removed);}};
+  }
   async function close({keep=false}={}){
     const owned=tab;tab=null;itemId=null;if(!owned||keep)return;
     try{const current=await api.tabs.get(owned.id);if(current.url!=='about:blank'){
@@ -151,7 +179,8 @@ function createCollectionWorkflow({api=chrome,mode,save,destination,reconcile,on
           await client('REGISTER',{...identity(),tabId:tab.id});
         }
         const current=await api.tabs.get(tab.id);
-        const navigate=current.url==='about:blank'||new URL(current.url).origin!==new URL(url).origin;
+        // 006 D5/D16: coleta visível (Links) navega toda página na aba; as demais telas mantêm o comportamento.
+        const navigate=foreground||current.url==='about:blank'||new URL(current.url).origin!==new URL(url).origin;
         const command={...identity(),requestId:crypto.randomUUID(),url,kind:navigate?'navigation':'pagination'};
         const permit=await client('REQUEST',command);
         if(permit.status==='wait'){
@@ -184,7 +213,15 @@ function createCollectionWorkflow({api=chrome,mode,save,destination,reconcile,on
       authorize();
       id=sessionId;const view=await client('READ',{id});epoch=view.epoch;
       if(view.state==='awaiting-save'||view.pendingProjection){const saved=await savePending();return saved.status==='running'?drive():saved;}
-      const r=await client('RESUME',{...identity(),accessConfirmed});if(r.status!=='running'){onState(view,r);return r;}epoch=r.epoch;probe();return drive();
+      // Retomar dentro do intervalo mínimo entre páginas: aguardar o prazo e seguir, como o início já faz
+      // (desvio registrado na 006, R-015). Pausar durante a espera cancela; demais esperas seguem manuais.
+      let r=await client('RESUME',{...identity(),accessConfirmed});
+      for(let n=0;r.status==='wait'&&r.reason==='interval'&&n<5;n++){
+        onState(view,r);const wait=abort=new AbortController();
+        try{await abortableDelay(Math.min(60000,Math.max(1,r.until-Date.now())),wait.signal);}catch{return {status:'paused',reason:'paused'};}
+        r=await client('RESUME',{...identity(),accessConfirmed});
+      }
+      if(r.status!=='running'){onState(view,r);return r;}epoch=r.epoch;probe();return drive();
     },
     async stop(action='PAUSE'){authorize();abort?.abort();if(!id)return;const result=await client(action,identity());if(action==='DISCARD'&&result.status==='discarded'){id=null;epoch=null;onState(null);}else await publish();return result;},
     async adopt(sessionId){id=sessionId;epoch=(await client('READ',{id})).epoch;return publish();},

@@ -1,41 +1,26 @@
 [
   {
-    "Titulo": "Apartamento T0 no Caminho Velho dos Folhadais, 91 -a, São Pedro",
-    "Link": "https://www.idealista.pt/imovel/35481430/",
-    "Preco": "500€/mês",
-    "detalhe do item": "T0 | 60 m² área bruta | Rés do chão sem elevador | 6 horas",
-    "Descricao do item": "ARRENDA-SE APARTAMENTO T0 – ANGRA DO HEROÍSMO Arrenda-se apartamento de tipologia T0, totalmente mobilado, equipado e recentemente renovado, pronto a habitar. O apartamento dispõe de todas as comodidades necessárias para uma vivência confortável, incluindo roupa de cama e de banho, loiças e diversos utensílios e equi",
-    "id": "35481430",
+    "Titulo": "Moradia independente no Caminho Professor Doutor Vitorino Nemésio, 3, Porto Martins",
+    "Link": "https://www.idealista.pt/imovel/35284738/",
+    "Preco": "900€/mês",
+    "detalhe do item": "Garagem incluída | T3 | 140 m² área bruta",
+    "Descricao do item": "Moradia T3 em Ponta Negra, Porto Martins Um café de manhã no calçadão junto ao mar, um mergulho à tarde na piscina natural, jantar num dos cinco restaurantes ali perto. É isto viver à beira-mar em Porto Martins. Localizada na zona baixa de Porto Martins, a poucos passos do calçadão junto ao mar. A piscina natural e o",
+    "id": "35284738",
     "tags": [],
     "agenciaNome": null,
     "agenciaLink": null,
-    "precoOriginal": null,
-    "descontoPercentual": null,
-    "estacionamento": null,
-    "tempoDestaque": "6 horas",
-    "imagens": 12,
-    "tipologia": "T0",
-    "areaBrutaM2": 60,
-    "pisoResumo": "Rés do chão sem elevador"
-  },
-  {
-    "Titulo": "Apartamento T0 no Caminho do Rei, 43, Feteira",
-    "Link": "https://www.idealista.pt/imovel/34725426/",
-    "Preco": "750€/mês",
-    "detalhe do item": "Garagem incluída | T0 | 90 m² área bruta | 1º andar sem elevador | 11 nov",
-    "Descricao do item": "**ARRENDA-SE T2 | REGATOS, TERRA CHÃ | CONDOMÍNIO FECHADO | GARAGEM PRIVATIVA** **Espaço, conforto e tranquilidade num só lugar! ** Se procuras um apartamento espaçoso, acolhedor e com um ambiente tranquilo e familiar, esta pode ser a tua próxima casa! **Localizado nos Regatos, Terra Chã (Angra do Heroísmo)**, este",
-    "id": "34725426",
-    "tags": [],
-    "agenciaNome": null,
-    "agenciaLink": null,
-    "precoOriginal": null,
-    "descontoPercentual": null,
+    "precoOriginal": "1.000 €",
+    "descontoPercentual": "10%",
     "estacionamento": "Garagem incluída",
     "tempoDestaque": null,
-    "imagens": 16,
-    "tipologia": "T0",
-    "areaBrutaM2": 90,
-    "pisoResumo": "1º andar sem elevador"
+    "imagens": 35,
+    "tipologia": "T3",
+    "areaBrutaM2": 140,
+    "pisoResumo": null,
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   },
   {
     "Titulo": "Apartamento T3 na Rua da Praça, 144, Vila de São Sebastião",
@@ -54,7 +39,11 @@
     "imagens": 18,
     "tipologia": "T3",
     "areaBrutaM2": 135,
-    "pisoResumo": "1º andar sem elevador"
+    "pisoResumo": "1º andar sem elevador",
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   },
   {
     "Titulo": "Moradia em banda na Rua Pero Anes do Canto, 77, Nossa Senhora da Conceição",
@@ -76,26 +65,11 @@
     "imagens": 31,
     "tipologia": "T3",
     "areaBrutaM2": 174,
-    "pisoResumo": null
-  },
-  {
-    "Titulo": "Moradia independente no Caminho Professor Doutor Vitorino Nemésio, 3, Porto Martins",
-    "Link": "https://www.idealista.pt/imovel/35284738/",
-    "Preco": "1.000€/mês",
-    "detalhe do item": "Garagem incluída | T3 | 140 m² área bruta",
-    "Descricao do item": "Moradia T3 em Ponta Negra, Porto Martins Um café de manhã no calçadão junto ao mar, um mergulho à tarde na piscina natural, jantar num dos cinco restaurantes ali perto. É isto viver à beira-mar em Porto Martins. Localizada na zona baixa de Porto Martins, a poucos passos do calçadão junto ao mar. A piscina natural e o",
-    "id": "35284738",
-    "tags": [],
-    "agenciaNome": null,
-    "agenciaLink": null,
-    "precoOriginal": null,
-    "descontoPercentual": null,
-    "estacionamento": "Garagem incluída",
-    "tempoDestaque": null,
-    "imagens": 35,
-    "tipologia": "T3",
-    "areaBrutaM2": 140,
-    "pisoResumo": null
+    "pisoResumo": null,
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   },
   {
     "Titulo": "Moradia independente em São Pedro",
@@ -114,7 +88,11 @@
     "imagens": 17,
     "tipologia": "T1",
     "areaBrutaM2": 70,
-    "pisoResumo": null
+    "pisoResumo": null,
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   },
   {
     "Titulo": "Moradia independente na Canada Andre Luís, 2, Praia da Vitória (Santa Cruz)",
@@ -133,47 +111,11 @@
     "imagens": 12,
     "tipologia": "T2",
     "areaBrutaM2": 163,
-    "pisoResumo": null
-  },
-  {
-    "Titulo": "Moradia independente no Caminho de São João, 52, Praia da Vitória (Santa Cruz)",
-    "Link": "https://www.idealista.pt/imovel/35469202/",
-    "Preco": "900€/mês",
-    "detalhe do item": "T4 | 168 m² área bruta | lote de 278 m² | 08 nov",
-    "Descricao do item": "A moradia dispõe de 4 quartos, 2 salas, podendo uma delas transformar-se em escritório, 1 cozinha totalmente equipada e 1 WC. A moradia está parcialmente mobilada podendo ser mobilada na totalidade. Também dispõe de uma grande área de terraço e pátios, assim como uma vista incrível para a Serra do Cume. A moradia está",
-    "id": "35469202",
-    "tags": [],
-    "agenciaNome": null,
-    "agenciaLink": null,
-    "precoOriginal": null,
-    "descontoPercentual": null,
-    "estacionamento": null,
-    "tempoDestaque": null,
-    "imagens": 31,
-    "tipologia": "T4",
-    "areaBrutaM2": 168,
-    "pisoResumo": null
-  },
-  {
-    "Titulo": "Casa de aldeia na Rua da Igreja, 20, Biscoitos",
-    "Link": "https://www.idealista.pt/imovel/35432532/",
-    "Preco": "750€/mês",
-    "detalhe do item": "T1 | 147 m² área bruta",
-    "Descricao do item": "Casa típica, toda remodelada, na freguesia de Biscoitos, na ilha Terceira, perto das piscinas naturais e do comércio local.",
-    "id": "35432532",
-    "tags": [
-      "Arrendamento temporário"
-    ],
-    "agenciaNome": null,
-    "agenciaLink": null,
-    "precoOriginal": null,
-    "descontoPercentual": null,
-    "estacionamento": null,
-    "tempoDestaque": null,
-    "imagens": 20,
-    "tipologia": "T1",
-    "areaBrutaM2": 147,
-    "pisoResumo": null
+    "pisoResumo": null,
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   },
   {
     "Titulo": "Apartamento T2 na Rua Diogo de Teive, 17, São Pedro",
@@ -194,7 +136,57 @@
     "imagens": 7,
     "tipologia": "T2",
     "areaBrutaM2": 60,
-    "pisoResumo": "1º andar sem elevador"
+    "pisoResumo": "1º andar sem elevador",
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
+  },
+  {
+    "Titulo": "Casa de aldeia na Rua da Igreja, 20, Biscoitos",
+    "Link": "https://www.idealista.pt/imovel/35432532/",
+    "Preco": "750€/mês",
+    "detalhe do item": "T1 | 147 m² área bruta",
+    "Descricao do item": "Casa típica, toda remodelada, na freguesia de Biscoitos, na ilha Terceira, perto das piscinas naturais e do comércio local.",
+    "id": "35432532",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 20,
+    "tipologia": "T1",
+    "areaBrutaM2": 147,
+    "pisoResumo": null,
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
+  },
+  {
+    "Titulo": "Moradia independente no Caminho de São João, 52, Praia da Vitória (Santa Cruz)",
+    "Link": "https://www.idealista.pt/imovel/35469202/",
+    "Preco": "900€/mês",
+    "detalhe do item": "T4 | 168 m² área bruta | lote de 278 m²",
+    "Descricao do item": "A moradia dispõe de 4 quartos, 2 salas, podendo uma delas transformar-se em escritório, 1 cozinha totalmente equipada e 1 WC. A moradia está parcialmente mobilada podendo ser mobilada na totalidade. Também dispõe de uma grande área de terraço e pátios, assim como uma vista incrível para a Serra do Cume. A moradia está",
+    "id": "35469202",
+    "tags": [],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 31,
+    "tipologia": "T4",
+    "areaBrutaM2": 168,
+    "pisoResumo": null,
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   },
   {
     "Titulo": "Apartamento T2 na Rua Doutor Henrique Braz, 22, Nossa Senhora da Conceição",
@@ -215,7 +207,11 @@
     "imagens": 26,
     "tipologia": "T2",
     "areaBrutaM2": 126,
-    "pisoResumo": "Rés do chão sem elevador"
+    "pisoResumo": "Rés do chão sem elevador",
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   },
   {
     "Titulo": "Apartamento T0 em Guerrilhas, 37, São Pedro",
@@ -234,7 +230,11 @@
     "imagens": 6,
     "tipologia": "T0",
     "areaBrutaM2": 50,
-    "pisoResumo": "1º andar sem elevador"
+    "pisoResumo": "1º andar sem elevador",
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   },
   {
     "Titulo": "Apartamento T2 na Rua Doutor Henrique Braz, 22, Nossa Senhora da Conceição",
@@ -255,7 +255,11 @@
     "imagens": 13,
     "tipologia": "T2",
     "areaBrutaM2": 126,
-    "pisoResumo": "1º andar sem elevador"
+    "pisoResumo": "1º andar sem elevador",
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   },
   {
     "Titulo": "Moradia independente na Rua das mangas, 22, Biscoitos",
@@ -274,7 +278,11 @@
     "imagens": 19,
     "tipologia": "T2",
     "areaBrutaM2": 80,
-    "pisoResumo": null
+    "pisoResumo": null,
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   },
   {
     "Titulo": "Moradia independente em Grota do Dinis, 31, Serreta",
@@ -295,7 +303,11 @@
     "imagens": 16,
     "tipologia": "T3",
     "areaBrutaM2": 120,
-    "pisoResumo": null
+    "pisoResumo": null,
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   },
   {
     "Titulo": "Moradia independente em Canada da Igreja São Bartolomeu, 17, São Mateus",
@@ -314,7 +326,11 @@
     "imagens": 5,
     "tipologia": "T1",
     "areaBrutaM2": 60,
-    "pisoResumo": null
+    "pisoResumo": null,
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   },
   {
     "Titulo": "Moradia independente no Caminho da Esperança, 20, Porto Judeu",
@@ -336,6 +352,10 @@
     "imagens": null,
     "tipologia": "T1",
     "areaBrutaM2": 100,
-    "pisoResumo": null
+    "pisoResumo": null,
+    "Região": "Açores",
+    "Sub-região": "Terceira (Ilha dos Açores)",
+    "Município": null,
+    "Freguesia": null
   }
 ]

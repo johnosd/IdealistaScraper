@@ -21,7 +21,7 @@ tem prioridade antes de atuar nestes ajustes. Evidências e limites em
 | 003-exportacao-lote-municipios | Exportação mensal do lote em pasta de municípios | Convergida | 33/33 tasks | 2026-11-13 |
 | 004-coleta-resiliente | Coleta resiliente com controle de ritmo e retomada persistente | Convergida | 58/58 tasks | 2026-11-14 |
 | 005-experiencia-coleta-autonoma | Coleta em um clique com acompanhamento e recuperação por localidade | Em Execução | 58/64 tasks | 2026-11-15 |
-| 006-revisao-links-lote-extracao | Revisão ponta a ponta de Links, Lote e extração paginada validada no site real | Em Execução | 36/74 tasks | 2026-11-16 |
+| 006-revisao-links-lote-extracao | Revisão ponta a ponta de Links, Lote e extração paginada validada no site real | Em Execução | 72/81 tasks | 2026-11-16 |
 
 ## Melhorias Ad-hoc
 

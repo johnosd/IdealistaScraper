@@ -6,7 +6,7 @@
     "Tipo": "Sub-região",
     "Texto": "São Miguel (Ilha dos Açores)",
     "URL": "https://www.idealista.pt/arrendar-casas/sao-miguel-ilha-dos-acores/concelhos-freguesias",
-    "Contagem": "73"
+    "Contagem": "75"
   },
   {
     "Região": "Açores",
@@ -24,7 +24,7 @@
     "Tipo": "Sub-região",
     "Texto": "Terceira (Ilha dos Açores)",
     "URL": "https://www.idealista.pt/arrendar-casas/terceira-ilha-dos-acores/concelhos-freguesias",
-    "Contagem": "18"
+    "Contagem": "15"
   },
   {
     "Região": "Açores",
@@ -42,7 +42,7 @@
     "Tipo": "Sub-região",
     "Texto": "Beja",
     "URL": "https://www.idealista.pt/arrendar-casas/beja-distrito/concelhos-freguesias",
-    "Contagem": "108"
+    "Contagem": "105"
   },
   {
     "Região": "Alentejo",
@@ -60,7 +60,7 @@
     "Tipo": "Sub-região",
     "Texto": "Évora",
     "URL": "https://www.idealista.pt/arrendar-casas/evora-distrito/concelhos-freguesias",
-    "Contagem": "121"
+    "Contagem": "117"
   },
   {
     "Região": "Alentejo",
@@ -69,7 +69,7 @@
     "Tipo": "Sub-região",
     "Texto": "Portalegre",
     "URL": "https://www.idealista.pt/arrendar-casas/portalegre-distrito/concelhos-freguesias",
-    "Contagem": "75"
+    "Contagem": "77"
   },
   {
     "Região": "Alentejo",
@@ -78,7 +78,7 @@
     "Tipo": "Sub-região",
     "Texto": "Santarém",
     "URL": "https://www.idealista.pt/arrendar-casas/santarem-distrito/concelhos-freguesias",
-    "Contagem": "303"
+    "Contagem": "309"
   },
   {
     "Região": "Alentejo",
@@ -105,7 +105,7 @@
     "Tipo": "Sub-região",
     "Texto": "Faro",
     "URL": "https://www.idealista.pt/arrendar-casas/faro-distrito/concelhos-freguesias",
-    "Contagem": "2.389"
+    "Contagem": "2.397"
   },
   {
     "Região": "Algarve",
@@ -213,7 +213,7 @@
     "Tipo": "Sub-região",
     "Texto": "Lisboa",
     "URL": "https://www.idealista.pt/arrendar-casas/lisboa-distrito/concelhos-freguesias",
-    "Contagem": "9.712"
+    "Contagem": "9.642"
   },
   {
     "Região": "Área Metropolitana de Lisboa",
@@ -276,7 +276,7 @@
     "Tipo": "Sub-região",
     "Texto": "Setúbal",
     "URL": "https://www.idealista.pt/arrendar-casas/setubal-distrito/concelhos-freguesias",
-    "Contagem": "1.746"
+    "Contagem": "1.739"
   },
   {
     "Região": "Área Metropolitana de Lisboa",
@@ -339,7 +339,7 @@
     "Tipo": "Sub-região",
     "Texto": "Aveiro",
     "URL": "https://www.idealista.pt/arrendar-casas/aveiro-distrito/concelhos-freguesias",
-    "Contagem": "574"
+    "Contagem": "563"
   },
   {
     "Região": "Centro",
@@ -375,7 +375,7 @@
     "Tipo": "Sub-região",
     "Texto": "Castelo Branco",
     "URL": "https://www.idealista.pt/arrendar-casas/castelo-branco-distrito/concelhos-freguesias",
-    "Contagem": "193"
+    "Contagem": "195"
   },
   {
     "Região": "Centro",
@@ -393,7 +393,7 @@
     "Tipo": "Sub-região",
     "Texto": "Coimbra",
     "URL": "https://www.idealista.pt/arrendar-casas/coimbra-distrito/concelhos-freguesias",
-    "Contagem": "615"
+    "Contagem": "609"
   },
   {
     "Região": "Centro",
@@ -420,7 +420,7 @@
     "Tipo": "Sub-região",
     "Texto": "Guarda",
     "URL": "https://www.idealista.pt/arrendar-casas/guarda-distrito/concelhos-freguesias",
-    "Contagem": "71"
+    "Contagem": "70"
   },
   {
     "Região": "Centro",
@@ -438,7 +438,7 @@
     "Tipo": "Sub-região",
     "Texto": "Leiria",
     "URL": "https://www.idealista.pt/arrendar-casas/leiria-distrito/concelhos-freguesias",
-    "Contagem": "634"
+    "Contagem": "637"
   },
   {
     "Região": "Centro",
@@ -510,7 +510,7 @@
     "Tipo": "Sub-região",
     "Texto": "Viseu",
     "URL": "https://www.idealista.pt/arrendar-casas/viseu-distrito/concelhos-freguesias",
-    "Contagem": "210"
+    "Contagem": "215"
   },
   {
     "Região": "Centro",
@@ -573,7 +573,7 @@
     "Tipo": "Sub-região",
     "Texto": "Braga",
     "URL": "https://www.idealista.pt/arrendar-casas/braga-distrito/concelhos-freguesias",
-    "Contagem": "869"
+    "Contagem": "868"
   },
   {
     "Região": "Norte",
@@ -618,7 +618,7 @@
     "Tipo": "Sub-região",
     "Texto": "Porto",
     "URL": "https://www.idealista.pt/arrendar-casas/porto-distrito/concelhos-freguesias",
-    "Contagem": "4.571"
+    "Contagem": "4.546"
   },
   {
     "Região": "Norte",
@@ -754,5 +754,455 @@
     "Texto": "Norte",
     "URL": "https://www.idealista.pt/geo/arrendar-casas/norte/",
     "Contagem": null
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Albufeira",
+    "Tipo": "Município",
+    "Texto": "Albufeira",
+    "URL": "https://www.idealista.pt/arrendar-casas/albufeira/concelhos-freguesias",
+    "Contagem": "222"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Alcoutim",
+    "Tipo": "Município",
+    "Texto": "Alcoutim",
+    "URL": "https://www.idealista.pt/arrendar-casas/alcoutim/concelhos-freguesias",
+    "Contagem": "4"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Aljezur",
+    "Tipo": "Município",
+    "Texto": "Aljezur",
+    "URL": "https://www.idealista.pt/arrendar-casas/aljezur/concelhos-freguesias",
+    "Contagem": "51"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Castro Marim",
+    "Tipo": "Município",
+    "Texto": "Castro Marim",
+    "URL": "https://www.idealista.pt/arrendar-casas/castro-marim/concelhos-freguesias",
+    "Contagem": "34"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Faro",
+    "Tipo": "Município",
+    "Texto": "Faro",
+    "URL": "https://www.idealista.pt/arrendar-casas/faro/concelhos-freguesias",
+    "Contagem": "151"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Lagoa (Algarve)",
+    "Tipo": "Município",
+    "Texto": "Lagoa (Algarve)",
+    "URL": "https://www.idealista.pt/arrendar-casas/lagoa-algarve/concelhos-freguesias",
+    "Contagem": "83"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Lagos",
+    "Tipo": "Município",
+    "Texto": "Lagos",
+    "URL": "https://www.idealista.pt/arrendar-casas/lagos/concelhos-freguesias",
+    "Contagem": "184"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Loulé",
+    "Tipo": "Município",
+    "Texto": "Loulé",
+    "URL": "https://www.idealista.pt/arrendar-casas/loule/concelhos-freguesias",
+    "Contagem": "681"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Monchique",
+    "Tipo": "Município",
+    "Texto": "Monchique",
+    "URL": "https://www.idealista.pt/arrendar-casas/monchique/concelhos-freguesias",
+    "Contagem": "5"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Olhão",
+    "Tipo": "Município",
+    "Texto": "Olhão",
+    "URL": "https://www.idealista.pt/arrendar-casas/olhao/concelhos-freguesias",
+    "Contagem": "77"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Portimão",
+    "Tipo": "Município",
+    "Texto": "Portimão",
+    "URL": "https://www.idealista.pt/arrendar-casas/portimao/concelhos-freguesias",
+    "Contagem": "358"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "São Brás de Alportel",
+    "Tipo": "Município",
+    "Texto": "São Brás de Alportel",
+    "URL": "https://www.idealista.pt/arrendar-casas/sao-bras-de-alportel/sao-bras-de-alportel/concelhos-freguesias",
+    "Contagem": "16"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Silves",
+    "Tipo": "Município",
+    "Texto": "Silves",
+    "URL": "https://www.idealista.pt/arrendar-casas/silves/concelhos-freguesias",
+    "Contagem": "130"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Tavira",
+    "Tipo": "Município",
+    "Texto": "Tavira",
+    "URL": "https://www.idealista.pt/arrendar-casas/tavira/concelhos-freguesias",
+    "Contagem": "222"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Vila do Bispo",
+    "Tipo": "Município",
+    "Texto": "Vila do Bispo",
+    "URL": "https://www.idealista.pt/arrendar-casas/vila-do-bispo/concelhos-freguesias",
+    "Contagem": "28"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Faro",
+    "Município": "Vila Real de Santo António",
+    "Tipo": "Município",
+    "Texto": "Vila Real de Santo António",
+    "URL": "https://www.idealista.pt/arrendar-casas/vila-real-de-santo-antonio/concelhos-freguesias",
+    "Contagem": "151"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Alenquer",
+    "Tipo": "Município",
+    "Texto": "Alenquer",
+    "URL": "https://www.idealista.pt/arrendar-casas/alenquer/concelhos-freguesias",
+    "Contagem": "24"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Amadora",
+    "Tipo": "Município",
+    "Texto": "Amadora",
+    "URL": "https://www.idealista.pt/arrendar-casas/amadora/concelhos-freguesias",
+    "Contagem": "190"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Arruda dos Vinhos",
+    "Tipo": "Município",
+    "Texto": "Arruda dos Vinhos",
+    "URL": "https://www.idealista.pt/arrendar-casas/arruda-dos-vinhos/concelhos-freguesias",
+    "Contagem": "7"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Azambuja",
+    "Tipo": "Município",
+    "Texto": "Azambuja",
+    "URL": "https://www.idealista.pt/arrendar-casas/azambuja/concelhos-freguesias",
+    "Contagem": "13"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Cadaval",
+    "Tipo": "Município",
+    "Texto": "Cadaval",
+    "URL": "https://www.idealista.pt/arrendar-casas/cadaval/concelhos-freguesias",
+    "Contagem": "6"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Cascais",
+    "Tipo": "Município",
+    "Texto": "Cascais",
+    "URL": "https://www.idealista.pt/arrendar-casas/cascais/concelhos-freguesias",
+    "Contagem": "1.610"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Lisboa",
+    "Tipo": "Município",
+    "Texto": "Lisboa",
+    "URL": "https://www.idealista.pt/arrendar-casas/lisboa/concelhos-freguesias",
+    "Contagem": "5.746"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Loures",
+    "Tipo": "Município",
+    "Texto": "Loures",
+    "URL": "https://www.idealista.pt/arrendar-casas/loures/concelhos-freguesias",
+    "Contagem": "241"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Lourinhã",
+    "Tipo": "Município",
+    "Texto": "Lourinhã",
+    "URL": "https://www.idealista.pt/arrendar-casas/lourinha/concelhos-freguesias",
+    "Contagem": "67"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Mafra",
+    "Tipo": "Município",
+    "Texto": "Mafra",
+    "URL": "https://www.idealista.pt/arrendar-casas/mafra/concelhos-freguesias",
+    "Contagem": "310"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Odivelas",
+    "Tipo": "Município",
+    "Texto": "Odivelas",
+    "URL": "https://www.idealista.pt/arrendar-casas/odivelas/concelhos-freguesias",
+    "Contagem": "217"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Oeiras",
+    "Tipo": "Município",
+    "Texto": "Oeiras",
+    "URL": "https://www.idealista.pt/arrendar-casas/oeiras/concelhos-freguesias",
+    "Contagem": "558"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Sintra",
+    "Tipo": "Município",
+    "Texto": "Sintra",
+    "URL": "https://www.idealista.pt/arrendar-casas/sintra/concelhos-freguesias",
+    "Contagem": "464"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Sobral de Monte Agraço",
+    "Tipo": "Município",
+    "Texto": "Sobral de Monte Agraço",
+    "URL": "https://www.idealista.pt/arrendar-casas/sobral-de-monte-agraco/concelhos-freguesias",
+    "Contagem": "6"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Torres Vedras",
+    "Tipo": "Município",
+    "Texto": "Torres Vedras",
+    "URL": "https://www.idealista.pt/arrendar-casas/torres-vedras/concelhos-freguesias",
+    "Contagem": "88"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Lisboa",
+    "Município": "Vila Franca de Xira",
+    "Tipo": "Município",
+    "Texto": "Vila Franca de Xira",
+    "URL": "https://www.idealista.pt/arrendar-casas/vila-franca-de-xira/concelhos-freguesias",
+    "Contagem": "95"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Amarante",
+    "Tipo": "Município",
+    "Texto": "Amarante",
+    "URL": "https://www.idealista.pt/arrendar-casas/amarante/concelhos-freguesias",
+    "Contagem": "12"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Baião",
+    "Tipo": "Município",
+    "Texto": "Baião",
+    "URL": "https://www.idealista.pt/arrendar-casas/baiao/concelhos-freguesias",
+    "Contagem": "13"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Felgueiras",
+    "Tipo": "Município",
+    "Texto": "Felgueiras",
+    "URL": "https://www.idealista.pt/arrendar-casas/felgueiras/concelhos-freguesias",
+    "Contagem": "8"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Gondomar",
+    "Tipo": "Município",
+    "Texto": "Gondomar",
+    "URL": "https://www.idealista.pt/arrendar-casas/gondomar/concelhos-freguesias",
+    "Contagem": "80"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Lousada",
+    "Tipo": "Município",
+    "Texto": "Lousada",
+    "URL": "https://www.idealista.pt/arrendar-casas/lousada/concelhos-freguesias",
+    "Contagem": "8"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Maia",
+    "Tipo": "Município",
+    "Texto": "Maia",
+    "URL": "https://www.idealista.pt/arrendar-casas/maia/concelhos-freguesias",
+    "Contagem": "171"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Marco de Canaveses",
+    "Tipo": "Município",
+    "Texto": "Marco de Canaveses",
+    "URL": "https://www.idealista.pt/arrendar-casas/marco-de-canaveses/concelhos-freguesias",
+    "Contagem": "12"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Matosinhos",
+    "Tipo": "Município",
+    "Texto": "Matosinhos",
+    "URL": "https://www.idealista.pt/arrendar-casas/matosinhos/concelhos-freguesias",
+    "Contagem": "575"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Paços de Ferreira",
+    "Tipo": "Município",
+    "Texto": "Paços de Ferreira",
+    "URL": "https://www.idealista.pt/arrendar-casas/pacos-de-ferreira/concelhos-freguesias",
+    "Contagem": "8"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Paredes",
+    "Tipo": "Município",
+    "Texto": "Paredes",
+    "URL": "https://www.idealista.pt/arrendar-casas/paredes/concelhos-freguesias",
+    "Contagem": "13"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Penafiel",
+    "Tipo": "Município",
+    "Texto": "Penafiel",
+    "URL": "https://www.idealista.pt/arrendar-casas/penafiel/concelhos-freguesias",
+    "Contagem": "11"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Porto",
+    "Tipo": "Município",
+    "Texto": "Porto",
+    "URL": "https://www.idealista.pt/arrendar-casas/porto/concelhos-freguesias",
+    "Contagem": "2.675"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Póvoa de Varzim",
+    "Tipo": "Município",
+    "Texto": "Póvoa de Varzim",
+    "URL": "https://www.idealista.pt/arrendar-casas/povoa-de-varzim/concelhos-freguesias",
+    "Contagem": "90"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Santo Tirso",
+    "Tipo": "Município",
+    "Texto": "Santo Tirso",
+    "URL": "https://www.idealista.pt/arrendar-casas/santo-tirso/concelhos-freguesias",
+    "Contagem": "18"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Trofa",
+    "Tipo": "Município",
+    "Texto": "Trofa",
+    "URL": "https://www.idealista.pt/arrendar-casas/trofa/concelhos-freguesias",
+    "Contagem": "15"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Valongo",
+    "Tipo": "Município",
+    "Texto": "Valongo",
+    "URL": "https://www.idealista.pt/arrendar-casas/valongo/concelhos-freguesias",
+    "Contagem": "35"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Vila do Conde",
+    "Tipo": "Município",
+    "Texto": "Vila do Conde",
+    "URL": "https://www.idealista.pt/arrendar-casas/vila-do-conde/concelhos-freguesias",
+    "Contagem": "80"
+  },
+  {
+    "Região": null,
+    "Sub-região": "Porto",
+    "Município": "Vila Nova de Gaia",
+    "Tipo": "Município",
+    "Texto": "Vila Nova de Gaia",
+    "URL": "https://www.idealista.pt/arrendar-casas/vila-nova-de-gaia/concelhos-freguesias",
+    "Contagem": "722"
   }
 ]

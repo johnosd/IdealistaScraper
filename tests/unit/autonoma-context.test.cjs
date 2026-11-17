@@ -25,6 +25,31 @@ test('006 FR-026: coordenador recusa chaves extras no contexto e normaliza valor
   assert.deepEqual(view.items[0].context,{'Região':'Norte','Sub-região':null,'Município':null});
 });
 
+test('006 R4/FR-027: arquivo grava Freguesia da entrada ou do título validado pela fila; senão null',async()=>{
+  const ctx={'Região':null,'Sub-região':'Braga','Município':'Braga'};
+  const f=fixture({discover:async input=>({source:structuredClone(input),items:[
+    {nome:'Braga',url:url('braga'),quantidade:null,context:ctx},
+    {nome:'Gualtar',url:url('gualtar'),quantidade:null,context:ctx,freguesia:'Gualtar'}]}),
+    response:async input=>({status:200,listing:true,finalUrl:input.url,nextUrl:null,records:input.url===url('braga')
+      ?[{id:'1',Titulo:'Apartamento T1, Gualtar'},{id:'2',Titulo:'Moradia, Rua Inventada'}]
+      :[{id:'3',Titulo:'Apartamento T2, São Victor'}]})});
+  const service=f.service(),start=await service.start({commandId:'freg',source:f.source,useProxy:false,owner:'runner'});
+  await service.runQueue({id:start.id,owner:'runner'});
+  assert.deepEqual(f.writes[0].records.map(r=>r.Freguesia),['Gualtar',null]);
+  assert.deepEqual(f.writes[1].records.map(r=>r.Freguesia),['Gualtar'],'entrada do tipo Freguesia prevalece sobre o título');
+  assert.equal(f.writes[0].records[0].Titulo,'Apartamento T1, Gualtar');
+});
+
+test('006 R-020: fila preparada leva as freguesias lidas nos distritos e o arquivo grava a Freguesia validada por distrito',async()=>{
+  const f=fixture({discover:async input=>({source:structuredClone(input),items:[
+    {nome:'Braga',url:url('braga-distrito'),quantidade:null,context:{'Região':'Norte','Sub-região':'Braga','Município':null}}]}),
+    response:async input=>({status:200,listing:true,finalUrl:input.url,nextUrl:null,records:[{id:'1',Titulo:'T2, Gualtar'},{id:'2',Titulo:'T1, Sé'},{id:'3',Titulo:'T3, Rua X'}]})});
+  const service=f.service();
+  const start=await service.start({commandId:'fregsrc',source:{linksSessionId:'links-1',url:'https://www.idealista.pt/arrendar-casas/',freguesias:[['Gualtar','Braga'],['Sé','Évora']]},useProxy:false,owner:'runner'});
+  await service.runQueue({id:start.id,owner:'runner'});
+  assert.deepEqual(f.writes[0].records.map(r=>r.Freguesia),['Gualtar',null,null],'Sé é de Évora, não de Braga');
+});
+
 test('006 D4: fila preparada inicia sem aba de origem; página comum continua exigindo tabId',async()=>{
   const f=fixture({discover:async input=>({source:structuredClone(input),items:[{nome:'A',url:url('a'),quantidade:null}]})});
   const service=f.service();

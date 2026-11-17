@@ -2,28 +2,19 @@
 const KEY='linksLaunch:005';
 const {REASONS}=require('./coleta-labels');
 const NATIONAL={url:'https://www.idealista.pt/arrendar-casas/#municipality-search',nome:'Localidades principais',current:false};
-// 006 D7/FR-028: a página atual é a origem quando tem lista de localidades reconhecível pelo caminho
-// (raiz de arrendamento ou …/concelhos-freguesias); senão, a página nacional.
-function chooseLinksOrigin(value){
-  let url;try{url=new URL(value);}catch{return {...NATIONAL};}
-  if(url.protocol!=='https:'||!(url.hostname==='idealista.pt'||url.hostname.endsWith('.idealista.pt'))||url.username||url.password||url.port)return {...NATIONAL};
-  const path=url.pathname.replace(/\/+$/,'/');
-  if(path==='/arrendar-casas/')return {...NATIONAL};
-  if(/^\/arrendar-casas\/[a-z0-9-]+(?:\/[a-z0-9-]+)?\/concelhos-freguesias\/?$/.test(url.pathname)){
-    const slug=url.pathname.split('/').filter(Boolean)[1];
-    return {url:url.origin+url.pathname,nome:slug.replace(/-distrito$/,'').replace(/-/g,' ').replace(/\b\p{L}/gu,c=>c.toUpperCase()),current:true};
-  }
-  return {...NATIONAL};
-}
+// 006 D7/FR-028 (correção do usuário): os Links sempre abrem e coletam a página nacional, a base completa
+// (regiões, sub-regiões e municípios), independentemente da página em que o usuário está.
+function chooseLinksOrigin(){return {...NATIONAL};}
 const PREPARED='lote:prepared';
 // 006 FR-008/D4: links concluídos viram a fila preparada do Lote (uma entrada por listagem derivada).
 async function prepareBatchFromLinks(api,view,now=Date.now){
   if(!view?.id||!['awaiting-save','saved'].includes(view.state))return null;
   const current=(await api.storage.local.get([PREPARED]))[PREPARED];
   if(current?.linksSessionId===view.id)return current;
-  const {buildBatchQueue}=require('./lote-queue');
-  const queue=buildBatchQueue(view.checkpoint?.records||[]);
-  const prepared={linksSessionId:view.id,createdAt:now(),origin:{url:view.items?.[0]?.url||null,nome:view.items?.[0]?.nome||null},
+  // 006 D16/FR-029: fila de cobertura (distritos/ilhas; grandes expandidos pelos concelhos), sem duplicar listagens.
+  const {planCoverageQueue}=require('./lote-queue');
+  const queue=planCoverageQueue(view.checkpoint?.records||[]);
+  const prepared={linksSessionId:view.id,createdAt:now(),origin:{url:view.items?.[0]?.url||null,nome:view.items?.[0]?.nome||null},summary:queue.summary,freguesias:queue.freguesias,
     entries:queue.entries,rejected:queue.rejected.map(r=>({url:typeof r.record?.URL==='string'?r.record.URL:null,reason:r.reason}))};
   await api.storage.local.set({[PREPARED]:prepared});return prepared;
 }
@@ -33,7 +24,7 @@ function createLinksCollection({api,runtime,settings=null,now=Date.now}){
  async function controller(launch,exportOnly=false){try{const tab=await api.tabs.get(launch.tabId),url=tab.pendingUrl||tab.url;return url===base||url?.startsWith(base+'?')||!exportOnly&&url?.startsWith(runner+'?links=')?tab:null;}catch{return null;}}
  async function session(launch){
   const rows=(await coordinator.list()).filter(s=>s.mode==='links'&&!s.autonomous);
-  return rows.findLast(s=>String(s.owner)===String(launch?.tabId))||(!launch?rows.at(-1):launch.error&&!launch.failure?rows.findLast(s=>['paused','blocked','interrupted'].includes(s.state)):null);
+  return rows.findLast(s=>String(s.owner)===String(launch?.tabId)||launch?.resumeId&&s.id===launch.resumeId)||(!launch?rows.at(-1):launch.error&&!launch.failure?rows.findLast(s=>['paused','blocked','interrupted'].includes(s.state)):null);
  }
  function ownsLaunch(launch,sender){return launch&&sender.tab?.id===launch.tabId&&new URL(sender.url).pathname==='/runner.html';}
  async function showExistingPage(row){
@@ -46,17 +37,23 @@ function createLinksCollection({api,runtime,settings=null,now=Date.now}){
   if(action==='LINKS_START'){
    if(await runtime.busy())return {status:'busy'};
    const existing=await session(launch);
-   if(existing&&['paused','blocked','interrupted','cancelled'].includes(existing.state)){await showExistingPage(existing);return {status:'attention',id:existing.id,reason:existing.reason};}
-   if(payload.accessConfirmed===true){const confirmed=await coordinator.confirmDomainAccess({confirmed:true});if(confirmed.status!=='ready')return confirmed;}
-   if(launch&&!existing&&!launch.error&&now()-launch.createdAt<120000&&await controller(launch))return {status:'accepted'};
-   const next={token:crypto.randomUUID(),createdAt:now(),consumed:false,origin:chooseLinksOrigin(payload.source?.url)};
+   // 006 (pedido do usuário): coleta de links pausada é retomada aqui mesmo, sem abrir a tela de exportação.
+   let resumeId=null;
+   if(existing&&['paused','blocked','interrupted'].includes(existing.state)){
+    if(launch&&!launch.consumed&&now()-launch.createdAt<120000&&await controller(launch))return {status:'accepted',id:existing.id};
+    if(launch?.tabId&&String(launch.tabId)===String(existing.owner)&&await controller(launch))return {status:'attention',id:existing.id,reason:existing.reason}; // executor vivo aguardando (US5)
+    resumeId=existing.id;
+   }
+   if(payload.accessConfirmed===true&&!resumeId){const confirmed=await coordinator.confirmDomainAccess({confirmed:true});if(confirmed.status!=='ready')return confirmed;}
+   if(!resumeId&&launch&&!existing&&!launch.error&&now()-launch.createdAt<120000&&await controller(launch))return {status:'accepted'};
+   const next={token:crypto.randomUUID(),createdAt:now(),consumed:false,origin:chooseLinksOrigin(),...(resumeId?{resumeId,accessConfirmed:payload.accessConfirmed===true}:{})};
    const tab=await api.tabs.create({url:runner+'?links='+encodeURIComponent(next.token),active:false});
    next.tabId=tab.id;await api.storage.session.set({[KEY]:next});return {status:'accepted'};
   }
   if(action==='LINKS_CLAIM'){
    if(!ownsLaunch(launch,sender)||launch.token!==payload.token||launch.consumed||now()-launch.createdAt>=120000)return {status:'inactive'};
    await api.storage.session.set({[KEY]:{...launch,consumed:true}});
-   try{const useProxy=settings?(await settings.load()).useProxy===true:(await api.storage.local.get(['usarProxy'])).usarProxy==='true';return {status:'ready',useProxy,origin:launch.origin||{...NATIONAL}};}
+   try{const useProxy=settings?(await settings.load()).useProxy===true:(await api.storage.local.get(['usarProxy'])).usarProxy==='true';return {status:'ready',useProxy,origin:launch.origin||{...NATIONAL},...(launch.resumeId?{resumeId:launch.resumeId,accessConfirmed:launch.accessConfirmed===true}:{})};}
    catch{await api.storage.session.set({[KEY]:{...launch,consumed:true,error:true,failure:{reason:'settings_unavailable',stage:'settings'}}});return {status:'failed',reason:'settings_unavailable'};}
   }
   if(action==='LINKS_FAILED'){
@@ -89,7 +86,11 @@ function createLinksCollection({api,runtime,settings=null,now=Date.now}){
    const eligibility=await coordinator.eligibility(),status=(view.diagnostics||[]).findLast(event=>Number.isInteger(event.status)&&event.status>=100&&event.status<=599)?.status;
    const audit=view.linksAudit||null,origin={url:view.items?.[0]?.url||null,nome:view.items?.[0]?.nome||null};
    let prepared=null;try{prepared=await prepareBatchFromLinks(api,view,now);}catch{}
-   return {id:row.id,state:view.state==='awaiting-save'?'collected':view.state,reason:view.reason,until:eligibility?.until,status,total:view.checkpoint.recordCount,records,origin,audit,prepared:prepared?{entries:prepared.entries.length,rejected:prepared.rejected.length}:null};
+   // 006 US5/AC4: executor vivo aguardando o prazo para verificar de novo sozinho.
+   const auto=['blocked','paused'].includes(view.state)&&['access_blocked','rate_limit'].includes(view.reason)&&String(launch?.tabId)===String(row.owner)&&!!await controller(launch);
+   return {id:row.id,state:view.state==='awaiting-save'?'collected':view.state,reason:view.reason,until:eligibility?.until,status,total:view.checkpoint.recordCount,records,origin,audit,auto,prepared:prepared?{entries:prepared.entries.length,rejected:prepared.rejected.length,summary:prepared.summary||null,
+     // 006 (pedido do usuário): a aba Links mostra a mesma fila final do Lote, com o caminho completo.
+     queue:prepared.entries.slice(0,1000).map(e=>({path:e.path||e.nome,url:e.url}))}:null};
   }
   if(action==='LINKS_EXPORT'||action==='LINKS_DETAILS'){
    if(!row){if(action==='LINKS_EXPORT')return {status:'missing'};await api.tabs.create({url:base,active:true});return {status:'opened'};}

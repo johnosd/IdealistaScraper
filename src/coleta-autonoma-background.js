@@ -19,9 +19,12 @@ function installAutonomousBackground(api,{runtime,proxy,settings=null,directory=
   }
   async function cleanupDead(){
     for(const row of await coordinator.list()){
-      if(!['running','waiting','awaiting-save','discovering'].includes(row.state)||launching.has(row.id))continue;
+      if(launching.has(row.id))continue;
       const s=await coordinator.metadata({id:row.id});
       if(s.schemaVersion!==2)continue;
+      // 006 T074: sessão parada (ex.: limite por hora) ainda marcada com executor vivo também é verificada —
+      // executor encerrado (extensão recarregada, aba fechada) não pode deixar o painel preso em "Pausando…".
+      if(!['running','waiting','awaiting-save','discovering'].includes(s.state)&&!(s.runnerLive&&!['saved','discarded','completed'].includes(s.state)))continue;
       let alive=false;
       if(s.runId===await runId())try{const tab=await api.tabs.get(Number(s.owner));alive=(tab.pendingUrl||tab.url)?.startsWith(api.runtime.getURL('runner.html'));}catch{}
       if(!alive)await runtime.recoverAutonomous(s.id);
@@ -96,7 +99,9 @@ function installAutonomousBackground(api,{runtime,proxy,settings=null,directory=
         // 006 D4: fila preparada pelos Links; origem = coleta de links, sem exigir a aba original.
         const prepared=(await api.storage.local.get(['lote:prepared']))['lote:prepared'];
         if(!prepared?.linksSessionId||!Array.isArray(prepared.entries)||!prepared.entries.length)return {status:'interrupted',reason:'prepared_missing'};
-        source={linksSessionId:prepared.linksSessionId,url:prepared.origin?.url||prepared.entries[0].url};
+        // R-020: freguesias por distrito (lista de validação da Freguesia), até 5.000 pares curtos.
+        const freguesias=(Array.isArray(prepared.freguesias)?prepared.freguesias:[]).filter(p=>Array.isArray(p)&&p.length===2&&p.every(v=>typeof v==='string'&&v.length<=200)).slice(0,5000);
+        source={linksSessionId:prepared.linksSessionId,url:prepared.origin?.url||prepared.entries[0].url,freguesias};
       }else{
         source=await identifySource(api,payload.source?.tabId);
         if(payload.source?.url&&source.url!==payload.source.url)return {status:'interrupted',reason:'source_changed'};

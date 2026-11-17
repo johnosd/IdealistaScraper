@@ -28,7 +28,7 @@ function waitForCollectionDOM(doc,mode,extractLinks,signal,timeoutMs){
     timer=setTimeout(()=>done(),Math.min(10000,timeoutMs));signal.addEventListener('abort',abort,{once:true});if(signal.aborted)abort();
   });
 }
-function installCollectionExecutor(api, { extractItems, extractLinks, inspectLocalities }) {
+function installCollectionExecutor(api, { extractItems, extractLinks, inspectLocalities, nextExpansionUrl }) {
   if(globalThis.__idealistaCollectionExecutor)return;
   globalThis.__idealistaCollectionExecutor=true;
   let context=null,active=null;
@@ -51,6 +51,9 @@ function installCollectionExecutor(api, { extractItems, extractLinks, inspectLoc
         return context?.sessionId===message.sessionId&&context.epoch===message.epoch?context:{};
       }
       if(message.cmd==='COLETA_ABORT'){active?.abort();return {aborted:true};}
+      // 006 (validação real): documento de desafio ("Just a moment…", "Um momento…") não se vincula à requisição;
+      // só informa o desafio, para o documento real que o próprio site carregar em seguida poder ser validado.
+      if(!message.fetch){const pre=inspectCollectionPage(document);if(pre.challenge){if(active===controller)active=null;return {status:null,finalUrl:location.href,...pre,transientChallenge:/just a moment|um momento/i.test(document.title||''),listing:false,records:[],nextUrl:null};}}
       const mode=await validate(message,message.fetch===true);
       if(controller.signal.aborted)throw new Error('Coleta interrompida');
       const timer=setTimeout(()=>controller.abort(),Math.min(120000,message.timeoutMs||30000));
@@ -69,8 +72,14 @@ function installCollectionExecutor(api, { extractItems, extractLinks, inspectLoc
         const facts=inspectCollectionPage(doc);
         if(mode==='links'){
           // 006 FR-004: contagem visível × coletada, estratégia e excluídos (zonas/vizinhos) da mesma leitura.
-          const view=inspectLocalities?inspectLocalities(doc):{strategy:null,records:extractLinks(),visible:null,excluded:null};const records=view.records;
-          return {status,finalUrl,documentId:context.documentId,...headers,...facts,listing:records.length>0,records,nextUrl:null,linksAudit:{strategy:view.strategy,visible:view.visible,excluded:view.excluded}};
+          const view=inspectLocalities?inspectLocalities(doc):{strategy:null,records:extractLinks(),visible:null,excluded:null};
+          // 006 D16/R-020: páginas de distrito na coleta de links contribuem com concelhos (cobertura dos distritos grandes)
+          // e freguesias (lista de validação da Freguesia); a cadeia visita a página de todos os distritos (limite 0).
+          const records=view.strategy==='distrito'?view.records.filter(r=>r.Tipo==='Município'||r.Tipo==='Freguesia'):view.records;
+          // Página de distrito pedida pela cadeia (…/concelhos-freguesias): áreas pequenas redirecionam para a listagem
+          // e não têm lista; isso é normal (nada a acrescentar) e a cadeia segue. A página de origem sem lista continua erro.
+          let expansionPage=false;try{expansionPage=/\/concelhos-freguesias\/?$/.test(new URL(message.url).pathname);}catch{}
+          return {status,finalUrl,documentId:context.documentId,...headers,...facts,listing:records.length>0||expansionPage&&!facts.challenge&&!facts.login,records,nextUrl:nextExpansionUrl?nextExpansionUrl(doc,0,message.url):null,linksAudit:{strategy:view.strategy,visible:view.visible,excluded:view.excluded}};
         }
         const output=extractItems(doc,finalUrl);
         if(!facts.listing&&!facts.challenge&&!facts.login){

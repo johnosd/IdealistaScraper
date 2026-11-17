@@ -29,7 +29,7 @@
 - Contornar desafios/CAPTCHA, resolver verificações automaticamente, ignorar esperas ou rotacionar IP.
 - Subdividir automaticamente uma listagem truncada em listagens menores; ela é apenas sinalizada.
 - Coletar detalhes internos de cada anúncio, alterar ou remover campos existentes dos arquivos, destinos convencionados ou regras de substituição. A única mudança de schema permitida é o acréscimo dos campos opcionais de contexto da US7.
-- Expandir automaticamente a fila para o nível de município a partir de distritos/sub-regiões.
+- Expandir automaticamente a fila para o nível de município, **exceto** a expansão dos distritos acima do limite do site pelos seus concelhos (FR-029, decisão do usuário 2026-11-16).
 - Rodar com o Chrome fechado ou reiniciar a coleta sozinho ao abrir o navegador.
 - Redesenhar o painel, as abas ou a tela de Configurações da 005, além do necessário para cumprir os requisitos abaixo.
 - Tornar o proxy obrigatório ou fazer a extensão ler o arquivo `.env`; o proxy continua opcional e configurado em Configurações.
@@ -208,7 +208,9 @@ Como usuário, quero que cada anúncio gravado traga a região, sub-região, mun
 - **FR-025**: Se a validação real com a extensão instalada não puder ser executada, o sistema DEVE registrar o motivo como pendência e a feature NÃO DEVE ser declarada aceita.
 - **FR-026**: Cada anúncio gravado DEVE receber campos aditivos e opcionais de contexto da entrada (`Região`, `Sub-região`, `Município`), com `null` quando o nível não se aplica; os campos existentes NÃO DEVEM mudar de nome, tipo ou conteúdo.
 - **FR-027**: O anúncio DEVE receber `Freguesia` somente quando a inspeção da listagem real demonstrar uma fonte confiável para ela; caso contrário o campo fica `null` e o relatório registra o motivo, sem inferência por texto livre não comprovada.
-- **FR-028**: A coleta de links DEVE usar a página do Idealista em que o usuário está quando ela tiver lista de localidades reconhecível; nos demais casos DEVE usar a página nacional de arrendamento, informando a origem usada.
+- **FR-029**: A fila preparada a partir dos Links DEVE cobrir a base sem duplicar listagens. A unidade é o distrito/ilha (sub-região); regiões e municípios destacados contidos num distrito NÃO DEVEM virar entradas. Distritos cuja contagem exceda o limite de paginação do site (1.800 anúncios) DEVEM ser substituídos pelos seus concelhos, lidos da página `…/<distrito>/concelhos-freguesias`, visitada na própria coleta de links com o mesmo ritmo e as mesmas proteções. Se essa página não puder ser lida, o distrito entra inteiro (sinalizado como limitado).
+- **FR-030**: Cada entrada da fila DEVE exibir o caminho completo (ex.: `Alentejo › Beja`, `Área Metropolitana de Lisboa › Lisboa › Sintra`).
+- **FR-028**: A coleta de links DEVE sempre abrir e coletar a página nacional de arrendamento (`…/arrendar-casas/#municipality-search`), independentemente da página em que o usuário está, informando a origem usada. (Correção do usuário, 2026-11-16, substitui a versão que usava a página atual.)
 
 ### Key Entities *(include if feature involves data)*
 
@@ -269,4 +271,6 @@ Como usuário, quero que cada anúncio gravado traga a região, sub-região, mun
 - Evidência (Analyze A-01, 2026-11-16): Chromium automatizado sem perfil recebeu HTTP 403 com título "Um momento…" nas páginas de Braga, Faro e Açores. A inspeção real exige o Chrome do usuário. A derivação sem `/concelhos-freguesias` só afeta sub-regiões (distritos/ilhas), o mesmo tipo do exemplo de Braga confirmado pelo usuário.
 - Q (execução, após inspeção real): o que coletar na página de distrito (14 concelhos, 134 freguesias, 15 zonas, 3 vizinhos)? → A: Concelhos + freguesias. Zonas e vizinhos ficam fora, mas são contados.
 - Q (execução, R4): como preencher Freguesia, se o anúncio só a traz no fim do título? → A: Nome da entrada quando ela é freguesia; senão, o sufixo do título apenas se coincidir exatamente com uma freguesia conhecida da fila coletada; caso contrário `null`.
-- Decisão do plano (sem pergunta): o botão de links usa a página atual do usuário quando ela tiver lista de localidades; senão, a página nacional (FR-028). Antes ele usava sempre a página nacional fixa.
+- Decisão do plano (sem pergunta): o botão de links usa a página atual do usuário quando ela tiver lista de localidades; senão, a página nacional (FR-028). Antes ele usava sempre a página nacional fixa. **Revogada** pela correção abaixo.
+- Q (validação real, 2026-11-16): o usuário propôs pegar só o último nível para não duplicar (ex.: `Alentejo|Beja|Vila Nova de Milfontes`). O app explicou que os municípios da página nacional são só destaques (Beja mostra apenas Milfontes), então o último nível literal perderia anúncios. Qual unidade usar? → A: Distritos/ilhas como unidade; distritos acima de 1.800 anúncios expandidos pelos concelhos da página do distrito (FR-029). Lista com caminho completo (FR-030). Revoga "uma entrada por link" para a fila vinda dos Links.
+- Correção do usuário (validação real, 2026-11-16): ao clicar em "Coletar links de localidades", o app DEVE abrir `https://www.idealista.pt/arrendar-casas/#municipality-search` e coletar os links dessa página, que é a base completa (regiões, sub-regiões e municípios). A página de distrito não é a origem dos Links; o extrator de distrito continua disponível apenas para iniciar o Lote diretamente numa página de distrito.

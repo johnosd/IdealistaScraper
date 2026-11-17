@@ -1,0 +1,602 @@
+- generic [ref=f99e1]:
+  - link "Saltar para o conteúdo principal" [ref=f99e2] [cursor=pointer]:
+    - /url: "#wrapper"
+  - banner [ref=f99e4]:
+    - generic [ref=f99e5]:
+      - generic [ref=f99e6]:
+        - link [ref=f99e7] [cursor=pointer]:
+          - /url: https://www.idealista.pt/
+          - img "Idealista logo" [ref=f99e9]
+        - generic [ref=f99e11]:
+          - button "Proprietários" [ref=f99e14] [cursor=pointer]
+          - button "Procuras casa" [ref=f99e18] [cursor=pointer]
+          - button "Crédito habitação" [ref=f99e22] [cursor=pointer]
+      - generic [ref=f99e24]:
+        - link "Publica o teu anúncio" [ref=f99e25] [cursor=pointer]:
+          - /url: https://www.idealista.pt/info/novo-anuncio
+        - combobox "Português" [ref=f99e28] [cursor=pointer]
+        - link "Aceder" [ref=f99e32] [cursor=pointer]:
+          - /url: https://www.idealista.pt/login
+  - navigation "Navegação por localização" [ref=f99e36]:
+    - list [ref=f99e37]:
+      - listitem [ref=f99e38]:
+        - link "idealista" [ref=f99e39] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=f99e40]:
+        - text: 
+        - button "Faro distrito " [ref=f99e41] [cursor=pointer]
+        - text: 
+        - generic [ref=f99e42]: "2.394"
+  - generic [ref=f99e46]:
+    - generic [ref=f99e47]:
+      - heading "Anúncios de casas e apartamentos para arrendar em Faro distrito" [level=1] [ref=f99e48]
+      - link "Ver 2.394 casas e apartamentos em Faro" [ref=f99e49] [cursor=pointer]:
+        - /url: /arrendar-casas/faro-distrito/
+    - generic [ref=f99e50]:
+      - generic [ref=f99e51]:
+        - heading "Procurar por mapa" [level=2] [ref=f99e52]
+        - link "Procurar por mapa" [ref=f99e53] [cursor=pointer]:
+          - /url: /arrendar-casas/faro-distrito/mapa
+      - generic [ref=f99e54]:
+        - heading "Imobiliárias em Faro distrito" [level=2] [ref=f99e55]
+        - link "Imobiliárias em Faro distrito" [ref=f99e56] [cursor=pointer]:
+          - /url: /agencias-imobiliarias/faro-distrito/imobiliarias-arrendamento
+    - generic [ref=f99e57]:
+      - list [ref=f99e58]:
+        - listitem [ref=f99e59]:
+          - strong [ref=f99e60]: A
+          - list [ref=f99e61]:
+            - listitem [ref=f99e62]:
+              - generic [ref=f99e63]: "182"
+              - link "Albufeira e Olhos de Água" [ref=f99e64] [cursor=pointer]:
+                - /url: /arrendar-casas/albufeira/albufeira-e-olhos-de-agua/
+            - listitem [ref=f99e65]:
+              - generic [ref=f99e66]: "24"
+              - link "Alcantarilha" [ref=f99e67] [cursor=pointer]:
+                - /url: /arrendar-casas/silves/alcantarilha/
+            - listitem [ref=f99e68]:
+              - generic [ref=f99e69]: "2"
+              - link "Alcoutim e Pereiro" [ref=f99e70] [cursor=pointer]:
+                - /url: /arrendar-casas/alcoutim/alcoutim-e-pereiro/
+            - listitem [ref=f99e71]:
+              - generic [ref=f99e72]: "6"
+              - link "Algoz" [ref=f99e73] [cursor=pointer]:
+                - /url: /arrendar-casas/silves/algoz/
+            - listitem [ref=f99e74]:
+              - generic [ref=f99e75]: "36"
+              - link "Aljezur" [ref=f99e76] [cursor=pointer]:
+                - /url: /arrendar-casas/aljezur/aljezur/
+            - listitem [ref=f99e77]:
+              - generic [ref=f99e78]: "113"
+              - link "Almancil" [ref=f99e79] [cursor=pointer]:
+                - /url: /arrendar-casas/loule/almancil/
+            - listitem [ref=f99e80]:
+              - generic [ref=f99e81]: "1"
+              - link "Alte" [ref=f99e82] [cursor=pointer]:
+                - /url: /arrendar-casas/loule/alte/
+            - listitem [ref=f99e83]:
+              - generic [ref=f99e84]: "20"
+              - link "Altura" [ref=f99e85] [cursor=pointer]:
+                - /url: /arrendar-casas/castro-marim/altura/
+            - listitem [ref=f99e86]:
+              - generic [ref=f99e87]: "53"
+              - link "Alvor" [ref=f99e88] [cursor=pointer]:
+                - /url: /arrendar-casas/portimao/alvor/
+            - listitem [ref=f99e89]:
+              - generic [ref=f99e90]: "61"
+              - link "Armação de Pêra" [ref=f99e91] [cursor=pointer]:
+                - /url: /arrendar-casas/silves/armacao-de-pera/
+        - listitem [ref=f99e92]:
+          - strong [ref=f99e93]: B
+          - list [ref=f99e94]:
+            - listitem [ref=f99e95]:
+              - generic [ref=f99e96]: "2"
+              - link "Barão de São João" [ref=f99e97] [cursor=pointer]:
+                - /url: /arrendar-casas/lagos/barao-de-sao-joao/
+            - listitem [ref=f99e98]:
+              - generic [ref=f99e99]: "2"
+              - link "Bensafrim" [ref=f99e100] [cursor=pointer]:
+                - /url: /arrendar-casas/lagos/bensafrim/
+            - listitem [ref=f99e101]:
+              - generic [ref=f99e102]: "17"
+              - link "Boliqueime" [ref=f99e103] [cursor=pointer]:
+                - /url: /arrendar-casas/loule/boliqueime/
+            - listitem [ref=f99e104]:
+              - generic [ref=f99e105]: "8"
+              - link "Bordeira" [ref=f99e106] [cursor=pointer]:
+                - /url: /arrendar-casas/aljezur/bordeira/
+            - listitem [ref=f99e107]:
+              - generic [ref=f99e108]: "13"
+              - link "Budens" [ref=f99e109] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-do-bispo/budens/
+        - listitem [ref=f99e110]:
+          - strong [ref=f99e111]: C
+          - list [ref=f99e112]:
+            - listitem [ref=f99e113]:
+              - generic [ref=f99e114]: "61"
+              - link "Cabanas de Tavira" [ref=f99e115] [cursor=pointer]:
+                - /url: /arrendar-casas/tavira/cabanas-de-tavira/
+            - listitem [ref=f99e116]:
+              - generic [ref=f99e117]: "12"
+              - link "Castro Marim" [ref=f99e118] [cursor=pointer]:
+                - /url: /arrendar-casas/castro-marim/castro-marim/
+            - listitem [ref=f99e119]:
+              - generic [ref=f99e120]: "3"
+              - link "Conceição" [ref=f99e121] [cursor=pointer]:
+                - /url: /arrendar-casas/faro/conceicao/
+            - listitem [ref=f99e122]:
+              - generic [ref=f99e123]: "32"
+              - link "Conceição" [ref=f99e124] [cursor=pointer]:
+                - /url: /arrendar-casas/tavira/conceicao/
+        - listitem [ref=f99e125]:
+          - strong [ref=f99e126]: E
+          - list [ref=f99e127]:
+            - listitem [ref=f99e128]:
+              - generic [ref=f99e129]: "11"
+              - link "Estoi" [ref=f99e130] [cursor=pointer]:
+                - /url: /arrendar-casas/faro/estoi/
+            - listitem [ref=f99e131]:
+              - generic [ref=f99e132]: "13"
+              - link "Estômbar e Parchal" [ref=f99e133] [cursor=pointer]:
+                - /url: /arrendar-casas/lagoa-algarve/estombar-e-parchal/
+        - listitem [ref=f99e134]:
+          - strong [ref=f99e135]: F
+          - list [ref=f99e136]:
+            - listitem [ref=f99e137]:
+              - generic [ref=f99e138]: "109"
+              - link "Faro" [ref=f99e139] [cursor=pointer]:
+                - /url: /arrendar-casas/faro/faro/
+            - listitem [ref=f99e140]:
+              - generic [ref=f99e141]: "15"
+              - link "Ferragudo" [ref=f99e142] [cursor=pointer]:
+                - /url: /arrendar-casas/lagoa-algarve/ferragudo/
+            - listitem [ref=f99e143]:
+              - generic [ref=f99e144]: "7"
+              - link "Ferreiras" [ref=f99e145] [cursor=pointer]:
+                - /url: /arrendar-casas/albufeira/ferreiras/
+            - listitem [ref=f99e146]:
+              - generic [ref=f99e147]: "9"
+              - link "Fuseta" [ref=f99e148] [cursor=pointer]:
+                - /url: /arrendar-casas/olhao/fuseta/
+        - listitem [ref=f99e149]:
+          - strong [ref=f99e150]: G
+          - list [ref=f99e151]:
+            - listitem [ref=f99e152]:
+              - generic [ref=f99e153]: "29"
+              - link "Guia" [ref=f99e154] [cursor=pointer]:
+                - /url: /arrendar-casas/albufeira/guia/
+        - listitem [ref=f99e155]:
+          - strong [ref=f99e156]: L
+          - list [ref=f99e157]:
+            - listitem [ref=f99e158]:
+              - generic [ref=f99e159]: "38"
+              - link "Lagoa e Carvoeiro" [ref=f99e160] [cursor=pointer]:
+                - /url: /arrendar-casas/lagoa-algarve/lagoa-e-carvoeiro/
+            - listitem [ref=f99e161]:
+              - generic [ref=f99e162]: "129"
+              - link "Lagos" [ref=f99e163] [cursor=pointer]:
+                - /url: /arrendar-casas/lagos/lagos/
+            - listitem [ref=f99e164]:
+              - generic [ref=f99e165]: "46"
+              - link "Luz" [ref=f99e166] [cursor=pointer]:
+                - /url: /arrendar-casas/lagos/luz/
+            - listitem [ref=f99e167]:
+              - generic [ref=f99e168]: "12"
+              - link "Luz de Tavira" [ref=f99e169] [cursor=pointer]:
+                - /url: /arrendar-casas/tavira/luz-de-tavira/
+        - listitem [ref=f99e170]:
+          - strong [ref=f99e171]: M
+          - list [ref=f99e172]:
+            - listitem [ref=f99e173]:
+              - generic [ref=f99e174]: "2"
+              - link "Martim Longo" [ref=f99e175] [cursor=pointer]:
+                - /url: /arrendar-casas/alcoutim/martim-longo/
+            - listitem [ref=f99e176]:
+              - generic [ref=f99e177]: "14"
+              - link "Mexilhoeira Grande" [ref=f99e178] [cursor=pointer]:
+                - /url: /arrendar-casas/portimao/mexilhoeira-grande/
+            - listitem [ref=f99e179]:
+              - generic [ref=f99e180]: "22"
+              - link "Moncarapacho" [ref=f99e181] [cursor=pointer]:
+                - /url: /arrendar-casas/olhao/moncarapacho/
+            - listitem [ref=f99e182]:
+              - generic [ref=f99e183]: "5"
+              - link "Monchique" [ref=f99e184] [cursor=pointer]:
+                - /url: /arrendar-casas/monchique/monchique/
+            - listitem [ref=f99e185]:
+              - generic [ref=f99e186]: "77"
+              - link "Monte Gordo" [ref=f99e187] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-real-de-santo-antonio/monte-gordo/
+            - listitem [ref=f99e188]:
+              - generic [ref=f99e189]: "17"
+              - link "Montenegro" [ref=f99e190] [cursor=pointer]:
+                - /url: /arrendar-casas/faro/montenegro/
+        - listitem [ref=f99e191]:
+          - strong [ref=f99e192]: O
+          - list [ref=f99e193]:
+            - listitem [ref=f99e194]:
+              - generic [ref=f99e195]: "5"
+              - link "Odeceixe" [ref=f99e196] [cursor=pointer]:
+                - /url: /arrendar-casas/aljezur/odeceixe/
+            - listitem [ref=f99e197]:
+              - generic [ref=f99e198]: "2"
+              - link "Odeleite" [ref=f99e199] [cursor=pointer]:
+                - /url: /arrendar-casas/castro-marim/odeleite/
+            - listitem [ref=f99e200]:
+              - generic [ref=f99e201]: "6"
+              - link "Odiáxere" [ref=f99e202] [cursor=pointer]:
+                - /url: /arrendar-casas/lagos/odiaxere/
+            - listitem [ref=f99e203]:
+              - generic [ref=f99e204]: "30"
+              - link "Olhão" [ref=f99e205] [cursor=pointer]:
+                - /url: /arrendar-casas/olhao/olhao/
+        - listitem [ref=f99e206]:
+          - strong [ref=f99e207]: P
+          - list [ref=f99e208]:
+            - listitem [ref=f99e209]:
+              - generic [ref=f99e210]: "6"
+              - link "Paderne" [ref=f99e211] [cursor=pointer]:
+                - /url: /arrendar-casas/albufeira/paderne/
+            - listitem [ref=f99e212]:
+              - generic [ref=f99e213]: "5"
+              - link "Pechão" [ref=f99e214] [cursor=pointer]:
+                - /url: /arrendar-casas/olhao/pechao/
+            - listitem [ref=f99e215]:
+              - generic [ref=f99e216]: "7"
+              - link "Pêra" [ref=f99e217] [cursor=pointer]:
+                - /url: /arrendar-casas/silves/pera/
+            - listitem [ref=f99e218]:
+              - generic [ref=f99e219]: "19"
+              - link "Porches" [ref=f99e220] [cursor=pointer]:
+                - /url: /arrendar-casas/lagoa-algarve/porches/
+            - listitem [ref=f99e221]:
+              - generic [ref=f99e222]: "291"
+              - link "Portimão" [ref=f99e223] [cursor=pointer]:
+                - /url: /arrendar-casas/portimao/portimao/
+        - listitem [ref=f99e224]:
+          - strong [ref=f99e225]: Q
+          - list [ref=f99e226]:
+            - listitem [ref=f99e227]:
+              - generic [ref=f99e228]: "479"
+              - link "Quarteira" [ref=f99e229] [cursor=pointer]:
+                - /url: /arrendar-casas/loule/quarteira/
+            - listitem [ref=f99e230]:
+              - generic [ref=f99e231]: "11"
+              - link "Quelfes" [ref=f99e232] [cursor=pointer]:
+                - /url: /arrendar-casas/olhao/quelfes/
+            - listitem [ref=f99e233]:
+              - generic [ref=f99e234]: "1"
+              - link "Querença" [ref=f99e235] [cursor=pointer]:
+                - /url: /arrendar-casas/loule/querenca/
+        - listitem [ref=f99e236]:
+          - strong [ref=f99e237]: R
+          - list [ref=f99e238]:
+            - listitem [ref=f99e239]:
+              - generic [ref=f99e240]: "2"
+              - link "Rogil" [ref=f99e241] [cursor=pointer]:
+                - /url: /arrendar-casas/aljezur/rogil/
+        - listitem [ref=f99e242]:
+          - strong [ref=f99e243]: S
+          - list [ref=f99e244]:
+            - listitem [ref=f99e245]:
+              - generic [ref=f99e246]: "7"
+              - link "Sagres" [ref=f99e247] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-do-bispo/sagres/
+            - listitem [ref=f99e248]:
+              - generic [ref=f99e249]: "4"
+              - link "Salir" [ref=f99e250] [cursor=pointer]:
+                - /url: /arrendar-casas/loule/salir/
+            - listitem [ref=f99e251]:
+              - generic [ref=f99e252]: "12"
+              - link "Santa Bárbara de Nexe" [ref=f99e253] [cursor=pointer]:
+                - /url: /arrendar-casas/faro/santa-barbara-de-nexe/
+            - listitem [ref=f99e254]:
+              - generic [ref=f99e255]: "5"
+              - link "Santa Catarina Fonte Bispo" [ref=f99e256] [cursor=pointer]:
+                - /url: /arrendar-casas/tavira/santa-catarina-fonte-bispo/
+            - listitem [ref=f99e257]:
+              - generic [ref=f99e258]: "20"
+              - link "Santa Luzia" [ref=f99e259] [cursor=pointer]:
+                - /url: /arrendar-casas/tavira/santa-luzia/
+            - listitem [ref=f99e260]:
+              - generic [ref=f99e261]: "5"
+              - link "Santo Estêvão" [ref=f99e262] [cursor=pointer]:
+                - /url: /arrendar-casas/tavira/santo-estevao/
+            - listitem [ref=f99e263]:
+              - generic [ref=f99e264]: "10"
+              - link "São Bartolomeu de Messines" [ref=f99e265] [cursor=pointer]:
+                - /url: /arrendar-casas/silves/sao-bartolomeu-de-messines/
+            - listitem [ref=f99e266]:
+              - generic [ref=f99e267]: "16"
+              - link "São Brás de Alportel" [ref=f99e268] [cursor=pointer]:
+                - /url: /arrendar-casas/sao-bras-de-alportel/sao-bras-de-alportel/
+            - listitem [ref=f99e269]:
+              - generic [ref=f99e270]: "41"
+              - link "São Clemente" [ref=f99e271] [cursor=pointer]:
+                - /url: /arrendar-casas/loule/sao-clemente/
+            - listitem [ref=f99e272]:
+              - generic [ref=f99e273]: "17"
+              - link "São Sebastião" [ref=f99e274] [cursor=pointer]:
+                - /url: /arrendar-casas/loule/sao-sebastiao/
+            - listitem [ref=f99e275]:
+              - generic [ref=f99e276]: "15"
+              - link "Silves" [ref=f99e277] [cursor=pointer]:
+                - /url: /arrendar-casas/silves/silves/
+        - listitem [ref=f99e278]:
+          - strong [ref=f99e279]: T
+          - list [ref=f99e280]:
+            - listitem [ref=f99e281]:
+              - generic [ref=f99e282]: "87"
+              - link "Tavira" [ref=f99e283] [cursor=pointer]:
+                - /url: /arrendar-casas/tavira/tavira/
+            - listitem [ref=f99e284]:
+              - generic [ref=f99e285]: "1"
+              - link "Tôr" [ref=f99e286] [cursor=pointer]:
+                - /url: /arrendar-casas/loule/tor/
+            - listitem [ref=f99e287]:
+              - generic [ref=f99e288]: "5"
+              - link "Tunes" [ref=f99e289] [cursor=pointer]:
+                - /url: /arrendar-casas/silves/tunes/
+        - listitem [ref=f99e290]:
+          - strong [ref=f99e291]: V
+          - list [ref=f99e292]:
+            - listitem [ref=f99e293]:
+              - generic [ref=f99e294]: "8"
+              - link "Vila do Bispo e Raposeira" [ref=f99e295] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-do-bispo/vila-do-bispo-e-raposeira/
+            - listitem [ref=f99e296]:
+              - generic [ref=f99e297]: "41"
+              - link "Vila Nova de Cacela" [ref=f99e298] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-real-de-santo-antonio/vila-nova-de-cacela/
+            - listitem [ref=f99e299]:
+              - generic [ref=f99e300]: "33"
+              - link "Vila Real de Santo António" [ref=f99e301] [cursor=pointer]:
+                - /url: /arrendar-casas/vila-real-de-santo-antonio/vila-real-de-santo-antonio/
+      - generic [ref=f99e302]:
+        - heading "Zonas de interesse" [level=2] [ref=f99e303]
+        - list [ref=f99e304]:
+          - listitem [ref=f99e305]:
+            - link "Alentejo" [ref=f99e306] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/alentejo/
+          - listitem [ref=f99e307]:
+            - link "Algarve" [ref=f99e308] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/algarve/
+          - listitem [ref=f99e309]:
+            - link "Algarve Central" [ref=f99e310] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/algarve-central/
+          - listitem [ref=f99e311]:
+            - link "Bemposta" [ref=f99e312] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/bemposta/
+          - listitem [ref=f99e313]:
+            - link "Costa do Algarve" [ref=f99e314] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/costa-do-algarve/
+          - listitem [ref=f99e315]:
+            - link "Estádio do S.C.O." [ref=f99e316] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/estadio-do-s-c-o/
+          - listitem [ref=f99e317]:
+            - link "Estádio Municipal de Olhão" [ref=f99e318] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/estadio-municipal-de-olhao/
+          - listitem [ref=f99e319]:
+            - link "HTA Helicópteros" [ref=f99e320] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/hta-helicopteros/
+          - listitem [ref=f99e321]:
+            - link "Parque Ribeirinho de Faro" [ref=f99e322] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/parque-ribeirinho-de-faro/
+          - listitem [ref=f99e323]:
+            - link "Ria de Alvor" [ref=f99e324] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/ria-de-alvor/
+          - listitem [ref=f99e325]:
+            - link "Serra Algarvia" [ref=f99e326] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/serra-algarvia/
+          - listitem [ref=f99e327]:
+            - link "Serra de Monchique" [ref=f99e328] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/serra-de-monchique/
+          - listitem [ref=f99e329]:
+            - link "Sotavento" [ref=f99e330] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/sotavento/
+          - listitem [ref=f99e331]:
+            - link "Tiffany's Riding Centre" [ref=f99e332] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/tiffany-s-riding-centre/
+          - listitem [ref=f99e333]:
+            - link "Vilamoura Equestrian Center" [ref=f99e334] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/vilamoura-equestrian-center/
+          - listitem [ref=f99e335]:
+            - link "Zona Ribeirinha" [ref=f99e336] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/zona-ribeirinha-1/
+      - generic [ref=f99e337]:
+        - heading "Próximo de Faro" [level=2] [ref=f99e338]
+        - list [ref=f99e339]:
+          - listitem [ref=f99e340]:
+            - link "Beja" [ref=f99e341] [cursor=pointer]:
+              - /url: /arrendar-casas/beja-distrito/concelhos-freguesias
+  - generic [ref=f99e342]:
+    - heading "Serviços do idealista" [level=2] [ref=f99e343]
+    - generic [ref=f99e344]:
+      - navigation "Estás à procura de casa?" [ref=f99e345]:
+        - heading "Estás à procura de casa?" [level=3] [ref=f99e346]
+        - list [ref=f99e347]:
+          - listitem [ref=f99e348]:
+            - link "Motor de pesquisa principal" [ref=f99e349] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f99e350]:
+            - link "Pesquisa mais rapidamente com a nossa app" [ref=f99e351] [cursor=pointer]:
+              - /url: /aplicacoes
+          - listitem [ref=f99e352]:
+            - link "Apartamentos de bancos" [ref=f99e353] [cursor=pointer]:
+              - /url: /imoveis-da-banca
+          - listitem [ref=f99e354]:
+            - link "Casas à venda em Portugal" [ref=f99e355] [cursor=pointer]:
+              - /url: /properties-for-sale-in-portugal
+          - listitem [ref=f99e356]:
+            - link "Arrendamento de casas em Portugal" [ref=f99e357] [cursor=pointer]:
+              - /url: /long-term-rentals-in-portugal
+          - listitem [ref=f99e358]:
+            - link "Casas e apartamentos em arrendamento" [ref=f99e359] [cursor=pointer]:
+              - /url: /apartamentos-para-arrendar
+          - listitem [ref=f99e360]:
+            - link "Apartamentos partilhados" [ref=f99e361] [cursor=pointer]:
+              - /url: /apartamentos-para-dividir
+          - listitem [ref=f99e362]:
+            - link "Oportunidades de investimento" [ref=f99e363] [cursor=pointer]:
+              - /url: https://www.idealista.pt/investimento-imobiliario/#/
+          - listitem [ref=f99e364]:
+            - link "Rentalia, arrendamento para férias" [ref=f99e365] [cursor=pointer]:
+              - /url: https://pt.rentalia.com/
+          - listitem [ref=f99e366]:
+            - link "Relatórios de preços" [ref=f99e367] [cursor=pointer]:
+              - /url: https://www.idealista.pt/media/relatorios-preco-habitacao/
+          - listitem [ref=f99e368]:
+            - link "idealista maps" [ref=f99e369] [cursor=pointer]:
+              - /url: https://www.idealista.pt/maps/
+          - listitem [ref=f99e370]:
+            - link "Apartamentos e casas de luxo à venda em Portugal" [ref=f99e371] [cursor=pointer]:
+              - /url: /luxury-homes-portugal
+          - listitem [ref=f99e372]:
+            - link "Apartamentos e casas de luxo para arrendar em Portugal" [ref=f99e373] [cursor=pointer]:
+              - /url: /luxury-rentals-portugal
+      - navigation "Tens um imóvel?" [ref=f99e374]:
+        - heading "Tens um imóvel?" [level=3] [ref=f99e375]
+        - list [ref=f99e376]:
+          - listitem [ref=f99e377]:
+            - link "Publica o teu anúncio grátis" [ref=f99e378] [cursor=pointer]:
+              - /url: /info/novo-anuncio
+          - listitem [ref=f99e379]:
+            - link "Área do proprietário" [ref=f99e380] [cursor=pointer]:
+              - /url: /proprietarios/
+          - listitem [ref=f99e381]:
+            - link "Melhorar as fotos do teu anúncio" [ref=f99e382] [cursor=pointer]:
+              - /url: /info/truques-fazer-fotos-e-videos
+          - listitem [ref=f99e383]:
+            - link "Solicitar certificado energético" [ref=f99e384] [cursor=pointer]:
+              - /url: /certificadoenergetico/
+          - listitem [ref=f99e385]:
+            - link "Avalia grátis qualquer imóvel" [ref=f99e386] [cursor=pointer]:
+              - /url: /avaliacao-de-imoveis/
+          - listitem [ref=f99e387]:
+            - link "Procurar agências para vender facilmente a tua casa" [ref=f99e388] [cursor=pointer]:
+              - /url: /escolher-agencia-imobiliaria/
+          - listitem [ref=f99e389]:
+            - link "Guia sobre como vender a tua casa" [ref=f99e390] [cursor=pointer]:
+              - /url: /quero-vender-a-minha-casa/
+          - listitem [ref=f99e391]:
+            - link "Garantir 12 mensalidades com um seguro de incumprimento" [ref=f99e392] [cursor=pointer]:
+              - /url: https://www.idealista.pt/seguros/incumprimento-rendas/
+          - listitem [ref=f99e393]:
+            - link "Queres fazer obras em casa?" [ref=f99e394] [cursor=pointer]:
+              - /url: https://www.idealista.pt/obras-em-casa/
+      - navigation "És profissional imobiliário?" [ref=f99e395]:
+        - heading "És profissional imobiliário?" [level=3] [ref=f99e396]
+        - list [ref=f99e397]:
+          - listitem [ref=f99e398]:
+            - link "Publica os teus imóveis profissionais" [ref=f99e399] [cursor=pointer]:
+              - /url: /novo-profissional
+          - listitem [ref=f99e400]:
+            - link "Já és cliente? Entra na tua conta" [ref=f99e401] [cursor=pointer]:
+              - /url: /login
+          - listitem [ref=f99e402]:
+            - link "Cursos imobiliários" [ref=f99e403] [cursor=pointer]:
+              - /url: https://www.idealista.pt/cursos/
+          - listitem [ref=f99e404]:
+            - link "Publicidade no idealista" [ref=f99e405] [cursor=pointer]:
+              - /url: /info/publicidade
+          - listitem [ref=f99e406]:
+            - 'link "idealista/tools: Software de gestão para imobiliárias" [ref=f99e407] [cursor=pointer]':
+              - /url: https://www.idealista.pt/tools/
+          - listitem [ref=f99e408]:
+            - link "Outros softwares recomendados" [ref=f99e409] [cursor=pointer]:
+              - /url: /tools/software-recomendado-para-imobiliarias
+          - listitem [ref=f99e410]:
+            - 'link "idealista/data: tecnologia para a análise imobiliária" [ref=f99e411] [cursor=pointer]':
+              - /url: https://www.idealista.pt/data/
+          - listitem [ref=f99e412]:
+            - 'link "Avaibook: software para gerir os teus arrendamentos turísticos" [ref=f99e413] [cursor=pointer]':
+              - /url: https://www.avaibook.com/pt-pt/
+          - listitem [ref=f99e414]:
+            - link "HCPro - Software de Gestão Imobiliária" [ref=f99e415] [cursor=pointer]:
+              - /url: https://www.hcpro.pt/
+  - contentinfo [ref=f99e416]:
+    - generic [ref=f99e417]:
+      - heading " idealista" [level=2] [ref=f99e418]:
+        - text: 
+        - generic [ref=f99e419]: idealista
+      - generic [ref=f99e421] [cursor=pointer]:
+        - text: 
+        - generic [ref=f99e423]: Português
+      - generic [ref=f99e424]:
+        - navigation [ref=f99e425]:
+          - heading "Sobre o idealista" [level=3] [ref=f99e426]
+          - list [ref=f99e427]:
+            - listitem [ref=f99e428]:
+              - link "Sobre nós" [ref=f99e429] [cursor=pointer]:
+                - /url: /media/sobre-nos/
+            - listitem [ref=f99e430]:
+              - link "Media" [ref=f99e431] [cursor=pointer]:
+                - /url: /media/
+            - listitem [ref=f99e432]:
+              - link "Trabalha connosco" [ref=f99e433] [cursor=pointer]:
+                - /url: /info/trabalha-connosco
+            - listitem [ref=f99e434]:
+              - link "idealista/créditohabitação" [ref=f99e435] [cursor=pointer]:
+                - /url: https://www.idealista.pt/credito-habitacao
+            - listitem [ref=f99e436]:
+              - link "idealista/data" [ref=f99e437] [cursor=pointer]:
+                - /url: /data/
+            - listitem [ref=f99e438]:
+              - link "idealista/news" [ref=f99e439] [cursor=pointer]:
+                - /url: /news/
+            - listitem [ref=f99e440]:
+              - link "idealista/seguros" [ref=f99e441] [cursor=pointer]:
+                - /url: /seguros/
+        - navigation [ref=f99e442]:
+          - heading "Ajuda" [level=3] [ref=f99e443]
+          - list [ref=f99e444]:
+            - listitem [ref=f99e445]:
+              - link "Perguntas frequentes (FAQs)" [ref=f99e446] [cursor=pointer]:
+                - /url: /apoioutilizador/
+            - listitem [ref=f99e447]:
+              - link "Segurança online" [ref=f99e448] [cursor=pointer]:
+                - /url: /apoioutilizador/categorias/seguranca-online/
+            - listitem [ref=f99e449]:
+              - link "Contacta com o idealista" [ref=f99e450] [cursor=pointer]:
+                - /url: /info/contacta-connosco
+            - listitem [ref=f99e451]:
+              - link "Privacidade" [ref=f99e452] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/politica-de-privacidade/
+            - listitem [ref=f99e453]:
+              - link "Política de cookies" [ref=f99e454] [cursor=pointer]:
+                - /url: /info/cookie-policy
+            - listitem [ref=f99e455]:
+              - link "Condições gerais" [ref=f99e456] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/aviso-legal-e-condicoes-gerais/
+        - navigation [ref=f99e457]:
+          - heading "Outros países" [level=3] [ref=f99e458]
+          - list [ref=f99e459]:
+            - listitem [ref=f99e460]:
+              - link "idealista Espanha" [ref=f99e461] [cursor=pointer]:
+                - /url: https://www.idealista.com/pt/
+            - listitem [ref=f99e462]:
+              - link "idealista Itália" [ref=f99e463] [cursor=pointer]:
+                - /url: https://www.idealista.it/pt/
+            - listitem [ref=f99e464]:
+              - link "idealista França" [ref=f99e465] [cursor=pointer]:
+                - /url: https://www.idealista.fr/pt/
+              - generic [ref=f99e466]: Beta
+      - generic [ref=f99e467]:
+        - generic [ref=f99e468]:
+          - heading "Por telemóvel ou Tablet" [level=3] [ref=f99e469]
+          - navigation [ref=f99e470]:
+            - link "App Store" [ref=f99e471] [cursor=pointer]:
+              - /url: https://apps.apple.com/pt/app/idealista.com/id465958311
+            - link "Google Play" [ref=f99e472] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.idealista.android&hl=pt
+            - link "HUAWEI AppGallery" [ref=f99e473] [cursor=pointer]:
+              - /url: https://appgallery.huawei.com/app/C101196223?channelId=idealista&id=ea9d78a5dfc54b8e8a7f1c5e8f1f083e&s=FC3DCED1261C2C2C5624748A104DEB37D2EB945F72175B74A6FDB07C7B7169F0&detailType=0&v=
+          - navigation [ref=f99e474]:
+            - link "" [ref=f99e475] [cursor=pointer]:
+              - /url: https://www.facebook.com/idealista.pt/
+            - link "" [ref=f99e476] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/idealistapt
+            - link "" [ref=f99e477] [cursor=pointer]:
+              - /url: https://instagram.com/idealistapt/
+        - strong [ref=f99e478]: idealista
+        - text: Copyright © 2000-2026

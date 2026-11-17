@@ -19,16 +19,19 @@ async function discoverBatch(source){
   const records=found.items.map(item=>item.record).filter(Boolean);
   return {source:found.source,items:records.length?buildBatchQueue(records).entries.map(toItem):found.items};
 }
-async function request(action,payload={}){const r=await api.runtime.sendMessage({cmd:'AUTONOMA_'+action,payload:{id,token,...payload}});if(!r?.ok)throw Error('Executor indisponível');return r.result;}
+// Ações do runner idempotentes (leitura de conexão, vínculo, aviso, encerramento): repetem também se o worker cair no meio.
+const RUNNER_IDEMPOTENT=new Set(['ATTACH','PROXY_SNAPSHOT','CHANGED','FINISHED']);
+async function request(action,payload={}){const r=await require('./coleta-protocol').sendWithRetry(api,{cmd:'AUTONOMA_'+action,payload:{id,token,...payload}},{idempotent:RUNNER_IDEMPOTENT.has(action)});if(!r?.ok)throw Error('Executor indisponível');return r.result;}
 async function destination(itemId){const s=(await store.read(['session:'+id]))['session:'+id],key=s?.itemStates?.[itemId]?.destinationHandleKey||s?.destinationHandleKey;return loadRunDirectory(id,key||undefined);}
 function launch(){if(work)return;
  service.coordinator.metadata({id}).then(s=>api.runtime.sendMessage({cmd:'COLETA_PROBE_IP',payload:{id,epoch:s.epoch}})).catch(()=>{});
- work=service.drive({id,owner:binding.owner}).catch(()=>{}).finally(async()=>{work=null;await request('FINISHED').catch(()=>{});});}
+ // 006: runQueue percorre a fila inteira (esperas/recuperação na Fase 7); FINISHED só depois que ele termina.
+ work=service.runQueue({id,owner:binding.owner}).catch(()=>{}).finally(async()=>{work=null;await request('FINISHED').catch(()=>{});});}
 api.runtime.onMessage.addListener((message,sender,respond)=>{
   if(!binding||sender.id!==api.runtime.id||sender.tab||message.token!==token)return;
   if(message.cmd==='AUTONOMA_OWNER_PROOF'){respond({id,token,runId:binding.runId});return;}
   if(message.cmd!=='AUTONOMA_COMMAND')return;
-  (async()=>{if(message.action==='PAUSE')return service.pause({id,owner:binding.owner});if(message.action==='RESUME'){if(work)return {status:'busy'};const result=await service.resume({...message.payload,id,owner:binding.owner});if(result.status==='accepted')launch();return result;}return {status:'invalid'};})().then(respond,()=>respond({status:'error'}));return true;
+  (async()=>{if(message.action==='PAUSE')return service.pause({id,owner:binding.owner});if(message.action==='RESUME'){if(work)return {status:'busy'};const result=await service.resume({...message.payload,id,owner:binding.owner,connectionConfirmed:true});if(result.status==='accepted'||result.status==='wait'||result.status==='paused'&&result.reason==='session_duration')launch();return result;}return {status:'invalid'};})().then(respond,()=>respond({status:'error'}));return true;
 });
 (async()=>{
   const linksToken=params.get('links');
@@ -36,8 +39,12 @@ api.runtime.onMessage.addListener((message,sender,respond)=>{
   if(!id||!token)return;
   for(let n=0;n<50;n++){const r=await request('ATTACH');if(r.status==='ready'){binding=r;break;}await abortableDelay(100);}
   if(!binding){document.getElementById('runner-status').textContent='Execução inativa. Retome manualmente pelo painel.';return;}
-  const transport=createPageTransport(api);let initialDirectory=null;
-  service=createAutonomousCollection({store,runId:binding.runId,managedRunner:true,
+  // 006 D5: aba Idealista visível, em foco só ao criar, navegação real em toda página.
+  const transport=createPageTransport(api,{foreground:true});let initialDirectory=null;
+  // 006 US5/D8: espera e reverificação automáticas, no máximo 3 verificações por bloqueio; sem evasão.
+  service=createAutonomousCollection({store,runId:binding.runId,managedRunner:true,autoRecovery:{maxRechecks:3},
+    // Espera em blocos de até 5 s relendo a elegibilidade do domínio: segue assim que o prazo real vence.
+    async waitUntil(until,signal){for(;;){const left=until-Date.now();if(left<=0)return;const e=await service.coordinator.eligibility();if(!e||!(e.until>Date.now()))return;await abortableDelay(Math.min(5000,left,Math.max(1,e.until-Date.now())),signal);}},
     async preflight(){const dir=await loadDirectory();if(!dir||await dir.queryPermission({mode:'readwrite'})!=='granted')return {status:'needs-configuration'};initialDirectory=dir;const snapshot=await request('PROXY_SNAPSHOT');return {status:'ready',destination:{name:dir.name},proxyRevision:snapshot.revision};},
     discover:source=>discoverBatch(source),
     async onStarted(){if(!await loadRunDirectory(id))await saveRunDirectory(id,initialDirectory);},
@@ -51,7 +58,9 @@ api.runtime.onMessage.addListener((message,sender,respond)=>{
   });
   let result;
   if(binding.operation==='start')result=await service.start({commandId:binding.commandId,source:binding.source,useProxy:binding.useProxy,owner:binding.owner,launchId:id});
-  else result=await service.resume({id,owner:binding.owner,selection:binding.selection,accessConfirmed:binding.accessConfirmed,retrySave:binding.retrySave});
-  if(['started','accepted'].includes(result.status)){document.getElementById('runner-status').textContent='Coleta ativa. O painel pode ser fechado.';launch();}
+  // Retomada pedida pelo usuário no painel: confirma a conexão atual (006 T076).
+  else result=await service.resume({id,owner:binding.owner,selection:binding.selection,accessConfirmed:binding.accessConfirmed,retrySave:binding.retrySave,connectionConfirmed:true});
+  // 006: retomada dentro de uma espera (janela/limite) segue com o runQueue, que aguarda o prazo sozinho.
+  if(['started','accepted'].includes(result.status)||binding.operation==='resume'&&(result.status==='wait'||result.status==='paused'&&result.reason==='session_duration')){document.getElementById('runner-status').textContent='Coleta ativa. O painel pode ser fechado.';launch();}
   else{const s=await service.coordinator.metadata({id});if(s.state==='discovering')await service.coordinator.control({id,owner:binding.owner,epoch:s.epoch,action:'pause',reason:result.reason||'permission_required'});document.getElementById('runner-status').textContent='Coleta aguardando ação no painel: '+result.status+(result.reason?' — '+result.reason:'');await request('CHANGED');await request('FINISHED');}
 })().catch(()=>{document.getElementById('runner-status').textContent='Não foi possível continuar. Confira o painel da extensão.';});

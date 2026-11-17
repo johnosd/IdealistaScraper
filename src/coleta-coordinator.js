@@ -11,6 +11,9 @@ async function digest(value){const b=await globalThis.crypto.subtle.digest('SHA-
 const emptyCheckpoint=url=>({confirmedPages:0,nextUrl:url,visited:[],routes:[],pageKeys:[],complete:false,bytes:0,recordCount:0,noNew:0});
 const domainState=()=>({active:null,events:[],lastStarted:null,serverUntil:0,blockedUntil:0,accessBlocked:false,highWaterClock:0});
 const validOwner=(s,c)=>s&&s.epoch===c.epoch&&s.owner===c.owner;
+// 006 D13: orçamento por execução e duração contam a partir do ciclo atual (sem ciclo = regra original).
+const cycleStart=s=>s.cycle?.startedMs??s.createdMs;
+const requestedInCycle=s=>s.counters.requested-(s.cycle?.requestedBase||0);
 // 006 FR-026: contexto geográfico opcional do item — somente 3 chaves fixas, string curta ou null.
 function itemContext(item){
   const out={},short=v=>typeof v==='string'&&v.trim()&&v.length<=200?v.trim():null;
@@ -98,7 +101,9 @@ function createCollectionCoordinator({store,now=Date.now}){
         if(d.accessBlocked){s.state='blocked';s.reason='access_blocked';if(d.active===s.id)d.active=null;return result('paused',s.reason);}
         if(d.rateLimited){s.state='paused';s.reason='rate_limit';if(d.active===s.id)d.active=null;return result('paused',s.reason);}
         const wait=waitLimit(d,p,time);if(wait){s.state='waiting';s.reason=wait.reason;return wait;}
-        const cp=s.checkpoint,reason=s.counters.requested>=p.maxPagesPerRun?'run_budget':cp.confirmedPages>=p.maxPagesPerItem?'item_budget':time-s.createdMs>=p.maxSessionMs?'session_duration':cp.visited.includes(url)?'pagination_cycle':Object.values(s.attempts).filter(a=>a.url===url&&a.itemIndex===s.itemIndex).length>=p.maxAttempts?'attempts_exhausted':null;
+        const cp=s.checkpoint,reason=requestedInCycle(s)>=p.maxPagesPerRun?'run_budget':cp.confirmedPages>=p.maxPagesPerItem?'item_budget':time-cycleStart(s)>=p.maxSessionMs?'session_duration':cp.visited.includes(url)?'pagination_cycle':Object.values(s.attempts).filter(a=>a.url===url&&a.itemIndex===s.itemIndex).length>=p.maxAttempts?'attempts_exhausted':null;
+        // 006 D9: no modo autônomo o limite por localidade conclui o item como "limitado" e a fila segue.
+        if(reason==='item_budget'&&s.schemaVersion===2){cp.complete=true;cp.budgetReached=true;s.state='awaiting-save';s.reason=null;log(s,time,'item_budget',url);return result('awaiting-save','item_budget');}
         if(reason){s.state='paused';s.reason=reason;if(d.active===s.id)d.active=null;return result('paused',reason);}
         const a={url,kind:c.kind,epoch:s.epoch,owner:s.owner,itemIndex:s.itemIndex,startedAt:time,reported:false,expiresAt:time+2000};
         s.attempts[c.requestId]=a;s.inFlight=c.requestId;s.state='running';s.reason=null;s.counters.requested++;d.events.push(time);d.lastStarted=time;d.active=s.id;
@@ -142,6 +147,15 @@ function createCollectionCoordinator({store,now=Date.now}){
           if(destinationUrl===a.url||s.checkpoint.routes.includes(destinationUrl)){s.state='paused';s.reason='pagination_cycle';}
           else{s.checkpoint.routes.push(a.url);s.checkpoint.nextUrl=destinationUrl;}
         }
+        // 006 (pedido do usuário): página sem o conteúdo esperado é falha passageira no Lote autônomo e nos Links:
+        // espera (backoff) e tenta de novo até maxAttempts; esgotado, no Lote a localidade vai para o fim da fila (1×)
+        // e depois fica pendente, e a fila segue; nos Links, pausa como antes.
+        else if(category==='unexpected-content'&&(s.schemaVersion===2||s.mode==='links')){
+          const n=Object.values(s.attempts).filter(x=>x.url===a.url&&x.itemIndex===s.itemIndex).length;
+          if(n<p.maxAttempts){d.serverUntil=Math.max(d.serverUntil,time+p.backoffBaseMs*2**(n-1));s.state='waiting';s.reason='transient';}
+          else if(s.schemaVersion===2){const item=currentItem(s);item.state='pending';item.reason='unexpected_content';item.localFailure=true;item.recoverable=true;item.requeue=!item.requeued;s.state='running';s.reason='local_failure';}
+          else{s.state='paused';s.reason='unexpected_content';}
+        }
         else if(!['success','empty'].includes(category)){s.state='paused';s.reason=category.replaceAll('-','_');}
         else{
           const usage=rows['storage-usage']||{bytes:0};
@@ -150,9 +164,13 @@ function createCollectionCoordinator({store,now=Date.now}){
           writes[pageKey]={records:data,hash,url:finalUrl,seq:s.checkpoint.confirmedPages+1};s.checkpoint.pageKeys.push(pageKey);s.checkpoint.visited.push(finalUrl);
           s.checkpoint.confirmedPages++;s.counters.confirmed++;s.checkpoint.bytes+=bytes;s.checkpoint.recordCount+=data.length;s.checkpoint.noNew=data.length?0:s.checkpoint.noNew+1;
           s.checkpoint.nextUrl=nextUrl;s.checkpoint.complete=!nextUrl;s.lastCheckpointAt=time;
-          if(s.mode==='links'&&c.linksAudit&&typeof c.linksAudit==='object'){const a=c.linksAudit,n=v=>Number.isSafeInteger(v)&&v>=0?v:null;s.linksAudit={strategy:['nacional','distrito','nenhuma'].includes(a.strategy)?a.strategy:null,visible:n(a.visible),collected:s.checkpoint.recordCount,excluded:a.excluded?{zonas:n(a.excluded.zonas),vizinhos:n(a.excluded.vizinhos)}:null};}
+          // 006 R2: total declarado pela listagem (primeiro valor válido) para classificar truncamento.
+          if(s.checkpoint.declaredTotal==null&&Number.isSafeInteger(c.declaredTotal)&&c.declaredTotal>=0)s.checkpoint.declaredTotal=c.declaredTotal;
+          // Auditoria visível × coletada refere-se à página de origem (1ª página); páginas de expansão (D16) não a sobrescrevem.
+          if(s.mode==='links'&&s.checkpoint.confirmedPages===1&&c.linksAudit&&typeof c.linksAudit==='object'){const a=c.linksAudit,n=v=>Number.isSafeInteger(v)&&v>=0?v:null;s.linksAudit={strategy:['nacional','distrito','nenhuma'].includes(a.strategy)?a.strategy:null,visible:n(a.visible),collected:s.checkpoint.recordCount,excluded:a.excluded?{zonas:n(a.excluded.zonas),vizinhos:n(a.excluded.vizinhos)}:null};}
           if(!nextUrl){s.state='awaiting-save';s.reason=null;}else if(s.checkpoint.visited.includes(nextUrl)){s.state='paused';s.reason='pagination_cycle';}
-          else if(s.checkpoint.noNew>=p.maxNoNewPages){s.state='paused';s.reason='no_new_records';}else{s.state='running';s.reason=null;}
+          // Links (006 D16): páginas de distrito sem novidade (áreas pequenas) são esperadas; o ciclo é protegido por `visited`.
+          else if(s.mode!=='links'&&s.checkpoint.noNew>=p.maxNoNewPages){s.state='paused';s.reason='no_new_records';}else{s.state='running';s.reason=null;}
         }
         if(s.schemaVersion===2&&category==='http-error'&&[404,410].includes(c.status)&&!c.retryAfter&&!invalid){const item=currentItem(s);item.state='pending';item.reason='http_error';item.localFailure=true;item.recoverable=true;s.state='running';s.reason='local_failure';}
         if(!['running','waiting'].includes(s.state)&&!(s.schemaVersion===2&&s.state==='awaiting-save')&&d.active===s.id)d.active=null;
@@ -163,7 +181,7 @@ function createCollectionCoordinator({store,now=Date.now}){
       if(c.action==='discard'){
         const s=await root(c.id);if(!s)return result('rejected','session_missing');
         const pages=[...new Set([...s.checkpoint.pageKeys,...(s.archivedCheckpoints||[]).flatMap(cp=>cp.pageKeys),...Object.values(s.itemStates||{}).flatMap(i=>i.checkpoint?.pageKeys||[])])];
-        const http=Object.keys(s.attempts).map(id=>`http:${s.id}:${id}`),tabKey=s.executor?`tab:${s.executor.tabId}`:null,key=sessionKey(s.id);
+        const http=[...Object.keys(s.attempts).map(id=>`http:${s.id}:${id}`),`seen:${s.id}`],tabKey=s.executor?`tab:${s.executor.tabId}`:null,key=sessionKey(s.id);
         return store.transact([key,DOMAIN,INDEX,'storage-usage',...pages,...http,...(tabKey?[tabKey]:[])],rows=>{
           const current=rows[key];if(!validOwner(current,c))return {writes:{},result:result('rejected','stale_owner')};
           if(current.inFlight)return {writes:{},result:result('busy','unconfirmed_request')};
@@ -182,7 +200,7 @@ function createCollectionCoordinator({store,now=Date.now}){
         if(['saved','discarded'].includes(s.state))return result('rejected',s.state);
         if(d.active&&d.active!==s.id)return result('busy','active_session');if(s.inFlight)return result('busy','unconfirmed_request');
         if(time<d.highWaterClock)return result('paused','clock_inconsistent');const wait=waitLimit(d,p,time);if(wait)return wait;
-        if(d.accessBlocked&&!c.accessConfirmed)return result('paused','access_blocked');if(time-s.createdMs>=p.maxSessionMs)return result('paused','session_duration');
+        if(d.accessBlocked&&!c.accessConfirmed)return result('paused','access_blocked');if(time-cycleStart(s)>=p.maxSessionMs)return result('paused','session_duration');
         if(d.accessBlocked)d.accessBlocked=false;d.rateLimited=false;s.owner=c.owner;s.epoch++;s.state='running';s.reason=null;d.active=s.id;log(s,time,'resumed');return result('running',null,{epoch:s.epoch});
       }
       if(!validOwner(s,c))return result('rejected','stale_owner');if(!['pause','cancel','discard'].includes(c.action))return result('rejected','invalid_action');
@@ -259,15 +277,26 @@ function createCollectionCoordinator({store,now=Date.now}){
     return change(c.id,(s,d)=>{if(!validOwner(s,c)||s.revision!==full.revision||s.inFlight||d.active===s.id)return result('busy','active_session');initializeItems(s);for(const item of s.items)if(!s.itemStates[item.id].checkpoint)s.itemStates[item.id].checkpoint=emptyCheckpoint(item.url);return result('ready');});
   };
   api.readItem=async c=>api.read(c);
+  // 006 D13: novo ciclo após run_budget/session_duration no modo autônomo. Não toca em ritmo, janela nem bloqueio.
+  api.renewCycle=async c=>change(c.id,(s,d,p,time)=>{
+    if(!validOwner(s,c))return result('rejected','stale_owner');
+    if(s.schemaVersion!==2)return result('rejected','incompatible_context');
+    if(s.inFlight||!['paused','interrupted'].includes(s.state)||!['run_budget','session_duration'].includes(s.reason))return result('rejected','not_renewable');
+    s.cycle={startedMs:time,requestedBase:s.counters.requested,n:(s.cycle?.n||0)+1};log(s,time,'cycle_renewed',undefined,{cycle:s.cycle.n});
+    return result('ready',null,{cycle:s.cycle.n});
+  });
   api.selectItems=async c=>change(c.id,(s,d,p,time)=>{
     if(s.schemaVersion!==2||s.epoch!==c.epoch)return result('rejected','incompatible_context');
     if(s.driveToken||s.inFlight||d.active&&d.active!==s.id)return result('busy','active_session');
-    if(s.proxyRevision!==c.proxyRevision||(s.lastCheckpointAt&&time-s.lastCheckpointAt>604800000))return result('incompatible','incompatible_context');
+    if(s.lastCheckpointAt&&time-s.lastCheckpointAt>604800000)return result('incompatible','incompatible_context');
+    // 006 T076: conexão trocada (ex.: proxy esgotado → conexão direta) só é aceita na retomada pedida pelo usuário;
+    // a retomada automática continua recusando para nunca trocar de conexão sozinha.
+    if(s.proxyRevision!==c.proxyRevision){if(c.connectionConfirmed!==true)return result('incompatible','incompatible_context');s.proxyRevision=c.proxyRevision;log(s,time,'connection_confirmed');}
     if(time<d.highWaterClock)return result('paused','clock_inconsistent');
     const selection=c.selection||'remaining';let selected=s.items.filter(item=>{const v=s.itemStates[item.id];return v.recoverable!==false&&(typeof selection==='object'?item.id===selection.itemId:selection==='pending'?v.state==='pending':v.state==='queued'||v.state==='pending'&&!v.localFailure);});
     if(!selected.length)return result('rejected','no_recoverable_items');
     const saveOnly=selected.every(i=>s.itemStates[i.id].checkpoint.complete);
-    if(!saveOnly){const wait=waitLimit(d,p,time);if(wait&&wait.reason!=='interval')return wait;if(d.accessBlocked&&!c.accessConfirmed)return result('paused','access_blocked');if(time-s.createdMs>=p.maxSessionMs)return result('paused','session_duration');}
+    if(!saveOnly){const wait=waitLimit(d,p,time);if(wait&&wait.reason!=='interval')return wait;if(d.accessBlocked&&!c.accessConfirmed)return result('paused','access_blocked');if(time-cycleStart(s)>=p.maxSessionMs)return result('paused','session_duration');}
     if(d.accessBlocked&&c.accessConfirmed&&!saveOnly)d.accessBlocked=false;
     if(!saveOnly)d.rateLimited=false;
     s.owner=c.owner;s.epoch++;if(c.runId)s.runId=c.runId;s.selection={ids:selected.map(i=>i.id),cursor:0};s.itemIndex=selected[0].originalIndex;const item=currentItem(s);s.checkpoint=clone(item.checkpoint);s.saveIntent=item.saveIntent?clone(item.saveIntent):null;item.state='running';item.reason=null;item.localFailure=false;s.state=s.checkpoint.complete?'awaiting-save':'running';s.runState='running';s.reason=null;d.active=s.id;
@@ -278,6 +307,13 @@ function createCollectionCoordinator({store,now=Date.now}){
     const item=currentItem(s);if(!item||item.id!==c.itemId)return result('rejected','item_changed');
     if(c.outcome==='empty'){if(!s.checkpoint.complete||s.checkpoint.recordCount!==0)return result('rejected','not_empty');item.state='empty';item.recoverable=false;}
     else if(c.outcome!=='local-failure'||item.state!=='pending'||!item.localFailure)return result('rejected','invalid_advance');
+    // 006: 1ª vez esgotada por conteúdo inesperado → volta no fim da fila com novas tentativas e o progresso preservado.
+    if(c.outcome==='local-failure'&&item.requeue&&!item.requeued){
+      item.requeued=true;item.requeue=false;item.localFailure=false;item.reason='requeued_after_unexpected';
+      for(const [k,att] of Object.entries(s.attempts))if(att.itemIndex===item.index&&att.reported)delete s.attempts[k];
+      s.selection.ids.push(item.id);advance(s,d);if(currentItem(s)!==item)item.state='queued';
+      return result(s.state,s.reason,{epoch:s.epoch});
+    }
     advance(s,d);return result(s.state,s.reason,{epoch:s.epoch});
   });
   api.prepareSave=async c=>change(c.id,(s)=>{

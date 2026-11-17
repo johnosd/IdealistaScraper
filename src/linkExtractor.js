@@ -72,6 +72,34 @@ function extractLinks(doc = document, full = false) {
   return full ? view : view.records;
 }
 
+// 006 D16/FR-029: próxima página de concelhos de um distrito acima do limite do site (1.800 anúncios).
+// Encadeia os distritos grandes em ordem de URL, usando a contagem da própria página: nav nacional
+// (contagem da sub-região) ou breadcrumb do distrito (contagem de cada distrito; o destacado é a página atual).
+const SITE_LISTING_LIMIT = 1800;
+// `current`: URL pedida (o site pode redirecionar a página de concelhos de áreas pequenas para a listagem).
+function nextExpansionUrl(doc = document, limit = SITE_LISTING_LIMIT, current = null) {
+  const base = doc.location?.origin || location.origin;
+  const clean = (href) => { try { const u = new URL(href, base); u.hash = ''; u.search = ''; return u.href; } catch { return null; } };
+  const count = (t) => { const d = String(t || '').replace(/[^\d]/g, ''); return d ? Number(d) : null; };
+  const here = clean(current || doc.location?.href || location.href);
+  const big = [];
+  const nav = doc.querySelector('nav.locations-list');
+  if (nav) {
+    nav.querySelectorAll('ul.locations-list__links > li').forEach((li) => {
+      const a = li.querySelector(':scope > a.subregion'), n = count(li.querySelector(':scope > p')?.textContent);
+      if (a && n > limit) big.push(clean(a.getAttribute('href')));
+    });
+  } else {
+    doc.querySelectorAll('.breadcrumb-dropdown-element').forEach((el) => {
+      const n = count(el.querySelector(':scope > .breadcrumb-navigation-sidenote')?.textContent);
+      const url = el.classList.contains('highlighted') ? here : clean(el.querySelector(':scope > a')?.getAttribute('href'));
+      if (url && n > limit) big.push(url);
+    });
+  }
+  const list = [...new Set(big.filter(u => u && /\/concelhos-freguesias$/.test(new URL(u).pathname)))].sort();
+  return nav ? list[0] || null : list.find(u => u > here) || null;
+}
+
 // Visão completa (estratégia, contagem visível, excluídos). Não serializada.
 function inspectLocalities(doc = document) { return extractLinks(doc, true); }
 function extractLocalities(doc = document) { return extractLinks(doc); }
@@ -79,4 +107,4 @@ function extractLocalities(doc = document) { return extractLinks(doc); }
 // Exposto no mundo isolado da extensão para scripting.executeScript (coleta-discovery.readPageLocalities).
 if (typeof globalThis !== 'undefined') globalThis.__idealistaLocalities = { inspectLocalities, extractLocalities };
 
-module.exports = { extractLinks, extractLocalities, inspectLocalities };
+module.exports = { extractLinks, extractLocalities, inspectLocalities, nextExpansionUrl, SITE_LISTING_LIMIT };

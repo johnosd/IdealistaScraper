@@ -35,10 +35,12 @@ test('gerenciar sessões abre controle sem iniciar captura quando não existe se
  assert.equal(result.status,'opened');assert.equal(f.created[0].url,f.api.runtime.getURL('localidades.html'));assert.equal(f.created[0].active,true);
  assert.equal((await f.runtime.coordinator.list()).length,0);
 });
-test('após reiniciar Chrome, novo clique preserva sessão pendente mesmo sem lançamento em storage.session',async()=>{
+test('após reiniciar Chrome, novo clique retoma a sessão pendente (006) mesmo sem lançamento em storage.session',async()=>{
  const f=fixture(),started=await f.runtime.coordinator.start({id:'previous-browser',mode:'links',owner:'10',runId:'previous-run',domain:'idealista.pt',startedAt:new Date().toISOString(),items:[{url:'https://www.idealista.pt/a/'}],proxyRevision:'proxy-1'});
  await f.runtime.coordinator.control({id:started.id,epoch:started.epoch,owner:'10',action:'pause',reason:'proxy_error'});
- const result=await f.links.handle('LINKS_START',{},{});assert.equal(result.status,'attention');assert.equal(result.id,started.id);assert.equal(f.created.length,0);
+ // 006 (pedido do usuário): o clique retoma a mesma sessão por um executor técnico; nenhuma requisição no clique.
+ const result=await f.links.handle('LINKS_START',{},{});assert.equal(result.status,'accepted');assert.equal(f.created.length,1);assert.match(f.created[0].url,/runner\.html\?links=/);
+ assert.equal(f.session['linksLaunch:005'].resumeId,started.id);assert.equal((await f.runtime.coordinator.metadata({id:started.id})).counters.requested,0);
 });
 test('tela de exportação não pode consumir autorização do executor técnico',async()=>{
  const f=fixture();await f.links.handle('LINKS_START',{},{});const token=f.session['linksLaunch:005'].token;
@@ -66,11 +68,11 @@ test('executor em andamento não pode encerrar a própria aba antes de terminar 
  await f.runtime.coordinator.start({id:'active-links',mode:'links',owner:String(tab.id),domain:'idealista.pt',startedAt:new Date().toISOString(),items:[{url:'https://www.idealista.pt/a/'}],proxyRevision:'proxy-1'});
  assert.equal((await f.links.handle('LINKS_FINISHED',{}, {tab:{id:tab.id},url:tab.url})).status,'busy');assert.deepEqual(f.removed,[]);
 });
-test('novo clique numa coleta pendente destaca a página existente do Idealista sem navegar de novo',async()=>{
+test('novo clique numa coleta pendente retoma pela mesma sessão (006) sem renavegar a página existente do Idealista',async()=>{
  const f=fixture();f.session.collectionRunId='browser';f.tabs.set(20,{id:20,url:'https://www.idealista.pt/arrendar-casas/'});
  const started=await f.runtime.coordinator.start({id:'pending-page',mode:'links',owner:'10',runId:'browser',domain:'idealista.pt',startedAt:new Date().toISOString(),items:[{url:'https://www.idealista.pt/arrendar-casas/'}],proxyRevision:'proxy-1'});
  await f.runtime.coordinator.control({id:started.id,epoch:started.epoch,owner:'10',action:'pause',reason:'proxy_error'});
  await f.store.transact(['session:'+started.id],rows=>{rows['session:'+started.id].executor={tabId:20,runId:'browser'};return {writes:rows};});
  const updated=[];f.api.tabs.update=async(id,values)=>updated.push({id,...values});
- assert.equal((await f.links.handle('LINKS_START',{},{})).status,'attention');assert.deepEqual(updated,[{id:20,active:true}]);assert.equal(f.created.length,0);
+ assert.equal((await f.links.handle('LINKS_START',{},{})).status,'accepted');assert.deepEqual(updated,[],'página existente não é renavegada');assert.equal(f.created.length,1);assert.equal(f.session['linksLaunch:005'].resumeId,started.id);
 });

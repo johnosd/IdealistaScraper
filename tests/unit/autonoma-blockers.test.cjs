@@ -8,7 +8,9 @@ test('novo clique durante Retry-After não agenda retomada automática; exige no
  assert.equal((await service.start({commandId:'third',source:f.source,owner:'other',useProxy:false})).status,'started');
 });
 
-for(const facts of [{status:403},{status:429,retryAfter:'120'},{status:401},{status:407},{status:404,challenge:true},{status:200,listing:false},{transportError:true}]){
+// 006 (pedido do usuário): {status:200,listing:false} (conteúdo inesperado) deixou de ser condição global:
+// tenta 3×, vai para o fim da fila e a fila segue — coberto por tests/unit/unexpected-retry-006.test.cjs.
+for(const facts of [{status:403},{status:429,retryAfter:'120'},{status:401},{status:407},{status:404,challenge:true},{transportError:true}]){
  test('condição global não avança outro município: '+JSON.stringify(facts),async()=>{const f=fixture({response:async input=>({...facts,finalUrl:input.url,records:[]})}),s=f.service(),r=await s.start({commandId:'blocker',source:f.source,owner:'runner'});await s.drive({id:r.id,owner:'runner'});const run=await s.read({id:r.id});assert.equal(run.state,'paused');assert.equal(new Set(f.calls.map(c=>c.itemId)).size,1);assert.equal(run.summary.queued,2);});
 }
 test('falha de persistência preserva custo e não pede outra página',async()=>{

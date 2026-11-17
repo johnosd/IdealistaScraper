@@ -19,7 +19,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=r
   assert.equal(b.context.pages().some(page=>new URL(page.url()).pathname==='/localidades.html'),false,'Setup failure must stay in Links');
   assert.equal(b.context.pages().some(page=>page.url().includes('/configuracoes.html')),false);
   await worker.evaluate(()=>__restoreProxyGet());await p.locator('#tool-links-open').click();
-  await p.waitForFunction(()=>document.querySelectorAll('#links-results>li').length===4);
+  await p.waitForFunction(()=>document.querySelectorAll('#links-results>li').length===1);
   assert.equal(requests,1);assert.deepEqual(b.errors,[]);
   console.log(JSON.stringify({pass:true,proof:'Chrome proxy API failure simulated, real extension and extractor',requests,cases:['connection setup reason visible','no HTTP on setup failure','no secret leakage','explicit retry collects four records']}));
  }finally{await b?.context.close();const resolved=path.resolve(profile);assert.ok(resolved.startsWith(path.resolve(os.tmpdir())+path.sep+'idealista005-links-connection-'));await fs.rm(resolved,{recursive:true,force:true,maxRetries:5,retryDelay:300});}

@@ -73,6 +73,12 @@ Caminho real confirmado: `concelhos-freguesias` (plural). HTTP 200.
   amostrados coincidem com nomes de `#location_list` do distrito ("Oliveira - São Paio - São Sebastião",
   "Gualtar", "Azurém"…).
 
+**Decisão aplicada (usuário, 2026-11-16; T049):** `Freguesia` = nome da entrada quando ela é do tipo Freguesia;
+senão, o sufixo do título só se coincidir exatamente com uma das 134 freguesias conhecidas da fila; senão `null`.
+Implementada na gravação (`matchFreguesia` em `src/coleta-completeness.js`), sem alterar `extrairDaRaiz`.
+Sobre a listagem real de Braga (p.1): **28/30 anúncios** recebem Freguesia validada e 2 ficam `null`. Os campos
+antigos ficam idênticos (SC-010, `extractors-fixtures.smoke`).
+
 ## 7. Bloqueio (T007, R3)
 
 - No Chrome real: a 1ª navegação recebeu **HTTP 403 "Just a moment..."** e liberou sozinha em cerca de 5 s.

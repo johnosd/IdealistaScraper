@@ -63,6 +63,13 @@ anúncios (ex.: Faro 2.389), ou seja, dezenas de páginas por entrada.
   reescrita de caminho. Hubs (`/geo/…`) seguem o fluxo de destino "Ver N casas" existente.
 - **D3 — Uma entrada por listagem**, com a primeira ocorrência vencendo (nome/tipo/contexto) e `aliases`/`linkUrls`
   acumulados. Homônimos nunca são fundidos pelo nome. Nenhuma expansão automática para municípios.
+- **D16 — Fila de cobertura (FR-029/030, decisão do usuário).** `planCoverageQueue` em `src/lote-queue.js` monta a fila vinda dos Links:
+  - sub-regiões como unidade;
+  - regiões ignoradas quando têm sub-regiões;
+  - municípios destacados ignorados quando têm sub-região pai;
+  - sub-regiões com `Contagem > 1800` trocadas pelos concelhos lidos da página `concelhos-freguesias` do distrito (fallback: o distrito inteiro).
+
+  As páginas de distrito são visitadas na **mesma** sessão de links como páginas seguintes: `nextExpansionUrl` (em `src/linkExtractor.js`) encadeia os distritos grandes em ordem de URL, a partir da contagem da própria página (nav nacional ou breadcrumb do distrito). Ritmo, bloqueio, checkpoint e `pagination_cycle` do coordenador valem. Na coleta de links visível (`foreground`), toda página é navegada (sem fetch). `buildBatchQueue` (C1) não muda e continua sendo a fila do início pela página atual. A auditoria visível × coletada se refere à página nacional (1ª página).
 - **D4 — Fila preparada.** Ao concluir Links, o background grava `lote:prepared` (chrome.storage.local).
   A aba Lote mostra essa fila e o botão **Iniciar coleta**. O `START` autônomo usa a fila preparada quando ela
   existir. Sem ela, descobre na página atual com o mesmo extrator + `buildBatchQueue`. O breadcrumb vira só
@@ -75,8 +82,9 @@ anúncios (ex.: Faro 2.389), ou seja, dezenas de páginas por entrada.
   sendo o dono técnico, sempre `active:false`. `configuracoes.html`/`localidades.html` só abrem por clique
   explícito. Com configuração ausente, o painel mostra o requisito e a ação **Abrir Configurações**, sem
   navegar sozinho.
-- **D7 — Origem do Links = página atual** se o caminho for `/arrendar-casas/` (raiz) ou
-  `/arrendar-casas/<x>/concelhos-freguesias`. Caso contrário, usa a página nacional. A origem usada é exibida.
+- **D7 — Origem do Links = sempre a página nacional** `…/arrendar-casas/#municipality-search` (correção do
+  usuário na validação real, 2026-11-16; a versão "página atual" foi revogada). A origem usada é exibida. O extrator de
+  distrito (D1) permanece para o início do Lote direto numa página de distrito.
 - **D8 — Recuperação automática só em `runQueue`** (opt-in via `autoRecovery:{maxRechecks:3}` no runner).
   O coordenador não muda suas regras de bloqueio. Ver `logic/recuperacao-de-bloqueio.md`.
 - **D13 — Orçamento por execução vira ciclo (A-02).** No modo autônomo, `run_budget`/`session_duration`
@@ -211,10 +219,13 @@ Stubs criados pelo plan (ponto de partida do execute, não travados): `src/lote-
 | Fase 3 Correções de extrator | Concluída: extrator único (nacional 84 / distrito 148), `declaredTotal`, "Um momento", descoberta do Lote e do lote legado pelo extrator único |
 | Fase 4 US2 Links | Concluída: origem = página atual (D7), auditoria visível × coletada, nenhuma tela da extensão sem clique |
 | Fase 5 US3 Lote | Concluída: fila preparada (`lote:prepared`) a partir dos Links, exibida no Lote, START sem aba de origem, `context`/`freguesia` preservados |
-| Fase 6 US4 Extração | Próxima: transporte em aba visível (C5), `runQueue` (C2/C4), completude, `item_budget`, dedup, contexto na gravação, smoke `lote-from-links` |
-| Smokes | extractors-fixtures, 7 de Links e autonoma/autonoma-ui/autonoma-tabs/lote verdes em dev/prod |
-| Contratos 006 | 1/5 (C1) verde; C2–C5 vermelhos esperados; trava íntegra |
-| Suíte | 233/237 (4 = C2–C5), dev e prod; R-008 sem nova falha |
+| Fase 6 US4 Extração | Concluída: aba visível única com navegação real, sequência por entrada, completude/`site_limit`, `item_budget` v2, dedup, contexto nos arquivos; `VALIDATE` por documento de navegação (R-014); resume legado aguarda intervalo (T062/R-015) |
+| Fase 7 US5 Bloqueios | Concluída: recuperação automática limitada, novo ciclo (D13), Links com recuperação, painel informando a espera automática |
+| Fase 8 US7 Freguesia | Concluída: `matchFreguesia` (R4), 28/30 anúncios reais com Freguesia validada, SC-010 verificado |
+| Fase 9 US6 Validação real | Próxima: N4 no Chrome do usuário com a extensão instalada (build production) |
+| Smokes | 21/21 em dev e prod (inclui `lote-block-recovery` novo) |
+| Contratos 006 | **5/5 verdes**; trava íntegra |
+| Suíte | 258/258, dev e prod |
 
 ## Riscos e Decisões
 
@@ -224,6 +235,13 @@ Stubs criados pelo plan (ponto de partida do execute, não travados): `src/lote-
 | R-010 | Detectores de desafio não reconhecem o título "Um momento…" (evidência headless 2026-11-16) | Desafio servido com 200 ou sem status observado vira "conteúdo inesperado", não bloqueio | Task T058: incluir o padrão em `coleta-page.js` e `lote-navigation.js`, com teste |
 | R-012 | Site limita listagens a 60 páginas / 1.800 anúncios (Lisboa 9.655, Porto 4.548, Faro 2.394, Norte 6.027 ficam truncados) | Distritos grandes nunca saem completos numa entrada | Decisão do usuário: só sinalizar (`site_limit`). As entradas de concelho/freguesia da mesma fila cobrem parte do restante, e a dedup no resumo mostra a sobreposição |
 | R-013 | Acima da página 60 o site responde 404 com conteúdo; em v2, 404 marca a entrada como falha local | Pedido acima de 60 viraria pendência falsa | Não ocorre no fluxo normal (página 60 sem próxima). Se ocorrer, o teste da Fase 6 deve cobrir |
+| R-014 | Navegação real página a página cria um documento novo por página; `VALIDATE` só aceitava o 1º documento da aba | Página 2+ virava `unexpected_content` | Resolvido: requisição de navegação nova vincula o próprio documento (`executor.documentRequestId`); documento antigo da mesma requisição continua recusado (teste `coleta-navigation-documents-006`) |
+| R-015 | `coleta.smoke` (Itens legado) falha 4/4 em dev e prod: "Retomar" dentro do intervalo mínimo → `RESUME` devolve `wait` e `createCollectionWorkflow.resume` não aguarda | Gate T041; comportamento real do usuário (clicar Retomar logo após reabrir fica parado) | Resolvido: usuário aprovou corrigir na 006 (desvio T062). O resume aguarda só o `wait`/`interval` (abortável, até 5×); as demais esperas continuam manuais; `coleta.smoke` 20/20 dev/prod |
+| R-020 | Freguesia vazia em 100% dos anúncios reais da validação: a regra R4 só valida o sufixo do título contra freguesias da fila, e a fila de cobertura (D16) não tem freguesias | FR-027/US7 sem efeito prático no fluxo principal | Resolvido (T069, decisão do usuário "validar pelo final do título com lista do site"): a coleta de Links visita a página `concelhos-freguesias` de **todos** os distritos (`nextExpansionUrl(doc,0)`), guardando as freguesias como lista de validação por distrito (`prepared.freguesias` → `source.freguesias`); `matchFreguesia` exige que a freguesia seja do distrito da entrada. As freguesias não viram entradas. Custo: cerca de 22–28 páginas a mais nos Links, uma vez |
+| R-019 | Desafio Cloudflare real na página nacional (`cf-mitigated: challenge`) resolvido pelo próprio site em cerca de 5 s; o leitor se vinculava ao documento do desafio e a janela era de 10 s → `unexpected_content` (HTTP 200) na validação real | Coleta de Links falhava sem bloqueio real | Resolvido (T067): o documento de desafio não se vincula; a janela de transição vai a 12 s só para desafio transitório (o vínculo era o defeito principal; o desafio real liberou em cerca de 5 s); `links-challenge-slow.smoke` (RED→GREEN) |
+| R-018 | D7 "página atual como origem" foi decidida no plano sem perguntar e contrariou a expectativa do usuário (validação real: 149 links do distrito em vez da base nacional) | Fluxo principal errado | Resolvido: Links sempre na página nacional (T063); `links-district.smoke` passou a provar isso a partir da página de distrito |
+| R-016 | Recuperação automática e novo ciclo mudam comportamentos que smokes da 005 verificavam (`links-start-errors`: executor encerrava após 403; `autonoma-ui`: `maxPagesPerRun=1` pausava) | Falsos vermelhos | Resolvido: smokes atualizados para o comportamento aprovado (D8/D13), mantendo as proteções (nenhuma requisição antes do prazo; pausa explícita do usuário) |
+| R-017 | `maxAttempts` (004) por página limita as reverificações a 2 com os padrões | Usuário pode esperar 3 | Resolvido: documentado; o motivo apresentado é `access_blocked_persistent`; ajustar `maxAttempts` em Configurações aumenta o limite |
 | R-011 | Novo ciclo (D13) remove a parada de segurança por execução | Coleta pode rodar dias | Decisão do usuário. Ritmo, bloqueio persistente e pausa manual continuam parando a fila. O painel mostra ciclo atual e páginas totais |
 | R-002 | Contratos 004 C2/005 C5 exigem confirmação manual após desafio | Recuperação automática poderia quebrá-los | D8: camada `runQueue` opt-in que envia `accessConfirmed` após o prazo, com limite de verificações |
 | R-003 | Limites padrão (`maxPagesPerRun` 200, `maxSessionMs` 6 h, 60 pág/h) param a fila inteira em execuções grandes (84 entradas) | Fila não chega ao fim sozinha | Resolvido no plano (A-02, decisão do usuário 2026-11-16): `runQueue` espera `window_budget` e renova o ciclo em `run_budget`/`session_duration` (D13). O ritmo de 60 pág/h continua, então filas grandes levam horas ou dias, mas não param. Validação N4 usa entrada pequena |
@@ -248,19 +266,26 @@ Stubs criados pelo plan (ponto de partida do execute, não travados): `src/lote-
 
 | 2026-11-16 | Fase 5 US3 Lote | C1 verde. Fila preparada dos Links (83 entradas no fixture nacional; Algarve+Faro fundidos), painel com lista/descartar, START `fromPrepared`, `context` validado no coordenador. T061 ad-hoc: painel não navega mais sozinho para Configurações. 233/237 dev/prod | Jornada de UI completa fica para o T040 |
 
-**PRÓXIMO**: Fase 6 (T031–T041): `createPageTransport(api,{foreground})` (C5), `runQueue` sem recuperação (C2/C4), `assessListing`/`withContext`, `item_budget` v2, dedup `seen:<runId>`, runner com transporte visível, painel com completude/dedup, smoke `lote-from-links`.
+| 2026-11-16 | Fase 6 US4 Extração | C2/C4/C5 verdes. Transporte visível, `runQueue`, completude, dedup, contexto, `item_budget` v2; bloqueio do 2º documento corrigido no `VALIDATE` (R-014). `coleta.smoke` falhava por resume dentro do intervalo (fora do escopo); usuário aprovou T062. 246/247, 20/20 smokes dev/prod | C3 (Fase 7) |
+
+| 2026-11-16 | Fase 7 US5 Bloqueios | C3 verde (5/5). `runQueue` com recuperação, `renewCycle`, Links com recuperação, painel. `maxAttempts` limita a 2 verificações (apresentado como persistente). Smokes 005 `links-start-errors`/`autonoma-ui` atualizados ao comportamento aprovado. 257/257 e 21/21 dev/prod | Espera real de 30 min só na N4 |
+
+| 2026-11-16 | Fase 8 US7 Freguesia | `matchFreguesia` puro e testado com dados reais (28/30), SC-010 no smoke de fixtures, decisão registrada. 258/258 dev/prod | — |
+
+**PRÓXIMO**: Fase 9 (T051–T053): validação N4 no Chrome do usuário com a extensão instalada (build production): Links no distrito → fila no Lote → uma entrada pequena até a última página; `validation/real-validation.md`.
 
 ## Arquivos Principais
 
-- `src/coleta-runner.js` (`createPageTransport`, C5)
-- `src/coleta-autonoma.js` (`runQueue`, completude, dedup, contexto na gravação; C2/C4)
-- `src/coleta-completeness.js` (stub), `src/coleta-coordinator.js` (`declaredTotal`, `item_budget` v2)
-- `src/runner.js`, `src/sidepanel.js`, `src/coleta-labels.js`
+- `.sdd/specs/006-revisao-links-lote-extracao/quickstart.md` (Q5/Q6)
+- `.sdd/specs/006-revisao-links-lote-extracao/validation/real-validation.md` (a criar)
+- `dist/` (build production carregado no Chrome)
 
 ## Cuidados para Retomada
 
 - `extractLinks` em `src/linkExtractor.js` é **serializada** por `localidades-collector.js` (`executeScript({func})`): não tirar helpers de dentro dela (`localidades-collector.test` verifica). Para chamar o extrator de outro ponto via `executeScript`, injete `files:['dist/linkExtractor.bundle.js']` e leia `globalThis.__idealistaLocalities` (`coleta-discovery.readPageLocalities`).
 - Fingerprint do comando `START` é calculado igual em `coleta-autonoma-background.js` e em `coordinator.reserveLaunch`; nunca acrescentar campos só de um lado (a repetição de clique vira `command_conflict`).
+- Navegação real por página: cada página é um documento novo; o `VALIDATE` aceita o novo documento só para um `requestId` de navegação diferente do já vinculado (`executor.documentRequestId`). Ao mexer em validação de documento, rodar `coleta-navigation-documents-006` e `coleta-http-navigation`.
+- Rodar sempre os 20 smokes (`Get-ChildItem tests\e2e\*.smoke.cjs`) no gate de fase que toca `coleta-runner`/`coleta-background`; o `coleta.smoke` é sensível a tempo (intervalo de 3 s) e só ficou estável após T062.
 - Fila preparada (`lote:prepared`) vence a página atual no botão Iniciar. Para voltar a usar a página atual, o usuário clica em "Descartar fila preparada".
 - `extractors-fixtures.smoke.cjs` injeta as fontes de `src/` (não os bundles); rodá-lo após cada mudança de extrator, independe do build.
 

@@ -89,8 +89,8 @@ function extrairDaRaiz(rootDoc, baseURL = location.href) {
 }
 
 const { installCollectionExecutor } = require('./coleta-page');
-const { extractLinks, inspectLocalities } = require('./linkExtractor');
-installCollectionExecutor(chrome, { extractItems: extrairDaRaiz, extractLinks, inspectLocalities });
+const { extractLinks, inspectLocalities, nextExpansionUrl } = require('./linkExtractor');
+installCollectionExecutor(chrome, { extractItems: extrairDaRaiz, extractLinks, inspectLocalities, nextExpansionUrl });
 
 // Compatibilidade de leitura vazia do contrato001. Coletas produtivas são por página.
 chrome.runtime.onMessage.addListener((message,sender,respond) => {

@@ -125,12 +125,15 @@ function installCollectionBackground(api, proxy, {store=createCollectionStore(),
       await observations;
       const observed=(await store.read([`http:${s.id}:${payload.requestId}`]))[`http:${s.id}:${payload.requestId}`];
       const finalDocument=!payload.network&&s.attempts[payload.requestId]?.kind==='navigation'&&typeof sender.documentId==='string'&&observed?.documentId===sender.documentId;
+      // 006 D5: cada página é uma navegação real na mesma aba; uma requisição de navegação NOVA
+      // pode vincular o documento que ela criou. Documentos anteriores da mesma requisição seguem recusados.
+      const newNavigation=!payload.network&&s.attempts[payload.requestId]?.kind==='navigation'&&s.executor?.documentRequestId!==payload.requestId;
       const valid=await writeSession(s.id,v=>{
-        if(v.inFlight!==payload.requestId||v.epoch!==payload.epoch||v.executor.documentId&&v.executor.documentId!==sender.documentId&&!finalDocument)return false;
+        if(v.inFlight!==payload.requestId||v.epoch!==payload.epoch||v.executor.documentId&&v.executor.documentId!==sender.documentId&&!finalDocument&&!newNavigation)return false;
         if(!payload.network&&observed?.documentId&&observed.documentId!==sender.documentId)return false;
         const attempt=v.attempts[v.inFlight];if(payload.network&&attempt.networkDispatched)return false;
         if(payload.network)attempt.networkDispatched=true;
-        v.executor.documentId=sender.documentId;return true;
+        v.executor.documentId=sender.documentId;v.executor.documentRequestId=payload.requestId;return true;
       });return {valid,mode:s.mode,documentId:sender.documentId};
     }
     if(action==='READ')return payload.full?s:{id:s.id,state:s.state,reason:s.reason,epoch:s.epoch,owner:s.owner,itemIndex:s.itemIndex,items:s.items,counters:s.counters,checkpoint:{...s.checkpoint,records:undefined},exportContext:s.exportContext,diagnostics:s.events,executor:s.executor,proxyRevision:s.proxyRevision,pendingProjection:s.pendingProjection,eligibility:await coordinator.eligibility()};
