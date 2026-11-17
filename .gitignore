@@ -131,3 +131,5 @@ dmypy.json
 # Node / Webpack
 /node_modules/
 /dist/
+.data/validacao-nativa-004/
+.env

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Configurações — IdealistaScraper</title><link rel="stylesheet" href="dist/coleta.css"></head>
+<body><header class="app-header"><a id="back" href="sidepanel.html">← Coleta</a><strong>Configurações</strong></header>
+<main id="settings-app"><h1>Do seu jeito, uma vez.</h1><p class="muted">Pastas e preferências para as próximas coletas. Salvar não inicia uma captura.</p>
+<p id="settings-status" role="status" aria-live="polite"></p><p id="activity-notice" class="notice" hidden>Há uma coleta ativa. Pause ou aguarde para alterar destinos, conexão ou limites.</p>
+<section class="settings-section" aria-labelledby="folders-title"><h2 id="folders-title">Pastas</h2>
+<p class="muted">Estas ações são aplicadas separadamente do formulário abaixo.</p><div id="run-destination" class="notice" hidden></div>
+<h3>Anúncios por localidade</h3><p id="ads-destination">Consultando destino…</p><div class="actions"><button id="choose-ads" type="button">Escolher pasta de anúncios</button><button id="reauthorize-ads" type="button">Reautorizar acesso</button></div>
+<p class="muted">Subpasta do mês de início. Mesmo nome substitui o arquivo existente. Uma execução retomada conserva seu mês e destino; a recuperação indicada acima pode vincular outra pasta explicitamente.</p>
+<h3>Exportação de localidades</h3><p id="localities-destination">Consultando destino…</p><div class="actions"><button id="choose-localities" type="button">Escolher pasta de localidades</button><button id="reauthorize-localities" type="button">Reautorizar acesso</button></div></section>
+<form id="settings-form" novalidate>
+<section class="settings-section"><h2>Conexão</h2>
+<label for="connection">Modo de conexão<select id="connection"><option value="direct">Direta</option><option value="proxy">Proxy</option></select></label>
+<p class="muted">Conexão direta pode ser usada sem preencher um proxy.</p>
+<div id="proxy-fields"><label for="host">Host<input id="host" autocomplete="off" placeholder="proxy.exemplo.com"><span id="error-host" class="field-error"></span></label>
+<label for="port">Porta<input id="port" inputmode="numeric" autocomplete="off"><span id="error-port" class="field-error"></span></label>
+<label for="user">Usuário<input id="user" autocomplete="off"></label>
+<label for="password">Senha do proxy</label><div class="password-field"><input id="password" type="password" autocomplete="new-password" aria-describedby="password-help"><button id="toggle-password" type="button" aria-label="Mostrar senha" title="Mostrar senha" aria-controls="password" aria-pressed="false" disabled><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true" focusable="false"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path id="password-eye-slash" d="m3 3 18 18" hidden/></svg></button></div><p id="password-help" class="muted" aria-live="polite">A senha será salva neste navegador.</p></div>
+<p id="proxy-status" class="muted" role="status" aria-live="polite"></p>
+<p id="connection-help" class="hint">Preencha os dados e salve e teste em um clique. O teste aplica a conexão e verifica o IP de saída, sem iniciar coleta.</p>
+<div class="actions connection-actions"><button type="button" id="save-test-connection" class="primary" disabled aria-describedby="connection-help">Salvar e testar conexão</button><button type="button" id="test-ip">Verificar IP ativo</button></div>
+<div id="connection-feedback" class="connection-feedback" role="status" aria-live="polite" aria-atomic="true" hidden><strong id="connection-feedback-title"></strong><p id="connection-feedback-detail"></p></div>
+<details id="connection-options"><summary>Mais opções de conexão</summary><p class="hint">Verificar IP consulta a conexão ativa sem alterar nada. Aplicar a conexão salva não testa a rede. Salvar configurações, no fim da página, só guarda os valores; o início da coleta também aplica a conexão salva.</p><div class="actions"><button type="button" id="apply-connection" disabled>Aplicar conexão salva</button><button type="button" id="disable-proxy">Desativar proxy aplicado</button></div></details>
+<label class="inline"><input id="ip-enabled" type="checkbox">Verificar IP no início e quando a conexão mudar</label></section>
+<section class="settings-section"><h2>Limites</h2><p class="muted">Os valores conservadores protegem o ritmo da coleta. Alterá-los não zera consumo nem libera bloqueios.</p>
+<div id="basic-limits"></div><details><summary>Ajustes avançados</summary><div id="advanced-limits"></div></details><button id="restore-profile" type="button">Usar perfil conservador no formulário</button></section>
+<p id="dirty" class="dirty-indicator" aria-live="polite"></p><div class="form-actions"><button type="submit" id="settings-save" class="primary">Salvar configurações</button><button type="button" id="reload-settings" hidden>Recarregar valores salvos</button></div>
+</form>
+<dialog id="leave-dialog" aria-labelledby="leave-title"><h2 id="leave-title">Descartar edições?</h2><p>As alterações do formulário ainda não foram salvas. Ações de pasta já confirmadas serão mantidas.</p><form method="dialog" class="actions"><button value="cancel" autofocus>Permanecer</button><button value="discard">Descartar edições</button></form></dialog>
+</main><script src="dist/configuracoes.bundle.js"></script></body></html>

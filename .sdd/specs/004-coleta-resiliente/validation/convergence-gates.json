@@ -1,0 +1,36 @@
+{
+  "dev": {
+    "pass": true,
+    "counts": {
+      "localidades": 8,
+      "lote": 14,
+      "proxy": 6,
+      "coleta-store": 5,
+      "coleta": 8
+    },
+    "e2eCases": 41,
+    "pageErrors": 0
+  },
+  "prod": {
+    "pass": true,
+    "counts": {
+      "localidades": 8,
+      "lote": 14,
+      "proxy": 6,
+      "coleta-store": 5,
+      "coleta": 8
+    },
+    "e2eCases": 41,
+    "pageErrors": 0
+  },
+  "development-node": {
+    "tests": 117,
+    "pass": 117,
+    "fail": 0
+  },
+  "production-node": {
+    "tests": 117,
+    "pass": 117,
+    "fail": 0
+  }
+}

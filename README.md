@@ -1,8 +1,153 @@
 # Idealista Extrator
 
 Extensão Chrome Manifest V3 para extrair links de localidades e anúncios do
-Idealista.pt, percorrer páginas e exportar JSON. A interface mantém as abas
-Links, Itens, Lote e Proxy.
+Idealista.pt, percorrer páginas e exportar JSON. No Chrome desktop **141 ou
+superior**, a action abre o painel lateral com as abas **Links**, **Itens** e
+**Lote**, ao lado do site. **Configurações** fica sempre visível no cabeçalho.
+
+Escolha a pasta de anúncios em **Configurações** (configuração inicial). Depois:
+
+1. **Links → Coletar links de localidades** abre a página nacional
+   `…/arrendar-casas/#municipality-search` e a página de concelhos/freguesias de cada distrito.
+2. Links e **Lote** mostram a mesma fila final, sem repetir listagens (ex.: `Alentejo › Beja`).
+3. **Lote → Iniciar coleta** percorre cada localidade página a página até a última, uma de cada vez.
+
+Detalhes em [Fluxo Links → Lote](#fluxo-links--lote-006). Sem fila preparada, **Iniciar coleta** usa a página do
+Idealista aberta, como antes. Exportar a lista de localidades continua sendo uma ação separada
+em **Outras ferramentas**, junto da importação de lote e da coleta individual.
+
+O painel mostra origem, estado, páginas confirmadas, anúncios coletados e
+pendências por localidade, com busca e filtros. Fechar o painel mantém o
+executor em uma aba técnica inativa enquanto o Chrome permanece aberto.
+Depois de reiniciar o navegador, a retomada exige uma ação manual.
+
+A fila fica visível durante o processamento, com o município atual destacado,
+posição no lote, páginas/anúncios e resultado de cada município. **Ver na fila**
+localiza o atual e limpa filtros que o escondam. Trocar de aba mantém a coleta
+e o contexto. **Links → Coletar links de localidades** navega no índice principal
+do Idealista em primeiro plano e mostra as localidades coletadas na própria aba,
+sem exigir pasta. O início não abre a tela de exportação nem Configurações.
+**Salvar resultado em JSON** é uma ação posterior e separada. **Itens** abre a coleta
+individual de uma página; **Lote** acompanha a coleta automática de municípios.
+Em caso de pausa, Links mostra o motivo, o status HTTP disponível e o prazo de
+espera. **Ver detalhes e retomar** abre a sessão preservada para retomada manual;
+clicar novamente em coletar não substitui essa sessão nem repete o acesso bloqueado.
+Se o bloqueio veio de outra coleta e Links ainda não possui sessão, o botão
+mostra a espera obrigatória e depois oferece **Conferir acesso e coletar links**,
+com confirmação explícita de que o site está acessível.
+
+O fluxo Links foi verificado com extensão/coletor reais e página controlada,
+incluindo captura, reabertura e exportação sem nova consulta. No site real, o
+MCP Playwright abriu a página com HTTP200 e o extrator do projeto capturou os
+84 links da navegação. O MCP recusou acesso à interface interna da extensão;
+o clique no painel instalado e o diagnóstico anterior do proxy (407/403)
+continuam pendentes. Veja [evidências e limites do teste real](.sdd/specs/005-experiencia-coleta-autonoma/validation/links-mcp-live.md).
+
+Se uma verificação inicial ("Just a moment…"/"Um momento…", `cf-mitigated: challenge`) dá lugar à página
+normal durante o carregamento, a coleta observa essa transição por até 12 segundos (10 s para outros 403)
+e usa o documento final. O leitor não se vincula ao documento da verificação. Bloqueios persistentes
+seguem para a espera e reverificação automáticas (abaixo); o app não recarrega a página para insistir. [Correção e testes da transição](.sdd/specs/005-experiencia-coleta-autonoma/validation/links-transition-fix.md).
+
+Falhas comprovadamente locais (404/410 sem sinal de bloqueio geral) permitem
+seguir as outras localidades. Use **Retomar coleta** no item ou **Retomar
+pendentes** no lote; arquivos concluídos e páginas confirmadas são preservados.
+Um resultado completo que não foi gravado pode ser salvo sem buscar anúncios
+novamente. Homônimos com mesmo nome de arquivo exigem pasta diferente para
+evitar sobrescrita entre itens da mesma execução.
+
+**Configurações** reúne pastas, conexão, limites e diagnóstico de IP. Salvar
+não inicia coleta; senha vazia conserva a credencial existente. Alterações
+incompatíveis são recusadas durante coleta ativa. A preparação explícita de
+uma nova coleta preserva a execução anterior.
+
+A senha do proxy fica salva neste navegador. O campo mostra uma máscara quando
+já existe uma senha; clique no **olho** para mostrá-la ou ocultá-la. O mesmo
+botão permite conferir uma senha que está sendo digitada. Apenas mostrar a
+senha não altera os valores salvos.
+
+Links, Itens e Lote compartilham limites e checkpoints persistentes. O perfil
+conservador usa intervalo mínimo de 10 segundos, até 60 solicitações por hora,
+200 por sessão e 100 páginas por item. Os limites podem ser ajustados no
+**Configurações**. Ajustes e descarte preservam consumo e esperas vigentes.
+
+Nos modos legados de Outras ferramentas, depois de fechar a tela ou reiniciar o Chrome, abra a página correspondente,
+use **Atualizar sessões**, selecione a sessão e escolha **Retomar sessão**.
+Reabrir não inicia coleta. Checkpoints confirmados não precisam ser recoletados;
+uma página enviada sem confirmação pode exigir nova tentativa contabilizada.
+Contextos incompatíveis ou com mais de sete dias precisam de conferência;
+resultados completos preservados ainda podem ser salvos.
+
+No Lote e nos Links (006), 403/desafio e 429 pausam a fila, mostram o motivo e o horário da próxima
+verificação, esperam o prazo (30 minutos no bloqueio) e **reverificam sozinhos**. O limite efetivo é de
+2 verificações, porque o limite de 3 tentativas por página chega antes. Persistindo, a coleta para como
+"bloqueio persistente", com o progresso preservado e a retomada manual disponível. Nos modos legados, 429
+e 403 continuam exigindo retomada manual. A extensão não resolve CAPTCHA nem troca IP para insistir. Erros transitórios têm até três tentativas totais,
+com espera inicial de 30 e 60 segundos. Só uma sessão coleta por domínio.
+
+O proxy solicitado é confirmado antes da navegação e permanece estável durante
+a sessão. Mudança de configuração interrompe a coleta. **Verificar IP ativo**
+consulta a configuração atual sem ativar/desativar o proxy. A sondagem automática
+é opt-in, desligada por padrão, com até uma tentativa por sessão/revisão e
+timeout de cinco segundos. IP desconhecido não significa proxy desligado.
+
+Para configurar o proxy, preencha os dados e clique em **Salvar e testar conexão**.
+O botão salva, aplica e consulta o IP em uma única ação, sem iniciar coleta.
+O resultado aparece junto ao botão: **Testando conexão…**, **Proxy conectado**
+com IP de saída, ou falha com orientação. Para voltar à conexão do sistema,
+selecione **Direta** e use o mesmo botão. Essas ações exigem coleta pausada.
+**Salvar configurações** continua guardando valores sem aplicar/testar;
+**Verificar IP ativo** apenas consulta a conexão atual. Aplicar sem testar e
+desativar ficam em **Mais opções de conexão**. Uma edição nova remove a
+confirmação anterior para não parecer que os novos dados já foram testados.
+O início da coleta também aplica a conexão salva automaticamente. O `.env` é
+usado apenas pelos diagnósticos locais; a extensão usa os valores de Configurações.
+Em 2026-11-14, o proxy informado foi autenticado no Chrome157 e mudou o IP de saída;
+a volta à conexão do sistema também foi confirmada. Evidências sanitizadas em
+[diagnóstico do proxy](.sdd/specs/005-experiencia-coleta-autonoma/validation/proxy-fix-result.md)
+e [validação do retorno na interface](.sdd/specs/005-experiencia-coleta-autonoma/validation/proxy-feedback.md).
+
+**Extrair Itens** abre `itens.html`; o resultado usa Downloads. Depois de conferir
+o arquivo, use **Já baixei este resultado**. Uma gravação anterior desconhecida
+não dispara outro download automaticamente. Links e Lote preservam suas pastas,
+nomes, esquema JSON e regras de substituição.
+
+O controle identifica a coleta que já está ativa quando outro início é recusado.
+O diagnóstico mostra tentativas por página, duração e novos anúncios. Falhas de
+gravação ficam registradas após reabrir a sessão; os dados coletados permanecem
+disponíveis para conferir o destino e tentar salvar novamente.
+
+Há limites de 10 sessões, 50 MiB por sessão e 100 MiB agregados. Falta de espaço
+preserva o último checkpoint válido e impede a próxima página. Dados recuperáveis
+só são removidos por descarte explícito. Diagnósticos excluem query strings,
+HTML e credenciais. A eficácia contra bloqueios do site/proxy comercial não foi
+validada; os gates locais e a validação nativa aprovada estão no
+[roteiro da feature004](.sdd/specs/004-coleta-resiliente/quickstart.md).
+A experiência autônoma005 está **Em Execução**: provas de lógica, UI e painel
+real são separadas dos gates ainda pendentes de pasta externa/reautorização e
+leitor de tela. Consulte o [roteiro005](.sdd/specs/005-experiencia-coleta-autonoma/quickstart.md)
+e suas [tarefas](.sdd/specs/005-experiencia-coleta-autonoma/tasks.md).
+
+## Fluxo Links → Lote (006)
+
+- **Links** abre a página nacional (84 links: regiões, distritos/ilhas e municípios destacados) e depois a página
+  `…/<distrito>/concelhos-freguesias` de cada distrito, com o mesmo ritmo e na mesma aba visível.
+- **Fila de cobertura, sem repetir listagens**: a unidade é o distrito/ilha (ex.: `…/beja-distrito/`, que já inclui
+  Vila Nova de Milfontes). Regiões e municípios destacados ficam de fora por já estarem contidos. Distritos acima de
+  **1.800 anúncios** (limite de paginação do site: 60 páginas) entram pelos concelhos (ex.: `… › Lisboa › Sintra`).
+  As freguesias lidas não viram entradas; servem para validar o campo `Freguesia`.
+- **Coleta visível**: uma aba do Idealista abre em foco uma vez e navega página a página (sem fetch em segundo plano).
+  Nenhuma tela de configuração ou exportação abre sozinha; sem pasta autorizada, o painel orienta a configurar.
+  A aba técnica `runner.html` fica inativa enquanto a coleta roda.
+- **Uma localidade por vez**: cada uma vai até a última página e é gravada antes da próxima. A listagem cortada pelo
+  site aparece como **limitada** (total declarado × obtido), nunca como completa. O resumo mostra anúncios únicos e
+  repetidos entre localidades; cada arquivo mantém a listagem completa da sua entrada.
+- **Arquivos**: os campos existentes não mudam; ao final de cada anúncio entram `Região`, `Sub-região`, `Município` e
+  `Freguesia`. `Freguesia` é preenchida só quando o final do título coincide com uma freguesia do distrito da entrada.
+- **Limites**: o ritmo (10 s entre páginas, 60 por hora) é mantido. Ao esgotar o orçamento por execução ou a duração,
+  a fila abre um novo ciclo automaticamente; a fila inteira pode levar horas.
+- Evidências: [inspeção do site real](.sdd/specs/006-revisao-links-lote-extracao/validation/site-inspection.md),
+  [validação com a extensão instalada](.sdd/specs/006-revisao-links-lote-extracao/validation/real-validation.md) e
+  [roteiro](.sdd/specs/006-revisao-links-lote-extracao/quickstart.md).
 
 ## Desenvolvimento
 
@@ -35,7 +180,9 @@ sem servidor Node.
 ```text
 src/
   background.js       # PAC e autenticação do proxy
-  content.js          # Extração, paginação e exportação dos anúncios
+  content.js          # Extração de uma página; sem paginação autônoma
+  coleta*.js          # Coordenação persistente, transporte, limites e UI
+  itens.js            # Página durável e confirmação de Downloads
   linkExtractor.js    # Extração de links de localidades
   popup.js            # Ações do popup e abertura das páginas de extração
   popup-ui.js         # Alternância das abas
@@ -47,6 +194,7 @@ manifest.json         # Manifesto e permissões da extensão
 popup.html            # Interface e referências aos bundles
 localidades.html      # Página de exportação dos links
 lote.html             # Página durável de extração em lote
+itens.html            # Página durável de extração de anúncios
 webpack.config.js
 package.json
 package-lock.json
@@ -58,7 +206,8 @@ package-lock.json
 2. Abra `chrome://extensions/` e habilite o modo do desenvolvedor.
 3. Use **Carregar sem compactação** e selecione a raiz deste repositório, onde
    está `manifest.json`. Não selecione `src/`, `dist/` ou a pasta antiga.
-4. Abra o popup e confira as quatro abas e eventuais erros da extensão.
+4. Clique na action da extensão e confira o painel lateral Coleta, Configurações
+   e Outras ferramentas; confira também eventuais erros da extensão.
 
 Depois de alterar arquivos, reconstrua os bundles (ou mantenha `npm run dev`
 ativo), recarregue a extensão e atualize a página alvo para carregar os novos
@@ -110,8 +259,8 @@ foram detalhados. As correções funcionais continuam no backlog.
 ## Exportar links para a pasta do projeto
 
 Após gerar o build, recarregue a extensão em `chrome://extensions`.
-**Extrair Links (JSON)** abre uma página separada, que continua funcionando
-quando o popup fecha. Mantenha essa página aberta durante a operação.
+**Exportar localidades em JSON**, na interface antiga, abre uma página separada, que continua funcionando
+quando o popup fecha. Após fechar a página, a retomada do checkpoint é manual.
 
 1. Clique em **Escolher / trocar pasta** e autorize `.data/localidades` do projeto.
 2. Clique em **Extrair e salvar**. A extensão grava
@@ -125,8 +274,8 @@ o nome da pasta, sem validar o caminho absoluto do repositório.
 A referência da pasta fica em IndexedDB próprio. Quando necessário, use
 **Reautorizar pasta** e depois **Salvar JSON coletado**, sem repetir a coleta.
 Trocar de pasta não move arquivos anteriores. Se a pasta não puder ser memorizada,
-a página informa o erro e permite usá-la nesta sessão. Os registros coletados ficam
-somente na memória dessa página; fechar a página encerra essa sessão.
+a página informa o erro e permite usá-la nesta sessão. Os registros confirmados
+ficam no checkpoint, inclusive quando falta autorização para gravar.
 
 Não há download de reserva. Extração vazia, recusa e falta de permissão não
 substituem o retrato anterior. Outra página gravando recebe prioridade até concluir;
@@ -149,14 +298,14 @@ e reabertura. Evidência e limites em
 
 ## Exportar lote para municípios
 
-Na aba **Lote**, use **Abrir extração em lote**. Na página que abre, escolha a
+Em **Outras ferramentas**, use **Importar lista para coleta em lote**. Na página que abre, escolha a
 pasta base `.data/municipios` no seletor do Chrome e cole o JSON de localidades
 (`URL`/`Texto`, `link`/`nome` ou URLs por linha). Cada item gera
 `{YYYYMM}/<nome>-Paginas<N>.json`. O mês local é fixado ao iniciar o lote,
 inclusive durante pausa e recuperação de gravação. Caracteres incompatíveis
 com nome de arquivo são normalizados, preservando acentos.
 
-Ao abrir pelo popup numa página com localidades no breadcrumb, também pode usar
+Ao abrir o lote com uma aba de origem identificada (inclusive pelo launcher legado), também pode usar
 **Carregar lista da página de origem**. A lista é ordenada pela contagem exibida;
 resultado vazio ou erro mantém a lista anterior.
 
@@ -165,8 +314,8 @@ meses e variantes por número de páginas são preservados. O lote não gera Dow
 de reserva. A autorização dessa pasta é independente da pasta de localidades,
 cuja substituição continua exigindo confirmação.
 
-A página pode perder foco e o popup pode ser fechado. Mantenha a página do lote
-aberta: resultados pendentes ficam em sua memória. Falhas HTTP/rede ou HTML sem
+A página pode perder foco e o popup pode ser fechado. Resultados pendentes ficam
+preservados no checkpoint. Falhas HTTP/rede ou HTML sem
 listagem durante a paginação impedem a gravação parcial e mantêm o item na fila.
 Falha de escrita/permissão conserva o resultado coletado: use **Autorizar novamente**
 ou troque a pasta, depois **Tentar salvar novamente**, sem recoletar. Se somente a
@@ -175,14 +324,14 @@ persistência da fila falhar após o arquivo ser salvo, a tentativa repete essa 
 **Pausar após este item** aguarda o arquivo atual; **Continuar lote** mantém o mês.
 Outra tela não pode modificar a fila controlada pela sessão aberta. Após concluir,
 use **Ativar esta tela** para começar outro lote ou editar sua lista. Ao reabrir,
-a fila restante é restaurada, mas resultados pendentes em memória não são recuperados.
+a fila restante é restaurada; selecione uma sessão para recuperar dados pendentes.
 O controle de exportação parcial permanece indisponível.
 
 Se a página não mostrar uma listagem ou o link explícito de anúncios, o lote
 aguarda o conteúdo por até dez segundos. Bloqueios/verificações são informados
-com o título e a URL; a aba de coleta fica aberta para inspeção. Após conferir
-o acesso no Chrome, use **Continuar lote**. A tentativa reutiliza a mesma aba
-quando ela ainda corresponde ao item; não há resolução automática de CAPTCHA.
+no painel; a aba de coleta fica aberta para inspeção. Após conferir o acesso no
+Chrome e cumprir a espera, use **Retomar sessão**. A próxima página ainda não
+confirmada pode ser aberta em nova aba própria; não há resolução de CAPTCHA.
 
 O extrator mantém 17 campos. A revisão corrigiu contagem de fotos e indicação
 explícita de garagem/estacionamento nos cards. Fotos/legendas, vídeo, anunciante

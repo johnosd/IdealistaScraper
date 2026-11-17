@@ -5,7 +5,8 @@ function inspectBatchDestination(timeoutMs = 0) {
   function read() {
     const listing = !!document.querySelector('section.items-container.items-list');
     const title = document.title || '';
-    const blocked = !listing && (/just a moment|attention required|access denied|acesso negado|verifique que é humano/i.test(title)
+    // Serializada: o padrão é repetido aqui (mesmo conteúdo de CHALLENGE_TITLE em coleta-page.js).
+    const blocked = !listing && (/just a moment|um momento|attention required|access denied|acesso negado|verifique que é humano/i.test(title)
       || !!document.querySelector('#challenge-running, #challenge-form, #cf-challenge-running, iframe[src*="captcha"]'));
     const candidates = listing ? [] : [...document.querySelectorAll('a[href]')]
       .filter(anchor => /^Ver\s+[\d.,\s]+\s+(?:casas|apartamentos|imóveis)\b/i.test(anchor.textContent.trim().replace(/\s+/g, ' ')))

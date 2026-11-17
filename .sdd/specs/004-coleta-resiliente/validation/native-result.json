@@ -1,0 +1,49 @@
+{
+  "pass": true,
+  "proof": "headed-Chromium/native-picker/native-confirm/real-files/download-human-confirmation",
+  "exports": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.data\\validacao-nativa-004\\idealista-coleta-native-ZV9730",
+  "files": [
+    {
+      "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.data\\validacao-nativa-004\\idealista-coleta-native-ZV9730\\localidades\\202611\\links_localidades_202611.json",
+      "sha256": "d53b1becd60410cf56eefe435919ad1679fd56ae4efece6db23a8ef825705981"
+    },
+    {
+      "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.data\\validacao-nativa-004\\idealista-coleta-native-ZV9730\\municipios\\202611\\Municipio-Paginas1.json",
+      "sha256": "c4062f71008fa1d31afb32cc32c54164036a87801aafaa0200925fb6f4c4d787"
+    },
+    {
+      "path": "C:\\Users\\johns\\Documents\\Projetos\\IdealistaScraper\\.data\\validacao-nativa-004\\idealista-coleta-native-ZV9730\\native-listing-Paginas1-202611141421.json",
+      "sha256": "c4062f71008fa1d31afb32cc32c54164036a87801aafaa0200925fb6f4c4d787"
+    }
+  ],
+  "gestures": [
+    {
+      "id": "choose",
+      "trusted": true,
+      "active": true
+    },
+    {
+      "id": "choose",
+      "trusted": true,
+      "active": true
+    },
+    {
+      "id": "choose",
+      "trusted": true,
+      "active": true
+    },
+    {
+      "id": "loteStart",
+      "trusted": true,
+      "active": true
+    },
+    {
+      "id": "items-start",
+      "trusted": true,
+      "active": true
+    }
+  ],
+  "downloads": 1,
+  "pageErrors": 0,
+  "reauthorization": "Handlers de gesto inalterados; evidências nativas002/003 preservadas, gestos simulados adicionais no E2E004."
+}

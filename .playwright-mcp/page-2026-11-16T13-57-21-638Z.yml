@@ -1,0 +1,1558 @@
+- generic [active] [ref=f24e1]:
+  - link "Saltar para o conteúdo principal" [ref=f24e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f24e4]:
+    - generic [ref=f24e5]:
+      - generic [ref=f24e6]:
+        - link [ref=f24e7] [cursor=pointer]:
+          - /url: https://www.idealista.pt/
+          - img "Idealista logo" [ref=f24e9]
+        - generic [ref=f24e11]:
+          - button "Proprietários" [ref=f24e14] [cursor=pointer]
+          - button "Procuras casa" [ref=f24e18] [cursor=pointer]
+          - button "Crédito habitação" [ref=f24e22] [cursor=pointer]
+      - generic [ref=f24e24]:
+        - link "Publica o teu anúncio" [ref=f24e25] [cursor=pointer]:
+          - /url: https://www.idealista.pt/info/novo-anuncio
+        - combobox "Português" [ref=f24e28] [cursor=pointer]
+        - link "Aceder" [ref=f24e32] [cursor=pointer]:
+          - /url: https://www.idealista.pt/login
+  - generic [ref=f24e38]:
+    - navigation "Navegação por localização" [ref=f24e40]:
+      - list [ref=f24e41]:
+        - listitem [ref=f24e42]:
+          - link "idealista" [ref=f24e43] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=f24e44]:
+          - text: 
+          - button "Braga distrito " [ref=f24e45] [cursor=pointer]
+          - text: 
+          - generic [ref=f24e46]: "868"
+    - region [ref=f24e48]:
+      - heading "868 casas e apartamentos para arrendar em Braga distrito" [level=1] [ref=f24e49]
+      - button " Modificar zonas" [ref=f24e51] [cursor=pointer]:
+        - text: 
+        - generic [ref=f24e52]: Modificar zonas
+    - generic [ref=f24e55]:
+      - tablist:
+        - tab [ref=f24e56]:
+          - link "Comprar" [ref=f24e57] [cursor=pointer]:
+            - /url: /comprar-casas/braga-distrito/
+        - tab "Arrendar" [selected] [ref=f24e58]
+        - tab [ref=f24e60]:
+          - link "Para férias" [ref=f24e61] [cursor=pointer]:
+            - /url: /arrendar-para_ferias/braga-distrito/
+    - generic:   
+    - complementary [ref=f24e62]:
+      - generic [ref=f24e65]:
+        - heading "Novos anúncios no teu email" [level=2] [ref=f24e66]
+        - button "Guardar pesquisa" [ref=f24e67] [cursor=pointer]
+      - generic [ref=f24e71]:
+        - generic [ref=f24e72]:
+          - img "Mapa" [ref=f24e73]
+          - link "車 Ver no mapa" [ref=f24e74] [cursor=pointer]:
+            - /url: /arrendar-casas/braga-distrito/mapa-google
+        - generic [ref=f24e75]:
+          - generic [ref=f24e76]:
+            - heading "Tipo de imóvel" [level=3] [ref=f24e77]
+            - button "Casas e apartamentos" [ref=f24e78] [cursor=pointer]:
+              - option [ref=f24e80]: Nova construção
+              - option [ref=f24e81]: Casas e apartamentos
+              - option [ref=f24e82]: Quartos
+              - option [ref=f24e83]: Para férias
+              - option [ref=f24e84]: Escritórios
+              - option [ref=f24e85]: Espaços comerciais ou armazéns
+              - option [ref=f24e86]: Trespasses
+              - option [ref=f24e87]: Garagens
+              - option [ref=f24e88]: Terrenos
+              - option [ref=f24e89]: Arrecadações
+              - option [ref=f24e90]: Prédios
+          - generic [ref=f24e91]:
+            - heading "Preço" [level=3] [ref=f24e92]
+            - button "Min" [ref=f24e95] [cursor=pointer]:
+              - option [ref=f24e97]: Min
+              - option [ref=f24e98]: "500"
+              - option [ref=f24e99]: "550"
+              - option [ref=f24e100]: "600"
+              - option [ref=f24e101]: "650"
+              - option [ref=f24e102]: "700"
+              - option [ref=f24e103]: "750"
+              - option [ref=f24e104]: "800"
+              - option [ref=f24e105]: "850"
+              - option [ref=f24e106]: "900"
+              - option [ref=f24e107]: "950"
+              - option [ref=f24e108]: "1.000"
+              - option [ref=f24e109]: "1.100"
+              - option [ref=f24e110]: "1.200"
+              - option [ref=f24e111]: "1.300"
+              - option [ref=f24e112]: "1.400"
+              - option [ref=f24e113]: "1.500"
+              - option [ref=f24e114]: "1.600"
+              - option [ref=f24e115]: "1.700"
+              - option [ref=f24e116]: "1.800"
+              - option [ref=f24e117]: "1.900"
+              - option [ref=f24e118]: "2.000"
+              - option [ref=f24e119]: "2.100"
+              - option [ref=f24e120]: "2.400"
+              - option [ref=f24e121]: "2.700"
+              - option [ref=f24e122]: "3.000"
+              - option [ref=f24e123]: "4.000"
+              - option [ref=f24e124]: Sem limite
+            - button "Max" [ref=f24e127] [cursor=pointer]:
+              - option [ref=f24e129]: Max
+              - option [ref=f24e130]: "500"
+              - option [ref=f24e131]: "550"
+              - option [ref=f24e132]: "600"
+              - option [ref=f24e133]: "650"
+              - option [ref=f24e134]: "700"
+              - option [ref=f24e135]: "750"
+              - option [ref=f24e136]: "800"
+              - option [ref=f24e137]: "850"
+              - option [ref=f24e138]: "900"
+              - option [ref=f24e139]: "950"
+              - option [ref=f24e140]: "1.000"
+              - option [ref=f24e141]: "1.100"
+              - option [ref=f24e142]: "1.200"
+              - option [ref=f24e143]: "1.300"
+              - option [ref=f24e144]: "1.400"
+              - option [ref=f24e145]: "1.500"
+              - option [ref=f24e146]: "1.600"
+              - option [ref=f24e147]: "1.700"
+              - option [ref=f24e148]: "1.800"
+              - option [ref=f24e149]: "1.900"
+              - option [ref=f24e150]: "2.000"
+              - option [ref=f24e151]: "2.100"
+              - option [ref=f24e152]: "2.400"
+              - option [ref=f24e153]: "2.700"
+              - option [ref=f24e154]: "3.000"
+              - option [ref=f24e155]: "4.000"
+              - option [ref=f24e156]: Sem limite
+          - generic [ref=f24e157]:
+            - heading "Tipo de arrendamento" [level=3] [ref=f24e158]
+            - list [ref=f24e159]:
+              - listitem [ref=f24e160]:
+                - generic [ref=f24e161]:
+                  - checkbox "Arrendamento de longa duração" [ref=f24e162]
+                  - link [aria-hidden] [ref=f24e165] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-arrendamento-longa-duracao/
+                    - text: Arrendamento de longa duração
+              - listitem [ref=f24e166]:
+                - generic [ref=f24e167]:
+                  - checkbox "Arrendamento temporário" [ref=f24e168]
+                  - link [aria-hidden] [ref=f24e171] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-arrendamento-temporario/
+                    - text: Arrendamento temporário
+          - generic [ref=f24e172]:
+            - heading "Tamanho" [level=3] [ref=f24e173]
+            - button "Min" [ref=f24e176] [cursor=pointer]:
+              - option [ref=f24e178]: Min
+              - option [ref=f24e179]: 40 m²
+              - option [ref=f24e180]: 60 m²
+              - option [ref=f24e181]: 80 m²
+              - option [ref=f24e182]: 100 m²
+              - option [ref=f24e183]: 120 m²
+              - option [ref=f24e184]: 140 m²
+              - option [ref=f24e185]: 160 m²
+              - option [ref=f24e186]: 180 m²
+              - option [ref=f24e187]: 200 m²
+              - option [ref=f24e188]: 300 m²
+              - option [ref=f24e189]: 400 m²
+              - option [ref=f24e190]: Sem limite
+            - button "Max" [ref=f24e193] [cursor=pointer]:
+              - option [ref=f24e195]: Max
+              - option [ref=f24e196]: 40 m²
+              - option [ref=f24e197]: 60 m²
+              - option [ref=f24e198]: 80 m²
+              - option [ref=f24e199]: 100 m²
+              - option [ref=f24e200]: 120 m²
+              - option [ref=f24e201]: 140 m²
+              - option [ref=f24e202]: 160 m²
+              - option [ref=f24e203]: 180 m²
+              - option [ref=f24e204]: 200 m²
+              - option [ref=f24e205]: 300 m²
+              - option [ref=f24e206]: 400 m²
+              - option [ref=f24e207]: Sem limite
+          - generic [ref=f24e208]:
+            - heading "Tipo de casa" [level=3] [ref=f24e209]
+            - list [ref=f24e210]:
+              - listitem [ref=f24e211]:
+                - tree [ref=f24e212]:
+                  - generic [ref=f24e213]:
+                    - generic [ref=f24e214]:
+                      - checkbox "Apartamentos, penthouses e duplex" [ref=f24e215]
+                      - generic [ref=f24e217] [cursor=pointer]:
+                        - link [aria-hidden]:
+                          - /url: /arrendar-casas/braga-distrito/com-apartamentos/
+                          - text: Apartamentos, penthouses e duplex
+                    - button " Ver outros filtros" [ref=f24e218] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f24e219]: Ver outros filtros
+              - listitem [ref=f24e220]:
+                - tree [ref=f24e221]:
+                  - generic [ref=f24e222]:
+                    - generic [ref=f24e223]:
+                      - checkbox "Casas e moradias" [ref=f24e224]
+                      - generic [ref=f24e226] [cursor=pointer]:
+                        - link [aria-hidden]:
+                          - /url: /arrendar-casas/braga-distrito/com-moradias/
+                          - text: Casas e moradias
+                    - button " Ver outros filtros" [ref=f24e227] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f24e228]: Ver outros filtros
+          - generic [ref=f24e229]:
+            - heading "Outras denominações" [level=3] [ref=f24e230]
+            - generic [ref=f24e231]:
+              - generic [ref=f24e232]: Quintas, moradias térreas
+              - generic [ref=f24e233]:
+                - button "Ver mais Outras denominações" [ref=f24e234] [cursor=pointer]:
+                  - text: Ver mais
+                  - generic [ref=f24e235]: 
+                - text: 
+          - generic [ref=f24e236]:
+            - heading "Equipamento" [level=3] [ref=f24e237]
+            - list [ref=f24e238]:
+              - listitem [ref=f24e239]:
+                - button "Indiferente" [ref=f24e241] [cursor=pointer]:
+                  - option [ref=f24e243]: Indiferente
+                  - option [ref=f24e244]: Só cozinha equipada
+                  - option [ref=f24e245]: Mobilado
+          - generic [ref=f24e246]:
+            - heading "Quartos" [level=3] [ref=f24e247]
+            - list [ref=f24e248]:
+              - listitem [ref=f24e249]:
+                - generic [ref=f24e250]:
+                  - checkbox "T0" [ref=f24e251]
+                  - link [aria-hidden] [ref=f24e254] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-t0/
+                    - text: T0
+              - listitem [ref=f24e255]:
+                - generic [ref=f24e256]:
+                  - checkbox "T1" [ref=f24e257]
+                  - link [aria-hidden] [ref=f24e260] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-t1/
+                    - text: T1
+              - listitem [ref=f24e261]:
+                - generic [ref=f24e262]:
+                  - checkbox "T2" [ref=f24e263]
+                  - link [aria-hidden] [ref=f24e266] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-t2/
+                    - text: T2
+              - listitem [ref=f24e267]:
+                - generic [ref=f24e268]:
+                  - checkbox "T3" [ref=f24e269]
+                  - link [aria-hidden] [ref=f24e272] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-t3/
+                    - text: T3
+              - listitem [ref=f24e273]:
+                - generic [ref=f24e274]:
+                  - checkbox "T4 ou +" [ref=f24e275]
+                  - link [aria-hidden] [ref=f24e278] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-t4-t5/
+                    - text: T4 ou +
+          - generic [ref=f24e279]:
+            - heading "Casas de banho" [level=3] [ref=f24e280]
+            - list [ref=f24e281]:
+              - listitem [ref=f24e282]:
+                - generic [ref=f24e283]:
+                  - checkbox "1" [ref=f24e284]
+                  - link [aria-hidden] [ref=f24e287] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-banho-1/
+                    - text: "1"
+              - listitem [ref=f24e288]:
+                - generic [ref=f24e289]:
+                  - checkbox "2" [ref=f24e290]
+                  - link [aria-hidden] [ref=f24e293] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-banho-2/
+                    - text: "2"
+              - listitem [ref=f24e294]:
+                - generic [ref=f24e295]:
+                  - checkbox "3 casas de banho ou mais" [ref=f24e296]
+                  - link [aria-hidden] [ref=f24e299] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-banho-3/
+                    - text: 3 casas de banho ou mais
+          - generic [ref=f24e300]:
+            - heading "Estado" [level=3] [ref=f24e301]
+            - list [ref=f24e302]:
+              - listitem [ref=f24e303]:
+                - generic [ref=f24e304]:
+                  - checkbox "Nova construção" [ref=f24e305]
+                  - link [aria-hidden] [ref=f24e308] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-novo/
+                    - text: Nova construção
+              - listitem [ref=f24e309]:
+                - generic [ref=f24e310]:
+                  - checkbox "Bom estado" [ref=f24e311]
+                  - link [aria-hidden] [ref=f24e314] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-bom-estado/
+                    - text: Bom estado
+              - listitem [ref=f24e315]:
+                - generic [ref=f24e316]:
+                  - checkbox "Para recuperar" [ref=f24e317]
+                  - link [aria-hidden] [ref=f24e320] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-para-reformar/
+                    - text: Para recuperar
+          - generic [ref=f24e321]:
+            - heading "Mais filtros" [level=3] [ref=f24e322]
+            - list [ref=f24e323]:
+              - listitem [ref=f24e324]:
+                - generic [ref=f24e325]:
+                  - checkbox "Ar condicionado" [ref=f24e326]
+                  - link [aria-hidden] [ref=f24e329] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-arcondicionado/
+                    - text: Ar condicionado
+              - listitem [ref=f24e330]:
+                - generic [ref=f24e331]:
+                  - checkbox "Armários embutidos" [ref=f24e332]
+                  - link [aria-hidden] [ref=f24e335] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-roupeiros-embutidos/
+                    - text: Armários embutidos
+              - listitem [ref=f24e336]:
+                - generic [ref=f24e337]:
+                  - checkbox "Elevador" [ref=f24e338]
+                  - link [aria-hidden] [ref=f24e341] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-elevador/
+                    - text: Elevador
+              - listitem [ref=f24e342]:
+                - tree [ref=f24e343]:
+                  - generic [ref=f24e344]:
+                    - generic [ref=f24e345]:
+                      - checkbox "Varanda e terraço" [ref=f24e346]
+                      - generic [ref=f24e348] [cursor=pointer]:
+                        - link [aria-hidden]:
+                          - /url: /arrendar-casas/braga-distrito/com-terraco-e-varanda/
+                          - text: Varanda e terraço
+                    - button " Ver outros filtros" [ref=f24e349] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f24e350]: Ver outros filtros
+              - listitem [ref=f24e351]:
+                - generic [ref=f24e352]:
+                  - checkbox "Lugar de garagem" [ref=f24e353]
+                  - link [aria-hidden] [ref=f24e356] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-garagem/
+                    - text: Lugar de garagem
+              - listitem [ref=f24e357]:
+                - generic [ref=f24e358]:
+                  - checkbox "Jardim" [ref=f24e359]
+                  - link [aria-hidden] [ref=f24e362] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-jardim/
+                    - text: Jardim
+              - listitem [ref=f24e363]:
+                - generic [ref=f24e364]:
+                  - checkbox "Piscina" [ref=f24e365]
+                  - link [aria-hidden] [ref=f24e368] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-piscina/
+                    - text: Piscina
+              - listitem [ref=f24e369]:
+                - generic [ref=f24e370]:
+                  - checkbox "Arrecadação" [ref=f24e371]
+                  - link [aria-hidden] [ref=f24e374] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-arrecadacao/
+                    - text: Arrecadação
+              - listitem [ref=f24e375]:
+                - generic [ref=f24e376]:
+                  - checkbox "Casa adaptada" [ref=f24e377]
+                  - link [aria-hidden] [ref=f24e380] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-adaptados/
+                    - text: Casa adaptada
+              - listitem [ref=f24e381]:
+                - generic [ref=f24e382]:
+                  - checkbox "Casa de luxo" [ref=f24e383]
+                  - link [aria-hidden] [ref=f24e386] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-luxo/
+                    - text: Casa de luxo
+              - listitem [ref=f24e387]:
+                - generic [ref=f24e388]:
+                  - checkbox "Vista mar" [ref=f24e389]
+                  - link [aria-hidden] [ref=f24e392] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-vista-mar/
+                    - text: Vista mar
+          - generic [ref=f24e393]:
+            - heading "Andar" [level=3] [ref=f24e394]
+            - list [ref=f24e395]:
+              - listitem [ref=f24e396]:
+                - generic [ref=f24e397]:
+                  - checkbox "Último andar" [ref=f24e398]
+                  - link [aria-hidden] [ref=f24e401] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-ultimo-andar/
+                    - text: Último andar
+              - listitem [ref=f24e402]:
+                - generic [ref=f24e403]:
+                  - checkbox "Andares intermédios" [ref=f24e404]
+                  - link [aria-hidden] [ref=f24e407] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-andares-intermedios/
+                    - text: Andares intermédios
+              - listitem [ref=f24e408]:
+                - generic [ref=f24e409]:
+                  - checkbox "Rés do chão" [ref=f24e410]
+                  - link [aria-hidden] [ref=f24e413] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-res-do-chao/
+                    - text: Rés do chão
+          - generic [ref=f24e414]:
+            - heading [level=3] [ref=f24e415]:
+              - text: Eficiência energética
+              - button "Mais informação sobre certificado energético" [ref=f24e416] [cursor=pointer]: 亂 
+            - list [ref=f24e417]:
+              - listitem [ref=f24e418]:
+                - generic [ref=f24e419]:
+                  - checkbox "Alta" [ref=f24e420]
+                  - link [aria-hidden] [ref=f24e423] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-eficiencia-energetica-alta/
+                    - text: Alta
+              - listitem [ref=f24e424]:
+                - generic [ref=f24e425]:
+                  - checkbox "Média" [ref=f24e426]
+                  - link [aria-hidden] [ref=f24e429] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-eficiencia-energetica-media/
+                    - text: Média
+              - listitem [ref=f24e430]:
+                - generic [ref=f24e431]:
+                  - checkbox "Baixa" [ref=f24e432]
+                  - link [aria-hidden] [ref=f24e435] [cursor=pointer]:
+                    - /url: /arrendar-casas/braga-distrito/com-eficiencia-energetica-baixa/
+                    - text: Baixa
+          - generic [ref=f24e436]:
+            - heading "Multimédia" [level=3] [ref=f24e437]
+            - list [ref=f24e438]:
+              - listitem [ref=f24e439]:
+                - generic [ref=f24e440]:
+                  - checkbox "Com planta" [ref=f24e441]
+                  - generic [ref=f24e442] [cursor=pointer]: Com planta
+              - listitem [ref=f24e444]:
+                - generic [ref=f24e445]:
+                  - checkbox "Com visita virtual" [ref=f24e446]
+                  - generic [ref=f24e447] [cursor=pointer]: Com visita virtual
+          - generic [ref=f24e449]:
+            - heading "Tipo de anunciante" [level=3] [ref=f24e450]
+            - list [ref=f24e451]:
+              - listitem [ref=f24e452]:
+                - generic [ref=f24e453]:
+                  - checkbox "De bancos" [ref=f24e454]
+                  - generic [ref=f24e455] [cursor=pointer]: De bancos
+          - group "Publicado no idealista" [ref=f24e457]:
+            - list [ref=f24e459]:
+              - listitem [ref=f24e460]:
+                - generic [ref=f24e461]:
+                  - radio "Indiferente" [checked] [ref=f24e462]
+                  - generic [ref=f24e463] [cursor=pointer]: Indiferente
+              - listitem [ref=f24e465]:
+                - generic [ref=f24e466]:
+                  - radio "Nas últimas 24 horas" [ref=f24e467]
+                  - generic [ref=f24e468] [cursor=pointer]: Nas últimas 24 horas
+              - listitem [ref=f24e470]:
+                - generic [ref=f24e471]:
+                  - radio "Na última semana" [ref=f24e472]
+                  - generic [ref=f24e473] [cursor=pointer]: Na última semana
+              - listitem [ref=f24e475]:
+                - generic [ref=f24e476]:
+                  - radio "No último mês" [ref=f24e477]
+                  - generic [ref=f24e478] [cursor=pointer]: No último mês
+        - text: 
+    - group [ref=f24e480]:
+      - generic [ref=f24e481]: "Ordenar:"
+      - list [ref=f24e482]:
+        - listitem [ref=f24e483]:
+          - generic [ref=f24e484] [cursor=pointer]: Por relevância
+        - listitem [ref=f24e485]:
+          - link "Baratos" [ref=f24e486] [cursor=pointer]:
+            - /url: /arrendar-casas/braga-distrito/?ordem=precos-asc
+        - listitem [ref=f24e487]:
+          - link "Mais recentes" [ref=f24e488] [cursor=pointer]:
+            - /url: /arrendar-casas/braga-distrito/?ordem=atualizado-desc
+        - listitem [ref=f24e489]:
+          - generic [ref=f24e490] [cursor=pointer]: Mais
+    - main [ref=f24e492]:
+      - generic [ref=f24e493]:
+        - article [ref=f24e494]:
+          - generic [ref=f24e495]:
+            - generic [ref=f24e497]:
+              - generic [ref=f24e498]:
+                - button "Abrir planta" [ref=f24e499] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f24e500] [cursor=pointer]: 
+              - generic [ref=f24e501]:
+                - generic [ref=f24e502]: 1/
+                - generic [ref=f24e503]: "2"
+            - region [ref=f24e506]:
+              - generic [ref=f24e507]:
+                - button "Previous Slide" [ref=f24e508] [cursor=pointer]: 
+                - button "Next Slide" [ref=f24e509] [cursor=pointer]: 
+                - list [ref=f24e510]:
+                  - listitem [ref=f24e511]:
+                    - img "Foto" [ref=f24e512]:
+                      - figure [ref=f24e513]:
+                        - img "Foto" [ref=f24e515]
+                    - img "Vistas" [ref=f24e516]:
+                      - figure [ref=f24e517]:
+                        - img "Vistas" [ref=f24e519]
+                    - img "Mapa da zona" [ref=f24e520]:
+                      - img "Mapa de localização do imóvel" [ref=f24e524]
+            - text:  
+          - generic [ref=f24e525]:
+            - heading "Andar de moradia na Rua da Restauração, 175, São Victor" [level=2] [ref=f24e526] [cursor=pointer]
+            - generic [ref=f24e527]: 1.600€/mês
+            - generic [ref=f24e529]: Garagem incluída T4 260 m² área bruta 2 horas
+            - paragraph [ref=f24e531]: Andar moradia com quatro quartos, mais um interior, dois quartos de banho completos sala de jantar, sala de estar, duas varandas na frente e uma nas traseiras muito espaçosa virada para o jardim do imóvel, cozinha, lavandaria, escritório, garagem interior para um carro, lugar exterior para outro e jardim. Chão em made
+            - generic [ref=f24e532]:
+              - button "Contactar" [ref=f24e533] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e534] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e535]: Ver telefone
+              - button "" [ref=f24e536] [cursor=pointer]
+              - button "" [ref=f24e537] [cursor=pointer]
+        - article [ref=f24e538]:
+          - generic [ref=f24e539]:
+            - generic [ref=f24e541]:
+              - button "Abrir mapa" [ref=f24e543] [cursor=pointer]: 
+              - generic [ref=f24e544]:
+                - generic [ref=f24e545]: 1/
+                - generic [ref=f24e546]: "14"
+            - region [ref=f24e549]:
+              - generic [ref=f24e550]:
+                - button "Previous Slide" [ref=f24e551] [cursor=pointer]: 
+                - button "Next Slide" [ref=f24e552] [cursor=pointer]: 
+                - list [ref=f24e553]:
+                  - listitem [ref=f24e554]:
+                    - img "Cozinha" [ref=f24e555]:
+                      - figure [ref=f24e556]:
+                        - img "Cozinha" [ref=f24e558]
+                    - img "Divisão" [ref=f24e559]:
+                      - figure [ref=f24e560]:
+                        - img "Divisão" [ref=f24e562]
+                    - img "Mapa da zona" [ref=f24e563]:
+                      - img "Mapa de localização do imóvel" [ref=f24e567]
+            - text: 
+          - generic [ref=f24e568]:
+            - link [ref=f24e570] [cursor=pointer]:
+              - /url: /pro/guiberco/
+              - img "Guiberço - Sociedade de Mediação Imobiliária, Lda" [ref=f24e571]
+            - heading "Apartamento T2 na Rua Doutor João Antunes Guimarães s/n, Oliveira - São Paio - São Sebastião" [level=2] [ref=f24e572] [cursor=pointer]
+            - generic [ref=f24e573]: 1.100€/mês
+            - generic [ref=f24e575]: T2 100 m² área bruta 1º andar 3 horas
+            - paragraph [ref=f24e577]: Excelente oportunidade de arrendamento no coração da cidade de Guimarães! Apartamento T2+1, totalmente renovado, situado em pleno centro da cidade, numa zona habitacional tranquila e agradável, conciliando a comodidade de viver perto de tudo com a tranquilidade necessária no dia a dia. O imóvel destaca-se pelos seus
+            - generic [ref=f24e578]:
+              - button "Contactar" [ref=f24e579] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e580] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e581]: Ver telefone
+              - button "" [ref=f24e582] [cursor=pointer]
+              - button "" [ref=f24e583] [cursor=pointer]
+        - article [ref=f24e584]:
+          - generic [ref=f24e585]:
+            - generic [ref=f24e587]:
+              - button "Abrir mapa" [ref=f24e589] [cursor=pointer]: 
+              - generic [ref=f24e590]:
+                - generic [ref=f24e591]: 1/
+                - generic [ref=f24e592]: "14"
+            - region [ref=f24e595]:
+              - generic [ref=f24e596]:
+                - button "Previous Slide" [ref=f24e597] [cursor=pointer]: 
+                - button "Next Slide" [ref=f24e598] [cursor=pointer]: 
+                - list [ref=f24e599]:
+                  - listitem [ref=f24e600]:
+                    - img "Cozinha" [ref=f24e601]:
+                      - figure [ref=f24e602]:
+                        - img "Cozinha" [ref=f24e604]
+                    - img "Vistas" [ref=f24e605]:
+                      - figure [ref=f24e606]:
+                        - img "Vistas" [ref=f24e608]
+                    - img "Mapa da zona" [ref=f24e609]:
+                      - img "Mapa de localização do imóvel" [ref=f24e613]
+            - text: 
+          - generic [ref=f24e614]:
+            - heading "Apartamento T1 na Rua Maria Delfina Gomes, 4, Gualtar" [level=2] [ref=f24e615] [cursor=pointer]
+            - generic [ref=f24e616]: 800€/mês
+            - generic [ref=f24e618]: Garagem incluída T1 50 m² área bruta 1º andar com elevador 19 horas
+            - paragraph [ref=f24e620]: Apartamento T1 para arrendar, situado na rua Maria Delfina Gomes - Bons acessos (perto da Universidade do Minho, Braga Parque, centro de nanotecnologia, Escola de Medicina e Hospital de Braga) - Lugar de garagem com espaçoso - Cabe com facilidade um segmento E - Estacionamento em frente ao prédio - Ambiente muito calm
+            - generic [ref=f24e621]:
+              - button "Contactar" [ref=f24e622] [cursor=pointer]
+              - button "" [ref=f24e623] [cursor=pointer]
+              - button "" [ref=f24e624] [cursor=pointer]
+        - article "Espaço publicitário" [ref=f24e625]:
+          - generic [ref=f24e626]:
+            - paragraph [ref=f24e627]: Publicidade
+            - generic [ref=f24e629]:
+              - link [ref=f24e630] [cursor=pointer]:
+                - /url: https://tracking-api-use1.smartadserver.com/click?imgid=41742617&insid=13149712&pgid=376599&fmtid=22532&ckid=7688963824172421751&uii=5561027413512290152&acd=1794837438723&tmstp=5547692511&tgt=geop%3d0-EU-PT-03%3bope%3dr%3bgeo%3d0-EU-PT-03-XX-XX-XX-XX-XX-XX-XX%3btyp%3dhs%3bauth%3df%3blang%3dpt%3b%3b%24dt%3d1t%3b%24dt%3d1t%3b%24hc&systgt=%24qc%3d0%3b%24ql%3dUnknown%3b%24qpc%3d17500%3b%24qpc%3d17*%3b%24qpc%3d175*%3b%24qpc%3d1750*%3b%24qpc%3d17500*%3b%24qt%3d7_1993_2077t%3b%24dma%3d0%3b%24qo%3d8%3b%24b%3d16999%3b%24o%3d11100&envtype=0&imptype=0&gdpr=0&pgDomain=https%3a%2f%2fwww.idealista.pt%2farrendar-casas%2fbraga-distrito%2f&cappid=7688963824172421751&scriptid=99340&opid=8ec33780-652e-42a9-b140-6b9ef6046fd6&opdt=1794837438553&bldv=25280&srcfn=diff&reqid=536bc134-4cd1-446c-a283-dd5951b6f859&reqdt=1794837438553&oppid=8ec33780-652e-42a9-b140-6b9ef6046fd6&eqs=2b7ad1e8a7d88ea70452b41e5c5f1a3af273305d&go=https%3a%2f%2fwww.idealista.pt%2fcertificadoenergetico%2f%3fonsitead_type%3dselfPromotion%26onsitead_campaign%3dCertenerg%26onsitead_creation%3dgenerico%26onsitead_format%3d600x300%26onsitead_advertiser%3dsmartAdServer%26onsitead_general_placement%3dlistado
+              - generic [ref=f24e632] [cursor=pointer]
+        - article [ref=f24e634]:
+          - generic [ref=f24e635]:
+            - generic [ref=f24e637]:
+              - button "Abrir mapa" [ref=f24e639] [cursor=pointer]: 
+              - generic [ref=f24e640]:
+                - generic [ref=f24e641]: 1/
+                - generic [ref=f24e642]: "16"
+            - generic [ref=f24e648] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e650]
+            - text: 
+          - generic [ref=f24e652]:
+            - heading "Andar de moradia na Rua 24 de Junho, 53, Azurém" [level=2] [ref=f24e653] [cursor=pointer]
+            - generic [ref=f24e654]: 1.500€/mês
+            - generic [ref=f24e656]: T3 140 m² área bruta 20 horas
+            - paragraph [ref=f24e658]: Arrenda se duas habitações sendo uma delas T2 e outra T3. Habitaçoes novas com excelente localização. Valor referente ao T3. Valor de arrendamento do T2 é de 1100€ Agradeço contacto telefónico para opara mais informações.
+            - generic [ref=f24e659]:
+              - text: 
+              - button "contact phone" [ref=f24e660] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e661]: Ver telefone
+              - button "" [ref=f24e662] [cursor=pointer]
+              - button "" [ref=f24e663] [cursor=pointer]
+        - article [ref=f24e664]:
+          - generic [ref=f24e665]:
+            - generic [ref=f24e667]:
+              - generic [ref=f24e668]:
+                - button "Abrir planta" [ref=f24e669] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f24e670] [cursor=pointer]: 
+              - generic [ref=f24e671]:
+                - generic [ref=f24e672]: 1/
+                - generic [ref=f24e673]: "16"
+            - generic [ref=f24e679] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e681]
+            - text:  
+          - generic [ref=f24e683]:
+            - heading "Apartamento T2 na Rua Engenheiro Lagrifa Mendes, 12, Ferreiros e Gondizalves" [level=2] [ref=f24e684] [cursor=pointer]
+            - generic [ref=f24e685]: 900€/mês
+            - generic [ref=f24e687]: Garagem incluída T2 102 m² área bruta 8º andar com elevador 20 horas
+            - paragraph [ref=f24e689]: "T2 com lugar de garagem para arrendar Este apartamento de 87 m2, fica no 8º andar de um prédio com elevador, tendo vistas desafogadas e muita luz natural. É composto por: - hall de entrada; - sala; - cozinha equipada: fogão, forno, exaustor, máquina da louça, máquina de lavar roupa e frigorífico; - despensa; - casa"
+            - generic [ref=f24e690]:
+              - button "Contactar" [ref=f24e691] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e692] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e693]: Ver telefone
+              - button "" [ref=f24e694] [cursor=pointer]
+              - button "" [ref=f24e695] [cursor=pointer]
+        - article [ref=f24e696]:
+          - generic [ref=f24e697]:
+            - generic [ref=f24e699]:
+              - button "Abrir mapa" [ref=f24e701] [cursor=pointer]: 
+              - generic [ref=f24e702]:
+                - generic [ref=f24e703]: 1/
+                - generic [ref=f24e704]: "28"
+            - generic [ref=f24e710] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e712]
+            - text: 
+          - generic [ref=f24e714]:
+            - heading "Apartamento T4 na Rua Germão Galharde, 26, São Victor" [level=2] [ref=f24e715] [cursor=pointer]
+            - generic [ref=f24e716]: 1.650€/mês
+            - generic [ref=f24e718]: Garagem incluída T4 170 m² área bruta 5º andar com elevador 22 horas
+            - paragraph [ref=f24e720]: Amplo T4 Lamaçães, mobilado, cozinha equipada e mobilada, garagem box eletrificada ao apt, para 2 carros, aquecimento e aspiração central, 2 WCs Completos, 5º andar frente, prédio com 2 elevadores, bem servido de comércio, serviços, escolas e transportes públicos, vistas desafogadas do Bom Jesus e Sameiro, disponível d
+            - generic [ref=f24e721]:
+              - button "Contactar" [ref=f24e722] [cursor=pointer]
+              - button "" [ref=f24e723] [cursor=pointer]
+              - button "" [ref=f24e724] [cursor=pointer]
+        - article [ref=f24e725]:
+          - generic [ref=f24e726]:
+            - generic [ref=f24e728]:
+              - button "Abrir mapa" [ref=f24e730] [cursor=pointer]: 
+              - generic [ref=f24e731]:
+                - generic [ref=f24e732]: 1/
+                - generic [ref=f24e733]: "26"
+            - generic [ref=f24e739] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e741]
+            - text: 
+          - generic [ref=f24e743]:
+            - heading "Apartamento T1 na Rua de São Torcato, 490, Azurém" [level=2] [ref=f24e744] [cursor=pointer]
+            - generic [ref=f24e745]: 900€/mês
+            - generic [ref=f24e747]: T1 78 m² área bruta 3º andar com elevador Ontem
+            - paragraph [ref=f24e749]: Apartamento T1 Novo a Estrear em Azurém | Totalmente Mobilado e Equipado | Garagem e Arrecadação Excelente apartamento T1, novo a estrear, localizado numa zona privilegiada em Azurém, Guimarães, mesmo junto às Residências Universitárias e a poucos minutos a pé do histórico Castelo de Guimarães e do centro da cidade.
+            - generic [ref=f24e750]:
+              - button "Contactar" [ref=f24e751] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e752] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e753]: Ver telefone
+              - button "" [ref=f24e754] [cursor=pointer]
+              - button "" [ref=f24e755] [cursor=pointer]
+        - article [ref=f24e756]:
+          - generic [ref=f24e757]:
+            - generic [ref=f24e759]:
+              - button "Abrir mapa" [ref=f24e761] [cursor=pointer]: 
+              - generic [ref=f24e762]:
+                - generic [ref=f24e763]: 1/
+                - generic [ref=f24e764]: "13"
+            - generic [ref=f24e770] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e772]
+            - text: 
+          - generic [ref=f24e774]:
+            - heading "Apartamento T1 em R. Conselheiro Januário, 175, São Vicente" [level=2] [ref=f24e775] [cursor=pointer]
+            - generic [ref=f24e776]: 1.000€/mês
+            - generic [ref=f24e778]: T1 51 m² área bruta 3º andar com elevador Ontem
+            - paragraph [ref=f24e780]: Um espaço acolhedor e funcional, equipado com cozinha, camas e arrumação para vestuário e objetos pessoais. Dispõe de casa de banho completa e comodidades para o quotidiano. A caução tem o mesmo montante da renda mensal.
+            - generic [ref=f24e781]:
+              - button "Contactar" [ref=f24e782] [cursor=pointer]
+              - button "" [ref=f24e783] [cursor=pointer]
+              - button "" [ref=f24e784] [cursor=pointer]
+        - article [ref=f24e785]:
+          - generic [ref=f24e786]:
+            - generic [ref=f24e788]:
+              - button "Abrir mapa" [ref=f24e790] [cursor=pointer]: 
+              - generic [ref=f24e791]:
+                - generic [ref=f24e792]: 1/
+                - generic [ref=f24e793]: "7"
+            - generic [ref=f24e799] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e801]
+            - text: 
+          - generic [ref=f24e803]:
+            - heading "Apartamento T1 em R. Maria de Sousa, 9, São Vicente" [level=2] [ref=f24e804] [cursor=pointer]
+            - generic [ref=f24e805]: 1.100€/mês
+            - generic [ref=f24e807]: T1 47 m² área bruta 2º andar com elevador Ontem
+            - paragraph [ref=f24e809]: Apartamento confortável e mobilado, com cozinha, camas e espaço para manter os pertences organizados. A casa de banho completa oferece praticidade e comodidade. A caução corresponde ao valor de uma mensalidade de renda.
+            - generic [ref=f24e810]:
+              - button "Contactar" [ref=f24e811] [cursor=pointer]
+              - button "" [ref=f24e812] [cursor=pointer]
+              - button "" [ref=f24e813] [cursor=pointer]
+        - article [ref=f24e814]:
+          - generic [ref=f24e815]:
+            - generic [ref=f24e817]:
+              - button "Abrir mapa" [ref=f24e819] [cursor=pointer]: 
+              - generic [ref=f24e820]:
+                - generic [ref=f24e821]: 1/
+                - generic [ref=f24e822]: "50"
+            - generic [ref=f24e828] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e830]
+            - text: 
+          - generic [ref=f24e832]:
+            - link [ref=f24e834] [cursor=pointer]:
+              - /url: /pro/remax-move/
+              - img "RE/MAX Move" [ref=f24e835]
+            - heading "Apartamento T0 na Travessa da Fábrica, São Victor" [level=2] [ref=f24e836] [cursor=pointer]
+            - generic [ref=f24e837]: 750€/mês
+            - generic [ref=f24e839]: T0 52 m² área bruta 2º andar com elevador 14 nov
+            - paragraph [ref=f24e841]: "Apartamento T0 Novo, em S. Victor, condomínio fechado com piscina e ginásio. – Modernidade, Conforto Premium, Luminosidade e Excelente Localização. Apartamento T0, para arrendamento, em S. Vitor Braga, condomínio Acrescentar, Nas áreas comuns contem: piscina, sala de estar, ginásio, área exterior lounge. A cozinha é"
+            - generic [ref=f24e842]:
+              - button "Contactar" [ref=f24e843] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e844] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e845]: Ver telefone
+              - button "" [ref=f24e846] [cursor=pointer]
+              - button "" [ref=f24e847] [cursor=pointer]
+        - article [ref=f24e848]:
+          - generic [ref=f24e849]:
+            - generic [ref=f24e851]:
+              - button "Abrir mapa" [ref=f24e853] [cursor=pointer]: 
+              - generic [ref=f24e854]:
+                - generic [ref=f24e855]: 1/
+                - generic [ref=f24e856]: "26"
+            - generic [ref=f24e862] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e864]
+            - text: 
+          - generic [ref=f24e866]:
+            - heading "Apartamento T3 na Rua Coronel Albino Rodrigues, 66, São José de São Lázaro e São João do Souto" [level=2] [ref=f24e867] [cursor=pointer]
+            - generic [ref=f24e868]: 1.050€/mês
+            - generic [ref=f24e870]: Garagem incluída T3 120 m² área bruta 2º andar sem elevador 14 nov
+            - paragraph [ref=f24e872]: DISPONÍVEL. Quinta da Capela - Apartamento T3 Soalheiro com garagem - Valor de 1.050, 00€ mensais. Silencioso, vista livre (frente e trás), roupeiros embutidos e arrumos. Cozinha completamente equipada (placa, forno, microondas, combinado, maquina de lavar loiça e roupa). 2 casas de banho completas. Varanda na sala/c
+            - generic [ref=f24e873]:
+              - button "Contactar" [ref=f24e874] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e875] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e876]: Ver telefone
+              - button "" [ref=f24e877] [cursor=pointer]
+              - button "" [ref=f24e878] [cursor=pointer]
+        - article [ref=f24e879]:
+          - generic [ref=f24e880]:
+            - generic [ref=f24e882]:
+              - button "Abrir mapa" [ref=f24e884] [cursor=pointer]: 
+              - generic [ref=f24e885]:
+                - generic [ref=f24e886]: 1/
+                - generic [ref=f24e887]: "17"
+            - generic [ref=f24e893] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e895]
+            - text: 
+          - generic [ref=f24e897]:
+            - heading "Apartamento T2 na Rua Engenheiro Losa Faria, 151 a, Esposende" [level=2] [ref=f24e898] [cursor=pointer]
+            - generic [ref=f24e899]: 750€/mês
+            - generic [ref=f24e901]: T2 100 m² área bruta 2º andar sem elevador 14 nov
+            - paragraph [ref=f24e903]: "Apartamento T2 Duplex localizado no centro da cidade. Totalmente mobilado e equipado. Com duas casas de banho; Com varanda, lareira e roupeiros; Tem lugar de garagem na cave. Categoria Energética: C ref: 4204."
+            - generic [ref=f24e904]:
+              - button "Contactar" [ref=f24e905] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e906] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e907]: Ver telefone
+              - button "" [ref=f24e908] [cursor=pointer]
+              - button "" [ref=f24e909] [cursor=pointer]
+        - article [ref=f24e910]:
+          - generic [ref=f24e911]:
+            - generic [ref=f24e913]:
+              - button "Abrir mapa" [ref=f24e915] [cursor=pointer]: 
+              - generic [ref=f24e916]:
+                - generic [ref=f24e917]: 1/
+                - generic [ref=f24e918]: "16"
+            - generic [ref=f24e924] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e926]
+            - text: 
+          - generic [ref=f24e928]:
+            - heading "Apartamento T3 na Rua dos Sapatelos, 52, São Victor" [level=2] [ref=f24e929] [cursor=pointer]
+            - generic [ref=f24e930]: 920€/mês
+            - generic [ref=f24e932]: Garagem incluída T3 112 m² área bruta 3º andar com elevador 14 nov
+            - paragraph [ref=f24e934]: "Apartamento composto por cozinha equipada, sala com lareira, 3 quartos e 2 casas de banho. Garagem Fechada. Vista sobre o Parque das Sete Fontes Licença de utilização nº 822/2002 Condições de arrendamento: - Contrato de 1 ano; - Fiadores; - Rendas Adiantadas - Caução - Contrato de trabalho - Recibos de vencimento -"
+            - generic [ref=f24e935]:
+              - button "Contactar" [ref=f24e936] [cursor=pointer]
+              - button "" [ref=f24e937] [cursor=pointer]
+              - button "" [ref=f24e938] [cursor=pointer]
+        - article [ref=f24e939]:
+          - generic [ref=f24e940]:
+            - generic [ref=f24e942]:
+              - button "Abrir mapa" [ref=f24e944] [cursor=pointer]: 
+              - generic [ref=f24e945]:
+                - generic [ref=f24e946]: 1/
+                - generic [ref=f24e947]: "20"
+            - generic [ref=f24e953] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e955]
+            - text: 
+          - generic [ref=f24e957]:
+            - heading "Apartamento T3 em Esposende" [level=2] [ref=f24e958] [cursor=pointer]
+            - generic [ref=f24e959]: 900€/mês
+            - generic [ref=f24e961]: T3 150 m² área bruta com elevador 14 nov
+            - paragraph [ref=f24e963]: T3 mobilado em condomínio fechado com piscina interior aquecida - Centro da cidade Excelente apartamento T3 inserido em condomínio fechado, localizado em zona central da cidade, com ótimos acessos e proximidade a comércio, serviços, escolas e transportes. O imóvel encontra-se mobilado em bom estado de conservação, de
+            - generic [ref=f24e964]:
+              - button "Contactar" [ref=f24e965] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e966] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e967]: Ver telefone
+              - button "" [ref=f24e968] [cursor=pointer]
+              - button "" [ref=f24e969] [cursor=pointer]
+        - article [ref=f24e970]:
+          - generic [ref=f24e971]:
+            - generic [ref=f24e973]:
+              - button "Abrir mapa" [ref=f24e975] [cursor=pointer]: 
+              - generic [ref=f24e976]:
+                - generic [ref=f24e977]: 1/
+                - generic [ref=f24e978]: "12"
+            - generic [ref=f24e984] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e986]
+            - text: 
+          - generic [ref=f24e988]:
+            - heading "Apartamento T2 na Rua Cónego Doutor Manuel Faria, 649, Azurém" [level=2] [ref=f24e989] [cursor=pointer]
+            - generic [ref=f24e990]: 850€/mês
+            - generic [ref=f24e992]: Garagem incluída T2 118 m² área bruta 4º andar com elevador 14 nov
+            - paragraph [ref=f24e994]: Arrenda-se apartamento T2 por 850€ em Azurém à frente da Universidade do Minho com área bruta de 118 m². Está num andar intermédio. O apartamento tem dois quartos, não suites, com armários embutidos e duas casas de banho completas. Sala, cozinha e lavandaria. Varanda ao longo da casa. Divisões amplas com bastante lu
+            - generic [ref=f24e995]:
+              - button "Contactar" [ref=f24e996] [cursor=pointer]
+              - button "" [ref=f24e997] [cursor=pointer]
+              - button "" [ref=f24e998] [cursor=pointer]
+        - article [ref=f24e999]:
+          - generic [ref=f24e1000]:
+            - generic [ref=f24e1002]:
+              - button "Abrir mapa" [ref=f24e1004] [cursor=pointer]: 
+              - generic [ref=f24e1005]:
+                - generic [ref=f24e1006]: 1/
+                - generic [ref=f24e1007]: "6"
+            - generic [ref=f24e1013] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1015]
+            - text: 
+          - generic [ref=f24e1017]:
+            - link [ref=f24e1019] [cursor=pointer]:
+              - /url: /pro/viver-nas-ondas/
+              - img "Viver nas Ondas - Mediação Imobiliária" [ref=f24e1020]
+            - heading "Apartamento T1 em São Vicente" [level=2] [ref=f24e1021] [cursor=pointer]
+            - generic [ref=f24e1022]: 850€/mês
+            - generic [ref=f24e1024]: T1 53 m² área bruta com elevador 13 nov
+            - paragraph [ref=f24e1026]: Viva no centro da cidade sem abdicar da tranquilidade. Este T1 no 1° andar de um prédio novo combina sofisticação, conforto e sustentabilidade. Dispõe de open-space com cozinha equipada, excelente exposição solar em duas frentes, varandas e acabamentos premium. O edifício reabilitado alia o charme clássico ao conforto
+            - generic [ref=f24e1027]:
+              - button "Contactar" [ref=f24e1028] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1029] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1030]: Ver telefone
+              - button "" [ref=f24e1031] [cursor=pointer]
+              - button "" [ref=f24e1032] [cursor=pointer]
+        - article [ref=f24e1033]:
+          - generic [ref=f24e1034]:
+            - generic [ref=f24e1036]:
+              - button "Abrir mapa" [ref=f24e1038] [cursor=pointer]: 
+              - generic [ref=f24e1039]:
+                - generic [ref=f24e1040]: 1/
+                - generic [ref=f24e1041]: "3"
+            - generic [ref=f24e1047] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1049]
+            - text: 
+          - generic [ref=f24e1051]:
+            - heading "Apartamento T1 na Rua de sta Margarida, 44, São Victor" [level=2] [ref=f24e1052] [cursor=pointer]
+            - generic [ref=f24e1053]: 750€/mês
+            - generic [ref=f24e1055]: T1 60 m² área bruta 4º andar sem elevador 13 nov
+            - paragraph [ref=f24e1057]: Arrendo T1 equipado e mobilado no cento da cidade, perto de serviços e meio de transportes. Disponível apartir de Dezembro.
+            - generic [ref=f24e1058]:
+              - button "Contactar" [ref=f24e1059] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1060] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1061]: Ver telefone
+              - button "" [ref=f24e1062] [cursor=pointer]
+              - button "" [ref=f24e1063] [cursor=pointer]
+        - article [ref=f24e1064]:
+          - generic [ref=f24e1065]:
+            - generic [ref=f24e1067]:
+              - button "Abrir mapa" [ref=f24e1069] [cursor=pointer]: 
+              - generic [ref=f24e1070]:
+                - generic [ref=f24e1071]: 1/
+                - generic [ref=f24e1072]: "1"
+            - generic [ref=f24e1078] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1080]
+            - text: 
+          - generic [ref=f24e1082]:
+            - heading "Andar de moradia na Rua Direita, 72, Lemenhe - Mouquim - Jesufrei" [level=2] [ref=f24e1083] [cursor=pointer]
+            - generic [ref=f24e1084]: 600€/mês
+            - generic [ref=f24e1086]: Garagem incluída T1 70 m² área bruta lote de 20 m² 13 nov
+            - paragraph [ref=f24e1088]: Disponível após dia 10 dezembro a.
+            - generic [ref=f24e1089]:
+              - button "Contactar" [ref=f24e1090] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1091] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1092]: Ver telefone
+              - button "" [ref=f24e1093] [cursor=pointer]
+              - button "" [ref=f24e1094] [cursor=pointer]
+        - article "Espaço publicitário"
+        - article [ref=f24e1095]:
+          - generic [ref=f24e1096]:
+            - generic [ref=f24e1098]:
+              - generic [ref=f24e1099]:
+                - button "Abrir vídeo" [ref=f24e1100] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f24e1101] [cursor=pointer]: 
+              - generic [ref=f24e1102]:
+                - generic [ref=f24e1103]: 1/
+                - generic [ref=f24e1104]: "5"
+            - generic [ref=f24e1110] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1112]
+            - text:  
+          - generic [ref=f24e1114]:
+            - heading "Moradia independente na Rua Passos Manuel, 397, Calendário, Vila Nova de Famalicão e Calendário" [level=2] [ref=f24e1115] [cursor=pointer]
+            - generic [ref=f24e1116]: 700€/mês
+            - generic [ref=f24e1118]: T1 100 m² área bruta 13 nov
+            - paragraph [ref=f24e1120]: "T1 SEMI MOBILADO PARA ARRENDAMENTO – ENTRADA IMEDIATA Disponível para entrada imediata, este T1 encontra-se semi-mobilado e foi recentemente remodelado, estando tudo em bom estado e a funcionar. Características do imóvel: * 1 quarto * 1 casa de banho * Semi-mobilado * Remodelação recente * Equipamentos e instala"
+            - generic [ref=f24e1121]:
+              - button "Contactar" [ref=f24e1122] [cursor=pointer]
+              - button "" [ref=f24e1123] [cursor=pointer]
+              - button "" [ref=f24e1124] [cursor=pointer]
+        - article [ref=f24e1125]:
+          - generic [ref=f24e1126]:
+            - generic [ref=f24e1128]:
+              - button "Abrir mapa" [ref=f24e1130] [cursor=pointer]: 
+              - generic [ref=f24e1131]:
+                - generic [ref=f24e1132]: 1/
+                - generic [ref=f24e1133]: "2"
+            - generic [ref=f24e1139] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1141]
+            - text: 
+          - generic [ref=f24e1143]:
+            - link [ref=f24e1145] [cursor=pointer]:
+              - /url: /pro/haconchego-imobiliaria/
+              - img "Haconchego Imobiliária" [ref=f24e1146]
+            - heading "Apartamento T2 na Rua Bartolomeu Dias, 41, Arcozelo" [level=2] [ref=f24e1147] [cursor=pointer]
+            - generic [ref=f24e1148]: 800€/mês
+            - generic [ref=f24e1150]: T2 97 m² área bruta 2º andar com elevador 13 nov
+            - paragraph [ref=f24e1152]: Apartamento T2 para arrendamento em Arcozelo, Barcelos Apresentamos este apartamento T2, com 97 m² de área útil, situado no 2. º andar de um edifício com elevador, em Arcozelo, Barcelos. Pronto a habitar, este apartamento destaca-se pelas suas áreas generosas, funcionalidade e localização numa zona residencial da cid
+            - generic [ref=f24e1153]:
+              - button "Contactar" [ref=f24e1154] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1155] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1156]: Ver telefone
+              - button "" [ref=f24e1157] [cursor=pointer]
+              - button "" [ref=f24e1158] [cursor=pointer]
+        - article [ref=f24e1159]:
+          - generic [ref=f24e1160]:
+            - generic [ref=f24e1162]:
+              - generic [ref=f24e1163]:
+                - button "Abrir planta" [ref=f24e1164] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f24e1165] [cursor=pointer]: 
+              - generic [ref=f24e1166]:
+                - generic [ref=f24e1167]: 1/
+                - generic [ref=f24e1168]: "17"
+            - generic [ref=f24e1174] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1176]
+            - text:  
+          - generic [ref=f24e1178]:
+            - heading "Apartamento T3 na Rua Flávia Estefânia Guimarães, 54, Zona Norte, Vila Nova de Famalicão e Calendário" [level=2] [ref=f24e1179] [cursor=pointer]
+            - generic [ref=f24e1180]: 1.750€/mês
+            - generic [ref=f24e1182]: Garagem incluída T3 130 m² área bruta 1º andar com elevador 13 nov
+            - paragraph [ref=f24e1184]: Apartamento T3 para Arrendar – Vila Nova de Famalicão/ BIOTALVAI Descubra um apartamento onde o conforto, a elegância e a qualidade de construção se unem para proporcionar uma experiência de habitação única. Localizado no prestigiado empreendimento BioTalvai, junto ao centro de Vila Nova de Famalicão, este magnífico
+            - generic [ref=f24e1185]:
+              - button "Contactar" [ref=f24e1186] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1187] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1188]: Ver telefone
+              - button "" [ref=f24e1189] [cursor=pointer]
+              - button "" [ref=f24e1190] [cursor=pointer]
+        - article [ref=f24e1191]:
+          - generic [ref=f24e1192]:
+            - generic [ref=f24e1194]:
+              - generic [ref=f24e1195]:
+                - button "Abrir planta" [ref=f24e1196] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f24e1197] [cursor=pointer]: 
+              - generic [ref=f24e1198]:
+                - generic [ref=f24e1199]: 1/
+                - generic [ref=f24e1200]: "18"
+            - generic [ref=f24e1206] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1208]
+            - text:  
+          - generic [ref=f24e1210]:
+            - heading "Apartamento T1 na Rua Cruz de Pedra, 46, Maximinos - Sé - Cividade" [level=2] [ref=f24e1211] [cursor=pointer]
+            - generic [ref=f24e1212]: 750€/mês
+            - generic [ref=f24e1214]: T1 50 m² área bruta 1º andar sem elevador 12 nov
+            - paragraph [ref=f24e1216]: Apartamento centro da cidade, a 200m da Sé de braga, recentemente remodelado, mobilado e equipado. Possui um quarto, cozinha e sala em open space e casa de banho. Aceito longas e curtas estadias, para curtas consultar valores.
+            - generic [ref=f24e1217]:
+              - button "Contactar" [ref=f24e1218] [cursor=pointer]
+              - button "" [ref=f24e1219] [cursor=pointer]
+              - button "" [ref=f24e1220] [cursor=pointer]
+        - article [ref=f24e1221]:
+          - generic [ref=f24e1222]:
+            - generic [ref=f24e1224]:
+              - generic [ref=f24e1225]:
+                - button "Abrir planta" [ref=f24e1226] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f24e1227] [cursor=pointer]: 
+              - generic [ref=f24e1228]:
+                - generic [ref=f24e1229]: 1/
+                - generic [ref=f24e1230]: "21"
+            - generic [ref=f24e1236] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1238]
+            - text:  
+          - generic [ref=f24e1240]:
+            - link [ref=f24e1242] [cursor=pointer]:
+              - /url: /pro/luz-consultoria/
+              - img "Luz Business" [ref=f24e1243]
+            - heading "Apartamento T3 na Avenida General Norton de Matos, São Vicente" [level=2] [ref=f24e1244] [cursor=pointer]
+            - generic [ref=f24e1245]: 1.175€/mês
+            - generic [ref=f24e1247]: Garagem incluída T3 136 m² área bruta 5º andar com elevador 12 nov
+            - paragraph [ref=f24e1249]: T3 no coração da cidade de Braga! Com 3 quartos e duas casas de banho completas. Uma sala ampla com cozinha totalmente remodelada, moderna e equipada. Mobilado em todas as áreas, o conforto e a qualidade de uma habitação familiar. Espaços com luminosidade natural e vistas panoramicas. Aquecimento individual com recup
+            - generic [ref=f24e1250]:
+              - button "Contactar" [ref=f24e1251] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1252] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1253]: Ver telefone
+              - button "" [ref=f24e1254] [cursor=pointer]
+              - button "" [ref=f24e1255] [cursor=pointer]
+        - article [ref=f24e1256]:
+          - generic [ref=f24e1257]:
+            - generic [ref=f24e1259]:
+              - button "Abrir mapa" [ref=f24e1261] [cursor=pointer]: 
+              - generic [ref=f24e1262]:
+                - generic [ref=f24e1263]: 1/
+                - generic [ref=f24e1264]: "15"
+            - generic [ref=f24e1270] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1272]
+            - text: 
+          - generic [ref=f24e1274]:
+            - heading "Apartamento T2 na Rua de São João, 21, São José de São Lázaro e São João do Souto" [level=2] [ref=f24e1275] [cursor=pointer]
+            - generic [ref=f24e1276]: 1.700€/mês
+            - generic [ref=f24e1278]: T2 195 m² área bruta 3º andar com elevador 12 nov
+            - paragraph [ref=f24e1280]: Apartamento T2 + 1 na Rua de S. João Localizado no Centro Histórico, é um apartamento amplo, com 2 quartos e um espaço para escritório ou área de lazer. A sala, ampla e luminosa, integra a cozinha em open space e oferece espaço para criar zona de estar e outra de refeições. A cozinha está totalmente equipada, com f
+            - generic [ref=f24e1281]:
+              - button "Contactar" [ref=f24e1282] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1283] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1284]: Ver telefone
+              - button "" [ref=f24e1285] [cursor=pointer]
+              - button "" [ref=f24e1286] [cursor=pointer]
+        - article [ref=f24e1287]:
+          - generic [ref=f24e1288]:
+            - generic [ref=f24e1290]:
+              - button "Abrir mapa" [ref=f24e1292] [cursor=pointer]: 
+              - generic [ref=f24e1293]:
+                - generic [ref=f24e1294]: 1/
+                - generic [ref=f24e1295]: "18"
+            - generic [ref=f24e1301] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1303]
+            - text: 
+          - generic [ref=f24e1305]:
+            - link [ref=f24e1307] [cursor=pointer]:
+              - /url: /pro/remax-move-conquistador/
+              - img "RE/MAX Move Conquistador" [ref=f24e1308]
+            - heading "Apartamento T4 na Avenida São Gonçalo, Creixomil" [level=2] [ref=f24e1309] [cursor=pointer]
+            - generic [ref=f24e1310]: 1.400€/mês
+            - generic [ref=f24e1312]: T4 171 m² área bruta 1º andar com elevador 12 nov
+            - paragraph [ref=f24e1314]: Fabuloso apartamento T4; Totalmente mobilado e equipado; Excelentes áreas; Aquecimento central; Varanda com vista para a encosta da Penha; Fabuloso terraço; Garagem fechada; Excelente localização; Situado próximo do Estádio do V.S.C., do Hospital Nossa Senhora da Oliveira; Junto de vários tipos de comércio e serviços;
+            - generic [ref=f24e1315]:
+              - button "Contactar" [ref=f24e1316] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1317] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1318]: Ver telefone
+              - button "" [ref=f24e1319] [cursor=pointer]
+              - button "" [ref=f24e1320] [cursor=pointer]
+        - article [ref=f24e1321]:
+          - generic [ref=f24e1322]:
+            - generic [ref=f24e1324]:
+              - button "Abrir mapa" [ref=f24e1326] [cursor=pointer]: 
+              - generic [ref=f24e1327]:
+                - generic [ref=f24e1328]: 1/
+                - generic [ref=f24e1329]: "20"
+            - generic [ref=f24e1335] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1337]
+            - text: 
+          - generic [ref=f24e1339]:
+            - link [ref=f24e1341] [cursor=pointer]:
+              - /url: /pro/a-sua-imobiliaria/
+              - img "a SUA Imobiliária" [ref=f24e1342]
+            - heading "Apartamento T2 na Praça Paulo Vidal, 7, São Victor" [level=2] [ref=f24e1343] [cursor=pointer]
+            - generic [ref=f24e1344]:
+              - generic [ref=f24e1345]: 850€/mês
+              - generic [ref=f24e1346]: 900 € 6%
+            - generic [ref=f24e1347]: Garagem incluída T2 106 m² área bruta 3º andar 4 horas
+            - paragraph [ref=f24e1349]: "ARRENDAMENTO Arrenda-se apartamento T2 mobilado e equipado na freguesia de São Victor, concelho de Braga. Características: Hall de entrada amplo com aparador; Cozinha mobilada e equipada; Lavandaria; Sala com salamandra e acesso à varanda; 2 quartos (apenas 1 dos quartos está mobilado); WC completo com banheira e s"
+            - generic [ref=f24e1350]:
+              - button "Contactar" [ref=f24e1351] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1352] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1353]: Ver telefone
+              - button "" [ref=f24e1354] [cursor=pointer]
+              - button "" [ref=f24e1355] [cursor=pointer]
+        - article [ref=f24e1356]:
+          - generic [ref=f24e1357]:
+            - generic [ref=f24e1359]:
+              - generic [ref=f24e1360]:
+                - button "Abrir planta" [ref=f24e1361] [cursor=pointer]: 
+                - button "Abrir visita virtual" [ref=f24e1362] [cursor=pointer]: 
+                - button "Abrir vídeo" [ref=f24e1363] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f24e1364] [cursor=pointer]: 
+              - generic [ref=f24e1365]:
+                - generic [ref=f24e1366]: 1/
+                - generic [ref=f24e1367]: "31"
+            - generic [ref=f24e1373] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1375]
+            - text:    
+          - generic [ref=f24e1377]:
+            - link [ref=f24e1379] [cursor=pointer]:
+              - /url: /pro/idealista-zome/
+              - img "Zome Braga" [ref=f24e1380]
+            - heading "Apartamento T0 na Rua da Fábrica, São Victor" [level=2] [ref=f24e1381] [cursor=pointer]
+            - generic [ref=f24e1382]: 850€/mês
+            - generic [ref=f24e1384]: Garagem incluída T0 36 m² área bruta 5º andar com elevador
+            - paragraph [ref=f24e1386]: "Identificação do imóvel: ZMPT591567 Apartamento T0 S. Victor, em condomínio fechado com piscina e ginásio. – Modernidade, Conforto Premium, Luminosidade e Excelente Localização. Apartamento T0, para arrendamento, em S. Vitor Braga, condomínio Acrescentar, Nas áreas comuns contem: piscina, sala de estar, ginásio, área"
+            - generic [ref=f24e1387]:
+              - button "Contactar" [ref=f24e1388] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1389] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1390]: Ver telefone
+              - button "" [ref=f24e1391] [cursor=pointer]
+              - button "" [ref=f24e1392] [cursor=pointer]
+        - article [ref=f24e1393]:
+          - generic [ref=f24e1394]:
+            - generic [ref=f24e1396]:
+              - button "Abrir mapa" [ref=f24e1398] [cursor=pointer]: 
+              - generic [ref=f24e1399]:
+                - generic [ref=f24e1400]: 1/
+                - generic [ref=f24e1401]: "39"
+            - generic [ref=f24e1407] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1409]
+            - text: 
+          - generic [ref=f24e1411]:
+            - heading "Apartamento T3 na Rua do Senhor da Agonia, 32, Antas e Abade de Vermoim" [level=2] [ref=f24e1412] [cursor=pointer]
+            - generic [ref=f24e1413]: 1.550€/mês
+            - generic [ref=f24e1415]: Garagem incluída T3 150 m² área bruta 3º andar com elevador 2 horas
+            - paragraph [ref=f24e1417]: Apartamento T3 totalmente equipado e todo mobilado, com garagem fechada e portão automático, AC e aquecimento central. Situado numa excelente localização, junto ao Parque da Cidade. Uma oportunidade para quem procura conforto, funcionalidade e qualidade de vida, com proximidade a espaços verdes, comércio, serviços e a
+            - generic [ref=f24e1418]:
+              - button "Contactar" [ref=f24e1419] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1420] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1421]: Ver telefone
+              - button "" [ref=f24e1422] [cursor=pointer]
+              - button "" [ref=f24e1423] [cursor=pointer]
+        - article [ref=f24e1424]:
+          - generic [ref=f24e1425]:
+            - generic [ref=f24e1427]:
+              - generic [ref=f24e1428]:
+                - button "Abrir planta" [ref=f24e1429] [cursor=pointer]: 
+                - button "Abrir vídeo" [ref=f24e1430] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f24e1431] [cursor=pointer]: 
+              - generic [ref=f24e1432]:
+                - generic [ref=f24e1433]: 1/
+                - generic [ref=f24e1434]: "33"
+            - generic [ref=f24e1440] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1442]
+            - text:   
+          - generic [ref=f24e1444]:
+            - link [ref=f24e1446] [cursor=pointer]:
+              - /url: /pro/norbertofreitas-remax-united2/
+              - img "Norberto Freitas - Remax United 2" [ref=f24e1447]
+            - heading "Apartamento T3 na Rua das Forças Armadas, 160, São José de São Lázaro e São João do Souto" [level=2] [ref=f24e1448] [cursor=pointer]
+            - generic [ref=f24e1449]: 1.250€/mês
+            - generic [ref=f24e1451]: T3 115 m² área bruta 2º andar com elevador
+            - generic [ref=f24e1452]:
+              - paragraph [ref=f24e1453]: Arrendamento disponível!
+              - paragraph [ref=f24e1454]: Apartamento T3 localizado numa ótima zona de Braga, em São Lázaro, junto à Avenida da Liberdade e à Escola Alberto Sampaio. Com uma localização privilegiada, este imóvel oferece a combinação perfeita entre conforto, centralidade e qualidade de vida, permitindo acesso rápido a comércio, serviços, escolas, transportes p
+            - generic [ref=f24e1455]: Em exclusivo
+            - generic [ref=f24e1457]:
+              - button "Contactar" [ref=f24e1458] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1459] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1460]: Ver telefone
+              - button "" [ref=f24e1461] [cursor=pointer]
+              - button "" [ref=f24e1462] [cursor=pointer]
+        - article [ref=f24e1463]:
+          - generic [ref=f24e1464]:
+            - generic [ref=f24e1466]:
+              - generic [ref=f24e1467]:
+                - button "Abrir planta" [ref=f24e1468] [cursor=pointer]: 
+                - button "Abrir visita virtual" [ref=f24e1469] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f24e1470] [cursor=pointer]: 
+              - generic [ref=f24e1471]:
+                - generic [ref=f24e1472]: 1/
+                - generic [ref=f24e1473]: "23"
+            - generic [ref=f24e1479] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f24e1481]
+            - text:   
+          - generic [ref=f24e1483]:
+            - link [ref=f24e1485] [cursor=pointer]:
+              - /url: /pro/nook/
+              - img "NOOK - PROPERTIES" [ref=f24e1486]
+            - heading "Apartamento T1 na Rua Dom Pedro V, São Victor" [level=2] [ref=f24e1487] [cursor=pointer]
+            - generic [ref=f24e1488]:
+              - generic [ref=f24e1489]: 690€/mês
+              - generic [ref=f24e1490]: 750 € 8%
+            - generic [ref=f24e1491]: T1 50 m² área bruta 1º andar sem elevador
+            - paragraph [ref=f24e1493]: Estúdio Moderno no Coração de Braga - Arrendamento Anual Descobre este encantador estúdio mobilado situado na prestigiada Rua Dom Pedro V, no centro histórico de Braga. Com 50 m² de área bruta, este espaço oferece o conforto e a praticidade que procuras para uma estadia de qualidade. Totalmente equipado e mobiliado co
+            - generic [ref=f24e1494]:
+              - button "Contactar" [ref=f24e1495] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f24e1496] [cursor=pointer]:
+                - text: 
+                - generic [ref=f24e1497]: Ver telefone
+              - button "" [ref=f24e1498] [cursor=pointer]
+              - button "" [ref=f24e1499] [cursor=pointer]
+        - generic [ref=f24e1500]:
+          - paragraph [ref=f24e1501]: Preço médio nesta zona 11,85 eur/m²
+          - link [ref=f24e1502] [cursor=pointer]:
+            - /url: /apoioutilizador/artigos/como-ordenamos-os-resultados/
+            - generic [ref=f24e1503]: Como ordenamos os resultados
+            - text: 
+        - list [ref=f24e1505]:
+          - listitem [ref=f24e1506]:
+            - generic [ref=f24e1507]: "Ver mais resultados:"
+          - listitem [ref=f24e1508]:
+            - generic [ref=f24e1509]: "1"
+          - listitem [ref=f24e1510]:
+            - link "2" [ref=f24e1511] [cursor=pointer]:
+              - /url: /arrendar-casas/braga-distrito/pagina-2
+          - listitem [ref=f24e1512]:
+            - link "3" [ref=f24e1513] [cursor=pointer]:
+              - /url: /arrendar-casas/braga-distrito/pagina-3
+          - listitem [ref=f24e1514]:
+            - link "4" [ref=f24e1515] [cursor=pointer]:
+              - /url: /arrendar-casas/braga-distrito/pagina-4
+          - listitem [ref=f24e1516]:
+            - link "5" [ref=f24e1517] [cursor=pointer]:
+              - /url: /arrendar-casas/braga-distrito/pagina-5
+          - listitem [ref=f24e1518]:
+            - link "6" [ref=f24e1519] [cursor=pointer]:
+              - /url: /arrendar-casas/braga-distrito/pagina-6
+          - listitem [ref=f24e1520]:
+            - link "Seguinte " [ref=f24e1521] [cursor=pointer]:
+              - /url: /arrendar-casas/braga-distrito/pagina-2
+      - generic [ref=f24e1522]:
+        - generic [ref=f24e1523]: 
+        - heading "Queres procurar com a ajuda de um especialista?" [level=3] [ref=f24e1524]
+        - link "Imobiliárias em Braga" [ref=f24e1525] [cursor=pointer]:
+          - /url: /agencias-imobiliarias/braga-distrito/imobiliarias-arrendamento
+      - generic [ref=f24e1526]:
+        - heading "Também poderiam interessar-te em Braga" [level=3] [ref=f24e1527]
+        - generic [ref=f24e1528]:
+          - group "Municípios" [ref=f24e1529]:
+            - checkbox [aria-hidden] [ref=f24e1531]
+            - heading "Municípios" [level=4] [ref=f24e1532]: Municípios  
+            - radio [aria-hidden] [ref=f24e1533]
+            - radio [checked] [aria-hidden] [ref=f24e1534]
+            - list [ref=f24e1535]:
+              - listitem [ref=f24e1536]:
+                - link "São Victor" [ref=f24e1537] [cursor=pointer]:
+                  - /url: /arrendar-casas/braga/sao-victor/
+                - generic [ref=f24e1538]: "139"
+              - listitem [ref=f24e1539]:
+                - link "São Vicente" [ref=f24e1540] [cursor=pointer]:
+                  - /url: /arrendar-casas/braga/sao-vicente/
+                - generic [ref=f24e1541]: "81"
+              - listitem [ref=f24e1542]:
+                - link "São José de São Lázaro e São João do Souto" [ref=f24e1543] [cursor=pointer]:
+                  - /url: /arrendar-casas/braga/sao-jose-de-sao-lazaro-e-sao-joao-do-souto/
+                - generic [ref=f24e1544]: "77"
+            - button "Ver mais" [ref=f24e1545] [cursor=pointer]
+            - text:  
+          - group "Costas" [ref=f24e1546]:
+            - checkbox [aria-hidden] [ref=f24e1548]
+            - heading "Costas" [level=4] [ref=f24e1549]: Costas  
+            - list [ref=f24e1550]:
+              - listitem [ref=f24e1551]:
+                - link "Costa Verde" [ref=f24e1552] [cursor=pointer]:
+                  - /url: /geo/arrendar-casas/costa-verde/
+                - generic [ref=f24e1553]: "90"
+            - text: 
+  - generic [ref=f24e1554]:
+    - heading "Serviços do idealista" [level=2] [ref=f24e1555]
+    - generic [ref=f24e1556]:
+      - navigation "Estás à procura de casa?" [ref=f24e1557]:
+        - heading "Estás à procura de casa?" [level=3] [ref=f24e1558]
+        - list [ref=f24e1559]:
+          - listitem [ref=f24e1560]:
+            - link "Motor de pesquisa principal" [ref=f24e1561] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f24e1562]:
+            - link "Pesquisa mais rapidamente com a nossa app" [ref=f24e1563] [cursor=pointer]:
+              - /url: /aplicacoes
+          - listitem [ref=f24e1564]:
+            - link "Apartamentos de bancos" [ref=f24e1565] [cursor=pointer]:
+              - /url: /imoveis-da-banca
+          - listitem [ref=f24e1566]:
+            - link "Casas à venda em Portugal" [ref=f24e1567] [cursor=pointer]:
+              - /url: /properties-for-sale-in-portugal
+          - listitem [ref=f24e1568]:
+            - link "Arrendamento de casas em Portugal" [ref=f24e1569] [cursor=pointer]:
+              - /url: /long-term-rentals-in-portugal
+          - listitem [ref=f24e1570]:
+            - link "Casas e apartamentos em arrendamento" [ref=f24e1571] [cursor=pointer]:
+              - /url: /apartamentos-para-arrendar
+          - listitem [ref=f24e1572]:
+            - link "Apartamentos partilhados" [ref=f24e1573] [cursor=pointer]:
+              - /url: /apartamentos-para-dividir
+          - listitem [ref=f24e1574]:
+            - link "Oportunidades de investimento" [ref=f24e1575] [cursor=pointer]:
+              - /url: https://www.idealista.pt/investimento-imobiliario/#/
+          - listitem [ref=f24e1576]:
+            - link "Rentalia, arrendamento para férias" [ref=f24e1577] [cursor=pointer]:
+              - /url: https://pt.rentalia.com/
+          - listitem [ref=f24e1578]:
+            - link "Relatórios de preços" [ref=f24e1579] [cursor=pointer]:
+              - /url: https://www.idealista.pt/media/relatorios-preco-habitacao/
+          - listitem [ref=f24e1580]:
+            - link "idealista maps" [ref=f24e1581] [cursor=pointer]:
+              - /url: https://www.idealista.pt/maps/
+          - listitem [ref=f24e1582]:
+            - link "Apartamentos e casas de luxo à venda em Portugal" [ref=f24e1583] [cursor=pointer]:
+              - /url: /luxury-homes-portugal
+          - listitem [ref=f24e1584]:
+            - link "Apartamentos e casas de luxo para arrendar em Portugal" [ref=f24e1585] [cursor=pointer]:
+              - /url: /luxury-rentals-portugal
+      - navigation "Tens um imóvel?" [ref=f24e1586]:
+        - heading "Tens um imóvel?" [level=3] [ref=f24e1587]
+        - list [ref=f24e1588]:
+          - listitem [ref=f24e1589]:
+            - link "Publica o teu anúncio grátis" [ref=f24e1590] [cursor=pointer]:
+              - /url: /info/novo-anuncio
+          - listitem [ref=f24e1591]:
+            - link "Área do proprietário" [ref=f24e1592] [cursor=pointer]:
+              - /url: /proprietarios/
+          - listitem [ref=f24e1593]:
+            - link "Melhorar as fotos do teu anúncio" [ref=f24e1594] [cursor=pointer]:
+              - /url: /info/truques-fazer-fotos-e-videos
+          - listitem [ref=f24e1595]:
+            - link "Solicitar certificado energético" [ref=f24e1596] [cursor=pointer]:
+              - /url: /certificadoenergetico/
+          - listitem [ref=f24e1597]:
+            - link "Avalia grátis qualquer imóvel" [ref=f24e1598] [cursor=pointer]:
+              - /url: /avaliacao-de-imoveis/
+          - listitem [ref=f24e1599]:
+            - link "Procurar agências para vender facilmente a tua casa" [ref=f24e1600] [cursor=pointer]:
+              - /url: /escolher-agencia-imobiliaria/
+          - listitem [ref=f24e1601]:
+            - link "Guia sobre como vender a tua casa" [ref=f24e1602] [cursor=pointer]:
+              - /url: /quero-vender-a-minha-casa/
+          - listitem [ref=f24e1603]:
+            - link "Garantir 12 mensalidades com um seguro de incumprimento" [ref=f24e1604] [cursor=pointer]:
+              - /url: https://www.idealista.pt/seguros/incumprimento-rendas/
+          - listitem [ref=f24e1605]:
+            - link "Queres fazer obras em casa?" [ref=f24e1606] [cursor=pointer]:
+              - /url: https://www.idealista.pt/obras-em-casa/
+      - navigation "És profissional imobiliário?" [ref=f24e1607]:
+        - heading "És profissional imobiliário?" [level=3] [ref=f24e1608]
+        - list [ref=f24e1609]:
+          - listitem [ref=f24e1610]:
+            - link "Publica os teus imóveis profissionais" [ref=f24e1611] [cursor=pointer]:
+              - /url: /novo-profissional
+          - listitem [ref=f24e1612]:
+            - link "Já és cliente? Entra na tua conta" [ref=f24e1613] [cursor=pointer]:
+              - /url: /login
+          - listitem [ref=f24e1614]:
+            - link "Cursos imobiliários" [ref=f24e1615] [cursor=pointer]:
+              - /url: https://www.idealista.pt/cursos/
+          - listitem [ref=f24e1616]:
+            - link "Publicidade no idealista" [ref=f24e1617] [cursor=pointer]:
+              - /url: /info/publicidade
+          - listitem [ref=f24e1618]:
+            - 'link "idealista/tools: Software de gestão para imobiliárias" [ref=f24e1619] [cursor=pointer]':
+              - /url: https://www.idealista.pt/tools/
+          - listitem [ref=f24e1620]:
+            - link "Outros softwares recomendados" [ref=f24e1621] [cursor=pointer]:
+              - /url: /tools/software-recomendado-para-imobiliarias
+          - listitem [ref=f24e1622]:
+            - 'link "idealista/data: tecnologia para a análise imobiliária" [ref=f24e1623] [cursor=pointer]':
+              - /url: https://www.idealista.pt/data/
+          - listitem [ref=f24e1624]:
+            - 'link "Avaibook: software para gerir os teus arrendamentos turísticos" [ref=f24e1625] [cursor=pointer]':
+              - /url: https://www.avaibook.com/pt-pt/
+          - listitem [ref=f24e1626]:
+            - link "HCPro - Software de Gestão Imobiliária" [ref=f24e1627] [cursor=pointer]:
+              - /url: https://www.hcpro.pt/
+  - contentinfo [ref=f24e1628]:
+    - generic [ref=f24e1629]:
+      - heading " idealista" [level=2] [ref=f24e1630]:
+        - text: 
+        - generic [ref=f24e1631]: idealista
+      - generic [ref=f24e1633] [cursor=pointer]:
+        - text: 
+        - generic [ref=f24e1635]: Português
+      - generic [ref=f24e1636]:
+        - navigation [ref=f24e1637]:
+          - heading "Sobre o idealista" [level=3] [ref=f24e1638]
+          - list [ref=f24e1639]:
+            - listitem [ref=f24e1640]:
+              - link "Sobre nós" [ref=f24e1641] [cursor=pointer]:
+                - /url: /media/sobre-nos/
+            - listitem [ref=f24e1642]:
+              - link "Media" [ref=f24e1643] [cursor=pointer]:
+                - /url: /media/
+            - listitem [ref=f24e1644]:
+              - link "Trabalha connosco" [ref=f24e1645] [cursor=pointer]:
+                - /url: /info/trabalha-connosco
+            - listitem [ref=f24e1646]:
+              - link "idealista/créditohabitação" [ref=f24e1647] [cursor=pointer]:
+                - /url: https://www.idealista.pt/credito-habitacao
+            - listitem [ref=f24e1648]:
+              - link "idealista/data" [ref=f24e1649] [cursor=pointer]:
+                - /url: /data/
+            - listitem [ref=f24e1650]:
+              - link "idealista/news" [ref=f24e1651] [cursor=pointer]:
+                - /url: /news/
+            - listitem [ref=f24e1652]:
+              - link "idealista/seguros" [ref=f24e1653] [cursor=pointer]:
+                - /url: /seguros/
+        - navigation [ref=f24e1654]:
+          - heading "Ajuda" [level=3] [ref=f24e1655]
+          - list [ref=f24e1656]:
+            - listitem [ref=f24e1657]:
+              - link "Perguntas frequentes (FAQs)" [ref=f24e1658] [cursor=pointer]:
+                - /url: /apoioutilizador/
+            - listitem [ref=f24e1659]:
+              - link "Segurança online" [ref=f24e1660] [cursor=pointer]:
+                - /url: /apoioutilizador/categorias/seguranca-online/
+            - listitem [ref=f24e1661]:
+              - link "Contacta com o idealista" [ref=f24e1662] [cursor=pointer]:
+                - /url: /info/contacta-connosco
+            - listitem [ref=f24e1663]:
+              - link "Privacidade" [ref=f24e1664] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/politica-de-privacidade/
+            - listitem [ref=f24e1665]:
+              - link "Política de cookies" [ref=f24e1666] [cursor=pointer]:
+                - /url: /info/cookie-policy
+            - listitem [ref=f24e1667]:
+              - link "Condições gerais" [ref=f24e1668] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/aviso-legal-e-condicoes-gerais/
+        - navigation [ref=f24e1669]:
+          - heading "Outros países" [level=3] [ref=f24e1670]
+          - list [ref=f24e1671]:
+            - listitem [ref=f24e1672]:
+              - link "idealista Espanha" [ref=f24e1673] [cursor=pointer]:
+                - /url: https://www.idealista.com/pt/
+            - listitem [ref=f24e1674]:
+              - link "idealista Itália" [ref=f24e1675] [cursor=pointer]:
+                - /url: https://www.idealista.it/pt/
+            - listitem [ref=f24e1676]:
+              - link "idealista França" [ref=f24e1677] [cursor=pointer]:
+                - /url: https://www.idealista.fr/pt/
+              - generic [ref=f24e1678]: Beta
+      - generic [ref=f24e1679]:
+        - generic [ref=f24e1680]:
+          - heading "Por telemóvel ou Tablet" [level=3] [ref=f24e1681]
+          - navigation [ref=f24e1682]:
+            - link "App Store" [ref=f24e1683] [cursor=pointer]:
+              - /url: https://apps.apple.com/pt/app/idealista.com/id465958311
+            - link "Google Play" [ref=f24e1684] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.idealista.android&hl=pt
+            - link "HUAWEI AppGallery" [ref=f24e1685] [cursor=pointer]:
+              - /url: https://appgallery.huawei.com/app/C101196223?channelId=idealista&id=ea9d78a5dfc54b8e8a7f1c5e8f1f083e&s=FC3DCED1261C2C2C5624748A104DEB37D2EB945F72175B74A6FDB07C7B7169F0&detailType=0&v=
+          - navigation [ref=f24e1686]:
+            - link "" [ref=f24e1687] [cursor=pointer]:
+              - /url: https://www.facebook.com/idealista.pt/
+            - link "" [ref=f24e1688] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/idealistapt
+            - link "" [ref=f24e1689] [cursor=pointer]:
+              - /url: https://instagram.com/idealistapt/
+        - strong [ref=f24e1690]: idealista
+        - text: Copyright © 2000-2026
+  - generic:         
+  - generic [ref=f24e1692]:
+    - generic:
+      - generic:
+        - generic:
+          - generic: Voice Typing
+          - button
+        - generic:
+          - generic:
+            - textbox "Ready for your note — just start speaking..."
+          - generic:
+            - button "Copy" [disabled]
+    - generic [ref=f24e1693]:
+      - generic [ref=f24e1694]:
+        - generic [ref=f24e1695]:
+          - generic:
+            - generic:
+              - text: Play
+              - generic:
+                - generic: Alt
+                - generic: A
+          - button [ref=f24e1696] [cursor=pointer]:
+            - textbox [aria-hidden] [ref=f24e1699]
+        - generic [ref=f24e1700]:
+          - generic:
+            - generic:
+              - text: Save to Library
+              - generic:
+                - generic: Alt
+                - generic: L
+          - button "Save to library button, shortcut Alt + L" [ref=f24e1701] [cursor=pointer]:
+            - textbox [aria-hidden] [ref=f24e1705]
+        - generic [ref=f24e1706]:
+          - generic: Talk to Assistant
+          - button "Open summarize panel" [ref=f24e1707] [cursor=pointer]:
+            - textbox [aria-hidden] [ref=f24e1710]
+        - generic [ref=f24e1712]:
+          - generic:
+            - generic:
+              - text: Dictate
+              - generic:
+                - generic: Alt
+                - generic: S
+          - button [ref=f24e1713] [cursor=pointer]:
+            - textbox [aria-hidden] [ref=f24e1716]
+      - generic [ref=f24e1718]:
+        - generic: Settings
+        - button "Speechify Side Player Settings" [ref=f24e1719] [cursor=pointer]:
+          - textbox [aria-hidden] [ref=f24e1722]
+      - button [ref=f24e1723] [cursor=pointer]

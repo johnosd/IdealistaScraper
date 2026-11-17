@@ -1,0 +1,742 @@
+- generic [active] [ref=f13e1]:
+  - link "Saltar para o conteúdo principal" [ref=f13e2] [cursor=pointer]:
+    - /url: "#home-image"
+  - banner [ref=f13e4]:
+    - generic [ref=f13e5]:
+      - generic [ref=f13e6]:
+        - link [ref=f13e7] [cursor=pointer]:
+          - /url: https://www.idealista.pt/
+          - img "Idealista logo" [ref=f13e9]
+        - generic [ref=f13e11]:
+          - button "Proprietários" [ref=f13e14] [cursor=pointer]
+          - button "Procuras casa" [ref=f13e18] [cursor=pointer]
+          - button "Crédito habitação" [ref=f13e22] [cursor=pointer]
+      - generic [ref=f13e24]:
+        - link "Publica o teu anúncio" [ref=f13e25] [cursor=pointer]:
+          - /url: https://www.idealista.pt/info/novo-anuncio
+        - combobox "Português" [ref=f13e28] [cursor=pointer]
+        - link "Aceder" [ref=f13e32] [cursor=pointer]:
+          - /url: https://www.idealista.pt/login
+  - generic [ref=f13e36]:
+    - generic [ref=f13e37]:
+      - generic [ref=f13e38]:
+        - heading "Nada dura para sempre" [level=1] [ref=f13e39]
+        - generic [ref=f13e40]:
+          - group "Seleciona uma operação" [ref=f13e42]:
+            - radio "Comprar" [ref=f13e44]
+            - generic "Comprar" [ref=f13e45] [cursor=pointer]
+            - radio "Arrendar" [checked] [ref=f13e46]
+            - generic "Arrendar" [ref=f13e47] [cursor=pointer]
+          - generic [ref=f13e48]:
+            - generic [ref=f13e49]: Tipo de imóvel
+            - button "Casas e apartamentos" [ref=f13e50] [cursor=pointer]:
+              - option [ref=f13e52]: Nova construção
+              - option [ref=f13e53]: Casas e apartamentos
+              - option [ref=f13e54]: Quartos
+              - option [ref=f13e55]: Para férias
+              - option [ref=f13e56]: Garagens
+              - option [ref=f13e57]: Arrecadações
+              - option [ref=f13e58]: Escritórios
+              - option [ref=f13e59]: Espaços comerciais ou armazéns
+              - option [ref=f13e60]: Trespasses
+              - option [ref=f13e61]: Terrenos
+              - option [ref=f13e62]: Prédios
+          - generic [ref=f13e63]:
+            - text: 
+            - generic [ref=f13e64]: Escreve uma localização onde procurar
+            - textbox "Escreve uma localização onde procurar" [ref=f13e65]:
+              - /placeholder: Bairro, cidade, zona, metro...
+          - button "Procurar" [ref=f13e66] [cursor=pointer]
+      - img "Casa em Almancil, Faro" [ref=f13e68]
+      - link "Casa em Almancil, Faro - 1.600.000 euros" [ref=f13e69] [cursor=pointer]:
+        - /url: /imovel/33816607/
+    - generic:
+      - article
+    - navigation [ref=f13e70]:
+      - button "Selecionar zonas no mapa Selecionar zonas no mapa Podes procurar em várias zonas ao mesmo tempo, selecionando-as diretamente no mapa. Começar a selecionar zonas" [ref=f13e71] [cursor=pointer]:
+        - img "Selecionar zonas no mapa" [ref=f13e73]
+        - generic [ref=f13e74]:
+          - heading "Selecionar zonas no mapa" [level=2] [ref=f13e75]
+          - generic [ref=f13e76]: Podes procurar em várias zonas ao mesmo tempo, selecionando-as diretamente no mapa.
+          - button "Começar a selecionar zonas" [ref=f13e77]
+      - link "Publicar o teu imóvel Publicar o teu imóvel Os teus 2 primeiros anúncios são grátis. Casas, quartos, escritórios... Temos espaço para todos! Publicar o teu anúncio" [ref=f13e78] [cursor=pointer]:
+        - img "Publicar o teu imóvel" [ref=f13e79]
+        - generic [ref=f13e80]:
+          - heading "Publicar o teu imóvel" [level=2] [ref=f13e81]
+          - generic [ref=f13e82]: Os teus 2 primeiros anúncios são grátis. Casas, quartos, escritórios... Temos espaço para todos!
+          - link "Publicar o teu anúncio" [ref=f13e83]:
+            - /url: /info/novo-anuncio
+    - generic [ref=f13e84]:
+      - article [ref=f13e85]:
+        - img "idealista APP" [ref=f13e87]
+        - region [ref=f13e88]:
+          - heading "Leva o idealista sempre contigo" [level=2] [ref=f13e89]
+          - paragraph [ref=f13e90]: Com a nossa app serás o primeiro a saber se há novos imóveis, alterações nos teus favoritos e mensagens no chat.
+          - img "idealista APP QR" [ref=f13e91]
+      - article [ref=f13e92]:
+        - img "Property Valuation" [ref=f13e94] [cursor=pointer]
+        - region [ref=f13e95]:
+          - heading "Quanto vale a tua casa?" [level=2] [ref=f13e96]
+          - paragraph [ref=f13e97]: "Uma avaliação online gratuita em segundos:"
+          - list "unordered list" [ref=f13e98]:
+            - listitem [ref=f13e99]: com um intervalo de preço preciso para venda e arrendamento
+            - listitem [ref=f13e100]: analisando a evolução de mercado
+            - listitem [ref=f13e101]: comparando com imóveis semelhantes
+          - link "Avalia a tua casa grátis" [ref=f13e102] [cursor=pointer]:
+            - /url: https://www.idealista.pt/avaliacao-de-imoveis/
+      - article [ref=f13e104]:
+        - img "Agencies Recommender" [ref=f13e106] [cursor=pointer]
+        - region [ref=f13e107]:
+          - heading "Recomendamos-te as agências imobiliárias mais adequadas para vender a tua casa" [level=2] [ref=f13e108]
+          - paragraph [ref=f13e109]: Selecionamos até 4 agências, consoante as características do teu imóvel, que te ajudarão a vender a tua casa mais rápido.
+          - link "Procurar uma agência imobiliária" [ref=f13e110] [cursor=pointer]:
+            - /url: https://www.idealista.pt/escolher-agencia-imobiliaria/
+      - article [ref=f13e112]:
+        - img "Casas rurais para te resguardares do frio" [ref=f13e114] [cursor=pointer]
+        - region [ref=f13e115]:
+          - heading "Casas rurais para te resguardares do frio" [level=2] [ref=f13e116]
+          - paragraph [ref=f13e117]: Todos queremos umas férias e desligarmo-nos do dia-a-dia, quer seja na praia, nas montanhas ou na cidade. Vais resistir a uma escapadinha rural? Lareira, churrasqueira, jardim, piscina... tu escolhes.
+          - generic [ref=f13e118]:
+            - link "Procurar em Portugal" [ref=f13e119] [cursor=pointer]:
+              - /url: https://www.idealista.pt/pesquisa-multizona/arrendar-para_ferias
+            - link "Procurar em Espanha" [ref=f13e120] [cursor=pointer]:
+              - /url: https://www.idealista.com/pt/busqueda-multizona/alquiler-vacacional
+      - article [ref=f13e121]:
+        - img "idealista mortgages" [ref=f13e123] [cursor=pointer]
+        - region [ref=f13e124]:
+          - heading "Conseguimos o teu crédito habitação" [level=2] [ref=f13e125]
+          - paragraph [ref=f13e126]: Trabalhamos com os principais bancos, resolvemos as tuas dúvidas e acompanhamos-te ao longo de todo o processo gratuitamente.
+          - link "Descobrir idealista/créditohabitação" [ref=f13e127] [cursor=pointer]:
+            - /url: https://www.idealista.pt/credito-habitacao
+      - generic [ref=f13e129]:
+        - heading [level=2] [ref=f13e130]:
+          - link "idealista news  " [ref=f13e131] [cursor=pointer]:
+            - /url: https://www.idealista.pt/news
+            - generic [ref=f13e132]: idealista news
+            - generic [ref=f13e133]: 
+            - generic [ref=f13e134]: 
+        - paragraph [ref=f13e135]: Artigos de atualidade sobre o mercado imobiliário e negócios.
+        - generic [ref=f13e136]:
+          - tablist [ref=f13e137]:
+            - tab "Artigos destacados" [selected] [ref=f13e138] [cursor=pointer]
+            - tab "Imobiliário" [ref=f13e139] [cursor=pointer]
+            - tab "Finanças" [ref=f13e140] [cursor=pointer]
+            - tab "Para férias" [ref=f13e141] [cursor=pointer]
+            - tab "Decoração" [ref=f13e142] [cursor=pointer]
+          - separator [aria-hidden] [ref=f13e143]
+          - tabpanel "Artigos destacados" [ref=f13e144]:
+            - article [ref=f13e145]:
+              - 'link "Viver em casas partilhadas: rendas dos quartos está 8% mais cara Ler mais" [ref=f13e146] [cursor=pointer]':
+                - /url: https://www.idealista.pt/news/imobiliario/habitacao/2026/11/16/78939-viver-em-casas-partilhadas-renda-dos-quartos-esta-8-mais-cara
+                - generic [ref=f13e147]:
+                  - generic [ref=f13e148]: "Viver em casas partilhadas: rendas dos quartos está 8% mais cara"
+                  - generic [ref=f13e149]: Ler mais
+            - article [ref=f13e150]:
+              - link "A tua casa está preparada para a chuva? 5 pontos a verificar Ler mais" [ref=f13e151] [cursor=pointer]:
+                - /url: https://www.idealista.pt/news/imobiliario/habitacao/2026/11/10/78765-a-tua-casa-esta-preparada-para-a-chuva-5-pontos-a-verificar
+                - generic [ref=f13e152]:
+                  - generic [ref=f13e153]: A tua casa está preparada para a chuva? 5 pontos a verificar
+                  - generic [ref=f13e154]: Ler mais
+            - article [ref=f13e155]:
+              - link "Esta casa alpina é um triunfo da reabilitação arquitetónica Ler mais" [ref=f13e156] [cursor=pointer]:
+                - /url: https://www.idealista.pt/news/imobiliario/internacional/2026/08/15/76484-o-triunfo-de-uma-reabilitacao-na-paisagem-alpina-italiana
+                - generic [ref=f13e157]:
+                  - generic [ref=f13e158]: Esta casa alpina é um triunfo da reabilitação arquitetónica
+                  - generic [ref=f13e159]: Ler mais
+        - link "Ver mais artigos sobre o setor imobiliário" [ref=f13e161] [cursor=pointer]:
+          - /url: https://www.idealista.pt/news
+    - generic [ref=f13e163]:
+      - heading "Também somos o número 1 em Espanha e Itália" [level=2] [ref=f13e164]
+      - link "idealista Espanha idealista Espanha Mais de um milhão de imóveis" [ref=f13e165] [cursor=pointer]:
+        - img "idealista Espanha" [ref=f13e167]
+        - generic [ref=f13e168]:
+          - heading "idealista Espanha" [level=3] [ref=f13e169]
+          - generic [ref=f13e170]: Mais de um milhão de imóveis
+      - link "idealista Itália idealista Itália Mais de um milhão de imóveis" [ref=f13e171] [cursor=pointer]:
+        - img "idealista Itália" [ref=f13e173]
+        - generic [ref=f13e174]:
+          - heading "idealista Itália" [level=3] [ref=f13e175]
+          - generic [ref=f13e176]: Mais de um milhão de imóveis
+      - link "idealista França idealista França Beta Explora o mercado imobiliário francês" [ref=f13e177] [cursor=pointer]:
+        - img "idealista França" [ref=f13e179]
+        - generic [ref=f13e180]:
+          - generic [ref=f13e181]:
+            - heading "idealista França" [level=3] [ref=f13e182]
+            - generic [ref=f13e183]: Beta
+          - generic [ref=f13e184]: Explora o mercado imobiliário francês
+    - generic [ref=f13e186]:
+      - 'heading "Pesquisa imóveis por distrito ou concelho: arrendar casas" [level=2] [ref=f13e187]'
+      - generic [ref=f13e188]:
+        - list:
+          - listitem [ref=f13e189]:
+            - link "Comprar" [ref=f13e190] [cursor=pointer]:
+              - /url: /comprar-casas/#municipality-search
+          - listitem [ref=f13e191]:
+            - link "Arrendar" [ref=f13e192] [cursor=pointer]:
+              - /url: /arrendar-casas/#municipality-search
+          - listitem [ref=f13e193]:
+            - link "Agências" [ref=f13e194] [cursor=pointer]:
+              - /url: /agencias-imobiliarias-arrendamento/#municipality-search
+      - list [ref=f13e196]:
+        - listitem [ref=f13e197]:
+          - link "Nova construção" [ref=f13e198] [cursor=pointer]:
+            - /url: /arrendar-empreendimentos/#municipality-search
+        - listitem [ref=f13e200]:
+          - link "Casas e apartamentos" [ref=f13e201] [cursor=pointer]:
+            - /url: /arrendar-casas/#municipality-search
+        - listitem [ref=f13e203]:
+          - link "Quartos" [ref=f13e204] [cursor=pointer]:
+            - /url: /arrendar-quarto/#municipality-search
+        - listitem [ref=f13e206]:
+          - link "Para férias" [ref=f13e207] [cursor=pointer]:
+            - /url: /arrendar-para_ferias/#municipality-search
+        - listitem [ref=f13e209]:
+          - link "Trespasses" [ref=f13e210] [cursor=pointer]:
+            - /url: /trespasse/#municipality-search
+        - listitem [ref=f13e212]:
+          - link "Garagens" [ref=f13e213] [cursor=pointer]:
+            - /url: /arrendar-garagens/#municipality-search
+        - listitem [ref=f13e215]:
+          - link "Arrecadações" [ref=f13e216] [cursor=pointer]:
+            - /url: /arrendar-arrecadacoes/#municipality-search
+        - listitem [ref=f13e218]:
+          - link "Escritórios" [ref=f13e219] [cursor=pointer]:
+            - /url: /arrendar-escritorios/#municipality-search
+        - listitem [ref=f13e221]:
+          - link "Espaços comerciais ou armazéns" [ref=f13e222] [cursor=pointer]:
+            - /url: /arrendar-lojas_ou_armazens/#municipality-search
+        - listitem [ref=f13e224]:
+          - link "Terrenos" [ref=f13e225] [cursor=pointer]:
+            - /url: /arrendar-terrenos/#municipality-search
+        - listitem [ref=f13e227]:
+          - link "Prédios" [ref=f13e228] [cursor=pointer]:
+            - /url: /arrendar-predios/#municipality-search
+      - list [ref=f13e231]:
+        - listitem [ref=f13e232]:
+          - link "Apartamentos, penthouses e duplex" [ref=f13e233] [cursor=pointer]:
+            - /url: /arrendar-casas/com-apartamentos/#municipality-search
+        - listitem [ref=f13e235]:
+          - link "Casas e moradias" [ref=f13e236] [cursor=pointer]:
+            - /url: /arrendar-casas/com-moradias/#municipality-search
+        - listitem [ref=f13e238]:
+          - link "Casas rústicas" [ref=f13e239] [cursor=pointer]:
+            - /url: /arrendar-casas/com-casa-rusticas/#municipality-search
+        - listitem [ref=f13e241]:
+          - link "Duplex" [ref=f13e242] [cursor=pointer]:
+            - /url: /arrendar-casas/com-duplex/#municipality-search
+        - listitem [ref=f13e244]:
+          - link "Penthouses" [ref=f13e245] [cursor=pointer]:
+            - /url: /arrendar-casas/com-recuados/#municipality-search
+      - generic [ref=f13e247]:
+        - list:
+          - listitem [ref=f13e248]:
+            - link "T0" [ref=f13e249] [cursor=pointer]:
+              - /url: /arrendar-casas/com-apartamentos,t0/#municipality-search
+          - listitem [ref=f13e250]:
+            - link "T1" [ref=f13e251] [cursor=pointer]:
+              - /url: /arrendar-casas/com-apartamentos,t1/#municipality-search
+          - listitem [ref=f13e252]:
+            - link "T2" [ref=f13e253] [cursor=pointer]:
+              - /url: /arrendar-casas/com-apartamentos,t2/#municipality-search
+          - listitem [ref=f13e254]:
+            - link "T3" [ref=f13e255] [cursor=pointer]:
+              - /url: /arrendar-casas/com-apartamentos,t3/#municipality-search
+          - listitem [ref=f13e256]:
+            - link "T4 ou superior" [ref=f13e257] [cursor=pointer]:
+              - /url: /arrendar-casas/com-apartamentos,t4-t5/#municipality-search
+      - 'navigation "Pesquisa imóveis por distrito ou concelho: arrendar casas" [ref=f13e258]':
+        - list [ref=f13e259]:
+          - listitem [ref=f13e260]:
+            - link [ref=f13e261] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/acores/
+              - heading "Açores" [level=3] [ref=f13e262]
+          - listitem [ref=f13e263]:
+            - paragraph [ref=f13e264]: "76"
+            - link "São Miguel (Ilha dos Açores)" [ref=f13e265] [cursor=pointer]:
+              - /url: /arrendar-casas/sao-miguel-ilha-dos-acores/concelhos-freguesias
+            - list [ref=f13e267]:
+              - listitem [ref=f13e268]:
+                - link " Ponta Delgada" [ref=f13e269] [cursor=pointer]:
+                  - /url: /arrendar-casas/ponta-delgada/
+          - listitem [ref=f13e270]:
+            - paragraph [ref=f13e271]: "16"
+            - link "Terceira (Ilha dos Açores)" [ref=f13e272] [cursor=pointer]:
+              - /url: /arrendar-casas/terceira-ilha-dos-acores/concelhos-freguesias
+        - list [ref=f13e274]:
+          - listitem [ref=f13e275]:
+            - link [ref=f13e276] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/alentejo/
+              - heading "Alentejo" [level=3] [ref=f13e277]
+          - listitem [ref=f13e278]:
+            - paragraph [ref=f13e279]: "106"
+            - link "Beja" [ref=f13e280] [cursor=pointer]:
+              - /url: /arrendar-casas/beja-distrito/concelhos-freguesias
+            - list [ref=f13e282]:
+              - listitem [ref=f13e283]:
+                - link " Vila Nova de Milfontes" [ref=f13e284] [cursor=pointer]:
+                  - /url: /arrendar-casas/odemira/vila-nova-de-milfontes/
+          - listitem [ref=f13e285]:
+            - paragraph [ref=f13e286]: "118"
+            - link "Évora" [ref=f13e287] [cursor=pointer]:
+              - /url: /arrendar-casas/evora-distrito/concelhos-freguesias
+          - listitem [ref=f13e289]:
+            - paragraph [ref=f13e290]: "77"
+            - link "Portalegre" [ref=f13e291] [cursor=pointer]:
+              - /url: /arrendar-casas/portalegre-distrito/concelhos-freguesias
+          - listitem [ref=f13e293]:
+            - paragraph [ref=f13e294]: "304"
+            - link "Santarém" [ref=f13e295] [cursor=pointer]:
+              - /url: /arrendar-casas/santarem-distrito/concelhos-freguesias
+            - list [ref=f13e297]:
+              - listitem [ref=f13e298]:
+                - link " Torres Novas" [ref=f13e299] [cursor=pointer]:
+                  - /url: /arrendar-casas/torres-novas/
+        - list [ref=f13e300]:
+          - listitem [ref=f13e301]:
+            - link [ref=f13e302] [cursor=pointer]:
+              - /url: /arrendar-casas/faro-distrito/
+              - heading "Algarve" [level=3] [ref=f13e303]
+          - listitem [ref=f13e304]:
+            - paragraph [ref=f13e305]: "2.394"
+            - link "Faro" [ref=f13e306] [cursor=pointer]:
+              - /url: /arrendar-casas/faro-distrito/concelhos-freguesias
+            - list [ref=f13e308]:
+              - listitem [ref=f13e309]:
+                - link " Albufeira" [ref=f13e310] [cursor=pointer]:
+                  - /url: /arrendar-casas/albufeira/
+              - listitem [ref=f13e311]:
+                - link " Alvor" [ref=f13e312] [cursor=pointer]:
+                  - /url: /arrendar-casas/portimao/alvor/
+              - listitem [ref=f13e313]:
+                - link " Conceição" [ref=f13e314] [cursor=pointer]:
+                  - /url: /arrendar-casas/tavira/conceicao/
+              - listitem [ref=f13e315]:
+                - link " Faro" [ref=f13e316] [cursor=pointer]:
+                  - /url: /arrendar-casas/faro/
+              - listitem [ref=f13e317]:
+                - link " Lagos" [ref=f13e318] [cursor=pointer]:
+                  - /url: /arrendar-casas/lagos/
+              - listitem [ref=f13e319]:
+                - link " Monte Gordo" [ref=f13e320] [cursor=pointer]:
+                  - /url: /arrendar-casas/vila-real-de-santo-antonio/monte-gordo/
+              - listitem [ref=f13e321]:
+                - link " Portimão" [ref=f13e322] [cursor=pointer]:
+                  - /url: /arrendar-casas/portimao/
+              - listitem [ref=f13e323]:
+                - link " Quarteira" [ref=f13e324] [cursor=pointer]:
+                  - /url: /arrendar-casas/loule/quarteira/
+              - listitem [ref=f13e325]:
+                - link " Sagres" [ref=f13e326] [cursor=pointer]:
+                  - /url: /arrendar-casas/vila-do-bispo/sagres/
+              - listitem [ref=f13e327]:
+                - link " Tavira" [ref=f13e328] [cursor=pointer]:
+                  - /url: /arrendar-casas/tavira/
+        - list [ref=f13e329]:
+          - listitem [ref=f13e330]:
+            - link [ref=f13e331] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/area-metropolitana-de-lisboa/
+              - heading "Área Metropolitana de Lisboa" [level=3] [ref=f13e332]
+          - listitem [ref=f13e333]:
+            - paragraph [ref=f13e334]: "9.655"
+            - link "Lisboa" [ref=f13e335] [cursor=pointer]:
+              - /url: /arrendar-casas/lisboa-distrito/concelhos-freguesias
+            - list [ref=f13e337]:
+              - listitem [ref=f13e338]:
+                - link " Cascais" [ref=f13e339] [cursor=pointer]:
+                  - /url: /arrendar-casas/cascais/
+              - listitem [ref=f13e340]:
+                - link " Ericeira" [ref=f13e341] [cursor=pointer]:
+                  - /url: /arrendar-casas/mafra/ericeira/
+              - listitem [ref=f13e342]:
+                - link " Lisboa" [ref=f13e343] [cursor=pointer]:
+                  - /url: /arrendar-casas/lisboa/
+              - listitem [ref=f13e344]:
+                - link " Odivelas" [ref=f13e345] [cursor=pointer]:
+                  - /url: /arrendar-casas/odivelas/
+              - listitem [ref=f13e346]:
+                - link " Oeiras" [ref=f13e347] [cursor=pointer]:
+                  - /url: /arrendar-casas/oeiras/
+              - listitem [ref=f13e348]:
+                - link " Torres Vedras" [ref=f13e349] [cursor=pointer]:
+                  - /url: /arrendar-casas/torres-vedras/
+          - listitem [ref=f13e350]:
+            - paragraph [ref=f13e351]: "1.745"
+            - link "Setúbal" [ref=f13e352] [cursor=pointer]:
+              - /url: /arrendar-casas/setubal-distrito/concelhos-freguesias
+            - list [ref=f13e354]:
+              - listitem [ref=f13e355]:
+                - link " Almada" [ref=f13e356] [cursor=pointer]:
+                  - /url: /arrendar-casas/almada/
+              - listitem [ref=f13e357]:
+                - link " Barreiro" [ref=f13e358] [cursor=pointer]:
+                  - /url: /arrendar-casas/barreiro/
+              - listitem [ref=f13e359]:
+                - link " Costa de Caparica" [ref=f13e360] [cursor=pointer]:
+                  - /url: /arrendar-casas/almada/costa-de-caparica/
+              - listitem [ref=f13e361]:
+                - link " Montijo" [ref=f13e362] [cursor=pointer]:
+                  - /url: /arrendar-casas/montijo/
+              - listitem [ref=f13e363]:
+                - link " Sesimbra" [ref=f13e364] [cursor=pointer]:
+                  - /url: /arrendar-casas/sesimbra/
+        - list [ref=f13e365]:
+          - listitem [ref=f13e366]:
+            - link [ref=f13e367] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/centro/
+              - heading "Centro" [level=3] [ref=f13e368]
+          - listitem [ref=f13e369]:
+            - paragraph [ref=f13e370]: "566"
+            - link "Aveiro" [ref=f13e371] [cursor=pointer]:
+              - /url: /arrendar-casas/aveiro-distrito/concelhos-freguesias
+            - list [ref=f13e373]:
+              - listitem [ref=f13e374]:
+                - link " Aveiro" [ref=f13e375] [cursor=pointer]:
+                  - /url: /arrendar-casas/aveiro/
+              - listitem [ref=f13e376]:
+                - link " Espinho" [ref=f13e377] [cursor=pointer]:
+                  - /url: /arrendar-casas/espinho/
+              - listitem [ref=f13e378]:
+                - link " Santa Maria da Feira" [ref=f13e379] [cursor=pointer]:
+                  - /url: /arrendar-casas/santa-maria-da-feira/
+          - listitem [ref=f13e380]:
+            - paragraph [ref=f13e381]: "194"
+            - link "Castelo Branco" [ref=f13e382] [cursor=pointer]:
+              - /url: /arrendar-casas/castelo-branco-distrito/concelhos-freguesias
+            - list [ref=f13e384]:
+              - listitem [ref=f13e385]:
+                - link " Castelo Branco" [ref=f13e386] [cursor=pointer]:
+                  - /url: /arrendar-casas/castelo-branco/
+          - listitem [ref=f13e387]:
+            - paragraph [ref=f13e388]: "611"
+            - link "Coimbra" [ref=f13e389] [cursor=pointer]:
+              - /url: /arrendar-casas/coimbra-distrito/concelhos-freguesias
+            - list [ref=f13e391]:
+              - listitem [ref=f13e392]:
+                - link " Coimbra" [ref=f13e393] [cursor=pointer]:
+                  - /url: /arrendar-casas/coimbra/
+              - listitem [ref=f13e394]:
+                - link " Figueira da Foz" [ref=f13e395] [cursor=pointer]:
+                  - /url: /arrendar-casas/figueira-da-foz/
+          - listitem [ref=f13e396]:
+            - paragraph [ref=f13e397]: "70"
+            - link "Guarda" [ref=f13e398] [cursor=pointer]:
+              - /url: /arrendar-casas/guarda-distrito/concelhos-freguesias
+            - list [ref=f13e400]:
+              - listitem [ref=f13e401]:
+                - link " Guarda" [ref=f13e402] [cursor=pointer]:
+                  - /url: /arrendar-casas/guarda/
+          - listitem [ref=f13e403]:
+            - paragraph [ref=f13e404]: "638"
+            - link "Leiria" [ref=f13e405] [cursor=pointer]:
+              - /url: /arrendar-casas/leiria-distrito/concelhos-freguesias
+            - list [ref=f13e407]:
+              - listitem [ref=f13e408]:
+                - link " Caldas da Rainha" [ref=f13e409] [cursor=pointer]:
+                  - /url: /arrendar-casas/caldas-da-rainha/
+              - listitem [ref=f13e410]:
+                - link " Leiria" [ref=f13e411] [cursor=pointer]:
+                  - /url: /arrendar-casas/leiria/
+              - listitem [ref=f13e412]:
+                - link " Marinha Grande" [ref=f13e413] [cursor=pointer]:
+                  - /url: /arrendar-casas/marinha-grande/
+              - listitem [ref=f13e414]:
+                - link " Nazaré" [ref=f13e415] [cursor=pointer]:
+                  - /url: /arrendar-casas/nazare/
+              - listitem [ref=f13e416]:
+                - link " Peniche" [ref=f13e417] [cursor=pointer]:
+                  - /url: /arrendar-casas/peniche/
+              - listitem [ref=f13e418]:
+                - link " Pombal" [ref=f13e419] [cursor=pointer]:
+                  - /url: /arrendar-casas/pombal/
+              - listitem [ref=f13e420]:
+                - link " São Martinho do Porto" [ref=f13e421] [cursor=pointer]:
+                  - /url: /arrendar-casas/alcobaca/sao-martinho-do-porto/
+          - listitem [ref=f13e422]:
+            - paragraph [ref=f13e423]: "209"
+            - link "Viseu" [ref=f13e424] [cursor=pointer]:
+              - /url: /arrendar-casas/viseu-distrito/concelhos-freguesias
+            - list [ref=f13e426]:
+              - listitem [ref=f13e427]:
+                - link " Viseu" [ref=f13e428] [cursor=pointer]:
+                  - /url: /arrendar-casas/viseu/
+        - list [ref=f13e429]:
+          - listitem [ref=f13e430]:
+            - link [ref=f13e431] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/madeira/
+              - heading "Madeira" [level=3] [ref=f13e432]
+          - listitem [ref=f13e433]:
+            - paragraph [ref=f13e434]: "324"
+            - link "Madeira (Ilha)" [ref=f13e435] [cursor=pointer]:
+              - /url: /arrendar-casas/madeira-ilha/concelhos-freguesias
+            - list [ref=f13e437]:
+              - listitem [ref=f13e438]:
+                - link " Funchal" [ref=f13e439] [cursor=pointer]:
+                  - /url: /arrendar-casas/funchal/
+          - listitem [ref=f13e440]:
+            - paragraph [ref=f13e441]: "6"
+            - link "Porto Santo (Ilha)" [ref=f13e442] [cursor=pointer]:
+              - /url: /arrendar-casas/porto-santo-ilha/concelhos-freguesias
+        - list [ref=f13e444]:
+          - listitem [ref=f13e445]:
+            - link [ref=f13e446] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/norte/
+              - heading "Norte" [level=3] [ref=f13e447]
+          - listitem [ref=f13e448]:
+            - paragraph [ref=f13e449]: "868"
+            - link "Braga" [ref=f13e450] [cursor=pointer]:
+              - /url: /arrendar-casas/braga-distrito/concelhos-freguesias
+            - list [ref=f13e452]:
+              - listitem [ref=f13e453]:
+                - link " Barcelos" [ref=f13e454] [cursor=pointer]:
+                  - /url: /arrendar-casas/barcelos/
+              - listitem [ref=f13e455]:
+                - link " Braga" [ref=f13e456] [cursor=pointer]:
+                  - /url: /arrendar-casas/braga/
+          - listitem [ref=f13e457]:
+            - paragraph [ref=f13e458]: "56"
+            - link "Bragança" [ref=f13e459] [cursor=pointer]:
+              - /url: /arrendar-casas/braganca-distrito/concelhos-freguesias
+            - list [ref=f13e461]:
+              - listitem [ref=f13e462]:
+                - link " Bragança" [ref=f13e463] [cursor=pointer]:
+                  - /url: /arrendar-casas/braganca/
+          - listitem [ref=f13e464]:
+            - paragraph [ref=f13e465]: "4.549"
+            - link "Porto" [ref=f13e466] [cursor=pointer]:
+              - /url: /arrendar-casas/porto-distrito/concelhos-freguesias
+            - list [ref=f13e468]:
+              - listitem [ref=f13e469]:
+                - link " Maia" [ref=f13e470] [cursor=pointer]:
+                  - /url: /arrendar-casas/maia/
+              - listitem [ref=f13e471]:
+                - link " Matosinhos" [ref=f13e472] [cursor=pointer]:
+                  - /url: /arrendar-casas/matosinhos/
+              - listitem [ref=f13e473]:
+                - link " Penafiel" [ref=f13e474] [cursor=pointer]:
+                  - /url: /arrendar-casas/penafiel/
+              - listitem [ref=f13e475]:
+                - link " Porto" [ref=f13e476] [cursor=pointer]:
+                  - /url: /arrendar-casas/porto/
+              - listitem [ref=f13e477]:
+                - link " Póvoa de Varzim" [ref=f13e478] [cursor=pointer]:
+                  - /url: /arrendar-casas/povoa-de-varzim/
+              - listitem [ref=f13e479]:
+                - link " Santo Tirso" [ref=f13e480] [cursor=pointer]:
+                  - /url: /arrendar-casas/santo-tirso/
+              - listitem [ref=f13e481]:
+                - link " Valongo" [ref=f13e482] [cursor=pointer]:
+                  - /url: /arrendar-casas/valongo/
+              - listitem [ref=f13e483]:
+                - link " Vila Nova de Gaia" [ref=f13e484] [cursor=pointer]:
+                  - /url: /arrendar-casas/vila-nova-de-gaia/
+              - listitem [ref=f13e485]:
+                - link " Vila do Conde" [ref=f13e486] [cursor=pointer]:
+                  - /url: /arrendar-casas/vila-do-conde/
+          - listitem [ref=f13e487]:
+            - paragraph [ref=f13e488]: "321"
+            - link "Viana do Castelo" [ref=f13e489] [cursor=pointer]:
+              - /url: /arrendar-casas/viana-do-castelo-distrito/concelhos-freguesias
+            - list [ref=f13e491]:
+              - listitem [ref=f13e492]:
+                - link " Ponte de Lima" [ref=f13e493] [cursor=pointer]:
+                  - /url: /arrendar-casas/ponte-de-lima/
+              - listitem [ref=f13e494]:
+                - link " Viana do Castelo" [ref=f13e495] [cursor=pointer]:
+                  - /url: /arrendar-casas/viana-do-castelo/
+          - listitem [ref=f13e496]:
+            - paragraph [ref=f13e497]: "87"
+            - link "Vila Real" [ref=f13e498] [cursor=pointer]:
+              - /url: /arrendar-casas/vila-real-distrito/concelhos-freguesias
+            - list [ref=f13e500]:
+              - listitem [ref=f13e501]:
+                - link " Vila Real" [ref=f13e502] [cursor=pointer]:
+                  - /url: /arrendar-casas/vila-real/
+  - generic [ref=f13e503]:
+    - heading "Serviços do idealista" [level=2] [ref=f13e504]
+    - generic [ref=f13e505]:
+      - navigation "Estás à procura de casa?" [ref=f13e506]:
+        - heading "Estás à procura de casa?" [level=3] [ref=f13e507]
+        - list [ref=f13e508]:
+          - listitem [ref=f13e509]: Motor de pesquisa principal
+          - listitem [ref=f13e510]:
+            - link "Pesquisa mais rapidamente com a nossa app" [ref=f13e511] [cursor=pointer]:
+              - /url: /aplicacoes
+          - listitem [ref=f13e512]:
+            - link "Apartamentos de bancos" [ref=f13e513] [cursor=pointer]:
+              - /url: /imoveis-da-banca
+          - listitem [ref=f13e514]:
+            - link "Casas à venda em Portugal" [ref=f13e515] [cursor=pointer]:
+              - /url: /properties-for-sale-in-portugal
+          - listitem [ref=f13e516]:
+            - link "Arrendamento de casas em Portugal" [ref=f13e517] [cursor=pointer]:
+              - /url: /long-term-rentals-in-portugal
+          - listitem [ref=f13e518]:
+            - link "Casas e apartamentos em arrendamento" [ref=f13e519] [cursor=pointer]:
+              - /url: /apartamentos-para-arrendar
+          - listitem [ref=f13e520]:
+            - link "Apartamentos partilhados" [ref=f13e521] [cursor=pointer]:
+              - /url: /apartamentos-para-dividir
+          - listitem [ref=f13e522]:
+            - link "Oportunidades de investimento" [ref=f13e523] [cursor=pointer]:
+              - /url: https://www.idealista.pt/investimento-imobiliario/#/
+          - listitem [ref=f13e524]:
+            - link "Rentalia, arrendamento para férias" [ref=f13e525] [cursor=pointer]:
+              - /url: https://pt.rentalia.com/
+          - listitem [ref=f13e526]:
+            - link "Relatórios de preços" [ref=f13e527] [cursor=pointer]:
+              - /url: https://www.idealista.pt/media/relatorios-preco-habitacao/
+          - listitem [ref=f13e528]:
+            - link "idealista maps" [ref=f13e529] [cursor=pointer]:
+              - /url: https://www.idealista.pt/maps/
+          - listitem [ref=f13e530]:
+            - link "Apartamentos e casas de luxo à venda em Portugal" [ref=f13e531] [cursor=pointer]:
+              - /url: /luxury-homes-portugal
+          - listitem [ref=f13e532]:
+            - link "Apartamentos e casas de luxo para arrendar em Portugal" [ref=f13e533] [cursor=pointer]:
+              - /url: /luxury-rentals-portugal
+      - navigation "Tens um imóvel?" [ref=f13e534]:
+        - heading "Tens um imóvel?" [level=3] [ref=f13e535]
+        - list [ref=f13e536]:
+          - listitem [ref=f13e537]:
+            - link "Publica o teu anúncio grátis" [ref=f13e538] [cursor=pointer]:
+              - /url: /info/novo-anuncio
+          - listitem [ref=f13e539]:
+            - link "Área do proprietário" [ref=f13e540] [cursor=pointer]:
+              - /url: /proprietarios/
+          - listitem [ref=f13e541]:
+            - link "Melhorar as fotos do teu anúncio" [ref=f13e542] [cursor=pointer]:
+              - /url: /info/truques-fazer-fotos-e-videos
+          - listitem [ref=f13e543]:
+            - link "Solicitar certificado energético" [ref=f13e544] [cursor=pointer]:
+              - /url: /certificadoenergetico/
+          - listitem [ref=f13e545]:
+            - link "Avalia grátis qualquer imóvel" [ref=f13e546] [cursor=pointer]:
+              - /url: /avaliacao-de-imoveis/
+          - listitem [ref=f13e547]:
+            - link "Procurar agências para vender facilmente a tua casa" [ref=f13e548] [cursor=pointer]:
+              - /url: /escolher-agencia-imobiliaria/
+          - listitem [ref=f13e549]:
+            - link "Guia sobre como vender a tua casa" [ref=f13e550] [cursor=pointer]:
+              - /url: /quero-vender-a-minha-casa/
+          - listitem [ref=f13e551]:
+            - link "Garantir 12 mensalidades com um seguro de incumprimento" [ref=f13e552] [cursor=pointer]:
+              - /url: https://www.idealista.pt/seguros/incumprimento-rendas/
+          - listitem [ref=f13e553]:
+            - link "Queres fazer obras em casa?" [ref=f13e554] [cursor=pointer]:
+              - /url: https://www.idealista.pt/obras-em-casa/
+      - navigation "És profissional imobiliário?" [ref=f13e555]:
+        - heading "És profissional imobiliário?" [level=3] [ref=f13e556]
+        - list [ref=f13e557]:
+          - listitem [ref=f13e558]:
+            - link "Publica os teus imóveis profissionais" [ref=f13e559] [cursor=pointer]:
+              - /url: /novo-profissional
+          - listitem [ref=f13e560]:
+            - link "Já és cliente? Entra na tua conta" [ref=f13e561] [cursor=pointer]:
+              - /url: /login
+          - listitem [ref=f13e562]:
+            - link "Cursos imobiliários" [ref=f13e563] [cursor=pointer]:
+              - /url: https://www.idealista.pt/cursos/
+          - listitem [ref=f13e564]:
+            - link "Publicidade no idealista" [ref=f13e565] [cursor=pointer]:
+              - /url: /info/publicidade
+          - listitem [ref=f13e566]:
+            - 'link "idealista/tools: Software de gestão para imobiliárias" [ref=f13e567] [cursor=pointer]':
+              - /url: https://www.idealista.pt/tools/
+          - listitem [ref=f13e568]:
+            - link "Outros softwares recomendados" [ref=f13e569] [cursor=pointer]:
+              - /url: /tools/software-recomendado-para-imobiliarias
+          - listitem [ref=f13e570]:
+            - 'link "idealista/data: tecnologia para a análise imobiliária" [ref=f13e571] [cursor=pointer]':
+              - /url: https://www.idealista.pt/data/
+          - listitem [ref=f13e572]:
+            - 'link "Avaibook: software para gerir os teus arrendamentos turísticos" [ref=f13e573] [cursor=pointer]':
+              - /url: https://www.avaibook.com/pt-pt/
+          - listitem [ref=f13e574]:
+            - link "HCPro - Software de Gestão Imobiliária" [ref=f13e575] [cursor=pointer]:
+              - /url: https://www.hcpro.pt/
+  - contentinfo [ref=f13e576]:
+    - generic [ref=f13e577]:
+      - heading " idealista" [level=2] [ref=f13e578]:
+        - text: 
+        - generic [ref=f13e579]: idealista
+      - generic [ref=f13e581] [cursor=pointer]:
+        - text: 
+        - generic [ref=f13e583]: Português
+      - generic [ref=f13e584]:
+        - navigation [ref=f13e585]:
+          - heading "Sobre o idealista" [level=3] [ref=f13e586]
+          - list [ref=f13e587]:
+            - listitem [ref=f13e588]:
+              - link "Sobre nós" [ref=f13e589] [cursor=pointer]:
+                - /url: /media/sobre-nos/
+            - listitem [ref=f13e590]:
+              - link "Media" [ref=f13e591] [cursor=pointer]:
+                - /url: /media/
+            - listitem [ref=f13e592]:
+              - link "Trabalha connosco" [ref=f13e593] [cursor=pointer]:
+                - /url: /info/trabalha-connosco
+            - listitem [ref=f13e594]:
+              - link "idealista/créditohabitação" [ref=f13e595] [cursor=pointer]:
+                - /url: https://www.idealista.pt/credito-habitacao
+            - listitem [ref=f13e596]:
+              - link "idealista/data" [ref=f13e597] [cursor=pointer]:
+                - /url: /data/
+            - listitem [ref=f13e598]:
+              - link "idealista/news" [ref=f13e599] [cursor=pointer]:
+                - /url: /news/
+            - listitem [ref=f13e600]:
+              - link "idealista/seguros" [ref=f13e601] [cursor=pointer]:
+                - /url: /seguros/
+        - navigation [ref=f13e602]:
+          - heading "Ajuda" [level=3] [ref=f13e603]
+          - list [ref=f13e604]:
+            - listitem [ref=f13e605]:
+              - link "Perguntas frequentes (FAQs)" [ref=f13e606] [cursor=pointer]:
+                - /url: /apoioutilizador/
+            - listitem [ref=f13e607]:
+              - link "Segurança online" [ref=f13e608] [cursor=pointer]:
+                - /url: /apoioutilizador/categorias/seguranca-online/
+            - listitem [ref=f13e609]:
+              - link "Contacta com o idealista" [ref=f13e610] [cursor=pointer]:
+                - /url: /info/contacta-connosco
+            - listitem [ref=f13e611]:
+              - link "Privacidade" [ref=f13e612] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/politica-de-privacidade/
+            - listitem [ref=f13e613]:
+              - link "Política de cookies" [ref=f13e614] [cursor=pointer]:
+                - /url: /info/cookie-policy
+            - listitem [ref=f13e615]:
+              - link "Condições gerais" [ref=f13e616] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/aviso-legal-e-condicoes-gerais/
+        - navigation [ref=f13e617]:
+          - heading "Outros países" [level=3] [ref=f13e618]
+          - list [ref=f13e619]:
+            - listitem [ref=f13e620]:
+              - link "idealista Espanha" [ref=f13e621] [cursor=pointer]:
+                - /url: https://www.idealista.com/pt/
+            - listitem [ref=f13e622]:
+              - link "idealista Itália" [ref=f13e623] [cursor=pointer]:
+                - /url: https://www.idealista.it/pt/
+            - listitem [ref=f13e624]:
+              - link "idealista França" [ref=f13e625] [cursor=pointer]:
+                - /url: https://www.idealista.fr/pt/
+              - generic [ref=f13e626]: Beta
+      - generic [ref=f13e627]:
+        - generic [ref=f13e628]:
+          - heading "Por telemóvel ou Tablet" [level=3] [ref=f13e629]
+          - navigation [ref=f13e630]:
+            - link "App Store" [ref=f13e631] [cursor=pointer]:
+              - /url: https://apps.apple.com/pt/app/idealista.com/id465958311
+            - link "Google Play" [ref=f13e632] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.idealista.android&hl=pt
+            - link "HUAWEI AppGallery" [ref=f13e633] [cursor=pointer]:
+              - /url: https://appgallery.huawei.com/app/C101196223?channelId=idealista&id=ea9d78a5dfc54b8e8a7f1c5e8f1f083e&s=FC3DCED1261C2C2C5624748A104DEB37D2EB945F72175B74A6FDB07C7B7169F0&detailType=0&v=
+          - navigation [ref=f13e634]:
+            - link "" [ref=f13e635] [cursor=pointer]:
+              - /url: https://www.facebook.com/idealista.pt/
+            - link "" [ref=f13e636] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/idealistapt
+            - link "" [ref=f13e637] [cursor=pointer]:
+              - /url: https://instagram.com/idealistapt/
+        - strong [ref=f13e638]: idealista
+        - text: Copyright © 2000-2026

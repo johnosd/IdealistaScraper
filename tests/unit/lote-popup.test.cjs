@@ -7,7 +7,7 @@ function setup(existing = []) {
   const elements = new Map(), callbacks = [], calls = [];
   const element = () => ({ value: '', checked: false, disabled: false, addEventListener(event, fn) { this[event] = fn; } });
   const get = id => { if (!elements.has(id)) elements.set(id, element()); return elements.get(id); };
-  const api = { runtime: { onMessage: { addListener() {} }, getURL: file => 'chrome-extension://test/' + file },
+  const api = { runtime: { onMessage: { addListener() {} }, getURL: file => 'chrome-extension://test/' + file,sendMessage:async()=>({enabled:false}) },
     storage: { local: { get: (keys, cb) => cb({}), set: () => assert.fail('launcher não altera fila') } },
     windows: { update: async (id, data) => calls.push(['focus', id, data]) },
     tabs: { query: async options => options.url ? existing : [{ id: 7 }],

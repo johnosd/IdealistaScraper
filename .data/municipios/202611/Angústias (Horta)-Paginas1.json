@@ -1,0 +1,53 @@
+[
+  {
+    "Titulo": "Apartamento T1 na Rua do Pasteleiro, 41, Angústias (Horta)",
+    "Link": "https://www.idealista.pt/imovel/35346882/",
+    "Preco": "1.000€/mês",
+    "detalhe do item": "T1 | 60 m² área bruta | 2º andar sem elevador",
+    "Descricao do item": "Procura casa para arrendar na cidade da Horta? A ERA Horta tem para si, na freguesia das Angústias uma apartamento novo, t1, com terraço com uma vista incrível da Baía de Porto Pim. Localização excelente, junto à escola secundária e a 5 minutos do Hospital da Horta e da praia de Porto Pim. Composto por um quarto de",
+    "id": "35346882",
+    "tags": [
+      "Vista mar"
+    ],
+    "agenciaNome": "ERA Horta/Pico",
+    "agenciaLink": "https://www.idealista.pt/pro/era-hortapico/",
+    "precoOriginal": null,
+    "descontoPercentual": null,
+    "estacionamento": null,
+    "tempoDestaque": null,
+    "imagens": 18,
+    "tipologia": "T1",
+    "areaBrutaM2": 60,
+    "pisoResumo": "2º andar sem elevador",
+    "Região": null,
+    "Sub-região": "Horta",
+    "Município": "Angústias (Horta)",
+    "Freguesia": "Angústias (Horta)"
+  },
+  {
+    "Titulo": "Moradia independente na Rua do Pasteleiro, 17, Angústias (Horta)",
+    "Link": "https://www.idealista.pt/imovel/33655665/",
+    "Preco": "890€/mês",
+    "detalhe do item": "Garagem incluída | T1 | 117 m² área bruta | lote de 300 m²",
+    "Descricao do item": "Casa antiga, limpa. 1ª linha Mar, vista mar e Pico. T1 com anexo e terraço, garagem e jardim vista mar. Entrada a 1 de outubro. Pretendo alugar até Julho de 2027.",
+    "id": "33655665",
+    "tags": [
+      "Arrendamento temporário",
+      "Vista mar"
+    ],
+    "agenciaNome": null,
+    "agenciaLink": null,
+    "precoOriginal": "990 €",
+    "descontoPercentual": "10%",
+    "estacionamento": "Garagem incluída",
+    "tempoDestaque": null,
+    "imagens": 23,
+    "tipologia": "T1",
+    "areaBrutaM2": 117,
+    "pisoResumo": null,
+    "Região": null,
+    "Sub-região": "Horta",
+    "Município": "Angústias (Horta)",
+    "Freguesia": "Angústias (Horta)"
+  }
+]

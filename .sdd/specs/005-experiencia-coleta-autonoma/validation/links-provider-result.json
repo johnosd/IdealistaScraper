@@ -1,0 +1,8 @@
+{
+  "realNetwork": true,
+  "endpoint": "Idealista locality index",
+  "client": "curl",
+  "proxyConnect": 200,
+  "httpStatus": 403,
+  "exit": 0
+}

@@ -1,0 +1,1555 @@
+- generic [active] [ref=f60e1]:
+  - link "Saltar para o conteúdo principal" [ref=f60e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f60e4]:
+    - generic [ref=f60e5]:
+      - generic [ref=f60e6]:
+        - link [ref=f60e7] [cursor=pointer]:
+          - /url: https://www.idealista.pt/
+          - img "Idealista logo" [ref=f60e9]
+        - generic [ref=f60e11]:
+          - button "Proprietários" [ref=f60e14] [cursor=pointer]
+          - button "Procuras casa" [ref=f60e18] [cursor=pointer]
+          - button "Crédito habitação" [ref=f60e22] [cursor=pointer]
+      - generic [ref=f60e24]:
+        - link "Publica o teu anúncio" [ref=f60e25] [cursor=pointer]:
+          - /url: https://www.idealista.pt/info/novo-anuncio
+        - combobox "Português" [ref=f60e28] [cursor=pointer]
+        - link "Aceder" [ref=f60e32] [cursor=pointer]:
+          - /url: https://www.idealista.pt/login
+  - generic [ref=f60e38]:
+    - list [ref=f60e41]:
+      - listitem [ref=f60e42]:
+        - link "idealista" [ref=f60e43] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=f60e44]:  Norte
+    - generic [ref=f60e45]:
+      - region [ref=f60e46]:
+        - heading "6.027 casas e apartamentos para arrendar, Norte" [level=1] [ref=f60e47]
+        - button " Modificar zonas" [ref=f60e49] [cursor=pointer]:
+          - text: 
+          - generic [ref=f60e50]: Modificar zonas
+      - navigation [ref=f60e52]:
+        - generic [ref=f60e53]: "Outras zonas próximas:"
+        - list [ref=f60e54]:
+          - listitem [ref=f60e55]:
+            - link "Aldoar" [ref=f60e56] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/aldoar/
+          - listitem [ref=f60e57]:
+            - link "Bairro da Louça" [ref=f60e58] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/bairro-da-louca/
+          - listitem [ref=f60e59]:
+            - link "Areal de Baixo" [ref=f60e60] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/areal-de-baixo/
+          - listitem [ref=f60e61]:
+            - link "Alto Minho" [ref=f60e62] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/alto-minho/
+          - listitem [ref=f60e63]:
+            - link "N203, Entre Ambos-os-Rios" [ref=f60e64] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/n203-entre-ambos-os-rios-ponte-da-barca/
+    - generic [ref=f60e67]:
+      - tablist:
+        - tab [ref=f60e68]:
+          - link "Comprar" [ref=f60e69] [cursor=pointer]:
+            - /url: /geo/comprar-casas/norte/
+        - tab "Arrendar" [selected] [ref=f60e70]
+        - tab [ref=f60e72]:
+          - link "Para férias" [ref=f60e73] [cursor=pointer]:
+            - /url: /geo/arrendar-para_ferias/norte/
+    - generic:   
+    - complementary [ref=f60e74]:
+      - generic [ref=f60e77]:
+        - heading "Novos anúncios no teu email" [level=2] [ref=f60e78]
+        - button "Guardar pesquisa" [ref=f60e79] [cursor=pointer]
+      - generic [ref=f60e83]:
+        - generic [ref=f60e84]:
+          - img "Mapa" [ref=f60e85]
+          - link "車 Ver no mapa" [ref=f60e86] [cursor=pointer]:
+            - /url: /geo/arrendar-casas/norte/mapa-google
+        - generic [ref=f60e87]:
+          - generic [ref=f60e88]:
+            - heading "Tipo de imóvel" [level=3] [ref=f60e89]
+            - button "Casas e apartamentos" [ref=f60e90] [cursor=pointer]:
+              - option [ref=f60e92]: Nova construção
+              - option [ref=f60e93]: Casas e apartamentos
+              - option [ref=f60e94]: Quartos
+              - option [ref=f60e95]: Para férias
+              - option [ref=f60e96]: Escritórios
+              - option [ref=f60e97]: Espaços comerciais ou armazéns
+              - option [ref=f60e98]: Trespasses
+              - option [ref=f60e99]: Garagens
+              - option [ref=f60e100]: Terrenos
+              - option [ref=f60e101]: Arrecadações
+              - option [ref=f60e102]: Prédios
+          - generic [ref=f60e103]:
+            - heading "Preço" [level=3] [ref=f60e104]
+            - button "Min" [ref=f60e107] [cursor=pointer]:
+              - option [ref=f60e109]: Min
+              - option [ref=f60e110]: "500"
+              - option [ref=f60e111]: "550"
+              - option [ref=f60e112]: "600"
+              - option [ref=f60e113]: "650"
+              - option [ref=f60e114]: "700"
+              - option [ref=f60e115]: "750"
+              - option [ref=f60e116]: "800"
+              - option [ref=f60e117]: "850"
+              - option [ref=f60e118]: "900"
+              - option [ref=f60e119]: "950"
+              - option [ref=f60e120]: "1.000"
+              - option [ref=f60e121]: "1.100"
+              - option [ref=f60e122]: "1.200"
+              - option [ref=f60e123]: "1.300"
+              - option [ref=f60e124]: "1.400"
+              - option [ref=f60e125]: "1.500"
+              - option [ref=f60e126]: "1.600"
+              - option [ref=f60e127]: "1.700"
+              - option [ref=f60e128]: "1.800"
+              - option [ref=f60e129]: "1.900"
+              - option [ref=f60e130]: "2.000"
+              - option [ref=f60e131]: "2.100"
+              - option [ref=f60e132]: "2.400"
+              - option [ref=f60e133]: "2.700"
+              - option [ref=f60e134]: "3.000"
+              - option [ref=f60e135]: "4.000"
+              - option [ref=f60e136]: Sem limite
+            - button "Max" [ref=f60e139] [cursor=pointer]:
+              - option [ref=f60e141]: Max
+              - option [ref=f60e142]: "500"
+              - option [ref=f60e143]: "550"
+              - option [ref=f60e144]: "600"
+              - option [ref=f60e145]: "650"
+              - option [ref=f60e146]: "700"
+              - option [ref=f60e147]: "750"
+              - option [ref=f60e148]: "800"
+              - option [ref=f60e149]: "850"
+              - option [ref=f60e150]: "900"
+              - option [ref=f60e151]: "950"
+              - option [ref=f60e152]: "1.000"
+              - option [ref=f60e153]: "1.100"
+              - option [ref=f60e154]: "1.200"
+              - option [ref=f60e155]: "1.300"
+              - option [ref=f60e156]: "1.400"
+              - option [ref=f60e157]: "1.500"
+              - option [ref=f60e158]: "1.600"
+              - option [ref=f60e159]: "1.700"
+              - option [ref=f60e160]: "1.800"
+              - option [ref=f60e161]: "1.900"
+              - option [ref=f60e162]: "2.000"
+              - option [ref=f60e163]: "2.100"
+              - option [ref=f60e164]: "2.400"
+              - option [ref=f60e165]: "2.700"
+              - option [ref=f60e166]: "3.000"
+              - option [ref=f60e167]: "4.000"
+              - option [ref=f60e168]: Sem limite
+          - generic [ref=f60e169]:
+            - heading "Tipo de arrendamento" [level=3] [ref=f60e170]
+            - list [ref=f60e171]:
+              - listitem [ref=f60e172]:
+                - generic [ref=f60e173]:
+                  - checkbox "Arrendamento de longa duração" [ref=f60e174]
+                  - link [aria-hidden] [ref=f60e177] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-arrendamento-longa-duracao/
+                    - text: Arrendamento de longa duração
+              - listitem [ref=f60e178]:
+                - generic [ref=f60e179]:
+                  - checkbox "Arrendamento temporário" [ref=f60e180]
+                  - link [aria-hidden] [ref=f60e183] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-arrendamento-temporario/
+                    - text: Arrendamento temporário
+          - generic [ref=f60e184]:
+            - heading "Tamanho" [level=3] [ref=f60e185]
+            - button "Min" [ref=f60e188] [cursor=pointer]:
+              - option [ref=f60e190]: Min
+              - option [ref=f60e191]: 40 m²
+              - option [ref=f60e192]: 60 m²
+              - option [ref=f60e193]: 80 m²
+              - option [ref=f60e194]: 100 m²
+              - option [ref=f60e195]: 120 m²
+              - option [ref=f60e196]: 140 m²
+              - option [ref=f60e197]: 160 m²
+              - option [ref=f60e198]: 180 m²
+              - option [ref=f60e199]: 200 m²
+              - option [ref=f60e200]: 300 m²
+              - option [ref=f60e201]: 400 m²
+              - option [ref=f60e202]: Sem limite
+            - button "Max" [ref=f60e205] [cursor=pointer]:
+              - option [ref=f60e207]: Max
+              - option [ref=f60e208]: 40 m²
+              - option [ref=f60e209]: 60 m²
+              - option [ref=f60e210]: 80 m²
+              - option [ref=f60e211]: 100 m²
+              - option [ref=f60e212]: 120 m²
+              - option [ref=f60e213]: 140 m²
+              - option [ref=f60e214]: 160 m²
+              - option [ref=f60e215]: 180 m²
+              - option [ref=f60e216]: 200 m²
+              - option [ref=f60e217]: 300 m²
+              - option [ref=f60e218]: 400 m²
+              - option [ref=f60e219]: Sem limite
+          - generic [ref=f60e220]:
+            - heading "Tipo de casa" [level=3] [ref=f60e221]
+            - list [ref=f60e222]:
+              - listitem [ref=f60e223]:
+                - tree [ref=f60e224]:
+                  - generic [ref=f60e225]:
+                    - generic [ref=f60e226]:
+                      - checkbox "Apartamentos, penthouses e duplex" [ref=f60e227]
+                      - generic [ref=f60e229] [cursor=pointer]:
+                        - link [aria-hidden]:
+                          - /url: /geo/arrendar-casas/norte/com-apartamentos/
+                          - text: Apartamentos, penthouses e duplex
+                    - button " Ver outros filtros" [ref=f60e230] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f60e231]: Ver outros filtros
+              - listitem [ref=f60e232]:
+                - tree [ref=f60e233]:
+                  - generic [ref=f60e234]:
+                    - generic [ref=f60e235]:
+                      - checkbox "Casas e moradias" [ref=f60e236]
+                      - generic [ref=f60e238] [cursor=pointer]:
+                        - link [aria-hidden]:
+                          - /url: /geo/arrendar-casas/norte/com-moradias/
+                          - text: Casas e moradias
+                    - button " Ver outros filtros" [ref=f60e239] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f60e240]: Ver outros filtros
+          - generic [ref=f60e241]:
+            - heading "Outras denominações" [level=3] [ref=f60e242]
+            - generic [ref=f60e243]:
+              - generic [ref=f60e244]: Quintas, moradias térreas...
+              - generic [ref=f60e245]:
+                - button "Ver mais Outras denominações" [ref=f60e246] [cursor=pointer]:
+                  - text: Ver mais
+                  - generic [ref=f60e247]: 
+                - text: 
+          - generic [ref=f60e248]:
+            - heading "Equipamento" [level=3] [ref=f60e249]
+            - list [ref=f60e250]:
+              - listitem [ref=f60e251]:
+                - button "Indiferente" [ref=f60e253] [cursor=pointer]:
+                  - option [ref=f60e255]: Indiferente
+                  - option [ref=f60e256]: Só cozinha equipada
+                  - option [ref=f60e257]: Mobilado
+          - generic [ref=f60e258]:
+            - heading "Quartos" [level=3] [ref=f60e259]
+            - list [ref=f60e260]:
+              - listitem [ref=f60e261]:
+                - generic [ref=f60e262]:
+                  - checkbox "T0" [ref=f60e263]
+                  - link [aria-hidden] [ref=f60e266] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-t0/
+                    - text: T0
+              - listitem [ref=f60e267]:
+                - generic [ref=f60e268]:
+                  - checkbox "T1" [ref=f60e269]
+                  - link [aria-hidden] [ref=f60e272] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-t1/
+                    - text: T1
+              - listitem [ref=f60e273]:
+                - generic [ref=f60e274]:
+                  - checkbox "T2" [ref=f60e275]
+                  - link [aria-hidden] [ref=f60e278] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-t2/
+                    - text: T2
+              - listitem [ref=f60e279]:
+                - generic [ref=f60e280]:
+                  - checkbox "T3" [ref=f60e281]
+                  - link [aria-hidden] [ref=f60e284] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-t3/
+                    - text: T3
+              - listitem [ref=f60e285]:
+                - generic [ref=f60e286]:
+                  - checkbox "T4 ou +" [ref=f60e287]
+                  - link [aria-hidden] [ref=f60e290] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-t4-t5/
+                    - text: T4 ou +
+          - generic [ref=f60e291]:
+            - heading "Casas de banho" [level=3] [ref=f60e292]
+            - list [ref=f60e293]:
+              - listitem [ref=f60e294]:
+                - generic [ref=f60e295]:
+                  - checkbox "1" [ref=f60e296]
+                  - link [aria-hidden] [ref=f60e299] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-banho-1/
+                    - text: "1"
+              - listitem [ref=f60e300]:
+                - generic [ref=f60e301]:
+                  - checkbox "2" [ref=f60e302]
+                  - link [aria-hidden] [ref=f60e305] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-banho-2/
+                    - text: "2"
+              - listitem [ref=f60e306]:
+                - generic [ref=f60e307]:
+                  - checkbox "3 casas de banho ou mais" [ref=f60e308]
+                  - link [aria-hidden] [ref=f60e311] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-banho-3/
+                    - text: 3 casas de banho ou mais
+          - generic [ref=f60e312]:
+            - heading "Estado" [level=3] [ref=f60e313]
+            - list [ref=f60e314]:
+              - listitem [ref=f60e315]:
+                - generic [ref=f60e316]:
+                  - checkbox "Nova construção" [ref=f60e317]
+                  - link [aria-hidden] [ref=f60e320] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-novo/
+                    - text: Nova construção
+              - listitem [ref=f60e321]:
+                - generic [ref=f60e322]:
+                  - checkbox "Bom estado" [ref=f60e323]
+                  - link [aria-hidden] [ref=f60e326] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-bom-estado/
+                    - text: Bom estado
+              - listitem [ref=f60e327]:
+                - generic [ref=f60e328]:
+                  - checkbox "Para recuperar" [ref=f60e329]
+                  - link [aria-hidden] [ref=f60e332] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-para-reformar/
+                    - text: Para recuperar
+          - generic [ref=f60e333]:
+            - heading "Mais filtros" [level=3] [ref=f60e334]
+            - list [ref=f60e335]:
+              - listitem [ref=f60e336]:
+                - generic [ref=f60e337]:
+                  - checkbox "Ar condicionado" [ref=f60e338]
+                  - link [aria-hidden] [ref=f60e341] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-arcondicionado/
+                    - text: Ar condicionado
+              - listitem [ref=f60e342]:
+                - generic [ref=f60e343]:
+                  - checkbox "Armários embutidos" [ref=f60e344]
+                  - link [aria-hidden] [ref=f60e347] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-roupeiros-embutidos/
+                    - text: Armários embutidos
+              - listitem [ref=f60e348]:
+                - generic [ref=f60e349]:
+                  - checkbox "Elevador" [ref=f60e350]
+                  - link [aria-hidden] [ref=f60e353] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-elevador/
+                    - text: Elevador
+              - listitem [ref=f60e354]:
+                - tree [ref=f60e355]:
+                  - generic [ref=f60e356]:
+                    - generic [ref=f60e357]:
+                      - checkbox "Varanda e terraço" [ref=f60e358]
+                      - generic [ref=f60e360] [cursor=pointer]:
+                        - link [aria-hidden]:
+                          - /url: /geo/arrendar-casas/norte/com-terraco-e-varanda/
+                          - text: Varanda e terraço
+                    - button " Ver outros filtros" [ref=f60e361] [cursor=pointer]:
+                      - text: 
+                      - generic [ref=f60e362]: Ver outros filtros
+              - listitem [ref=f60e363]:
+                - generic [ref=f60e364]:
+                  - checkbox "Lugar de garagem" [ref=f60e365]
+                  - link [aria-hidden] [ref=f60e368] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-garagem/
+                    - text: Lugar de garagem
+              - listitem [ref=f60e369]:
+                - generic [ref=f60e370]:
+                  - checkbox "Jardim" [ref=f60e371]
+                  - link [aria-hidden] [ref=f60e374] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-jardim/
+                    - text: Jardim
+              - listitem [ref=f60e375]:
+                - generic [ref=f60e376]:
+                  - checkbox "Piscina" [ref=f60e377]
+                  - link [aria-hidden] [ref=f60e380] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-piscina/
+                    - text: Piscina
+              - listitem [ref=f60e381]:
+                - generic [ref=f60e382]:
+                  - checkbox "Arrecadação" [ref=f60e383]
+                  - link [aria-hidden] [ref=f60e386] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-arrecadacao/
+                    - text: Arrecadação
+              - listitem [ref=f60e387]:
+                - generic [ref=f60e388]:
+                  - checkbox "Casa adaptada" [ref=f60e389]
+                  - link [aria-hidden] [ref=f60e392] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-adaptados/
+                    - text: Casa adaptada
+              - listitem [ref=f60e393]:
+                - generic [ref=f60e394]:
+                  - checkbox "Vista mar" [ref=f60e395]
+                  - link [aria-hidden] [ref=f60e398] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-vista-mar/
+                    - text: Vista mar
+              - listitem [ref=f60e399]:
+                - generic [ref=f60e400]:
+                  - checkbox "Casa de luxo" [ref=f60e401]
+                  - link [aria-hidden] [ref=f60e404] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-luxo/
+                    - text: Casa de luxo
+          - generic [ref=f60e405]:
+            - heading "Andar" [level=3] [ref=f60e406]
+            - list [ref=f60e407]:
+              - listitem [ref=f60e408]:
+                - generic [ref=f60e409]:
+                  - checkbox "Último andar" [ref=f60e410]
+                  - link [aria-hidden] [ref=f60e413] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-ultimo-andar/
+                    - text: Último andar
+              - listitem [ref=f60e414]:
+                - generic [ref=f60e415]:
+                  - checkbox "Andares intermédios" [ref=f60e416]
+                  - link [aria-hidden] [ref=f60e419] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-andares-intermedios/
+                    - text: Andares intermédios
+              - listitem [ref=f60e420]:
+                - generic [ref=f60e421]:
+                  - checkbox "Rés do chão" [ref=f60e422]
+                  - link [aria-hidden] [ref=f60e425] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-res-do-chao/
+                    - text: Rés do chão
+          - generic [ref=f60e426]:
+            - heading [level=3] [ref=f60e427]:
+              - text: Eficiência energética
+              - button "Mais informação sobre certificado energético" [ref=f60e428] [cursor=pointer]: 亂 
+            - list [ref=f60e429]:
+              - listitem [ref=f60e430]:
+                - generic [ref=f60e431]:
+                  - checkbox "Alta" [ref=f60e432]
+                  - link [aria-hidden] [ref=f60e435] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-eficiencia-energetica-alta/
+                    - text: Alta
+              - listitem [ref=f60e436]:
+                - generic [ref=f60e437]:
+                  - checkbox "Média" [ref=f60e438]
+                  - link [aria-hidden] [ref=f60e441] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-eficiencia-energetica-media/
+                    - text: Média
+              - listitem [ref=f60e442]:
+                - generic [ref=f60e443]:
+                  - checkbox "Baixa" [ref=f60e444]
+                  - link [aria-hidden] [ref=f60e447] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-eficiencia-energetica-baixa/
+                    - text: Baixa
+          - generic [ref=f60e448]:
+            - heading "Multimédia" [level=3] [ref=f60e449]
+            - list [ref=f60e450]:
+              - listitem [ref=f60e451]:
+                - generic [ref=f60e452]:
+                  - checkbox "Com planta" [ref=f60e453]
+                  - generic [ref=f60e454] [cursor=pointer]: Com planta
+              - listitem [ref=f60e456]:
+                - generic [ref=f60e457]:
+                  - checkbox "Com visita virtual" [ref=f60e458]
+                  - generic [ref=f60e459] [cursor=pointer]: Com visita virtual
+          - generic [ref=f60e461]:
+            - heading "Tipo de anunciante" [level=3] [ref=f60e462]
+            - list [ref=f60e463]:
+              - listitem [ref=f60e464]:
+                - generic [ref=f60e465]:
+                  - checkbox "De bancos" [ref=f60e466]
+                  - link [aria-hidden] [ref=f60e469] [cursor=pointer]:
+                    - /url: /geo/arrendar-casas/norte/com-da-banca/
+                    - text: De bancos
+          - group "Publicado no idealista" [ref=f60e470]:
+            - list [ref=f60e472]:
+              - listitem [ref=f60e473]:
+                - generic [ref=f60e474]:
+                  - radio "Indiferente" [checked] [ref=f60e475]
+                  - generic [ref=f60e476] [cursor=pointer]: Indiferente
+              - listitem [ref=f60e478]:
+                - generic [ref=f60e479]:
+                  - radio "Nas últimas 24 horas" [ref=f60e480]
+                  - generic [ref=f60e481] [cursor=pointer]: Nas últimas 24 horas
+              - listitem [ref=f60e483]:
+                - generic [ref=f60e484]:
+                  - radio "Na última semana" [ref=f60e485]
+                  - generic [ref=f60e486] [cursor=pointer]: Na última semana
+              - listitem [ref=f60e488]:
+                - generic [ref=f60e489]:
+                  - radio "No último mês" [ref=f60e490]
+                  - generic [ref=f60e491] [cursor=pointer]: No último mês
+        - text: 
+    - group [ref=f60e493]:
+      - generic [ref=f60e494]: "Ordenar:"
+      - list [ref=f60e495]:
+        - listitem [ref=f60e496]:
+          - generic [ref=f60e497] [cursor=pointer]: Por relevância
+        - listitem [ref=f60e498]:
+          - link "Baratos" [ref=f60e499] [cursor=pointer]:
+            - /url: /geo/arrendar-casas/norte/?ordem=precos-asc
+        - listitem [ref=f60e500]:
+          - link "Mais recentes" [ref=f60e501] [cursor=pointer]:
+            - /url: /geo/arrendar-casas/norte/?ordem=atualizado-desc
+        - listitem [ref=f60e502]:
+          - generic [ref=f60e503] [cursor=pointer]: Mais
+    - main [ref=f60e505]:
+      - generic [ref=f60e506]:
+        - article [ref=f60e507]:
+          - generic [ref=f60e508]:
+            - generic [ref=f60e510]:
+              - button "Abrir mapa" [ref=f60e512] [cursor=pointer]: 
+              - generic [ref=f60e513]:
+                - generic [ref=f60e514]: 1/
+                - generic [ref=f60e515]: "22"
+            - region [ref=f60e518]:
+              - generic [ref=f60e519]:
+                - button "Previous Slide" [ref=f60e520] [cursor=pointer]: 
+                - button "Next Slide" [ref=f60e521] [cursor=pointer]: 
+                - list [ref=f60e522]:
+                  - listitem [ref=f60e523]:
+                    - img "Quarto" [ref=f60e524]:
+                      - figure [ref=f60e525]:
+                        - img "Quarto" [ref=f60e527]
+                    - img "Quarto" [ref=f60e528]:
+                      - figure [ref=f60e529]:
+                        - img "Quarto" [ref=f60e531]
+                    - img "Mapa da zona" [ref=f60e532]:
+                      - img "Mapa de localização do imóvel" [ref=f60e536]
+            - text: 
+          - generic [ref=f60e537]:
+            - heading "Apartamento T2 na Rua José Rocha, 216, Liceu - Paço do Rei, Mafamude" [level=2] [ref=f60e538] [cursor=pointer]
+            - generic [ref=f60e539]: 1.200€/mês
+            - generic [ref=f60e541]: Garagem incluída T2 100 m² área bruta 5º andar com elevador 58 minutos
+            - paragraph [ref=f60e543]: Apartamento T2, bem localizado, junto de escolas, supermercados, padaria e do El Corte Inglês. Biblioteca e auditório à porta. Ótimo acesso às auto-estradas e ao centro do Porto. Estação de metro a uma distância de 5 minutos à pé.
+            - generic [ref=f60e544]:
+              - text: 
+              - button "contact phone" [ref=f60e545] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e546]: Ver telefone
+              - button "" [ref=f60e547] [cursor=pointer]
+              - button "" [ref=f60e548] [cursor=pointer]
+        - article [ref=f60e549]:
+          - generic [ref=f60e550]:
+            - generic [ref=f60e554]:
+              - generic [ref=f60e555]:
+                - button "Abrir planta" [ref=f60e556] [cursor=pointer]: 
+                - button "Abrir visita virtual" [ref=f60e557] [cursor=pointer]: 
+                - button "Abrir vídeo" [ref=f60e558] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e559] [cursor=pointer]: 
+              - generic [ref=f60e560]:
+                - generic [ref=f60e561]: 1/
+                - generic [ref=f60e562]: "22"
+            - region [ref=f60e565]:
+              - generic [ref=f60e566]:
+                - button "Previous Slide" [ref=f60e567] [cursor=pointer]: 
+                - button "Next Slide" [ref=f60e568] [cursor=pointer]: 
+                - list [ref=f60e569]:
+                  - listitem [ref=f60e570]:
+                    - img "Sala de estar" [ref=f60e571]:
+                      - figure [ref=f60e572]:
+                        - img "Sala de estar" [ref=f60e574]
+                    - img "Quarto" [ref=f60e575]:
+                      - figure [ref=f60e576]:
+                        - img "Quarto" [ref=f60e578]
+                    - img "Mapa da zona" [ref=f60e579]:
+                      - generic [ref=f60e581]:
+                        - generic [ref=f60e582]:
+                          - generic [ref=f60e583]: 亂
+                          - generic [ref=f60e584]: Localização aproximada.
+                        - img "Mapa de localização do imóvel" [ref=f60e586]
+            - text:    
+          - generic [ref=f60e587]:
+            - link [ref=f60e589] [cursor=pointer]:
+              - /url: /pro/hed-mediacao-imobiliaria/
+              - img "HED Imobiliária" [ref=f60e590]
+            - heading "Apartamento T1 na Foz, Aldoar - Foz do Douro - Nevogilde" [level=2] [ref=f60e591] [cursor=pointer]
+            - generic [ref=f60e592]: 1.250€/mês
+            - generic [ref=f60e594]: T1 56 m² área bruta sem elevador
+            - paragraph [ref=f60e596]: Apartamento T1 totalmente renovado em 2025, situado numa zona residencial tranquila na Foz, uma das localizações mais procuradas do Porto. Com inquilino até final de Novembro 2026. O imóvel destaca-se pela qualidade da renovação e pela funcionalidade dos seus espaços. Possui caixilharia nova com vidros duplos, propor
+            - generic [ref=f60e597]:
+              - button "Contactar" [ref=f60e598] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e599] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e600]: Ver telefone
+              - button "" [ref=f60e601] [cursor=pointer]
+              - button "" [ref=f60e602] [cursor=pointer]
+        - article [ref=f60e603]:
+          - generic [ref=f60e604]:
+            - generic [ref=f60e606]:
+              - generic [ref=f60e607]:
+                - button "Abrir planta" [ref=f60e608] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e609] [cursor=pointer]: 
+              - generic [ref=f60e610]:
+                - generic [ref=f60e611]: 1/
+                - generic [ref=f60e612]: "37"
+            - region [ref=f60e615]:
+              - generic [ref=f60e616]:
+                - button "Previous Slide" [ref=f60e617] [cursor=pointer]: 
+                - button "Next Slide" [ref=f60e618] [cursor=pointer]: 
+                - list [ref=f60e619]:
+                  - listitem [ref=f60e620]:
+                    - img "Sala de estar" [ref=f60e621]:
+                      - figure [ref=f60e622]:
+                        - img "Sala de estar" [ref=f60e624]
+                    - img "Sala de jantar" [ref=f60e625]:
+                      - figure [ref=f60e626]:
+                        - img "Sala de jantar" [ref=f60e628]
+                    - img "Mapa da zona" [ref=f60e629]:
+                      - generic [ref=f60e631]:
+                        - generic [ref=f60e632]:
+                          - generic [ref=f60e633]: 亂
+                          - generic [ref=f60e634]: Localização aproximada.
+                        - img "Mapa de localização do imóvel" [ref=f60e636]
+            - text:  
+          - generic [ref=f60e637]:
+            - link [ref=f60e639] [cursor=pointer]:
+              - /url: /pro/mirantte-portugal/
+              - img "MIRANTTE PORTUGAL" [ref=f60e640]
+            - heading "Apartamento T2 na Avenida Afonso de Albuquerque, Sampaio-Alumiara-Verdinho, Canidelo" [level=2] [ref=f60e641] [cursor=pointer]
+            - generic [ref=f60e642]: 2.450€/mês
+            - generic [ref=f60e644]: Garagem incluída T2 120 m² área bruta 3º andar com elevador 1 hora
+            - paragraph [ref=f60e646]: "Apartamento T2 no 3º piso do São Paio Apartments Lote 10. A área bruta da habitação é de 120m² e varanda de 16m². Exposição solar a Poente/Sul. O edifício possui jardim privativo, sala de condomínio e espaço de lazer junto à marginal do Rio Douro e Marina da Afurada Composto por: - hall de entrada; - sala e cozinha em"
+            - generic [ref=f60e647]:
+              - button "Contactar" [ref=f60e648] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e649] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e650]: Ver telefone
+              - button "" [ref=f60e651] [cursor=pointer]
+              - button "" [ref=f60e652] [cursor=pointer]
+        - article "Espaço publicitário"
+        - article [ref=f60e653]:
+          - generic [ref=f60e654]:
+            - generic [ref=f60e656]:
+              - generic [ref=f60e657]:
+                - button "Abrir planta" [ref=f60e658] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e659] [cursor=pointer]: 
+              - generic [ref=f60e660]:
+                - generic [ref=f60e661]: 1/
+                - generic [ref=f60e662]: "21"
+            - generic [ref=f60e668] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e670]
+            - text:  
+          - generic [ref=f60e672]:
+            - link [ref=f60e674] [cursor=pointer]:
+              - /url: /pro/hed-mediacao-imobiliaria/
+              - img "HED Imobiliária" [ref=f60e675]
+            - heading "Apartamento T1 no Centro de Matosinhos, Matosinhos" [level=2] [ref=f60e676] [cursor=pointer]
+            - generic [ref=f60e677]: 1.500€/mês
+            - generic [ref=f60e679]: T1 92 m² área bruta Rés do chão com elevador
+            - generic [ref=f60e680]:
+              - paragraph [ref=f60e681]: Apartamento T1 Novo , equipado – a 2 minutos do metro
+              - paragraph [ref=f60e682]: Apartamento T1 novo, no empreendimento Green Park, no coração de Matosinhos, numa localização privilegiada na Avenida D. Afonso Henriques, a cerca de 2 minutos do Metro. Pensado para proporcionar conforto, funcionalidade e qualidade de vida, este apartamento encontra-se mobilado e equipado e destaca-se pela arquitetur
+            - generic [ref=f60e683]: Luminoso
+            - generic [ref=f60e685]:
+              - button "Contactar" [ref=f60e686] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e687] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e688]: Ver telefone
+              - button "" [ref=f60e689] [cursor=pointer]
+              - button "" [ref=f60e690] [cursor=pointer]
+        - article [ref=f60e691]:
+          - generic [ref=f60e692]:
+            - generic [ref=f60e694]:
+              - button "Abrir mapa" [ref=f60e696] [cursor=pointer]: 
+              - generic [ref=f60e697]:
+                - generic [ref=f60e698]: 1/
+                - generic [ref=f60e699]: "7"
+            - generic [ref=f60e705] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e707]
+            - text: 
+          - generic [ref=f60e709]:
+            - heading "Apartamento T1 na Rua da Lapa, 22, Praça da República, Cedofeita - Santo Ildefonso - Sé - Miragaia - São Nicolau - Vitória" [level=2] [ref=f60e710] [cursor=pointer]
+            - generic [ref=f60e711]: 850€/mês
+            - generic [ref=f60e713]: T1 80 m² área bruta 3º andar sem elevador 1 hora
+            - paragraph [ref=f60e715]: "T1+1 na zona da Lapa, centro do Porto. - Exposição Solar Nascente/Poente - 1 Quarto + 1 Quarto mais pequeno - 1 WC Completo - Cozinha/Sala em Open Space - 1 Varanda Fechada - Certificado Energético: E Requisitos: - 2 Rendas + 1 Caução - 2 Fiadores - 3 Últimos recibos de vencimento - Nota de liquidação de IRS/2025 (ar"
+            - generic [ref=f60e716]:
+              - text: 
+              - button "contact phone" [ref=f60e717] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e718]: Ver telefone
+              - button "" [ref=f60e719] [cursor=pointer]
+              - button "" [ref=f60e720] [cursor=pointer]
+        - article [ref=f60e721]:
+          - generic [ref=f60e722]:
+            - generic [ref=f60e724]:
+              - button "Abrir mapa" [ref=f60e726] [cursor=pointer]: 
+              - generic [ref=f60e727]:
+                - generic [ref=f60e728]: 1/
+                - generic [ref=f60e729]: "7"
+            - generic [ref=f60e735] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e737]
+            - text: 
+          - generic [ref=f60e739]:
+            - heading "Apartamento T1 na Rua Central de Francos, 261, Francos - Casa da Música - Pedro Hispano, Ramalde" [level=2] [ref=f60e740] [cursor=pointer]
+            - generic [ref=f60e741]: 1.100€/mês
+            - generic [ref=f60e743]: T1 55 m² área bruta Rés do chão sem elevador
+            - paragraph [ref=f60e745]: Apartamento totalmente equipado e mobilado com 1 lugar de estacionamento.
+            - generic [ref=f60e746]:
+              - button "Contactar" [ref=f60e747] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e748] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e749]: Ver telefone
+              - button "" [ref=f60e750] [cursor=pointer]
+              - button "" [ref=f60e751] [cursor=pointer]
+        - article [ref=f60e752]:
+          - generic [ref=f60e753]:
+            - generic [ref=f60e755]:
+              - button "Abrir mapa" [ref=f60e757] [cursor=pointer]: 
+              - generic [ref=f60e758]:
+                - generic [ref=f60e759]: 1/
+                - generic [ref=f60e760]: "15"
+            - generic [ref=f60e766] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e768]
+            - text: 
+          - generic [ref=f60e770]:
+            - link [ref=f60e772] [cursor=pointer]:
+              - /url: /pro/era-porto-baixa/
+              - img "ERA Porto Baixa | Centro" [ref=f60e773]
+            - heading "Apartamento T1 na Rua de Cedofeita, Cedofeita, Cedofeita - Santo Ildefonso - Sé - Miragaia - São Nicolau - Vitória" [level=2] [ref=f60e774] [cursor=pointer]
+            - generic [ref=f60e775]: 900€/mês
+            - generic [ref=f60e777]: T1 42 m² área bruta 3º andar com elevador 1 hora
+            - paragraph [ref=f60e779]: "Apartamento na rua de Cedofeita 1 renda +IVA Condições: - 2 rendas iniciais - 1 renda de caução - fiador."
+            - generic [ref=f60e780]:
+              - button "Contactar" [ref=f60e781] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e782] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e783]: Ver telefone
+              - button "" [ref=f60e784] [cursor=pointer]
+              - button "" [ref=f60e785] [cursor=pointer]
+        - article [ref=f60e786]:
+          - generic [ref=f60e787]:
+            - generic [ref=f60e789]:
+              - button "Abrir mapa" [ref=f60e791] [cursor=pointer]: 
+              - generic [ref=f60e792]:
+                - generic [ref=f60e793]: 1/
+                - generic [ref=f60e794]: "12"
+            - generic [ref=f60e800] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e802]
+            - text: 
+          - generic [ref=f60e804]:
+            - heading "Andar de moradia na Rua Caetano de Melo, Gervide, Oliveira do Douro" [level=2] [ref=f60e805] [cursor=pointer]
+            - generic [ref=f60e806]: 1.000€/mês
+            - generic [ref=f60e808]: T2 65 m² área bruta
+            - paragraph [ref=f60e810]: Andar T2 Moderno em Vila Nova de Gaia - Pronto a Habitar Descobre este fantástico andar de moradia localizado na R. Caetano de Melo, em Vila Nova de Gaia, completamente renovado e pronto para primeira utilização. Com 65 m² de área bruta e 60 m² úteis, este espaço oferece conforto e funcionalidade para quem procura qua
+            - generic [ref=f60e811]:
+              - button "Contactar" [ref=f60e812] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e813] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e814]: Ver telefone
+              - button "" [ref=f60e815] [cursor=pointer]
+              - button "" [ref=f60e816] [cursor=pointer]
+        - article [ref=f60e817]:
+          - generic [ref=f60e818]:
+            - generic [ref=f60e820]:
+              - button "Abrir mapa" [ref=f60e822] [cursor=pointer]: 
+              - generic [ref=f60e823]:
+                - generic [ref=f60e824]: 1/
+                - generic [ref=f60e825]: "14"
+            - generic [ref=f60e831] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e833]
+            - text: 
+          - generic [ref=f60e835]:
+            - heading "Apartamento T2 na Rua do Antonio Candido, 709, Covelo - Monte de São João, Paranhos" [level=2] [ref=f60e836] [cursor=pointer]
+            - generic [ref=f60e837]: 1.400€/mês
+            - generic [ref=f60e839]: T2 115 m² área bruta 1º andar sem elevador 1 hora
+            - paragraph [ref=f60e841]: Apartamento irrepreensível Soalho madeira Cozinha mobilada Armários embutidos Ar condicionado nos Quartos e Sala Video Porteiro Localização central com metro e autocarro praticamente à porta.
+            - generic [ref=f60e842]:
+              - button "Contactar" [ref=f60e843] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e844] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e845]: Ver telefone
+              - button "" [ref=f60e846] [cursor=pointer]
+              - button "" [ref=f60e847] [cursor=pointer]
+        - article [ref=f60e848]:
+          - generic [ref=f60e849]:
+            - generic [ref=f60e851]:
+              - button "Abrir mapa" [ref=f60e853] [cursor=pointer]: 
+              - generic [ref=f60e854]:
+                - generic [ref=f60e855]: 1/
+                - generic [ref=f60e856]: "18"
+            - generic [ref=f60e862] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e864]
+            - text: 
+          - generic [ref=f60e866]:
+            - heading "Apartamento T2 na Rua Outeiro de Sá, Centro, Ermesinde" [level=2] [ref=f60e867] [cursor=pointer]
+            - generic [ref=f60e868]: 1.150€/mês
+            - generic [ref=f60e870]: T2 72 m² área bruta 2º andar sem elevador 12 nov
+            - paragraph [ref=f60e872]: Apartamento T2 Recentemente Renovado - Arrendamento Descobre este magnífico apartamento T2 com 70 m² úteis, perfeitamente renovado e pronto para te receber! Localizado no 2º andar com elevador, este espaço oferece conforto e modernidade numa zona central com acesso facilitado a todas as comodidades e serviços que prec
+            - generic [ref=f60e873]:
+              - button "Contactar" [ref=f60e874] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e875] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e876]: Ver telefone
+              - button "" [ref=f60e877] [cursor=pointer]
+              - button "" [ref=f60e878] [cursor=pointer]
+        - article [ref=f60e879]:
+          - generic [ref=f60e880]:
+            - generic [ref=f60e882]:
+              - button "Abrir mapa" [ref=f60e884] [cursor=pointer]: 
+              - generic [ref=f60e885]:
+                - generic [ref=f60e886]: 1/
+                - generic [ref=f60e887]: "24"
+            - generic [ref=f60e893] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e895]
+            - text: 
+          - generic [ref=f60e897]:
+            - link [ref=f60e899] [cursor=pointer]:
+              - /url: /pro/confidential/
+              - img "Confidential" [ref=f60e900]
+            - heading "Apartamento T1 no Hospital São João - Pólo Universitário, Paranhos" [level=2] [ref=f60e901] [cursor=pointer]
+            - generic [ref=f60e902]: 850€/mês
+            - generic [ref=f60e904]: T1 46 m² área bruta 2 horas
+            - paragraph [ref=f60e906]: T1 PARA ARRENDAMENTO | PARQUE DOS SOBREIROS 2 Viva no coração da cidade, rodeado pela natureza Apresentamos este T1 para arrendamento no Parque dos Sobreiros 2, um empreendimento pensado para proporcionar uma experiência de vida única, onde a tranquilidade da natureza se encontra com a conveniência da vida urbana. Ad
+            - generic [ref=f60e907]:
+              - button "Contactar" [ref=f60e908] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e909] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e910]: Ver telefone
+              - button "" [ref=f60e911] [cursor=pointer]
+              - button "" [ref=f60e912] [cursor=pointer]
+        - article [ref=f60e913]:
+          - generic [ref=f60e914]:
+            - generic [ref=f60e916]:
+              - generic [ref=f60e917]:
+                - button "Abrir planta" [ref=f60e918] [cursor=pointer]: 
+                - button "Abrir visita virtual" [ref=f60e919] [cursor=pointer]: 
+                - button "Abrir vídeo" [ref=f60e920] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e921] [cursor=pointer]: 
+              - generic [ref=f60e922]:
+                - generic [ref=f60e923]: 1/
+                - generic [ref=f60e924]: "43"
+            - generic [ref=f60e930] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e932]
+            - text:    
+          - generic [ref=f60e934]:
+            - link [ref=f60e936] [cursor=pointer]:
+              - /url: /pro/hed-mediacao-imobiliaria/
+              - img "HED Imobiliária" [ref=f60e937]
+            - heading "Apartamento T3 no Centro, Cidade da Maia" [level=2] [ref=f60e938] [cursor=pointer]
+            - generic [ref=f60e939]: 2.950€/mês
+            - generic [ref=f60e941]: Garagem incluída T3 166 m² área bruta 7º andar com elevador
+            - paragraph [ref=f60e943]: "Descubra este apartamento T3 situado no 7. º andar, em plena zona central da Maia, com metro, comércio, supermercados, farmácias e jardins a poucos passos. Destaques do imóvel: Possibilidade de converter em 2 suites + escritório Garagem BOX ampla (2 carros + mota + arrumos) Parcialmente mobilado com peças de elevada qu"
+            - generic [ref=f60e944]:
+              - button "Contactar" [ref=f60e945] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e946] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e947]: Ver telefone
+              - button "" [ref=f60e948] [cursor=pointer]
+              - button "" [ref=f60e949] [cursor=pointer]
+        - article [ref=f60e950]:
+          - generic [ref=f60e951]:
+            - generic [ref=f60e953]:
+              - button "Abrir mapa" [ref=f60e955] [cursor=pointer]: 
+              - generic [ref=f60e956]:
+                - generic [ref=f60e957]: 1/
+                - generic [ref=f60e958]: "10"
+            - generic [ref=f60e964] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e966]
+            - text: 
+          - generic [ref=f60e968]:
+            - link [ref=f60e970] [cursor=pointer]:
+              - /url: /pro/confidential/
+              - img "Confidential" [ref=f60e971]
+            - heading "Apartamento T0 no Hospital São João - Pólo Universitário, Paranhos" [level=2] [ref=f60e972] [cursor=pointer]
+            - generic [ref=f60e973]: 800€/mês
+            - generic [ref=f60e975]: Garagem incluída T0 44 m² área bruta 2 horas
+            - paragraph [ref=f60e977]: T0 EQUIPADO NO CORAÇÃO DO POLO UNIVERSITÁRIO — PARANHOS, PORTO Funcionalidade, conforto e uma localização de excelência! Apresentamos este fantástico apartamento T0, situado no 3. º andar, com 43,8 m², localizado em Paranhos, no coração do Polo Universitário do Porto — uma zona de referência para quem procura pratici
+            - generic [ref=f60e978]:
+              - button "Contactar" [ref=f60e979] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e980] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e981]: Ver telefone
+              - button "" [ref=f60e982] [cursor=pointer]
+              - button "" [ref=f60e983] [cursor=pointer]
+        - article [ref=f60e984]:
+          - generic [ref=f60e985]:
+            - generic [ref=f60e987]:
+              - generic [ref=f60e988]:
+                - button "Abrir planta" [ref=f60e989] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e990] [cursor=pointer]: 
+              - generic [ref=f60e991]:
+                - generic [ref=f60e992]: 1/
+                - generic [ref=f60e993]: "27"
+            - generic [ref=f60e999] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1001]
+            - text:  
+          - generic [ref=f60e1003]:
+            - link [ref=f60e1005] [cursor=pointer]:
+              - /url: /pro/hed-mediacao-imobiliaria/
+              - img "HED Imobiliária" [ref=f60e1006]
+            - heading "Apartamento T1 na Foz, Aldoar - Foz do Douro - Nevogilde" [level=2] [ref=f60e1007] [cursor=pointer]
+            - generic [ref=f60e1008]: 1.800€/mês
+            - generic [ref=f60e1010]: Garagem incluída T1 72 m² área bruta Rés do chão com elevador
+            - paragraph [ref=f60e1012]: Apartamento T1 com 58 m2 + 14 m2 de varanda na Av. Brasil. 1ª linha de mar. O apartamento encontra-se mobilado. Garagem individual com 21 m2. Pavimentos em afizelia. Cozinha com mobiliário lacado tampos / bancada em Krion revestida em espelho bronze e equipada com eletrodomésticos Siemens (placa, forno, microondas, máq
+            - generic [ref=f60e1013]: Vista mar
+            - generic [ref=f60e1015]:
+              - button "Contactar" [ref=f60e1016] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1017] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1018]: Ver telefone
+              - button "" [ref=f60e1019] [cursor=pointer]
+              - button "" [ref=f60e1020] [cursor=pointer]
+        - article [ref=f60e1021]:
+          - generic [ref=f60e1022]:
+            - generic [ref=f60e1024]:
+              - button "Abrir mapa" [ref=f60e1026] [cursor=pointer]: 
+              - generic [ref=f60e1027]:
+                - generic [ref=f60e1028]: 1/
+                - generic [ref=f60e1029]: "21"
+            - generic [ref=f60e1035] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1037]
+            - text: 
+          - generic [ref=f60e1039]:
+            - heading "Apartamento T1 na Rua Cova da Bela, 47, Paniceiro-Viso-Meiral, Canidelo" [level=2] [ref=f60e1040] [cursor=pointer]
+            - generic [ref=f60e1041]: 700€/mês
+            - generic [ref=f60e1043]: T1 71 m² área bruta Rés do chão com elevador 2 horas
+            - paragraph [ref=f60e1045]: Este luminoso apartamento T1+1, localizado na zona dos 4 Caminhos, em Canidelo, Vila Nova de Gaia, oferece uma excelente combinação de conforto e conveniência, a cerca de 2 km da praia. Num prédio bem conservado, o imóvel destaca-se pela sua luminosidade e proximidade a uma vasta rede de comércio, serviços, transportes
+            - generic [ref=f60e1046]:
+              - button "Contactar" [ref=f60e1047] [cursor=pointer]
+              - button "" [ref=f60e1048] [cursor=pointer]
+              - button "" [ref=f60e1049] [cursor=pointer]
+        - article [ref=f60e1050]:
+          - generic [ref=f60e1051]:
+            - generic [ref=f60e1053]:
+              - button "Abrir mapa" [ref=f60e1055] [cursor=pointer]: 
+              - generic [ref=f60e1056]:
+                - generic [ref=f60e1057]: 1/
+                - generic [ref=f60e1058]: "40"
+            - generic [ref=f60e1064] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1066]
+            - text: 
+          - generic [ref=f60e1068]:
+            - link [ref=f60e1070] [cursor=pointer]:
+              - /url: /pro/hed-mediacao-imobiliaria/
+              - img "HED Imobiliária" [ref=f60e1071]
+            - heading "Apartamento T3 no Campo Alegre, Lordelo do Ouro e Massarelos" [level=2] [ref=f60e1072] [cursor=pointer]
+            - generic [ref=f60e1073]: 2.150€/mês
+            - generic [ref=f60e1075]: Garagem incluída T3 169 m² área bruta 1º andar com elevador
+            - paragraph [ref=f60e1077]: 2.350€/mês - Equipado e mobilado, com 1 lugar de garagem + arrumos. 2.150€/mês - Sem equipamentos, não mobilado e sem arrumos, mantendo 1 lugar de garagem. Apartamento T3 numa localização privilegiada e tranquila, com excelentes áreas e ótima exposição solar a Sul / Nascente / Norte. O imóvel dispõe de uma ampla sal
+            - generic [ref=f60e1078]:
+              - button "Contactar" [ref=f60e1079] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1080] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1081]: Ver telefone
+              - button "" [ref=f60e1082] [cursor=pointer]
+              - button "" [ref=f60e1083] [cursor=pointer]
+        - article [ref=f60e1084]:
+          - generic [ref=f60e1085]:
+            - generic [ref=f60e1087]:
+              - button "Abrir mapa" [ref=f60e1089] [cursor=pointer]: 
+              - generic [ref=f60e1090]:
+                - generic [ref=f60e1091]: 1/
+                - generic [ref=f60e1092]: "28"
+            - generic [ref=f60e1098] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1100]
+            - text: 
+          - generic [ref=f60e1102]:
+            - link [ref=f60e1104] [cursor=pointer]:
+              - /url: /pro/confidential/
+              - img "Confidential" [ref=f60e1105]
+            - heading "Apartamento T0 no Hospital São João - Pólo Universitário, Paranhos" [level=2] [ref=f60e1106] [cursor=pointer]
+            - generic [ref=f60e1107]: 800€/mês
+            - generic [ref=f60e1109]: T0 41 m² área bruta 2 horas
+            - paragraph [ref=f60e1111]: Conforto, funcionalidade e praticidade numa localização privilegiada! Disponível para arrendamento, agradável apartamento T0 situado em Paranhos, uma das zonas mais procuradas da cidade do Porto, ideal para quem procura um espaço acolhedor, funcional e pensado para proporcionar conforto no dia a dia. O apartamento di
+            - generic [ref=f60e1112]:
+              - button "Contactar" [ref=f60e1113] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1114] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1115]: Ver telefone
+              - button "" [ref=f60e1116] [cursor=pointer]
+              - button "" [ref=f60e1117] [cursor=pointer]
+        - article [ref=f60e1118]:
+          - generic [ref=f60e1119]:
+            - generic [ref=f60e1121]:
+              - generic [ref=f60e1122]:
+                - button "Abrir planta" [ref=f60e1123] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e1124] [cursor=pointer]: 
+              - generic [ref=f60e1125]:
+                - generic [ref=f60e1126]: 1/
+                - generic [ref=f60e1127]: "22"
+            - generic [ref=f60e1133] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1135]
+            - text:  
+          - generic [ref=f60e1137]:
+            - link [ref=f60e1139] [cursor=pointer]:
+              - /url: /pro/hed-mediacao-imobiliaria/
+              - img "HED Imobiliária" [ref=f60e1140]
+            - heading "Apartamento T1 na Casa da Música, Cedofeita - Santo Ildefonso - Sé - Miragaia - São Nicolau - Vitória" [level=2] [ref=f60e1141] [cursor=pointer]
+            - generic [ref=f60e1142]: 999€/mês
+            - generic [ref=f60e1144]: T1 52 m² área bruta 1º andar com elevador
+            - paragraph [ref=f60e1146]: Apartamento T1 localizado na prestigiada Rua 5 de Outubro, a apenas 400 metros da estação de metro da Casa da Música. Este encantador imóvel oferece um ambiente acolhedor e confortável, ideal para quem procura viver numa das áreas mais privilegiadas da cidade. MOBILADO - 1300€ Hall de entrada que conduz aos diversos
+            - generic [ref=f60e1147]:
+              - button "Contactar" [ref=f60e1148] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1149] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1150]: Ver telefone
+              - button "" [ref=f60e1151] [cursor=pointer]
+              - button "" [ref=f60e1152] [cursor=pointer]
+        - article "Espaço publicitário"
+        - article [ref=f60e1153]:
+          - generic [ref=f60e1154]:
+            - generic [ref=f60e1156]:
+              - button "Abrir mapa" [ref=f60e1158] [cursor=pointer]: 
+              - generic [ref=f60e1159]:
+                - generic [ref=f60e1160]: 1/
+                - generic [ref=f60e1161]: "21"
+            - generic [ref=f60e1167] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1169]
+            - text: 
+          - generic [ref=f60e1171]:
+            - link [ref=f60e1173] [cursor=pointer]:
+              - /url: /pro/confidential/
+              - img "Confidential" [ref=f60e1174]
+            - heading "Apartamento T1 no Hospital São João - Pólo Universitário, Paranhos" [level=2] [ref=f60e1175] [cursor=pointer]
+            - generic [ref=f60e1176]: 900€/mês
+            - generic [ref=f60e1178]: Garagem incluída T1 44 m² área bruta 2 horas
+            - paragraph [ref=f60e1180]: Se procura conforto, funcionalidade e uma localização privilegiada na cidade do Porto, este apartamento pode ser a escolha ideal! Apresentamos este agradável apartamento T1, com 43,7 m², situado em Paranhos, uma das zonas mais procuradas do Porto. Com uma área bem distribuída e um ambiente acolhedor, é uma excelente
+            - generic [ref=f60e1181]:
+              - button "Contactar" [ref=f60e1182] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1183] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1184]: Ver telefone
+              - button "" [ref=f60e1185] [cursor=pointer]
+              - button "" [ref=f60e1186] [cursor=pointer]
+        - article [ref=f60e1187]:
+          - generic [ref=f60e1188]:
+            - generic [ref=f60e1190]:
+              - generic [ref=f60e1191]:
+                - button "Abrir planta" [ref=f60e1192] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e1193] [cursor=pointer]: 
+              - generic [ref=f60e1194]:
+                - generic [ref=f60e1195]: 1/
+                - generic [ref=f60e1196]: "11"
+            - generic [ref=f60e1202] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1204]
+            - text:  
+          - generic [ref=f60e1206]:
+            - link [ref=f60e1208] [cursor=pointer]:
+              - /url: /pro/hed-mediacao-imobiliaria/
+              - img "HED Imobiliária" [ref=f60e1209]
+            - heading "Apartamento T3 em Matosinhos Sul - Marginal, Matosinhos" [level=2] [ref=f60e1210] [cursor=pointer]
+            - generic [ref=f60e1211]: 3.500€/mês
+            - generic [ref=f60e1213]: Garagem incluída T3 177 m² área bruta 3º andar com elevador 10 nov
+            - paragraph [ref=f60e1215]: Descubra este apartamento T3, onde o conforto, a luminosidade e a localização privilegiada se conjugam para proporcionar uma experiência de habitação verdadeiramente distinta. Situado na prestigiada Rua Doutor Manuel Rodrigues de Sousa, em Matosinhos Sul, este imóvel beneficia de uma localização de excelência e de enca
+            - generic [ref=f60e1216]:
+              - generic [ref=f60e1217]: Vista mar
+              - generic [ref=f60e1218]: De luxo
+            - generic [ref=f60e1219]:
+              - button "Contactar" [ref=f60e1220] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1221] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1222]: Ver telefone
+              - button "" [ref=f60e1223] [cursor=pointer]
+              - button "" [ref=f60e1224] [cursor=pointer]
+        - article [ref=f60e1225]:
+          - generic [ref=f60e1226]:
+            - generic [ref=f60e1228]:
+              - button "Abrir mapa" [ref=f60e1230] [cursor=pointer]: 
+              - generic [ref=f60e1231]:
+                - generic [ref=f60e1232]: 1/
+                - generic [ref=f60e1233]: "16"
+            - generic [ref=f60e1239] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1241]
+            - text: 
+          - generic [ref=f60e1243]:
+            - link [ref=f60e1245] [cursor=pointer]:
+              - /url: /pro/confidential/
+              - img "Confidential" [ref=f60e1246]
+            - heading "Apartamento T1 em São Pedro Fins" [level=2] [ref=f60e1247] [cursor=pointer]
+            - generic [ref=f60e1248]: 950€/mês
+            - generic [ref=f60e1250]: T1 45 m² área bruta 2 horas
+            - paragraph [ref=f60e1252]: T1 COM TERRAÇO DE 22,9 M² | ARRENDAMENTO | AGRA CAMPUS 3 — ASPRELA, PORTO Um T1 moderno, com um terraço extraordinário e uma localização privilegiada. Está disponível para arrendamento este T1 no Agra Campus 3, um empreendimento contemporâneo situado junto ao Polo Universitário da Asprela e nas proximidades do Centro
+            - generic [ref=f60e1253]:
+              - button "Contactar" [ref=f60e1254] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1255] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1256]: Ver telefone
+              - button "" [ref=f60e1257] [cursor=pointer]
+              - button "" [ref=f60e1258] [cursor=pointer]
+        - article [ref=f60e1259]:
+          - generic [ref=f60e1260]:
+            - generic [ref=f60e1262]:
+              - button "Abrir mapa" [ref=f60e1264] [cursor=pointer]: 
+              - generic [ref=f60e1265]:
+                - generic [ref=f60e1266]: 1/
+                - generic [ref=f60e1267]: "33"
+            - generic [ref=f60e1273] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1275]
+            - text: 
+          - generic [ref=f60e1277]:
+            - link [ref=f60e1279] [cursor=pointer]:
+              - /url: /pro/hed-mediacao-imobiliaria/
+              - img "HED Imobiliária" [ref=f60e1280]
+            - heading "Moradia independente em Vila Chã" [level=2] [ref=f60e1281] [cursor=pointer]
+            - generic [ref=f60e1282]: 2.500€/mês
+            - generic [ref=f60e1284]: Garagem incluída T4 495 m² área bruta lote de 213 m² 13 nov
+            - paragraph [ref=f60e1286]: Apresentamos esta moradia V4, situada em primeira linha de mar, em Vila Chã, Vila do Conde, onde o conforto, a tranquilidade e a proximidade da natureza se conjugam na perfeição. Totalmente mobilada e com excelentes áreas, esta moradia oferece todas as condições para desfrutar de uma experiência de vida única, com o o
+            - generic [ref=f60e1287]: Vista mar
+            - generic [ref=f60e1289]:
+              - button "Contactar" [ref=f60e1290] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1291] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1292]: Ver telefone
+              - button "" [ref=f60e1293] [cursor=pointer]
+              - button "" [ref=f60e1294] [cursor=pointer]
+        - article [ref=f60e1295]:
+          - generic [ref=f60e1296]:
+            - generic [ref=f60e1298]:
+              - button "Abrir mapa" [ref=f60e1300] [cursor=pointer]: 
+              - generic [ref=f60e1301]:
+                - generic [ref=f60e1302]: 1/
+                - generic [ref=f60e1303]: "17"
+            - generic [ref=f60e1309] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1311]
+            - text: 
+          - generic [ref=f60e1313]:
+            - link [ref=f60e1315] [cursor=pointer]:
+              - /url: /pro/maiagest/
+              - img "MaiaGest - Gestão imobiliária" [ref=f60e1316]
+            - heading "Apartamento T3 na Avenida Visconde de Barreiros, Centro, Cidade da Maia" [level=2] [ref=f60e1317] [cursor=pointer]
+            - generic [ref=f60e1318]: 1.480€/mês
+            - generic [ref=f60e1320]: Garagem incluída T3 150 m² área bruta 6º andar com elevador 2 horas
+            - paragraph [ref=f60e1322]: Apartamento T3 para Arrendamento no Centro da Maia Referencia Interna - amai_261101 Disponível para arrendamento, este magnífico apartamento T3, situado no coração da Maia, destaca-se pelo seu excelente estado de conservação, áreas generosas, acabamentos de qualidade e uma localização privilegiada. O imóvel foi rece
+            - generic [ref=f60e1323]:
+              - button "Contactar" [ref=f60e1324] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1325] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1326]: Ver telefone
+              - button "" [ref=f60e1327] [cursor=pointer]
+              - button "" [ref=f60e1328] [cursor=pointer]
+        - article [ref=f60e1329]:
+          - generic [ref=f60e1330]:
+            - generic [ref=f60e1332]:
+              - generic [ref=f60e1333]:
+                - button "Abrir vídeo" [ref=f60e1334] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e1335] [cursor=pointer]: 
+              - generic [ref=f60e1336]:
+                - generic [ref=f60e1337]: 1/
+                - generic [ref=f60e1338]: "9"
+            - generic [ref=f60e1344] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1346]
+            - text:  
+          - generic [ref=f60e1348]:
+            - heading "Apartamento T1 na Rua de Costa Cabral, 630, Combatentes - Costa Cabral, Paranhos" [level=2] [ref=f60e1349] [cursor=pointer]
+            - generic [ref=f60e1350]: 1.050€/mês
+            - generic [ref=f60e1352]: T1 49 m² área bruta 2º andar sem elevador
+            - paragraph [ref=f60e1354]: Disponível para aluguer de longa duração! Bonito apartamento, de um quarto, mobilado de forma moderna e com muito bom gosto e completamente equipado. Pronto a habitar! Excelente localização a 2 minutos do metro, autocarro, supermercados, etc. A baixa do porto está apenas uma dezena de minutos a pé. Idealmente localiza
+            - generic [ref=f60e1355]:
+              - button "Contactar" [ref=f60e1356] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1357] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1358]: Ver telefone
+              - button "" [ref=f60e1359] [cursor=pointer]
+              - button "" [ref=f60e1360] [cursor=pointer]
+        - article [ref=f60e1361]:
+          - generic [ref=f60e1362]:
+            - generic [ref=f60e1364]:
+              - generic [ref=f60e1365]:
+                - button "Abrir planta" [ref=f60e1366] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e1367] [cursor=pointer]: 
+              - generic [ref=f60e1368]:
+                - generic [ref=f60e1369]: 1/
+                - generic [ref=f60e1370]: "2"
+            - generic [ref=f60e1376] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1378]
+            - text:  
+          - generic [ref=f60e1380]:
+            - heading "Andar de moradia na Rua da Restauração, 175, São Victor" [level=2] [ref=f60e1381] [cursor=pointer]
+            - generic [ref=f60e1382]: 1.600€/mês
+            - generic [ref=f60e1384]: Garagem incluída T4 260 m² área bruta 2 horas
+            - paragraph [ref=f60e1386]: Andar moradia com quatro quartos, mais um interior, dois quartos de banho completos sala de jantar, sala de estar, duas varandas na frente e uma nas traseiras muito espaçosa virada para o jardim do imóvel, cozinha, lavandaria, escritório, garagem interior para um carro, lugar exterior para outro e jardim. Chão em made
+            - generic [ref=f60e1387]:
+              - button "Contactar" [ref=f60e1388] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1389] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1390]: Ver telefone
+              - button "" [ref=f60e1391] [cursor=pointer]
+              - button "" [ref=f60e1392] [cursor=pointer]
+        - article [ref=f60e1393]:
+          - generic [ref=f60e1394]:
+            - generic [ref=f60e1396]:
+              - generic [ref=f60e1397]:
+                - button "Abrir planta" [ref=f60e1398] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e1399] [cursor=pointer]: 
+              - generic [ref=f60e1400]:
+                - generic [ref=f60e1401]: 1/
+                - generic [ref=f60e1402]: "10"
+            - generic [ref=f60e1408] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1410]
+            - text:  
+          - generic [ref=f60e1412]:
+            - heading "Apartamento T2 na Avenida Comendador Ferreira de Matos, 312, Matosinhos Sul - Marginal, Matosinhos" [level=2] [ref=f60e1413] [cursor=pointer]
+            - generic [ref=f60e1414]: 1.300€/mês
+            - generic [ref=f60e1416]: Garagem incluída T2 110 m² área bruta 2º andar com elevador
+            - paragraph [ref=f60e1418]: Apartamento T2 Matosinhos Sul, Marginal, Matosinhos, em bom estado, amplo e luminoso, 86 m2 e lugar de garagem, com ar condicionado.
+            - generic [ref=f60e1419]:
+              - button "Contactar" [ref=f60e1420] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1421] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1422]: Ver telefone
+              - button "" [ref=f60e1423] [cursor=pointer]
+              - button "" [ref=f60e1424] [cursor=pointer]
+        - article [ref=f60e1425]:
+          - generic [ref=f60e1426]:
+            - generic [ref=f60e1428]:
+              - generic [ref=f60e1429]:
+                - button "Abrir planta" [ref=f60e1430] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e1431] [cursor=pointer]: 
+              - generic [ref=f60e1432]:
+                - generic [ref=f60e1433]: 1/
+                - generic [ref=f60e1434]: "11"
+            - generic [ref=f60e1440] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1442]
+            - text:  
+          - generic [ref=f60e1444]:
+            - link [ref=f60e1446] [cursor=pointer]:
+              - /url: /pro/omy-mediacao-imobiliaria/
+              - img "OMY Imobiliária" [ref=f60e1447]
+            - heading "Apartamento T3 na Rua de Nossa Senhora dos Prazeres, Vila Real" [level=2] [ref=f60e1448] [cursor=pointer]
+            - generic [ref=f60e1449]: 1.200€/mês
+            - generic [ref=f60e1451]: T3 90 m² área bruta Rés do chão sem elevador 2 horas
+            - paragraph [ref=f60e1453]: Andar de Moradia T3 a Estrear, Mobilado e Equipado Andar de moradia de tipologia T3, a estrear, situado na Rua Vasco Sameiro (junto à Farmácia de Mateus), em Vila Real. No rés do chão de um edifício tradicional de dois pisos totalmente reabilitado, encontrando-se pronto a habitar, totalmente mobilado, decorado e equi
+            - generic [ref=f60e1454]:
+              - button "Contactar" [ref=f60e1455] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1456] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1457]: Ver telefone
+              - button "" [ref=f60e1458] [cursor=pointer]
+              - button "" [ref=f60e1459] [cursor=pointer]
+        - article [ref=f60e1460]:
+          - generic [ref=f60e1461]:
+            - generic [ref=f60e1463]:
+              - generic [ref=f60e1464]:
+                - button "Abrir planta" [ref=f60e1465] [cursor=pointer]: 
+                - button "Abrir visita virtual" [ref=f60e1466] [cursor=pointer]: 
+                - button "Abrir vídeo" [ref=f60e1467] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e1468] [cursor=pointer]: 
+              - generic [ref=f60e1469]:
+                - generic [ref=f60e1470]: 1/
+                - generic [ref=f60e1471]: "20"
+            - generic [ref=f60e1477] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1479]
+            - text:    
+          - generic [ref=f60e1481]:
+            - link [ref=f60e1483] [cursor=pointer]:
+              - /url: /pro/hed-mediacao-imobiliaria/
+              - img "HED Imobiliária" [ref=f60e1484]
+            - heading "Apartamento T1 no Centro de Matosinhos, Matosinhos" [level=2] [ref=f60e1485] [cursor=pointer]
+            - generic [ref=f60e1486]: 1.350€/mês
+            - generic [ref=f60e1488]: T1 54 m² área bruta 2º andar com elevador
+            - paragraph [ref=f60e1490]: Apartamento T1 novo, no empreendimento Green Park, no coração de Matosinhos, numa localização privilegiada na Avenida D. Afonso Henriques, a cerca de 2 minutos do Metro. Pensado para proporcionar conforto, funcionalidade e qualidade de vida, este apartamento encontra-se equipado e destaca-se pela arquitetura contempor
+            - generic [ref=f60e1491]:
+              - button "Contactar" [ref=f60e1492] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1493] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1494]: Ver telefone
+              - button "" [ref=f60e1495] [cursor=pointer]
+              - button "" [ref=f60e1496] [cursor=pointer]
+        - article [ref=f60e1497]:
+          - generic [ref=f60e1498]:
+            - generic [ref=f60e1500]:
+              - button "Abrir mapa" [ref=f60e1502] [cursor=pointer]: 
+              - generic [ref=f60e1503]:
+                - generic [ref=f60e1504]: 1/
+                - generic [ref=f60e1505]: "22"
+            - generic [ref=f60e1511] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1513]
+            - text: 
+          - generic [ref=f60e1515]:
+            - heading "Apartamento T2 na Travessa do Ribeiro, 69, Hospital São João - Pólo Universitário, Paranhos" [level=2] [ref=f60e1516] [cursor=pointer]
+            - generic [ref=f60e1517]: 1.250€/mês
+            - generic [ref=f60e1519]: Garagem incluída T2 85 m² área bruta 3º andar com elevador 2 horas
+            - paragraph [ref=f60e1521]: Condições Apartamento T2 - 1250€ - 2 rendas + caução (1250€) - Apartamento T2 - 2 Casas de Banho completas - Cozinha equipada com forno, placa, exaustor, frigorífico, microondas e máquina de lavar louça - máquina de lavar roupa - Lugar de estacionamento no prédio - Apartamento com acesso de elevador - Apartamento e
+            - generic [ref=f60e1522]:
+              - button "Contactar" [ref=f60e1523] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1524] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1525]: Ver telefone
+              - button "" [ref=f60e1526] [cursor=pointer]
+              - button "" [ref=f60e1527] [cursor=pointer]
+        - article [ref=f60e1528]:
+          - generic [ref=f60e1529]:
+            - generic [ref=f60e1531]:
+              - generic [ref=f60e1532]:
+                - button "Abrir planta" [ref=f60e1533] [cursor=pointer]: 
+                - button "Abrir vídeo" [ref=f60e1534] [cursor=pointer]: 
+                - button "Abrir mapa" [ref=f60e1535] [cursor=pointer]: 
+              - generic [ref=f60e1536]:
+                - generic [ref=f60e1537]: 1/
+                - generic [ref=f60e1538]: "19"
+            - generic [ref=f60e1544] [cursor=pointer]:
+              - text: 賈
+              - img "Primeira foto do imóvel" [ref=f60e1546]
+            - text:   
+          - generic [ref=f60e1548]:
+            - heading "Apartamento T3 na Rua de Dom João IV, 577, Campo 24 de Agosto, Bonfim" [level=2] [ref=f60e1549] [cursor=pointer]
+            - generic [ref=f60e1550]:
+              - generic [ref=f60e1551]: 1.800€/mês
+              - generic [ref=f60e1552]: 1.900 € 5%
+            - generic [ref=f60e1553]: T3 87 m² área bruta 1º andar sem elevador
+            - paragraph [ref=f60e1555]: Excelente apartamento em localização privilegiada. Totalmente equipado, vizinhos muito agradáveis, a uma curta distância dos principais pontos de interesse. Perto da estação de trem. Disponível para curta/média/longa duração.
+            - generic [ref=f60e1556]:
+              - button "Contactar" [ref=f60e1557] [cursor=pointer]
+              - text: 
+              - button "contact phone" [ref=f60e1558] [cursor=pointer]:
+                - text: 
+                - generic [ref=f60e1559]: Ver telefone
+              - button "" [ref=f60e1560] [cursor=pointer]
+              - button "" [ref=f60e1561] [cursor=pointer]
+        - generic [ref=f60e1562]:
+          - paragraph [ref=f60e1563]: Preço médio nesta zona 16,66 eur/m²
+          - link [ref=f60e1564] [cursor=pointer]:
+            - /url: /apoioutilizador/artigos/como-ordenamos-os-resultados/
+            - generic [ref=f60e1565]: Como ordenamos os resultados
+            - text: 
+        - list [ref=f60e1567]:
+          - listitem [ref=f60e1568]:
+            - generic [ref=f60e1569]: "Ver mais resultados:"
+          - listitem [ref=f60e1570]:
+            - generic [ref=f60e1571]: "1"
+          - listitem [ref=f60e1572]:
+            - link "2" [ref=f60e1573] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/norte/pagina-2
+          - listitem [ref=f60e1574]:
+            - link "3" [ref=f60e1575] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/norte/pagina-3
+          - listitem [ref=f60e1576]:
+            - link "4" [ref=f60e1577] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/norte/pagina-4
+          - listitem [ref=f60e1578]:
+            - link "5" [ref=f60e1579] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/norte/pagina-5
+          - listitem [ref=f60e1580]:
+            - link "6" [ref=f60e1581] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/norte/pagina-6
+          - listitem [ref=f60e1582]:
+            - link "Seguinte " [ref=f60e1583] [cursor=pointer]:
+              - /url: /geo/arrendar-casas/norte/pagina-2
+  - generic [ref=f60e1584]:
+    - heading "Serviços do idealista" [level=2] [ref=f60e1585]
+    - generic [ref=f60e1586]:
+      - navigation "Estás à procura de casa?" [ref=f60e1587]:
+        - heading "Estás à procura de casa?" [level=3] [ref=f60e1588]
+        - list [ref=f60e1589]:
+          - listitem [ref=f60e1590]:
+            - link "Motor de pesquisa principal" [ref=f60e1591] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=f60e1592]:
+            - link "Pesquisa mais rapidamente com a nossa app" [ref=f60e1593] [cursor=pointer]:
+              - /url: /aplicacoes
+          - listitem [ref=f60e1594]:
+            - link "Apartamentos de bancos" [ref=f60e1595] [cursor=pointer]:
+              - /url: /imoveis-da-banca
+          - listitem [ref=f60e1596]:
+            - link "Casas à venda em Portugal" [ref=f60e1597] [cursor=pointer]:
+              - /url: /properties-for-sale-in-portugal
+          - listitem [ref=f60e1598]:
+            - link "Arrendamento de casas em Portugal" [ref=f60e1599] [cursor=pointer]:
+              - /url: /long-term-rentals-in-portugal
+          - listitem [ref=f60e1600]:
+            - link "Casas e apartamentos em arrendamento" [ref=f60e1601] [cursor=pointer]:
+              - /url: /apartamentos-para-arrendar
+          - listitem [ref=f60e1602]:
+            - link "Apartamentos partilhados" [ref=f60e1603] [cursor=pointer]:
+              - /url: /apartamentos-para-dividir
+          - listitem [ref=f60e1604]:
+            - link "Oportunidades de investimento" [ref=f60e1605] [cursor=pointer]:
+              - /url: https://www.idealista.pt/investimento-imobiliario/#/
+          - listitem [ref=f60e1606]:
+            - link "Rentalia, arrendamento para férias" [ref=f60e1607] [cursor=pointer]:
+              - /url: https://pt.rentalia.com/
+          - listitem [ref=f60e1608]:
+            - link "Relatórios de preços" [ref=f60e1609] [cursor=pointer]:
+              - /url: https://www.idealista.pt/media/relatorios-preco-habitacao/
+          - listitem [ref=f60e1610]:
+            - link "idealista maps" [ref=f60e1611] [cursor=pointer]:
+              - /url: https://www.idealista.pt/maps/
+          - listitem [ref=f60e1612]:
+            - link "Apartamentos e casas de luxo à venda em Portugal" [ref=f60e1613] [cursor=pointer]:
+              - /url: /luxury-homes-portugal
+          - listitem [ref=f60e1614]:
+            - link "Apartamentos e casas de luxo para arrendar em Portugal" [ref=f60e1615] [cursor=pointer]:
+              - /url: /luxury-rentals-portugal
+      - navigation "Tens um imóvel?" [ref=f60e1616]:
+        - heading "Tens um imóvel?" [level=3] [ref=f60e1617]
+        - list [ref=f60e1618]:
+          - listitem [ref=f60e1619]:
+            - link "Publica o teu anúncio grátis" [ref=f60e1620] [cursor=pointer]:
+              - /url: /info/novo-anuncio
+          - listitem [ref=f60e1621]:
+            - link "Área do proprietário" [ref=f60e1622] [cursor=pointer]:
+              - /url: /proprietarios/
+          - listitem [ref=f60e1623]:
+            - link "Melhorar as fotos do teu anúncio" [ref=f60e1624] [cursor=pointer]:
+              - /url: /info/truques-fazer-fotos-e-videos
+          - listitem [ref=f60e1625]:
+            - link "Solicitar certificado energético" [ref=f60e1626] [cursor=pointer]:
+              - /url: /certificadoenergetico/
+          - listitem [ref=f60e1627]:
+            - link "Avalia grátis qualquer imóvel" [ref=f60e1628] [cursor=pointer]:
+              - /url: /avaliacao-de-imoveis/
+          - listitem [ref=f60e1629]:
+            - link "Procurar agências para vender facilmente a tua casa" [ref=f60e1630] [cursor=pointer]:
+              - /url: /escolher-agencia-imobiliaria/
+          - listitem [ref=f60e1631]:
+            - link "Guia sobre como vender a tua casa" [ref=f60e1632] [cursor=pointer]:
+              - /url: /quero-vender-a-minha-casa/
+          - listitem [ref=f60e1633]:
+            - link "Garantir 12 mensalidades com um seguro de incumprimento" [ref=f60e1634] [cursor=pointer]:
+              - /url: https://www.idealista.pt/seguros/incumprimento-rendas/
+          - listitem [ref=f60e1635]:
+            - link "Queres fazer obras em casa?" [ref=f60e1636] [cursor=pointer]:
+              - /url: https://www.idealista.pt/obras-em-casa/
+      - navigation "És profissional imobiliário?" [ref=f60e1637]:
+        - heading "És profissional imobiliário?" [level=3] [ref=f60e1638]
+        - list [ref=f60e1639]:
+          - listitem [ref=f60e1640]:
+            - link "Publica os teus imóveis profissionais" [ref=f60e1641] [cursor=pointer]:
+              - /url: /novo-profissional
+          - listitem [ref=f60e1642]:
+            - link "Já és cliente? Entra na tua conta" [ref=f60e1643] [cursor=pointer]:
+              - /url: /login
+          - listitem [ref=f60e1644]:
+            - link "Cursos imobiliários" [ref=f60e1645] [cursor=pointer]:
+              - /url: https://www.idealista.pt/cursos/
+          - listitem [ref=f60e1646]:
+            - link "Publicidade no idealista" [ref=f60e1647] [cursor=pointer]:
+              - /url: /info/publicidade
+          - listitem [ref=f60e1648]:
+            - 'link "idealista/tools: Software de gestão para imobiliárias" [ref=f60e1649] [cursor=pointer]':
+              - /url: https://www.idealista.pt/tools/
+          - listitem [ref=f60e1650]:
+            - link "Outros softwares recomendados" [ref=f60e1651] [cursor=pointer]:
+              - /url: /tools/software-recomendado-para-imobiliarias
+          - listitem [ref=f60e1652]:
+            - 'link "idealista/data: tecnologia para a análise imobiliária" [ref=f60e1653] [cursor=pointer]':
+              - /url: https://www.idealista.pt/data/
+          - listitem [ref=f60e1654]:
+            - 'link "Avaibook: software para gerir os teus arrendamentos turísticos" [ref=f60e1655] [cursor=pointer]':
+              - /url: https://www.avaibook.com/pt-pt/
+          - listitem [ref=f60e1656]:
+            - link "HCPro - Software de Gestão Imobiliária" [ref=f60e1657] [cursor=pointer]:
+              - /url: https://www.hcpro.pt/
+  - contentinfo [ref=f60e1658]:
+    - generic [ref=f60e1659]:
+      - heading " idealista" [level=2] [ref=f60e1660]:
+        - text: 
+        - generic [ref=f60e1661]: idealista
+      - generic [ref=f60e1663] [cursor=pointer]:
+        - text: 
+        - generic [ref=f60e1665]: Português
+      - generic [ref=f60e1666]:
+        - navigation [ref=f60e1667]:
+          - heading "Sobre o idealista" [level=3] [ref=f60e1668]
+          - list [ref=f60e1669]:
+            - listitem [ref=f60e1670]:
+              - link "Sobre nós" [ref=f60e1671] [cursor=pointer]:
+                - /url: /media/sobre-nos/
+            - listitem [ref=f60e1672]:
+              - link "Media" [ref=f60e1673] [cursor=pointer]:
+                - /url: /media/
+            - listitem [ref=f60e1674]:
+              - link "Trabalha connosco" [ref=f60e1675] [cursor=pointer]:
+                - /url: /info/trabalha-connosco
+            - listitem [ref=f60e1676]:
+              - link "idealista/créditohabitação" [ref=f60e1677] [cursor=pointer]:
+                - /url: https://www.idealista.pt/credito-habitacao
+            - listitem [ref=f60e1678]:
+              - link "idealista/data" [ref=f60e1679] [cursor=pointer]:
+                - /url: /data/
+            - listitem [ref=f60e1680]:
+              - link "idealista/news" [ref=f60e1681] [cursor=pointer]:
+                - /url: /news/
+            - listitem [ref=f60e1682]:
+              - link "idealista/seguros" [ref=f60e1683] [cursor=pointer]:
+                - /url: /seguros/
+        - navigation [ref=f60e1684]:
+          - heading "Ajuda" [level=3] [ref=f60e1685]
+          - list [ref=f60e1686]:
+            - listitem [ref=f60e1687]:
+              - link "Perguntas frequentes (FAQs)" [ref=f60e1688] [cursor=pointer]:
+                - /url: /apoioutilizador/
+            - listitem [ref=f60e1689]:
+              - link "Segurança online" [ref=f60e1690] [cursor=pointer]:
+                - /url: /apoioutilizador/categorias/seguranca-online/
+            - listitem [ref=f60e1691]:
+              - link "Contacta com o idealista" [ref=f60e1692] [cursor=pointer]:
+                - /url: /info/contacta-connosco
+            - listitem [ref=f60e1693]:
+              - link "Privacidade" [ref=f60e1694] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/politica-de-privacidade/
+            - listitem [ref=f60e1695]:
+              - link "Política de cookies" [ref=f60e1696] [cursor=pointer]:
+                - /url: /info/cookie-policy
+            - listitem [ref=f60e1697]:
+              - link "Condições gerais" [ref=f60e1698] [cursor=pointer]:
+                - /url: /apoioutilizador/artigos/aviso-legal-e-condicoes-gerais/
+        - navigation [ref=f60e1699]:
+          - heading "Outros países" [level=3] [ref=f60e1700]
+          - list [ref=f60e1701]:
+            - listitem [ref=f60e1702]:
+              - link "idealista Espanha" [ref=f60e1703] [cursor=pointer]:
+                - /url: https://www.idealista.com/pt/
+            - listitem [ref=f60e1704]:
+              - link "idealista Itália" [ref=f60e1705] [cursor=pointer]:
+                - /url: https://www.idealista.it/pt/
+            - listitem [ref=f60e1706]:
+              - link "idealista França" [ref=f60e1707] [cursor=pointer]:
+                - /url: https://www.idealista.fr/pt/
+              - generic [ref=f60e1708]: Beta
+      - generic [ref=f60e1709]:
+        - generic [ref=f60e1710]:
+          - heading "Por telemóvel ou Tablet" [level=3] [ref=f60e1711]
+          - navigation [ref=f60e1712]:
+            - link "App Store" [ref=f60e1713] [cursor=pointer]:
+              - /url: https://apps.apple.com/pt/app/idealista.com/id465958311
+            - link "Google Play" [ref=f60e1714] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.idealista.android&hl=pt
+            - link "HUAWEI AppGallery" [ref=f60e1715] [cursor=pointer]:
+              - /url: https://appgallery.huawei.com/app/C101196223?channelId=idealista&id=ea9d78a5dfc54b8e8a7f1c5e8f1f083e&s=FC3DCED1261C2C2C5624748A104DEB37D2EB945F72175B74A6FDB07C7B7169F0&detailType=0&v=
+          - navigation [ref=f60e1716]:
+            - link "" [ref=f60e1717] [cursor=pointer]:
+              - /url: https://www.facebook.com/idealista.pt/
+            - link "" [ref=f60e1718] [cursor=pointer]:
+              - /url: https://www.youtube.com/user/idealistapt
+            - link "" [ref=f60e1719] [cursor=pointer]:
+              - /url: https://instagram.com/idealistapt/
+        - strong [ref=f60e1720]: idealista
+        - text: Copyright © 2000-2026
+  - generic:         

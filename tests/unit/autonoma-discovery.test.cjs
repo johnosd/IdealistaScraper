@@ -1,0 +1,6 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {normalizeItems}=require('../../src/coleta-autonoma');
+const {extractDirectLocalities,discoverSource}=require('../../src/coleta-discovery');
+test('links diretos sem contagem entram; contagem ordena sem fundir homônimos',()=>{const rows=normalizeItems([{nome:'Mesmo',url:'https://www.idealista.pt/a/'},{nome:'Mesmo',url:'https://www.idealista.pt/b/',quantidade:9},{nome:'Alias',url:'https://www.idealista.pt/b/#x',quantidade:8}]);assert.equal(rows.length,2);assert.ok(rows[0].url.endsWith('/b/'));assert.equal(rows[1].quantidade,null);assert.throws(()=>normalizeItems([{url:'https://invalid.example/a/'}]));});
+test('extrator não exige contador nem visita subníveis',()=>{const doc={querySelectorAll:()=>[{querySelector:q=>q==='a'?{textContent:'Alvor',href:'https://www.idealista.pt/a/'}:null}]};assert.deepEqual(extractDirectLocalities(doc),[{nome:'Alvor',url:'https://www.idealista.pt/a/',quantidade:null}]);});
+test('troca de documento durante leitura é recusada',async()=>{let n=0;const api={tabs:{get:async()=>({url:'https://www.idealista.pt/a/'})},scripting:{executeScript:async()=>[{documentId:n++?'new':'old',result:n===1?'https://www.idealista.pt/a/':[]}]}};await assert.rejects(discoverSource(api,{tabId:1,url:'https://www.idealista.pt/a/',documentId:'old'}),/mudou/);});

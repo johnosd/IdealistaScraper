@@ -11,6 +11,11 @@ module.exports = (env, argv) => ({
     linkExtractor: './src/linkExtractor.js',
     localidades: './src/localidades.js',
     lote: './src/lote.js',
+    itens: './src/itens.js',
+    runner: './src/runner.js',
+    sidepanel: './src/sidepanel.js',
+    configuracoes: './src/configuracoes.js',
+    'coleta-style': './src/coleta.css',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -21,4 +26,5 @@ module.exports = (env, argv) => ({
     splitChunks: false,
     runtimeChunk: false,
   },
+  module: { rules: [{ test: /coleta\.css$/, type: 'asset/resource', generator: { filename: 'coleta.css' } }] },
 });

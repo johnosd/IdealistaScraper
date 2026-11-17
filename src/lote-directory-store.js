@@ -25,4 +25,7 @@ async function transact(mode, action) {
 
 function loadDirectory() { return transact('readonly', store => store.get('directory')); }
 async function saveDirectory(handle) { await transact('readwrite', store => store.put(handle, 'directory')); }
-module.exports = { loadDirectory, saveDirectory };
+function bindingKey(id,itemId){if(!/^[\w-]{1,128}$/.test(id)||itemId&&!/^[\w-]{1,180}$/.test(itemId))throw new TypeError('Execução inválida');return `run:${id}${itemId?':'+itemId:''}`;}
+function loadRunDirectory(id,itemId){return transact('readonly',store=>store.get(bindingKey(id,itemId)));}
+async function saveRunDirectory(id,handle,itemId){await transact('readwrite',store=>store.put(handle,bindingKey(id,itemId)));}
+module.exports = { loadDirectory, saveDirectory, loadRunDirectory, saveRunDirectory };

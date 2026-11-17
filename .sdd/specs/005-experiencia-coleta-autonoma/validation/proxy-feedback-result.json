@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "proof": "extension DOM + Chrome proxy/settings; simulated IP transport",
+  "cases": [
+    "one explicit save/apply/test",
+    "validation prevents application",
+    "immediate progress",
+    "pending controls stay locked",
+    "verified IP success",
+    "visible feedback",
+    "failure and recovery guidance",
+    "320px and CSS zoom200%",
+    "editing clears stale success",
+    "passive probe does not validate draft",
+    "conflict prevents probing",
+    "direct confirmed",
+    "active collection blocks changes",
+    "no collection started"
+  ],
+  "pageErrors": 0
+}

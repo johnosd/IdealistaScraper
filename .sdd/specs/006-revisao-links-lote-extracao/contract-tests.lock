@@ -1,0 +1,12 @@
+{
+  "feature": "006-revisao-links-lote-extracao",
+  "lockedAt": "2026-11-16 10:31",
+  "total": 5,
+  "files": [
+    {
+      "path": "tests/contracts/006-revisao-links-lote-extracao.test.cjs",
+      "sha256": "c95b6abc12a7aaaccd35b1325e89a21df619dda10b6c39cfabf013479963de82",
+      "tests": 5
+    }
+  ]
+}

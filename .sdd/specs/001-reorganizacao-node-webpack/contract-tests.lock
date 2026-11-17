@@ -1,11 +1,11 @@
 {
   "feature": "001-reorganizacao-node-webpack",
-  "lockedAt": "2026-11-13 17:44",
+  "lockedAt": "2026-11-14 20:52",
   "total": 2,
   "files": [
     {
       "path": "tests/contracts/001-reorganizacao-node-webpack.test.cjs",
-      "sha256": "fc4501da274da2e60c5fc359f5e444b8b6a9f0ace7404fb058287da8a247b765",
+      "sha256": "99ec6733bd77c7002c5ae7551ea19fd45fb302ce27dd31c8ef4fea16124cf513",
       "tests": 2
     }
   ]

@@ -18,6 +18,7 @@
 </head>
 <body><main>
   <h1>Extração em lote</h1>
+  <p><button id="autonomousStart" class="primary">Iniciar coleta da página</button> <a href="sidepanel.html">Acompanhar coleta autônoma</a></p>
   <p>Salve os JSONs na pasta <strong>.data/municipios</strong>, organizada pelo mês de início do lote.
   Arquivos com o mesmo nome serão substituídos sem confirmação.</p>
   <div class="actions">
@@ -35,8 +36,8 @@
     <button id="loteSave">Tentar salvar novamente</button>
     <button id="loteStopExport" disabled title="Exportação parcial indisponível nesta versão">Parar e exportar (indisponível)</button>
   </div>
-  <p class="hint">Mantenha esta página aberta. Pode trocar de aba; fechar esta página perde resultados ainda não salvos.
-  Pausar aguarda a conclusão do item atual. Uma falha interrompe o avanço e mantém o item na fila.</p>
+  <p class="hint">O progresso confirmado é preservado após fechar esta página. A retomada é manual.
+  Pausar interrompe a coleta e preserva o último checkpoint. Uma falha interrompe o avanço e mantém o item na fila.</p>
   <p id="loteLog" role="status" aria-live="polite" data-state="loading">Carregando…</p>
   <ul id="loteStatusList" aria-label="Status dos itens"></ul>
 </main><script src="dist/lote.bundle.js"></script></body>

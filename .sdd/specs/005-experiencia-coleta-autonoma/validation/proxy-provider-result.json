@@ -1,0 +1,15 @@
+{
+  "realNetwork": true,
+  "endpoint": "api.ipify.org",
+  "direct": {
+    "success": true,
+    "exit": 0,
+    "httpStatus": 200
+  },
+  "proxy": {
+    "success": true,
+    "exit": 0,
+    "httpStatus": 200
+  },
+  "ipChanged": true
+}

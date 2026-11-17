@@ -1,0 +1,17 @@
+{
+  "feature": "004-coleta-resiliente",
+  "lockedAt": "2026-11-14 11:52",
+  "total": 5,
+  "files": [
+    {
+      "path": "tests/contracts/004-coleta-resiliente.test.cjs",
+      "sha256": "5edb3b4941184787f48f8967f4f44009b7aa32848cf5f0e4592f4bb79f7c7bfc",
+      "tests": 5
+    },
+    {
+      "path": "tests/fixtures/coleta-store.cjs",
+      "sha256": "1195d51af3790db3150654c80dff5a0e01bcca7935369b6f74616bc65b82dfd1",
+      "tests": 0
+    }
+  ]
+}
